@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.MONGODB_URI
+
+const MONGODB_URI:string = process.env.MONGODB_URI || ''
 
 if (!MONGODB_URI) {
   throw new Error(
@@ -13,6 +14,7 @@ if (!MONGODB_URI) {
  * in development. This prevents connections growing exponentially
  * during API Route usage.
  */
+
 let cached = global.mongoose
 
 if (!cached) {
