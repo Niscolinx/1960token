@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import { Key } from 'react'
 import dbConnect from '../lib/dbConnect'
 import Pet from '../models/Pet'
 
-const Index = ({ pets }) => (
+const Index = ({ pets }:any) => (
   <>
     {/* Create a card for each pet */}
-    {pets.map((pet) => (
+    {pets.map((pet:any) => (
       <div key={pet._id}>
         <div className="card">
           <img src={pet.image_url} />
@@ -18,7 +19,7 @@ const Index = ({ pets }) => (
             <div className="likes info">
               <p className="label">Likes</p>
               <ul>
-                {pet.likes.map((data, index) => (
+                {pet.likes.map((data:any, index:number) => (
                   <li key={index}>{data} </li>
                 ))}
               </ul>
@@ -26,7 +27,7 @@ const Index = ({ pets }) => (
             <div className="dislikes info">
               <p className="label">Dislikes</p>
               <ul>
-                {pet.dislikes.map((data, index) => (
+                {pet.dislikes.map((data:any, index: Key | null | undefined) => (
                   <li key={index}>{data} </li>
                 ))}
               </ul>
