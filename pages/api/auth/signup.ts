@@ -3,6 +3,9 @@ import { MongoClient } from 'mongodb'
 import { hash } from 'bcryptjs'
 
 async function handler(req:NextApiRequest, res:NextApiResponse) {
+
+    const MONGODB_URI: string = process.env.MONGODB_URI || ''
+
     //Only POST mothod is accepted
     if (req.method === 'POST') {
         //Getting email and password from body
@@ -13,10 +16,7 @@ async function handler(req:NextApiRequest, res:NextApiResponse) {
             return
         }
         //Connect with database
-        const client = await MongoClient.connect(
-            `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}.n4tnm.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`,
-            { useNewUrlParser: true, useUnifiedTopology: true }
-        )
+        const client = await MongoClient.connect(MONGODB_URI)
         const db = client.db()
         //Check existing
         const checkExisting = await db
