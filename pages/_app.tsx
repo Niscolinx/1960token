@@ -17,8 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="/new">
-            <a>Add Pet</a>
+          <Link href="/auth/register">
+            <a>Register</a>
           </Link>
         </div>
 
