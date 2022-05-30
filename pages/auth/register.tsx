@@ -14,7 +14,10 @@ const Register = () => {
 
     return (
         <div className='w-full md:w-2xl'>
-            <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4' onSubmit={handleSubmit}>
+            <form
+                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
+                onSubmit={handleSubmit}
+            >
                 <div className='mb-4'>
                     <label
                         className='block text-gray-700 text-sm font-bold mb-2'
@@ -25,12 +28,13 @@ const Register = () => {
                     <input
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
+                        required
                         type='text'
                         value={username}
-                        required
+                        onChange={changeHandler}
                     />
                 </div>
-                
+
                 <div className='mb-4'>
                     <label
                         className='block text-gray-700 text-sm font-bold mb-2'
@@ -42,8 +46,9 @@ const Register = () => {
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
                         type='email'
-                        value={email}
                         required
+                        value={email}
+                        onChange={changeHandler}
                     />
                 </div>
                 <div className='mb-6'>
@@ -57,7 +62,9 @@ const Register = () => {
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='password'
                         type='password'
+                        required
                         value={password}
+                        onChange={changeHandler}
                     />
                     {/* <p className='text-red-500 text-xs italic'>
                         Please choose a password.
@@ -74,7 +81,9 @@ const Register = () => {
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='confirmPassword'
                         type='password'
+                        required
                         value={confirmPassword}
+                        onChange={changeHandler}
                     />
                     {/* <p className='text-red-500 text-xs italic'>
                         Please choose a password.
