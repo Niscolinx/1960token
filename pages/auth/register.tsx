@@ -75,3 +75,7 @@ const Basic = () => (
 )
 
 export default Basic
+function isValidEmail(email: string) {
+    throw new Error('Function not implemented.')
+}
+
