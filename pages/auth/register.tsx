@@ -23,10 +23,9 @@ const Register = () => {
             console.log({key, value})
             if(!value){
                 console.log('empty')
+                
             }
-            else{
-                console.log('not empty')
-            }
+           
         }
     
     }
