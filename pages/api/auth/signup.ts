@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient } from 'mongodb'
 import { hash } from 'bcryptjs'
 
-async function handler(req:NextApiRequest, res:NextApiResponse) {
+async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
     const MONGODB_URI: string = process.env.MONGODB_URI || ''
 
@@ -43,4 +43,4 @@ async function handler(req:NextApiRequest, res:NextApiResponse) {
     }
 }
 
-export default handler
+export default signupHandler
