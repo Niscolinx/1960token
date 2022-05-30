@@ -1,6 +1,6 @@
 const Register = () => {
     return (
-        <div className='w-full max-w-xs'>
+        <div className='w-full md:w-2xl'>
             <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
                 <div className='mb-4'>
                     <label
@@ -8,6 +8,34 @@ const Register = () => {
                         htmlFor='username'
                     >
                         Username
+                    </label>
+                    <input
+                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        id='username'
+                        type='text'
+                        placeholder='Username'
+                    />
+                </div>
+                <div className='mb-4'>
+                    <label
+                        className='block text-gray-700 text-sm font-bold mb-2'
+                        htmlFor='first Name'
+                    >
+                        First Name
+                    </label>
+                    <input
+                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        id='username'
+                        type='text'
+                        placeholder='Username'
+                    />
+                </div>
+                <div className='mb-4'>
+                    <label
+                        className='block text-gray-700 text-sm font-bold mb-2'
+                        htmlFor='username'
+                    >
+                        Last name
                     </label>
                     <input
                         className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
@@ -29,9 +57,9 @@ const Register = () => {
                         type='password'
                         placeholder='******************'
                     />
-                    <p className='text-red-500 text-xs italic'>
+                    {/* <p className='text-red-500 text-xs italic'>
                         Please choose a password.
-                    </p>
+                    </p> */}
                 </div>
                 <div className='flex items-center justify-between'>
                     <button
