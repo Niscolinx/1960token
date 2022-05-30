@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 
 const Register = () => {
     const [username, setUsername] = useState('')
@@ -6,12 +6,18 @@ const Register = () => {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
 
+
+    useLayoutEffect(() => {
+        const formId = document.getElementById('register')
+        console.log({formId})
+    })
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         console.log('about to submit..........')
         console.log({username,email, password, confirmPassword})
         console.log(e.target)
-        console.log(Array(e.target)[0])
+     
     
     }
 
@@ -41,6 +47,7 @@ const Register = () => {
     return (
         <div className='w-full md:w-2xl'>
             <form
+            id='register'
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
                 onSubmit={handleSubmit}
             >
