@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Pet Care App</title>
+        <title>1960Token</title>
       </Head>
 
       <div className="top-bar">
