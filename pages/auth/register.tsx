@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 const Register = () => {
-    const [username, setUsername] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
+    const [username, setUsername] = useState('hello')
+    const [email, setEmail] = useState('hello@hello.com')
+    const [password, setPassword] = useState('testing')
+    const [confirmPassword, setConfirmPassword] = useState('testing')
 
 
  
@@ -13,8 +13,11 @@ const Register = () => {
         e.preventDefault()
         console.log('about to submit..........')
         console.log({username,email, password, confirmPassword})
-        console.log(e.target)
+        console.log(e.currentTarget)
      
+
+        const formData = new FormData(e.currentTarget)
+        console.log({formData})
     
     }
 
