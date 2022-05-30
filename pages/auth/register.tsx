@@ -26,7 +26,7 @@ const Register = () => {
                 setPassword(value)
                 break
             case 'confirmPassword': (() => {
-                value !== password ? console.log("not equal") : console.log("equal")
+                setConfirmPassword(value)
             }).call(this)
                 break
             default:
