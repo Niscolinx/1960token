@@ -7,9 +7,15 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
 
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+        
         e.preventDefault()
 
         console.log('about to submit')
+    }
+
+    const changeHandler = (e:React.FormEvent<HTMLFormElement>) => {
+            
+        console.log({e})
     }
 
     return (
