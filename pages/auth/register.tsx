@@ -10,7 +10,7 @@ const Register = () => {
                         Username
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
                         type='text'
                         placeholder='Username'
@@ -26,7 +26,7 @@ const Register = () => {
                         Email
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
                         type='email'
                         placeholder='Email'
@@ -41,7 +41,7 @@ const Register = () => {
                         Password
                     </label>
                     <input
-                        className='shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
+                        className='shadow appearance-none border border-red-500 rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='password'
                         type='password'
                         placeholder='******************'
@@ -58,8 +58,8 @@ const Register = () => {
                         Confirm Password
                     </label>
                     <input
-                        className='shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
-                        id='password'
+                        className='shadow appearance-none border border-red-500 rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
+                        id='confirmPassword'
                         type='password'
                         placeholder='******************'
                     />
@@ -69,7 +69,7 @@ const Register = () => {
                 </div>
                 <div className='flex items-center justify-between'>
                     <button
-                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline'
                         type='button'
                     >
                         Sign In
@@ -83,7 +83,7 @@ const Register = () => {
                 </div>
             </form>
             <p className='text-center text-gray-500 text-xs'>
-                &copy;2020 Acme Corp. All rights reserved.
+                &copy;2022 1960token. All rights reserved.
             </p>
         </div>
     )
