@@ -7,7 +7,6 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
 
         console.log('about to submit..........')
         console.log({username,email, password, confirmPassword})
@@ -126,6 +125,8 @@ const Register = () => {
                     >
                         Sign In
                     </button>
+
+                    <button>submit</button>
                     <a
                         className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
                         href='#'
