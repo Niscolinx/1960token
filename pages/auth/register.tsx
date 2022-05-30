@@ -9,7 +9,10 @@ const Register = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        console.log('about to submit')
+        console.log('about to submit..........')
+        console.log({username,email, password, confirmPassword})
+
+    
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
