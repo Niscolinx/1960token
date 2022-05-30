@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from 'react'
 
 const Register = () => {
     const [username, setUsername] = useState('')
@@ -6,34 +6,31 @@ const Register = () => {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
 
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-        
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         console.log('about to submit')
     }
 
-    const setEmailHandler = (v) => {
-        setEmail(v)
-    }
+    const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target
 
-    const changeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.target
-        
         switch (name) {
             case 'username':
-                console.log("username")
-                break;
-            case 'email': 
-                 setEmailHandler(value)
-            
-            break;
-            case 'password': () => {}
-            break;
-            case 'confirmPassword': () => {}
-            break;
-            default: ''
-                break;
+                setUsername(value)
+                break
+            case 'email':
+                setEmail(value)
+                break
+            case 'password':
+                setPassword(value)
+                break
+            case 'confirmPassword':
+                setConfirmPassword(value)
+                break
+            default:
+                ''
+                break
         }
     }
 
@@ -53,7 +50,7 @@ const Register = () => {
                     <input
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
-                        name="username"
+                        name='username'
                         required
                         type='text'
                         value={username}
@@ -72,7 +69,7 @@ const Register = () => {
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='email'
                         type='email'
-                        name="email"
+                        name='email'
                         required
                         value={email}
                         onChange={changeHandler}
