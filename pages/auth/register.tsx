@@ -1,10 +1,15 @@
-import React from "react"
+import React, {useState} from "react"
 
 const Register = () => {
-
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
 
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+
+        console.log('about to submit')
     }
 
     return (
