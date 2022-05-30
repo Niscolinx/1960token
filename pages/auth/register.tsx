@@ -52,12 +52,12 @@ const MyForm = withFormik<MyFormProps, FormValues>({
     // Add a custom validation function (this can be async too!)
     validate: (values: FormValues) => {
         let errors: FormikErrors<FormValues> = {}
-        if (!values.email) {
-            errors.email = 'Required'
-        } else if (!isValidEmail(values.email)) {
-            errors.email = 'Invalid email address'
-        }
-        return errors
+        // if (!values.email) {
+        //     errors.email = 'Required'
+        // } else if (!isValidEmail(values.email)) {
+        //     errors.email = 'Invalid email address'
+        // }
+        // return errors
     },
 
     handleSubmit: (values) => {
@@ -68,8 +68,8 @@ const MyForm = withFormik<MyFormProps, FormValues>({
 // Use <MyForm /> wherevs
 const Basic = () => (
     <div>
-        <h1>My App</h1>
-        <p>This can be anywhere in your application</p>
+        <h1 className='bg-blue-700'>My App</h1>
+        <p className=' text-lg bg-red-400'>This can be anywhere in your application</p>
         <MyForm message='Sign up' />
     </div>
 )
