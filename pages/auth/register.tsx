@@ -14,8 +14,15 @@ const Register = () => {
     }
 
     const changeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
-            
-        console.log(e.target.value)
+        
+        switch (e.target.name) {
+            case 'username':
+                console.log("username")
+                break;
+        
+            default:
+                break;
+        }
     }
 
     return (
@@ -34,6 +41,7 @@ const Register = () => {
                     <input
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
+                        name="username"
                         required
                         type='text'
                         value={username}
@@ -50,8 +58,9 @@ const Register = () => {
                     </label>
                     <input
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                        id='username'
+                        id='email'
                         type='email'
+                        name="email"
                         required
                         value={email}
                         onChange={changeHandler}
@@ -67,6 +76,7 @@ const Register = () => {
                     <input
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='password'
+                        name='password'
                         type='password'
                         required
                         value={password}
@@ -86,6 +96,7 @@ const Register = () => {
                     <input
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='confirmPassword'
+                        name='confirmPassword'
                         type='password'
                         required
                         value={confirmPassword}
