@@ -68,8 +68,8 @@ const MyForm = withFormik<MyFormProps, FormValues>({
 // Use <MyForm /> wherevs
 const Basic = () => (
     <div>
-        <h1 className='bg-blue-700'>My App</h1>
-        <p className=' text-lg bg-red-400'>This can be anywhere in your application</p>
+        <h1 className=''>My App</h1>
+        <p className=''>This can be anywhere in your application</p>
         <MyForm message='Sign up' />
     </div>
 )
