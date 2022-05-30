@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState } from 'react'
 
 const Register = () => {
     const [username, setUsername] = useState('')
@@ -7,10 +7,7 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
 
 
-    useLayoutEffect(() => {
-        const formId = document.getElementById('register')
-        console.log({formId})
-    })
+ 
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
