@@ -1,79 +1,58 @@
-import React from 'react'
-import * as Yup from 'yup'
-import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik'
-
-// Shape of form values
-interface FormValues {
-    email: string
-    password: string
-}
-
-interface OtherProps {
-    message: string
-}
-
-// Aside: You may see InjectedFormikProps<OtherProps, FormValues> instead of what comes below in older code.. InjectedFormikProps was artifact of when Formik only exported a HoC. It is also less flexible as it MUST wrap all props (it passes them through).
-const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
-    const { touched, errors, isSubmitting, message } = props
+const Register = () => {
     return (
-        <Form>
-            <h1>{message}</h1>
-            <Field type='email' name='email' />
-            {touched.email && errors.email && <div>{errors.email}</div>}
-
-            <Field type='password' name='password' />
-            {touched.password && errors.password && (
-                <div>{errors.password}</div>
-            )}
-
-            <button type='submit' disabled={isSubmitting}>
-                Submit
-            </button>
-        </Form>
+        <div className='w-full max-w-xs'>
+            <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+                <div className='mb-4'>
+                    <label
+                        className='block text-gray-700 text-sm font-bold mb-2'
+                        htmlFor='username'
+                    >
+                        Username
+                    </label>
+                    <input
+                        className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        id='username'
+                        type='text'
+                        placeholder='Username'
+                    />
+                </div>
+                <div className='mb-6'>
+                    <label
+                        className='block text-gray-700 text-sm font-bold mb-2'
+                        htmlFor='password'
+                    >
+                        Password
+                    </label>
+                    <input
+                        className='shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
+                        id='password'
+                        type='password'
+                        placeholder='******************'
+                    />
+                    <p className='text-red-500 text-xs italic'>
+                        Please choose a password.
+                    </p>
+                </div>
+                <div className='flex items-center justify-between'>
+                    <button
+                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                        type='button'
+                    >
+                        Sign In
+                    </button>
+                    <a
+                        className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
+                        href='#'
+                    >
+                        Forgot Password?
+                    </a>
+                </div>
+            </form>
+            <p className='text-center text-gray-500 text-xs'>
+                &copy;2020 Acme Corp. All rights reserved.
+            </p>
+        </div>
     )
 }
 
-// The type of props MyForm receives
-interface MyFormProps {
-    initialEmail?: string
-    message: string // if this passed all the way through you might do this or make a union type
-}
-
-// Wrap our form with the withFormik HoC
-const MyForm = withFormik<MyFormProps, FormValues>({
-    // Transform outer props into form values
-    mapPropsToValues: (props) => {
-        return {
-            email: props.initialEmail || '',
-            password: '',
-        }
-    },
-
-    // Add a custom validation function (this can be async too!)
-    validate: (values: FormValues) => {
-        let errors: FormikErrors<FormValues> = {}
-        // if (!values.email) {
-        //     errors.email = 'Required'
-        // } else if (!isValidEmail(values.email)) {
-        //     errors.email = 'Invalid email address'
-        // }
-        // return errors
-    },
-
-    handleSubmit: (values) => {
-        // do submitting things
-    },
-})(InnerForm)
-
-// Use <MyForm /> wherevs
-const Basic = () => (
-    <div>
-        <h1 className=''>My App</h1>
-        <p className=''>This can be anywhere in your application</p>
-        <MyForm message='Sign up' />
-    </div>
-)
-
-export default Basic
-
-
+export default Register
