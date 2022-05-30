@@ -13,14 +13,26 @@ const Register = () => {
         console.log('about to submit')
     }
 
+    const setEmailHandler = (v) => {
+        setEmail(v)
+    }
+
     const changeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = e.target
         
-        switch (e.target.name) {
+        switch (name) {
             case 'username':
                 console.log("username")
                 break;
-        
-            default:
+            case 'email': 
+                 setEmailHandler(value)
+            
+            break;
+            case 'password': () => {}
+            break;
+            case 'confirmPassword': () => {}
+            break;
+            default: ''
                 break;
         }
     }
