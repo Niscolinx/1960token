@@ -1,3 +1,7 @@
 export default function Register(){
-    return <div></div>
+    return <div>
+        <form>
+            <input type='email'/>
+        </form>
+    </div>
 }
