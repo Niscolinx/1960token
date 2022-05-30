@@ -7,10 +7,11 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-
+        e.preventDefault()
         console.log('about to submit..........')
         console.log({username,email, password, confirmPassword})
-
+        console.log(e.target)
+        console.log(Array(e.target)[0])
     
     }
 
