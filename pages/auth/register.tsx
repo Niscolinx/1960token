@@ -25,8 +25,9 @@ const Register = () => {
             case 'password':
                 setPassword(value)
                 break
-            case 'confirmPassword':
-                setConfirmPassword(value)
+            case 'confirmPassword': (() => {
+                value !== password ? console.log("not equal") : console.log("equal")
+            }).call(this)
                 break
             default:
                 ''
@@ -138,3 +139,7 @@ const Register = () => {
 }
 
 export default Register
+function h(arg0: undefined, h: any) {
+    throw new Error('Function not implemented.')
+}
+
