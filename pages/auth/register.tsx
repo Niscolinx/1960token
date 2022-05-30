@@ -13,9 +13,9 @@ const Register = () => {
         console.log('about to submit')
     }
 
-    const changeHandler = (e:React.FormEvent<HTMLFormElement>) => {
+    const changeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
             
-        console.log({e})
+        console.log(e.target.value)
     }
 
     return (
