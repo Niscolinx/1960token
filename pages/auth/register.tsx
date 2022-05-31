@@ -32,7 +32,7 @@ const Register = () => {
 
         console.log('second errorField', errorFields)
     }
-    console.log('first errorField', errorFields)
+    console.log('third errorField', errorFields)
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target
