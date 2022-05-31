@@ -36,6 +36,12 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         console.log({verifyStored})
 
+        if(verifyStored){
+            res.status(201).json({
+                message: 'successful'
+            })
+        }
+
     } else {
         //Response for other than POST method
         res.status(500).json({ message: 'Route not valid' })

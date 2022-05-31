@@ -58,7 +58,6 @@ const Register = () => {
                 setMessageDisplay('block')
                 setMessage({ ...message, value: 'Passwords do not match' })
             }
-
         }
 
         setError(isError)
@@ -74,9 +73,13 @@ const Register = () => {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
-                        'Content-type': 'application/json'
+                        'Content-type': 'application/json',
                     },
                 })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log({ data })
+                    })
             } catch (err) {
                 console.log({ err })
             }
