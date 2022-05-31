@@ -7,7 +7,7 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
-    const [message, setMessage] = useState(null)
+    const [message, setMessage] = useState<{}>(null)
 
     const isValidMail = (e: string): Boolean => {
         console.log({ e })
@@ -30,7 +30,7 @@ const Register = () => {
                 setMessage({
                     value: 'Invalid Entries',
                     type: 'error'
-                    style: 'text-green-500'
+                    style: 'text-red-500'
                 })
                 setErrorFields((oldArr) => [...oldArr, key])
             }
