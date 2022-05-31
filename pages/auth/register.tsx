@@ -63,6 +63,7 @@ const Register = () => {
         }
 
         try {
+            console.log('sending protocol')
             if (!error) {
                 fetch('/api/auth/signup', {
                     body: JSON.stringify({
