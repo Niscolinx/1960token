@@ -164,9 +164,7 @@ const Register = () => {
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
-                    <p className='text-red-500 text-xs italic'>
-                        Please choose a password.
-                    </p>
+                   
                 </div>
                 <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
                     <button
