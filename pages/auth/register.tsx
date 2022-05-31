@@ -31,6 +31,7 @@ const Register = () => {
     console.log(' errorField', errorFields)
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setErrorFields([])
         const { name, value } = e.target
 
         switch (name) {
