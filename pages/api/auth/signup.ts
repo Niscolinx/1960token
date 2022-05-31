@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { hash } from 'bcryptjs'
+
 import dbConnect from '../../../lib/dbConnect';
 
 
@@ -25,7 +26,7 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         await dbConnect()
 
-        
+
 
 
     } else {
