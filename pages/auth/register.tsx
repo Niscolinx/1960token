@@ -5,7 +5,7 @@ const Register = () => {
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
-    const [errorFields, setErrorFields] = useState('')
+    const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(null)
 
@@ -20,11 +20,10 @@ const Register = () => {
             console.log({ key, value })
             if (!value) {
                 console.log('empty', key)
-                console.log(errorFields)
+                console.log('change error',errorFields)
 
-                //   errorFields.length < 1 ? setErrorFields([key]) : setErrorFields(oldArr => [...oldArr, key])
+                  errorFields.length < 1 ? setErrorFields([key]) : setErrorFields(oldArr => [...oldArr, key])
 
-                setErrorFields('key')
             }
 
             console.log('first errorField', errorFields)
