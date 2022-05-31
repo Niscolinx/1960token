@@ -12,10 +12,9 @@ const Register = () => {
     const [message, setMessage] = useState<message>()
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
-
     const messageHandler = () => {
         console.log('effect message handler')
-        if(error){
+        if (error) {
             return setMessageDisplay('block')
         }
     }
@@ -43,12 +42,12 @@ const Register = () => {
             if (!value) {
                 setError(true)
                 setMessage({
-                    value: 'Value can\'t be empty',
+                    value: "Value can't be empty",
                     type: 'error',
                     style: 'text-red-500',
                 })
-                setErrorFields((oldArr) => [...oldArr, key])   
-                setMessageDisplay('block')             
+                setErrorFields((oldArr) => [...oldArr, key])
+                setMessageDisplay('block')
             }
 
             if (key === 'email') {
@@ -58,6 +57,11 @@ const Register = () => {
                     setError(true)
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
+            }
+
+            if (password !== confirmPassword) {
+                setError(true)
+                setErrorFields((oldArr) => [...oldArr, key])
             }
         }
     }
@@ -98,7 +102,9 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
-                    <p className={`${messageDisplay} ${message?.style} italica text-center mb-10 transition-all delay-5s ease-out duration-75`}>
+                    <p
+                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-10`}
+                    >
                         {message?.value}
                     </p>
                     <label
