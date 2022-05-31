@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { hash } from 'bcryptjs'
-
 import dbConnect from '../../../lib/dbConnect';
+import User from '../models/User';
 
 
 async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
@@ -26,7 +26,9 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         await dbConnect()
 
+        const getUsers = await User.find()
 
+        console.log({getUsers})
 
 
     } else {
