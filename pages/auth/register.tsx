@@ -27,6 +27,11 @@ const Register = () => {
         for (let [key, value] of formData.entries()) {
             if (!value) {
                 setError(true)
+                setMessage({
+                    value: 'Invalid Entries',
+                    type: 'error'
+                    style: 'text-green-500'
+                })
                 setErrorFields((oldArr) => [...oldArr, key])
             }
 
