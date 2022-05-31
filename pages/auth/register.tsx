@@ -85,7 +85,7 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
-                    <p className={`${'text-red-500 italica text-center'}`}>
+                    <p className={`${messageDisplay} text-red-500 italica text-center`}>
                         Invalid Entries.
                     </p>
                     <label
