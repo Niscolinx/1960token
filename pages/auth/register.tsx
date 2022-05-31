@@ -16,7 +16,6 @@ const Register = () => {
         )
 
         const isValid =  emailRegex.test(e)
-        console.log({isValid})
 
         return isValid
     }
@@ -34,7 +33,9 @@ const Register = () => {
             }
 
             if (key === 'email') {
-                return isValidMail(value.toString())
+                const checkemail = isValidMail(value.toString())
+
+                console.log({checkemail})
             }
         }
     }
