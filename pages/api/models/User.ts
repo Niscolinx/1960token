@@ -1,4 +1,3 @@
-import { string } from 'yup';
 import { Schema } from 'mongoose'
 
 interface IUser {
@@ -7,7 +6,10 @@ interface IUser {
     role: string;
     status: string;
     password: string;
-    
+    pendingWithdrawals: object[];
+    pendingDeposits: object[];
+    totalWithdrawals: object[];
+    totalDeposits: object[];
 }
 
 const userSchema = new Schema<IUser>(
