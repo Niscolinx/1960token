@@ -222,6 +222,4 @@ console.log({errorFields})
 }
 
 export default Register
-function h(arg0: undefined, h: any) {
-    throw new Error('Function not implemented.')
-}
+
