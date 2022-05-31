@@ -5,32 +5,34 @@ const Register = () => {
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
-    const [errorFields, setErrorFields] = useState([])
+    const [errorFields, setErrorFields] = useState('')
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(null)
-
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         const formData = new FormData(e.currentTarget)
-        console.log({formData})
+        console.log({ formData })
         console.log(formData.entries())
 
-        for(let [key, value] of formData.entries()){
-            console.log({key, value})
-            if(!value){
+        for (let [key, value] of formData.entries()) {
+            console.log({ key, value })
+            if (!value) {
                 console.log('empty', key)
-                console.log(errorFields.length)
-                
-              errorFields.length < 1 ? setErrorFields([key]) : setErrorFields(oldArr => [...oldArr, key])
+                console.log(errorFields)
+
+                //   errorFields.length < 1 ? setErrorFields([key]) : setErrorFields(oldArr => [...oldArr, key])
+
+                setErrorFields('key')
             }
-           
+
+            console.log('first errorField', errorFields)
         }
-        
-        console.log({errorFields})
+
+        console.log('second errorField', errorFields)
     }
-    
+    console.log('first errorField', errorFields)
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target
@@ -45,9 +47,10 @@ const Register = () => {
             case 'password':
                 setPassword(value)
                 break
-            case 'confirmPassword': (() => {
-                setConfirmPassword(value)
-            }).call(this)
+            case 'confirmPassword':
+                ;(() => {
+                    setConfirmPassword(value)
+                }).call(this)
                 break
             default:
                 ''
@@ -58,7 +61,7 @@ const Register = () => {
     return (
         <div className='w-full md:w-2xl'>
             <form
-            id='register'
+                id='register'
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
                 onSubmit={handleSubmit}
             >
@@ -111,7 +114,7 @@ const Register = () => {
                         name='password'
                         type='password'
                         minLength={6}
-                       // required
+                        // required
                         value={password}
                         onChange={changeHandler}
                     />
@@ -127,7 +130,9 @@ const Register = () => {
                         Confirm Password
                     </label>
                     <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${ error ? 'border-red-500' : ''}`}
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error ? 'border-red-500' : ''
+                        }`}
                         id='confirmPassword'
                         name='confirmPassword'
                         type='password'
@@ -167,4 +172,3 @@ export default Register
 function h(arg0: undefined, h: any) {
     throw new Error('Function not implemented.')
 }
-
