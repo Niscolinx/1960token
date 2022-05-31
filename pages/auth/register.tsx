@@ -16,6 +16,10 @@ const Register = () => {
 
         console.log(e)
 
+        for(let i in e.target){
+            console.log(i)
+        }
+
         for (let [key, value] of formData.entries()) {
             if (!value) {
                 setError(true)
