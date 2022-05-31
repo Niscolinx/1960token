@@ -14,11 +14,10 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
 
-        console.log(e)
+        console.log(e.target)
 
         for (let [key, value] of formData.entries()) {
             if (!value) {
-                console.log('empty', key)
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
