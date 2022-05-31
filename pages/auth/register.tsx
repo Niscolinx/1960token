@@ -13,8 +13,6 @@ const Register = () => {
         e.preventDefault()
 
         const formData = new FormData(e.currentTarget)
-        console.log({ formData })
-        console.log(formData.entries())
 
         for (let [key, value] of formData.entries()) {
             console.log({ key, value })
