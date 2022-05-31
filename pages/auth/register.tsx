@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const Register = () => {
-    type message = { value: string; type: string; style: string }
+    type message = { value: string; type?: string; style?: string }
 
     const [username, setUsername] = useState('hello')
     const [email, setEmail] = useState('hello@hello.com')
@@ -9,7 +9,11 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
-    const [message, setMessage] = useState<message>()
+    const [message, setMessage] = useState<message>({
+        value: 'invalid Entries',
+        type: 'error',
+        style: 'text-red-500'
+    })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
     const messageHandler = () => {
@@ -18,11 +22,6 @@ const Register = () => {
             return setMessageDisplay('block')
         }
     }
-
-    // useEffect(() => {
-    //     console.log('call message handler')
-    //     messageHandler()
-    // }, [error, errorFields])
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
@@ -38,8 +37,10 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
 
+        let count = 0
         for (let [key, value] of formData.entries()) {
             if (!value) {
+                console.log('no value')
                 setError(true)
                 setMessage({
                     value: "Value can't be empty",
@@ -52,20 +53,24 @@ const Register = () => {
 
             if (key === 'email') {
                 const checkemail = isValidMail(value.toString())
-
+                
                 if (!checkemail) {
                     setError(true)
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
             }
 
-            if (password !== confirmPassword) {
+            if (key === 'confirmPassword' && password !== confirmPassword) {
+                console.log({count})
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
+                setMessageDisplay('block')
+                setMessage({...message, value: 'Passwords do not match'})
             }
         }
     }
    
+console.log({errorFields})
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setErrorFields([])
@@ -102,7 +107,7 @@ const Register = () => {
             >
                 <div className='mb-4'>
                     <p
-                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-10`}
+                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
                     >
                         {message?.value}
                     </p>
@@ -198,7 +203,7 @@ const Register = () => {
                         className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
                         type='submit'
                     >
-                        Sign In
+                        Register
                     </button>
 
                     <a
@@ -217,6 +222,4 @@ const Register = () => {
 }
 
 export default Register
-function h(arg0: undefined, h: any) {
-    throw new Error('Function not implemented.')
-}
+
