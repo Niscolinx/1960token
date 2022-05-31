@@ -43,7 +43,7 @@ const Register = () => {
             if (!value) {
                 setError(true)
                 setMessage({
-                    value: 'Value can\' be empty',
+                    value: 'Value can\'t be empty',
                     type: 'error',
                     style: 'text-red-500',
                 })
@@ -98,7 +98,7 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
-                    <p className={`${messageDisplay} text-red-500 italica text-center`}>
+                    <p className={`${messageDisplay} text-red-500 italica text-center mb-10`}>
                         {message?.value}
                     </p>
                     <label
