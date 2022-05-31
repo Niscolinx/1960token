@@ -14,6 +14,8 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
 
+        console.log(e)
+
         for (let [key, value] of formData.entries()) {
             console.log({ key, value })
             if (!value) {
