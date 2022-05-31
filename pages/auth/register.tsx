@@ -23,10 +23,7 @@ const Register = () => {
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
-            else {
-                setError(false)
-                setErrorFields([])
-            }
+          
 
         }
 
