@@ -15,8 +15,10 @@ const Register = () => {
             /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
         )
 
-        console.log({emailRegex})
-        return emailRegex.test(e)
+        const isValid =  emailRegex.test(e)
+        console.log({isValid})
+
+        return isValid
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
