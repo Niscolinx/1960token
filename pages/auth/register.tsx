@@ -19,6 +19,7 @@ const Register = () => {
         for (let [key, value] of formData.entries()) {
             console.log({ key, value })
             if (!value) {
+                console.log(e)
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
