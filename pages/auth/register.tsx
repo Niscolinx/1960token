@@ -7,11 +7,8 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('testing')
 
 
- 
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-     
 
         const formData = new FormData(e.currentTarget)
         console.log({formData})
@@ -20,7 +17,7 @@ const Register = () => {
             console.log({key, value})
             if(!value){
                 console.log('empty')
-
+                
             }
            
         }
@@ -70,6 +67,7 @@ const Register = () => {
                         name='username'
                         required
                         type='text'
+                        minLength={4}
                         value={username}
                         onChange={changeHandler}
                     />
@@ -128,11 +126,11 @@ const Register = () => {
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
-                    {/* <p className='text-red-500 text-xs italic'>
+                    <p className='text-red-500 text-xs italic'>
                         Please choose a password.
-                    </p> */}
+                    </p>
                 </div>
-                <div className='flex items-center justify-between'>
+                <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
                     <button
                         className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
                         type='submit'
