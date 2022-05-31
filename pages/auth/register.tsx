@@ -63,7 +63,13 @@ const Register = () => {
         }
 
         if(!error){
-            
+            fetch('/api/auth/signup', {
+                body: JSON.stringify({
+                    username,
+                    email,
+                    confirmPassword
+                })
+            })
         }
     }
 
