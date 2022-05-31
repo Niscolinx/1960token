@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose'
+import { Schema, Types } from 'mongoose'
 
 interface IUser {
     username: string;
@@ -6,10 +6,10 @@ interface IUser {
     role: string;
     status: string;
     password: string;
-    pendingWithdrawals: object[];
-    pendingDeposits: object[];
-    totalWithdrawals: object[];
-    totalDeposits: object[];
+    pendingWithdrawals: Types.ObjectId[];
+    pendingDeposits: Types.ObjectId[];
+    totalWithdrawals: Types.ObjectId[];
+    totalDeposits: Types.ObjectId[];
 }
 
 const userSchema = new Schema<IUser>(
