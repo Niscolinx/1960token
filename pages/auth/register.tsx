@@ -101,7 +101,7 @@ const Register = () => {
                         id='email'
                         type='email'
                         name='email'
-                        //required
+                        required
                         value={email}
                         onChange={changeHandler}
                     />
