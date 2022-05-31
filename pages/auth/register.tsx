@@ -16,10 +16,7 @@ const Register = () => {
 
         console.log(e)
 
-        for(let i of formData.entries()){
-            console.log(i)
-           // i.classList.push('bg-green-500')
-        }
+       
 
         for (let [key, value] of formData.entries()) {
             if (!value) {
