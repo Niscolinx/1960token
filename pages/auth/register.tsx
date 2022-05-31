@@ -14,6 +14,11 @@ const Register = () => {
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
 
+    const messageHandler = () => {
+        if(error){
+            setMessageDisplay('block')
+        }
+    }
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
