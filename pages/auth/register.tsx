@@ -5,7 +5,7 @@ const Register = () => {
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
-    const [errorFields, setErrorFields] = useState<string[]>()
+    const [errorFields, setErrorFields] = useState('')
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(null)
 
@@ -21,13 +21,14 @@ const Register = () => {
             console.log({key, value})
             if(!value){
                 console.log('empty')
-                setErrorFields([value])
+               return setErrorFields(value)
             }
            
         }
     
         console.log({errorFields})
     }
+    
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target
@@ -70,7 +71,7 @@ const Register = () => {
                         className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                         id='username'
                         name='username'
-                        required
+                        // required
                         type='text'
                         minLength={4}
                         value={username}
@@ -108,7 +109,7 @@ const Register = () => {
                         name='password'
                         type='password'
                         minLength={6}
-                        required
+                       // required
                         value={password}
                         onChange={changeHandler}
                     />
