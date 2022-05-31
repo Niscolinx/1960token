@@ -38,6 +38,7 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
 
+        let count = 0
         for (let [key, value] of formData.entries()) {
             if (!value) {
                 setError(true)
@@ -60,6 +61,7 @@ const Register = () => {
             }
 
             if (password !== confirmPassword) {
+                console.log({count})
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
