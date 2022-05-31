@@ -69,7 +69,7 @@ const Register = () => {
                     body: JSON.stringify({
                         username,
                         email,
-                        confirmPassword,
+                        password: confirmPassword,
                     }),
                     method: 'POST',
                     headers: {

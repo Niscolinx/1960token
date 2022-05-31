@@ -12,10 +12,12 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
     //Only POST mothod is accepted
     if (req.method === 'POST') {
+        console.log("checking")
         //Getting email and password from body
         const { email, password, username } = req.body
         //Validate
         if (!email || !email.includes('@') || !password) {
+            console.log('failed')
             res.status(422).json({ message: 'Invalid Data' })
             return
         }
