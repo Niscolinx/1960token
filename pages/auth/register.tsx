@@ -1,13 +1,16 @@
 import React, { ChangeEventHandler, useState } from 'react'
+import { string } from 'yup'
 
 const Register = () => {
+    type message = { value: string; type: string; style: string }
+
     const [username, setUsername] = useState('hello')
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
-    const [message, setMessage] = useState<{}>(null)
+    const [message, setMessage] = useState<message>()
 
     const isValidMail = (e: string): Boolean => {
         console.log({ e })
@@ -29,8 +32,8 @@ const Register = () => {
                 setError(true)
                 setMessage({
                     value: 'Invalid Entries',
-                    type: 'error'
-                    style: 'text-red-500'
+                    type: 'error',
+                    style: 'text-red-500',
                 })
                 setErrorFields((oldArr) => [...oldArr, key])
             }
