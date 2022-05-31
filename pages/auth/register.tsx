@@ -5,6 +5,7 @@ const Register = () => {
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
+    const [errorFields, setErrorFields] = useState([])
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(null)
 
@@ -14,6 +15,7 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
         console.log({formData})
+        console.log(formData.entries())
 
         for(let [key, value] of formData.entries()){
             console.log({key, value})
