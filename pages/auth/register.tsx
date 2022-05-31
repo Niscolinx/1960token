@@ -69,7 +69,11 @@ const Register = () => {
                         Username
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error && errorFields.includes('username')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
                         id='username'
                         name='username'
                         // required
@@ -88,7 +92,11 @@ const Register = () => {
                         Email
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error && errorFields.includes('email')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
                         id='email'
                         type='email'
                         name='email'
@@ -105,7 +113,11 @@ const Register = () => {
                         Password
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error && errorFields.includes('password')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
                         id='password'
                         name='password'
                         type='password'
@@ -127,7 +139,9 @@ const Register = () => {
                     </label>
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
-                            error ? 'border-red-500' : ''
+                            error && errorFields.includes('confirmPassword')
+                                ? 'border-red-500'
+                                : ''
                         }`}
                         id='confirmPassword'
                         name='confirmPassword'
