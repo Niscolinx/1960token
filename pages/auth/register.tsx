@@ -1,33 +1,75 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Register = () => {
+    type message = { value: string; type: string; style: string }
+
     const [username, setUsername] = useState('hello')
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
-    const [message, setMessage] = useState(null)
+    const [message, setMessage] = useState<message>()
+    const [messageDisplay, setMessageDisplay] = useState('hidden')
 
+    const messageHandler = () => {
+        console.log('effect message handler')
+        if (error) {
+            return setMessageDisplay('block')
+        }
+    }
+
+    // useEffect(() => {
+    //     console.log('call message handler')
+    //     messageHandler()
+    // }, [error, errorFields])
+
+    const isValidMail = (e: string): Boolean => {
+        const emailRegex = new RegExp(
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+
+        const isValid = emailRegex.test(e)
+
+        return isValid
+    }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         const formData = new FormData(e.currentTarget)
-        console.log({ formData })
-        console.log(formData.entries())
 
         for (let [key, value] of formData.entries()) {
-            console.log({ key, value })
             if (!value) {
+                setError(true)
+                setMessage({
+                    value: "Value can't be empty",
+                    type: 'error',
+                    style: 'text-red-500',
+                })
                 setErrorFields((oldArr) => [...oldArr, key])
+                setMessageDisplay('block')
             }
 
-        }
+            if (key === 'email') {
+                const checkemail = isValidMail(value.toString())
 
+                if (!checkemail) {
+                    setError(true)
+                    setErrorFields((oldArr) => [...oldArr, key])
+                }
+            }
+
+            if (password !== confirmPassword) {
+                setError(true)
+                setErrorFields((oldArr) => [...oldArr, key])
+            }
+        }
     }
-    console.log(' errorField', errorFields)
+   
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setErrorFields([])
+        setMessageDisplay('hidden')
         const { name, value } = e.target
 
         switch (name) {
@@ -59,6 +101,11 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
+                    <p
+                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-10`}
+                    >
+                        {message?.value}
+                    </p>
                     <label
                         className='block text-gray-700 text-sm font-bold mb-2'
                         htmlFor='username'
@@ -66,10 +113,14 @@ const Register = () => {
                         Username
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error && errorFields.includes('username')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
                         id='username'
                         name='username'
-                        // required
+                        required
                         type='text'
                         minLength={4}
                         value={username}
@@ -85,7 +136,11 @@ const Register = () => {
                         Email
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error && errorFields.includes('email')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
                         id='email'
                         type='email'
                         name='email'
@@ -102,18 +157,19 @@ const Register = () => {
                         Password
                     </label>
                     <input
-                        className='shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            error && errorFields.includes('password')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
                         id='password'
                         name='password'
                         type='password'
                         minLength={6}
-                        // required
+                        required
                         value={password}
                         onChange={changeHandler}
                     />
-                    {/* <p className='text-red-500 text-xs italic'>
-                        Please choose a password.
-                    </p> */}
                 </div>
                 <div className='mb-6'>
                     <label
@@ -124,7 +180,9 @@ const Register = () => {
                     </label>
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
-                            error ? 'border-red-500' : ''
+                            error && errorFields.includes('confirmPassword')
+                                ? 'border-red-500'
+                                : ''
                         }`}
                         id='confirmPassword'
                         name='confirmPassword'
@@ -134,9 +192,6 @@ const Register = () => {
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
-                    <p className='text-red-500 text-xs italic'>
-                        Please choose a password.
-                    </p>
                 </div>
                 <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
                     <button
