@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ChangeEventHandler, useState } from 'react'
 
 const Register = () => {
     const [username, setUsername] = useState('hello')
@@ -12,14 +12,14 @@ const Register = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
 
-        const formData = new FormData(e.currentTarget)
+        const formData = new FormData(e.currentTarget as HTMLFormElement)
         console.log({ formData })
         console.log(formData.entries())
 
         for (let [key, value] of formData.entries()) {
             console.log({ key, value })
             if (!value) {
-                console.log(e.target.value)
+                console.log(e.target.value )
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
