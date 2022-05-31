@@ -22,7 +22,7 @@ const Register = () => {
                 console.log('empty', key)
                 console.log('change error',errorFields)
 
-                  errorFields.length < 1 ? setErrorFields([key]) : setErrorFields(oldArr => [...oldArr, key])
+                  setErrorFields(oldArr => [...oldArr, key])
 
             }
 
