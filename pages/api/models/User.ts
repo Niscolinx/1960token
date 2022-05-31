@@ -1,6 +1,14 @@
-import {Schema} from 'mongoose'
+import { string } from 'yup';
+import { Schema } from 'mongoose'
 
-const userSchema = new Schema(
+interface IUser {
+    username: string;
+    email: string;
+    role: string;
+    
+}
+
+const userSchema = new Schema<IUser>(
     {
         username: {
             type: String,
