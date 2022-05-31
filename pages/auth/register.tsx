@@ -11,9 +11,11 @@ const Register = () => {
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [message, setMessage] = useState<message>()
+    const [messageDisplay, setMessageDisplay] = useState('hidden')
+
+
 
     const isValidMail = (e: string): Boolean => {
-        console.log({ e })
         const emailRegex = new RegExp(
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         )
@@ -83,7 +85,7 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
-                    <p className='text-red-500 italica text-center'>
+                    <p className={`${'text-red-500 italica text-center'}`}>
                         Invalid Entries.
                     </p>
                     <label
