@@ -21,6 +21,8 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
         }
         //Connect with database
         const client = await MongoClient.connect(MONGODB_URI)
+
+        console.log("mongodb connected", client)
         const db = client.db()
         //Check existing
         const checkExisting = await db
