@@ -62,20 +62,22 @@ const Register = () => {
             }
         }
 
-        if(!error){
-            fetch('/api/auth/signup', {
-                body: JSON.stringify({
-                    username,
-                    email,
-                    confirmPassword,
-                }),
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-type': 'application/json'
-                },
-            })
-        }
+        try {
+            if (!error) {
+                fetch('/api/auth/signup', {
+                    body: JSON.stringify({
+                        username,
+                        email,
+                        confirmPassword,
+                    }),
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-type': 'application/json',
+                    },
+                })
+            }
+        } catch (err) {console.log({err})}
     }
 
     console.log({ errorFields })
