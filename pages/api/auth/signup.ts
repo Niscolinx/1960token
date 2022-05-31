@@ -6,6 +6,9 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
     const MONGODB_URI: string = process.env.MONGODB_URI || ''
 
+    console.log('=============')
+    console.log("req", req)
+
     //Only POST mothod is accepted
     if (req.method === 'POST') {
         //Getting email and password from body
