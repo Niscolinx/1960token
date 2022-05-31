@@ -1,11 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
-=======
 const path = require('path')
 const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
@@ -30,4 +23,3 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
 }
->>>>>>> dev
