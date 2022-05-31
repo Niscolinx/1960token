@@ -17,7 +17,6 @@ const Register = () => {
         console.log(e)
 
         for (let [key, value] of formData.entries()) {
-            console.log({ key, value })
             if (!value) {
                 console.log('empty', key)
                 setError(true)
