@@ -100,7 +100,7 @@ const Register = () => {
                         id='email'
                         type='email'
                         name='email'
-                        required
+                        //required
                         value={email}
                         onChange={changeHandler}
                     />
@@ -147,7 +147,7 @@ const Register = () => {
                         name='confirmPassword'
                         type='password'
                         minLength={6}
-                        required
+                       // required
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
