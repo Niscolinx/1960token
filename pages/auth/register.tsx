@@ -69,10 +69,8 @@ const Register = () => {
                 console.log({count})
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
-
-                setMessage({
-                    value: 'passwords do not match'
-                })
+                setMessageDisplay('block')
+                setMessage({...message, value: 'Passwords do not match'})
             }
         }
     }
@@ -114,7 +112,7 @@ console.log({errorFields})
             >
                 <div className='mb-4'>
                     <p
-                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-10`}
+                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
                     >
                         {message?.value}
                     </p>
