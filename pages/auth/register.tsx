@@ -19,19 +19,13 @@ const Register = () => {
         for (let [key, value] of formData.entries()) {
             console.log({ key, value })
             if (!value) {
-                console.log('empty', key)
-                console.log('change error',errorFields)
-
-                  setErrorFields(oldArr => [...oldArr, key])
-
+                setErrorFields((oldArr) => [...oldArr, key])
             }
 
-            console.log('first errorField', errorFields)
         }
 
-        console.log('second errorField', errorFields)
     }
-    console.log('third errorField', errorFields)
+    console.log(' errorField', errorFields)
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target
