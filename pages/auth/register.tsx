@@ -66,6 +66,7 @@ const Register = () => {
         }
     }
    
+console.log({errorFields})
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setErrorFields([])
