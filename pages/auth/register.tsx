@@ -12,16 +12,9 @@ const Register = () => {
     const [message, setMessage] = useState<message>({
         value: 'invalid Entries',
         type: 'error',
-        style: 'text-red-500'
+        style: 'text-red-500',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
-
-    const messageHandler = () => {
-        console.log('effect message handler')
-        if (error) {
-            return setMessageDisplay('block')
-        }
-    }
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
@@ -53,7 +46,7 @@ const Register = () => {
 
             if (key === 'email') {
                 const checkemail = isValidMail(value.toString())
-                
+
                 if (!checkemail) {
                     setError(true)
                     setErrorFields((oldArr) => [...oldArr, key])
@@ -61,16 +54,16 @@ const Register = () => {
             }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
-                console.log({count})
+                console.log({ count })
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
-                setMessage({...message, value: 'Passwords do not match'})
+                setMessage({ ...message, value: 'Passwords do not match' })
             }
         }
     }
-   
-console.log({errorFields})
+
+    console.log({ errorFields })
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setErrorFields([])
@@ -222,4 +215,3 @@ console.log({errorFields})
 }
 
 export default Register
-
