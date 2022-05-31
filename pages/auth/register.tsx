@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Register = () => {
     type message = { value: string; type: string; style: string }
@@ -19,6 +19,10 @@ const Register = () => {
             return setMessageDisplay('block')
         }
     }
+
+    useEffect(() => {
+        messageHandler()
+    }, [error])
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
@@ -42,9 +46,7 @@ const Register = () => {
                     type: 'error',
                     style: 'text-red-500',
                 })
-                setErrorFields((oldArr) => [...oldArr, key])
-                messageHandler()
-                
+                setErrorFields((oldArr) => [...oldArr, key])                
             }
 
             if (key === 'email') {
