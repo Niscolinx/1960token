@@ -9,6 +9,15 @@ const Register = () => {
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(null)
 
+    const isValidMail = (e: string): Boolean => {
+        console.log({ e })
+        const emailRegex = RegExp(
+            /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        )
+
+        console.log({emailRegex})
+        return emailRegex.test(e)
+    }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -16,17 +25,16 @@ const Register = () => {
 
         console.log(e)
 
-       
-
         for (let [key, value] of formData.entries()) {
             if (!value) {
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
-          
 
+            if (key === 'email') {
+                return isValidMail(value.toString())
+            }
         }
-
     }
     console.log(' errorField', errorFields)
 
@@ -148,7 +156,7 @@ const Register = () => {
                         name='confirmPassword'
                         type='password'
                         minLength={6}
-                       required
+                        required
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
