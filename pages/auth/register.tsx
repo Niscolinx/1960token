@@ -1,5 +1,4 @@
-import React, { ChangeEventHandler, useState } from 'react'
-import { string } from 'yup'
+import React, { useState } from 'react'
 
 const Register = () => {
     type message = { value: string; type: string; style: string }
