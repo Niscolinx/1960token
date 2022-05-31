@@ -5,6 +5,8 @@ const Register = () => {
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
+    const [error, setError] = useState(false)
+    const [message, setMessage] = useState(null)
 
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
