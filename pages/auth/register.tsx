@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const Register = () => {
-    type message = { value: string; type: string; style: string }
+    type message = { value: string; type?: string; style?: string }
 
     const [username, setUsername] = useState('hello')
     const [email, setEmail] = useState('hello@hello.com')
@@ -9,7 +9,11 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
-    const [message, setMessage] = useState<message>()
+    const [message, setMessage] = useState<message>({
+        value: 'invalid Entries',
+        type: 'error',
+        style: 'text-red-500'
+    })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
     const messageHandler = () => {
@@ -65,6 +69,10 @@ const Register = () => {
                 console.log({count})
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
+
+                setMessage({
+                    value: 'passwords do not match'
+                })
             }
         }
     }
