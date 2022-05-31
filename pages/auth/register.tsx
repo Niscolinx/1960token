@@ -61,6 +61,10 @@ const Register = () => {
                 setMessage({ ...message, value: 'Passwords do not match' })
             }
         }
+
+        if(!error){
+            
+        }
     }
 
     console.log({ errorFields })
