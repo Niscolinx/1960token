@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient } from 'mongodb'
 import { hash } from 'bcryptjs'
 
+
 async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
     const MONGODB_URI: string = process.env.MONGODB_URI || ''
