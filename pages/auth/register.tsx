@@ -11,9 +11,6 @@ const Register = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log('about to submit..........')
-        console.log({username,email, password, confirmPassword})
-        console.log(e.currentTarget)
      
 
         const formData = new FormData(e.currentTarget)
@@ -23,7 +20,7 @@ const Register = () => {
             console.log({key, value})
             if(!value){
                 console.log('empty')
-                
+
             }
            
         }
