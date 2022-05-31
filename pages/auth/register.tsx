@@ -20,10 +20,10 @@ const Register = () => {
         }
     }
 
-    useEffect(() => {
-        console.log('call message handler')
-        messageHandler()
-    }, [error, errorFields])
+    // useEffect(() => {
+    //     console.log('call message handler')
+    //     messageHandler()
+    // }, [error, errorFields])
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
@@ -43,11 +43,12 @@ const Register = () => {
             if (!value) {
                 setError(true)
                 setMessage({
-                    value: 'Invalid Entries',
+                    value: 'Value can\' be empty',
                     type: 'error',
                     style: 'text-red-500',
                 })
-                setErrorFields((oldArr) => [...oldArr, key])                
+                setErrorFields((oldArr) => [...oldArr, key])   
+                setMessageDisplay('block')             
             }
 
             if (key === 'email') {
@@ -61,9 +62,11 @@ const Register = () => {
         }
     }
     console.log(' errorField', errorFields)
+    console.log('messagedisplay', messageDisplay)
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setErrorFields([])
+        setMessageDisplay('hidden')
         const { name, value } = e.target
 
         switch (name) {
@@ -96,7 +99,7 @@ const Register = () => {
             >
                 <div className='mb-4'>
                     <p className={`${messageDisplay} text-red-500 italica text-center`}>
-                        Invalid Entries.
+                        {message?.value}
                     </p>
                     <label
                         className='block text-gray-700 text-sm font-bold mb-2'
@@ -112,7 +115,7 @@ const Register = () => {
                         }`}
                         id='username'
                         name='username'
-                        required
+                       // required
                         type='text'
                         minLength={4}
                         value={username}
