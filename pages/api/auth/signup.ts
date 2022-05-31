@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { MongoClient } from 'mongodb'
 import { hash } from 'bcryptjs'
 import dbConnect from '../../../lib/dbConnect';
 
@@ -26,8 +25,8 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         await dbConnect()
 
-
         
+
 
     } else {
         //Response for other than POST method
