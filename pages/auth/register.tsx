@@ -56,6 +56,7 @@ const Register = () => {
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
                 setMessage({ ...message, value: 'Passwords do not match' })
+                console.log('inside loop', error)
             }
 
             console.log('error loop', error)
