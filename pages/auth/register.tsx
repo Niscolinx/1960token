@@ -17,7 +17,7 @@ const Register = () => {
             console.log({key, value})
             if(!value){
                 console.log('empty')
-                
+
             }
            
         }
@@ -102,6 +102,7 @@ const Register = () => {
                         id='password'
                         name='password'
                         type='password'
+                        minLength={6}
                         required
                         value={password}
                         onChange={changeHandler}
@@ -122,6 +123,7 @@ const Register = () => {
                         id='confirmPassword'
                         name='confirmPassword'
                         type='password'
+                        minLength={6}
                         required
                         value={confirmPassword}
                         onChange={changeHandler}
