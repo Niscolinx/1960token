@@ -83,8 +83,6 @@ const Register = () => {
         }
     }
 
-    console.log({ errorFields, error })
-
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setErrorFields([])
         setMessageDisplay('hidden')
