@@ -77,7 +77,7 @@ const Register = () => {
                         }`}
                         id='username'
                         name='username'
-                        // required
+                        required
                         type='text'
                         minLength={4}
                         value={username}
@@ -123,7 +123,7 @@ const Register = () => {
                         name='password'
                         type='password'
                         minLength={6}
-                        // required
+                        required
                         value={password}
                         onChange={changeHandler}
                     />
@@ -148,7 +148,7 @@ const Register = () => {
                         name='confirmPassword'
                         type='password'
                         minLength={6}
-                       // required
+                       required
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
