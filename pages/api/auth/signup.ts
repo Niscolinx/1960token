@@ -26,10 +26,13 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         await dbConnect()
 
-        const getUsers = await User.find()
+        const storeUser = new User({
+            email,
+            password,
+            username
+        })
 
-        console.log({getUsers})
-
+        const verifyStored = await storeUser.save()
 
     } else {
         //Response for other than POST method
