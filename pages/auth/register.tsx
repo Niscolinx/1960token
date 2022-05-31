@@ -98,7 +98,7 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
-                    <p className={`${messageDisplay} text-red-500 italica text-center mb-10`}>
+                    <p className={`${messageDisplay} ${message?.style} italica text-center mb-10 transition-all delay-5s ease-out duration-75`}>
                         {message?.value}
                     </p>
                     <label
@@ -115,7 +115,7 @@ const Register = () => {
                         }`}
                         id='username'
                         name='username'
-                       // required
+                        required
                         type='text'
                         minLength={4}
                         value={username}
