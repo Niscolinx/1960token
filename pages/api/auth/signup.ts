@@ -34,6 +34,8 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         const verifyStored = await storeUser.save()
 
+        console.log({verifyStored})
+
     } else {
         //Response for other than POST method
         res.status(500).json({ message: 'Route not valid' })
