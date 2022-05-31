@@ -9,17 +9,17 @@ const Register = () => {
     const [error, setError] = useState(false)
     const [message, setMessage] = useState(null)
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        const formData = new FormData(e.currentTarget as HTMLFormElement)
+        const formData = new FormData(e.currentTarget)
         console.log({ formData })
         console.log(formData.entries())
 
         for (let [key, value] of formData.entries()) {
             console.log({ key, value })
             if (!value) {
-                console.log(e.target.value )
+                console.log('empty', key)
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
             }
