@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { hash } from 'bcryptjs'
+import bcrypt from 'bcryptjs'
 import dbConnect from '../../../lib/dbConnect';
 import User from '../../../models/User';
 
@@ -28,7 +28,7 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         const storeUser = new User({
             email,
-            password,
+            password: await bcrypt.hash(password, 12),
             username
         })
 
