@@ -53,16 +53,15 @@ const Register = () => {
             }
 
             if (key === 'email') {
-                console.log('invalid email')
                 const checkemail = isValidMail(value.toString())
-
+                
                 if (!checkemail) {
                     setError(true)
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
             }
 
-            if (password !== confirmPassword) {
+            if (key === 'confirmPassword' && password !== confirmPassword) {
                 console.log({count})
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
