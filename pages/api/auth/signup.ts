@@ -11,6 +11,7 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
     console.log("req", req.body)
 
     //Only POST mothod is accepted
+    try{
     if (req.method === 'POST') {
         console.log("checking")
         //Getting email and password from body
@@ -48,6 +49,9 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
     } else {
         //Response for other than POST method
         res.status(500).json({ message: 'Route not valid' })
+    }}
+    catch(err) {
+        console.log({err})
     }
 }
 
