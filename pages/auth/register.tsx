@@ -41,6 +41,7 @@ const Register = () => {
         let count = 0
         for (let [key, value] of formData.entries()) {
             if (!value) {
+                console.log('no value')
                 setError(true)
                 setMessage({
                     value: "Value can't be empty",
@@ -52,6 +53,7 @@ const Register = () => {
             }
 
             if (key === 'email') {
+                console.log('invalid email')
                 const checkemail = isValidMail(value.toString())
 
                 if (!checkemail) {
