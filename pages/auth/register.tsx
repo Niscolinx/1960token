@@ -30,9 +30,10 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
 
+        let isError = false
         for (let [key, value] of formData.entries()) {
             if (!value) {
-                setError(true)
+                isError = true
                 setMessage({
                     value: "Value can't be empty",
                     type: 'error',
@@ -46,13 +47,13 @@ const Register = () => {
                 const checkemail = isValidMail(value.toString())
 
                 if (!checkemail) {
-                    setError(true)
+                    isError = true
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
             }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
-                setError(true)
+                isError = true
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
                 setMessage({ ...message, value: 'Passwords do not match' })
@@ -63,7 +64,8 @@ const Register = () => {
         }
 
         console.log('error outside', error)
-        if (!error) {
+        setError(isError)
+        if (!isError) {
             console.log('sending protocol', error)
             try {
                 fetch('/api/auth/signup', {
