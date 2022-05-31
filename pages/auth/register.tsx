@@ -21,6 +21,7 @@ const Register = () => {
     }
 
     useEffect(() => {
+        console.log('call message handler')
         messageHandler()
     }, [error])
 
