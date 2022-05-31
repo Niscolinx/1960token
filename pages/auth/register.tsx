@@ -71,8 +71,11 @@ const Register = () => {
                         email,
                         confirmPassword,
                     }),
-                    method: 'POST'
-                   
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-type': 'application/json'
+                    },
                 })
             } catch (err) {
                 console.log({ err })
