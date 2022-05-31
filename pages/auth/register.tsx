@@ -75,6 +75,9 @@ const Register = () => {
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
+                    <p className='text-red-500 italica text-center'>
+                        Invalid Entries.
+                    </p>
                     <label
                         className='block text-gray-700 text-sm font-bold mb-2'
                         htmlFor='username'
@@ -139,9 +142,6 @@ const Register = () => {
                         value={password}
                         onChange={changeHandler}
                     />
-                    {/* <p className='text-red-500 text-xs italic'>
-                        Please choose a password.
-                    </p> */}
                 </div>
                 <div className='mb-6'>
                     <label
@@ -164,7 +164,6 @@ const Register = () => {
                         value={confirmPassword}
                         onChange={changeHandler}
                     />
-                   
                 </div>
                 <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
                     <button
