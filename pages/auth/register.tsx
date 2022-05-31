@@ -14,8 +14,9 @@ const Register = () => {
 
 
     const messageHandler = () => {
+        console.log('message handler')
         if(error){
-            setMessageDisplay('block')
+            return setMessageDisplay('block')
         }
     }
 
@@ -42,6 +43,8 @@ const Register = () => {
                     style: 'text-red-500',
                 })
                 setErrorFields((oldArr) => [...oldArr, key])
+                messageHandler()
+                
             }
 
             if (key === 'email') {
