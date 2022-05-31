@@ -14,7 +14,7 @@ const Register = () => {
 
 
     const messageHandler = () => {
-        console.log('message handler')
+        console.log('effect message handler')
         if(error){
             return setMessageDisplay('block')
         }
@@ -23,7 +23,7 @@ const Register = () => {
     useEffect(() => {
         console.log('call message handler')
         messageHandler()
-    }, [error])
+    }, [error, errorFields])
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
