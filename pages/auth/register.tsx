@@ -57,10 +57,13 @@ const Register = () => {
                 setMessageDisplay('block')
                 setMessage({ ...message, value: 'Passwords do not match' })
             }
+
+            console.log('error loop', error)
         }
 
+        console.log('error outside', error)
         if (!error) {
-            console.log('sending protocol')
+            console.log('sending protocol', error)
             try {
                 fetch('/api/auth/signup', {
                     body: JSON.stringify({
