@@ -32,13 +32,11 @@ async function dbConnect() {
     }
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
-      console.log('connected', mongoose)
       return mongoose
     })
   }
   cached.conn = await cached.promise
 
-  console.log({cached})
   return cached.conn
 }
 

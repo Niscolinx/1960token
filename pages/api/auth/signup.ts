@@ -26,6 +26,9 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
         await dbConnect()
 
+
+        
+
     } else {
         //Response for other than POST method
         res.status(500).json({ message: 'Route not valid' })
