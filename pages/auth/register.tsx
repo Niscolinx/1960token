@@ -30,10 +30,8 @@ const Register = () => {
 
         const formData = new FormData(e.currentTarget)
 
-        let count = 0
         for (let [key, value] of formData.entries()) {
             if (!value) {
-                console.log('no value')
                 setError(true)
                 setMessage({
                     value: "Value can't be empty",
@@ -54,7 +52,6 @@ const Register = () => {
             }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
-                console.log({ count })
                 setError(true)
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
@@ -62,9 +59,9 @@ const Register = () => {
             }
         }
 
-        try {
+        if (!error) {
             console.log('sending protocol')
-            if (!error) {
+            try {
                 fetch('/api/auth/signup', {
                     body: JSON.stringify({
                         username,
@@ -77,8 +74,10 @@ const Register = () => {
                         'Content-type': 'application/json',
                     },
                 })
+            } catch (err) {
+                console.log({ err })
             }
-        } catch (err) {console.log({err})}
+        }
     }
 
     console.log({ errorFields })
