@@ -2,7 +2,7 @@ import dbConnect from '../lib/dbConnect'
 
 const Index = ({isConnected}: {isConnected: Boolean}) => {
   console.log(isConnected)
-    return <div>{isConnected}</div> 
+    return <div>Welcome, the database connection is {isConnected}</div> 
     
 }
 

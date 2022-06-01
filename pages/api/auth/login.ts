@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import dbConnect from '../../../lib/dbConnect'
 import User from '../../../models/User'
 
 export default async function login(
@@ -9,7 +8,6 @@ export default async function login(
     console.log('login.......', req.body)
 
     try{
-        dbConnect()
         const users = await User.find()
         console.log({users})
     }
