@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { json } from 'stream/consumers'
 import User from '../../../models/User'
 
 export default async function login(
@@ -13,7 +12,9 @@ export default async function login(
         console.log({users})
 
         res.status(200).json(
-           'users found'
+           {
+               users
+           }
         )
     }
     catch(err){
