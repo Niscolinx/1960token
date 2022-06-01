@@ -6,7 +6,6 @@ const Index = ({isConnected}: {isConnected: Boolean}) => {
     
 }
 
-/* Retrieves pet(s) data from mongodb database */
 export async function getServerSideProps() {
   console.log("started connection.......")
     try {
