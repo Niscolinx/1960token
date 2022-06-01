@@ -101,33 +101,12 @@ const Register = () => {
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
                 onSubmit={handleSubmit}
             >
-                <div className='mb-4'>
                     <p
                         className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
                     >
                         {message?.value}
                     </p>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-2'
-                        htmlFor='username'
-                    >
-                        Username
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
-                            error && errorFields.includes('username')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='username'
-                        name='username'
-                        required
-                        type='text'
-                        minLength={4}
-                        value={username}
-                        onChange={changeHandler}
-                    />
-                </div>
+                    
 
                 <div className='mb-4'>
                     <label
