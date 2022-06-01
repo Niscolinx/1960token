@@ -20,6 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Link href="/auth/register">
             <a>Register</a>
           </Link>
+          <Link href="/auth/login">
+            <a>Login</a>
+          </Link>
         </div>
 
         <img

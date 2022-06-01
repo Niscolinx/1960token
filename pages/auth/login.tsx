@@ -101,12 +101,11 @@ const Register = () => {
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
                 onSubmit={handleSubmit}
             >
-                    <p
-                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
-                    >
-                        {message?.value}
-                    </p>
-                    
+                <p
+                    className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
+                >
+                    {message?.value}
+                </p>
 
                 <div className='mb-4'>
                     <label
@@ -151,7 +150,7 @@ const Register = () => {
                         onChange={changeHandler}
                     />
                 </div>
-               
+
                 <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
                     <button
                         className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
