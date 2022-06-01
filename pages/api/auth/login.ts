@@ -7,13 +7,16 @@ export default async function login(
 ) {
     console.log('login.......', req.body)
 
+    const {email, password} = req.body
+
     try{
-        const users = await User.find()
-        console.log({users})
+        const user = await User.findOne({email})
+
+        console.log(user)
 
         res.status(200).json(
            {
-               users
+               user
            }
         )
     }
