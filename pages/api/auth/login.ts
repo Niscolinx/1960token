@@ -7,6 +7,12 @@ export default async function login(
 ) {
     console.log('login.......', req.body)
 
-    const users = await User.find()
-    console.log({users})
+    try{
+
+        const users = await User.find()
+        console.log({users})
+    }
+    catch(err){
+        console.log({err})
+    }
 }
