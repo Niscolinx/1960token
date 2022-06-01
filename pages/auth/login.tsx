@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const Register = () => {
@@ -55,18 +56,11 @@ const Register = () => {
         if (!isError) {
             console.log('sending protocol')
             try {
-                fetch('/api/auth/login', {
-                    body: JSON.stringify({
+                axios
+                    .post('/api/auth/login', {
                         email,
                         password,
-                    }),
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-type': 'application/json',
-                    },
-                })
-                    .then((res) => res.json())
+                    })
                     .then((data) => {
                         console.log({ data })
                     })
