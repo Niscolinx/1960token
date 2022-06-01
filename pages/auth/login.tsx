@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 const Register = () => {
     type message = { value: string; type?: string; style?: string }
 
-    const [username, setUsername] = useState('hello')
     const [email, setEmail] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
-    const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [message, setMessage] = useState<message>({
@@ -52,12 +50,6 @@ const Register = () => {
                 }
             }
 
-            if (key === 'confirmPassword' && password !== confirmPassword) {
-                isError = true
-                setErrorFields((oldArr) => [...oldArr, key])
-                setMessageDisplay('block')
-                setMessage({ ...message, value: 'Passwords do not match' })
-            }
         }
 
         setError(isError)
@@ -66,9 +58,8 @@ const Register = () => {
             try {
                 fetch('/api/auth/signup', {
                     body: JSON.stringify({
-                        username,
                         email,
-                        password: confirmPassword,
+                        password
                     }),
                     method: 'POST',
                     headers: {
