@@ -1,11 +1,10 @@
-import '../css/style.css'
-import '../css/form.css'
 import 'windi.css'
 import Head from 'next/head'
 import Link from 'next/link'
 import { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log('_app running')
   return (
     <>
       <Head>
