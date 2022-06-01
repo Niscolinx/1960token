@@ -49,7 +49,6 @@ const Register = () => {
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
             }
-
         }
 
         setError(isError)
@@ -59,7 +58,7 @@ const Register = () => {
                 fetch('/api/auth/signup', {
                     body: JSON.stringify({
                         email,
-                        password
+                        password,
                     }),
                     method: 'POST',
                     headers: {
@@ -83,19 +82,11 @@ const Register = () => {
         const { name, value } = e.target
 
         switch (name) {
-            case 'username':
-                setUsername(value)
-                break
             case 'email':
                 setEmail(value)
                 break
             case 'password':
                 setPassword(value)
-                break
-            case 'confirmPassword':
-                ;(() => {
-                    setConfirmPassword(value)
-                }).call(this)
                 break
             default:
                 ''
