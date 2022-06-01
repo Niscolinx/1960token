@@ -1,15 +1,15 @@
 import { Schema, Types, model, models } from 'mongoose'
 
 interface IUser {
-    username: string;
-    email: string;
-    role: string;
-    status: string;
-    password: string;
-    pendingWithdrawals: Types.ObjectId[];
-    pendingDeposits: Types.ObjectId[];
-    totalWithdrawals: Types.ObjectId[];
-    totalDeposits: Types.ObjectId[];
+    username: string
+    email: string
+    role: string
+    status: string
+    password: string
+    pendingWithdrawals: Types.ObjectId[]
+    pendingDeposits: Types.ObjectId[]
+    totalWithdrawals: Types.ObjectId[]
+    totalDeposits: Types.ObjectId[]
 }
 
 const userSchema = new Schema<IUser>(
@@ -69,5 +69,6 @@ const userSchema = new Schema<IUser>(
     { timestamps: true }
 )
 
+export default models.User || model('User', userSchema)
 
-export default model('User', userSchema)
+
