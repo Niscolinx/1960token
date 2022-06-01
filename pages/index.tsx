@@ -1,13 +1,9 @@
-import Link from 'next/link'
-import { Key } from 'react'
 import dbConnect from '../lib/dbConnect'
-import Pet from '../models/Pet'
 
 const Index = ({isConnected}: {isConnected: Boolean}) => {
-
-    return <>
-      <p>Welcome, the connection is ${isConnected}</p>
-    </>
+  console.log(isConnected)
+    return <div>{isConnected}</div> 
+    
 }
 
 /* Retrieves pet(s) data from mongodb database */
@@ -17,12 +13,12 @@ export async function getServerSideProps() {
         await dbConnect()
       console.log('connected!!')
         return {
-            props: { isConnected: true },
+            props: { isConnected: 'true' },
         }
     } catch (e) {
         console.error(e)
         return {
-            props: { isConnected: false },
+            props: { isConnected: 'false' },
         }
     }
 }
