@@ -3,11 +3,12 @@ import { Key } from 'react'
 import dbConnect from '../lib/dbConnect'
 import Pet from '../models/Pet'
 
-const Index = ({ pets }: any) => (
-    <>
-      
+const Index = ({isConnected}: {isConnected: Boolean}) => {
+
+    return <>
+      <p>Welcome, the connection is ${isConnected}</p>
     </>
-)
+}
 
 /* Retrieves pet(s) data from mongodb database */
 export async function getServerSideProps() {
