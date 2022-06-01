@@ -212,21 +212,13 @@ const Register = () => {
                         onChange={changeHandler}
                     />
                 </div>
-                <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
-                    <button
-                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
-                        type='submit'
-                    >
-                        Register
-                    </button>
 
-                    <a
-                        className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
-                        href='#'
-                    >
-                        Forgot Password?
-                    </a>
-                </div>
+                <button
+                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
+                    type='submit'
+                >
+                    Register
+                </button>
             </form>
             <p className='text-center text-gray-500 text-xs'>
                 &copy;2022 1960token. All rights reserved.
