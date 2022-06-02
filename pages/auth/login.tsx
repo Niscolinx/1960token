@@ -61,7 +61,7 @@ const Register = () => {
                         email,
                         password,
                     })
-                    .then((data) => {
+                    .then(({data}) => {
                         console.log({ data })
                     })
             } catch (err) {
