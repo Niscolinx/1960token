@@ -2,6 +2,7 @@ import { IUser } from './../../../models/User'
 import bcrypt from 'bcryptjs'
 import { NextApiRequest, NextApiResponse } from 'next'
 import User from '../../../models/User'
+import jwt from 'jsonwebtoken'
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
     console.log('login.......', req.body)
@@ -20,10 +21,22 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
             return res.status(401).json('Incorrect password')
         }
 
+        const token = jwt.sign(
+            {
+                email,
+                userId: user!._id.toString(),
+            },
+            process.env.JWT_SECRET!, {
+                expiresIn: '1hr'
+            }
+        )
+
+        console.log('userid',typeof user._id)
         console.log('***************cleared')
 
         return res.status(200).json({
             user,
+            token
         })
     } catch (err) {
         console.log({ err })
