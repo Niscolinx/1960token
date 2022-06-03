@@ -8,6 +8,11 @@ const Index = ({isConnected}: {isConnected: Boolean}) => {
 
 export async function getServerSideProps() {
   console.log("started connection.......")
+
+  console.log('**** Environmental Variables', process.env.MONGODB_URI)
+  console.log('**** Environmental Variables', process.env.JWT_SECRET)
+  console.log('**** Environmental Variables', process.env)
+
     try {
         await dbConnect()
       console.log('connected!!')
