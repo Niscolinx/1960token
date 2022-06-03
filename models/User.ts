@@ -1,7 +1,7 @@
 import { Schema, Types, model, models } from 'mongoose'
 
 export interface IUser {
-    _id: string;
+    _id: Object;
     username: string
     email: string
     role: string
