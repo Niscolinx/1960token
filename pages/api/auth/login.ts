@@ -31,7 +31,6 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
             }
         )
 
-        console.log('userid',typeof user._id)
         console.log('***************cleared')
 
         return res.status(200).json({
