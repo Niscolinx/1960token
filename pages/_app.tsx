@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 </div>
             </div>
             <div className='grid wrapper'>
-                <SessionProvider session={session} refetchInterval={5 * 60}>
+                <SessionProvider>
                     <Component {...pageProps} />
                 </SessionProvider>{' '}
             </div>

@@ -12,9 +12,8 @@ export default NextAuth({
             // You can pass any HTML attribute to the <input> tag through the object.
             credentials: {
                 username: {
-                    label: 'Username',
-                    type: 'text',
-                    placeholder: 'jsmith',
+                    label: 'Email',
+                    type: 'email',
                 },
                 password: { label: 'Password', type: 'password' },
             },
