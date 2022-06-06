@@ -1,5 +1,7 @@
+import axios from 'axios'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
+import email from 'next-auth/providers/email'
 import GoogleProvider from 'next-auth/providers/google'
 import dbConnect from '../../../lib/dbConnect'
 
@@ -15,7 +17,7 @@ export default NextAuth({
             // e.g. domain, username, password, 2FA token, etc.
             // You can pass any HTML attribute to the <input> tag through the object.
             credentials: {
-                username: {
+                email: {
                     label: 'Email',
                     type: 'email',
                 },
@@ -24,14 +26,18 @@ export default NextAuth({
             async authorize(credentials, req) {
                 console.log({req, credentials})
                 
-                const res = await fetch('/your/endpoint', {
-                    method: 'POST',
-                    body: JSON.stringify(credentials),
-                    headers: { 'Content-Type': 'application/json' },
-                })
-                const user = await res.json()
-
-                console.log({user})
+                 try {
+                     axios
+                         .post('/api/auth/login', {
+                             email,
+                             password,
+                         })
+                         .then(({ data }) => {
+                             console.log({ data })
+                         })
+                 } catch (err) {
+                     console.log({ err })
+                 }
 
                 // If no error and we have user data, return it
                 if (res.ok && user) {
