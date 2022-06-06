@@ -1,3 +1,4 @@
+import { serverUrl } from './../../../config/index';
 import axios from 'axios'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
@@ -29,7 +30,7 @@ export default NextAuth({
                 
                 try {
                     axios
-                        .post('/api/auth/login', {
+                        .post(`${serverUrl}/api/auth/login`, {
                             email,
                             password,
                         })
