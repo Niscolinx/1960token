@@ -1,13 +1,10 @@
-import axios from 'axios'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import email from 'next-auth/providers/email'
 import GoogleProvider from 'next-auth/providers/google'
 import dbConnect from '../../../lib/dbConnect'
 
 dbConnect()
 export default NextAuth({
-  
     providers: [
         CredentialsProvider({
             // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -17,54 +14,46 @@ export default NextAuth({
             // e.g. domain, username, password, 2FA token, etc.
             // You can pass any HTML attribute to the <input> tag through the object.
             credentials: {
-                email: {
+                username: {
                     label: 'Email',
                     type: 'email',
                 },
                 password: { label: 'Password', type: 'password' },
             },
             async authorize(credentials, req) {
+                console.log({ req, credentials })
+                try {
+                    const res = await fetch('/api/auth/login', {
+                        method: 'POST',
+                        body: JSON.stringify(credentials),
+                        headers: { 'Content-Type': 'application/json' },
+                    })
+                    const user = await res.json()
 
-                const email = credentials?.email
-                const password = credentials?.password
+                    console.log({ user })
 
-                console.log({email, password})
-                
-                 try {
-                     axios
-                         .post('/login', {
-                             email,
-                             password,
-                         })
-                         .then(({ data }) => {
-                             console.log({ data })
-                         }).catch((err) => {
-                             console.log({err})
-                         })
-                 } catch (err) {
-                     console.log({ err })
-                 }
-
-              
-                // Return null if user data could not be retrieved
-                console.log('failed')
-                return null
+                    // If no error and we have user data, return it
+                    if (res.ok && user) {
+                        console.log('success')
+                        return user
+                    }
+                    // Return null if user data could not be retrieved
+                    console.log('failed')
+                    return null
+                } catch (err) {
+                    console.log({ err })
+                }
             },
-            
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET || ''
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
     ],
     // pages: {
     //     signIn: '/auth/signin'
     // },
-    callbacks: {
-
-    },
-    jwt: {
-        
-    },
-    secret: process.env.JWT_SECRET
+    callbacks: {},
+    jwt: {},
+    secret: process.env.JWT_SECRET,
 })
