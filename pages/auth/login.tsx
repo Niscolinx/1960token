@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = (props:any) => {
+    console.log('login props', props)
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
