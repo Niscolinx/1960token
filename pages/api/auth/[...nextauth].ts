@@ -24,7 +24,9 @@ export default NextAuth({
                 password: { label: 'Password', type: 'password' },
             },
             async authorize(credentials, req) {
-                console.log({req, credentials})
+
+                const email = credentials?.email
+                const password = credentials?.password
                 
                  try {
                      axios
@@ -39,11 +41,7 @@ export default NextAuth({
                      console.log({ err })
                  }
 
-                // If no error and we have user data, return it
-                if (res.ok && user) {
-                    console.log("success")
-                    return user
-                }
+              
                 // Return null if user data could not be retrieved
                 console.log('failed')
                 return null
