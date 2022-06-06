@@ -1,4 +1,4 @@
-import { serverUrl } from './../../../config/index';
+import { serverUrl } from './../../../config/index'
 import axios from 'axios'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
@@ -7,7 +7,6 @@ import dbConnect from '../../../lib/dbConnect'
 
 dbConnect()
 export default NextAuth({
-  
     providers: [
         CredentialsProvider({
             // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -24,40 +23,33 @@ export default NextAuth({
                 password: { label: 'Password', type: 'password' },
             },
             async authorize(credentials, req) {
-
                 const email = credentials?.email
                 const password = credentials?.password
-                
-                    axios
-                        .post(`${serverUrl}/api/auth/login`, {
-                            email,
-                            password,
-                        })
-                        .then(({ data }) => {
-                            console.log({ data })
-                            return data
-                        }).catch((err) => {
-                            console.log({err})
-                        })
-               
 
-                return null
+                return axios
+                    .post(`${serverUrl}/api/auth/login`, {
+                        email,
+                        password,
+                    })
+                    .then(({ data }) => {
+                        console.log({ data })
+                        return data
+                    })
+                    .catch((err) => {
+                        console.log({ err })
+                        return null
+                    })
             },
-            
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET || ''
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
     ],
     // pages: {
     //     signIn: '/auth/signin'
     // },
-    callbacks: {
-
-    },
-    jwt: {
-        
-    },
-    secret: process.env.JWT_SECRET
+    callbacks: {},
+    jwt: {},
+    secret: process.env.JWT_SECRET,
 })
