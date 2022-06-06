@@ -23,7 +23,6 @@ export default NextAuth({
                 password: { label: 'Password', type: 'password' },
             },
             async authorize(credentials, req) {
-                console.log({req, credentials})
 
                 const email = credentials?.email
                 const password = credentials?.password
@@ -37,6 +36,8 @@ export default NextAuth({
                         .then(({ data }) => {
                             console.log({ data })
                             return data
+                        }).catch((err) => {
+                            console.log({err})
                         })
                 } catch (err) {
                     console.log({ err })
