@@ -4,6 +4,7 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
 import dbConnect from '../../../lib/dbConnect'
+import { redirect } from 'next/dist/server/api-utils'
 
 dbConnect()
 export default NextAuth({
@@ -37,7 +38,7 @@ export default NextAuth({
                     })
                     .catch((err) => {
                         console.log({ err })
-                        return null
+                        return 
                     })
             },
         }),
