@@ -18,6 +18,7 @@ if (!cached) {
 
 async function dbConnect() {
   if (cached.conn) {
+    console.log('already connected')
     return cached.conn
   }
 
@@ -27,6 +28,7 @@ async function dbConnect() {
     }
 
     cached.promise = await mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+      console.log("connected successfully")
       return mongoose
     })
   }
