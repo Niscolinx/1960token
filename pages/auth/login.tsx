@@ -92,7 +92,7 @@ const Register = () => {
         <div className='w-full md:w-1/3 mx-auto'>
             <form
                 id='register'
-                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
+                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-10'
                 onSubmit={handleSubmit}
             >
                 <p
