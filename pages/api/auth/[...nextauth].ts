@@ -28,7 +28,6 @@ export default NextAuth({
                 const email = credentials?.email
                 const password = credentials?.password
                 
-                try {
                     axios
                         .post(`${serverUrl}/api/auth/login`, {
                             email,
@@ -40,9 +39,7 @@ export default NextAuth({
                         }).catch((err) => {
                             console.log({err})
                         })
-                } catch (err) {
-                    console.log({ err })
-                }
+               
 
                 return null
             },
