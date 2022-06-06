@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 <title>1960Token</title>
             </Head>
 
-            <div className='top-bar'>
-                <div className='nav'>
+            <div className='flex w-full'>
+                <div className='w-full'>
                     <Link href='/'>
                         <a>Home</a>
                     </Link>
@@ -22,6 +22,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                     </Link>
                     <Link href='/auth/login'>
                         <a>Login</a>
+                    </Link>
+                    <Link href='/api/auth/signin'>
+                        <a>Nexauth</a>
                     </Link>
                 </div>
             </div>
