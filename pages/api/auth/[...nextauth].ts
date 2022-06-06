@@ -27,6 +27,8 @@ export default NextAuth({
 
                 const email = credentials?.email
                 const password = credentials?.password
+
+                console.log({email, password})
                 
                  try {
                      axios
