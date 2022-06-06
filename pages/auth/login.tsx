@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
-const Register = () => {
+const Login = () => {
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
@@ -91,7 +91,7 @@ const Register = () => {
     return (
         <div className='w-full md:w-1/3 mx-auto'>
             <form
-                id='register'
+                id='login'
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-10'
                 onSubmit={handleSubmit}
             >
@@ -168,4 +168,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default Login
