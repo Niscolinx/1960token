@@ -190,10 +190,12 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
             </form>
 
             {Object.values(providers).map((provider) => {
-                console.log(provider)
-                if(provider)
-                return <div>
-                    <button>{}</button>
+                if(provider.name === 'Credentials') {
+                    return
+                }
+                
+                return <div key={provider.id}>
+                    <button>Sign in with {provider.name}</button>
                 </div>
             })}
             <p className='text-center text-gray-500 text-xs'>
