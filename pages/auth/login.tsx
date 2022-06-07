@@ -194,14 +194,14 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
                     return
                 }
                 
-                return <div key={provider.id} className='grid justify-center'>
-                    <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
+                return <div key={provider.id} className='grid justify-center mt-10'>
+                    <button onClick={() => signIn(provider.id)} className='bg-red-300 py-1 px-6  rounded'>Sign in with {provider.name}</button>
                 </div>
             })}
         </div>
-            <p className='text-center text-gray-500 text-xs mt-auto'>
+            {/* <p className='text-center text-gray-500 text-xs mt-auto mt-5'>
                 &copy;2022 1960token. All rights reserved.
-            </p>
+            </p> */}
             </>
     )
 }
