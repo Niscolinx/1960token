@@ -5,8 +5,13 @@ import { getCsrfToken, getProviders, signIn } from 'next-auth/react'
 import Router from 'next/router'
 
 interface LoginProps {
-    csrfToken: string
-    providers: any
+    csrfToken: string;
+    providers: {
+        [key:string]: {
+            id: string;
+            name: string;
+        }
+    }
 }
 
 const Login = ({ csrfToken, providers }: LoginProps) => {
@@ -183,6 +188,13 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
                     </a>
                 </div>
             </form>
+
+            {Object.values(providers).map((provider) => {
+                if(provider)
+                return <div>
+                    <button>{}</button>
+                </div>
+            })}
             <p className='text-center text-gray-500 text-xs'>
                 &copy;2022 1960token. All rights reserved.
             </p>
