@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { CtxOrReq } from 'next-auth/client/_utils'
-import { getCsrfToken, getProviders } from 'next-auth/react'
+import { getCsrfToken, getProviders, signIn } from 'next-auth/react'
 
 interface LoginProps {
     csrfToken: string
@@ -9,6 +9,7 @@ interface LoginProps {
 }
 
 const Login = ({ csrfToken, providers }: LoginProps) => {
+    console.log({providers})
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
@@ -56,6 +57,11 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
                     isError = true
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
+
+            }
+
+            else if(!error){
+                signIn('credentials', { email, password })
             }
         }
 
