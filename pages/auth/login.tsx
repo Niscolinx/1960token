@@ -61,8 +61,9 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
             }
 
             else if(!error){
-                console.log('sign in.....')
-                signIn('credentials', { email, password })
+                
+                console.log('sign in.....', error)
+                signIn('credentials', { redirect:false, email, password })
             }
         }
 
@@ -122,11 +123,7 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
                     >
                         Email
                     </label>
-                    <input
-                        type='hidden'
-                        name='csrfToken'
-                        defaultValue={csrfToken}
-                    />
+                 
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
                             error && errorFields.includes('email')
