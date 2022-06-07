@@ -61,6 +61,7 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
             }
 
             else if(!error){
+                console.log('sign in.....')
                 signIn('credentials', { email, password })
             }
         }
