@@ -3,13 +3,12 @@ import axios from 'axios'
 import { CtxOrReq } from 'next-auth/client/_utils'
 import { getCsrfToken, getProviders } from 'next-auth/react'
 
-const Login = ({
-    csrfToken,
-    providers,
-}: {
+interface LoginProps {
     csrfToken: string
     providers: any
-}) => {
+}
+
+const Login = ({ csrfToken, providers }: LoginProps) => {
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
