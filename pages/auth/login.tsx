@@ -4,8 +4,7 @@ import { CtxOrReq } from 'next-auth/client/_utils'
 import { getCsrfToken, getProviders } from 'next-auth/react'
 import React, { useState } from 'react'
 
-const Login = (props:any) => {
-    console.log('login props', props)
+const Login = ({csrfToken, providers}: {csrfToken: string, providers: any}) => {
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
@@ -112,7 +111,7 @@ const Login = (props:any) => {
                     >
                         Email
                     </label>
-                    <input type="hidden" name='csrfToken' />
+                    <input type="hidden" name='csrfToken' defaultValue={csrfToken} />
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
                             error && errorFields.includes('email')
