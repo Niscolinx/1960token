@@ -1,10 +1,15 @@
+import React, { useState } from 'react'
 import axios from 'axios'
-import { GetServerSidePropsContext } from 'next'
 import { CtxOrReq } from 'next-auth/client/_utils'
 import { getCsrfToken, getProviders } from 'next-auth/react'
-import React, { useState } from 'react'
 
-const Login = ({csrfToken, providers}: {csrfToken: string, providers: any}) => {
+const Login = ({
+    csrfToken,
+    providers,
+}: {
+    csrfToken: string
+    providers: any
+}) => {
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
@@ -64,7 +69,7 @@ const Login = ({csrfToken, providers}: {csrfToken: string, providers: any}) => {
                         email,
                         password,
                     })
-                    .then(({data}) => {
+                    .then(({ data }) => {
                         console.log({ data })
                     })
             } catch (err) {
@@ -111,7 +116,11 @@ const Login = ({csrfToken, providers}: {csrfToken: string, providers: any}) => {
                     >
                         Email
                     </label>
-                    <input type="hidden" name='csrfToken' defaultValue={csrfToken} />
+                    <input
+                        type='hidden'
+                        name='csrfToken'
+                        defaultValue={csrfToken}
+                    />
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
                             error && errorFields.includes('email')
@@ -174,15 +183,14 @@ const Login = ({csrfToken, providers}: {csrfToken: string, providers: any}) => {
 
 export default Login
 
-export async function getServerSideProps(context: CtxOrReq | undefined){
-
+export async function getServerSideProps(context: CtxOrReq | undefined) {
     const csrfToken = await getCsrfToken(context)
     const providers = await getProviders()
 
     return {
         props: {
             csrfToken,
-            providers
-        }
+            providers,
+        },
     }
 }
