@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { CtxOrReq } from 'next-auth/client/_utils'
 import { getCsrfToken, getProviders, signIn } from 'next-auth/react'
+import Router from 'next/router'
 
 interface LoginProps {
     csrfToken: string
@@ -63,8 +64,10 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
             else if(!isError){
                 
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect:false, email, password }).then((success) => {
-                    console.log({success})
+                signIn('credentials', { redirect:false, email, password }).then(() => {
+                    Router.push('/dashboard')
+                }).catch((err) => {
+                    console.log({err})
                 })
             }
         }
