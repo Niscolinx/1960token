@@ -64,7 +64,8 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
             else if(!isError){
                 
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect:false, email, password }).then(() => {
+                signIn('credentials', { redirect:false, email, password }).then((success) => {
+                    console.log({success})
                     Router.push('/dashboard')
                 }).catch((err) => {
                     console.log({err})
