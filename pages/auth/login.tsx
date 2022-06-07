@@ -114,7 +114,7 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
         }
     }
 
-    return (
+    return (<>
         <div className='w-full md:w-1/3 mx-auto'>
             <form
                 id='login'
@@ -194,14 +194,15 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
                     return
                 }
                 
-                return <div key={provider.id}>
+                return <div key={provider.id} className='grid justify-center'>
                     <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
                 </div>
             })}
-            <p className='text-center text-gray-500 text-xs'>
+        </div>
+            <p className='text-center text-gray-500 text-xs mt-auto'>
                 &copy;2022 1960token. All rights reserved.
             </p>
-        </div>
+            </>
     )
 }
 
