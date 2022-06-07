@@ -195,7 +195,7 @@ const Login = ({ csrfToken, providers }: LoginProps) => {
                 }
                 
                 return <div key={provider.id}>
-                    <button>Sign in with {provider.name}</button>
+                    <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
                 </div>
             })}
             <p className='text-center text-gray-500 text-xs'>
