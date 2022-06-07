@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 </div>
             </div>
             <div className='grid wrapper'>
-                <SessionProvider>
+                <SessionProvider session={session}>
                     <Component {...pageProps} />
                 </SessionProvider>{' '}
             </div>
