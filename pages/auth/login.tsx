@@ -1,4 +1,7 @@
 import axios from 'axios'
+import { GetServerSidePropsContext } from 'next'
+import { CtxOrReq } from 'next-auth/client/_utils'
+import { getCsrfToken } from 'next-auth/react'
 import React, { useState } from 'react'
 
 const Login = (props:any) => {
@@ -170,3 +173,9 @@ const Login = (props:any) => {
 }
 
 export default Login
+
+export async function getServerSideProps(context: CtxOrReq | undefined){
+
+    const csrfToken = await getCsrfToken(context)
+
+}
