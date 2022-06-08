@@ -5,7 +5,7 @@ import { AppProps } from 'next/app'
 import {SessionProvider} from 'next-auth/react'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-    console.log('_app running')
+    console.log('_app running', session)
     return (
         <>
             <Head>
