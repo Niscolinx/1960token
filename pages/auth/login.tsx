@@ -14,7 +14,7 @@ interface LoginProps {
     }
 }
 
-const Login = ({ csrfToken, providers }: LoginProps) => {
+const Login = ({ providers }: LoginProps) => {
     console.log({providers})
     type message = { value: string; type?: string; style?: string }
 
