@@ -52,15 +52,12 @@ export default NextAuth({
     },
     callbacks: {
 
-        async jwt ({user, token, account, profile}) {
-            console.log('jwt', {user, account, profile, token})
+        async jwt ({user, token}) {
     
             return Object.assign(token, user)
 
         },
-        async session ({session, token, user}){
-            console.log('session', {session, token,user})
-          
+        async session ({session, token}){          
             return Object.assign(session, token)
         }
     },
