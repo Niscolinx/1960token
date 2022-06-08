@@ -52,6 +52,7 @@ export default NextAuth({
     },
     callbacks: {
         jwt: (({user, token}) => {
+            console.log({user})
             if(user){
                 token.id = user.id
             }
@@ -59,6 +60,7 @@ export default NextAuth({
 
         }),
         session: (({session, token}) => {
+            console.log({session})
             if(token){
                 session.id = token.id
             }
