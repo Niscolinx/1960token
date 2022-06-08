@@ -51,8 +51,18 @@ export default NextAuth({
         signIn: '/auth/login'
     },
     callbacks: {
-        jwt: ((context) => {
-            console.log({context})
+        jwt: (({user, token}) => {
+            if(user){
+                token.id = user.id
+            }
+            return token
+
+        }),
+        session: (({session, token}) => {
+            if(token){
+                session.id = token.id
+            }
+            return session
         })
     },
    
