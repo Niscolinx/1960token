@@ -51,22 +51,24 @@ export default NextAuth({
         signIn: '/auth/login'
     },
     callbacks: {
-        jwt: (({user, token}) => {
-            console.log({user})
+
+        async jwt ({user, token, account, profile}) {
+            console.log({user, account, profile, token})
             if(user){
-                token.id = user.id
+                token.id = user._id
+                token.email = user.email
             }
             return token
 
-        }),
-        session: (({session, token}) => {
-            console.log({session})
+        },
+        async session ({session, token, user}){
+            console.log({session, token,user})
             if(token){
                 session.id = token.id
             }
             return session
-        })
+        }
     },
    
-    secret: process.env.JWT_SECRET,
+    secret: process.env.JWT_SECRET
 })
