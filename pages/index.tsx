@@ -1,6 +1,9 @@
+import { useSession } from 'next-auth/react'
 import dbConnect from '../lib/dbConnect'
 
 const Index = ({isConnected}: {isConnected: Boolean}) => {
+   const { data: session } = useSession()
+   console.log({ session })
   console.log(isConnected)
     return <div>Welcome, the database connection is {isConnected}</div> 
     
