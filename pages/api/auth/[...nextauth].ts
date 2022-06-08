@@ -50,7 +50,11 @@ export default NextAuth({
     pages: {
         signIn: '/auth/login'
     },
-    callbacks: {},
-    jwt: {},
+    callbacks: {
+        jwt: ((context) => {
+            console.log({context})
+        })
+    },
+   
     secret: process.env.JWT_SECRET,
 })
