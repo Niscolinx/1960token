@@ -14,8 +14,9 @@ interface LoginProps {
     }
 }
 
-const Login = ({ providers }: LoginProps) => {
-    console.log({providers})
+const Login = (props:any) => {
+    console.log({props})
+    const providers = props.providers
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
