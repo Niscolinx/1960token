@@ -5,7 +5,7 @@ import User from '../../../models/User'
 import jwt from 'jsonwebtoken'
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
-    console.log('login.......', req.body)
+    console.log('login.....', req.body)
 
     const { email, password } = req.body
 
