@@ -65,44 +65,44 @@ const Login = ({ providers, csrfToken }: LoginProps) => {
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
             } 
-            // else if (!isError) {
-            //     console.log('sign in.....', isError)
-            //     signIn('credentials', { redirect: false, email, password })
-            //         .then((data:any) => {
-            //             console.log('data returned', data)
+            else if (!isError) {
+                console.log('sign in.....', isError)
+                signIn('credentials', { redirect: false, email, password })
+                    .then((data:any) => {
+                        console.log('data returned', data)
 
-            //             if(data.error){
-            //                 setError(true)
-            //                   setMessage({
-            //                       value: "Invalid User",
-            //                       type: 'error',
-            //                       style: 'text-red-500',
-            //                   })
-            //                   setMessageDisplay('block')
-            //                 return
-            //             }
-            //             Router.push('/dashboard')
-            //         })
+                        if(data.error){
+                            setError(true)
+                              setMessage({
+                                  value: "Invalid User",
+                                  type: 'error',
+                                  style: 'text-red-500',
+                              })
+                              setMessageDisplay('block')
+                            return
+                        }
+                        Router.push('/dashboard')
+                    })
                    
-            // }
+            }
         }
 
         setError(isError)
-        if (!isError) {
-            console.log('sending protocol')
-            try {
-                axios
-                    .post('/api/auth/login', {
-                        email,
-                        password,
-                    })
-                    .then(({ data }) => {
-                        console.log({ data })
-                    })
-            } catch (err) {
-                console.log({ err })
-            }
-        }
+        // if (!isError) {
+        //     console.log('sending protocol')
+        //     try {
+        //         axios
+        //             .post('/api/auth/login', {
+        //                 email,
+        //                 password,
+        //             })
+        //             .then(({ data }) => {
+        //                 console.log({ data })
+        //             })
+        //     } catch (err) {
+        //         console.log({ err })
+        //     }
+        // }
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -138,7 +138,6 @@ const Login = ({ providers, csrfToken }: LoginProps) => {
                     </p>
 
                     <div className='mb-4'>
-                        <input type="hidden" value={csrfToken} />
                         <label
                             className='block text-gray-700 text-sm font-bold mb-2'
                             htmlFor='username'
@@ -160,28 +159,7 @@ const Login = ({ providers, csrfToken }: LoginProps) => {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div className='mb-6'>
-                        <label
-                            className='block text-gray-700 text-sm font-bold mb-2'
-                            htmlFor='password'
-                        >
-                            Password
-                        </label>
-                        <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
-                                error && errorFields.includes('password')
-                                    ? 'border-red-500'
-                                    : ''
-                            }`}
-                            id='password'
-                            name='password'
-                            type='password'
-                            minLength={6}
-                            required
-                            value={password}
-                            onChange={changeHandler}
-                        />
-                    </div>
+                    
 
                     <div className='grid justify-center gap-2  md:gap-0 md:flex items-center'>
                         <button
