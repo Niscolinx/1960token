@@ -6,8 +6,13 @@ import GoogleProvider from 'next-auth/providers/google'
 import EmailProvider from 'next-auth/providers/email'
 import dbConnect from '../../../lib/dbConnect'
 
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
+import clientPromise from '../../../lib/mongodb'
+
 dbConnect()
 export default NextAuth({
+    adapter: MongoDBAdapter(clientPromise),
+
     providers: [
         CredentialsProvider({
             // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -68,6 +73,9 @@ export default NextAuth({
         async session({ session, token }) {
             return Object.assign(session, token)
         },
+    },
+    theme: {
+        colorScheme: 'dark'
     },
 
     secret: process.env.JWT_SECRET,
