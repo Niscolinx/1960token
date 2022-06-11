@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const path = require('path')
 const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 
 module.exports = {
