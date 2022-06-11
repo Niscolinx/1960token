@@ -15,7 +15,7 @@ interface LoginProps {
     }
 }
 
-const Login = ({ providers }: LoginProps) => {
+const Login = ({ providers, csrfToken }: LoginProps) => {
     console.log({ providers })
     type message = { value: string; type?: string; style?: string }
 
@@ -64,44 +64,45 @@ const Login = ({ providers }: LoginProps) => {
                     isError = true
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
-            } else if (!isError) {
-                console.log('sign in.....', isError)
-                signIn('credentials', { redirect: false, email, password })
-                    .then((data:any) => {
-                        console.log('data returned', data)
+            } 
+            // else if (!isError) {
+            //     console.log('sign in.....', isError)
+            //     signIn('credentials', { redirect: false, email, password })
+            //         .then((data:any) => {
+            //             console.log('data returned', data)
 
-                        if(data.error){
-                            setError(true)
-                              setMessage({
-                                  value: "Invalid User",
-                                  type: 'error',
-                                  style: 'text-red-500',
-                              })
-                              setMessageDisplay('block')
-                            return
-                        }
-                        Router.push('/dashboard')
-                    })
+            //             if(data.error){
+            //                 setError(true)
+            //                   setMessage({
+            //                       value: "Invalid User",
+            //                       type: 'error',
+            //                       style: 'text-red-500',
+            //                   })
+            //                   setMessageDisplay('block')
+            //                 return
+            //             }
+            //             Router.push('/dashboard')
+            //         })
                    
-            }
+            // }
         }
 
         setError(isError)
-        // if (!isError) {
-        //     console.log('sending protocol')
-        //     try {
-        //         axios
-        //             .post('/api/auth/login', {
-        //                 email,
-        //                 password,
-        //             })
-        //             .then(({ data }) => {
-        //                 console.log({ data })
-        //             })
-        //     } catch (err) {
-        //         console.log({ err })
-        //     }
-        // }
+        if (!isError) {
+            console.log('sending protocol')
+            try {
+                axios
+                    .post('/api/auth/login', {
+                        email,
+                        password,
+                    })
+                    .then(({ data }) => {
+                        console.log({ data })
+                    })
+            } catch (err) {
+                console.log({ err })
+            }
+        }
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -137,6 +138,7 @@ const Login = ({ providers }: LoginProps) => {
                     </p>
 
                     <div className='mb-4'>
+                        <input type="hidden" value={csrfToken} />
                         <label
                             className='block text-gray-700 text-sm font-bold mb-2'
                             htmlFor='username'
