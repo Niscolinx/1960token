@@ -67,8 +67,8 @@ const Login = ({ providers }: LoginProps) => {
             } else if (!isError) {
                 console.log('sign in.....', isError)
                 signIn('credentials', { redirect: false, email, password })
-                    .then((success) => {
-                        console.log({ success })
+                    .then((data) => {
+                        console.log({ data })
                         Router.push('/dashboard')
                     })
                     .catch((err) => {
@@ -78,21 +78,21 @@ const Login = ({ providers }: LoginProps) => {
         }
 
         setError(isError)
-        if (!isError) {
-            console.log('sending protocol')
-            try {
-                axios
-                    .post('/api/auth/login', {
-                        email,
-                        password,
-                    })
-                    .then(({ data }) => {
-                        console.log({ data })
-                    })
-            } catch (err) {
-                console.log({ err })
-            }
-        }
+        // if (!isError) {
+        //     console.log('sending protocol')
+        //     try {
+        //         axios
+        //             .post('/api/auth/login', {
+        //                 email,
+        //                 password,
+        //             })
+        //             .then(({ data }) => {
+        //                 console.log({ data })
+        //             })
+        //     } catch (err) {
+        //         console.log({ err })
+        //     }
+        // }
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
