@@ -202,14 +202,14 @@ const Login = ({ providers }: LoginProps) => {
                     )
                 })}
                 <div className='grid mt-10 gap-2 px-8'>
-                    <a
+                 
+                    <Link
+                        href='/auth/register'
                         className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
-                        href='#'
                     >
                         Register
-                    </a>
-                    <Link href='/auth/register'>Register</Link>
-                    
+                    </Link>
+
                     <a
                         className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
                         href='#'
