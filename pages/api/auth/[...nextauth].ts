@@ -69,12 +69,12 @@ export default NextAuth({
     },
     callbacks: {
         async jwt({ user, token }) {
-            //return Object.assign(token, user)
-            return token
+            return Object.assign(token, user)
+            //return token
         },
         async session({ session, token }) {
-           // return Object.assign(session, token)
-           return session
+           return Object.assign(session, token)
+           //return session
         },
     },
     theme: {
