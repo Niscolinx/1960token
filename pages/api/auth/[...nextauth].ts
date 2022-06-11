@@ -12,7 +12,7 @@ import clientPromise from '../../../lib/mongodb'
 
 dbConnect()
 export default NextAuth({
-    adapter: MongoDBAdapter(dbConnect()),
+    adapter: MongoDBAdapter(clientPromise),
 
     providers: [
         // CredentialsProvider({
@@ -48,25 +48,25 @@ export default NextAuth({
         //             })
         //     },
         // }),
-        EmailProvider({
-            server: process.env.EMAIL_SERVER,
-            from: process.env.EMAIL_FROM,
-            sendVerificationRequest({
-                identifier: email,
-                url,
-                provider: { server, from },
-            }) {
-                /* your function */
-            },
-        }),
+        // EmailProvider({
+        //     server: process.env.EMAIL_SERVER,
+        //     from: process.env.EMAIL_FROM,
+        //     sendVerificationRequest({
+        //         identifier: email,
+        //         url,
+        //         provider: { server, from },
+        //     }){
+        //         /* your function */
+        //     },
+        // }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
             clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
     ],
-    pages: {
-        signIn: '/auth/login',
-    },
+    // pages: {
+    //     signIn: '/auth/login',
+    // },
     callbacks: {
         async jwt({ user, token }) {
             //return Object.assign(token, user)
