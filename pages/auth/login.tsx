@@ -67,10 +67,10 @@ const Login = ({ providers }: LoginProps) => {
             } else if (!isError) {
                 console.log('sign in.....', isError)
                 signIn('credentials', { redirect: false, email, password })
-                    .then((data) => {
+                    .then((data:any) => {
                         console.log('data returned', data)
 
-                        if(data?.status !== '200'){
+                        if(data.error){
                             console.log({data})
                             return
                         }
