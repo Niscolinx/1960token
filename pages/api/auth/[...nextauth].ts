@@ -49,7 +49,7 @@ export default NextAuth({
         // }),
         EmailProvider({
             server: {
-                host: process.env.SENDGRID_HOST,
+                host: process.env.SENDGRID_SERVER,
                 port: process.env.SENDGRID_PORT,
                 auth: {
                     user: process.env.SENDGRID_USERNAME,
