@@ -49,14 +49,14 @@ export default NextAuth({
         // }),
         EmailProvider({
             server: {
-                host: process.env.SENDGRID_SERVER,
-                port: process.env.SENDGRID_PORT,
+                host: process.env.EMAIL_SERVER_HOST,
+                port: process.env.EMAIL_SERVER_PORT,    
                 auth: {
-                    user: process.env.SENDGRID_USERNAME,
-                    pass: process.env.SENDGRID_PASSWORD,
+                    user: process.env.EMAIL_SERVER_USERNAME,
+                    pass: process.env.EMAIL_SERVER_PASSWORD,
                 },
             },
-            from: process.env.SENDGRID_FROM,
+            from: process.env.EMAIL_SERVER_FROM,
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
