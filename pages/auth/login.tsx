@@ -159,14 +159,35 @@ const Login = ({ providers, csrfToken }: LoginProps) => {
                             onChange={changeHandler}
                         />
                     </div>
-                    
+                    <div className='mb-6'>
+                        <label
+                            className='block text-gray-700 text-sm font-bold mb-2'
+                            htmlFor='password'
+                        >
+                            Password
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                                error && errorFields.includes('password')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='password'
+                            name='password'
+                            type='password'
+                            minLength={6}
+                            required
+                            value={password}
+                            onChange={changeHandler}
+                        />
+                    </div>
 
                     <div className='grid justify-center gap-2  md:gap-0 md:flex items-center'>
                         <button
                             className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
                             type='submit'
                         >
-                            Sign In with Email
+                            Sign In
                         </button>
                     </div>
                 </form>

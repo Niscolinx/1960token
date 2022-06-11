@@ -9,6 +9,6 @@ declare module '*.svg' {
 declare module NodeJS {
     interface Global {
         mongoose: Connection
-        _mongoClientPromise: Connection
+        mongoClientPromise: string
     }
 }
