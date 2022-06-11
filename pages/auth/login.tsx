@@ -195,7 +195,7 @@ const Login = ({ providers }: LoginProps) => {
                 }
                 
                 return <div key={provider.id} className='grid justify-center mt-10'>
-                    <button onClick={() => signIn(provider.id)} className='bg-red-300 py-1 px-6  rounded'>Sign in with {provider.name}</button>
+                    <button onClick={() => signIn(provider.id)} className='bg-blue-300 py-1 px-6  rounded'>Sign in with {provider.name}</button>
                 </div>
             })}
         </div>

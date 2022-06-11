@@ -64,9 +64,9 @@ export default NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
     ],
-    // pages: {
-    //     signIn: '/auth/login',
-    // },
+    pages: {
+        signIn: '/auth/login',
+    },
     callbacks: {
         async jwt({ user, token }) {
             return Object.assign(token, user)
