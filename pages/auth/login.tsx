@@ -69,11 +69,14 @@ const Login = ({ providers }: LoginProps) => {
                 signIn('credentials', { redirect: false, email, password })
                     .then((data) => {
                         console.log({ data })
+
+                        if(data?.status !== '200'){
+                            console.log({data})
+                            return
+                        }
                         Router.push('/dashboard')
                     })
-                    .catch((err) => {
-                        console.log({ err })
-                    })
+                   
             }
         }
 
