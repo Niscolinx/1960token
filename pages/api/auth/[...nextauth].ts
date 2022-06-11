@@ -4,7 +4,6 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
 import dbConnect from '../../../lib/dbConnect'
-import { redirect } from 'next/dist/server/api-utils'
 
 dbConnect()
 export default NextAuth({
@@ -38,9 +37,13 @@ export default NextAuth({
                     })
                     .catch((err) => {
                         console.log({ err })
-                        return 
+                        return
                     })
             },
+        }),
+        EmailProvider({
+            server: process.env.EMAIL_SERVER,
+            from: process.env.EMAIL_FROM,
         }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
@@ -48,19 +51,16 @@ export default NextAuth({
         }),
     ],
     pages: {
-        signIn: '/auth/login'
+        signIn: '/auth/login',
     },
     callbacks: {
-
-        async jwt ({user, token}) {
-    
+        async jwt({ user, token }) {
             return Object.assign(token, user)
-
         },
-        async session ({session, token}){          
+        async session({ session, token }) {
             return Object.assign(session, token)
-        }
+        },
     },
-   
-    secret: process.env.JWT_SECRET
+
+    secret: process.env.JWT_SECRET,
 })
