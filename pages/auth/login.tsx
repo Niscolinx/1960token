@@ -5,17 +5,17 @@ import { getCsrfToken, getProviders, signIn } from 'next-auth/react'
 import Router from 'next/router'
 
 interface LoginProps {
-    csrfToken: string;
+    csrfToken: string
     providers: {
-        [key:string]: {
-            id: string;
-            name: string;
+        [key: string]: {
+            id: string
+            name: string
         }
     }
 }
 
 const Login = ({ providers }: LoginProps) => {
-    console.log({providers})
+    console.log({ providers })
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
@@ -63,18 +63,16 @@ const Login = ({ providers }: LoginProps) => {
                     isError = true
                     setErrorFields((oldArr) => [...oldArr, key])
                 }
-
-            }
-
-            else if(!isError){
-                
+            } else if (!isError) {
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect:false, email, password }).then((success) => {
-                    console.log({success})
-                    Router.push('/dashboard')
-                }).catch((err) => {
-                    console.log({err})
-                })
+                signIn('credentials', { redirect: false, email, password })
+                    .then((success) => {
+                        console.log({ success })
+                        Router.push('/dashboard')
+                    })
+                    .catch((err) => {
+                        console.log({ err })
+                    })
             }
         }
 
@@ -114,72 +112,101 @@ const Login = ({ providers }: LoginProps) => {
         }
     }
 
-    return (<>
-        <div className='w-full md:w-1/3 mx-auto'>
-            <form
-                id='login'
-                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-10'
-                onSubmit={handleSubmit}
-            >
-                <p
-                    className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
+    return (
+        <>
+            <div className='w-full md:w-1/3 mx-auto'>
+                <form
+                    id='login'
+                    className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-10'
+                    onSubmit={handleSubmit}
                 >
-                    {message?.value}
-                </p>
-
-                <div className='mb-4'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-2'
-                        htmlFor='username'
+                    <p
+                        className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
                     >
-                        Email
-                    </label>
-                 
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
-                            error && errorFields.includes('email')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='email'
-                        type='email'
-                        name='email'
-                        required
-                        value={email}
-                        onChange={changeHandler}
-                    />
-                </div>
-                <div className='mb-6'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-2'
-                        htmlFor='password'
-                    >
-                        Password
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
-                            error && errorFields.includes('password')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='password'
-                        name='password'
-                        type='password'
-                        minLength={6}
-                        required
-                        value={password}
-                        onChange={changeHandler}
-                    />
-                </div>
+                        {message?.value}
+                    </p>
 
-                <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
-                    <button
-                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
-                        type='submit'
-                    >
-                        Sign In
-                    </button>
+                    <div className='mb-4'>
+                        <label
+                            className='block text-gray-700 text-sm font-bold mb-2'
+                            htmlFor='username'
+                        >
+                            Email
+                        </label>
 
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                                error && errorFields.includes('email')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='email'
+                            type='email'
+                            name='email'
+                            required
+                            value={email}
+                            onChange={changeHandler}
+                        />
+                    </div>
+                    <div className='mb-6'>
+                        <label
+                            className='block text-gray-700 text-sm font-bold mb-2'
+                            htmlFor='password'
+                        >
+                            Password
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                                error && errorFields.includes('password')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='password'
+                            name='password'
+                            type='password'
+                            minLength={6}
+                            required
+                            value={password}
+                            onChange={changeHandler}
+                        />
+                    </div>
+
+                    <div className='grid justify-center gap-2  md:gap-0 md:flex items-center md:justify-between'>
+                        <button
+                            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
+                            type='submit'
+                        >
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+
+                {Object.values(providers).map((provider) => {
+                    if (provider.name === 'Credentials') {
+                        return
+                    }
+
+                    return (
+                        <div
+                            key={provider.id}
+                            className='grid justify-center mt-10'
+                        >
+                            <button
+                                onClick={() => signIn(provider.id)}
+                                className='bg-blue-300 py-1 px-6  rounded'
+                            >
+                                Sign in with {provider.name}
+                            </button>
+                        </div>
+                    )
+                })}
+                <div className='das'>
+                    <a
+                        className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
+                        href='#'
+                    >
+                        Register
+                    </a>
                     <a
                         className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
                         href='#'
@@ -187,22 +214,11 @@ const Login = ({ providers }: LoginProps) => {
                         Forgot Password?
                     </a>
                 </div>
-            </form>
-
-            {Object.values(providers).map((provider) => {
-                if(provider.name === 'Credentials') {
-                    return
-                }
-                
-                return <div key={provider.id} className='grid justify-center mt-10'>
-                    <button onClick={() => signIn(provider.id)} className='bg-blue-300 py-1 px-6  rounded'>Sign in with {provider.name}</button>
-                </div>
-            })}
-        </div>
+            </div>
             {/* <p className='text-center text-gray-500 text-xs mt-auto mt-5'>
                 &copy;2022 1960token. All rights reserved.
             </p> */}
-            </>
+        </>
     )
 }
 
