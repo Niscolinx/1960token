@@ -166,13 +166,13 @@ const Login = ({ providers, csrfToken }: LoginProps) => {
                             className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
                             type='submit'
                         >
-                            Sign In
+                            Sign In with Email
                         </button>
                     </div>
                 </form>
 
                 {Object.values(providers).map((provider) => {
-                    if (provider.name === 'Credentials') {
+                    if (provider.name === 'Credentials' || provider.name === 'Email') {
                         return
                     }
 
