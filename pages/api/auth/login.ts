@@ -13,12 +13,12 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         const user: IUser | null = await User.findOne({ email })
 
         if (!user) {
-            return res.status(400).json('invalid user')
+            throw new Error('Invalid User')
         }
 
         const checkPassword = await bcrypt.compare(password, user!.password)
         if (!checkPassword) {
-            return res.status(401).json('Incorrect password')
+            throw new Error('Incorrect Password')
         }
 
         const token = jwt.sign(
