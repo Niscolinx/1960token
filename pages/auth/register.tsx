@@ -107,7 +107,7 @@ const Register = () => {
     }
 
     return (
-        <div className='w-full md:w-2xl'>
+        <div className='w-full md:w-1/3 mx-auto'>
             <form
                 id='register'
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
