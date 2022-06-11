@@ -71,7 +71,13 @@ const Login = ({ providers }: LoginProps) => {
                         console.log('data returned', data)
 
                         if(data.error){
-                            console.log({data})
+                            setError(true)
+                              setMessage({
+                                  value: "Invalid User",
+                                  type: 'error',
+                                  style: 'text-red-500',
+                              })
+                              setMessageDisplay('block')
                             return
                         }
                         Router.push('/dashboard')
