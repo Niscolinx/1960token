@@ -23,6 +23,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                     <Link href='/auth/login'>
                         <a>Login</a>
                     </Link>
+                    <Link href='/api/auth/signin'>
+                        <a>Next auth</a>
+                    </Link>
                     <Link href='/api/auth/signout'>
                         <a>signout</a>
                     </Link>
