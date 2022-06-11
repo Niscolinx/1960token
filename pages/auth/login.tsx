@@ -3,6 +3,7 @@ import axios from 'axios'
 import { CtxOrReq } from 'next-auth/client/_utils'
 import { getCsrfToken, getProviders, signIn } from 'next-auth/react'
 import Router from 'next/router'
+import Link from 'next/link'
 
 interface LoginProps {
     csrfToken: string
@@ -207,6 +208,8 @@ const Login = ({ providers }: LoginProps) => {
                     >
                         Register
                     </a>
+                    <Link href='/auth/register'>Register</Link>
+                    
                     <a
                         className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
                         href='#'
