@@ -15,8 +15,7 @@ interface LoginProps {
     }
 }
 
-const Login = ({ providers, csrfToken }: LoginProps) => {
-    console.log({ providers })
+const Login = ({ providers }: LoginProps) => {
     type message = { value: string; type?: string; style?: string }
 
     const [email, setEmail] = useState('hello@hello.com')
