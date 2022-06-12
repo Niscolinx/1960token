@@ -1,7 +1,7 @@
 import { useSession } from 'next-auth/react'
 import dbConnect from '../lib/dbConnect'
 
-const Index = ({isConnected}: {isConnected: Boolean}) => {
+const Index = () => {
    const { data: session } = useSession()
    console.log({ session })
 
