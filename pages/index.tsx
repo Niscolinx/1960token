@@ -4,7 +4,14 @@ import dbConnect from '../lib/dbConnect'
 const Index = ({isConnected}: {isConnected: Boolean}) => {
    const { data: session } = useSession()
    console.log({ session })
-  console.log(isConnected)
+
+  let isLoggedInMessage
+  if(session){
+    isLoggedInMessage = <p>You are logged in as ${session.user?.name}</p>
+  }
+  else {
+    isLoggedInMessage = <p>Not logged in</p>
+  }
     return <div>Welcome, the database connection is {isConnected}</div> 
     
 }
