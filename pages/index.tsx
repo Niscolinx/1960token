@@ -5,7 +5,7 @@ const Index = ({isConnected}: {isConnected: Boolean}) => {
    const { data: session } = useSession()
    console.log({ session })
 
-  let isLoggedInMessage
+  let isLoggedInMessage:string = ''
   if(session){
     isLoggedInMessage = `You are logged in as ${session.user?.name}`
   }
