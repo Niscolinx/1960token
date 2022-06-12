@@ -12,7 +12,7 @@ const Index = ({isConnected}: {isConnected: Boolean}) => {
   else {
     isLoggedInMessage = <p>Not logged in</p>
   }
-    return <div>Welcome, the database connection is {isConnected}</div> 
+    return <div>{isLoggedInMessage}</div> 
     
 }
 
