@@ -7,10 +7,10 @@ const Index = ({isConnected}: {isConnected: Boolean}) => {
 
   let isLoggedInMessage
   if(session){
-    isLoggedInMessage = <p>You are logged in as ${session.user?.name}</p>
+    isLoggedInMessage = `You are logged in as ${session.user?.name}`
   }
   else {
-    isLoggedInMessage = <p>Not logged in</p>
+    isLoggedInMessage = `Not logged in`
   }
     return <div>{isLoggedInMessage}</div> 
     
