@@ -64,6 +64,7 @@ export default NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
     ],
+    
     // pages: {
     //     signIn: '/auth/login',
     // },
@@ -81,5 +82,5 @@ export default NextAuth({
 //         colorScheme: 'dark',
 //     },
 
-//     secret: process.env.JWT_SECRET,
+   secret: process.env.JWT_SECRET,
 })
