@@ -17,12 +17,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                     <Link href='/'>
                         <a>Home</a>
                     </Link>
-                    <Link href='/auth/register'>
+                    {/* <Link href='/auth/register'>
                         <a>Register</a>
                     </Link>
                     <Link href='/auth/login'>
                         <a>Login</a>
-                    </Link>
+                    </Link> */}
                     <Link href='/api/auth/signin'>
                         <a>Next auth</a>
                     </Link>
