@@ -69,16 +69,21 @@ export default NextAuth({
     // pages: {
     //     signIn: '/auth/login',
     // },
-//    callbacks: {
-//     jwt: async ({ token, user }) => {
-//         user && (token.user = user)
-//         return token
-//     },
-//     session: async ({ session, token }) => {
-//         session.user = token
-//         return session
-//     }
-// },
+   callbacks: {
+    jwt: async ({ token, user }) => {
+        user && (token.user = user)
+        console.log({user})
+        return token
+    },
+    session: async ({ session, token }) => {
+        session.user = token
+        return session
+    },
+    signIn: async({ account, user, email, profile}) => {
+        console.log({account, user, email, profile})
+        return true
+    }
+ },
 //     theme: {
 //         colorScheme: 'dark',
 //     },
