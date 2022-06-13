@@ -85,6 +85,19 @@ export default NextAuth({
         console.log('from sign in', {account, user, email, profile}, 'end of sign in')
         return true
     }
+    
+ },
+ events: {
+     signIn: async ({account, user, isNewUser, profile}) => {
+        console.log('events sign in', {account, user, isNewUser, profile})
+     }, 
+     signOut: async({session, token}) => {
+        console.log("events sign out", session, token)
+     }, 
+     createUser: async({user} ) => {
+        console.log("events createuser", {user})
+     }
+
  },
 //     theme: {
 //         colorScheme: 'dark',
