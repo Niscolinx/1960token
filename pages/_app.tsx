@@ -2,9 +2,12 @@ import 'windi.css'
 import Head from 'next/head'
 import Link from 'next/link'
 import { AppProps } from 'next/app'
-import {SessionProvider} from 'next-auth/react'
+import {getSession, SessionProvider} from 'next-auth/react'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+       const isSession = getSession()
+
+       console.log({isSession})
     return (
         <>
             <Head>

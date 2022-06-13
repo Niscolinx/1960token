@@ -12,7 +12,7 @@ import clientPromise from '../../../lib/mongodb'
 
 dbConnect()
 export default NextAuth({
-   // adapter: MongoDBAdapter(clientPromise),
+   adapter: MongoDBAdapter(clientPromise),
 
     providers: [
         // CredentialsProvider({
