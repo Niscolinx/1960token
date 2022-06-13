@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import 'windi.css'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -5,7 +6,8 @@ import { AppProps } from 'next/app'
 import {getSession, SessionProvider} from 'next-auth/react'
 
  function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-       getSession().then(data => console.log({data})).catch(err => console.log({err}))
+     const [isSession, setIsSession] = useState(false)
+       getSession().then(data => data ? setIsSession(true): setIsSession(false))
 
      
     return (
@@ -25,12 +27,14 @@ import {getSession, SessionProvider} from 'next-auth/react'
                     <Link href='/auth/login'>
                         <a>Login</a>
                     </Link> */}
-                    <Link href='/api/auth/signin'>
-                        <a>Next auth</a>
+                    <Link
+                        href={
+                            isSession ? '/api/auth/signout' : '/api/auth/signin'
+                        }
+                    >
+                        <a>{isSession ? 'sign Out' : 'sign in'}</a>
                     </Link>
-                    <Link href='/api/auth/signout'>
-                        <a>signout</a>
-                    </Link>
+                   
                 </div>
             </div>
             <div className='grid wrapper'>
