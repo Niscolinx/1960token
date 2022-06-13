@@ -72,7 +72,7 @@ export default NextAuth({
    callbacks: {
     jwt: async ({ token, user }) => {
         user && (token.user = user)
-        console.log({user})
+        console.log({token})
         return token
     },
     session: async ({ session, token }) => {
