@@ -4,9 +4,7 @@ import User from '../models/User'
 
 const Index = () => {
    const { data: session } = useSession()
-   const getUser = getSession().then((data) => {
-     console.log('get session', {data})
-   })
+
    console.log({ session })
 
 
