@@ -1,9 +1,12 @@
-import { useSession } from 'next-auth/react'
+import { getSession, useSession } from 'next-auth/react'
 import dbConnect from '../lib/dbConnect'
 import User from '../models/User'
 
 const Index = () => {
    const { data: session } = useSession()
+   const getUser = getSession().then((data) => {
+     console.log({data})
+   })
    console.log({ session })
 
 
