@@ -68,31 +68,34 @@ export default NextAuth({
     // pages: {
     //     signIn: '/auth/login',
     // },
-    callbacks: {
-        jwt: async ({ token, user }) => {
-            user && (token.user = user)
+    // callbacks: {
+    //     jwt: async ({ token, user }) => {
+    //         user && (token.user = user)
+    //         console.log('callback token', {token})
+    //         return token
+    //     },
+    //     session: async ({ session, token }) => {
+    //         session.user = token
 
-            return token
-        },
-        session: async ({ session, token }) => {
-            session.user = token
-            return session
-        },
-    },
-    events: {
-        signIn: async ({ account, user, isNewUser, profile }) => {
-            console.log('events sign in', { account, user, isNewUser, profile })
-        },
-        signOut: async ({ session, token }) => {
-            console.log('events sign out', session, token)
-        },
-        createUser: async ({ user }) => {
-            console.log('events createuser', { user })
-        },
-        session: async ({ session, token }) => {
-            console.log('events session', { session, token })
-        },
-    },
+    //         console.log('callback session', {session}, {token})
+    //         const users 
+    //      return session
+    //     },
+    // },
+    // events: {
+    //     signIn: async ({ account, user, isNewUser, profile }) => {
+    //         console.log('events sign in', { account, user, isNewUser, profile })
+    //     },
+    //     signOut: async ({ session, token }) => {
+    //         console.log('events sign out', session, token)
+    //     },
+    //     createUser: async ({ user }) => {
+    //         console.log('events createuser', { user })
+    //     },
+    //     session: async ({ session, token }) => {
+    //         console.log('events session', { session, token })
+    //     },
+    // },
     //     theme: {
     //         colorScheme: 'dark',
     //     },
