@@ -4,8 +4,16 @@ import Link from 'next/link'
 import { AppProps } from 'next/app'
 import {getSession, SessionProvider} from 'next-auth/react'
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-       const isSession = getSession()
+async function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+       const isSession = await getSession()
+
+       if(isSession){
+           console.log(isSession)
+       }
+       else {
+           console.log('not session')
+           console.log(isSession)
+       }
 
        console.log({isSession})
     return (
