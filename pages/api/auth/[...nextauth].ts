@@ -70,27 +70,13 @@ export default NextAuth({
     // },
     callbacks: {
         jwt: async ({ token, user, account, isNewUser }) => {
-            console.log(
-                'From jwt',
-                { token, user, account, isNewUser },
-                'end of jwt'
-            )
             user && (token.user = user)
-            console.log({ token })
+
             return token
         },
         session: async ({ session, token }) => {
             session.user = token
-            console.log('from session', { session }, 'end of session')
             return session
-        },
-        signIn: async ({ account, user, email, profile }) => {
-            console.log(
-                'from sign in',
-                { account, user, email, profile },
-                'end of sign in'
-            )
-            return true
         },
     },
     events: {
