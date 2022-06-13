@@ -12,7 +12,7 @@ import clientPromise from '../../../lib/mongodb'
 
 dbConnect()
 export default NextAuth({
-   adapter: MongoDBAdapter(clientPromise),
+    adapter: MongoDBAdapter(clientPromise),
 
     providers: [
         // CredentialsProvider({
@@ -44,7 +44,7 @@ export default NextAuth({
         //             })
         //             .catch((err) => {
         //                 console.log({ err })
-        //                 return 
+        //                 return
         //             })
         //     },
         // }),
@@ -61,47 +61,55 @@ export default NextAuth({
         // }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || '',
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET || ''
-           
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
         }),
     ],
-    
+
     // pages: {
     //     signIn: '/auth/login',
     // },
-   callbacks: {
-    jwt: async ({ token, user, account, isNewUser }) => {
-        console.log('From jwt', {token, user, account, isNewUser}, 'end of jwt')
-        user && (token.user = user)
-        console.log({token})
-        return token
+    callbacks: {
+        jwt: async ({ token, user, account, isNewUser }) => {
+            console.log(
+                'From jwt',
+                { token, user, account, isNewUser },
+                'end of jwt'
+            )
+            user && (token.user = user)
+            console.log({ token })
+            return token
+        },
+        session: async ({ session, token }) => {
+            session.user = token
+            console.log('from session', { session }, 'end of session')
+            return session
+        },
+        signIn: async ({ account, user, email, profile }) => {
+            console.log(
+                'from sign in',
+                { account, user, email, profile },
+                'end of sign in'
+            )
+            return true
+        },
     },
-    session: async ({ session, token }) => {
-        session.user = token
-        console.log('from session', {session}, 'end of session')
-        return session
+    events: {
+        signIn: async ({ account, user, isNewUser, profile }) => {
+            console.log('events sign in', { account, user, isNewUser, profile })
+        },
+        signOut: async ({ session, token }) => {
+            console.log('events sign out', session, token)
+        },
+        createUser: async ({ user }) => {
+            console.log('events createuser', { user })
+        },
+        session: async ({ session, token }) => {
+            console.log('events session', { session, token })
+        },
     },
-    signIn: async({ account, user, email, profile}) => {
-        console.log('from sign in', {account, user, email, profile}, 'end of sign in')
-        return true
-    }
-    
- },
- events: {
-     signIn: async ({account, user, isNewUser, profile}) => {
-        console.log('events sign in', {account, user, isNewUser, profile})
-     }, 
-     signOut: async({session, token}) => {
-        console.log("events sign out", session, token)
-     }, 
-     createUser: async({user} ) => {
-        console.log("events createuser", {user})
-     }
+    //     theme: {
+    //         colorScheme: 'dark',
+    //     },
 
- },
-//     theme: {
-//         colorScheme: 'dark',
-//     },
-
-   secret: process.env.JWT_SECRET,
+    secret: process.env.JWT_SECRET,
 })
