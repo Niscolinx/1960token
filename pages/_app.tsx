@@ -1,13 +1,10 @@
-import { useState } from 'react'
 import 'windi.css'
 import Head from 'next/head'
-import Link from 'next/link'
 import { AppProps } from 'next/app'
-import {getSession, SessionProvider} from 'next-auth/react'
+import {SessionProvider} from 'next-auth/react'
 
  function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-     const [isSession, setIsSession] = useState(false)
-       getSession().then(data => data ? setIsSession(true): setIsSession(false))
+    
 
      
     return (
