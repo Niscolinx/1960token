@@ -16,17 +16,12 @@ import {getSession, SessionProvider} from 'next-auth/react'
                 <title>1960Token</title>
             </Head>
 
-            <div className='flex w-full md:w-1/3'>
+            {/* <div className='flex w-full md:w-1/3'>
                 <div className='w-full flex justify-between px-10 py-2'>
                     <Link href='/'>
                         <a>Home</a>
                     </Link>
-                    {/* <Link href='/auth/register'>
-                        <a>Register</a>
-                    </Link>
-                    <Link href='/auth/login'>
-                        <a>Login</a>
-                    </Link> */}
+                 
                     <Link
                         href={
                             isSession ? '/api/auth/signout' : '/api/auth/signin'
@@ -36,7 +31,7 @@ import {getSession, SessionProvider} from 'next-auth/react'
                     </Link>
                    
                 </div>
-            </div>
+            </div> */}
             <div className='grid wrapper'>
                 <SessionProvider session={session}>
                     <Component {...pageProps} />
