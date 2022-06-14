@@ -1,5 +1,4 @@
-import { redirect } from 'next/dist/server/api-utils'
-import type { NextFetchEvent, NextRequest } from 'next/server'
+import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 export async function middleware(req: NextRequest, ev: NextFetchEvent) {
  
@@ -14,7 +13,7 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
      console.log('the auth', {auth})
 
     if(!auth && req.url.includes('dashboard')){
-        
+            NextResponse.redirect('/')
     }
    
 }
