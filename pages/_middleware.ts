@@ -1,19 +1,19 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 export async function middleware(req: NextRequest, ev: NextFetchEvent) {
- 
-    const {cookies} = req
+    const { cookies } = req
 
-     const sessionToken = cookies['next-auth.session-token']
+    const sessionToken = cookies['next-auth.session-token']
 
-     let auth:Boolean = false
+    let auth: Boolean = false
 
-     sessionToken ? auth = true : auth = false
+    sessionToken ? (auth = true) : (auth = false)
 
-     console.log('the auth', {auth})
+    console.log('the auth', { auth })
 
-    if(!auth && req.url.includes('dashboard')){
-            NextResponse.redirect('/')
+    if (!auth && req.url.includes('dashboard')) {
+        const url = req.nextUrl.clone()
+        url.pathname = '/d'
+        return NextResponse.rewrite(url)
     }
-   
 }
