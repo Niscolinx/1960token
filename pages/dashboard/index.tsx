@@ -11,15 +11,21 @@ const Home = (props: any) => {
     } else {
         isLoggedInMessage = `Not logged in`
     }
-    return <div className='py-2 px-4'>
-        <div className="flex justify-center items-center gap-2">
-            <img src={`${session?.user?.image}`} alt='' className='rounded-full w-12'/>
-            <div className="block">
-                <p>{session?.user?.name}</p>
-                <p>Not verified</p>
+    return (
+        <div className='py-2 px-4'>
+            <div className='flex justify-center items-center gap-2'>
+                <img
+                    src={`${session?.user?.image}`}
+                    alt=''
+                    className='rounded-full w-12'
+                />
+                <div className='block text-sm font-semibold'>
+                    <p>{session?.user?.name}</p>
+                    <p>Not verified</p>
+                </div>
             </div>
         </div>
-        </div>
+    )
 }
 
 export default Home
