@@ -12,7 +12,7 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return (
-        <div className='py-2 px-4 bg-[#1a1a2d] text-gray-300'>
+        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] h-screen'>
             <div className='flex justify-center items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
@@ -34,9 +34,9 @@ const Home = (props: any) => {
                     <input
                         type='text'
                         placeholder='Coupon code'
-                        className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                        className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                     />
-                    <button className=' bg-orange-300 text-white'>
+                    <button className=' bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
                         Activate
                     </button>
                 </form>
