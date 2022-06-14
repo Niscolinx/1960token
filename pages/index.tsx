@@ -4,7 +4,7 @@ import dbConnect from '../lib/dbConnect'
 const Index = () => {
    const { data: session } = useSession()
 
-   console.log({ session })
+  // console.log({ session })
 
 
   let isLoggedInMessage:string = ''
