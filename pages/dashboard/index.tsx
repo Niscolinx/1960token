@@ -30,8 +30,9 @@ const Home = (props: any) => {
 
                 <form>
                     <input type="text" />
-                    <button>submit</button>
+                    <button>Activate</button>
                 </form>
+                <button>Withdraw</button>
             </div>
         </div>
     )
