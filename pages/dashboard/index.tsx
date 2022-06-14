@@ -24,6 +24,10 @@ const Home = (props: any) => {
                     <p>Not verified</p>
                 </div>
             </div>
+            <div className='grid'>
+                <p>total assets</p>
+                <p>2312.08</p>
+            </div>
         </div>
     )
 }
