@@ -12,9 +12,9 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return <div className='py-2 px-4'>
-        <div className="grid">
-            <img src={`${session?.user?.image}`} alt=''/>
-            <div className="grid">
+        <div className="flex justify-center items-center gap-2">
+            <img src={`${session?.user?.image}`} alt='' className='rounded-full w-12'/>
+            <div className="block">
                 <p>{session?.user?.name}</p>
                 <p>Not verified</p>
             </div>
