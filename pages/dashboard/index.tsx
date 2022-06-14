@@ -24,12 +24,12 @@ const Home = (props: any) => {
                     <p>Not verified</p>
                 </div>
             </div>
-            <div className='grid'>
+            <div className='grid mt-10 gap-5'>
                 <p>total assets</p>
                 <p>2312.08</p>
 
                 <form>
-                    <input type="text" />
+                    <input type="text" placeholder='Coupon code' className=' border-dark-50 border'/>
                     <button>Activate</button>
                 </form>
                 <button>Withdraw</button>
