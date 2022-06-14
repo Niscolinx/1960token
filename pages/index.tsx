@@ -1,4 +1,4 @@
-import { getSession, useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 import dbConnect from '../lib/dbConnect'
 
 const Index = () => {
@@ -19,13 +19,11 @@ const Index = () => {
 }
 
 export async function getServerSideProps() {
-  const session = await getSession()
-  console.log({session})
+
 
     try {
         await dbConnect()
 
-        console.log({users})
         return {
             props: { isConnected: 'true' },
         }
