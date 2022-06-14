@@ -11,7 +11,10 @@ const Home = (props: any) => {
     } else {
         isLoggedInMessage = `Not logged in`
     }
-    return <div>{isLoggedInMessage}</div>
+    return <div className='py-2 px-4'>{
+        
+        isLoggedInMessage}
+        </div>
 }
 
 export default Home
