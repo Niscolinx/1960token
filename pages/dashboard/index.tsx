@@ -13,7 +13,11 @@ const Home = (props: any) => {
     }
     return <div className='py-2 px-4'>
         <div className="grid">
-            <img src={} alt=''/>
+            <img src={`${session?.user?.image}`} alt=''/>
+            <div className="grid">
+                <p>{session?.user?.name}</p>
+                <p>Not verified</p>
+            </div>
         </div>
         </div>
 }
