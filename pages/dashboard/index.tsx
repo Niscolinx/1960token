@@ -12,7 +12,7 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return (
-        <div className='py-2 px-4'>
+        <div className='py-2 px-4 bg-[#1a1a2d] text-gray-300'>
             <div className='flex justify-center items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
@@ -30,13 +30,15 @@ const Home = (props: any) => {
                     <p>2312.08</p>
                 </div>
 
-                <form className='flex justify-center align-middle'>
+                <form className='flex justify-center align-middle gap-2'>
                     <input
                         type='text'
                         placeholder='Coupon code'
                         className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                     />
-                    <button>Activate</button>
+                    <button className=' bg-orange-300 text-white'>
+                        Activate
+                    </button>
                 </form>
                 <button>Withdraw</button>
             </div>
