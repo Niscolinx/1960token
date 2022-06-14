@@ -25,11 +25,17 @@ const Home = (props: any) => {
                 </div>
             </div>
             <div className='grid mt-10 gap-5'>
-                <p>total assets</p>
-                <p>2312.08</p>
+                <div>
+                    <p>total assets</p>
+                    <p>2312.08</p>
+                </div>
 
-                <form>
-                    <input type="text" placeholder='Coupon code' className=' border-dark-50 border'/>
+                <form className='flex justify-center align-middle'>
+                    <input
+                        type='text'
+                        placeholder='Coupon code'
+                        className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                    />
                     <button>Activate</button>
                 </form>
                 <button>Withdraw</button>
