@@ -68,20 +68,32 @@ export default NextAuth({
     // pages: {
     //     signIn: '/auth/login',
     // },
-    // callbacks: {
-    //     jwt: async ({ token, user }) => {
-    //         user && (token.user = user)
-    //         console.log('callback token', {token})
-    //         return token
-    //     },
-    //     session: async ({ session, token }) => {
-    //         session.user = token
+    callbacks: {
+        // jwt: async ({ token, user }) => {
+        //     user && (token.user = user)
+        //     console.log('callback token', {token})
+        //     return token
+        // },
+        // session: async ({ session, token }) => {
+        //     session.user = token
 
-    //         console.log('callback session', {session}, {token})
-    //         const users 
-    //      return session
-    //     },
-    // },
+        //     console.log('callback session', {session}, {token})
+        //  return session
+        // },
+        // signIn: async ({user}) => {
+        //     console.log({user})
+        //     if (user) {
+        //         return '/dashboard'
+        //     } else {
+        //         return false
+
+        //     }
+        // },
+        async redirect({ url, baseUrl }) {
+            // Allows relative callback URLs
+            return `${baseUrl}/dashboard`
+        },
+    },
     // events: {
     //     signIn: async ({ account, user, isNewUser, profile }) => {
     //         console.log('events sign in', { account, user, isNewUser, profile })
