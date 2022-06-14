@@ -27,6 +27,11 @@ const Home = (props: any) => {
             <div className='grid'>
                 <p>total assets</p>
                 <p>2312.08</p>
+
+                <form>
+                    <input type="text" />
+                    <button>submit</button>
+                </form>
             </div>
         </div>
     )
