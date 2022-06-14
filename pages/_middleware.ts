@@ -12,5 +12,9 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
      sessionToken ? auth = true : auth = false
 
      console.log('the auth', {auth})
+
+    if(!auth && req.url.includes('dashboard')){
+        
+    }
    
 }
