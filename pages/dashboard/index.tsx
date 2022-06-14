@@ -11,9 +11,10 @@ const Home = (props: any) => {
     } else {
         isLoggedInMessage = `Not logged in`
     }
-    return <div className='py-2 px-4'>{
-        
-        isLoggedInMessage}
+    return <div className='py-2 px-4'>
+        <div className="grid">
+            <img src={} alt=''/>
+        </div>
         </div>
 }
 
