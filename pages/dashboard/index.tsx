@@ -4,7 +4,7 @@ import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
-import Footer from '../../components/footer'
+import Footer from '../../components/Footer'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
