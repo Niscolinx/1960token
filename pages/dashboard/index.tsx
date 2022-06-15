@@ -1,6 +1,7 @@
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { GiWallet } from 'react-icons/gi'
+import {IoIosPeople} from 'react-icons/io'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
@@ -62,7 +63,7 @@ const Home = (props: any) => {
                     <div className='grid mt-4 grid-cols-2'>
                         <Link href='/'>
                             <div className='grid'>
-                                <GiWallet className='bg-orange-300' />
+                                <GiWallet className='text-orange-300' />
                                 Deposits
                             </div>
                         </Link>
@@ -80,7 +81,7 @@ const Home = (props: any) => {
                         </Link>
                         <Link href='/'>
                             <div className='grid'>
-                                <GiWallet />
+                                <IoIosPeople />
                                 My team
                             </div>
                         </Link>
