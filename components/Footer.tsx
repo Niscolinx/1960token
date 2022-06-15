@@ -7,10 +7,10 @@ import { MdOutlineOndemandVideo } from 'react-icons/md'
 
 const Footer = () => {
     return (
-        <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between'>
+        <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between mt-8'>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <RiHome5Line className='text-white' />
+                    <RiHome5Line className='text-blue-400' />
                     <p>Home</p>
                 </div>
             </Link>
@@ -22,13 +22,13 @@ const Footer = () => {
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <GiTrade />
+                    <GiTrade className='text-blue-400'/>
                     <p>Mine</p>
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <CgProfile />
+                    <CgProfile className='text-blue-400'/>
                     <p>profile</p>
                 </div>
             </Link>

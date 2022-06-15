@@ -18,7 +18,7 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return (
-        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] h-screen'>
+        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0]'>
             <div className='flex items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
@@ -59,7 +59,7 @@ const Home = (props: any) => {
                     </button>
                 </form>
 
-                <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-2'>
+                <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
                     <h4 className='border-b border-gray-700 pb-2'>
                         My account
                     </h4>
