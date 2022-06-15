@@ -5,33 +5,33 @@ import {GrHomeRounded} from 'react-icons/gr'
 import {GiTrade} from 'react-icons/gi'
 import {MdOutlineOndemandVideo} from 'react-icons/md'
 
-const footer =() => {
+const Footer =() => {
   return <div className='bg-[#1a1a2d] text-[#ccccd0]'>
       <Link href='/'>
         <div className='grid'>
-            <GrHomeRounded/>
+            <GrHomeRounded className='text-white'/>
             <p>Home</p>
         </div>
       </Link>
       <Link href='/'>
         <div className='grid'>
-            <MdOutlineOndemandVideo/>
-            <p>Video</p>
+            <MdOutlineOndemandVideo className='text-blue-400'/>
+            <p>Ad</p>
         </div>
       </Link>
       <Link href='/'>
         <div className='grid'>
             <GiTrade/>
-            <p>Home</p>
+            <p>Mine</p>
         </div>
       </Link>
       <Link href='/'>
         <div className='grid'>
             <CgProfile/>
-            <p>Home</p>
+            <p>profile</p>
         </div>
       </Link>
   </div>
 }
 
-export default footer
+export default Footer
