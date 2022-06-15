@@ -28,9 +28,9 @@ const Home = (props: any) => {
             </div>
             <div className='grid mt-10 gap-5'>
                 <div className=' justify-center grid border w-max text-center py-2 px-10 rounded-lg place-self-center'>
-                    <p className='text-sm'>total assets</p>
-                    <p className='font-semibold text-lg'>2312.08</p>
-                    <button className='bg-green-500 text-[#1a1a2d] rounded p-1 text-sm'>
+                    <p className='text-sm'>Total Asset</p>
+                    <p className='font-bold text-3xl'>$2312.08</p>
+                    <button className='bg-green-500 text-[#1a1a2d] rounded px-1 text-sm mt-5'>
                         Withdraw
                     </button>
                 </div>
