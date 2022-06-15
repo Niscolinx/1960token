@@ -1,12 +1,10 @@
 import 'windi.css'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import {SessionProvider} from 'next-auth/react'
+import { SessionProvider } from 'next-auth/react'
+import Layout from '../components/Layout'
 
- function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-    
-
-     
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     return (
         <>
             <Head>
@@ -31,7 +29,9 @@ import {SessionProvider} from 'next-auth/react'
             </div> */}
             <div className='grid wrapper'>
                 <SessionProvider session={session}>
-                    <Component {...pageProps} />
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
                 </SessionProvider>{' '}
             </div>
         </>

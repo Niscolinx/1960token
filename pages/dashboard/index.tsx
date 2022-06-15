@@ -4,7 +4,6 @@ import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
-import Footer from '../../components/Footer'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
@@ -18,7 +17,7 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return (
-        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] h-screen'>
+        <div className=''>
             <div className='flex items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
@@ -132,7 +131,6 @@ const Home = (props: any) => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
