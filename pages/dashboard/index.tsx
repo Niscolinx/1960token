@@ -62,29 +62,29 @@ const Home = (props: any) => {
                     <h4 className='border-b border-gray-700 pb-2'>
                         My account
                     </h4>
-                    <div className='grid mt-4 grid-cols-2'>
+                    <div className='grid mt-4 grid-cols-2 gap-2'>
                         <Link href='/'>
-                            <div className='grid'>
+                            <div className='grid justify-center place-items-center'>
                                 <GiWallet className='text-orange-300 text-3xl' />
-                                Deposits
+                                <button>Deposits</button>
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid'>
+                            <div className='grid justify-center place-items-center'>
                                 <AiFillCarryOut className='text-orange-300 text-3xl' />
-                                Withdrawals
+                                <button>Withdrawals</button>
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid'>
+                            <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-orange-300 text-3xl' />
-                                Vendors
+                                <button>Vendors</button>
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid'>
+                            <div className='grid justify-center place-items-center'>
                                 <IoIosPeople className='text-orange-300 text-3xl' />
-                                My team
+                                <button>My team</button>
                             </div>
                         </Link>
                     </div>
