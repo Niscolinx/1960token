@@ -50,7 +50,7 @@ const Home = (props: any) => {
                         placeholder='Coupon code'
                         className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                     />
-                    <button className=' bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
+                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
                         Activate
                     </button>
                 </form>
@@ -62,13 +62,13 @@ const Home = (props: any) => {
                     <div className='grid mt-4 grid-cols-2'>
                         <Link href='/'>
                             <div className='grid'>
-                                <GiWallet />
+                                <GiWallet className='bg-orange-300' />
                                 Deposits
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid'>
-                                <GiWallet />
+                                <GiWallet className='text-3xl' />
                                 Withdrawals
                             </div>
                         </Link>
@@ -84,7 +84,6 @@ const Home = (props: any) => {
                                 My team
                             </div>
                         </Link>
-                       
                     </div>
                 </div>
             </div>
