@@ -1,5 +1,5 @@
 import React from 'react'
-import Countdown, { zeroPad } from 'react-countdown'
+import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     interface IcountDown {
@@ -7,12 +7,21 @@ function CountDownTimer() {
         minutes: number
         seconds: number
         completed: Boolean
+        api: CountdownApi
+    }
+
+    const handlePause = (api: CountdownApi) => {
+        return api.pause()
     }
 
     const Completionist = () => <span>You are good to go!</span>
 
+
+
     // Renderer callback with condition
-    const renderer = ({ hours, minutes, seconds, completed }: IcountDown) => {
+    const renderer = ({ hours, minutes, seconds, completed, api }: IcountDown) => {
+        
+       
         if (completed) {
             // Render a completed state
             return <Completionist />
@@ -35,6 +44,7 @@ function CountDownTimer() {
                             {zeroPad(seconds)}
                         </span>
                     </p>
+                    <button onClick={() => handlePause(api)}>Pause</button>
                 </div>
             )
         }
