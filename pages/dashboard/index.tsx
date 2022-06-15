@@ -75,25 +75,25 @@ const Home = (props: any) => {
                         <Link href='/'>
                             <>
                                 <GiWallet />
-                                deposits
+                                Vendors
                             </>
                         </Link>
                         <Link href='/'>
                             <>
                                 <GiWallet />
-                                deposits
+                                My team
                             </>
                         </Link>
                         <Link href='/'>
                             <>
                                 <GiWallet />
-                                deposits
+                                About us
                             </>
                         </Link>
                         <Link href='/'>
                             <>
                                 <GiWallet />
-                                deposits
+                                Customer Service
                             </>
                         </Link>
                     </div>
