@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
 
 const Index = () => {
@@ -14,7 +15,13 @@ const Index = () => {
   else {
     isLoggedInMessage = `Not logged in`
   }
-    return <div>{isLoggedInMessage}</div> 
+    return (<div>
+      <nav>
+        <Link href='/api/auth/signin'>Signin</Link>
+        <Link href='/api/auth/signout'>signout</Link>
+        <Link href='/dashboard'>dashboard</Link>
+      </nav>
+      {isLoggedInMessage}</div> )
     
 }
 
