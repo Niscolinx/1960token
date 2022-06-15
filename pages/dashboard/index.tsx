@@ -31,8 +31,8 @@ const Home = (props: any) => {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                     style={{
                         background: '#1a1a2d',
-                        boxShadow: `36px 36px 72px #141422,
-             -36px -36px 72px #202038;`,
+                        boxShadow: `  15px 15px 30px #0f0f19,
+             -15px -15px 30px #252541`,
                     }}
                 >
                     <p className='text-sm'>Total Asset</p>
@@ -52,6 +52,8 @@ const Home = (props: any) => {
                         Activate
                     </button>
                 </form>
+
+                <h3>My account</h3>
             </div>
         </div>
     )
