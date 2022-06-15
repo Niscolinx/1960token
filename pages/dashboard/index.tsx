@@ -62,10 +62,40 @@ const Home = (props: any) => {
                     <div className='grid mt-4'>
                         <Link href='/'>
                             <>
-                            <GiWallet/>
-                            deposits 
+                                <GiWallet />
+                                Deposits
                             </>
-                            </Link>
+                        </Link>
+                        <Link href='/'>
+                            <>
+                                <GiWallet />
+                                Withdrawals
+                            </>
+                        </Link>
+                        <Link href='/'>
+                            <>
+                                <GiWallet />
+                                deposits
+                            </>
+                        </Link>
+                        <Link href='/'>
+                            <>
+                                <GiWallet />
+                                deposits
+                            </>
+                        </Link>
+                        <Link href='/'>
+                            <>
+                                <GiWallet />
+                                deposits
+                            </>
+                        </Link>
+                        <Link href='/'>
+                            <>
+                                <GiWallet />
+                                deposits
+                            </>
+                        </Link>
                     </div>
                 </div>
             </div>
