@@ -6,27 +6,27 @@ import {GiTrade} from 'react-icons/gi'
 import {MdOutlineOndemandVideo} from 'react-icons/md'
 
 const Footer =() => {
-  return <div className='bg-[#1a1a2d] text-[#ccccd0]'>
+  return <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-center'>
       <Link href='/'>
-        <div className='grid'>
+        <div className='grid justify-items-center'>
             <RiHome5Line className='text-white'/>
             <p>Home</p>
         </div>
       </Link>
       <Link href='/'>
-        <div className='grid'>
+        <div className='grid justify-items-center'>
             <MdOutlineOndemandVideo className='text-blue-400'/>
             <p>Ad</p>
         </div>
       </Link>
       <Link href='/'>
-        <div className='grid'>
+        <div className='grid justify-items-center'>
             <GiTrade/>
             <p>Mine</p>
         </div>
       </Link>
       <Link href='/'>
-        <div className='grid'>
+        <div className='grid justify-items-center'>
             <CgProfile/>
             <p>profile</p>
         </div>
