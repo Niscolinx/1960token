@@ -65,27 +65,43 @@ const Home = (props: any) => {
                     </h4>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
+                            <div className='grid justify-center place-items-center' >
                                 <GiWallet className='text-blue-400 text-3xl' />
-                                <button className='text-sm'>Deposits</button>
+                                <button className='text-sm'  style={{
+                        background: '#1a1a2d',
+                        boxShadow: `  15px 15px 30px #0f0f19,
+             -15px -15px 30px #252541`,
+                    }}>Deposits</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <AiFillCarryOut className='text-blue-400 text-3xl' />
-                                <button className='text-sm'>Withdrawals</button>
+                                <button className='text-sm'  style={{
+                        background: '#1a1a2d',
+                        boxShadow: `  15px 15px 30px #0f0f19,
+             -15px -15px 30px #252541`,
+                    }}>Withdrawals</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-blue-400 text-3xl' />
-                                <button className='text-sm'>Vendors</button>
+                                <button className='text-sm'  style={{
+                        background: '#1a1a2d',
+                        boxShadow: `  15px 15px 30px #0f0f19,
+             -15px -15px 30px #252541`,
+                    }}>Vendors</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <IoIosPeople className='text-blue-400 text-3xl' />
-                                <button className='text-sm'>My team</button>
+                                <button className='text-sm'  style={{
+                        background: '#1a1a2d',
+                        boxShadow: `  15px 15px 30px #0f0f19,
+             -15px -15px 30px #252541`,
+                    }}>My team</button>
                             </div>
                         </Link>
                     </div>
