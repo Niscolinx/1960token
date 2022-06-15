@@ -17,7 +17,7 @@ const Home = (props: any) => {
                 <img
                     src={`${session?.user?.image}`}
                     alt=''
-                    className='rounded-full w-12'
+                    className='rounded-full w-10'
                 />
                 <div className='block text-sm font-semibold'>
                     <p>{session?.user?.name}</p>
