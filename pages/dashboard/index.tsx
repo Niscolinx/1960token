@@ -27,7 +27,14 @@ const Home = (props: any) => {
                 </div>
             </div>
             <div className='grid mt-10 gap-5'>
-                <div className=' justify-center grid border border-gray-500 w-max text-center py-2 px-10 rounded-lg place-self-center'>
+                <div
+                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
+                    style={{
+                        background: '#1a1a2d',
+                        boxShadow: `36px 36px 72px #141422,
+             -36px -36px 72px #202038;`,
+                    }}
+                >
                     <p className='text-sm'>Total Asset</p>
                     <p className='font-bold text-3xl'>$2312.08</p>
                     <button className='bg-green-500 text-[#1a1a2d] rounded px-1 text-sm mt-5'>
