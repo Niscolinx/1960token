@@ -27,7 +27,7 @@ const Home = (props: any) => {
             <div className='grid mt-10 gap-5'>
                 <div>
                     <p>total assets</p>
-                    <p>2312.08</p>
+                    <p className=' font-semibold text-sm'>2312.08</p>
                 </div>
 
                 <form className='flex justify-center align-middle gap-2'>
