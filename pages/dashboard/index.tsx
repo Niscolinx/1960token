@@ -59,7 +59,7 @@ const Home = (props: any) => {
                     </button>
                 </form>
 
-                <div className='grid mt-10 text-[#ccccd0]'>
+                <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-2'>
                     <h4 className='border-b border-gray-700 pb-2'>
                         My account
                     </h4>
@@ -91,7 +91,7 @@ const Home = (props: any) => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
