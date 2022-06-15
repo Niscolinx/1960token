@@ -18,7 +18,7 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return (
-        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0]'>
+        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] h-screen'>
             <div className='flex items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
@@ -66,25 +66,25 @@ const Home = (props: any) => {
                     <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <GiWallet className='text-orange-300 text-3xl' />
+                                <GiWallet className='text-blue-400 text-3xl' />
                                 <button className='text-sm'>Deposits</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <AiFillCarryOut className='text-orange-300 text-3xl' />
+                                <AiFillCarryOut className='text-blue-400 text-3xl' />
                                 <button className='text-sm'>Withdrawals</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <ImProfile className='text-orange-300 text-3xl' />
+                                <ImProfile className='text-blue-400 text-3xl' />
                                 <button className='text-sm'>Vendors</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <IoIosPeople className='text-orange-300 text-3xl' />
+                                <IoIosPeople className='text-blue-400 text-3xl' />
                                 <button className='text-sm'>My team</button>
                             </div>
                         </Link>

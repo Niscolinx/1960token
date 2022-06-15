@@ -10,22 +10,22 @@ const Footer = () => {
         <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between mt-8'>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <RiHome5Line className='text-blue-400' />
+                    <RiHome5Line className='text-orange-300 text-lg' />
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <MdOutlineOndemandVideo className='text-blue-400' />
+                    <MdOutlineOndemandVideo className='text-orange-300 text-lg' />
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <GiTrade className='text-blue-400'/>
+                    <GiTrade className='text-orange-300 text-lg'/>
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
-                    <CgProfile className='text-blue-400'/>
+                    <CgProfile className='text-orange-300 text-lg'/>
                 </div>
             </Link>
         </div>
