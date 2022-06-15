@@ -62,29 +62,29 @@ const Home = (props: any) => {
                     <h4 className='border-b border-gray-700 pb-2'>
                         My account
                     </h4>
-                    <div className='grid mt-4 grid-cols-2 gap-2'>
+                    <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <GiWallet className='text-orange-300 text-3xl' />
-                                <button>Deposits</button>
+                                <button className='text-sm'>Deposits</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <AiFillCarryOut className='text-orange-300 text-3xl' />
-                                <button>Withdrawals</button>
+                                <button className='text-sm'>Withdrawals</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-orange-300 text-3xl' />
-                                <button>Vendors</button>
+                                <button className='text-sm'>Vendors</button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <IoIosPeople className='text-orange-300 text-3xl' />
-                                <button>My team</button>
+                                <button className='text-sm'>My team</button>
                             </div>
                         </Link>
                     </div>
