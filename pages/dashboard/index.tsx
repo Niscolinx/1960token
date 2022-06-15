@@ -2,6 +2,7 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { GiWallet } from 'react-icons/gi'
 import {IoIosPeople} from 'react-icons/io'
+import { AiFillCarryOut} from 'react-icons/ai'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
@@ -69,7 +70,7 @@ const Home = (props: any) => {
                         </Link>
                         <Link href='/'>
                             <div className='grid'>
-                                <GiWallet className='text-3xl' />
+                                <AiFillCarryOut className='text-3xl' />
                                 Withdrawals
                             </div>
                         </Link>
