@@ -18,7 +18,7 @@ const Home = (props: any) => {
         isLoggedInMessage = `Not logged in`
     }
     return (
-        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] h-screen'>
+        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0]'>
             <div className='flex items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
