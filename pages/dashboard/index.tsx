@@ -19,6 +19,7 @@ const Home = (props: any) => {
     return (
         <div className=''>
             <div className='flex items-center gap-2'>
+               
                 <img
                     src={`${session?.user?.image}`}
                     alt=''

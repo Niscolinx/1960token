@@ -1,4 +1,5 @@
 import 'windi.css'
+import '../styles/globals.scss'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
