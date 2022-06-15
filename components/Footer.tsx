@@ -11,25 +11,21 @@ const Footer = () => {
             <Link href='/'>
                 <div className='grid justify-items-center'>
                     <RiHome5Line className='text-blue-400' />
-                    <p>Home</p>
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
                     <MdOutlineOndemandVideo className='text-blue-400' />
-                    <p>Ad</p>
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
                     <GiTrade className='text-blue-400'/>
-                    <p>Mine</p>
                 </div>
             </Link>
             <Link href='/'>
                 <div className='grid justify-items-center'>
                     <CgProfile className='text-blue-400'/>
-                    <p>profile</p>
                 </div>
             </Link>
         </div>
