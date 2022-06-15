@@ -1,5 +1,6 @@
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { GiWallet } from 'react-icons/gi'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
@@ -54,10 +55,17 @@ const Home = (props: any) => {
                     </button>
                 </form>
 
-                <div className='grid mt-10'>
-                    <h4 className='border-b border-gray-700'>My account</h4>
-                    <div className="grid">
-                        <Link href='/'>Recharge records</Link>
+                <div className='grid mt-10 text-[#ccccd0]'>
+                    <h4 className='border-b border-gray-700 pb-2'>
+                        My account
+                    </h4>
+                    <div className='grid mt-4'>
+                        <Link href='/'>
+                            <>
+                            <GiWallet/>
+                            deposits 
+                            </>
+                            </Link>
                     </div>
                 </div>
             </div>
