@@ -53,7 +53,9 @@ const Home = (props: any) => {
                     </button>
                 </form>
 
-                <h3>My account</h3>
+                <div className='grid'>
+                    <h4>My account</h4>
+                </div>
             </div>
         </div>
     )
