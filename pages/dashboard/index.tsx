@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
@@ -53,8 +54,11 @@ const Home = (props: any) => {
                     </button>
                 </form>
 
-                <div className='grid'>
-                    <h4>My account</h4>
+                <div className='grid mt-10'>
+                    <h4 className='border-b border-gray-700'>My account</h4>
+                    <div className="grid">
+                        <Link href='/'>Recharge records</Link>
+                    </div>
                 </div>
             </div>
         </div>
