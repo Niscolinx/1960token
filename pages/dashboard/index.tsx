@@ -4,6 +4,7 @@ import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
+import CountDownTimer from '../../components/countDownTimer'
 
 const Home = (props: any) => {
     const { data: session } = useSession()
@@ -130,7 +131,7 @@ const Home = (props: any) => {
                             </div>
                         </Link>
                     </div>
-                    
+                    <CountDownTimer/>
                 </div>
             </div>
         </div>

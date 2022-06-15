@@ -4,7 +4,7 @@ import Countdown from 'react-countdown'
 function CountDownTimer() {
   return (
       <div>
-          <Countdown date={Date.now() + 10000} />,
+          <Countdown date={Date.now() + 10000} />
       </div>
   )
 }
