@@ -36,9 +36,10 @@ const Home = (props: any) => {
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                     style={{
-                        background: '#1a1a2d',
-                        boxShadow: `  15px 15px 30px #0f0f19,
-             -15px -15px 30px #252541`,
+                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                        borderRadius: '50px',
                     }}
                 >
                     <p className='text-sm'>Total Asset</p>
@@ -65,43 +66,67 @@ const Home = (props: any) => {
                     </h4>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center' >
+                            <div className='grid justify-center place-items-center'>
                                 <GiWallet className='text-blue-400 text-3xl' />
-                                <button className='text-sm'  style={{
-                        background: '#1a1a2d',
-                        boxShadow: `  15px 15px 30px #0f0f19,
-             -15px -15px 30px #252541`,
-                    }}>Deposits</button>
+                                <button
+                                    className='text-sm p-1'
+                                    style={{
+                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                                        borderRadius: '50px',
+                                    }}
+                                >
+                                    Deposits
+                                </button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <AiFillCarryOut className='text-blue-400 text-3xl' />
-                                <button className='text-sm'  style={{
-                        background: '#1a1a2d',
-                        boxShadow: `  15px 15px 30px #0f0f19,
-             -15px -15px 30px #252541`,
-                    }}>Withdrawals</button>
+                                <button
+                                    className='text-sm p-1'
+                                    style={{
+                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                                        borderRadius: '50px',
+                                    }}
+                                >
+                                    Withdrawals
+                                </button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-blue-400 text-3xl' />
-                                <button className='text-sm'  style={{
-                        background: '#1a1a2d',
-                        boxShadow: `  15px 15px 30px #0f0f19,
-             -15px -15px 30px #252541`,
-                    }}>Vendors</button>
+                                <button
+                                    className='text-sm p-1'
+                                    style={{
+                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                                        borderRadius: '50px',
+                                    }}
+                                >
+                                    Vendors
+                                </button>
                             </div>
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <IoIosPeople className='text-blue-400 text-3xl' />
-                                <button className='text-sm'  style={{
-                        background: '#1a1a2d',
-                        boxShadow: `  15px 15px 30px #0f0f19,
-             -15px -15px 30px #252541`,
-                    }}>My team</button>
+                                <button
+                                    className='text-sm p-1'
+                                    style={{
+                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                                        borderRadius: '50px',
+                                    }}
+                                >
+                                    My team
+                                </button>
                             </div>
                         </Link>
                     </div>
