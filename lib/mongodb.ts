@@ -1,6 +1,6 @@
 // This approach is taken from https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
 import { MongoClient } from 'mongodb'
-import { ConnectOptions } from 'mongoose'
+import { Connection, ConnectOptions } from 'mongoose'
 
 const uri = process.env.MONGODB_URI || ''
 const options = {
@@ -9,7 +9,7 @@ const options = {
 }
 
 let client
-let clientPromise
+let clientPromise:any
 
 if (!process.env.MONGODB_URI) {
     throw new Error('Please add your Mongo URI to .env.local')
