@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import {CgProfile} from 'react-icons/cg'
-import {GrHomeRounded} from 'react-icons/gr'
+import {RiHome5Line} from 'react-icons/ri'
 import {GiTrade} from 'react-icons/gi'
 import {MdOutlineOndemandVideo} from 'react-icons/md'
 
@@ -9,7 +9,7 @@ const Footer =() => {
   return <div className='bg-[#1a1a2d] text-[#ccccd0]'>
       <Link href='/'>
         <div className='grid'>
-            <GrHomeRounded className='text-white'/>
+            <RiHome5Line className='text-white'/>
             <p>Home</p>
         </div>
       </Link>
