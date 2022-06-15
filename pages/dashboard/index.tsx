@@ -27,10 +27,12 @@ const Home = (props: any) => {
                 </div>
             </div>
             <div className='grid mt-10 gap-5'>
-                <div className=' justify-center grid border'>
+                <div className=' justify-center grid border w-max text-center py-2 px-10 rounded-lg'>
                     <p>total assets</p>
-                    <p className=' font-semibold text-lg'>2312.08</p>
-                    <button>Withdraw</button>
+                    <p className='font-semibold text-lg'>2312.08</p>
+                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
+                        Withdraw
+                    </button>
                 </div>
 
                 <form className='flex justify-center align-middle gap-2'>
