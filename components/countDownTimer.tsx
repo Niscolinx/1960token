@@ -28,7 +28,7 @@ function CountDownTimer() {
     }
   return (
       <div>
-          <Countdown date={Date.now() + 10000} renderer={renderer} />
+          <Countdown date={Date.now() + (3600 * 1000) * 6} renderer={renderer} />
       </div>
   )
 }
