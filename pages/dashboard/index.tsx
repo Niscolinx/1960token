@@ -13,7 +13,7 @@ const Home = (props: any) => {
     }
     return (
         <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] h-screen'>
-            <div className='flex justify-center items-center gap-2'>
+            <div className='flex items-center gap-2'>
                 <img
                     src={`${session?.user?.image}`}
                     alt=''
@@ -21,13 +21,16 @@ const Home = (props: any) => {
                 />
                 <div className='block text-sm font-semibold'>
                     <p>{session?.user?.name}</p>
-                    <p>Not verified</p>
+                    <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
+                        Not verified
+                    </p>
                 </div>
             </div>
             <div className='grid mt-10 gap-5'>
-                <div>
+                <div className=' justify-center grid border'>
                     <p>total assets</p>
-                    <p className=' font-semibold text-sm'>2312.08</p>
+                    <p className=' font-semibold text-lg'>2312.08</p>
+                    <button>Withdraw</button>
                 </div>
 
                 <form className='flex justify-center align-middle gap-2'>
@@ -40,7 +43,6 @@ const Home = (props: any) => {
                         Activate
                     </button>
                 </form>
-                <button>Withdraw</button>
             </div>
         </div>
     )
