@@ -59,43 +59,32 @@ const Home = (props: any) => {
                     <h4 className='border-b border-gray-700 pb-2'>
                         My account
                     </h4>
-                    <div className='grid mt-4'>
+                    <div className='grid mt-4 grid-cols-2'>
                         <Link href='/'>
-                            <>
+                            <div className='grid'>
                                 <GiWallet />
                                 Deposits
-                            </>
+                            </div>
                         </Link>
                         <Link href='/'>
-                            <>
+                            <div className='grid'>
                                 <GiWallet />
                                 Withdrawals
-                            </>
+                            </div>
                         </Link>
                         <Link href='/'>
-                            <>
+                            <div className='grid'>
                                 <GiWallet />
                                 Vendors
-                            </>
+                            </div>
                         </Link>
                         <Link href='/'>
-                            <>
+                            <div className='grid'>
                                 <GiWallet />
                                 My team
-                            </>
+                            </div>
                         </Link>
-                        <Link href='/'>
-                            <>
-                                <GiWallet />
-                                About us
-                            </>
-                        </Link>
-                        <Link href='/'>
-                            <>
-                                <GiWallet />
-                                Customer Service
-                            </>
-                        </Link>
+                       
                     </div>
                 </div>
             </div>
