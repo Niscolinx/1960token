@@ -5,8 +5,9 @@ import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+
+
+
 
 const Index = () => {
    const { data: session } = useSession()
@@ -24,18 +25,7 @@ const Index = () => {
     return (
         <div className=''>
             <div className='grid mt-10 gap-5'>
-                <Swiper
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    ...
-                </Swiper>
+              
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
                     <h4 className='border-b border-gray-700 pb-2'>
