@@ -11,10 +11,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
-import './styles.css'
-import { Pagination } from 'swiper'
+import { Autoplay, Navigation, Pagination } from 'swiper'
 
 
 const Index = () => {
@@ -35,20 +34,27 @@ const Index = () => {
         <div className=''>
             <div className='grid mt-10 gap-5'>
                 <Swiper
-                    pagination={true}
-                    modules={[Pagination]}
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
                     className='mySwiper'
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
+                    <SwiperSlide>
+                        Lorem ipsung elit. Rem conselam optio perspneque
+                        molestiae.
+                    </SwiperSlide>
                     <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
                 </Swiper>
+
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
                     <h4 className='border-b border-gray-700 pb-2'>
                         My account
