@@ -7,6 +7,7 @@ import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import React, { useRef, useState } from 'react'
 import CarouselImage from '../public/carousel_image.svg'
+import CarouselI from '../public/carouselI.svg'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -54,9 +55,10 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide><p>Start mining and affiliate with us now</p></SwiperSlide>
                     <SwiperSlide><p>Invite friends</p></SwiperSlide> */}
-                    <SwiperSlide><div>
+                    <SwiperSlide><div className='w-full md:w-2/3'>
                         {/* <CarouselImage/> */}
-                        <img src='carousel_image.png' alt=''/>
+                        {/* <img src='carousel_image.png' alt=''/> */}
+                        <CarouselI/>
                         <p>Anything is possible</p>
                         </div></SwiperSlide>
                 </Swiper>
