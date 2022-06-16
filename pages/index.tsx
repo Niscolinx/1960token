@@ -59,7 +59,14 @@ const Index = () => {
                         {/* <CarouselImage/> */}
                         {/* <img src='carousel_image.png' alt=''/> */}
                         <CarouselI/>
-                        <p>Anything is possible</p>
+                        </div></SwiperSlide>
+                    <SwiperSlide><div className='w-full md:w-2/3'>
+                       
+                        <CarouselI/>
+                        </div></SwiperSlide>
+                    <SwiperSlide><div className='w-full md:w-2/3'>
+                       
+                        <CarouselI/>
                         </div></SwiperSlide>
                 </Swiper>
 
