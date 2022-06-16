@@ -6,14 +6,16 @@ import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import React, { useRef, useState } from 'react'
+import CarouselImage from '../public/carousel_image.svg'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
-import { Autoplay, Navigation, Pagination } from 'swiper'
+import { Autoplay, Pagination } from 'swiper'
 
 
 const Index = () => {
@@ -31,27 +33,32 @@ const Index = () => {
   }
 
     return (
-        <div className='grid justify-center'>
-            <div className='grid mt-10 gap-5'>
+        <>
+            <div className='grid gap-5'>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
                     loop={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 5000,
+                    //     disableOnInteraction: false,
+                    // }}
                     pagination={{
                         clickable: true,
                     }}
-                    navigation={true}
-                    modules={[Autoplay, Pagination, Navigation]}
+                    modules={[Autoplay, Pagination]}
                     className='mySwiper'
                 >
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                        <p>Superior digital currency you can mine on your phone</p>
                     </SwiperSlide>
                     <SwiperSlide><p>Start mining and affiliate with us now</p></SwiperSlide>
+                    <SwiperSlide><p>Invite friends</p></SwiperSlide> */}
+                    <SwiperSlide><div>
+                        {/* <CarouselImage/> */}
+                        <img src='carousel_image.png' alt=''/>
+                        <p>Anything is possible</p>
+                        </div></SwiperSlide>
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
@@ -126,7 +133,7 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
     
 }
