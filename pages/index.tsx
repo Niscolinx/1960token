@@ -8,6 +8,8 @@ import { ImProfile } from 'react-icons/im'
 import React, { useRef, useState } from 'react'
 import CarouselImage from '../public/carousel_image.svg'
 import CarouselI from '../public/carousel1.svg'
+import Carousel2 from '../public/carousel2.svg'
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -61,7 +63,7 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3'>
-                            <CarouselI />
+                            <Carousel2 />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
