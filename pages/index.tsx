@@ -31,7 +31,7 @@ const Index = () => {
   }
 
     return (
-        <div className=''>
+        <div className='grid justify-center'>
             <div className='grid mt-10 gap-5'>
                 <Swiper
                     spaceBetween={30}
@@ -49,10 +49,9 @@ const Index = () => {
                     className='mySwiper'
                 >
                     <SwiperSlide>
-                        Lorem ipsung elit. Rem conselam optio perspneque
-                        molestiae.
+                       <p>Superior digital currency you can mine on your phone</p>
                     </SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide><p>Start mining and affiliate with us now</p></SwiperSlide>
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
