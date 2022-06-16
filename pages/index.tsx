@@ -9,6 +9,7 @@ import React, { useRef, useState } from 'react'
 import CarouselImage from '../public/carousel_image.svg'
 import Carousel1 from '../public/carousel1.svg'
 import Carousel2 from '../public/carousel2.svg'
+import Carousel3 from '../public/carousel3.svg'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
