@@ -7,7 +7,7 @@ import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import React, { useRef, useState } from 'react'
 import CarouselImage from '../public/carousel_image.svg'
-import CarouselI from '../public/carouselI.svg'
+import CarouselI from '../public/carousel1.svg'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
