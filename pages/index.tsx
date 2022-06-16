@@ -18,20 +18,17 @@ import 'swiper/css/pagination'
 
 import { Autoplay, Pagination } from 'swiper'
 
-
 const Index = () => {
-   const { data: session } = useSession()
+    const { data: session } = useSession()
 
-  // console.log({ session })
+    // console.log({ session })
 
-
-  let isLoggedInMessage:string = ''
-  if(session){
-    isLoggedInMessage = `You are logged in as ${session.user?.name}`
-  }
-  else {
-    isLoggedInMessage = `Not logged in`
-  }
+    let isLoggedInMessage: string = ''
+    if (session) {
+        isLoggedInMessage = `You are logged in as ${session.user?.name}`
+    } else {
+        isLoggedInMessage = `Not logged in`
+    }
 
     return (
         <>
@@ -40,10 +37,10 @@ const Index = () => {
                     spaceBetween={30}
                     centeredSlides={true}
                     loop={true}
-                    // autoplay={{
-                    //     delay: 5000,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
                     pagination={{
                         clickable: true,
                     }}
@@ -55,19 +52,23 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide><p>Start mining and affiliate with us now</p></SwiperSlide>
                     <SwiperSlide><p>Invite friends</p></SwiperSlide> */}
-                    <SwiperSlide><div className='w-full md:w-2/3'>
-                        {/* <CarouselImage/> */}
-                        {/* <img src='carousel_image.png' alt=''/> */}
-                        <CarouselI/>
-                        </div></SwiperSlide>
-                    <SwiperSlide><div className='w-full md:w-2/3'>
-                       
-                        <CarouselI/>
-                        </div></SwiperSlide>
-                    <SwiperSlide><div className='w-full md:w-2/3'>
-                       
-                        <CarouselI/>
-                        </div></SwiperSlide>
+                    <SwiperSlide>
+                        <div className='w-full md:w-2/3'>
+                            {/* <CarouselImage/> */}
+                            {/* <img src='carousel_image.png' alt=''/> */}
+                            <CarouselI />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='w-full md:w-2/3'>
+                            <CarouselI />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='w-full md:w-2/3'>
+                            <CarouselI />
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
@@ -144,12 +145,9 @@ const Index = () => {
             </div>
         </>
     )
-    
 }
 
 export async function getServerSideProps() {
-
-
     try {
         await dbConnect()
 
@@ -162,6 +160,5 @@ export async function getServerSideProps() {
         }
     }
 }
-
 
 export default Index
