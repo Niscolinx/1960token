@@ -68,7 +68,7 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3'>
-                            <Carousel1 />
+                            <Carousel3 />
                         </div>
                     </SwiperSlide>
                 </Swiper>
