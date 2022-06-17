@@ -1,8 +1,13 @@
+import Link from 'next/link'
 import React from 'react'
 
 function nav() {
   return (
-    <div>nav</div>
+   <nav>
+    <Link href='/api/auth/signin'>
+        Sign in
+    </Link>
+   </nav>
   )
 }
 
