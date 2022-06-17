@@ -38,7 +38,7 @@ function CountDownTimer() {
                     }}
                 >
                     <p>
-                        Remaining mining time -{' '}
+                        Remaining time -{' '}
                         <span className='font-semibold'>
                             {zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)}
