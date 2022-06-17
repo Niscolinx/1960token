@@ -138,15 +138,15 @@ const Index = () => {
                         What Will Do
                     </h3>
                     <p className='text-justify'>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Ab hic odio fugit veniam suscipit blanditiis
-                        tempore, accusamus dolores vitae sed aliquam explicabo,
-                        tenetur enim, libero delectus molestiae nobis
-                        perspiciatis saepe. Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Neque accusantium ea
-                        placeat fugit alias quas adipisci maiores dicta
-                        eligendi, ipsum eius quaerat velit unde dolorem dolores
-                        voluptates architecto harum in.
+                        Home From here he flees from hatred, takes time to
+                        pardon his flattery, we accuse him of the pain of his
+                        life, but I will explain some, for he is obliged, by the
+                        free choices, of the troubles we often encounter. The
+                        pain itself is the love of the main, the adipisic Nor
+                        does it please the accusers to escape, and to choose
+                        which other ones to obtain greater than the statements,
+                        from which they may wish to seek the very pleasures of
+                        these pains and pains in the architect.
                     </p>
                 </div>
             </div>
