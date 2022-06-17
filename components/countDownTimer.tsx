@@ -18,9 +18,13 @@ function CountDownTimer() {
         if(!localStorage.getItem('miningTime')){
             console.log("not mounted")
             localStorage.setItem('miningTime', JSON.stringify(e))
+            const date = new Date().getTime()
+
+            localStorage.setItem('miningEnds', JSON.stringify({date}))
         }
         else{
             console.log("already mounted")
+           // console.log({date})
         }
     }
 
@@ -64,7 +68,7 @@ function CountDownTimer() {
     return (
         <div className='grid'>
             <Countdown
-                date={Date.now() + 3600 * 1000 * 6}
+                date={Date.now() + 12121212}
                 renderer={renderer}
                 autoStart={false}
                 onMount={handleMount}
