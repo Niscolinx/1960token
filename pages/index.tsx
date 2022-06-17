@@ -70,7 +70,7 @@ const Index = () => {
                             <div className='grid justify-center place-items-center'>
                                 <GiWallet className='text-blue-400 text-3xl' />
                                 <button
-                                    className='text-sm p-1'
+                                    className='text-md p-1'
                                     style={{
                                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                                         boxShadow: `7px 7px 14px #161625,
@@ -78,7 +78,7 @@ const Index = () => {
                                         borderRadius: '50px',
                                     }}
                                 >
-                                    Customer Service
+                                    Vendors
                                 </button>
                             </div>
                         </Link>
@@ -86,7 +86,7 @@ const Index = () => {
                             <div className='grid justify-center place-items-center'>
                                 <AiFillCarryOut className='text-blue-400 text-3xl' />
                                 <button
-                                    className='text-sm p-1'
+                                    className='text-md p-1'
                                     style={{
                                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                                         boxShadow: `7px 7px 14px #161625,
@@ -102,7 +102,7 @@ const Index = () => {
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-blue-400 text-3xl' />
                                 <button
-                                    className='text-sm p-1'
+                                    className='text-md p-1'
                                     style={{
                                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                                         boxShadow: `7px 7px 14px #161625,
@@ -110,11 +110,26 @@ const Index = () => {
                                         borderRadius: '50px',
                                     }}
                                 >
-                                    Vendors
+                                    FAQ
                                 </button>
                             </div>
                         </Link>
-                        
+                        <Link href='/'>
+                            <div className='grid justify-center place-items-center'>
+                                <IoIosPeople className='text-blue-400 text-3xl' />
+                                <button
+                                    className='text-md p-1'
+                                    style={{
+                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                                        borderRadius: '50px',
+                                    }}
+                                >
+                                Customer Service
+                                </button>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
