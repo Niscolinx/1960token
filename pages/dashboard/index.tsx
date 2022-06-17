@@ -6,7 +6,7 @@ import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import CountDownTimer from '../../components/countDownTimer'
 
-const Home = (props: any) => {
+const Home = () => {
     const { data: session } = useSession()
 
     return (
