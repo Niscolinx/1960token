@@ -18,10 +18,11 @@ const Home = () => {
     }
     else{
         isAuth = false
+        router.push("/")
     }
     return (
         <>
-        {isAuth ? 
+        {isAuth &&
             <div className='grid mt-10 gap-5'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
@@ -123,7 +124,7 @@ const Home = () => {
                     <CountDownTimer />
                 </div>
             </div> 
-: router.push('/')}
+}
         </>
     )
 }
