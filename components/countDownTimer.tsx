@@ -27,6 +27,8 @@ function CountDownTimer() {
             return <Completionist />
         } else {
             // Render a countdown
+            console.log({hours, minutes, seconds})
+            localStorage.setItem('mining session', JSON.stringify({hours, minutes, seconds}))
             return (
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
@@ -43,6 +45,8 @@ function CountDownTimer() {
                             {zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)}
                         </span>
+
+
                     </p>
                     {/* <button onClick={() => handlePause(api)}>Pause</button> */}
                 </div>
