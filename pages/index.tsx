@@ -8,6 +8,7 @@ import Carousel1 from '../public/carousel11.svg'
 import Carousel2 from '../public/carousel2.svg'
 import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
+import Image from 'next/image'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -48,17 +49,17 @@ const Index = () => {
                 >
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <img src='/carousel1.png' alt='' />
+                            <Image src='/carousel1.png' alt='' />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <img src='/carousel1.png' alt='' />
+                            <Image src='/carousel1.png' alt='' />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <img src='/carousel1.png' alt='' />
+                            <Image src='/carousel1.png' alt='' />
                         </div>
                     </SwiperSlide>
                 </Swiper>
