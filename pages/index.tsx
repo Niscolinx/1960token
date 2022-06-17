@@ -64,9 +64,7 @@ const Index = () => {
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
-                    <h4 className='border-b border-gray-700 pb-2'>
-                        My account
-                    </h4>
+                
                     <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
@@ -80,7 +78,7 @@ const Index = () => {
                                         borderRadius: '50px',
                                     }}
                                 >
-                                    Deposits
+                                    Customer Service
                                 </button>
                             </div>
                         </Link>
@@ -96,7 +94,7 @@ const Index = () => {
                                         borderRadius: '50px',
                                     }}
                                 >
-                                    Withdrawals
+                                    About Us
                                 </button>
                             </div>
                         </Link>
@@ -116,22 +114,7 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
-                                <IoIosPeople className='text-blue-400 text-3xl' />
-                                <button
-                                    className='text-sm p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
-                                >
-                                    My team
-                                </button>
-                            </div>
-                        </Link>
+                        
                     </div>
                 </div>
             </div>
