@@ -55,13 +55,11 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            {/* <Carousel2/> */}
                             <Image src='/carousel2.png' alt='' width='1920px' height='1080px' />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            {/* <Carousel3/> */}
                             <Image src='/carousel3.png' alt='' width='1920px' height='1080px' />
                         </div>
                     </SwiperSlide>
