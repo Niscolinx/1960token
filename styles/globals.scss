@@ -55,7 +55,7 @@ a {
 }
 
 .grad {
-  background-image: linear-gradient(to right, #1a1a2d , #82e6e8);
+  background-image: linear-gradient(to right bottom, rgb(253, 186, 116), #1a1a2d);
   background-clip: text;
   font-size: 3rem;
   -webkit-text-fill-color: transparent;

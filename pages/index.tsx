@@ -31,7 +31,7 @@ const Index = () => {
 
     return (
         <>
-            <div className='grid gap-5'>
+            <div className='grid gap-5 max-w-4xl mx-auto'>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
