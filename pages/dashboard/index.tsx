@@ -109,7 +109,7 @@ const Home = (props: any) => {
                             </div>
                         </Link>
                     </div>
-                    <CountDownTimer/>
+                    <CountDownTimer />
                 </div>
             </div>
         </>
