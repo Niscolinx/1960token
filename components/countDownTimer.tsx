@@ -24,7 +24,8 @@ function CountDownTimer() {
         }
         else{
             console.log("already mounted")
-           // console.log({date})
+            const dateNow = new Date().getTime()
+        console.log({dateNow})
         }
     }
 
