@@ -10,8 +10,8 @@ function CountDownTimer() {
         api: CountdownApi
     }
 
-    const handlePause = (api: CountdownApi) => {
-        return api.pause()
+    const handleStart = (api: CountdownApi) => {
+        return api.start()
     }
 
     const Completionist = () => <span>You are good to go!</span>
@@ -28,7 +28,6 @@ function CountDownTimer() {
         } else {
             // Render a countdown
             console.log({hours, minutes, seconds})
-            localStorage.setItem('mining session', JSON.stringify({hours, minutes, seconds}))
             return (
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
@@ -48,7 +47,7 @@ function CountDownTimer() {
 
 
                     </p>
-                    {/* <button onClick={() => handlePause(api)}>Pause</button> */}
+                    <button onClick={() => handleStart(api)}>Mine</button>
                 </div>
             )
         }
@@ -58,6 +57,7 @@ function CountDownTimer() {
             <Countdown
                 date={Date.now() + 3600 * 1000 * 6}
                 renderer={renderer}
+                autoStart={false}
             />
         </div>
     )
