@@ -2,12 +2,12 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
 import { GiWallet } from 'react-icons/gi'
-import { IoIosPeople } from 'react-icons/io'
-import { AiFillCarryOut } from 'react-icons/ai'
-import { ImProfile } from 'react-icons/im'
+import { RiCustomerService2Line } from 'react-icons/ri'
+import { FaQuestionCircle } from 'react-icons/fa'
 import Carousel1 from '../public/carousel1.svg'
 import Carousel2 from '../public/carousel2.svg'
 import Carousel3 from '../public/carousel3.svg'
+import Logo from '../public/logo.svg'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -64,7 +64,6 @@ const Index = () => {
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-t border-gray-800 py-3'>
-                
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -84,7 +83,7 @@ const Index = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <AiFillCarryOut className='text-blue-400 text-3xl' />
+                                <Logo className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
                                     style={{
@@ -100,7 +99,7 @@ const Index = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <ImProfile className='text-blue-400 text-3xl' />
+                                <FaQuestionCircle className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
                                     style={{
@@ -116,7 +115,7 @@ const Index = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <IoIosPeople className='text-blue-400 text-3xl' />
+                                <RiCustomerService2Line className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
                                     style={{
@@ -126,7 +125,7 @@ const Index = () => {
                                         borderRadius: '50px',
                                     }}
                                 >
-                                Customer Service
+                                    Customer Service
                                 </button>
                             </div>
                         </Link>
