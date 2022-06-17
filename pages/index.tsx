@@ -4,7 +4,7 @@ import dbConnect from '../lib/dbConnect'
 import { GiWallet } from 'react-icons/gi'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
-import Carousel1 from '../public/carousel1.svg'
+import Carousel1 from '../public/carousel11.svg'
 import Carousel2 from '../public/carousel2.svg'
 import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
@@ -53,12 +53,12 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Carousel2 />
+                            <Carousel1 />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Carousel3 />
+                            <Carousel1 />
                         </div>
                     </SwiperSlide>
                 </Swiper>
