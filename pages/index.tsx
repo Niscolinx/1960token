@@ -71,7 +71,7 @@ const Index = () => {
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <Logo className='text-blue-400 text-3xl' />
+                                <Logo className='text-blue-400 text-3xl w-12 h-12' />
                                 <button
                                     className='text-md p-1'
                                     style={{
