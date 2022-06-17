@@ -9,8 +9,16 @@ import CountDownTimer from '../../components/countDownTimer'
 const Home = () => {
     const { data: session } = useSession()
 
+    let isAuth = false
+    if(session){
+        isAuth = true
+    }
+    else{
+        isAuth = false
+    }
     return (
         <>
+        {isAuth ? 
             <div className='grid mt-10 gap-5'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
@@ -111,7 +119,8 @@ const Home = () => {
                     </div>
                     <CountDownTimer />
                 </div>
-            </div>
+            </div> 
+: null}
         </>
     )
 }
