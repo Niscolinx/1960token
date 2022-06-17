@@ -63,7 +63,7 @@ const Index = () => {
                     </SwiperSlide>
                 </Swiper>
 
-                <div className='grid mt-10 text-[#ccccd0] border-b border-t border-gray-800 py-3'>
+                <div className='grid text-[#ccccd0] border-b border-t border-gray-800 py-3'>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -131,6 +131,13 @@ const Index = () => {
                             </div>
                         </Link>
                     </div>
+                </div>
+
+                <div className="grid">
+                    <h3>What will do</h3>
+                    <p className=' text-justify'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab hic odio fugit veniam suscipit blanditiis tempore, accusamus dolores vitae sed aliquam explicabo, tenetur enim, libero delectus molestiae nobis perspiciatis saepe.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque accusantium ea placeat fugit alias quas adipisci maiores dicta eligendi, ipsum eius quaerat velit unde dolorem dolores voluptates architecto harum in.
+                    </p>
                 </div>
             </div>
         </>
