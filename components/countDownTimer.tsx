@@ -4,10 +4,16 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 function CountDownTimer() {
     interface IcountDown {
         hours: number
+        days: number
         minutes: number
         seconds: number
         completed: Boolean
         api: CountdownApi
+    }
+
+    interface Idates {
+        date1?: Date
+        date2?: Date
     }
 
     const handleStart = (api: CountdownApi) => {
@@ -23,9 +29,39 @@ function CountDownTimer() {
             localStorage.setItem('miningEnds', JSON.stringify({date}))
         }
         else{
+
+
+
+const date1 = new Date('7/13/2010');
+const date2 = new Date('7/14/2010');
+// console.log(getDifferenceInDays(date1, date2))
+
+// const getDifferenceInDays(date1, date2) {
+//   const diffInMs = Math.abs(date2 - date1);
+//   return diffInMs / (1000 * 60 * 60 * 24);
+// }
+
+const getDifferenceInHours = (date1:any, date2:any) => {
+  const diffInMs = Math.abs(date2 - date1);
+  return diffInMs / (1000 * 60 * 60);
+}
+
+const getDifferenceInMinutes = (date1:any, date2:any) => {
+  const diffInMs = Math.abs(date2 - date1);
+  return diffInMs / (1000 * 60);
+}
+
+const getDifferenceInSeconds = (date1:any, date2:any) => {
+  const diffInMs = Math.abs(date2 - date1);
+  return diffInMs / 1000;
+}
             console.log("already mounted")
-            const dateNow = new Date().getTime()
+            const dateNow = Date.now() + 1000 * 3600 * 6
         console.log({dateNow})
+
+        console.log(getDifferenceInHours(date1, date2))
+        console.log(getDifferenceInMinutes(date1, date2))
+        console.log(getDifferenceInSeconds(date1, date2))
         }
     }
 
@@ -34,7 +70,7 @@ function CountDownTimer() {
 
 
     // Renderer callback with condition
-    const renderer = ({ hours, minutes, seconds, completed, api }: IcountDown) => {
+    const renderer = ({days, hours, minutes, seconds, completed, api }: IcountDown) => {
         
        
         if (completed) {
@@ -55,7 +91,7 @@ function CountDownTimer() {
                     <p>
                         Remaining time -{' '}
                         <span className='font-semibold'>
-                            {zeroPad(hours)}:{zeroPad(minutes)}:
+                            {zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)}
                         </span>
 
@@ -69,7 +105,7 @@ function CountDownTimer() {
     return (
         <div className='grid'>
             <Countdown
-                date={Date.now() + (1000 * 3600) * 6}
+                date={Date.now() * 24}
                 renderer={renderer}
                 autoStart={false}
                 onMount={handleMount}
