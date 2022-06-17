@@ -49,17 +49,17 @@ const Index = () => {
                 >
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Image src='/carousel1.png' alt='' width='100%' height='100%' />
+                            <Image src='/carousel1.png' alt='' width='1920px' height='1080px' />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Image src='/carousel2.png' alt='' width='100%' height='100%' />
+                            <Image src='/carousel2.png' alt='' width='1920px' height='1080px' />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Image src='/carousel3.png' alt='' width='100%' height='100%' />
+                            <Image src='/carousel3.png' alt='' width='1920px' height='1080px' />
                         </div>
                     </SwiperSlide>
                 </Swiper>
