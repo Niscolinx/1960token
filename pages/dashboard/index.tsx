@@ -9,30 +9,8 @@ import CountDownTimer from '../../components/countDownTimer'
 const Home = (props: any) => {
     const { data: session } = useSession()
 
-    console.log({ session })
-
-    let isLoggedInMessage: string = ''
-    if (session) {
-        isLoggedInMessage = `You are logged in as ${session.user?.name}`
-    } else {
-        isLoggedInMessage = `Not logged in`
-    }
     return (
-        <div className=''>
-            <div className='flex items-center gap-2'>
-               
-                <img
-                    src={`${session?.user?.image}`}
-                    alt=''
-                    className='rounded-full w-10'
-                />
-                <div className='block text-sm font-semibold'>
-                    <p>{session?.user?.name}</p>
-                    <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
-                        Not verified
-                    </p>
-                </div>
-            </div>
+        <>
             <div className='grid mt-10 gap-5'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
@@ -134,7 +112,7 @@ const Home = (props: any) => {
                     <CountDownTimer/>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
