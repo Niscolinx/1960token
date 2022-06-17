@@ -32,7 +32,7 @@ const Index = () => {
     return (
         <>
             <div className='grid gap-5 max-w-4xl mx-auto text-gray-400'>
-                <Swiper
+                {/* <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
                     loop={true}
@@ -61,7 +61,7 @@ const Index = () => {
                             <Carousel3 />
                         </div>
                     </SwiperSlide>
-                </Swiper>
+                </Swiper> */}
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3'>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
