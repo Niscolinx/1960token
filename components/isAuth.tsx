@@ -1,5 +1,5 @@
 import { getSession, GetSessionParams, useSession } from 'next-auth/react'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const isAuth: React.FC = ({ children }) => {
     return <>{children}</>
