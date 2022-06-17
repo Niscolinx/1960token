@@ -22,8 +22,6 @@ import { Autoplay, Pagination } from 'swiper'
 const Index = () => {
     const { data: session } = useSession()
 
-    // console.log({ session })
-
     let isLoggedInMessage: string = ''
     if (session) {
         isLoggedInMessage = `You are logged in as ${session.user?.name}`
@@ -48,15 +46,10 @@ const Index = () => {
                     modules={[Autoplay, Pagination]}
                     className='mySwiper'
                 >
-                    {/* <SwiperSlide>
-                       <p>Superior digital currency you can mine on your phone</p>
-                    </SwiperSlide>
-                    <SwiperSlide><p>Start mining and affiliate with us now</p></SwiperSlide>
-                    <SwiperSlide><p>Invite friends</p></SwiperSlide> */}
+                  
                     <SwiperSlide>
                         <div className='w-full md:w-2/3'>
-                            {/* <CarouselImage/> */}
-                            {/* <img src='carousel_image.png' alt=''/> */}
+                           
                             <Carousel1 />
                         </div>
                     </SwiperSlide>
