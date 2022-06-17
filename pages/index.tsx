@@ -134,7 +134,7 @@ const Index = () => {
                 </div>
 
                 <div className="grid">
-                    <h3>What will do</h3>
+                    <h2 className='text-center font-semibold text-2xl'>What Will Do</h2>
                     <p className=' text-justify'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab hic odio fugit veniam suscipit blanditiis tempore, accusamus dolores vitae sed aliquam explicabo, tenetur enim, libero delectus molestiae nobis perspiciatis saepe.
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque accusantium ea placeat fugit alias quas adipisci maiores dicta eligendi, ipsum eius quaerat velit unde dolorem dolores voluptates architecto harum in.
                     </p>
