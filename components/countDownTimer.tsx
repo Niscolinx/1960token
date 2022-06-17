@@ -15,7 +15,10 @@ function CountDownTimer() {
     }
 
     const handleMount = (e:any) => {
-        console.log({e})
+        if(!localStorage.getItem('miningTime')){
+
+            localStorage.setItem('miningTime', JSON.stringify(e))
+        }
     }
 
     const Completionist = () => <span>Mining Session has ended</span>
@@ -31,7 +34,6 @@ function CountDownTimer() {
             return <Completionist />
         } else {
             // Render a countdown
-            console.log({hours, minutes, seconds})
             return (
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
