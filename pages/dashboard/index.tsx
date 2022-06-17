@@ -5,9 +5,12 @@ import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import CountDownTimer from '../../components/countDownTimer'
+import { useRouter } from 'next/router'
 
 const Home = () => {
     const { data: session } = useSession()
+    const router = useRouter()
+
 
     let isAuth = false
     if(session){
@@ -120,7 +123,7 @@ const Home = () => {
                     <CountDownTimer />
                 </div>
             </div> 
-: null}
+: router.push('/')}
         </>
     )
 }
