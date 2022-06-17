@@ -16,8 +16,11 @@ function CountDownTimer() {
 
     const handleMount = (e:any) => {
         if(!localStorage.getItem('miningTime')){
-
+            console.log("not mounted")
             localStorage.setItem('miningTime', JSON.stringify(e))
+        }
+        else{
+            console.log("already mounted")
         }
     }
 
