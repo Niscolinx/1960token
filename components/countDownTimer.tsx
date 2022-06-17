@@ -14,7 +14,7 @@ function CountDownTimer() {
         return api.start()
     }
 
-    const Completionist = () => <span>You are good to go!</span>
+    const Completionist = () => <span>Mining Session has ended</span>
 
 
 
