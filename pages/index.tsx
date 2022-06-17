@@ -36,33 +36,31 @@ const Index = () => {
                     spaceBetween={30}
                     centeredSlides={true}
                     loop={true}
-                    // autoplay={{
-                    //     delay: 5000,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
                     pagination={{
                         clickable: true,
                     }}
                     modules={[Autoplay, Pagination]}
                     className='mySwiper'
                 >
-                  
                     <SwiperSlide>
-                        <div className='w-full md:w-2/3 rounded-full'>
-                           
+                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Carousel1 />
                         </div>
                     </SwiperSlide>
-                    {/* <SwiperSlide>
-                        <div className='w-full md:w-2/3'>
+                    <SwiperSlide>
+                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Carousel2 />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='w-full md:w-2/3'>
+                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Carousel3 />
                         </div>
-                    </SwiperSlide> */}
+                    </SwiperSlide>
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
