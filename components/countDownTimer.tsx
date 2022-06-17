@@ -44,7 +44,7 @@ function CountDownTimer() {
                             {zeroPad(seconds)}
                         </span>
                     </p>
-                    <button onClick={() => handlePause(api)}>Pause</button>
+                    {/* <button onClick={() => handlePause(api)}>Pause</button> */}
                 </div>
             )
         }
