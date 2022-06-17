@@ -67,22 +67,6 @@ const Index = () => {
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <GiWallet className='text-blue-400 text-3xl' />
-                                <button
-                                    className='text-md p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
-                                >
-                                    Vendors
-                                </button>
-                            </div>
-                        </Link>
-                        <Link href='/'>
-                            <div className='grid justify-center place-items-center cursor-pointer'>
                                 <Logo className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
@@ -97,6 +81,23 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
+                        <Link href='/'>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
+                                <GiWallet className='text-blue-400 text-3xl' />
+                                <button
+                                    className='text-md p-1'
+                                    style={{
+                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                                        borderRadius: '50px',
+                                    }}
+                                >
+                                    Vendors
+                                </button>
+                            </div>
+                        </Link>
+
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <FaQuestionCircle className='text-blue-400 text-3xl' />
