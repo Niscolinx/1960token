@@ -40,9 +40,9 @@ const Home = (props: any) => {
                 </form>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
-                    <h4 className='border-b border-gray-700 pb-2'>
-                        My account
-                    </h4>
+                    <h3 className='border-b border-gray-700 pb-2 text-xl font-semibold'>
+                        Account
+                    </h3>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
