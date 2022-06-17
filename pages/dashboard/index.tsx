@@ -9,20 +9,9 @@ import { useRouter } from 'next/router'
 
 const Home = () => {
     const { data: session } = useSession()
-    const router = useRouter()
 
-
-    let isAuth = false
-    if(session){
-        isAuth = true
-    }
-    else{
-        isAuth = false
-        router.push("/")
-    }
     return (
         <>
-        {isAuth &&
             <div className='grid mt-10 gap-5'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
@@ -124,7 +113,7 @@ const Home = () => {
                     <CountDownTimer />
                 </div>
             </div> 
-}
+
         </>
     )
 }
