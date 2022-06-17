@@ -1,11 +1,10 @@
-import { useSession } from 'next-auth/react'
+import { getSession, GetSessionParams, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import CountDownTimer from '../../components/countDownTimer'
-import { useRouter } from 'next/router'
 
 const Home = () => {
     const { data: session } = useSession()
@@ -119,3 +118,23 @@ const Home = () => {
 }
 
 export default Home
+
+export async function getServerSideProps(
+    context: GetSessionParams | undefined
+) {
+    const session = await getSession(context)
+
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: { session },
+    }
+}
+

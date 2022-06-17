@@ -1,9 +1,27 @@
-import React from 'react'
+import { getSession, GetSessionParams, useSession } from 'next-auth/react'
+import React, { useEffect } from 'react'
 
-const isAuth:React.FC = ({children}) => {
-  return (
-   <>{children}</>
-  )
+const isAuth: React.FC = ({ children }) => {
+    return <>{children}</>
 }
 
 export default isAuth
+
+export async function getServerSideProps(
+    context: GetSessionParams | undefined
+) {
+    const session = await getSession(context)
+
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: { session },
+    }
+}
