@@ -31,7 +31,7 @@ const Index = () => {
 
     return (
         <>
-            <div className='grid gap-5 max-w-4xl mx-auto'>
+            <div className='grid gap-5 max-w-4xl mx-auto text-gray-400'>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
@@ -63,7 +63,7 @@ const Index = () => {
                     </SwiperSlide>
                 </Swiper>
 
-                <div className='grid text-[#ccccd0] border-b border-t border-gray-800 py-3'>
+                <div className='grid text-gray-400 border-b border-t border-gray-800 py-3'>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -134,7 +134,7 @@ const Index = () => {
                 </div>
 
                 <div className='grid'>
-                    <h3 className='text-center font-semibold text-sm grad p-2'>
+                    <h3 className='text-center font-semibold text-2xl grad p-2'>
                         What Will Do
                     </h3>
                     <p className='text-justify'>
