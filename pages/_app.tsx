@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 </div>
             </div> */}
                 <SessionProvider session={session}>
-                    <Layout session={session}>
+                    <Layout>
                         <Component {...pageProps} />
                     </Layout>
                 </SessionProvider>{' '}

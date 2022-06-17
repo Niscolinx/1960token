@@ -1,7 +1,8 @@
+import { Session } from 'next-auth'
 import Link from 'next/link'
 import React from 'react'
 
-function nav() {
+function nav({session}: Session) {
   return (
       <nav>
           <Link href='/api/auth/signin'>
