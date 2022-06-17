@@ -30,7 +30,7 @@ a {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-
+  align-items: flex-start !important;
 
   /* Center slide text vertically */
   display: -webkit-box;
