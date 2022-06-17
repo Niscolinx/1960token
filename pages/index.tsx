@@ -53,7 +53,7 @@ const Index = () => {
                             <Carousel1 />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <div className='w-full md:w-2/3'>
                             <Carousel2 />
                         </div>
@@ -62,7 +62,7 @@ const Index = () => {
                         <div className='w-full md:w-2/3'>
                             <Carousel3 />
                         </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
