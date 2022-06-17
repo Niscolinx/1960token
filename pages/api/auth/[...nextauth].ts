@@ -89,11 +89,11 @@ export default NextAuth({
 
         //     }
         // },
-        // async redirect({ url, baseUrl }) {
-        //     // Allows relative callback URLs
-        //     console.log({baseUrl})
-        //     return `${baseUrl}/dashboard`
-        // },
+        async redirect({ url, baseUrl }) {
+            // Allows relative callback URLs
+            console.log({baseUrl})
+            return `${baseUrl}/dashboard`
+        },
     },
     // events: {
     //     signIn: async ({ account, user, isNewUser, profile }) => {
