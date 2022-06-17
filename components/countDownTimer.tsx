@@ -69,7 +69,7 @@ function CountDownTimer() {
     return (
         <div className='grid'>
             <Countdown
-                date={Date.now() + 12121212}
+                date={Date.now() + (1000 * 3600) * 6}
                 renderer={renderer}
                 autoStart={false}
                 onMount={handleMount}
