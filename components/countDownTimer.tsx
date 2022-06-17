@@ -11,68 +11,64 @@ function CountDownTimer() {
         api: CountdownApi
     }
 
-    interface Idates {
-        date1?: Date
-        date2?: Date
-    }
+   
 
     const handleStart = (api: CountdownApi) => {
         return api.start()
     }
 
-    const handleMount = (e:any) => {
-        if(!localStorage.getItem('miningTime')){
-            console.log("not mounted")
+    const handleMount = (e: any) => {
+        if (!localStorage.getItem('miningTime')) {
+            console.log('not mounted')
             localStorage.setItem('miningTime', JSON.stringify(e))
             const date = new Date().getTime()
 
-            localStorage.setItem('miningEnds', JSON.stringify({date}))
-        }
-        else{
+            localStorage.setItem('miningEnds', JSON.stringify({ date }))
+        } else {
+            const date1 = new Date('7/13/2010')
+            const date2 = new Date('7/14/2010')
+            // console.log(getDifferenceInDays(date1, date2))
 
+            // const getDifferenceInDays(date1, date2) {
+            //   const diffInMs = Math.abs(date2 - date1);
+            //   return diffInMs / (1000 * 60 * 60 * 24);
+            // }
 
+            const getDifferenceInHours = (date1: any, date2: any) => {
+                const diffInMs = Math.abs(date2 - date1)
+                return diffInMs / (1000 * 60 * 60)
+            }
 
-const date1 = new Date('7/13/2010');
-const date2 = new Date('7/14/2010');
-// console.log(getDifferenceInDays(date1, date2))
+            const getDifferenceInMinutes = (date1: any, date2: any) => {
+                const diffInMs = Math.abs(date2 - date1)
+                return diffInMs / (1000 * 60)
+            }
 
-// const getDifferenceInDays(date1, date2) {
-//   const diffInMs = Math.abs(date2 - date1);
-//   return diffInMs / (1000 * 60 * 60 * 24);
-// }
-
-const getDifferenceInHours = (date1:any, date2:any) => {
-  const diffInMs = Math.abs(date2 - date1);
-  return diffInMs / (1000 * 60 * 60);
-}
-
-const getDifferenceInMinutes = (date1:any, date2:any) => {
-  const diffInMs = Math.abs(date2 - date1);
-  return diffInMs / (1000 * 60);
-}
-
-const getDifferenceInSeconds = (date1:any, date2:any) => {
-  const diffInMs = Math.abs(date2 - date1);
-  return diffInMs / 1000;
-}
-            console.log("already mounted")
+            const getDifferenceInSeconds = (date1: any, date2: any) => {
+                const diffInMs = Math.abs(date2 - date1)
+                return diffInMs / 1000
+            }
+            console.log('already mounted')
             const dateNow = Date.now() + 1000 * 3600 * 6
-        console.log({dateNow})
+            console.log({ dateNow })
 
-        console.log(getDifferenceInHours(date1, date2))
-        console.log(getDifferenceInMinutes(date1, date2))
-        console.log(getDifferenceInSeconds(date1, date2))
+            console.log(getDifferenceInHours(date1, date2))
+            console.log(getDifferenceInMinutes(date1, date2))
+            console.log(getDifferenceInSeconds(date1, date2))
         }
     }
 
     const Completionist = () => <span>Mining Session has ended</span>
 
-
-
     // Renderer callback with condition
-    const renderer = ({days, hours, minutes, seconds, completed, api }: IcountDown) => {
-        
-       
+    const renderer = ({
+        days,
+        hours,
+        minutes,
+        seconds,
+        completed,
+        api,
+    }: IcountDown) => {
         if (completed) {
             // Render a completed state
             return <Completionist />
@@ -91,11 +87,9 @@ const getDifferenceInSeconds = (date1:any, date2:any) => {
                     <p>
                         Remaining time -{' '}
                         <span className='font-semibold'>
-                            {zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:
+                            {zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)}
                         </span>
-
-
                     </p>
                     <button onClick={() => handleStart(api)}>Mine</button>
                 </div>
@@ -105,10 +99,10 @@ const getDifferenceInSeconds = (date1:any, date2:any) => {
     return (
         <div className='grid'>
             <Countdown
-                date={Date.now() * 24}
+                date={Date.now() * (3600 * 1000) * 6}
                 renderer={renderer}
-                autoStart={false}
-                onMount={handleMount}
+                //autoStart={false}
+                //onMount={handleMount}
             />
         </div>
     )
