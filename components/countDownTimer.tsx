@@ -14,6 +14,10 @@ function CountDownTimer() {
         return api.start()
     }
 
+    const handleMount = (e:any) => {
+        console.log({e})
+    }
+
     const Completionist = () => <span>Mining Session has ended</span>
 
 
@@ -58,6 +62,7 @@ function CountDownTimer() {
                 date={Date.now() + 3600 * 1000 * 6}
                 renderer={renderer}
                 autoStart={false}
+                onMount={handleMount}
             />
         </div>
     )
