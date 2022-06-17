@@ -123,7 +123,7 @@ const Home = () => {
                     <CountDownTimer />
                 </div>
             </div> 
-: router.push('/index')}
+: router.push('/')}
         </>
     )
 }
