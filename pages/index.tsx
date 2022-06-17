@@ -63,11 +63,11 @@ const Index = () => {
                     </SwiperSlide>
                 </Swiper>
 
-                <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
+                <div className='grid mt-10 text-[#ccccd0] border-b border-t border-gray-800 py-3'>
                 
-                    <div className='grid mt-4 grid-cols-tc gap-3'>
+                    <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
                                 <GiWallet className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
@@ -83,7 +83,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
                                 <AiFillCarryOut className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
@@ -99,7 +99,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
                                 <ImProfile className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'
@@ -115,7 +115,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
                                 <IoIosPeople className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-md p-1'

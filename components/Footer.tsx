@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between mt-8'>
             <Link href='/'>
-                <div className='grid justify-items-center p-2 rounded-full' style={{
+                <div className='grid justify-items-center p-2 rounded-full cursor-pointer' style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: ` 5px 5px 16px #0c0c15,
              -5px -5px 16px #282845`,
@@ -18,7 +18,7 @@ const Footer = () => {
                 </div>
             </Link>
             <Link href='/'>
-                <div className='grid justify-items-center p-2 rounded-full' style={{
+                <div className='grid justify-items-center p-2 rounded-full cursor-pointer' style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: ` 5px 5px 16px #0c0c15,
              -5px -5px 16px #282845`,
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
             </Link>
             <Link href='/'>
-                <div className='grid justify-items-center p-2 rounded-full' style={{
+                <div className='grid justify-items-center p-2 rounded-full cursor-pointer' style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: ` 5px 5px 16px #0c0c15,
              -5px -5px 16px #282845`,
@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
             </Link>
             <Link href='/'>
-                <div className='grid justify-items-center p-2 rounded-full' style={{
+                <div className='grid justify-items-center p-2 rounded-full cursor-pointer' style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: ` 5px 5px 16px #0c0c15,
              -5px -5px 16px #282845`,
