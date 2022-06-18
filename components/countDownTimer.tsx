@@ -5,7 +5,7 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
-    const [fetchedMine, setFetchedMining] = useState()
+    const [fetchedMining, setFetchedMining] = useState()
     const { data: session } = useSession()
 
     useEffect(() => {
@@ -103,7 +103,7 @@ function CountDownTimer() {
             )
         }
     }
-    console.log({fetchedMine})
+    console.log({fetchedMining})
     return (
         <div className='grid'>
             {miningTime && (
