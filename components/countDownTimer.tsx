@@ -23,8 +23,7 @@ function CountDownTimer() {
         if (fetchedMining) {
             const { miningStart } = fetchedMining
             localStorage.setItem('miningStart', miningStart)
-        }
-        else {
+        } else {
             const prevDate = localStorage.getItem('miningStarts')
             console.log(prevDate)
 
@@ -58,16 +57,18 @@ function CountDownTimer() {
     }
 
     const handleStart = (api: CountdownApi) => {
-        const date = new Date()
+        if (!localStorage.getItem('miningStarts')) {
+            const date = new Date()
 
-        axios
-            .post('/api/startMining', { session, date })
-            .then(({ data }) => {
-                setFetchedMining(data)
-            })
-            .catch((err) => {
-                console.log({ err })
-            })
+            axios
+                .post('/api/startMining', { session, date })
+                .then(({ data }) => {
+                    setFetchedMining(data)
+                })
+                .catch((err) => {
+                    console.log({ err })
+                })
+        }
 
         return api.start()
     }
