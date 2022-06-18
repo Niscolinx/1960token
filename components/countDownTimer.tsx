@@ -32,6 +32,8 @@ function CountDownTimer() {
         axios
             .post('/api/user', session)
             .then(({ data }) => {
+                console.log({data})
+                data.isMining !== true ? localStorage.removeItem('miningStart') : ''
                 setFetchedMining(data)
             })
             .catch((err) => {
@@ -123,7 +125,7 @@ function CountDownTimer() {
         }
     }
 
-    let displayMine = toDisplayMine && miningTime ? (
+    let displayMine = toDisplayMine ? (
         <Countdown
             date={Date.now() + 1000 * (21600 - miningTime)}
             renderer={renderer}
