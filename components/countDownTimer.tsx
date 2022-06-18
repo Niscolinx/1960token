@@ -21,12 +21,16 @@ function CountDownTimer() {
             const date = new Date()
             localStorage.setItem('miningStarts', date.toString())
         } else {
-            const date = new Date()
-            console.log({ date })
-            console.log('already mounted')
             const prevDate = localStorage.getItem('miningStarts')
-
             console.log(prevDate)
+
+            const presentdate = new Date()
+            console.log({ presentdate })
+            console.log('already mounted')
+
+            const diff = (presentdate.getTime() - prevDate.getTime()) / 1000
+
+            console.log({diff})
         }
     }
 
