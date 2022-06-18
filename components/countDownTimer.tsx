@@ -97,11 +97,18 @@ function CountDownTimer() {
         }
     }
     console.log({fetchedMining})
+    let count = undefined
     return (
         <div className='grid'>
-            {miningTime && (
+            {miningTime ? (
                 <Countdown
                     date={Date.now() + 1000 * (21600 - miningTime)}
+                    renderer={renderer}
+                    autoStart={true}
+                />
+            ) : (
+                <Countdown
+                    date={Date.now() + 1000 * (21600)}
                     renderer={renderer}
                     autoStart={false}
                 />
