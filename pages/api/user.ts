@@ -1,4 +1,4 @@
-import { IUser } from './../../models/User';
+import { IUser } from '../../models/User';
 import { NextApiRequest, NextApiResponse } from 'next';
 import User from '../../models/User';
 

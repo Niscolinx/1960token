@@ -48,7 +48,7 @@ function CountDownTimer() {
         const date = new Date()
 
         axios
-            .post('/api/users', { session, date })
+            .post('/api/user', { session, date })
             .then((data) => {
                 console.log({ data })
             })
