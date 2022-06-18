@@ -1,9 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
-
     const [miningTime, setMiningTime] = useState<number>()
+
+    useLayoutEffect(() => {
+     console.log('uselayouteffect', {miningTime})
+
+     if(miningTime){
+        console.log("mining time active", miningTime)
+     }
+     else {
+        console.log("mining time not active", miningTime)
+     }
+    }, [miningTime])
     interface IcountDown {
         hours: number
         days: number
@@ -12,6 +22,7 @@ function CountDownTimer() {
         completed: Boolean
         api: CountdownApi
     }
+
 
     const handleStart = (api: CountdownApi) => {
         return api.start()
@@ -25,19 +36,18 @@ function CountDownTimer() {
         } else {
             const prevDate = localStorage.getItem('miningStarts')
             console.log(prevDate)
-            
+
             const presentdate = new Date()
             console.log({ presentdate })
             console.log('already mounted')
-            
-            if(prevDate){
 
+            if (prevDate) {
                 const transFormPrevDate = new Date(prevDate)
-                const diff = (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-                console.log({diff})
+                const diff =
+                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+                console.log({ diff })
                 setMiningTime(diff)
             }
-
         }
     }
 
@@ -79,15 +89,16 @@ function CountDownTimer() {
             )
         }
     }
-    console.log('render', {miningTime})
+    console.log('render', { miningTime })
     return (
         <div className='grid'>
-            <Countdown
-                date={Date.now() + 1000 * (21600 - 5000)}
-                renderer={renderer}
-                autoStart={false}
-                onMount={handleMount}
-            />
+                <Countdown
+                    date={Date.now() + 1000 * (21600 - 5000)}
+                    renderer={renderer}
+                    autoStart={false}
+                    onMount={handleMount}
+                />
+            
         </div>
     )
 }
