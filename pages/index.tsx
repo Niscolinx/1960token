@@ -50,17 +50,32 @@ const Index = () => {
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
-                            <Image src='/carousel1.png' alt='' width='1920px' height='1080px' />
+                            <Image
+                                src='/carousel1.png'
+                                alt=''
+                                width='1920px'
+                                height='1080px'
+                            />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Image src='/carousel2.png' alt='' width='1920px' height='1080px' />
+                            <Image
+                                src='/carousel2.png'
+                                alt=''
+                                width='1920px'
+                                height='1080px'
+                            />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
-                            <Image src='/carousel3.png' alt='' width='1920px' height='1080px' />
+                            <Image
+                                src='/carousel3.png'
+                                alt=''
+                                width='1920px'
+                                height='1080px'
+                            />
                         </div>
                     </SwiperSlide>
                 </Swiper>
@@ -137,18 +152,15 @@ const Index = () => {
 
                 <div className='grid'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
-                        What Will Do
-                    </h3>
+Who we are                    </h3>
                     <p className='text-justify'>
-                        Home From here he flees from hatred, takes time to
-                        pardon his flattery, we accuse him of the pain of his
-                        life, but I will explain some, for he is obliged, by the
-                        free choices, of the troubles we often encounter. The
-                        pain itself is the love of the main, the adipisic Nor
-                        does it please the accusers to escape, and to choose
-                        which other ones to obtain greater than the statements,
-                        from which they may wish to seek the very pleasures of
-                        these pains and pains in the architect.
+                        1960Token is one of the most superior Mining and
+                        Affiliate platform, offering Mining and Affiliate
+                        solutions for active day Miner and Affiliate as well as
+                        client that are new to the Platform. 1960Token offers
+                        its clients the best Mining and Affiliate platforms,
+                        with superior connectivity. 1960Token is revolutionizing
+                        online Mining and Affiliate.
                     </p>
                 </div>
             </div>

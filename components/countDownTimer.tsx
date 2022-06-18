@@ -1,59 +1,28 @@
-import axios from 'axios'
-import { useSession } from 'next-auth/react'
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
-    interface IFetchedMining {
-        isMining: boolean
-        miningStart: string
-    }
     const [miningTime, setMiningTime] = useState<number>()
-    const [fetchedMining, setFetchedMining] = useState<IFetchedMining>()
-    const [toDisplayMine, setTodisplayMine] = useState(false)
-    const { data: session } = useSession()
 
     useLayoutEffect(() => {
-        if (!localStorage.getItem('miningStart')) {
-            setTodisplayMine(false)
+        if (!localStorage.getItem('miningStarts')) {
+            const date = new Date()
+            localStorage.setItem('miningStarts', date.toString())
         } else {
-            const get = localStorage.getItem('miningStart')
+            const prevDate = localStorage.getItem('miningStarts')
+            console.log(prevDate)
+
             const presentdate = new Date()
+            console.log({ presentdate })
 
-            const transFormPrevDate = new Date(get!)
-            const diff =
-                (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-            setMiningTime(diff)
-            setTodisplayMine(true)
+            if (prevDate) {
+                const transFormPrevDate = new Date(prevDate)
+                const diff =
+                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+                setMiningTime(diff)
+            }
         }
-    })
-
-    useEffect(() => {
-        axios
-            .post('/api/user', session)
-            .then(({ data }) => {
-                console.log({data})
-                data.isMining !== true ? localStorage.removeItem('miningStart') : ''
-                setFetchedMining(data)
-            })
-            .catch((err) => {
-                console.log({ err })
-            })
-    }, [])
-
-    useEffect(() => {
-        if ((fetchedMining && fetchedMining.isMining) && !localStorage.getItem('miningStart')) {
-            console.log('fetched mining',fetchedMining)
-            const { miningStart } = fetchedMining
-            localStorage.setItem('miningStart', miningStart)
-            const presentdate = new Date()
-
-            const transFormPrevDate = new Date(miningStart)
-            const diff =
-                (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-            setMiningTime(diff)
-        }
-    }, [miningTime, fetchedMining])
+    }, [miningTime])
     interface IcountDown {
         hours: number
         days: number
@@ -64,23 +33,6 @@ function CountDownTimer() {
     }
 
     const handleStart = (api: CountdownApi) => {
-        if (!localStorage.getItem('miningStart')) {
-            console.log('handle start init')
-            const date = new Date()
-
-            axios
-                .post('/api/startMining', { session, date })
-                .then(({ data }) => {
-                    const { miningStart } = data
-                    setFetchedMining(data)
-                    localStorage.setItem('miningStart', miningStart)
-                })
-                .catch((err) => {
-                    console.log({ err })
-                })
-        } else {
-            console.log('handle start already')
-        }
         return api.start()
     }
 
@@ -88,6 +40,7 @@ function CountDownTimer() {
 
     // Renderer callback with condition
     const renderer = ({
+        days,
         hours,
         minutes,
         seconds,
@@ -96,9 +49,6 @@ function CountDownTimer() {
     }: IcountDown) => {
         if (completed) {
             // Render a completed state
-            console.log('mining ended')
-            localStorage.removeItem('miningStarts')
-
             return <Completionist />
         } else {
             // Render a countdown
@@ -124,24 +74,14 @@ function CountDownTimer() {
             )
         }
     }
-
-    let displayMine = toDisplayMine ? (
-        <Countdown
-            date={Date.now() + 1000 * (21600 - miningTime)}
-            renderer={renderer}
-            autoStart={true}
-        />
-    ) : (
-        <Countdown
-            date={Date.now() + 1000 * (21600)}
-            renderer={renderer}
-            autoStart={false}
-        />
-    )
-
     return (
         <div className='grid'>
-           {displayMine}
+            {miningTime && (
+                <Countdown
+                    date={Date.now() + 1000 * (21600 - miningTime)}
+                    renderer={renderer}
+                />
+            )}
         </div>
     )
 }
