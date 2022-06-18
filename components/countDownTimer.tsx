@@ -1,10 +1,10 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (!localStorage.getItem('miningStarts')) {
             const date = new Date()
             localStorage.setItem('miningStarts', date.toString())
