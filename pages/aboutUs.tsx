@@ -3,7 +3,17 @@ import React from 'react'
 function aboutUs() {
   return (
       <div className='grid justify-center mt-10 gap-5'>
-              <h1 className='text-center grad p-2 text-2xl font-semibold mb-5'>ABOUT US</h1>
+          <h1
+              className='text-center p-2 text-3xl font-semibold mb-5'
+              style={{
+                  background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                  boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                  borderRadius: '50px',
+              }}
+          >
+              ABOUT US
+          </h1>
           <div className='grid'>
               <p className='text-justify'>
                   1960Token is one of the most superior Mining and Affiliate
@@ -15,7 +25,9 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2 className='text-center font-semibold text-2xl grad p-2'>OUR MISSION </h2>
+              <h2 className='text-center font-semibold text-2xl grad p-2'>
+                  OUR MISSION{' '}
+              </h2>
               <p className='text-justify'>
                   1960Token Mission is to create the best Mining and Affiliate
                   experience for all her clients alike Miners to focus more on
@@ -39,7 +51,9 @@ function aboutUs() {
           </div>
 
           <div className='grid'>
-              <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>Confidentiality </h2>
+              <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
+                  Confidentiality{' '}
+              </h2>
               <p className='text-justify'>
                   1960Token maintains appropriate controls and monitors the
                   transfer of confidential and sensitive client information
@@ -50,7 +64,9 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2 className='text-center font-semibold text-2xl grad p-2'>WHY US </h2>
+              <h2 className='text-center font-semibold text-2xl grad p-2'>
+                  WHY US{' '}
+              </h2>
               <div className='grid'>
                   <p className='text-justify'>
                       1960Token has grown to become one of the largest Mining
@@ -73,7 +89,9 @@ function aboutUs() {
               </div>
           </div>
           <div className='grid'>
-              <h2 className='text-center font-semibold text-2xl grad p-2'>SUPERIOR MINING PLATFORM </h2>
+              <h2 className='text-center font-semibold text-2xl grad p-2'>
+                  SUPERIOR MINING PLATFORM{' '}
+              </h2>
               <p className='text-justify'>
                   1960Token has revolutionized Miners and Affiliate by giving
                   them direct access to a superior platform and popular Mining
@@ -81,7 +99,9 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2 className='text-center font-semibold text-2xl grad p-2'>TRUST AND TRANSPARENCY </h2>
+              <h2 className='text-center font-semibold text-2xl grad p-2'>
+                  TRUST AND TRANSPARENCY{' '}
+              </h2>
               <p className='text-justify'>
                   Trust and Transparency form the basis of 1960Token core
                   values. So here there is no requotes, no manipulation and also
