@@ -6,12 +6,14 @@ function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
 
     useEffect(() => {
-
-        axios.get('/users').then((data) => {
-            console.log({data})
-        }).catch((err) => {
-            console.log({err})
-        })
+        axios
+            .get('/users')
+            .then((data) => {
+                console.log({ data })
+            })
+            .catch((err) => {
+                console.log({ err })
+            })
 
         if (!localStorage.getItem('miningStarts')) {
             const date = new Date()
@@ -58,7 +60,7 @@ function CountDownTimer() {
         if (completed) {
             // Render a completed state
             console.log('mining ended')
-             localStorage.removeItem('miningStarts')
+            localStorage.removeItem('miningStarts')
 
             return <Completionist />
         } else {
