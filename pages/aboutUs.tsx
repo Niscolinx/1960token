@@ -2,10 +2,10 @@ import React from 'react'
 
 function aboutUs() {
   return (
-      <div className='grid justify-center mt-10'>
-              <h1 className='text-center text-3xl'>ABOUT US</h1>
+      <div className='grid justify-center mt-10 gap-5'>
+              <h1 className='text-center text-2xl font-semibold mb-5'>ABOUT US</h1>
           <div className='grid'>
-              <p>
+              <p className='text-justify'>
                   1960Token is one of the most superior Mining and Affiliate
                   platform, offering Mining and Affiliate solutions for active
                   day Miner and Affiliate as well as client that are new to the
@@ -16,7 +16,7 @@ function aboutUs() {
           </div>
           <div className='grid'>
               <h2 className='text-center'>OUR MISSION </h2>
-              <p>
+              <p className='text-justify'>
                   1960Token Mission is to create the best Mining and Affiliate
                   experience for all her clients alike Miners to focus more on
                   their Mining. 1960Token is dedicated to offering her client
@@ -40,7 +40,7 @@ function aboutUs() {
 
           <div className='grid'>
               <h2 className='text-center uppercase'>Confidentiality </h2>
-              <p>
+              <p className='text-justify'>
                   1960Token maintains appropriate controls and monitors the
                   transfer of confidential and sensitive client information
                   within and outside the Company on a need-to-know basis.
@@ -52,7 +52,7 @@ function aboutUs() {
           <div className='grid'>
               <h2 className='text-center'>Why Us </h2>
               <div className='grid'>
-                  <p>
+                  <p className='text-justify'>
                       1960Token has grown to become one of the largest Mining
                       and Affiliate Platform in the world by giving her clients
                       what they really want. These are:
@@ -74,7 +74,7 @@ function aboutUs() {
           </div>
           <div className='grid'>
               <h2 className='text-center'>SUPERIOR MINING PLATFORM </h2>
-              <p>
+              <p className='text-justify'>
                   1960Token has revolutionized Miners and Affiliate by giving
                   them direct access to a superior platform and popular Mining
                   and Affiliate platform.
@@ -82,7 +82,7 @@ function aboutUs() {
           </div>
           <div className='grid'>
               <h2 className='text-center'>TRUST AND TRANSPARENCY </h2>
-              <p>
+              <p className='text-justify'>
                   Trust and Transparency form the basis of 1960Token core
                   values. So here there is no requotes, no manipulation and also
                   no restrictions. All client earnings are held on a segregated
