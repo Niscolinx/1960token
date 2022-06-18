@@ -20,14 +20,6 @@ function CountDownTimer() {
     }, [])
 
     useEffect(() => {
-        // if(fetchedMining){
-        //     console.log("gotten", {fetchedMining})
-        // }
-        // if (!localStorage.getItem('miningStarts')) {
-        //     const date = new Date()
-        //     localStorage.setItem('miningStarts', date.toString())
-        // } else {
-           // const prevDate = localStorage.getItem('miningStarts')
 
             const presentdate = new Date()
 
