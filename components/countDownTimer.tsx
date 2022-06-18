@@ -15,7 +15,7 @@ function CountDownTimer() {
             .catch((err) => {
                 console.log({ err })
             })
-    })
+    }, [])
 
     useEffect(() => {
 
@@ -24,10 +24,8 @@ function CountDownTimer() {
             localStorage.setItem('miningStarts', date.toString())
         } else {
             const prevDate = localStorage.getItem('miningStarts')
-            console.log(prevDate)
 
             const presentdate = new Date()
-            console.log({ presentdate })
 
             if (prevDate) {
                 const transFormPrevDate = new Date(prevDate)
@@ -99,7 +97,7 @@ function CountDownTimer() {
                     date={Date.now() + 1000 * (21600 - miningTime)}
                     renderer={renderer}
                     autoStart={false}
-                    onMount={handleStart}
+                    onStart={() => console.log("started")}
                 />
             )}
         </div>
