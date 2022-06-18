@@ -51,6 +51,7 @@ function CountDownTimer() {
     }: IcountDown) => {
         if (completed) {
             // Render a completed state
+            console.log("mining ended")
             return <Completionist />
         } else {
             // Render a countdown
