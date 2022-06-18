@@ -45,6 +45,17 @@ function CountDownTimer() {
     }
 
     const handleStart = (api: CountdownApi) => {
+                    const date = new Date()
+
+                    axios
+                        .post('/api/users', date)
+                        .then((data) => {
+                            console.log({ data })
+                        })
+                        .catch((err) => {
+                            console.log({ err })
+                        })
+
         return api.start()
     }
 
