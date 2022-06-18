@@ -3,15 +3,18 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
+    const [isMineLoaded, setisMineLoaded] = useState(false)
 
     useLayoutEffect(() => {
      console.log('uselayouteffect', {miningTime})
 
      if(miningTime){
         console.log("mining time active", miningTime)
+        setisMineLoaded(true)
      }
      else {
         console.log("mining time not active", miningTime)
+        setisMineLoaded(false)
      }
     }, [miningTime])
     interface IcountDown {
@@ -90,6 +93,7 @@ function CountDownTimer() {
         }
     }
     console.log('render', { miningTime })
+    console.log('render', { isMineLoaded })
     return (
         <div className='grid'>
                 <Countdown
