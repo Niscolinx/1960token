@@ -3,19 +3,30 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
-    const [isMineLoaded, setisMineLoaded] = useState(false)
 
     useLayoutEffect(() => {
-     console.log('uselayouteffect', {miningTime})
+        console.log('uselayouteffect', { miningTime })
 
-     if(miningTime){
-        console.log("mining time active", miningTime)
-        setisMineLoaded(true)
-     }
-     else {
-        console.log("mining time not active", miningTime)
-        setisMineLoaded(false)
-     }
+       if (!localStorage.getItem('miningStarts')) {
+           console.log('not mounted')
+           const date = new Date()
+           localStorage.setItem('miningStarts', date.toString())
+       } else {
+           const prevDate = localStorage.getItem('miningStarts')
+           console.log(prevDate)
+
+           const presentdate = new Date()
+           console.log({ presentdate })
+           console.log('already mounted')
+
+           if (prevDate) {
+               const transFormPrevDate = new Date(prevDate)
+               const diff =
+                   (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+               console.log({ diff })
+               setMiningTime(diff)
+           }
+       }
     }, [miningTime])
     interface IcountDown {
         hours: number
@@ -26,33 +37,11 @@ function CountDownTimer() {
         api: CountdownApi
     }
 
-
     const handleStart = (api: CountdownApi) => {
         return api.start()
     }
 
-    const handleMount = (e: any) => {
-        if (!localStorage.getItem('miningStarts')) {
-            console.log('not mounted')
-            const date = new Date()
-            localStorage.setItem('miningStarts', date.toString())
-        } else {
-            const prevDate = localStorage.getItem('miningStarts')
-            console.log(prevDate)
-
-            const presentdate = new Date()
-            console.log({ presentdate })
-            console.log('already mounted')
-
-            if (prevDate) {
-                const transFormPrevDate = new Date(prevDate)
-                const diff =
-                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-                console.log({ diff })
-                setMiningTime(diff)
-            }
-        }
-    }
+    
 
     const Completionist = () => <span>Mining Session has ended</span>
 
@@ -93,16 +82,15 @@ function CountDownTimer() {
         }
     }
     console.log('render', { miningTime })
-    console.log('render', { isMineLoaded })
     return (
         <div className='grid'>
+            {miningTime && (
                 <Countdown
                     date={Date.now() + 1000 * (21600 - 5000)}
                     renderer={renderer}
                     autoStart={false}
-                    onMount={handleMount}
                 />
-            
+            )}
         </div>
     )
 }
