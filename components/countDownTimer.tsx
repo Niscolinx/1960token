@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
+
+    const [miningTime, setMiningTime] = useState<number>()
     interface IcountDown {
         hours: number
         days: number
@@ -33,6 +35,7 @@ function CountDownTimer() {
                 const transFormPrevDate = new Date(prevDate)
                 const diff = (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
                 console.log({diff})
+                setMiningTime(diff)
             }
 
         }
@@ -79,7 +82,7 @@ function CountDownTimer() {
     return (
         <div className='grid'>
             <Countdown
-                date={Date.now() + 1000 * 21600}
+                date={miningTime ?  Date.now() + 1000 * miningTime : ''}
                 renderer={renderer}
                 autoStart={false}
                 onMount={handleMount}
