@@ -10,11 +10,12 @@ function CountDownTimer() {
     }
     const [miningTime, setMiningTime] = useState<number>()
     const [fetchedMining, setFetchedMining] = useState<IFetchedMining>()
+    const [toDisplayMine, setTodisplayMine] = useState(false)
     const { data: session } = useSession()
 
     useLayoutEffect(() => {
         if (!localStorage.getItem('miningStart')) {
-            setMiningTime(0)
+            setTodisplayMine(false)
         } else {
             const get = localStorage.getItem('miningStart')
             const presentdate = new Date()
@@ -23,6 +24,7 @@ function CountDownTimer() {
             const diff =
                 (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
             setMiningTime(diff)
+            setTodisplayMine(true)
         }
     })
 
@@ -121,15 +123,23 @@ function CountDownTimer() {
         }
     }
 
+    let displayMine = toDisplayMine && miningTime ? (
+        <Countdown
+            date={Date.now() + 1000 * (21600 - miningTime)}
+            renderer={renderer}
+            autoStart={true}
+        />
+    ) : (
+        <Countdown
+            date={Date.now() + 1000 * (21600)}
+            renderer={renderer}
+            autoStart={false}
+        />
+    )
+
     return (
         <div className='grid'>
-            {miningTime && (
-                <Countdown
-                    date={Date.now() + 1000 * (21600 - miningTime)}
-                    renderer={renderer}
-                    autoStart={true}
-                />
-            )}
+           {displayMine}
         </div>
     )
 }
