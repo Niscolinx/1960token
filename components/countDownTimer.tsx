@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
@@ -5,6 +6,13 @@ function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
 
     useEffect(() => {
+
+        axios.get('/users').then((data) => {
+            console.log({data})
+        }).catch((err) => {
+            console.log({err})
+        })
+
         if (!localStorage.getItem('miningStarts')) {
             const date = new Date()
             localStorage.setItem('miningStarts', date.toString())
