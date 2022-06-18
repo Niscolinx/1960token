@@ -20,24 +20,25 @@ function CountDownTimer() {
     }, [])
 
     useEffect(() => {
-        if(fetchedMining){
-            console.log("gotten", {fetchedMining})
-        }
-        if (!localStorage.getItem('miningStarts')) {
-            const date = new Date()
-            localStorage.setItem('miningStarts', date.toString())
-        } else {
-            const prevDate = localStorage.getItem('miningStarts')
+        // if(fetchedMining){
+        //     console.log("gotten", {fetchedMining})
+        // }
+        // if (!localStorage.getItem('miningStarts')) {
+        //     const date = new Date()
+        //     localStorage.setItem('miningStarts', date.toString())
+        // } else {
+           // const prevDate = localStorage.getItem('miningStarts')
 
             const presentdate = new Date()
 
-            if (prevDate) {
-                const transFormPrevDate = new Date(prevDate)
+            if (fetchedMining) {
+                const {miningStart} = fetchedMining
+                const transFormPrevDate = new Date(miningStart)
                 const diff =
                     (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
                 setMiningTime(diff)
             }
-        }
+        
     }, [miningTime, fetchedMining])
     interface IcountDown {
         hours: number
