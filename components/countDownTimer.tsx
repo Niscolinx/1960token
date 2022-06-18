@@ -79,6 +79,7 @@ function CountDownTimer() {
             )
         }
     }
+    console.log('render', {miningTime})
     return (
         <div className='grid'>
             <Countdown
