@@ -7,16 +7,16 @@ function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
     const { data: session } = useSession()
 
-    // useEffect(() => {
-    //     axios
-    //         .post('/api/users', session)
-    //         .then((data) => {
-    //             console.log({ data })
-    //         })
-    //         .catch((err) => {
-    //             console.log({ err })
-    //         })
-    // }, [])
+    useEffect(() => {
+        axios
+            .post('/api/users', session)
+            .then((data) => {
+                console.log({ data })
+            })
+            .catch((err) => {
+                console.log({ err })
+            })
+    }, [])
 
     useEffect(() => {
         if (!localStorage.getItem('miningStarts')) {
