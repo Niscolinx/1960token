@@ -5,15 +5,19 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
 
+
     useEffect(() => {
         axios
-            .get('/users')
+            .get('/api/users')
             .then((data) => {
                 console.log({ data })
             })
             .catch((err) => {
                 console.log({ err })
             })
+    })
+
+    useEffect(() => {
 
         if (!localStorage.getItem('miningStarts')) {
             const date = new Date()
