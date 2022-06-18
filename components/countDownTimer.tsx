@@ -5,10 +5,7 @@ function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
 
     useLayoutEffect(() => {
-        console.log('uselayouteffect', { miningTime })
-
        if (!localStorage.getItem('miningStarts')) {
-           console.log('not mounted')
            const date = new Date()
            localStorage.setItem('miningStarts', date.toString())
        } else {
@@ -17,13 +14,11 @@ function CountDownTimer() {
 
            const presentdate = new Date()
            console.log({ presentdate })
-           console.log('already mounted')
 
            if (prevDate) {
                const transFormPrevDate = new Date(prevDate)
                const diff =
                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-               console.log({ diff })
                setMiningTime(diff)
            }
        }
