@@ -20,17 +20,33 @@ function CountDownTimer() {
     }, [])
 
     useEffect(() => {
+        if (fetchedMining) {
+            const { miningStart } = fetchedMining
+            localStorage.setItem('miningStart', miningStart)
+        }
+        else {
+            const prevDate = localStorage.getItem('miningStarts')
+            console.log(prevDate)
 
             const presentdate = new Date()
+            console.log({ presentdate })
 
-            if (fetchedMining) {
-                const {miningStart} = fetchedMining
-                const transFormPrevDate = new Date(miningStart)
+            if (prevDate) {
+                const transFormPrevDate = new Date(prevDate)
                 const diff =
                     (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
                 setMiningTime(diff)
             }
-        
+        }
+        const presentdate = new Date()
+
+        if (fetchedMining) {
+            const { miningStart } = fetchedMining
+            const transFormPrevDate = new Date(miningStart)
+            const diff =
+                (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+            setMiningTime(diff)
+        }
     }, [miningTime, fetchedMining])
     interface IcountDown {
         hours: number
@@ -96,7 +112,7 @@ function CountDownTimer() {
             )
         }
     }
-    console.log({fetchedMining})
+    console.log({ fetchedMining })
     let count = undefined
     return (
         <div className='grid'>
@@ -108,7 +124,7 @@ function CountDownTimer() {
                 />
             ) : (
                 <Countdown
-                    date={Date.now() + 1000 * (21600)}
+                    date={Date.now() + 1000 * 21600}
                     renderer={renderer}
                     autoStart={false}
                 />
