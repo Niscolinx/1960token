@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import User from '../../models/User';
 
 export default async function users(req:NextApiRequest, res:NextApiResponse) {
-    console.log(req.body)
+    console.log('req body', req.body)
 
     const {email}:IUser = req.body.user
 
