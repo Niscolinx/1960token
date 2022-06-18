@@ -152,7 +152,8 @@ const Index = () => {
 
                 <div className='grid'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
-Who we are                    </h3>
+                        Who We Are{' '}
+                    </h3>
                     <p className='text-justify'>
                         1960Token is one of the most superior Mining and
                         Affiliate platform, offering Mining and Affiliate
