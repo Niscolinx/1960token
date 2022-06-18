@@ -1,14 +1,16 @@
 import axios from 'axios'
+import { useSession } from 'next-auth/react'
 import React, { useState, useEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
+    const { data: session } = useSession()
 
 
     useEffect(() => {
         axios
-            .get('/api/users')
+            .post('/api/users', session)
             .then((data) => {
                 console.log({ data })
             })
