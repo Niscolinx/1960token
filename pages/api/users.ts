@@ -1,12 +1,13 @@
+import { IUser } from './../../models/User';
 import { NextApiRequest, NextApiResponse } from 'next';
 import User from '../../models/User';
 
 export default async function users(req:NextApiRequest, res:NextApiResponse) {
     console.log(req.body)
 
-    const {user} = req.body
+    const {email}:IUser = req.body.user
 
-    const users = await User.find()
+    const users = await User.findById({email})
     console.log({users})
     
 }
