@@ -63,7 +63,6 @@ function CountDownTimer() {
             axios
                 .post('/api/startMining', { session, date })
                 .then(({ data }) => {
-                    console.log("handle start", data)
                     const {miningStart} = data
                     setFetchedMining(data)
                     localStorage.setItem('miningStart', miningStart)
