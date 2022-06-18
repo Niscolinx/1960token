@@ -70,7 +70,7 @@ function CountDownTimer() {
                     <p>
                         Remaining time -{' '}
                         <span className='font-semibold'>
-                            {zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:
+                            :{zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)}
                         </span>
                     </p>
@@ -82,9 +82,9 @@ function CountDownTimer() {
     return (
         <div className='grid'>
             <Countdown
-                date={miningTime ?  Date.now() + 1000 * miningTime : ''}
+                date={ Date.now() + 1000 * 740}
                 renderer={renderer}
-                autoStart={false}
+                // autoStart={false}
                 onMount={handleMount}
             />
         </div>
