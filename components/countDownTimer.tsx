@@ -86,9 +86,8 @@ function CountDownTimer() {
         <div className='grid'>
             {miningTime && (
                 <Countdown
-                    date={Date.now() + 1000 * (21600 - 5000)}
+                    date={Date.now() + 1000 * (21600 - miningTime)}
                     renderer={renderer}
-                    autoStart={false}
                 />
             )}
         </div>
