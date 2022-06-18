@@ -21,6 +21,7 @@ function CountDownTimer() {
 
     useEffect(() => {
         if (fetchedMining) {
+            console.log("fetched mining")
             const { miningStart } = fetchedMining
             localStorage.setItem('miningStart', miningStart)
         } else {
@@ -58,6 +59,7 @@ function CountDownTimer() {
 
     const handleStart = (api: CountdownApi) => {
         if (!localStorage.getItem('miningStart')) {
+            console.log("handle start init")
             const date = new Date()
 
             axios
@@ -72,6 +74,9 @@ function CountDownTimer() {
                 })
         }
        
+        else{
+            console.log("handle start already")
+        }
         return api.start()
     }
 
