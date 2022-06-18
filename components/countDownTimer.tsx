@@ -11,20 +11,22 @@ function CountDownTimer() {
         api: CountdownApi
     }
 
-   
-
     const handleStart = (api: CountdownApi) => {
         return api.start()
     }
 
     const handleMount = (e: any) => {
-        if (!localStorage.getItem('miningTime')) {
+        if (!localStorage.getItem('miningStarts')) {
             console.log('not mounted')
-            const date = new Date().getSeconds()
-            localStorage.setItem('miningStarts', JSON.stringify(date))
-
+            const date = new Date()
+            localStorage.setItem('miningStarts', date.toString())
         } else {
+            const date = new Date()
+            console.log({ date })
             console.log('already mounted')
+            const getDate = localStorage.getItem('miningStarts')
+
+            console.log(getDate)
         }
     }
 
