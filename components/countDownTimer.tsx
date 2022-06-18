@@ -20,6 +20,9 @@ function CountDownTimer() {
     }, [])
 
     useEffect(() => {
+        if(fetchedMining){
+            console.log("gotten", {fetchedMining})
+        }
         if (!localStorage.getItem('miningStarts')) {
             const date = new Date()
             localStorage.setItem('miningStarts', date.toString())
@@ -35,7 +38,7 @@ function CountDownTimer() {
                 setMiningTime(diff)
             }
         }
-    }, [miningTime])
+    }, [miningTime, fetchedMining])
     interface IcountDown {
         hours: number
         days: number
