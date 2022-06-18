@@ -24,9 +24,9 @@ function CountDownTimer() {
             const date = new Date()
             console.log({ date })
             console.log('already mounted')
-            const getDate = localStorage.getItem('miningStarts')
+            const prevDate = localStorage.getItem('miningStarts')
 
-            console.log(getDate)
+            console.log(prevDate)
         }
     }
 
