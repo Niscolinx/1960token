@@ -1,12 +1,30 @@
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
+    interface IFetchedMining {
+        isMining: boolean
+        miningStart: string
+    }
     const [miningTime, setMiningTime] = useState<number>()
-    const [fetchedMining, setFetchedMining] = useState()
+    const [fetchedMining, setFetchedMining] = useState<IFetchedMining>()
     const { data: session } = useSession()
+
+    useLayoutEffect(() => {
+        if (!localStorage.getItem('miningStart')) {
+            setMiningTime(0)
+        } else {
+            const get = localStorage.getItem('miningStart')
+            const presentdate = new Date()
+
+            const transFormPrevDate = new Date(get!)
+            const diff =
+                (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+            setMiningTime(diff)
+        }
+    })
 
     useEffect(() => {
         axios
@@ -20,28 +38,12 @@ function CountDownTimer() {
     }, [])
 
     useEffect(() => {
-        if (fetchedMining) {
-            console.log("fetched mining")
+        if ((fetchedMining && fetchedMining.isMining) && !localStorage.getItem('miningStart')) {
+            console.log('fetched mining',fetchedMining)
             const { miningStart } = fetchedMining
             localStorage.setItem('miningStart', miningStart)
-        } else {
-            const prevDate = localStorage.getItem('miningStarts')
-            console.log(prevDate)
-
             const presentdate = new Date()
-            console.log({ presentdate })
 
-            if (prevDate) {
-                const transFormPrevDate = new Date(prevDate)
-                const diff =
-                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-                setMiningTime(diff)
-            }
-        }
-        const presentdate = new Date()
-
-        if (fetchedMining) {
-            const { miningStart } = fetchedMining
             const transFormPrevDate = new Date(miningStart)
             const diff =
                 (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
@@ -59,23 +61,21 @@ function CountDownTimer() {
 
     const handleStart = (api: CountdownApi) => {
         if (!localStorage.getItem('miningStart')) {
-            console.log("handle start init")
+            console.log('handle start init')
             const date = new Date()
 
             axios
                 .post('/api/startMining', { session, date })
                 .then(({ data }) => {
-                    const {miningStart} = data
+                    const { miningStart } = data
                     setFetchedMining(data)
                     localStorage.setItem('miningStart', miningStart)
                 })
                 .catch((err) => {
                     console.log({ err })
                 })
-        }
-       
-        else{
-            console.log("handle start already")
+        } else {
+            console.log('handle start already')
         }
         return api.start()
     }
@@ -120,21 +120,14 @@ function CountDownTimer() {
             )
         }
     }
-    console.log({ fetchedMining })
-    let count = undefined
+
     return (
         <div className='grid'>
-            {miningTime ? (
+            {miningTime && (
                 <Countdown
                     date={Date.now() + 1000 * (21600 - miningTime)}
                     renderer={renderer}
                     autoStart={true}
-                />
-            ) : (
-                <Countdown
-                    date={Date.now() + 1000 * 21600}
-                    renderer={renderer}
-                    autoStart={false}
                 />
             )}
         </div>
