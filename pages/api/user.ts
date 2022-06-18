@@ -12,7 +12,7 @@ export default async function user(req:NextApiRequest, res:NextApiResponse) {
 
     if(user.isMining){
         console.log("mining started already")
-        res.json({
+        return res.json({
             miningSession: user.miningStart,
             startedMining: true
         })
@@ -23,11 +23,10 @@ export default async function user(req:NextApiRequest, res:NextApiResponse) {
         user.isMining = true
         await user.save()
 
-        res.json({
+        return res.json({
             isMining: user.isMining
         })
     }
 
-    
 }
 

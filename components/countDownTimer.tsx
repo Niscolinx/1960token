@@ -9,7 +9,7 @@ function CountDownTimer() {
 
     useEffect(() => {
         axios
-            .post('/api/users', session)
+            .post('/api/user', session)
             .then((data) => {
                 console.log({ data })
             })
