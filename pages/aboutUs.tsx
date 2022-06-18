@@ -2,9 +2,9 @@ import React from 'react'
 
 function aboutUs() {
   return (
-      <div>
+      <div className='grid justify-center mt-10'>
+              <h1 className='text-center text-3xl'>ABOUT US</h1>
           <div className='grid'>
-              <h2>About Us</h2>
               <p>
                   1960Token is one of the most superior Mining and Affiliate
                   platform, offering Mining and Affiliate solutions for active
@@ -15,7 +15,7 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2>OUR MISSION </h2>
+              <h2 className='text-center'>OUR MISSION </h2>
               <p>
                   1960Token Mission is to create the best Mining and Affiliate
                   experience for all her clients alike Miners to focus more on
@@ -39,7 +39,7 @@ function aboutUs() {
           </div>
 
           <div className='grid'>
-              <h2>Confidentiality </h2>
+              <h2 className='text-center uppercase'>Confidentiality </h2>
               <p>
                   1960Token maintains appropriate controls and monitors the
                   transfer of confidential and sensitive client information
@@ -50,7 +50,7 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2>Why Us </h2>
+              <h2 className='text-center'>Why Us </h2>
               <div className='grid'>
                   <p>
                       1960Token has grown to become one of the largest Mining
@@ -73,7 +73,7 @@ function aboutUs() {
               </div>
           </div>
           <div className='grid'>
-              <h2>SUPERIOR MINING PLATFORM </h2>
+              <h2 className='text-center'>SUPERIOR MINING PLATFORM </h2>
               <p>
                   1960Token has revolutionized Miners and Affiliate by giving
                   them direct access to a superior platform and popular Mining
@@ -81,7 +81,7 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2>TRUST AND TRANSPARENCY </h2>
+              <h2 className='text-center'>TRUST AND TRANSPARENCY </h2>
               <p>
                   Trust and Transparency form the basis of 1960Token core
                   values. So here there is no requotes, no manipulation and also
