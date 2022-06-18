@@ -5,13 +5,15 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
+    const [fetchedMine, setFetchedMining] = useState()
     const { data: session } = useSession()
 
     useEffect(() => {
         axios
             .post('/api/user', session)
-            .then((data) => {
+            .then(({data}) => {
                 console.log({ data })
+                setFetchedMining(data)
             })
             .catch((err) => {
                 console.log({ err })
@@ -49,7 +51,7 @@ function CountDownTimer() {
 
         axios
             .post('/api/startMining', { session, date })
-            .then((data) => {
+            .then(({data}) => {
                 console.log({ data })
             })
             .catch((err) => {

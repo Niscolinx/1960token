@@ -14,7 +14,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
     if (user.isMining) {
         console.log('mining started already')
         return res.json({
-            miningSession: user.miningStart,
+            miningStart: user.miningStart,
             isMining: true,
         })
     } else {
@@ -25,6 +25,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
 
         return res.json({
             isMining: user.isMining,
+            miningStart: user.miningStart
         })
     }
 }
