@@ -15,6 +15,16 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
+              <h2>OUR MISSION </h2>
+              <p>
+                  1960Token Mission is to create the best Mining and Affiliate
+                  experience for all her clients alike Miners to focus more on
+                  their Mining. 1960Token is dedicated to offering her client
+                  superior service. And 1960Token has been created with miners
+                  in mind.
+              </p>
+          </div>
+          <div className='grid'>
               <h3>Core Values</h3>
               <ol>
                   <li>Integrity and Trust</li>
@@ -63,25 +73,20 @@ function aboutUs() {
               </div>
           </div>
           <div className='grid'>
-              <h2>Confidentiality </h2>
+              <h2>SUPERIOR MINING PLATFORM </h2>
               <p>
-                  1960Token maintains appropriate controls and monitors the
-                  transfer of confidential and sensitive client information
-                  within and outside the Company on a need-to-know basis.
-                  1960Token does not deliberately disclose client information
-                  unless this is upon request of the client, or as required to
-                  do so by law.
+                  1960Token has revolutionized Miners and Affiliate by giving
+                  them direct access to a superior platform and popular Mining
+                  and Affiliate platform.
               </p>
           </div>
           <div className='grid'>
-              <h2>Confidentiality </h2>
+              <h2>TRUST AND TRANSPARENCY </h2>
               <p>
-                  1960Token maintains appropriate controls and monitors the
-                  transfer of confidential and sensitive client information
-                  within and outside the Company on a need-to-know basis.
-                  1960Token does not deliberately disclose client information
-                  unless this is upon request of the client, or as required to
-                  do so by law.
+                  Trust and Transparency form the basis of 1960Token core
+                  values. So here there is no requotes, no manipulation and also
+                  no restrictions. All client earnings are held on a segregated
+                  trust accounts with security.
               </p>
           </div>
       </div>
