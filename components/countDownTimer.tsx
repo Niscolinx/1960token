@@ -9,7 +9,7 @@ function CountDownTimer() {
 
     useEffect(() => {
         axios
-            .post('/api/user', {session})
+            .post('/api/user', session)
             .then((data) => {
                 console.log({ data })
             })
@@ -48,7 +48,7 @@ function CountDownTimer() {
         const date = new Date()
 
         axios
-            .post('/api/user', { session, date })
+            .post('/api/startMining', { session, date })
             .then((data) => {
                 console.log({ data })
             })
