@@ -12,7 +12,6 @@ function CountDownTimer() {
         axios
             .post('/api/user', session)
             .then(({ data }) => {
-                console.log({ data })
                 setFetchedMining(data)
             })
             .catch((err) => {
@@ -52,7 +51,6 @@ function CountDownTimer() {
         axios
             .post('/api/startMining', { session, date })
             .then(({ data }) => {
-                console.log({ data })
                 setFetchedMining(data)
             })
             .catch((err) => {
