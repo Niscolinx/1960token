@@ -23,14 +23,18 @@ function CountDownTimer() {
         } else {
             const prevDate = localStorage.getItem('miningStarts')
             console.log(prevDate)
-
+            
             const presentdate = new Date()
             console.log({ presentdate })
             console.log('already mounted')
+            
+            if(prevDate){
 
-            const diff = (presentdate.getTime() - prevDate.getTime()) / 1000
+                const transFormPrevDate = new Date(prevDate)
+                const diff = (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+                console.log({diff})
+            }
 
-            console.log({diff})
         }
     }
 
