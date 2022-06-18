@@ -50,7 +50,7 @@ function aboutUs() {
               </p>
           </div>
           <div className='grid'>
-              <h2 className='text-center'>Why Us </h2>
+              <h2 className='text-center'>WHY US </h2>
               <div className='grid'>
                   <p className='text-justify'>
                       1960Token has grown to become one of the largest Mining
