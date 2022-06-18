@@ -103,6 +103,7 @@ function CountDownTimer() {
             )
         }
     }
+    console.log({fetchedMine})
     return (
         <div className='grid'>
             {miningTime && (
