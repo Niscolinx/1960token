@@ -50,7 +50,7 @@ function CountDownTimer() {
         if (completed) {
             // Render a completed state
             console.log('mining ended')
-            const prevDate = localStorage.removeItem('miningStarts')
+             localStorage.removeItem('miningStarts')
 
             return <Completionist />
         } else {
