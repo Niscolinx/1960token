@@ -16,13 +16,13 @@ function aboutUs() {
           <h3>Core Values</h3>
           <ol>
               <li>Integrity and Trust</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Honesty and Fairness</li>
+              <li>Transparency</li>
+              <li>Commitments and Responsibility</li>
+              <li>Reliability </li>
+              <li>Flexibility</li>
+              <li>Constant Innovation</li>
+              <li>Strong Corporate Governance</li>
           </ol>
       </div>
   )
