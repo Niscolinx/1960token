@@ -14,7 +14,7 @@ export default async function user(req:NextApiRequest, res:NextApiResponse) {
         console.log("mining started already")
     }
     else{
-
+        console.log("start user mining")
         user.miningStart = date
     }
 
