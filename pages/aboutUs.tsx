@@ -26,7 +26,7 @@ function aboutUs() {
           </div>
           <div className='grid'>
               <h3>Core Values</h3>
-              <ol>
+              <ol className='list-decimal list-inside'>
                   <li>Integrity and Trust</li>
                   <li>Honesty and Fairness</li>
                   <li>Transparency</li>
@@ -57,7 +57,7 @@ function aboutUs() {
                       and Affiliate Platform in the world by giving her clients
                       what they really want. These are:
                   </p>
-                  <ul>
+                  <ul className='list-disc list-inside'>
                       <li>
                           FAST PAYMENT: You can make your withdrawal anytime you
                           want as an Affiliate and as for Miners you withdraw
