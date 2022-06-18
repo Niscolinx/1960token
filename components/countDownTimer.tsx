@@ -5,23 +5,23 @@ function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
 
     useLayoutEffect(() => {
-       if (!localStorage.getItem('miningStarts')) {
-           const date = new Date()
-           localStorage.setItem('miningStarts', date.toString())
-       } else {
-           const prevDate = localStorage.getItem('miningStarts')
-           console.log(prevDate)
+        if (!localStorage.getItem('miningStarts')) {
+            const date = new Date()
+            localStorage.setItem('miningStarts', date.toString())
+        } else {
+            const prevDate = localStorage.getItem('miningStarts')
+            console.log(prevDate)
 
-           const presentdate = new Date()
-           console.log({ presentdate })
+            const presentdate = new Date()
+            console.log({ presentdate })
 
-           if (prevDate) {
-               const transFormPrevDate = new Date(prevDate)
-               const diff =
-                   (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-               setMiningTime(diff)
-           }
-       }
+            if (prevDate) {
+                const transFormPrevDate = new Date(prevDate)
+                const diff =
+                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+                setMiningTime(diff)
+            }
+        }
     }, [miningTime])
     interface IcountDown {
         hours: number
@@ -36,8 +36,6 @@ function CountDownTimer() {
         return api.start()
     }
 
-    
-
     const Completionist = () => <span>Mining Session has ended</span>
 
     // Renderer callback with condition
@@ -51,7 +49,9 @@ function CountDownTimer() {
     }: IcountDown) => {
         if (completed) {
             // Render a completed state
-            console.log("mining ended")
+            console.log('mining ended')
+            const prevDate = localStorage.removeItem('miningStarts')
+
             return <Completionist />
         } else {
             // Render a countdown
@@ -77,7 +77,7 @@ function CountDownTimer() {
             )
         }
     }
-    console.log({miningTime})
+    console.log({ miningTime })
     return (
         <div className='grid'>
             {miningTime && (
