@@ -95,7 +95,7 @@ function CountDownTimer() {
                 <Countdown
                     date={Date.now() + 1000 * (21600 - miningTime)}
                     renderer={renderer}
-                    onStart={() => console.log("started")}
+                    autoStart={false}
                 />
             )}
         </div>
