@@ -7,8 +7,8 @@ export default async function users(req:NextApiRequest, res:NextApiResponse) {
 
     const {email}:IUser = req.body.user
 
-    const users = await User.findOne({email})
-    console.log({users})
+    const user = await User.findOne({email})
+    console.log({user})
     
 }
 
