@@ -71,8 +71,7 @@ function CountDownTimer() {
                     console.log({ err })
                 })
         }
-        
-
+       
         return api.start()
     }
 
