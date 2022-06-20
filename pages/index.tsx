@@ -154,7 +154,7 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className='grid justify-center gap-5'>
+                <div className='grid justify-center gap-5 my-10'>
                     <div
                         className='grid border'
                         style={{
@@ -210,6 +210,23 @@ const Index = () => {
                             Referral Commission
                         </p>
                     </div>
+                </div>
+                <div
+                    className='grid mt-10'
+                    style={{
+                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                        borderRadius: '50px',
+                    }}
+                >
+                    <h3 className='text-center font-semibold text-2xl grad p-2'>
+                        How 1960token works
+                    </h3>
+                    <p className='text-sm'>
+                        You are guaranteed to earn massively as an active member
+                        of 1960TOKEN in various ways;
+                    </p>
                 </div>
                 <div className='grid'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
