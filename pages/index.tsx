@@ -9,9 +9,8 @@ import Carousel2 from '../public/carousel2.svg'
 import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
 import Image from 'next/image'
-import { BsPersonPlusFill } from 'react-icons/bs'
+import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
 import { MdAttachMoney } from 'react-icons/md'
-import { AiOutlineCheck } from 'react-icons/ai'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -163,8 +162,8 @@ const Index = () => {
                         <span>Register Today</span>
                     </div>
                     <div className='flex'>
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
-                            <AiOutlineCheck />
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full font-bold'>
+                            <BsCheckLg />
                         </div>
                         <span>Registration Bonus</span>
                     </div>
