@@ -81,7 +81,14 @@ function customerService() {
                     </form>
 
                     <div className="grid">
-                        
+                        <div className="flex">
+                            <BsTelephoneFill/>
+                            +2340598343223
+                        </div>
+                        <div className="flex">
+                            <GrMail/>
+                            support@1960token.com
+                        </div>
                     </div>
                 </div>
             </div>
