@@ -1,7 +1,7 @@
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
-import { GiWallet } from 'react-icons/gi'
+import { GiWallet, GiTeamDowngrade } from 'react-icons/gi'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
 import Carousel1 from '../public/carousel11.svg'
@@ -11,6 +11,7 @@ import Logo from '../public/logo.svg'
 import Image from 'next/image'
 import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
 import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
+import {FiAirplay} from 'react-icons/fi'
 
 
 // Import Swiper React components
@@ -243,7 +244,9 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] gap-5'>
                             <FaPeopleArrows className='text-blue-400 text-6xl' />
                             <div className='grid'>
-                                <h3 className='text-2xl font-semibold'>Affiliate Referral</h3>
+                                <h3 className='text-2xl font-semibold'>
+                                    Affiliate Referral
+                                </h3>
                                 <p>
                                     You are handsomely rewarded for telling your
                                     friends and family about the services of
@@ -254,28 +257,25 @@ const Index = () => {
                             </div>
                         </div>
                         <div className='flex '>
-                            <FaPeopleArrows className='text-blue-400 text-3xl' />
+                            <FiAirplay className='text-blue-400 text-3xl' />
                             <div className='grid'>
-                                <h3>Affiliate Referral</h3>
+                                <h3>Entertainment</h3>
                                 <p>
-                                    You are handsomely rewarded for telling your
-                                    friends and family about the services of
-                                    1960token. You earn $3 on each successful
-                                    referral. This option enables increase in
-                                    earning
+                                    You earn when you Trade and watch videos on
+                                    the website. You earn $1 on each Task you
+                                    complete 24hrs/daily.
                                 </p>
                             </div>
                         </div>
                         <div className='flex '>
-                            <FaPeopleArrows className='text-blue-400 text-3xl' />
+                            <GiTeamDowngrade className='text-blue-400 text-3xl' />
                             <div className='grid'>
-                                <h3>Affiliate Referral</h3>
+                                <h3>Team Building</h3>
                                 <p>
-                                    You are handsomely rewarded for telling your
-                                    friends and family about the services of
-                                    1960token. You earn $3 on each successful
-                                    referral. This option enables increase in
-                                    earning
+                                    Building a team of Networkers, while earning
+                                    upto $20 minimum withdrawal threshold and
+                                    above. This uses a matrix system of
+                                    marketing and affiliation.
                                 </p>
                             </div>
                         </div>
