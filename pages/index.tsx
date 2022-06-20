@@ -239,9 +239,9 @@ const Index = () => {
                         </p>
                     </div>
 
-                    <div className='grid'>
-                        <div className='flex'>
-                            <FaPeopleArrows />
+                    <div className='grid mt-5'>
+                        <div className='flex '>
+                            <FaPeopleArrows className='text-blue-400 text-3xl' />
                             <div className='grid'>
                                 <h3>Affiliate Referral</h3>
                                 <p>
