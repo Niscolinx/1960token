@@ -154,7 +154,7 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className='grid'>
+                <div className='grid justify-center'>
                     <div className='flex'  style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: `7px 7px 14px #161625,
