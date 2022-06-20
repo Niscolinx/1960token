@@ -156,7 +156,7 @@ const Index = () => {
 
                 <div className='grid justify-center gap-5'>
                     <div
-                        className='grid gap-1 border'
+                        className='grid border'
                         style={{
                             background: `linear-gradient(145deg, #1c1c30, #171729)`,
                             boxShadow: `7px 7px 14px #161625,
@@ -173,7 +173,7 @@ const Index = () => {
                         </div>
                         <p className='text-center'>
                             Reward -{' '}
-                            <span className='semibold bg-orange-300 text-black'>
+                            <span className='semibold text-orange-300 p-2 '>
                                 $5
                             </span>
                         </p>
