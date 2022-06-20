@@ -256,8 +256,8 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='flex '>
-                            <FiAirplay className='text-blue-400 text-3xl' />
+                        <div className='grid grid-cols-[max-content,1fr] gap-5'>
+                            <FiAirplay className='text-blue-400 text-6xl' />
                             <div className='grid'>
                                 <h3>Entertainment</h3>
                                 <p>
@@ -267,8 +267,8 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='flex '>
-                            <GiTeamDowngrade className='text-blue-400 text-3xl' />
+                        <div className='grid grid-cols-[max-content,1fr] gap-5'>
+                            <GiTeamDowngrade className='text-blue-400 text-6xl' />
                             <div className='grid'>
                                 <h3>Team Building</h3>
                                 <p>
