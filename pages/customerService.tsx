@@ -25,7 +25,7 @@ function customerService() {
                   that the 1960Token team will always be there to help you
                   24/hrs a day. 7 days a week.
               </p>
-              <h2 className='text-center font-semibold text-2xl grad p-2'>
+              <h2 className='text-center font-semibold text-2xl grad p-2 mt-10'>
                   Have a question or require specialist assistance?{' '}
               </h2>
               <div className='text-justify'>
