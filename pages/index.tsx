@@ -241,9 +241,9 @@ const Index = () => {
                     </div>
 
                     <div className='grid mt-10 gap-10 md:grid-cols-[repeat(auto-fit,minmax(15%,1fr))]'>
-                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-center) gap-5'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
                             <FaPeopleArrows className='text-blue-400 text-6xl' />
-                            <div className='grid'>
+                            <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>
                                     Affiliate Referral
                                 </h3>
