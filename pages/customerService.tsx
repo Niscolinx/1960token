@@ -80,8 +80,8 @@ function customerService() {
                         </button>{' '}
                     </form>
 
-                    <div className="grid">
-                        <div className="flex">
+                    <div className="grid justify-center">
+                        <div className="flex items-center">
                             <BsTelephoneFill/>
                             +2340598343223
                         </div>
