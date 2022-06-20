@@ -61,7 +61,7 @@ const Index = () => {
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Image
-                                src='/carousel2.png'
+                                src='/carousel22.png'
                                 alt=''
                                 width='1920px'
                                 height='1080px'
@@ -71,7 +71,7 @@ const Index = () => {
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Image
-                                src='/carousel3.png'
+                                src='/carousel33.png'
                                 alt=''
                                 width='1920px'
                                 height='1080px'
@@ -131,7 +131,7 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/customerService'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <RiCustomerService2Line className='text-blue-400 text-3xl' />
                                 <button
