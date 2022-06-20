@@ -46,7 +46,7 @@ function customerService() {
                             </label>
 
                             <input
-                                className={`shadow appearance-none border rounded w-full py-4 px-3 leading-tight focus:outline-none focus:shadow-outline text-[#1a1a2d]`}
+                                className={`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-[#1a1a2d]`}
                                 id='email'
                                 type='email'
                                 name='email'
@@ -64,7 +64,7 @@ function customerService() {
                             </label>
 
                             <textarea
-                                className={`shadow appearance-none border rounded w-full py-4 px-3 leading-tight focus:outline-none focus:shadow-outline text-[#1a1a2d]`}
+                                className={`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-[#1a1a2d]`}
                                 id='textarea'
                                 rows={4}
                                 name='textarea'
