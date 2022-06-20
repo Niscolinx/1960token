@@ -80,12 +80,12 @@ function customerService() {
                         </button>{' '}
                     </form>
                     <div className='grid justify-center'>
-                        <div className='flex items-center gap-2'>
-                            <BsTelephoneFill className='text-orange-400' />
+                        <div className='flex items-center gap-5'>
+                            <BsTelephoneFill className='text-orange-300' />
                             +2340598343223
                         </div>
-                        <div className='flex items-center gap-2'>
-                            <GrMail className='grad' />
+                        <div className='flex items-center gap-5'>
+                            <GrMail className='text-orange-300' />
                             support@1960token.com
                         </div>
                     </div>
