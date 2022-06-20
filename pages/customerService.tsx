@@ -1,5 +1,5 @@
 import React from 'react'
-import {GrMail} from 'react-icons/gr'
+import {MdOutlineAlternateEmail} from 'react-icons/md'
 import {BsTelephoneFill} from 'react-icons/bs'
 
 function customerService() {
@@ -85,7 +85,7 @@ function customerService() {
                             +2340598343223
                         </div>
                         <div className='flex items-center gap-5'>
-                            <GrMail className='text-orange-300' />
+                            <MdOutlineAlternateEmail className='text-orange-300' />
                             support@1960token.com
                         </div>
                     </div>
