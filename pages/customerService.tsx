@@ -79,7 +79,7 @@ function customerService() {
                             Submit
                         </button>{' '}
                     </form>
-                    <div className='grid justify-center'>
+                    <div className='grid justify-center mt-10'>
                         <div className='flex items-center gap-5'>
                             <BsTelephoneFill className='text-orange-300' />
                             +2340598343223
