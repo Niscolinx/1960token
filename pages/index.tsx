@@ -247,7 +247,7 @@ const Index = () => {
                                 <h3 className='text-2xl font-semibold text-white pb-2'>
                                     Affiliate Referral
                                 </h3>
-                                <p>
+                                <p className='md:text-center'>
                                     You are handsomely rewarded for telling your
                                     friends and family about the services of
                                     1960token. You earn $3 on each successful
@@ -256,22 +256,22 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='grid grid-cols-[max-content,1fr] gap-5'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
                             <FiAirplay className='text-blue-400 text-6xl' />
-                            <div className='grid'>
+                            <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>Entertainment</h3>
-                                <p>
+                                <p  className='md:text-center'>
                                     You earn when you Trade and watch videos on
                                     the website. You earn $1 on each Task you
                                     complete 24hrs/daily.
                                 </p>
                             </div>
                         </div>
-                        <div className='grid grid-cols-[max-content,1fr] gap-5'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
                             <GiTeamDowngrade className='text-blue-400 text-6xl' />
-                            <div className='grid'>
+                            <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>Team Building</h3>
-                                <p>
+                                <p  className='md:text-center'>
                                     Building a team of Networkers, while earning
                                     upto $20 minimum withdrawal threshold and
                                     above. This uses a matrix system of
