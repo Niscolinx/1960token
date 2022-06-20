@@ -243,7 +243,7 @@ const Index = () => {
                         <div className='flex '>
                             <FaPeopleArrows className='text-blue-400 text-6xl' />
                             <div className='grid'>
-                                <h3>Affiliate Referral</h3>
+                                <h3 className='text-2xl font-semibold'>Affiliate Referral</h3>
                                 <p>
                                     You are handsomely rewarded for telling your
                                     friends and family about the services of
