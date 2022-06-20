@@ -51,7 +51,7 @@ const Index = () => {
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
                             <Image
-                                src='/carousel1.png'
+                                src='/carousel11.png'
                                 alt=''
                                 width='1920px'
                                 height='1080px'
