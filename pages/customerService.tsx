@@ -73,8 +73,8 @@ function customerService() {
                                 //   onChange={changeHandler}
                             />
                         </div>
-                        <button className='bg-green-500 text-[#1a1a2d] rounded px-4 py-2 text-sm mt-5'>
-                            Withdraw
+                        <button className='bg-green-500 text-[#1a1a2d] rounded px-4 py-2 text-sm mt-5 justify-self-center'>
+                            Submit
                         </button>{' '}
                     </form>
                 </div>
