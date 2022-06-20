@@ -1,6 +1,6 @@
 import React from 'react'
-import {AiTwotoneMail} from 'react-icons/ai'
-import {BsTelephoneFill} from 'react-icons/bs'
+import { AiTwotoneMail } from 'react-icons/ai'
+import { BsTelephoneFill } from 'react-icons/bs'
 
 function customerService() {
     return (
@@ -81,13 +81,15 @@ function customerService() {
                     </form>
                     <div className='grid justify-center mt-10'>
                         <div className='flex items-center gap-5'>
-                            <div className='flex bg-orange-300 text-[#1a1a2d] p-1'>
+                            <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
                                 <BsTelephoneFill className='' />
                             </div>
                             +2340598343223
                         </div>
                         <div className='flex items-center gap-5'>
-                            <AiTwotoneMail className='bg-orange-300 text-[#1a1a2d]' />
+                            <div className='flex p-1 bg-orange-300 text-[#1a1a2d] rounded-full'>
+                                <AiTwotoneMail className='' />
+                            </div>
                             support@1960token.com
                         </div>
                     </div>
