@@ -155,38 +155,38 @@ const Index = () => {
                 </div>
 
                 <div className='grid justify-center gap-5'>
-                    <div className='flex gap-3 border border-orange-300 items-center p-5'  style={{
+                    <div className='flex gap-3 border border-orange-300 items-center'  style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                         borderRadius: '50px',
                     }}>
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-5 rounded-full '>
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full '>
                             <BsPersonPlusFill />
                         </div>
-                        <span className='text-2xl font-semibold'>Register Today</span>
+                        <p className='text-2xl font-semibold'>Register Today</p>
                     </div>
-                    <div className='flex gap-3 border border-orange-300 items-center p-5'  style={{
+                    <div className='flex gap-3 border border-orange-300 items-center'  style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                         borderRadius: '50px',
                     }}>
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-5 rounded-full  font-bold'>
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full  font-bold'>
                             <BsCheckLg />
                         </div>
-                        <span className='text-2xl font-semibold'>Registration Bonus</span>
+                        <p className='text-2xl font-semibold'>Registration Bonus</p>
                     </div>
-                    <div className='flex gap-3 border border-orange-300 items-center p-5'  style={{
+                    <div className='flex gap-3 border border-orange-300 items-center'  style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                         borderRadius: '50px',
                     }}>
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-5 rounded-full '>
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full '>
                             <FaDollarSign />
                         </div>
-                        <span className='text-2xl font-semibold'>Referral Commission</span>
+                        <p className='text-2xl font-semibold'>Referral Commission</p>
                     </div>
                 </div>
                 <div className='grid'>
