@@ -81,7 +81,9 @@ function customerService() {
                     </form>
                     <div className='grid justify-center mt-10'>
                         <div className='flex items-center gap-5'>
-                            <BsTelephoneFill className='bg-orange-300 text-[#1a1a2d]' />
+                            <div className='flex bg-orange-300 text-[#1a1a2d]'>
+                                <BsTelephoneFill className='' />
+                            </div>
                             +2340598343223
                         </div>
                         <div className='flex items-center gap-5'>
