@@ -10,7 +10,7 @@ import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
 import Image from 'next/image'
 import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
-import { MdAttachMoney } from 'react-icons/md'
+import { FaDollarSign } from 'react-icons/fa'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -169,7 +169,7 @@ const Index = () => {
                     </div>
                     <div className='flex'>
                         <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
-                            <MdAttachMoney />
+                            <FaDollarSign />
                         </div>
                         <span>Referral Commission</span>
                     </div>
