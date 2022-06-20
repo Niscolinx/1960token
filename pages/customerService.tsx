@@ -82,13 +82,13 @@ function customerService() {
                     <div className='grid justify-center mt-10'>
                         <div className='flex items-center gap-5'>
                             <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
-                                <BsTelephoneFill className='' />
+                                <BsTelephoneFill />
                             </div>
                             +2340598343223
                         </div>
                         <div className='flex items-center gap-5'>
                             <div className='flex p-1 bg-orange-300 text-[#1a1a2d] rounded-full'>
-                                <AiTwotoneMail className='' />
+                                <AiTwotoneMail />
                             </div>
                             support@1960token.com
                         </div>
