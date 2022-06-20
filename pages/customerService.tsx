@@ -79,7 +79,7 @@ function customerService() {
                             Submit
                         </button>{' '}
                     </form>
-                    <div className='grid justify-center mt-10'>
+                    <div className='grid justify-center mt-10 gap-2'>
                         <div className='flex items-center gap-5'>
                             <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
                                 <BsTelephoneFill />
