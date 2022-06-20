@@ -10,7 +10,8 @@ import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
 import Image from 'next/image'
 import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
-import { FaDollarSign } from 'react-icons/fa'
+import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -238,8 +239,20 @@ const Index = () => {
                         </p>
                     </div>
 
-                    <div className="grid">
-                        
+                    <div className='grid'>
+                        <div className='flex'>
+                            <FaPeopleArrows />
+                            <div className='grid'>
+                                <h3>Affiliate Referral</h3>
+                                <p>
+                                    You are handsomely rewarded for telling your
+                                    friends and family about the services of
+                                    1960token. You earn $3 on each successful
+                                    referral. This option enables increase in
+                                    earning
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className='grid'>
