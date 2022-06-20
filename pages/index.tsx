@@ -10,6 +10,7 @@ import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
 import Image from 'next/image'
 import { BsPersonPlusFill, BsCheckCircleFill } from 'react-icons/bs'
+import {RiMoneyDollarCircleFill} from 'react-icons/ri'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
