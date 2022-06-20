@@ -156,12 +156,13 @@ const Index = () => {
 
                 <div className='grid justify-center gap-5'>
                     <div
-                        className='grid gap-1 border border-t-[#1a1a2d]'
+                        className='grid gap-1 border'
                         style={{
                             background: `linear-gradient(145deg, #1c1c30, #171729)`,
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                             borderRadius: '50px',
+                            borderTop: '#1a1a2d',
                         }}
                     >
                         <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full items-center justify-center'>
