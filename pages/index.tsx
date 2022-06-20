@@ -190,9 +190,18 @@ const Index = () => {
                         <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full  font-bold'>
                             <BsCheckLg />
                         </div>
+                        <div className="grid">
+
                         <p className='text-2xl font-semibold'>
                             Registration Bonus
                         </p>
+                        <p className='text-center'>
+                            Reward -{' '}
+                            <span className='semibold text-orange-300 p-2 '>
+                                $5
+                            </span>
+                        </p>{' '}
+                        </div>
                     </div>
                     <div
                         className='flex gap-3 border border-orange-300 items-center'
