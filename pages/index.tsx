@@ -157,6 +157,15 @@ const Index = () => {
                 <div className='grid'>
                     <div className='flex'>
                         <BsPersonPlusFill />
+                        <span>Register Today</span>
+                    </div>
+                    <div className='flex'>
+                        <BsPersonPlusFill />
+                        <span>Register Today</span>
+                    </div>
+                    <div className='flex'>
+                        <BsPersonPlusFill />
+                        <span>Register Today</span>
                     </div>
                 </div>
                 <div className='grid'>
