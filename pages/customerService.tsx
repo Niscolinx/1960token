@@ -36,7 +36,7 @@ function customerService() {
                     about your existing account, we can help. Simply fill in
                     your details below and we'll get back to you soon. All
                     fields are required.
-                    <form className='grid mt-10 w-full md:w-2/3 lg:w-1/3 mx-auto'>
+                    <form className='grid mt-10 w-full md:w-2/3 lg:w-2/4 mx-auto px-10'>
                         <div className='mb-4'>
                             <label
                                 className='block grad text-sm font-bold mb-2'
@@ -73,6 +73,9 @@ function customerService() {
                                 //   onChange={changeHandler}
                             />
                         </div>
+                        <button className='bg-green-500 text-[#1a1a2d] rounded px-4 py-2 text-sm mt-5'>
+                            Withdraw
+                        </button>{' '}
                     </form>
                 </div>
             </div>
