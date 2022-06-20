@@ -240,7 +240,7 @@ const Index = () => {
                     </div>
 
                     <div className='grid mt-5'>
-                        <div className='flex '>
+                        <div className='grid grid-cols-2 justify-center'>
                             <FaPeopleArrows className='text-blue-400 text-6xl' />
                             <div className='grid'>
                                 <h3 className='text-2xl font-semibold'>Affiliate Referral</h3>
