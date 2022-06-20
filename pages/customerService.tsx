@@ -33,11 +33,12 @@ function customerService() {
                 <div className='text-justify'>
                     Our dedicated customer service team is here 24/7 to assist
                     you. Call Us Email Inquiries +1…. support@1960Token
-                    <h3 className='grad mt-2'>Send us a message</h3>
-                    Whether you're new to 1960Token platform or have a question
+
+                    <h3 className='grad mt-2 text-2xl font-semibold'>Send us a message</h3>
+                    <p>Whether you're new to 1960Token platform or have a question
                     about your existing account, we can help. Simply fill in
                     your details below and we'll get back to you soon. All
-                    fields are required.
+                    fields are required.</p>
                     <form className='grid mt-10 w-full md:w-2/3 lg:w-2/4 mx-auto px-10'>
                         <div className='mb-4'>
                             <label
@@ -80,13 +81,13 @@ function customerService() {
                         </button>{' '}
                     </form>
                     <div className='grid justify-center mt-10 gap-2'>
-                        <div className='flex items-center gap-5'>
+                        <div className='flex items-center gap-3'>
                             <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
                                 <BsTelephoneFill />
                             </div>
                             +2340598343223
                         </div>
-                        <div className='flex items-center gap-5'>
+                        <div className='flex items-center gap-3'>
                             <div className='flex p-1 bg-orange-300 text-[#1a1a2d] rounded-full'>
                                 <AiTwotoneMail />
                             </div>
