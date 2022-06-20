@@ -154,54 +154,39 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className='grid justify-center'>
-                    <div
-                        className='flex'
-                        style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                            boxShadow: `7px 7px 14px #161625,
+                <div className='grid'>
+                    <div className='flex'  style={{
+                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                        boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-                            borderRadius: '50px',
-                        }}
-                    >
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
+                        borderRadius: '50px',
+                    }}>
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-3 rounded-full'>
                             <BsPersonPlusFill />
                         </div>
-                        <span className='text-2xl font-semibold '>
-                            Register Today
-                        </span>
+                        <span className='text-2xl font-semibold'>Register Today</span>
                     </div>
-                    <div
-                        className='flex'
-                        style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                            boxShadow: `7px 7px 14px #161625,
+                    <div className='flex'  style={{
+                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                        boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-                            borderRadius: '50px',
-                        }}
-                    >
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full font-bold'>
+                        borderRadius: '50px',
+                    }}>
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-3 rounded-full font-bold'>
                             <BsCheckLg />
                         </div>
-                        <span className='text-2xl font-semibold '>
-                            Registration Bonus
-                        </span>
+                        <span className='text-2xl font-semibold'>Registration Bonus</span>
                     </div>
-                    <div
-                        className='flex'
-                        style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                            boxShadow: `7px 7px 14px #161625,
+                    <div className='flex'  style={{
+                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                        boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-                            borderRadius: '50px',
-                        }}
-                    >
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-1 rounded-full'>
+                        borderRadius: '50px',
+                    }}>
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-3 rounded-full'>
                             <FaDollarSign />
                         </div>
-                        <span className='text-2xl font-semibold '>
-                            Referral Commission
-                        </span>
+                        <span className='text-2xl font-semibold'>Referral Commission</span>
                     </div>
                 </div>
                 <div className='grid'>
