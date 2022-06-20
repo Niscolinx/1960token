@@ -223,7 +223,7 @@ const Index = () => {
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
                         How 1960token works
                     </h3>
-                    <p className='text-sm'>
+                    <p className='text-sm text-center'>
                         You are guaranteed to earn massively as an active member
                         of 1960TOKEN in various ways;
                     </p>
