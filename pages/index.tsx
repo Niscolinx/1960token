@@ -155,16 +155,17 @@ const Index = () => {
                 </div>
 
                 <div className='grid justify-center gap-5'>
-                    <div className='flex gap-3 border border-orange-300 items-center'  style={{
+                    <div className='grid gap-1 border border-orange-300'  style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
                         boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                         borderRadius: '50px',
                     }}>
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full '>
-                            <BsPersonPlusFill />
+                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full items-center justify-center'>
+                            <BsPersonPlusFill className='flex mr-8 text-2xl'/>
+                        <p className=' font-semibold text-center'>Register Today</p>
                         </div>
-                        <p className='text-2xl font-semibold'>Register Today</p>
+                        <p className='text-center'>Reward - <span className='semibold bg-orange-300 text-black'>$5</span></p>
                     </div>
                     <div className='flex gap-3 border border-orange-300 items-center'  style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
