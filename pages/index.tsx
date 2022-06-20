@@ -1,7 +1,7 @@
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
-import { GiWallet } from 'react-icons/gi'
+import { GiWallet, GiTeamDowngrade } from 'react-icons/gi'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
 import Carousel1 from '../public/carousel11.svg'
@@ -10,7 +10,9 @@ import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
 import Image from 'next/image'
 import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
-import { FaDollarSign } from 'react-icons/fa'
+import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
+import {FiAirplay} from 'react-icons/fi'
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -238,11 +240,48 @@ const Index = () => {
                         </p>
                     </div>
 
-                    <div className="grid">
-                        
+                    <div className='grid mt-10 gap-10 md:grid-cols-[repeat(auto-fit,minmax(15%,1fr))]'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
+                            <FaPeopleArrows className='text-blue-400 text-6xl' />
+                            <div className='grid md:justify-items-center'>
+                                <h3 className='text-2xl font-semibold text-white pb-2'>
+                                    Affiliate Referral
+                                </h3>
+                                <p className='md:text-center'>
+                                    You are handsomely rewarded for telling your
+                                    friends and family about the services of
+                                    1960token. You earn $3 on each successful
+                                    referral. This option enables increase in
+                                    earning
+                                </p>
+                            </div>
+                        </div>
+                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
+                            <FiAirplay className='text-blue-400 text-6xl' />
+                            <div className='grid md:justify-items-center'>
+                                <h3 className='text-2xl font-semibold text-white pb-2'>Entertainment</h3>
+                                <p  className='md:text-center'>
+                                    You earn when you Trade and watch videos on
+                                    the website. You earn $1 on each Task you
+                                    complete 24hrs/daily.
+                                </p>
+                            </div>
+                        </div>
+                        <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
+                            <GiTeamDowngrade className='text-blue-400 text-6xl' />
+                            <div className='grid md:justify-items-center'>
+                                <h3 className='text-2xl font-semibold text-white pb-2'>Team Building</h3>
+                                <p  className='md:text-center'>
+                                    Building a team of Networkers, while earning
+                                    upto $20 minimum withdrawal threshold and
+                                    above. This uses a matrix system of
+                                    marketing and affiliation.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='grid'>
+                <div className='grid mt-10'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
                         Who We Are{' '}
                     </h3>
