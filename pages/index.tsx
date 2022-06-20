@@ -160,11 +160,11 @@ const Index = () => {
                         <span>Register Today</span>
                     </div>
                     <div className='flex'>
-                        <BsPersonPlusFill />
+                        <BsCheckCircleFill />
                         <span>Registration Bonus</span>
                     </div>
                     <div className='flex'>
-                        <BsPersonPlusFill />
+                        <RiMoneyDollarCircleFill />
                         <span>Referral Commission</span>
                     </div>
                 </div>
