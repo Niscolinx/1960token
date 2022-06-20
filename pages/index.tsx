@@ -259,7 +259,7 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] gap-5'>
                             <FiAirplay className='text-blue-400 text-6xl' />
                             <div className='grid'>
-                                <h3>Entertainment</h3>
+                                <h3 className='text-2xl font-semibold'>Entertainment</h3>
                                 <p>
                                     You earn when you Trade and watch videos on
                                     the website. You earn $1 on each Task you
@@ -270,7 +270,7 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] gap-5'>
                             <GiTeamDowngrade className='text-blue-400 text-6xl' />
                             <div className='grid'>
-                                <h3>Team Building</h3>
+                                <h3 className='text-2xl font-semibold'>Team Building</h3>
                                 <p>
                                     Building a team of Networkers, while earning
                                     upto $20 minimum withdrawal threshold and
