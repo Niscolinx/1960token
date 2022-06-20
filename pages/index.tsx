@@ -237,6 +237,10 @@ const Index = () => {
                             member of 1960TOKEN in various ways;
                         </p>
                     </div>
+
+                    <div className="grid">
+                        
+                    </div>
                 </div>
                 <div className='grid'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
