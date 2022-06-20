@@ -239,8 +239,8 @@ const Index = () => {
                         </p>
                     </div>
 
-                    <div className='grid mt-5'>
-                        <div className='grid grid-cols-2 justify-center'>
+                    <div className='grid mt-10 gap-10'>
+                        <div className='grid grid-cols-[max-content,1fr] gap-5'>
                             <FaPeopleArrows className='text-blue-400 text-6xl' />
                             <div className='grid'>
                                 <h3 className='text-2xl font-semibold'>Affiliate Referral</h3>
