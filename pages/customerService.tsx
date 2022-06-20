@@ -1,4 +1,6 @@
 import React from 'react'
+import {GrMail} from 'react-icons/gr'
+import {BsTelephoneFill} from 'react-icons/bs'
 
 function customerService() {
     return (
@@ -77,6 +79,10 @@ function customerService() {
                             Submit
                         </button>{' '}
                     </form>
+
+                    <div className="grid">
+                        
+                    </div>
                 </div>
             </div>
         </div>
