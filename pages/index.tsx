@@ -190,9 +190,17 @@ const Index = () => {
                         <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full  font-bold'>
                             <BsCheckLg />
                         </div>
-                        <p className='text-2xl font-semibold'>
-                            Registration Bonus
-                        </p>
+                        <div className='grid'>
+                            <p className='text-2xl font-semibold'>
+                                Registration Bonus
+                            </p>
+                            <p className='text-center'>
+                                Reward -{' '}
+                                <span className='semibold text-orange-300 p-2 '>
+                                    $5
+                                </span>
+                            </p>{' '}
+                        </div>
                     </div>
                     <div
                         className='flex gap-3 border border-orange-300 items-center'
@@ -211,22 +219,28 @@ const Index = () => {
                         </p>
                     </div>
                 </div>
-                <div
-                    className='grid mt-10'
-                    style={{
-                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                        borderRadius: '50px',
-                    }}
-                >
-                    <h3 className='text-center font-semibold text-2xl grad p-2'>
-                        How 1960token works
-                    </h3>
-                    <p className='text-sm'>
-                        You are guaranteed to earn massively as an active member
-                        of 1960TOKEN in various ways;
-                    </p>
+                <div className='grid mt-10'>
+                    <div
+                        className='grid'
+                        style={{
+                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                            boxShadow: `7px 7px 14px #161625,
+                        -7px -7px 14px #1e1e35`,
+                            borderRadius: '50px',
+                        }}
+                    >
+                        <h3 className='text-center font-semibold text-2xl grad p-2'>
+                            How 1960token works
+                        </h3>
+                        <p className='text-sm text-center'>
+                            You are guaranteed to earn massively as an active
+                            member of 1960TOKEN in various ways;
+                        </p>
+                    </div>
+
+                    <div className="grid">
+                        
+                    </div>
                 </div>
                 <div className='grid'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
