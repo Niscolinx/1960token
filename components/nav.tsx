@@ -1,9 +1,15 @@
 import { Session } from 'next-auth'
 import Link from 'next/link'
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import {useTheme} from 'next-themes'
 
 function nav({ session }: { session: Session | null}) {
+
+    const {theme, setTheme} = useTheme()
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect()
+
     let isSession = null
     if (session) {
         isSession = (
@@ -38,7 +44,7 @@ function nav({ session }: { session: Session | null}) {
         )
     }
     return <nav>{isSession}
-    <button onClick={useThe}>toggle theme</button></nav>
+    <button onClick={() => setTheme((theme: string) => theme === 'dark' ? 'light': 'dark')}>toggle theme</button></nav>
 }
 
 export default nav
