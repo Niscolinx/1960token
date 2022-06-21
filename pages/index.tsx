@@ -156,12 +156,7 @@ const Index = () => {
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(20rem,100px))]'>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr]'
-                        style={{
-                            boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                            borderTop: '#1a1a2d',
-                            gridTemplateColumns: 'min-content max-content',
-                        }}
+                        style={neuToUse}
                     >
                         <div className='flex'>
                             <BsPersonPlusFill className='flex mr-8 text-6xl' />
@@ -173,11 +168,7 @@ const Index = () => {
                     </div>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
-                        style={{
-                            boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                            borderTop: '#1a1a2d',
-                        }}
+                        style={neuToUse}
                     >
                         <div className='flex'>
                             <BsCheck className='flex mr-8 text-6xl' />
@@ -191,11 +182,7 @@ const Index = () => {
                     </div>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
-                        style={{
-                            boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                            borderTop: '#1a1a2d',
-                        }}
+                        style={neuToUse}
                     >
                         <div className='flex'>
                             <FaDollarSign className='flex mr-8 text-6xl' />
