@@ -1,4 +1,6 @@
+import React, { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
 import { GiWallet, GiTeamDowngrade } from 'react-icons/gi'
@@ -24,6 +26,27 @@ import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper'
 
 const Index = () => {
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            console.log('dark theme', { theme })
+
+            setNeuToUse({
+                background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                boxShadow: `7px 7px 14px #161625,
+                 -7px -7px 14px #1e1e35`,
+                borderRadius: '50px',
+            })
+        } else {
+            console.log('light theme', { theme })
+            setNeuToUse({
+                background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
+                boxShadow: `7px 7px 14px #a5a5a8,
+             -7px -7px 14px #f3f3f8`,
+                borderRadius: '50px',
+            })
+        }
+    }, [theme])
     return (
         <>
             <div className='grid gap-5 max-w-5xl mx-auto text-gray-400'>
