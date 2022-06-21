@@ -2,14 +2,17 @@ import { Session } from 'next-auth'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import {BsFillMoonFill} from 'react-icons/bs'
 
 function nav({ session }: { session: Session | null }) {
+    const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
         setMounted(true)
     }, [])
 
+    console.log({theme}, {mounted})
     let isSession = null
     if (!mounted) return null
     if (session) {
@@ -47,7 +50,15 @@ function nav({ session }: { session: Session | null }) {
     return (
         <nav>
             {isSession}
-            <button>toggle</button>
+            <button
+                onClick={() =>
+                    setTheme((theme: string) =>
+                        theme === 'dark' ? 'light' : 'dark'
+                    )
+                }
+            >
+                <BsFillMoonFill />
+            </button>
         </nav>
     )
 }
