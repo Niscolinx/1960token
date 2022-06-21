@@ -25,14 +25,7 @@ import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper'
 
 const Index = () => {
-    const { data: session } = useSession()
-
-    let isLoggedInMessage: string = ''
-    if (session) {
-        isLoggedInMessage = `You are logged in as ${session.user?.name}`
-    } else {
-        isLoggedInMessage = `Not logged in`
-    }
+   
 
     return (
         <>
