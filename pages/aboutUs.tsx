@@ -24,9 +24,9 @@ function aboutUs() {
         } else {
             console.log("light theme", {theme})
             setNeuToUse({
-                background: `linear-gradient(145deg, #fff, #fff)`,
-                boxShadow: `7px 7px 14px #161625,
-                 -7px -7px 14px #1e1e35`,
+                background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
+                boxShadow: `7px 7px 14px #a5a5a8,
+             -7px -7px 14px #f3f3f8;`,
                 borderRadius: '50px',
             })
         }
