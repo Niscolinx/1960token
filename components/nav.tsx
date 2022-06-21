@@ -14,12 +14,14 @@ function nav({ session }: { session: Session | null }) {
     }, [])
 
     const renderTheme = () => {
+        if(!mounted) return null
+
         const currentTheme = theme === 'system' ? systemTheme : theme
+        console.log('current theme', {systemTheme})
 
         if(currentTheme === 'dark') return <BsFillMoonFill />
         else return  <BsFillSunFill/>
 
-        console.log('current theme', {systemTheme})
     }
     console.log({theme}, {mounted})
     let isSession = null
