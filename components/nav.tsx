@@ -60,7 +60,7 @@ function nav({ session }: { session: Session | null }) {
         <nav className='flex justify-between items-center'>
             {isSession}
             <button
-               className=''
+               className='px-2 py-2 border rounded-lg self-center flex'
             >
                 {renderTheme()}
             </button>
