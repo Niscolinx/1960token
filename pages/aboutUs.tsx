@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 function aboutUs() {
-    const toggleNeumorphism = () => {
-        const { theme } = useTheme()
+    // const toggleNeumorphism = () => {
+    //     const { theme } = useTheme()
 
-        console.log({ theme })
-    }
+    //     console.log({ theme })
+    // }
 
     useEffect(() => {
         const { theme } = useTheme()
