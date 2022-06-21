@@ -12,6 +12,7 @@ function aboutUs() {
 
     useEffect(() => {
         const { theme } = useTheme()
+        console.log("from effect 1", {theme})
 
         if (theme === 'light' || theme === 'dark') {
             setThemeInUse(theme)
@@ -20,7 +21,7 @@ function aboutUs() {
 
     useEffect(() => {
         const { theme } = useTheme()
-        console.log({ theme })
+        console.log('from effect 2', { theme })
 
         if (theme === 'dark') {
             console.log('dark')
