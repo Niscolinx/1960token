@@ -39,7 +39,7 @@ const Footer = () => {
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
                 >
-                    <RiHome5Line className='text-orange-300 text-2xl' />
+                    <RiHome5Line className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
             <Link href='/'>
@@ -47,7 +47,7 @@ const Footer = () => {
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
                 >
-                    <MdOutlineOndemandVideo className='text-orange-300 text-2xl' />
+                    <MdOutlineOndemandVideo className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
             <Link href='/'>
@@ -55,7 +55,7 @@ const Footer = () => {
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
                 >
-                    <GiTrade className='text-orange-300 text-2xl' />
+                    <GiTrade className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
             <Link href='/dashboard'>
@@ -63,7 +63,7 @@ const Footer = () => {
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
                 >
-                    <CgProfile className='text-orange-300 text-2xl' />
+                    <CgProfile className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
         </div>
