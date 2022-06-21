@@ -74,25 +74,24 @@ function CountDownTimer() {
             )
         }
     }
-    return (
-        <div className='grid'>
-            {miningTime && (
-                <Countdown
-                    date={Date.now() + 1000 * (21600 - miningTime)}
-                    renderer={renderer}
-                />
-            )}
-        </div>
+
+    let displayMine = miningTime && (
+        <Countdown
+            date={Date.now() + 1000 * (21600 - miningTime)}
+            renderer={renderer}
+        />
     )
+
+    if (!miningTime) {
+        displayMine = (
+            <Countdown date={Date.now() + 1000 * 21600} renderer={renderer} />
+        )
+    }
+
+    return <div className='grid'>{displayMine}</div>
 }
 
 export default CountDownTimer
-
-
-
-
-
-
 
 // import axios from 'axios'
 // import { useSession } from 'next-auth/react'
@@ -245,4 +244,3 @@ export default CountDownTimer
 // }
 
 // export default CountDownTimer
-
