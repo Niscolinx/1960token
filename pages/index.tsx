@@ -47,6 +47,7 @@ const Index = () => {
                 boxShadow: `7px 7px 14px #a5a5a8,
              -7px -7px 14px #f3f3f8`,
                 borderRadius: '50px',
+                color: '#1a1a2d',
             })
         }
     }, [theme])
