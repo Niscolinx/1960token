@@ -9,7 +9,7 @@ import Carousel2 from '../public/carousel2.svg'
 import Carousel3 from '../public/carousel3.svg'
 import Logo from '../public/logo.svg'
 import Image from 'next/image'
-import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
+import { BsPersonPlusFill, BsCheckLg, BsCheck } from 'react-icons/bs'
 import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
 import { FiAirplay } from 'react-icons/fi'
 
@@ -163,51 +163,57 @@ const Index = () => {
                             <p className=' font-semibold '>Register Today</p>
                             <p className=''>
                                 Reward -{' '}
-                                <span className='semibold text-orange-300 p-2 '>
+                                <span className='p-2 text-2xl font-bold'>
                                     $5
                                 </span>
                             </p>
                         </div>
                     </div>
                     <div
-                        className='flex gap-3 border border-orange-300 items-center'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg'
                         style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-                            borderRadius: '50px',
+                            borderTop: '#1a1a2d',
+                            gridTemplateColumns: 'min-content 1fr',
                         }}
                     >
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full  font-bold'>
-                            <BsCheckLg />
+                        <div className='flex'>
+                            <BsCheck className='flex mr-8 text-6xl' />
                         </div>
-                        <div className='grid'>
-                            <p className='text-2xl font-semibold'>
+                        <div className='grid text-lg'>
+                            <p className=' font-semibold '>
                                 Registration Bonus
                             </p>
-                            <p className='text-center'>
+                            <p className=''>
                                 Reward -{' '}
-                                <span className='semibold text-orange-300 p-2 '>
-                                    $5
+                                <span className='p-2 text-2xl font-bold'>
+                                    $2
                                 </span>
-                            </p>{' '}
+                            </p>
                         </div>
                     </div>
                     <div
-                        className='flex gap-3 border border-orange-300 items-center'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg'
                         style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-                            borderRadius: '50px',
+                            borderTop: '#1a1a2d',
+                            gridTemplateColumns: 'min-content 1fr',
                         }}
                     >
-                        <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full '>
-                            <FaDollarSign />
+                        <div className='flex'>
+                            <FaDollarSign className='flex mr-8 text-6xl' />
                         </div>
-                        <p className='text-2xl font-semibold'>
-                            Referral Commission
-                        </p>
+                        <div className='grid text-lg'>
+                            <p className=' font-semibold '>Referral Commission</p>
+                            <p className=''>
+                                Reward -{' '}
+                                <span className='p-2 text-2xl font-bold'>
+                                    $3
+                                </span>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className='grid mt-10'>
