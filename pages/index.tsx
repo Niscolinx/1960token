@@ -156,7 +156,7 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className='grid justify-center gap-5 my-10'>
+                <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(10rem,100px))]'>
                     <div
                         className='grid border'
                         style={{
