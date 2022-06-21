@@ -228,7 +228,7 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <FaPeopleArrows className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2 light:grad'>
+                                <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
                                     Affiliate Referral
                                 </h3>
                                 <p className='md:text-center'>
@@ -243,7 +243,7 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <FiAirplay className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2 light:grad'>
+                                <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
                                     Entertainment
                                 </h3>
                                 <p className='md:text-center'>
@@ -256,7 +256,7 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <GiTeamDowngrade className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2 light:grad'>
+                                <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
                                     Team Building
                                 </h3>
                                 <p className='md:text-center'>
