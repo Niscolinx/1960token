@@ -17,15 +17,14 @@ function nav({ session }: { session: Session | null }) {
         if(!mounted) return null
 
         const currentTheme = theme === 'system' ? systemTheme : theme
-        console.log('current theme', {systemTheme})
 
-        if(currentTheme === 'dark') return <BsFillMoonFill />
-        else return  <BsFillSunFill/>
+        if(currentTheme === 'dark') return <BsFillMoonFill onClick={() => setTheme('light')}/>
+        else return <BsFillSunFill onClick={() => setTheme('dark')} />
 
     }
-    console.log({theme}, {mounted})
+    
+
     let isSession = null
-    if (!mounted) return null
     if (session) {
         isSession = (
             <div className='flex justify-between'>
