@@ -7,7 +7,7 @@ import { MdOutlineOndemandVideo } from 'react-icons/md'
 
 const Footer = () => {
     return (
-        <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between mt-12 max-w-3xl mx-auto p-2 fixed bottom-0 left-0 right-0 rounded-lg'>
+        <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 fixed bottom-[1rem] left-0 right-0 rounded-lg'>
             <Link href='/'>
                 <div className='grid justify-items-center p-2 rounded-full cursor-pointer' style={{
                         background: `linear-gradient(145deg, #1c1c30, #171729)`,
