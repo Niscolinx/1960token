@@ -1,11 +1,9 @@
 import { Session } from 'next-auth'
 import Link from 'next/link'
-import React,{useEffect, useState} from 'react'
-import {useTheme} from 'next-themes'
+import React, { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 
-function nav({ session }: { session: Session | null}) {
-
-    const {theme, setTheme} = useTheme()
+function nav({ session }: { session: Session | null }) {
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
@@ -13,7 +11,7 @@ function nav({ session }: { session: Session | null}) {
     }, [])
 
     let isSession = null
-    if(!mounted) return null
+    if (!mounted) return null
     if (session) {
         isSession = (
             <div className='flex justify-between'>
@@ -46,8 +44,12 @@ function nav({ session }: { session: Session | null}) {
             </Link>
         )
     }
-    return <nav>{isSession}
-    <button>toggle {theme}</button></nav>
+    return (
+        <nav>
+            {isSession}
+            <button>toggle</button>
+        </nav>
+    )
 }
 
 export default nav
