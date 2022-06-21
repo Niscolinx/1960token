@@ -2,7 +2,7 @@ import { Session } from 'next-auth'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import {BsFillMoonFill, BsSun} from 'react-icons/bs'
+import {BsFillMoonFill, BsFillSunFill} from 'react-icons/bs'
 
 function nav({ session }: { session: Session | null }) {
     const { theme, setTheme, systemTheme} = useTheme()
@@ -17,7 +17,7 @@ function nav({ session }: { session: Session | null }) {
         const currentTheme = theme === 'system' ? systemTheme : theme
 
         if(currentTheme === 'dark') return <BsFillMoonFill />
-        else return  <BsSun/>
+        else return  <BsFillSunFill/>
 
         console.log('current theme', {systemTheme})
     }
