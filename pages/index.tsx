@@ -226,9 +226,9 @@ const Index = () => {
 
                     <div className='grid mt-10 gap-10 md:grid-cols-[repeat(auto-fit,minmax(15%,1fr))]'>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
-                            <FaPeopleArrows className='text-blue-400 text-6xl' />
+                            <FaPeopleArrows className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2'>
+                                <h3 className='text-2xl font-semibold text-white pb-2 light:grad'>
                                     Affiliate Referral
                                 </h3>
                                 <p className='md:text-center'>
@@ -241,9 +241,9 @@ const Index = () => {
                             </div>
                         </div>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
-                            <FiAirplay className='text-blue-400 text-6xl' />
+                            <FiAirplay className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2'>
+                                <h3 className='text-2xl font-semibold text-white pb-2 light:grad'>
                                     Entertainment
                                 </h3>
                                 <p className='md:text-center'>
@@ -254,9 +254,9 @@ const Index = () => {
                             </div>
                         </div>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
-                            <GiTeamDowngrade className='text-blue-400 text-6xl' />
+                            <GiTeamDowngrade className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2'>
+                                <h3 className='text-2xl font-semibold text-white pb-2 light:grad'>
                                     Team Building
                                 </h3>
                                 <p className='md:text-center'>
