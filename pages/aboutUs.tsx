@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
 function aboutUs() {
@@ -8,26 +8,15 @@ function aboutUs() {
     //     console.log({ theme })
     // }
 
-    const [ThemeInUse, setThemeInUse] = useState<'light' | 'dark'>('dark')
     const { theme } = useTheme()
 
     useEffect(() => {
-        console.log("from effect 1", {theme})
-
         if (theme === 'light' || theme === 'dark') {
-            setThemeInUse(theme)
+            console.log({theme})
         }
     }, [theme])
 
-    useEffect(() => {
-        console.log('from effect 2', { theme })
 
-        if (theme === 'dark') {
-            console.log('dark')
-        } else {
-            console.log('light')
-        }
-    }, [ThemeInUse])
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
