@@ -22,7 +22,7 @@ function aboutUs() {
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
                 className='text-center px-2 py-5 text-3xl font-semibold mb-5 light:text-white  bg-gradient-[145deg] from-[#1c1c30] to-[#171729]'
-                    style={}
+                    style={neuToUse}
             >
                 ABOUT US
             </h1>
