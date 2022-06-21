@@ -213,10 +213,10 @@ const Index = () => {
                             borderRadius: '50px',
                         }}
                     >
-                        <h3 className='text-center font-semibold text-2xl grad p-2'>
+                        <h3 className='text-center font-semibold text-2xl grad p-2 uppercase'>
                             How 1960token works
                         </h3>
-                        <p className='text-sm text-center'>
+                        <p className='text-center'>
                             You are guaranteed to earn massively as an active
                             member of 1960TOKEN in various ways;
                         </p>
