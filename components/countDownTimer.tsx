@@ -10,9 +10,11 @@ function CountDownTimer() {
             'uselayoutEffect', {miningTime}
         )
         if (!localStorage.getItem('miningStarts')) {
+            console.log('not loaded uselayout')
             const date = new Date()
             localStorage.setItem('miningStarts', date.toString())
         } else {
+            console.log('loaded uselayout')
             const prevDate = localStorage.getItem('miningStarts')
             console.log(prevDate)
 
@@ -30,6 +32,13 @@ function CountDownTimer() {
 
     useEffect(() => {
         console.log('useEffect two.....',miningTime)
+        if (!localStorage.getItem('miningStarts')) {
+            console.log('not loaded')
+            setIsLoaded(false)
+        } else {
+            console.log('loaded')
+            setIsLoaded(true)
+        }
     }, [miningTime])
 
     useEffect(() => {
