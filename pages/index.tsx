@@ -197,7 +197,7 @@ const Index = () => {
                 </div>
                 <div className='grid mt-10'>
                     <div className='grid' style={neuToUse}>
-                        <h3 className='text-center font-semibold text-2xl grad p-2 uppercase'>
+                        <h3 className='text-center font-semibold text-2xl grad p-2 uppercase px-4'>
                             How 1960token works
                         </h3>
                         <p className='text-center'>
@@ -213,7 +213,7 @@ const Index = () => {
                                 <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
                                     Affiliate Referral
                                 </h3>
-                                <p className='md:text-center'>
+                                <p className='md:text-center light:text-[#1a1a2d]'>
                                     You are handsomely rewarded for telling your
                                     friends and family about the services of
                                     1960token. You earn $3 on each successful
@@ -228,7 +228,7 @@ const Index = () => {
                                 <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
                                     Entertainment
                                 </h3>
-                                <p className='md:text-center'>
+                                <p className='md:text-center light:text-[#1a1a2d]'>
                                     You earn when you Trade and watch videos on
                                     the website. You earn $1 on each Task you
                                     complete 24hrs/daily.
@@ -241,7 +241,7 @@ const Index = () => {
                                 <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
                                     Team Building
                                 </h3>
-                                <p className='md:text-center'>
+                                <p className='md:text-center light:text-[#1a1a2d]'>
                                     Building a team of Networkers, while earning
                                     upto $20 minimum withdrawal threshold and
                                     above. This uses a matrix system of
