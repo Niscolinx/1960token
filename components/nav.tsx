@@ -1,6 +1,7 @@
 import { Session } from 'next-auth'
 import Link from 'next/link'
 import React from 'react'
+import {useTheme} from 'next-themes'
 
 function nav({ session }: { session: Session | null}) {
     let isSession = null
@@ -36,7 +37,8 @@ function nav({ session }: { session: Session | null}) {
             </Link>
         )
     }
-    return <nav>{isSession}</nav>
+    return <nav>{isSession}
+    <button onClick={useThe}>toggle theme</button></nav>
 }
 
 export default nav
