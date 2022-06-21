@@ -76,7 +76,7 @@ const Index = () => {
                     </SwiperSlide>
                 </Swiper>
 
-                <div className='grid text-gray-400 border-b border-t border-gray-800 py-3'>
+                <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 dark:bg-red-200 light:bg-white'>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
