@@ -5,7 +5,10 @@ function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
     const [isLoaded, setIsLoaded] = useState(false)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
+        console.log(
+            'uselayoutEffect', {miningTime}
+        )
         if (!localStorage.getItem('miningStarts')) {
             const date = new Date()
             localStorage.setItem('miningStarts', date.toString())
@@ -23,6 +26,10 @@ function CountDownTimer() {
                 setMiningTime(diff)
             }
         }
+    }, [miningTime])
+
+    useEffect(() => {
+        console.log('useEffect two.....',miningTime)
     }, [miningTime])
 
     useEffect(() => {
