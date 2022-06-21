@@ -29,6 +29,7 @@ const Index = () => {
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
+    const [stepsNeu, setStepsNeu] = useState<{}>()
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -40,6 +41,8 @@ const Index = () => {
                  -7px -7px 14px #1e1e35`,
                 borderRadius: '50px',
             })
+
+            setStepsNeu({})
         } else {
             console.log('light theme', { theme })
             setNeuToUse({
@@ -48,6 +51,14 @@ const Index = () => {
              -7px -7px 14px #f3f3f8`,
                 borderRadius: '50px',
                 color: '#1a1a2d'
+            })
+
+            setStepsNeu({
+                background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
+                boxShadow: `7px 7px 14px #a5a5a8,
+             -7px -7px 14px #f3f3f8`,
+                borderRadius: '50px',
+                color: '#1a1a2d',
             })
         }
     }, [theme])
@@ -156,7 +167,7 @@ const Index = () => {
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(20rem,100px))]'>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr]'
-                        style={neuToUse}
+                        style={stepsNeu}
                     >
                         <div className='flex'>
                             <BsPersonPlusFill className='flex mr-8 text-6xl' />
@@ -168,7 +179,7 @@ const Index = () => {
                     </div>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
-                        style={neuToUse}
+                        style={stepsNeu}
                     >
                         <div className='flex'>
                             <BsCheck className='flex mr-8 text-6xl' />
@@ -182,7 +193,7 @@ const Index = () => {
                     </div>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
-                        style={neuToUse}
+                        style={stepsNeu}
                     >
                         <div className='flex'>
                             <FaDollarSign className='flex mr-8 text-6xl' />
