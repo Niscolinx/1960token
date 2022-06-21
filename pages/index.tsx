@@ -155,7 +155,7 @@ const Index = () => {
 
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(20rem,100px))]'>
                     <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr]'
                         style={{
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
@@ -172,12 +172,11 @@ const Index = () => {
                         </div>
                     </div>
                     <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
                         style={{
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                             borderTop: '#1a1a2d',
-                            gridTemplateColumns: 'min-content 1fr',
                         }}
                     >
                         <div className='flex'>
@@ -191,12 +190,11 @@ const Index = () => {
                         </div>
                     </div>
                     <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
                         style={{
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                             borderTop: '#1a1a2d',
-                            gridTemplateColumns: 'min-content max-content',
                         }}
                     >
                         <div className='flex'>
@@ -211,10 +209,7 @@ const Index = () => {
                     </div>
                 </div>
                 <div className='grid mt-10'>
-                    <div
-                        className='grid'
-                        style={neuToUse}
-                    >
+                    <div className='grid' style={neuToUse}>
                         <h3 className='text-center font-semibold text-2xl grad p-2 uppercase'>
                             How 1960token works
                         </h3>
