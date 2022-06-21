@@ -47,7 +47,7 @@ const Index = () => {
                 boxShadow: `7px 7px 14px #a5a5a8,
              -7px -7px 14px #f3f3f8`,
                 borderRadius: '50px',
-                color: '#1a1a2d',
+                color: '#1a1a2d'
             })
         }
     }, [theme])
@@ -132,7 +132,7 @@ const Index = () => {
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <FaQuestionCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
-                                    className='text-md px-4 py-2'
+                                    className='text-md p-1'
                                     style={neuToUse}
                                 >
                                     FAQ
