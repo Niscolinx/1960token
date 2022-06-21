@@ -103,7 +103,7 @@ function CountDownTimer() {
             <Countdown
                 date={Date.now() + 1000 * 21600}
                 renderer={renderer}
-                autoStart={miningTime ? true : false}
+                autoStart={ false}
             />
         )
     }
