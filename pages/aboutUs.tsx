@@ -4,7 +4,7 @@ function aboutUs() {
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
-                className='text-center px-2 py-5 text-3xl font-semibold mb-5'
+                className='text-center px-2 py-5 text-3xl font-semibold mb-5 light:text-white'
                 style={{
                     background: `linear-gradient(145deg, #1c1c30, #171729)`,
                     boxShadow: `7px 7px 14px #161625,
