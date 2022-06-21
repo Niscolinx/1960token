@@ -3,17 +3,16 @@ import Footer from './Footer'
 import Nav from './nav'
 import { useSession } from 'next-auth/react'
 
+const Layout: React.FC<{}> = ({ children }) => {
+    const { data: session } = useSession()
 
-const Layout:React.FC<{}> = ({children}) => {
-      const { data: session } = useSession()
-
-  return (
-    <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] mx-auto'>
-        <Nav session={session}/>
-          {children}
-          <Footer />
-      </div>
-  )
+    return (
+        <div className='py-2 px-4 bg-[#1a1a2d] text-[#ccccd0] mx-auto relative'>
+            <Nav session={session} />
+            <main className='mb-22'>{children}</main>
+            <Footer />
+        </div>
+    )
 }
 
 export default Layout
