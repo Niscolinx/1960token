@@ -14,10 +14,9 @@ export default defineConfig({
             boxShadow: {
                 boxShadowNeu: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-            },
-            backgroundImage: (_theme) => ({
-                backgroundNeu: 'linear-gradient(145deg, #1c1c30, #171729)',
-            }),
+            }
+           
+            
         },
     },
     attributify: true,
