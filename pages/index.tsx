@@ -206,9 +206,7 @@ const Index = () => {
                             <FaDollarSign className='flex mr-8 text-6xl' />
                         </div>
                         <div className='grid text-lg'>
-                            <p className=' font-semibold '>
-                                Referral Commission
-                            </p>
+                            <p className=' font-semibold '>Referral Commission</p>
                             <p className=''>
                                 Reward -{' '}
                                 <span className='p-2 text-2xl font-bold'>
@@ -254,7 +252,7 @@ const Index = () => {
                             </div>
                         </div>
                         <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
-                            <GiTeamDowngrade className='text-blue-400 text-6xl' />
+                            <FiAirplay className='text-blue-400 text-6xl' />
                             <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>
                                     Entertainment
@@ -263,6 +261,7 @@ const Index = () => {
                                     You earn when you Trade and watch videos on
                                     the website. You earn $1 on each Task you
                                     complete 24hrs/daily.
+                                    
                                 </p>
                             </div>
                         </div>
