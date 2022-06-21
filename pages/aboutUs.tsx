@@ -13,7 +13,7 @@ function aboutUs() {
 
     useEffect(() => {
         if (theme === 'dark') {
-            console.log({ theme })
+            console.log("dark theme", { theme })
 
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
@@ -22,6 +22,7 @@ function aboutUs() {
                 borderRadius: '50px',
             })
         } else {
+            console.log("light theme", {theme})
             setNeuToUse({
                 background: `linear-gradient(145deg, #fff, #fff)`,
                 boxShadow: `7px 7px 14px #161625,
