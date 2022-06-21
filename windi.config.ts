@@ -11,6 +11,11 @@ export default defineConfig({
             gridTemplateColumns: {
                 tc: 'repeat(auto-fit, minmax(8rem, 1fr))',
             },
+            boxShadow: {
+                neumorphism: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+             
+            }
         },
     },
     attributify: true,
