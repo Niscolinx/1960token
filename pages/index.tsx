@@ -161,7 +161,7 @@ const Index = () => {
                         </div>
                         <div className='grid text-lg'>
                             <p className=' font-semibold '>Register Today</p>
-                            <p className='p-2 text-2xl font-extrabold'>$5</p>
+                            <p className='py-2 text-2xl font-extrabold'>$5</p>
                         </div>
                     </div>
                     <div
@@ -180,7 +180,7 @@ const Index = () => {
                             <p className=' font-semibold '>
                                 Registration Bonus
                             </p>
-                            <p className='p-2 text-2xl font-extrabold'>$2</p>
+                            <p className='py-2 text-2xl font-extrabold'>$2</p>
                         </div>
                     </div>
                     <div
@@ -199,7 +199,7 @@ const Index = () => {
                             <p className=' font-semibold '>
                                 Referral Commission
                             </p>
-                            <p className='p-2 text-2xl font-bold'>$3</p>
+                            <p className='py-2 text-2xl font-bold'>$3</p>
                         </div>
                     </div>
                 </div>
