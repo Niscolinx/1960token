@@ -63,7 +63,7 @@ function CountDownTimer() {
                     }}
                 >
                     <p>
-                       {miningTime ? 'Remaining time' : ''}
+                        {miningTime ? 'Remaining time - ' : ''}
                         <span className='font-semibold'>
                             {zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)}
@@ -85,7 +85,11 @@ function CountDownTimer() {
 
     if (!miningTime) {
         displayMine = (
-            <Countdown date={Date.now() + 1000 * 21600} renderer={renderer} autoStart={false}/>
+            <Countdown
+                date={Date.now() + 1000 * 21600}
+                renderer={renderer}
+                autoStart={false}
+            />
         )
     }
 
