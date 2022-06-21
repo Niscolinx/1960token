@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 function aboutUs() {
@@ -9,6 +9,7 @@ function aboutUs() {
     // }
 
     const { theme } = useTheme()
+    const [neuToUse, setNeuToUse] = useState<{}>()
 
     useEffect(() => {
         if (theme === 'light' || theme === 'dark') {
@@ -21,12 +22,7 @@ function aboutUs() {
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
                 className='text-center px-2 py-5 text-3xl font-semibold mb-5 light:text-white  bg-gradient-[145deg] from-[#1c1c30] to-[#171729]'
-                //     style={{
-                //         background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                //         boxShadow: `7px 7px 14px #161625,
-                //  -7px -7px 14px #1e1e35`,
-                //         borderRadius: '50px',
-                //     }}
+                    style={}
             >
                 ABOUT US
             </h1>
