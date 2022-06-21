@@ -148,23 +148,19 @@ const Index = () => {
 
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(10rem,100px))]'>
                     <div
-                        className='grid items-center bg-white text-black'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg'
                         style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                            backgroundColor: 'white',
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                             borderTop: '#1a1a2d',
-                            gridTemplateColumns: 'min-content 1fr'
+                            gridTemplateColumns: 'min-content 1fr',
                         }}
                     >
                         <div className='flex'>
                             <BsPersonPlusFill className='flex mr-8 text-6xl' />
                         </div>
                         <div className='grid text-lg'>
-                            <p className=' font-semibold '>
-                                Register Today
-                            </p>
+                            <p className=' font-semibold '>Register Today</p>
                             <p className=''>
                                 Reward -{' '}
                                 <span className='semibold text-orange-300 p-2 '>
