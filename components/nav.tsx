@@ -10,6 +10,9 @@ function nav({ session }: { session: Session | null }) {
 
     useEffect(() => {
         setMounted(true)
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+            document.documentElement.classList.add('dark')
+        else document.documentElement.classList.add('light')
     }, [])
 
     console.log({theme}, {mounted})
@@ -51,11 +54,7 @@ function nav({ session }: { session: Session | null }) {
         <nav>
             {isSession}
             <button
-                onClick={() =>
-                    setTheme((theme: string) =>
-                        theme === 'dark' ? 'light' : 'dark'
-                    )
-                }
+               
             >
                 <BsFillMoonFill />
             </button>
