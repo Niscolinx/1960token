@@ -132,7 +132,7 @@ const Index = () => {
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <FaQuestionCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
-                                    className='text-md p-1'
+                                    className='text-md px-4 py-2'
                                     style={neuToUse}
                                 >
                                     FAQ
@@ -213,12 +213,7 @@ const Index = () => {
                 <div className='grid mt-10'>
                     <div
                         className='grid'
-                        style={{
-                            background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                            boxShadow: `7px 7px 14px #161625,
-                        -7px -7px 14px #1e1e35`,
-                            borderRadius: '50px',
-                        }}
+                        style={neuToUse}
                     >
                         <h3 className='text-center font-semibold text-2xl grad p-2 uppercase'>
                             How 1960token works
