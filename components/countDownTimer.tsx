@@ -84,7 +84,7 @@ function CountDownTimer() {
 
     if (!miningTime) {
         displayMine = (
-            <Countdown date={Date.now() + 1000 * 21600} renderer={renderer} />
+            <Countdown date={Date.now() + 1000 * 21600} renderer={renderer} autoStart={false}/>
         )
     }
 
