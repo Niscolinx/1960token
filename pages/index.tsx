@@ -162,16 +162,19 @@ const Index = () => {
                     >
                         <div className='flex bg-orange-300 text-[#1a1a2d] p-4 rounded-full items-center justify-center'>
                             <BsPersonPlusFill className='flex mr-8 text-2xl' />
+                        </div>
+                        <div className="grid">
+
                             <p className=' font-semibold text-center'>
                                 Register Today
                             </p>
-                        </div>
                         <p className='text-center'>
                             Reward -{' '}
                             <span className='semibold text-orange-300 p-2 '>
                                 $5
                             </span>
                         </p>
+                        </div>
                     </div>
                     <div
                         className='flex gap-3 border border-orange-300 items-center'
