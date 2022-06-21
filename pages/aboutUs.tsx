@@ -8,6 +8,8 @@ function aboutUs() {
     //     console.log({ theme })
     // }
 
+    const {ThemeInUse, setThemeInUse} = useState('')
+
     useEffect(() => {
         const { theme } = useTheme()
     }, [])
