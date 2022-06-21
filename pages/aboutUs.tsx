@@ -1,14 +1,15 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
 const toggleNeumorphism = () => {
-    const {theme} = useTheme()
-    console.log({theme})
+    const { theme } = useTheme()
+    console.log({ theme })
 }
 
 useEffect(() => {
-
-}, [theme])
+    const { theme } = useTheme()
+    console.log({ theme })
+}, [])
 
 function aboutUs() {
     return (
