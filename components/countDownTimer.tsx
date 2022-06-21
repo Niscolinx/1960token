@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useLayoutEffect, useEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
@@ -23,6 +23,10 @@ function CountDownTimer() {
             }
         }
     }, [miningTime])
+
+    useEffect(() => {
+        
+    })
     interface IcountDown {
         hours: number
         days: number
@@ -84,6 +88,7 @@ function CountDownTimer() {
     )
 
     if (!miningTime) {
+        console.log({miningTime})
         displayMine = (
             <Countdown
                 date={Date.now() + 1000 * 21600}
