@@ -13,7 +13,7 @@ function nav({ session }: { session: Session | null}) {
     }, [])
 
     let isSession = null
-    if(is)
+    if(!mounted) return null
     if (session) {
         isSession = (
             <div className='flex justify-between'>
@@ -47,7 +47,7 @@ function nav({ session }: { session: Session | null}) {
         )
     }
     return <nav>{isSession}
-    <button onClick={() => setTheme((theme: string) => theme === 'dark' ? 'light': 'dark')}>toggle theme</button></nav>
+    <button>toggle {theme}</button></nav>
 }
 
 export default nav
