@@ -4,6 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head />
+            <title>1960token</title>
             <body>
                 <Main />
                 <NextScript />
