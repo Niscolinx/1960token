@@ -103,12 +103,12 @@ function CountDownTimer() {
             <Countdown
                 date={Date.now() + 1000 * 21600}
                 renderer={renderer}
-                autoStart={false}
+                autoStart={miningTime ? true : false}
             />
         )
     }
 
-    return <div className='grid'>{displayMine}</div>
+    return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
 }
 
 export default CountDownTimer
