@@ -161,12 +161,7 @@ const Index = () => {
                         </div>
                         <div className='grid text-lg'>
                             <p className=' font-semibold '>Register Today</p>
-                            <p className=''>
-                                Reward -{' '}
-                                <span className='p-2 text-2xl font-bold'>
-                                    $5
-                                </span>
-                            </p>
+                            <p className='p-2 text-2xl font-bold'>$5</p>
                         </div>
                     </div>
                     <div
@@ -185,12 +180,7 @@ const Index = () => {
                             <p className=' font-semibold '>
                                 Registration Bonus
                             </p>
-                            <p className=''>
-                                Reward -{' '}
-                                <span className='p-2 text-2xl font-bold'>
-                                    $2
-                                </span>
-                            </p>
+                            <p className='p-2 text-2xl font-bold'>$5</p>
                         </div>
                     </div>
                     <div
@@ -206,13 +196,10 @@ const Index = () => {
                             <FaDollarSign className='flex mr-8 text-6xl' />
                         </div>
                         <div className='grid text-lg'>
-                            <p className=' font-semibold '>Referral Commission</p>
-                            <p className=''>
-                                Reward -{' '}
-                                <span className='p-2 text-2xl font-bold'>
-                                    $3
-                                </span>
+                            <p className=' font-semibold '>
+                                Referral Commission
                             </p>
+                            <p className='p-2 text-2xl font-bold'>$5</p>
                         </div>
                     </div>
                 </div>
@@ -261,7 +248,6 @@ const Index = () => {
                                     You earn when you Trade and watch videos on
                                     the website. You earn $1 on each Task you
                                     complete 24hrs/daily.
-                                    
                                 </p>
                             </div>
                         </div>
