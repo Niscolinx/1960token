@@ -223,7 +223,7 @@ const Index = () => {
                     </div>
 
                     <div className='grid mt-10 gap-10 md:grid-cols-[repeat(auto-fit,minmax(15%,1fr))]'>
-                        <div className='sm:(grid grid-cols-[max-content,1fr]) md:(flex flex-col items-center) gap-5'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <FaPeopleArrows className='text-blue-400 text-6xl' />
                             <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>
@@ -238,7 +238,7 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='sm:(grid grid-cols-[max-content,1fr]) md:(flex flex-col items-center) gap-5'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <FiAirplay className='text-blue-400 text-6xl' />
                             <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>
@@ -251,7 +251,7 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='sm:(grid grid-cols-[max-content,1fr]) md:(flex flex-col items-center) gap-5'>
+                        <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <GiTeamDowngrade className='text-blue-400 text-6xl' />
                             <div className='grid md:justify-items-center'>
                                 <h3 className='text-2xl font-semibold text-white pb-2'>
