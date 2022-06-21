@@ -8,10 +8,11 @@ function aboutUs() {
     //     console.log({ theme })
     // }
 
-    const {ThemeInUse, setThemeInUse} = useState<'light' | 'dark'>('dark')
+    const [ThemeInUse, setThemeInUse]= useState<'light' | 'dark'>('dark')
 
     useEffect(() => {
         const { theme } = useTheme()
+        setThemeInUse(theme)
     }, [])
 
     useEffect(() => {
