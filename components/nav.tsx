@@ -16,8 +16,8 @@ function nav({ session }: { session: Session | null }) {
     const renderTheme = () => {
         const currentTheme = theme === 'system' ? systemTheme : theme
 
-        if(currentTheme === 'dark') return <BsSun/>
-        else if(currentTheme === 'light') return <BsFillMoonFill />
+        if(currentTheme === 'dark') return <BsFillMoonFill />
+        else return  <BsSun/>
 
         console.log('current theme', {systemTheme})
     }
