@@ -12,17 +12,30 @@ function aboutUs() {
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     useEffect(() => {
-        if (theme === 'light' || theme === 'dark') {
-            console.log({theme})
+        if (theme === 'dark') {
+            console.log({ theme })
+
+            setNeuToUse({
+                background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                boxShadow: `7px 7px 14px #161625,
+                 -7px -7px 14px #1e1e35`,
+                borderRadius: '50px',
+            })
+        } else {
+            setNeuToUse({
+                background: `linear-gradient(145deg, #fff, #fff)`,
+                boxShadow: `7px 7px 14px #161625,
+                 -7px -7px 14px #1e1e35`,
+                borderRadius: '50px',
+            })
         }
     }, [theme])
-
 
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
                 className='text-center px-2 py-5 text-3xl font-semibold mb-5 light:text-white  bg-gradient-[145deg] from-[#1c1c30] to-[#171729]'
-                    style={neuToUse}
+                style={neuToUse}
             >
                 ABOUT US
             </h1>
