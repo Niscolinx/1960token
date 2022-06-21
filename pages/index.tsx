@@ -146,14 +146,14 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(10rem,100px))]'>
+                <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(13rem,100px))]'>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg'
                         style={{
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                             borderTop: '#1a1a2d',
-                            gridTemplateColumns: 'min-content 1fr',
+                            gridTemplateColumns: 'min-content max-content',
                         }}
                     >
                         <div className='flex'>
@@ -199,7 +199,7 @@ const Index = () => {
                             boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
                             borderTop: '#1a1a2d',
-                            gridTemplateColumns: 'min-content 1fr',
+                            gridTemplateColumns: 'min-content max-content',
                         }}
                     >
                         <div className='flex'>
