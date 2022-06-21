@@ -1,9 +1,13 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react'
 import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
+import { useSession } from 'next-auth/react'
+import axios from 'axios'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
     const [isLoaded, setIsLoaded] = useState(false)
+        const { data: session } = useSession()
+
 
     useEffect(() => {
         console.log(
@@ -31,15 +35,19 @@ function CountDownTimer() {
     }, [miningTime])
 
     useEffect(() => {
-        console.log('useEffect two.....',miningTime)
-        if (!localStorage.getItem('miningStarts')) {
-            console.log('not loaded')
-            setIsLoaded(false)
-        } else {
-            console.log('loaded')
-            setIsLoaded(true)
-        }
-    }, [miningTime])
+        axios
+                    .post('/api/user', session)
+                    .then(({ data }) => {
+                        console.log({ data })
+                        data.isMining !== true
+                            ? localStorage.removeItem('miningStart')
+                            : ''
+                    })
+                    .catch((err) => {
+                        console.log({ err })
+                    })
+            }, [])
+    
 
     useEffect(() => {
         console.log("useEffect isLoaded")
