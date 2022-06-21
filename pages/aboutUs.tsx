@@ -9,9 +9,9 @@ function aboutUs() {
     // }
 
     const [ThemeInUse, setThemeInUse] = useState<'light' | 'dark'>('dark')
+    const { theme } = useTheme()
 
     useEffect(() => {
-        const { theme } = useTheme()
         console.log("from effect 1", {theme})
 
         if (theme === 'light' || theme === 'dark') {
