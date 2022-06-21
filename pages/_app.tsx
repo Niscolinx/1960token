@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 </div>
             </div> */}
                 <SessionProvider session={session}>
-                    <ThemeProvider>
+                    <ThemeProvider attribute='class'>
 
                     <Layout>
                         <Component {...pageProps} />
