@@ -11,8 +11,7 @@ import Logo from '../public/logo.svg'
 import Image from 'next/image'
 import { BsPersonPlusFill, BsCheckLg } from 'react-icons/bs'
 import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
-import {FiAirplay} from 'react-icons/fi'
-
+import { FiAirplay } from 'react-icons/fi'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -25,8 +24,6 @@ import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper'
 
 const Index = () => {
-   
-
     return (
         <>
             <div className='grid gap-5 max-w-5xl mx-auto text-gray-400'>
@@ -151,7 +148,7 @@ const Index = () => {
 
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(10rem,100px))]'>
                     <div
-                        className='grid'
+                        className='grid items-center align-middle grid-cols-[max-content, 1fr]'
                         style={{
                             background: `linear-gradient(145deg, #1c1c30, #171729)`,
                             boxShadow: `7px 7px 14px #161625,
@@ -159,18 +156,17 @@ const Index = () => {
                             borderTop: '#1a1a2d',
                         }}
                     >
-                            <BsPersonPlusFill className='flex mr-8 text-2xl' />
-                        <div className="grid">
-
+                        <BsPersonPlusFill className='flex mr-8 text-2xl' />
+                        <div className='grid'>
                             <p className=' font-semibold text-center'>
                                 Register Today
                             </p>
-                        <p className='text-center'>
-                            Reward -{' '}
-                            <span className='semibold text-orange-300 p-2 '>
-                                $5
-                            </span>
-                        </p>
+                            <p className='text-center'>
+                                Reward -{' '}
+                                <span className='semibold text-orange-300 p-2 '>
+                                    $5
+                                </span>
+                            </p>
                         </div>
                     </div>
                     <div
@@ -252,8 +248,10 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
                             <FiAirplay className='text-blue-400 text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2'>Entertainment</h3>
-                                <p  className='md:text-center'>
+                                <h3 className='text-2xl font-semibold text-white pb-2'>
+                                    Entertainment
+                                </h3>
+                                <p className='md:text-center'>
                                     You earn when you Trade and watch videos on
                                     the website. You earn $1 on each Task you
                                     complete 24hrs/daily.
@@ -263,8 +261,10 @@ const Index = () => {
                         <div className='grid grid-cols-[max-content,1fr] md:(grid-cols-none justify-items-center) gap-5'>
                             <GiTeamDowngrade className='text-blue-400 text-6xl' />
                             <div className='grid md:justify-items-center'>
-                                <h3 className='text-2xl font-semibold text-white pb-2'>Team Building</h3>
-                                <p  className='md:text-center'>
+                                <h3 className='text-2xl font-semibold text-white pb-2'>
+                                    Team Building
+                                </h3>
+                                <p className='md:text-center'>
                                     Building a team of Networkers, while earning
                                     upto $20 minimum withdrawal threshold and
                                     above. This uses a matrix system of
@@ -274,7 +274,6 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-                
             </div>
         </>
     )
