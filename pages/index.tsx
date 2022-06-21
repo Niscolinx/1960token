@@ -281,20 +281,7 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid mt-10'>
-                    <h3 className='text-center font-semibold text-2xl grad p-2'>
-                        Who We Are{' '}
-                    </h3>
-                    <p className='text-justify'>
-                        1960Token is one of the most superior Mining and
-                        Affiliate platform, offering Mining and Affiliate
-                        solutions for active day Miner and Affiliate as well as
-                        client that are new to the Platform. 1960Token offers
-                        its clients the best Mining and Affiliate platforms,
-                        with superior connectivity. 1960Token is revolutionizing
-                        online Mining and Affiliate.
-                    </p>
-                </div>
+                
             </div>
         </>
     )
