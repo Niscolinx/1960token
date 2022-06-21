@@ -106,15 +106,10 @@ const Index = () => {
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <Logo className='text-blue-400 text-3xl w-12 h-12' />
+                                <Logo className='text-blue-400 text-3xl light:text-[#1a1a2d] w-12 h-12' />
                                 <button
                                     className='text-md p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     About Us
                                 </button>
@@ -122,15 +117,10 @@ const Index = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <GiWallet className='text-blue-400 text-3xl' />
+                                <GiWallet className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-md p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     Vendors
                                 </button>
@@ -139,15 +129,10 @@ const Index = () => {
 
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <FaQuestionCircle className='text-blue-400 text-3xl' />
+                                <FaQuestionCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-md p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     FAQ
                                 </button>
@@ -155,15 +140,10 @@ const Index = () => {
                         </Link>
                         <Link href='/customerService'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
-                                <RiCustomerService2Line className='text-blue-400 text-3xl' />
+                                <RiCustomerService2Line className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-md p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     Customer Service
                                 </button>
