@@ -2,19 +2,25 @@ import { Session } from 'next-auth'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import {BsFillMoonFill} from 'react-icons/bs'
+import {BsFillMoonFill, BsSun} from 'react-icons/bs'
 
 function nav({ session }: { session: Session | null }) {
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme, systemTheme} = useTheme()
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
         setMounted(true)
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-            document.documentElement.classList.add('dark')
-        else document.documentElement.classList.add('light')
+     
     }, [])
 
+    const renderTheme = () => {
+        const currentTheme = theme === 'system' ? systemTheme : theme
+
+        if(currentTheme === 'dark') return <BsSun/>
+        else if(currentTheme === 'light') return <BsFillMoonFill />
+
+        console.log('current theme', {systemTheme})
+    }
     console.log({theme}, {mounted})
     let isSession = null
     if (!mounted) return null
@@ -56,7 +62,7 @@ function nav({ session }: { session: Session | null }) {
             <button
                
             >
-                <BsFillMoonFill />
+                {renderTheme()}
             </button>
         </nav>
     )
