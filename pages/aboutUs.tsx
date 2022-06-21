@@ -12,7 +12,11 @@ function aboutUs() {
 
     useEffect(() => {
         const { theme } = useTheme()
-        setThemeInUse(theme)
+
+        if(theme === 'light' || theme === 'dark'){
+            setThemeInUse(theme)
+
+        }
     }, [])
 
     useEffect(() => {
@@ -24,7 +28,7 @@ function aboutUs() {
         } else {
             console.log('light')
         }
-    })
+    }, [ThemeInUse])
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
