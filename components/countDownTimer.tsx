@@ -3,6 +3,7 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
+    const [isLoaded, setIsLoaded] = useState(false)
 
     useLayoutEffect(() => {
         if (!localStorage.getItem('miningStarts')) {
@@ -25,8 +26,15 @@ function CountDownTimer() {
     }, [miningTime])
 
     useEffect(() => {
-        
-    })
+
+        if(!localStorage.getItem('miningStarts')){
+            setIsLoaded(false)
+        }
+        else{
+            setIsLoaded(true)
+        }
+
+    }, [])
     interface IcountDown {
         hours: number
         days: number
@@ -88,7 +96,7 @@ function CountDownTimer() {
     )
 
     if (!miningTime) {
-        console.log({miningTime})
+        console.log({miningTime}, {isLoaded})
         displayMine = (
             <Countdown
                 date={Date.now() + 1000 * 21600}
