@@ -27,6 +27,9 @@ import { Autoplay, Pagination } from 'swiper'
 
 const Index = () => {
 
+    const { theme } = useTheme()
+    const [neuToUse, setNeuToUse] = useState<{}>()
+
     useEffect(() => {
         if (theme === 'dark') {
             console.log('dark theme', { theme })
