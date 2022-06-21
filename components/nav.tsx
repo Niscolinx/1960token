@@ -6,11 +6,14 @@ import {useTheme} from 'next-themes'
 function nav({ session }: { session: Session | null}) {
 
     const {theme, setTheme} = useTheme()
-    const [isMounted, setIsMounted] = useState(false)
+    const [mounted, setMounted] = useState(false)
 
-    useEffect()
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     let isSession = null
+    if(is)
     if (session) {
         isSession = (
             <div className='flex justify-between'>
