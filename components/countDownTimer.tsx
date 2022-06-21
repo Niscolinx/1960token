@@ -26,11 +26,13 @@ function CountDownTimer() {
     }, [miningTime])
 
     useEffect(() => {
-
+        console.log("useEffect isLoaded")
         if(!localStorage.getItem('miningStarts')){
+            console.log("not loaded")
             setIsLoaded(false)
         }
         else{
+            console.log('loaded')
             setIsLoaded(true)
         }
 
