@@ -142,9 +142,25 @@ function CountDownTimer() {
         )
     }
 
-    console.log({isLoaded})
+    console.log({isLoaded}, {displayMine})
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
-    return <div className='grid'>{displayMine}</div>
+    return (
+        <div className='grid'>
+            {isLoaded ? (
+                <Countdown
+                    date={Date.now() + 1000 * 21600}
+                    renderer={renderer}
+                    autoStart={true}
+                />
+            ) : (
+                <Countdown
+                    date={Date.now() + 1000}
+                    renderer={renderer}
+                    autoStart={false}
+                />
+            )}
+        </div>
+    )
 }
 
 export default CountDownTimer
