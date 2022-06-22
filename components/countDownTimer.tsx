@@ -148,7 +148,7 @@ function CountDownTimer() {
         <div className='grid'>
             {isLoaded ? (
                 <Countdown
-                    date={Date.now() + 1000 * 21600}
+                    date={Date.now() + 1000 * (21600)}
                     renderer={renderer}
                     autoStart={true}
                 />
