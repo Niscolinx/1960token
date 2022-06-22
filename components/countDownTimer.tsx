@@ -18,10 +18,8 @@ function CountDownTimer() {
         //     console.log('loaded uselayout')
         //     const prevDate = localStorage.getItem('miningStarts')
         //     console.log(prevDate)
-
         //     const presentdate = new Date()
         //     console.log({ presentdate })
-
         //     if (prevDate) {
         //         const transFormPrevDate = new Date(prevDate)
         //         const diff =
@@ -47,7 +45,7 @@ function CountDownTimer() {
 
     useEffect(() => {
         console.log('useEffect isLoaded')
-        if (!localStorage.getItem('miningStarts')) {
+        if (!localStorage.getItem('miningStart')) {
             console.log('not loaded')
             setIsLoaded(false)
         } else {
@@ -72,7 +70,7 @@ function CountDownTimer() {
                 .post('/api/startMining', session)
                 .then(({ data }) => {
                     const { miningStart } = data
-                  //  setFetchedMining(data)
+                    //  setFetchedMining(data)
                     localStorage.setItem('miningStart', miningStart)
                 })
                 .catch((err) => {
@@ -122,21 +120,23 @@ function CountDownTimer() {
         }
     }
 
-    let displayMine = miningTime && (
-        <Countdown
-            date={Date.now() + 1000 * (21600 - miningTime)}
-            renderer={renderer}
-            autoStart={true}
-        />
-    )
+    let displayMine = null
 
-    if (!miningTime) {
+    if (!isLoaded) {
         console.log({ miningTime }, { isLoaded })
         displayMine = (
             <Countdown
                 date={Date.now() + 1000 * 21600}
                 renderer={renderer}
                 autoStart={false}
+            />
+        )
+    } else {
+        displayMine = (
+            <Countdown
+                date={Date.now() + 1000 * 21600}
+                renderer={renderer}
+                autoStart={true}
             />
         )
     }
