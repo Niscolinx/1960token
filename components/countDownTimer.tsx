@@ -127,8 +127,10 @@ function CountDownTimer() {
         displayMine = miningTime && (
             <Countdown
                 date={Date.now() + 1000 * (21600 - miningTime)}
+                controlled={true}
                 renderer={renderer}
                 autoStart={true}
+                onPause={() => console.log("paused")}
             />
         )
     } else {
