@@ -126,7 +126,7 @@ function CountDownTimer() {
         console.log({ miningTime }, { isLoaded })
         displayMine = (
             <Countdown
-                date={Date.now() + 1000 * 21600}
+                date={Date.now() + 1000 * (21600 - miningTime)}
                 renderer={renderer}
                 autoStart={true}
             />
