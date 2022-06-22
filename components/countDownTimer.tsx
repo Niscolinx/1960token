@@ -9,24 +9,24 @@ function CountDownTimer() {
     const { data: session } = useSession()
 
     useEffect(() => {
-        // console.log('uselayoutEffect', { miningTime })
-        // if (!localStorage.getItem('miningStarts')) {
-        //     console.log('not loaded uselayout')
-        //     const date = new Date()
-        //     localStorage.setItem('miningStarts', date.toString())
-        // } else {
-        //     console.log('loaded uselayout')
-        //     const prevDate = localStorage.getItem('miningStarts')
-        //     console.log(prevDate)
-        //     const presentdate = new Date()
-        //     console.log({ presentdate })
-        //     if (prevDate) {
-        //         const transFormPrevDate = new Date(prevDate)
-        //         const diff =
-        //             (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-        //         setMiningTime(diff)
-        //     }
-        // }
+        console.log('uselayoutEffect', { miningTime })
+        if (!localStorage.getItem('miningStart')) {
+            console.log('not loaded uselayout')
+            const date = new Date()
+            localStorage.setItem('miningStarts', date.toString())
+        } else {
+            console.log('loaded uselayout')
+            const prevDate = localStorage.getItem('miningStart')
+            console.log(prevDate)
+            const presentdate = new Date()
+            console.log({ presentdate })
+            if (prevDate) {
+                const transFormPrevDate = new Date(prevDate)
+                const diff =
+                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
+                setMiningTime(diff)
+            }
+        }
     }, [miningTime])
 
     // useEffect(() => {
