@@ -70,7 +70,7 @@ function CountDownTimer() {
             const date = new Date()
 
             axios
-                .post('/api/startMining', { session })
+                .post('/api/startMining', session)
                 .then(({ data }) => {
                     const { miningStart } = data
                   //  setFetchedMining(data)

@@ -6,8 +6,7 @@ import User from '../../models/User'
 export default async function StartMining(req: NextApiRequest, res: NextApiResponse) {
     console.log('req body', req.body)
 
-    const { email }: IUser = req.body.session.user
-    const { date } = req.body
+    const { email }: IUser = req.body.user
 
     const user = await User.findOne({ email })
 
@@ -19,7 +18,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
         })
     } else {
         console.log('start user mining')
-        const dates = new Date()
+        const date = new Date()
         user.miningStart = date
         user.isMining = true
         await user.save()
