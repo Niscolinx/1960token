@@ -128,7 +128,7 @@ function CountDownTimer() {
             <Countdown
                 date={Date.now() + 1000 * 21600}
                 renderer={renderer}
-                autoStart={false}
+                autoStart={true}
             />
         )
     } else {
@@ -137,7 +137,7 @@ function CountDownTimer() {
             <Countdown
                 date={Date.now() + 1000 * 21600}
                 renderer={renderer}
-                autoStart={true}
+                autoStart={false}
             />
         )
     }
