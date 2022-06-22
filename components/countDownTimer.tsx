@@ -142,7 +142,8 @@ function CountDownTimer() {
         )
     }
 
-    return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
+    // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
+    return <div className='grid'>{displayMine}</div>
 }
 
 export default CountDownTimer
