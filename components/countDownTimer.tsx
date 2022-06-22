@@ -6,13 +6,10 @@ import axios from 'axios'
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
     const [isLoaded, setIsLoaded] = useState(false)
-        const { data: session } = useSession()
-
+    const { data: session } = useSession()
 
     useEffect(() => {
-        console.log(
-            'uselayoutEffect', {miningTime}
-        )
+        console.log('uselayoutEffect', { miningTime })
         if (!localStorage.getItem('miningStarts')) {
             console.log('not loaded uselayout')
             const date = new Date()
@@ -36,30 +33,27 @@ function CountDownTimer() {
 
     useEffect(() => {
         axios
-                    .post('/api/user', session)
-                    .then(({ data }) => {
-                        console.log({ data })
-                        data.isMining !== true
-                            ? localStorage.removeItem('miningStart')
-                            : ''
-                    })
-                    .catch((err) => {
-                        console.log({ err })
-                    })
-            }, [])
-    
+            .post('/api/user', session)
+            .then(({ data }) => {
+                console.log({ data })
+                data.isMining !== true
+                    ? localStorage.removeItem('miningStart')
+                    : ''
+            })
+            .catch((err) => {
+                console.log({ err })
+            })
+    }, [])
 
     useEffect(() => {
-        console.log("useEffect isLoaded")
-        if(!localStorage.getItem('miningStarts')){
-            console.log("not loaded")
+        console.log('useEffect isLoaded')
+        if (!localStorage.getItem('miningStarts')) {
+            console.log('not loaded')
             setIsLoaded(false)
-        }
-        else{
+        } else {
             console.log('loaded')
             setIsLoaded(true)
         }
-
     }, [])
     interface IcountDown {
         hours: number
@@ -122,12 +116,12 @@ function CountDownTimer() {
     )
 
     if (!miningTime) {
-        console.log({miningTime}, {isLoaded})
+        console.log({ miningTime }, { isLoaded })
         displayMine = (
             <Countdown
                 date={Date.now() + 1000 * 21600}
                 renderer={renderer}
-                autoStart={ false}
+                autoStart={false}
             />
         )
     }
