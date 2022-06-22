@@ -67,7 +67,6 @@ function CountDownTimer() {
     const handleStart = (api: CountdownApi) => {
         if (!localStorage.getItem('miningStart')) {
             console.log('handle start init')
-            const date = new Date()
 
             axios
                 .post('/api/startMining', session)
