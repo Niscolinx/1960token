@@ -88,7 +88,6 @@ function CountDownTimer() {
 
     // Renderer callback with condition
     const renderer = ({
-        days,
         hours,
         minutes,
         seconds,
