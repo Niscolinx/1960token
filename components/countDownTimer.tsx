@@ -31,19 +31,19 @@ function CountDownTimer() {
         }
     }, [miningTime])
 
-    useEffect(() => {
-        axios
-            .post('/api/user', session)
-            .then(({ data }) => {
-                console.log({ data })
-                data.isMining !== true
-                    ? localStorage.removeItem('miningStart')
-                    : ''
-            })
-            .catch((err) => {
-                console.log({ err })
-            })
-    }, [])
+    // useEffect(() => {
+    //     axios
+    //         .post('/api/user', session)
+    //         .then(({ data }) => {
+    //             console.log({ data })
+    //             data.isMining !== true
+    //                 ? localStorage.removeItem('miningStart')
+    //                 : ''
+    //         })
+    //         .catch((err) => {
+    //             console.log({ err })
+    //         })
+    // }, [])
 
     useEffect(() => {
         console.log('useEffect isLoaded')
@@ -65,6 +65,23 @@ function CountDownTimer() {
     }
 
     const handleStart = (api: CountdownApi) => {
+        if (!localStorage.getItem('miningStart')) {
+            console.log('handle start init')
+            const date = new Date()
+
+            axios
+                .post('/api/startMining', { session, date })
+                .then(({ data }) => {
+                    const { miningStart } = data
+                  //  setFetchedMining(data)
+                    localStorage.setItem('miningStart', miningStart)
+                })
+                .catch((err) => {
+                    console.log({ err })
+                })
+        } else {
+            console.log('handle start already')
+        }
         return api.start()
     }
 
