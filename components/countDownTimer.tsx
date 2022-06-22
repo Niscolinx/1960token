@@ -122,7 +122,7 @@ function CountDownTimer() {
 
     let displayMine = null
 
-    if (!isLoaded) {
+    if (isLoaded) {
         console.log({ miningTime }, { isLoaded })
         displayMine = (
             <Countdown
@@ -132,6 +132,7 @@ function CountDownTimer() {
             />
         )
     } else {
+        console.log("not loaded")
         displayMine = (
             <Countdown
                 date={Date.now() + 1000 * 21600}
@@ -141,6 +142,7 @@ function CountDownTimer() {
         )
     }
 
+    console.log({isLoaded})
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return <div className='grid'>{displayMine}</div>
 }
