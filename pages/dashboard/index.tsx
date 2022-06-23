@@ -41,7 +41,7 @@ const Home = () => {
                 setPrevTimeStore(dayjs(getTimeStore))
                 setMiningStart(true)
             }
-        }
+        
     }, [])
 
     const handleStart = () => {
