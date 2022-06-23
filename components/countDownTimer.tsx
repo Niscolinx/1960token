@@ -21,7 +21,7 @@ const CountDownTimer = ({hour}: {hour: number}) => {
 
     const { data: session } = useSession()
 
-    const [remainingTime, setRemainingTime] = useState<>(defaultTimer)
+    const [remainingTime, setRemainingTime] = useState<ITimer>(defaultTimer)
 
     const updateRemainingTimer = (timerInMs:number) => {
         setRemainingTime(countDownTimerInMs(timerInMs))
