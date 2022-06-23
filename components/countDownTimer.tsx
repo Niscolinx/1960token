@@ -4,15 +4,15 @@ import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
 const defaultTimer = {
-    hours: '00',
-    minutes: '00',
-    seconds: '00'
+    hours: 0,
+    minutes: 0,
+    seconds: 0
 }
 
 interface ITimer {
-    hours: string,
-    minutes: string,
-    seconds: string
+    hours: number,
+    minutes: number,
+    seconds: number
 }
 
 const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
