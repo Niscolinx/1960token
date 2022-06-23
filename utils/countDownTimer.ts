@@ -1,6 +1,9 @@
 import dayjs, { Dayjs } from 'dayjs'
 export const countDownTimerInMs = (hour: number) => {
     const dayjsRemainingTimeStamp = dayjs().add(1, 'day')
+    const localTimeStore = localStorage.setItem('miningTime', JSON.stringify(dayjsRemainingTimeStamp))
+
+
     const dayjsNowTimeStamp = dayjs()
 
     console.log('format', dayjsNowTimeStamp.format(), dayjsRemainingTimeStamp.format())
