@@ -12,28 +12,29 @@ const defaultTimer = {
 
 interface ICountDown {
     hour: number
-    start: boolean,
+    start: boolean
     prevTimeStore: Dayjs
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
-
     const { data: session } = useSession()
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    if (start) {
-        const updateRemainingTimer = (timerInMs: number, prev:Dayjs) => {
-            setRemainingTime(countDown(timerInMs, prev))
-        }
+    const updateRemainingTimer = (timerInMs: number, prev: Dayjs) => {
+        setRemainingTime(countDown(timerInMs, prev))
+    }
 
-        useEffect(() => {
+    useEffect(() => {
+        if (start) {
+            console.log("started")
             const intervalId = setInterval(() => {
                 return updateRemainingTimer(hour, prevTimeStore)
             }, 1000)
 
             return () => clearInterval(intervalId)
-        }, [])
-    }
+        }
+    }, [])
+
     const { hours, minutes, seconds } = remainingTime
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
@@ -57,4 +58,3 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
 }
 
 export default CountDownTimer
-
