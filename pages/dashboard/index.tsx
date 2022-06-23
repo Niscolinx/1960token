@@ -42,7 +42,7 @@ const Home = () => {
                 setMiningStart(true)
             }
         }
-    }, [initialLoad, miningStart, prevTimeStore])
+    }, [])
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
