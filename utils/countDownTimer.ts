@@ -1,20 +1,11 @@
 import dayjs, { Dayjs } from 'dayjs'
-export const countDownTimerInMs = (hour: number) => {
-    const dayjsRemainingTimeStamp = dayjs().add(hour, 'hours')
-
-    const getTimeStore = localStorage.getItem('miningTime')
-    let prevTimeStore = null
-
+export const countDownTimerInMs = (hour: number, prevTimeStore) => {
     
-        prevTimeStore = dayjs(JSON.parse(getTimeStore))
-    
-
     const dayjsNowTimeStamp = dayjs()
 
-    if (prevTimeStore)
-        if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
-            console.log('before')
-        }
+        // if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
+        //     console.log('before')
+        // }
     if (prevTimeStore)
         return {
             hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
