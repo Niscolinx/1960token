@@ -165,6 +165,7 @@ const Home = () => {
                         </Link>
                     </div>
 
+                    {console.log('prevtimer', prevTimeStore)}
                     {prevTimeStore && (
                         <CountDownTimer
                             hour={12}
