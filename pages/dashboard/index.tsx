@@ -34,7 +34,7 @@ const Home = () => {
             .post('/api/startMining', { session, date })
             .then(({ data }) => {
                 const { miningStart } = data
-                localStorage.setItem('miningStart', miningStart)
+               
             })
             .catch((err) => {
                 console.log({ err })
