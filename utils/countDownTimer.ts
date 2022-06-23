@@ -1,16 +1,30 @@
 import dayjs, { Dayjs } from 'dayjs'
 export const countDownTimerInMs = (hour: number) => {
     const dayjsRemainingTimeStamp = dayjs().add(1, 'day')
-    const localTimeStore = localStorage.setItem('miningTime', JSON.stringify(dayjsRemainingTimeStamp))
 
+    const getTimeStore = localStorage.getItem('miningTime')
+
+    if (!getTimeStore) {
+        const setTimeStore = localStorage.setItem(
+            'miningTime',
+            JSON.stringify(dayjsRemainingTimeStamp)
+        )
+    }
 
     const dayjsNowTimeStamp = dayjs()
 
-    console.log('format', dayjsNowTimeStamp.format(), dayjsRemainingTimeStamp.format())
-    console.log('difference', dayjsRemainingTimeStamp.diff(dayjsNowTimeStamp, 'hours'))
+    console.log(
+        'format',
+        dayjsNowTimeStamp.format(),
+        dayjsRemainingTimeStamp.format()
+    )
+    console.log(
+        'difference',
+        dayjsRemainingTimeStamp.diff(dayjsNowTimeStamp, 'hours')
+    )
 
-    if(dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)){
-        console.log("before")
+    if (dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)) {
+        console.log('before')
     }
     return {
         days: daysRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
@@ -21,7 +35,7 @@ export const countDownTimerInMs = (hour: number) => {
 }
 
 const daysRemaining = (now: Dayjs, remainingTime: Dayjs) => {
-    const dayjs = remainingTime.diff(now, 'days') 
+    const dayjs = remainingTime.diff(now, 'days')
     return padWithZeros(dayjs, 2)
 }
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
