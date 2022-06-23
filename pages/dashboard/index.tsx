@@ -27,6 +27,7 @@ const Home = () => {
                     console.log({ err })
                 })
         } else {
+            console.log("local found")
             setPrevTimeStore(dayjs(JSON.parse(getTimeStore)))
             setMiningStart(true)
         }
