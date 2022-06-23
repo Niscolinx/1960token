@@ -16,13 +16,13 @@ function CountDownTimer() {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateTimer = () => {
+    const updateRemainingTimer = () => {
         console.log("hello world")
     }
    
     useEffect(() => {
         const intervalId = setInterval(() => {
-            updateTimer()
+            updateRemainingTimer()
         }, 1000)
 
         return () => clearInterval(intervalId)
