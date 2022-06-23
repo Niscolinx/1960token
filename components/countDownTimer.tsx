@@ -36,7 +36,7 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
 
             return () => clearInterval(intervalId)
         }
-    }, [])
+    }, [start])
 
     const { hours, minutes, seconds } = remainingTime
 

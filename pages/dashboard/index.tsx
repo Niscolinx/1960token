@@ -17,10 +17,8 @@ const Home = () => {
     )
 
     useEffect(() => {
-        console.log("useEffect to start")
         const getTimeStore = localStorage.getItem('miningTime')
         if (!getTimeStore) {
-            console.log('local not found')
             axios
                 .post('/api/miningStart', { session })
                 .then(({ data }) => {
@@ -30,7 +28,6 @@ const Home = () => {
                     console.log({ err })
                 })
         } else {
-            console.log("local found", typeof getTimeStore)
             setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
         }
@@ -42,7 +39,6 @@ const Home = () => {
         const getTimeStore = localStorage.getItem('miningTime')
 
         if (!getTimeStore) {
-            console.log('handle start init')
             const remainingTime = dayjsRemainingTimeStamp
 
             axios
@@ -61,7 +57,6 @@ const Home = () => {
         }
     }
 
-    console.log({miningStart})
 
     return (
         <>
