@@ -24,6 +24,7 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
 
     const updateRemainingTimer = (TimerInMs:ITimer) => {
         console.log(TimerInMs)
+        setRemainingTime(TimerInMs)
     }
    
     useEffect(() => {
