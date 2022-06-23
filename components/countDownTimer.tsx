@@ -7,7 +7,12 @@ const defaultTimer = {
     hours: '00',
     minutes: '00',
     seconds: '00',
-    days: '00'
+}
+
+interface ITimer {
+    hours: string
+    minutes: string
+    seconds: string
 }
 
 
@@ -16,10 +21,9 @@ const CountDownTimer = ({hour}: {hour: number}) => {
 
     const { data: session } = useSession()
 
-    const [remainingTime, setRemainingTime] = useState(defaultTimer)
+    const [remainingTime, setRemainingTime] = useState<>(defaultTimer)
 
     const updateRemainingTimer = (timerInMs:number) => {
-        console.log(timerInMs)
         setRemainingTime(countDownTimerInMs(timerInMs))
     }
    
@@ -52,7 +56,7 @@ const CountDownTimer = ({hour}: {hour: number}) => {
                         </span>
                     </p>
                     {/* <button onClick={() => handleStart(api)}>Mine</button> */}
-                    <p>{days}:{hours}:{minutes}:{seconds}</p>
+                    <p>{hours}:{minutes}:{seconds}</p>
                 </div></div>
 }
 
