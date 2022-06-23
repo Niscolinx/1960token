@@ -3,84 +3,13 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
+
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
     const [isLoaded, setIsLoaded] = useState(false)
     const { data: session } = useSession()
 
-    useEffect(() => {
-        console.log('uselayoutEffect', { miningTime })
-        if (!localStorage.getItem('miningStart')) {
-            console.log('not loaded uselayout')
-            const date = new Date()
-            localStorage.setItem('miningStarts', date.toString())
-        } else {
-            console.log('loaded uselayout')
-            const prevDate = localStorage.getItem('miningStart')
-            console.log(prevDate)
-            const presentdate = new Date()
-            console.log({ presentdate })
-            if (prevDate) {
-                const transFormPrevDate = new Date(prevDate)
-                const diff =
-                    (presentdate.getTime() - transFormPrevDate.getTime()) / 1000
-                setMiningTime(diff)
-            }
-        }
-    }, [miningTime])
-
-    // useEffect(() => {
-    //     axios
-    //         .post('/api/user', session)
-    //         .then(({ data }) => {
-    //             console.log({ data })
-    //             data.isMining !== true
-    //                 ? localStorage.removeItem('miningStart')
-    //                 : ''
-    //         })
-    //         .catch((err) => {
-    //             console.log({ err })
-    //         })
-    // }, [])
-
-    useEffect(() => {
-        console.log('useEffect isLoaded')
-        if (!localStorage.getItem('miningStart')) {
-            console.log('not loaded')
-            setIsLoaded(false)
-        } else {
-            console.log('loaded')
-            setIsLoaded(true)
-        }
-    }, [])
-    interface IcountDown {
-        hours: number
-        days: number
-        minutes: number
-        seconds: number
-        completed: Boolean
-        api: CountdownApi
-    }
-
-    const handleStart = (api: CountdownApi) => {
-        if (!localStorage.getItem('miningStart')) {
-            console.log('handle start init')
-
-            axios
-                .post('/api/startMining', session)
-                .then(({ data }) => {
-                    const { miningStart } = data
-                    //  setFetchedMining(data)
-                    localStorage.setItem('miningStart', miningStart)
-                })
-                .catch((err) => {
-                    console.log({ err })
-                })
-        } else {
-            console.log('handle start already')
-        }
-        return api.start()
-    }
+    
 
     const Completionist = () => <span>Mining Session has ended</span>
 
@@ -98,24 +27,7 @@ function CountDownTimer() {
         } else {
             // Render a countdown
             return (
-                <div
-                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
-                    style={{
-                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                        borderRadius: '50px',
-                    }}
-                >
-                    <p>
-                        {miningTime ? 'Remaining time - ' : ''}
-                        <span className='font-semibold'>
-                            {zeroPad(hours)}:{zeroPad(minutes)}:
-                            {zeroPad(seconds)}
-                        </span>
-                    </p>
-                    <button onClick={() => handleStart(api)}>Mine</button>
-                </div>
+                
             )
         }
     }
@@ -146,7 +58,24 @@ function CountDownTimer() {
 
     console.log({ isLoaded }, { displayMine })
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
-    return <div className='grid'>{displayMine}</div>
+    return <div className='grid'><div
+                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
+                    style={{
+                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                        boxShadow: `7px 7px 14px #161625,
+             -7px -7px 14px #1e1e35`,
+                        borderRadius: '50px',
+                    }}
+                >
+                    <p>
+                        {miningTime ? 'Remaining time - ' : ''}
+                        <span className='font-semibold'>
+                            {/* {zeroPad(hours)}:{zeroPad(minutes)}:
+                            {zeroPad(seconds)} */}
+                        </span>
+                    </p>
+                    {/* <button onClick={() => handleStart(api)}>Mine</button> */}
+                </div></div>
 }
 
 export default CountDownTimer
