@@ -37,7 +37,7 @@ const Home = () => {
             setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
         }
-    }, [miningStart, prevTimeStore])
+    }, [])
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
