@@ -13,11 +13,10 @@ const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
 
-    const getTimeStore = localStorage.getItem('miningTime')
-
     useEffect(() => {
+        const getTimeStore = localStorage.getItem('miningTime')
         if (!getTimeStore) {
-            console.log("local not found")
+            console.log('local not found')
             axios
                 .post('/api/miningStart', { session })
                 .then(({ data }) => {
@@ -26,9 +25,10 @@ const Home = () => {
                 .catch((err) => {
                     console.log({ err })
                 })
-        }
-        else {
+        } else {
             setMiningStart(true)
+
+            const prevTimeStore = dayjs(JSON.parse(getTimeStore))
         }
     }, [])
 
