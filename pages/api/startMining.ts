@@ -23,8 +23,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
         })
     } else {
         console.log('start user mining')
-        const date = new Date()
-        user.miningStart = date
+        user.miningStart = remainingTime
         user.isMining = true
 
         return res.json({
