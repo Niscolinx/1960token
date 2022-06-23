@@ -17,7 +17,6 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
-    const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
