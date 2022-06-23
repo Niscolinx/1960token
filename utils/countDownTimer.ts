@@ -3,7 +3,8 @@ export const countDownTimerInMs = (hour: number) => {
     const dayjsRemainingTimeStamp = dayjs().add(hour, 'hour')
     const dayjsNowTimeStamp = dayjs()
 
-    console.log(dayjsRemainingTimeStamp.format(), dayjsNowTimeStamp.format())
+    console.log('remaining', dayjsRemainingTimeStamp.format(), 
+    'now', dayjsNowTimeStamp.format())
 
     console.log('difference', dayjsNowTimeStamp.diff(dayjsNowTimeStamp))
 
