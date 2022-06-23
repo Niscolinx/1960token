@@ -9,24 +9,17 @@ const defaultTimer = {
     seconds: '00',
 }
 
-interface ITimer {
-    hours: string
-    minutes: string
-    seconds: string
-}
-
-
-const CountDownTimer = ({hour}: {hour: number}) => {
+const CountDownTimer = ({ hour }: { hour: number }) => {
     const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
 
-    const [remainingTime, setRemainingTime] = useState<ITimer>(defaultTimer)
+    const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (timerInMs:number) => {
+    const updateRemainingTimer = (timerInMs: number) => {
         setRemainingTime(countDownTimerInMs(timerInMs))
     }
-   
+
     useEffect(() => {
         const intervalId = setInterval(() => {
             return updateRemainingTimer(hour)
@@ -34,30 +27,35 @@ const CountDownTimer = ({hour}: {hour: number}) => {
 
         return () => clearInterval(intervalId)
     }, [])
-       
-    const {hours, minutes, seconds} = remainingTime
 
+    const { hours, minutes, seconds } = remainingTime
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
-    return <div className='grid'><div
-                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
-                    style={{
-                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                        boxShadow: `7px 7px 14px #161625,
+    return (
+        <div className='grid'>
+            <div
+                className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
+                style={{
+                    background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                    boxShadow: `7px 7px 14px #161625,
              -7px -7px 14px #1e1e35`,
-                        borderRadius: '50px',
-                    }}
-                >
-                    <p>
-                        {miningTime ? 'Remaining time - ' : ''}
-                        <span className='font-semibold'>
-                            {/* {zeroPad(hours)}:{zeroPad(minutes)}:
+                    borderRadius: '50px',
+                }}
+            >
+                <p>
+                    {miningTime ? 'Remaining time - ' : ''}
+                    <span className='font-semibold'>
+                        {/* {zeroPad(hours)}:{zeroPad(minutes)}:
                             {zeroPad(seconds)} */}
-                        </span>
-                    </p>
-                    {/* <button onClick={() => handleStart(api)}>Mine</button> */}
-                    <p>{hours}:{minutes}:{seconds}</p>
-                </div></div>
+                    </span>
+                </p>
+                {/* <button onClick={() => handleStart(api)}>Mine</button> */}
+                <p>
+                    {hours}:{minutes}:{seconds}
+                </p>
+            </div>
+        </div>
+    )
 }
 
 export default CountDownTimer
