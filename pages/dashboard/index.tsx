@@ -5,9 +5,15 @@ import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import CountDownTimer from '../../components/countDownTimer'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
     const { data: session } = useSession()
+    const [startMining, setStartMining] = useState(false)
+
+    useEffect(() => {
+        
+    }, [])
 
     return (
         <>
@@ -109,7 +115,8 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-                    <CountDownTimer hour={12} />
+
+                    {startMining ? <CountDownTimer hour={12} /> : 'Not Mining'}
                 </div>
             </div>
         </>
