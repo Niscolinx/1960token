@@ -1,7 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react'
 import { countDown } from '../utils/countDown'
 import { useSession } from 'next-auth/react'
-import axios from 'axios'
 import { Dayjs } from 'dayjs'
 
 const defaultTimer = {
@@ -17,7 +16,6 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
-    console.log("loaded countdown component")
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const updateRemainingTimer = (timerInMs: number, prev: Dayjs) => {
