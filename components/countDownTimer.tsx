@@ -28,6 +28,7 @@ function CountDownTimer() {
         return () => clearInterval(intervalId)
     }, [])
        
+    const {hours, minutes, seconds} = remainingTime
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return <div className='grid'><div
@@ -47,7 +48,7 @@ function CountDownTimer() {
                         </span>
                     </p>
                     {/* <button onClick={() => handleStart(api)}>Mine</button> */}
-                    <p>Mining</p>
+                    <p>{hours}:{minutes}:{seconds}</p>
                 </div></div>
 }
 
