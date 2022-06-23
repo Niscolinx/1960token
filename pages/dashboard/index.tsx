@@ -15,18 +15,20 @@ const Home = () => {
 
     const getTimeStore = localStorage.getItem('miningTime')
 
-    if (!getTimeStore) {
-        useEffect(() => {
+    useEffect(() => {
+        if (!getTimeStore) {
+            console.log("local not found")
             axios
-                .post('/api/miningStart', {session})
+                .post('/api/miningStart', { session })
                 .then(({ data }) => {
                     console.log({ data })
                 })
                 .catch((err) => {
                     console.log({ err })
                 })
-        }, [])
-    }
+        }
+    }, [])
+
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
