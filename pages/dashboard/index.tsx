@@ -44,6 +44,7 @@ const Home = () => {
                 const { miningStart } = data
                 //const prevTimeStore = dayjs(JSON.parse(miningStart))
                console.log({miningStart})
+               localStorage.setItem('miningTime', miningStart)
             })
             .catch((err) => {
                 console.log({ err })
