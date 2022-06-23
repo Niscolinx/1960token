@@ -18,16 +18,13 @@ interface ICountDown {
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     console.log("loaded countdown component")
-    const { data: session } = useSession()
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const updateRemainingTimer = (timerInMs: number, prev: Dayjs) => {
-        console.log("count")
         setRemainingTime(countDown(timerInMs, prev))
     }
 
     useEffect(() => {
-        console.log("use Effect", {start})
         if (start) {
             console.log("started")
             const intervalId = setInterval(() => {
