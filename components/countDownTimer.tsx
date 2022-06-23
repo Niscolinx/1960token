@@ -3,11 +3,18 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
+const timerData = {
+    hours: '00',
+    minutes: '00',
+    seconds: '00'
+}
 
 function CountDownTimer() {
     const [miningTime, setMiningTime] = useState<number>()
-    const [isLoaded, setIsLoaded] = useState(false)
+
     const { data: session } = useSession()
+
+    const [timerProp, setTimerProp] = useState(timerData)
 
    
        
