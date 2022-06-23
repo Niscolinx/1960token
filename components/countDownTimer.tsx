@@ -31,7 +31,8 @@ const CountDownTimer = ({hour}: {hour: number}) => {
         return () => clearInterval(intervalId)
     }, [])
        
-    const {days, hours, minutes, seconds} = remainingTime
+    const {hours, minutes, seconds} = remainingTime
+
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return <div className='grid'><div
