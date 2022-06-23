@@ -20,7 +20,7 @@ const Home = () => {
         const getTimeStore = localStorage.getItem('miningTime')
         if (!getTimeStore) {
             axios
-                .post('/api/miningStart', { session })
+                .post('/api/startMining', { session })
                 .then(({ data }) => {
                     console.log({ data })
                     const { miningStart, isMining } = data
