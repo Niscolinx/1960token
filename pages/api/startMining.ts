@@ -25,6 +25,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
         console.log('start user mining')
         user.miningStart = remainingTime
         user.isMining = true
+        await user.save()
 
         return res.json({
             isMining: user.isMining,
