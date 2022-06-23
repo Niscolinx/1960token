@@ -112,7 +112,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <CountDownTimer hour={12} /> 
+                    <CountDownTimer hour={12} start={false}/> 
                 </div>
             </div>
         </>

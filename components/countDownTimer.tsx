@@ -9,7 +9,7 @@ const defaultTimer = {
     seconds: '00',
 }
 
-const CountDownTimer = ({ hour }: { hour: number }) => {
+const CountDownTimer = ({ hour, start }: { hour: number, start: boolean }) => {
     const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
