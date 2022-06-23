@@ -27,6 +27,9 @@ const Home = () => {
                     console.log({ err })
                 })
         }
+        else {
+            setMiningStart(true)
+        }
     }, [])
 
     const handleStart = () => {
