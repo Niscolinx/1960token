@@ -14,12 +14,12 @@ export const countDownTimerInMs = (milliseconds: number) => {
 
 
 const hoursRemaining = (now:Dayjs, remainingTime:Dayjs) => {
-    return remainingTime.diff(now, 'hours') % 24
+    return now.diff(remainingTime, 'hours') % 24
 }
 const minutesRemaining = (now:Dayjs, remainingTime:Dayjs) => {
-    return remainingTime.diff(now, 'minutes') % 60
+    return now.diff(remainingTime, 'minutes') % 60
 }
 const secondsRemaining = (now:Dayjs, remainingTime:Dayjs) => {
-    return remainingTime.diff(now, 'seconds') % 60
+    return now.diff(remainingTime, 'seconds') % 60
 }
 
