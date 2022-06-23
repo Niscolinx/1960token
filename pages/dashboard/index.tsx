@@ -18,11 +18,11 @@ const Home = () => {
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
-            console.log("initial load")
+        console.log('initial load')
 
-            if (!getTimeStore) {
-                console.log("load the gettime")
-                axios
+        if (!getTimeStore) {
+            console.log('load the gettime')
+            axios
                 .post('/api/startMining', { session })
                 .then(({ data }) => {
                     console.log({ data })
@@ -36,13 +36,20 @@ const Home = () => {
                 .catch((err) => {
                     console.log({ err })
                 })
-            } else {
-                console.log("Didn't load the get time")
-                setPrevTimeStore(dayjs(getTimeStore))
-                setMiningStart(true)
-            }
-        
+        } else {
+            console.log("Didn't load the get time")
+            setPrevTimeStore(dayjs(getTimeStore))
+            setMiningStart(true)
+        }
     }, [])
+
+    useEffect(() => {
+        console.log('count', miningStart)
+        if (miningStart) {
+            const prev = localStorage.getItem('miningTime')
+            setPrevTimeStore(prev)
+        }
+    }, [miningStart])
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
