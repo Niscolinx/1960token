@@ -12,11 +12,13 @@ export const countDownTimerInMs = (hour: number) => {
         )
 
     }else{
-        prevTimeStore = JSON.parse(getTimeStore)
+        prevTimeStore = dayjs(JSON.parse(getTimeStore))
+
+        //console.log(dayjs(prevTimeStore))
     
     }
 
-    console.log({prevTimeStore})
+    //console.log({prevTimeStore})
 
     const dayjsNowTimeStamp = dayjs()
 
