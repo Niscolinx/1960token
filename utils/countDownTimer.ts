@@ -9,6 +9,10 @@ export const countDownTimerInMs = (hour: number) => {
             'miningTime',
             JSON.stringify(dayjsRemainingTimeStamp)
         )
+
+    }else{
+        console.log(JSON.parse(getTimeStore))
+    
     }
 
     const dayjsNowTimeStamp = dayjs()
