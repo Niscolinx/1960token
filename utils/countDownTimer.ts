@@ -12,18 +12,14 @@ export const countDownTimerInMs = (milliseconds: number) => {
     }
 }
 
-interface timerProps {
-    now: Dayjs,
-    remainingTime: Dayjs
-}
 
-const hoursRemaining = ({now, remainingTime}:timerProps) => {
+const hoursRemaining = (now:Dayjs, remainingTime:Dayjs) => {
     return now.diff(remainingTime, 'hours') % 24
 }
-const minutesRemaining = ({now, remainingTime}:timerProps) => {
+const minutesRemaining = (now:Dayjs, remainingTime:Dayjs) => {
     return now.diff(remainingTime, 'minutes') % 60
 }
-const secondsRemaining = ({now, remainingTime}:timerProps) => {
+const secondsRemaining = (now:Dayjs, remainingTime:Dayjs) => {
     return now.diff(remainingTime, 'seconds') % 60
 }
 
