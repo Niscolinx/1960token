@@ -12,7 +12,7 @@ export const countDownTimerInMs = (hour: number) => {
         )
 
     }else{
-        
+        prevTimeStore = JSON.parse(getTimeStore)
     
     }
 
