@@ -12,7 +12,9 @@ import dayjs, { Dayjs } from 'dayjs'
 const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
-    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
+    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>(
+        dayjs().add(12, 'hours')
+    )
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
@@ -27,7 +29,7 @@ const Home = () => {
                     console.log({ err })
                 })
         } else {
-            console.log("local found")
+            console.log("local found", getTimeStore)
             setPrevTimeStore(dayjs(JSON.parse(getTimeStore)))
             setMiningStart(true)
         }
