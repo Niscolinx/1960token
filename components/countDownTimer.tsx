@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react'
-import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
+import { countDownTimerInMs } from '../utils/countDownTimer'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
@@ -16,13 +16,13 @@ function CountDownTimer() {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = () => {
-        console.log("hello world")
+    const updateRemainingTimer = (countDownTimerInMs:number) => {
+        console.log(countDownTimerInMs)
     }
    
     useEffect(() => {
         const intervalId = setInterval(() => {
-            updateRemainingTimer()
+            return updateRemainingTimer(countDownTimerInMs())
         }, 1000)
 
         return () => clearInterval(intervalId)
