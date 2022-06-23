@@ -6,35 +6,31 @@ export const countDownTimerInMs = (hour: number) => {
     let prevTimeStore = null
 
     if (!getTimeStore) {
-         localStorage.setItem(
+        localStorage.setItem(
             'miningTime',
             JSON.stringify(dayjsRemainingTimeStamp)
         )
-
-    }else{
+    } else {
         prevTimeStore = dayjs(JSON.parse(getTimeStore))
-
-    
     }
 
     const dayjsNowTimeStamp = dayjs()
 
-    if(prevTimeStore)
-    if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
-        console.log('before')
-    }
-    if(prevTimeStore)
-    return {
-        hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
-        minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
-        seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
-    }
-    else{
+    if (prevTimeStore)
+        if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
+            console.log('before')
+        }
+    if (prevTimeStore)
         return {
-
+            hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
+            minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
+            seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
+        }
+    else {
+        return {
             hours: '00',
             minutes: '00',
-            seconds: '00'
+            seconds: '00',
         }
     }
 }

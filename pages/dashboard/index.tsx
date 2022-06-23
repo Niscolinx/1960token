@@ -7,10 +7,25 @@ import { ImProfile } from 'react-icons/im'
 import CountDownTimer from '../../components/countDownTimer'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import dayjs, { Dayjs } from 'dayjs'
+
 
 const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
+
+     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
+
+    const getTimeStore = localStorage.getItem('miningTime')
+    let prevTimeStore = null
+
+    if (!getTimeStore) {
+        localStorage.setItem(
+            'miningTime',
+            JSON.stringify(dayjsRemainingTimeStamp)
+        )
+    } else {
+        prevTimeStore = dayjs(JSON.parse(getTimeStore))}
  
     //  useEffect(() => {
     //     axios
