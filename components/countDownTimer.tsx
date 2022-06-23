@@ -3,7 +3,7 @@ import Countdown, { CountdownApi, zeroPad } from 'react-countdown'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
 
-const timerData = {
+const defaultTimer = {
     hours: '00',
     minutes: '00',
     seconds: '00'
@@ -14,7 +14,7 @@ function CountDownTimer() {
 
     const { data: session } = useSession()
 
-    const [timerProp, setTimerProp] = useState(timerData)
+    const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const updateTimer = () => {
         console.log("hello world")
