@@ -17,6 +17,7 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
+    console.log("loaded countdown component")
     const { data: session } = useSession()
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
