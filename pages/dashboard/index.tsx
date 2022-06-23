@@ -23,6 +23,11 @@ const Home = () => {
                 .post('/api/miningStart', { session })
                 .then(({ data }) => {
                     console.log({ data })
+                    const { miningStart, isMining } = data
+                    if (isMining) {
+                        localStorage.setItem('miningTime', miningStart)
+                        setMiningStart(true)
+                    }
                 })
                 .catch((err) => {
                     console.log({ err })
@@ -45,8 +50,6 @@ const Home = () => {
                 .post('/api/startMining', { session, remainingTime })
                 .then(({ data }) => {
                     const { miningStart } = data
-                    //const prevTimeStore = dayjs(JSON.parse(miningStart))
-                    console.log({ miningStart })
                     localStorage.setItem('miningTime', miningStart)
                 })
                 .catch((err) => {
@@ -56,7 +59,6 @@ const Home = () => {
             console.log('handle start already')
         }
     }
-
 
     return (
         <>
@@ -159,7 +161,11 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <CountDownTimer hour={12} start={miningStart} prevTimeStore={prevTimeStore}/>
+                    <CountDownTimer
+                        hour={12}
+                        start={miningStart}
+                        prevTimeStore={prevTimeStore}
+                    />
                     <button onClick={handleStart}>Start</button>
                 </div>
             </div>
