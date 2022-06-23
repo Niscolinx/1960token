@@ -9,54 +9,9 @@ function CountDownTimer() {
     const [isLoaded, setIsLoaded] = useState(false)
     const { data: session } = useSession()
 
-    
+   
+       
 
-    const Completionist = () => <span>Mining Session has ended</span>
-
-    // Renderer callback with condition
-    const renderer = ({
-        hours,
-        minutes,
-        seconds,
-        completed,
-        api,
-    }: IcountDown) => {
-        if (completed) {
-            // Render a completed state
-            return <Completionist />
-        } else {
-            // Render a countdown
-            return (
-                
-            )
-        }
-    }
-
-    let displayMine = null
-
-    if (isLoaded) {
-        console.log({ miningTime }, { isLoaded })
-        displayMine = miningTime && (
-            <Countdown
-                date={Date.now() + 1000 * (21600 - miningTime)}
-                controlled={true}
-                renderer={renderer}
-                autoStart={true}
-                onPause={() => console.log("paused")}
-            />
-        )
-    } else {
-        console.log('not loaded')
-        displayMine = (
-            <Countdown
-                date={Date.now() + 1000 * 21600}
-                renderer={renderer}
-                autoStart={false}
-            />
-        )
-    }
-
-    console.log({ isLoaded }, { displayMine })
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return <div className='grid'><div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
