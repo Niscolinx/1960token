@@ -15,6 +15,7 @@ const Home = () => {
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>(
         dayjs().add(12, 'hours')
     )
+    const [initialLoad, setinitialLoad] = useState(false)
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
