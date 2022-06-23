@@ -9,25 +9,25 @@ const defaultTimer = {
     seconds: '00',
 }
 
-const CountDownTimer = ({ hour, start }: { hour: number, start: boolean }) => {
+const CountDownTimer = ({ hour, start }: { hour: number; start: boolean }) => {
     const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
-
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (timerInMs: number) => {
-        setRemainingTime(countDownTimerInMs(timerInMs))
+    if (start) {
+        const updateRemainingTimer = (timerInMs: number) => {
+            setRemainingTime(countDownTimerInMs(timerInMs))
+        }
+
+        useEffect(() => {
+            const intervalId = setInterval(() => {
+                return updateRemainingTimer(hour)
+            }, 1000)
+
+            return () => clearInterval(intervalId)
+        }, [])
     }
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            return updateRemainingTimer(hour)
-        }, 1000)
-
-        return () => clearInterval(intervalId)
-    }, [])
-
     const { hours, minutes, seconds } = remainingTime
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
@@ -42,7 +42,6 @@ const CountDownTimer = ({ hour, start }: { hour: number, start: boolean }) => {
                     borderRadius: '50px',
                 }}
             >
-              
                 <p>
                     {hours}:{minutes}:{seconds}
                 </p>
