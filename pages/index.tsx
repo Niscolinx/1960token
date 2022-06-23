@@ -84,7 +84,7 @@ const Index = () => {
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
                             <Link href='/api/auth/signin'>
                                 <Image
-                                    src='/carousel11.png'
+                                    src='/Web.png'
                                     alt=''
                                     width='1920px'
                                     height='1080px'
