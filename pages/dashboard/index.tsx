@@ -109,10 +109,9 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-                    <CountDownTimer />
+                    <CountDownTimer milliseconds={4320000000} />
                 </div>
-            </div> 
-
+            </div>
         </>
     )
 }

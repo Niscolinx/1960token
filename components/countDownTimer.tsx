@@ -9,15 +9,15 @@ const defaultTimer = {
     seconds: '00'
 }
 
-function CountDownTimer() {
+const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
     const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (countDownTimerInMs:number) => {
-        console.log(countDownTimerInMs)
+    const updateRemainingTimer = (TimerInMs:number) => {
+        console.log(TimerInMs)
     }
    
     useEffect(() => {
