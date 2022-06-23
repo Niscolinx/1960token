@@ -15,12 +15,15 @@ const Home = () => {
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>(
         dayjs().add(12, 'hours')
     )
-    const [initialLoad, setinitialLoad] = useState(false)
+    const [initialLoad, setInitialLoad] = useState(false)
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
-        if (!getTimeStore) {
-            axios
+        if(!initialLoad){
+            setInitialLoad(false)
+
+            if (!getTimeStore) {
+                axios
                 .post('/api/startMining', { session })
                 .then(({ data }) => {
                     console.log({ data })
@@ -34,9 +37,10 @@ const Home = () => {
                 .catch((err) => {
                     console.log({ err })
                 })
-        } else {
-            setPrevTimeStore(dayjs(getTimeStore))
-            setMiningStart(true)
+            } else {
+                setPrevTimeStore(dayjs(getTimeStore))
+                setMiningStart(true)
+            }
         }
     }, [])
 
