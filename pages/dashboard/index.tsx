@@ -20,9 +20,11 @@ const Home = () => {
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
         if(initialLoad){
+            console.log("initial load")
             setInitialLoad(false)
 
             if (!getTimeStore) {
+                console.log("load the gettime")
                 axios
                 .post('/api/startMining', { session })
                 .then(({ data }) => {
@@ -38,6 +40,7 @@ const Home = () => {
                     console.log({ err })
                 })
             } else {
+                console.log("Didn't load the get time")
                 setPrevTimeStore(dayjs(getTimeStore))
                 setMiningStart(true)
             }
