@@ -18,7 +18,7 @@ export const countDownTimerInMs = (hour: number) => {
     
     }
 
-    //console.log({prevTimeStore})
+    console.log({prevTimeStore})
 
     const dayjsNowTimeStamp = dayjs()
 
@@ -29,7 +29,7 @@ export const countDownTimerInMs = (hour: number) => {
     )
     console.log(
         'difference',
-        dayjsRemainingTimeStamp.diff(dayjsNowTimeStamp, 'hours')
+        prevTimeStore!.diff(dayjsNowTimeStamp, 'seconds')
     )
 
     if (dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)) {
