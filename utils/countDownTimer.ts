@@ -33,7 +33,6 @@ export const countDownTimerInMs = (hour: number) => {
     }
     if(prevTimeStore)
     return {
-        days: daysRemaining(dayjsNowTimeStamp, prevTimeStore),
         hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
         minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
         seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
