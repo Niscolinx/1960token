@@ -4,6 +4,8 @@ export const countDownTimerInMs = (milliseconds: number) => {
     const dayjsRemainingTimeStamp = dayjs(milliseconds)
     const dayjsNowTimeStamp = dayjs()
 
+    console.log({dayjsRemainingTimeStamp}, {dayjsNowTimeStamp})
+
     return {
         hours: hoursRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
         minutes: minutesRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
@@ -14,12 +16,13 @@ export const countDownTimerInMs = (milliseconds: number) => {
 
 
 const hoursRemaining = (now:Dayjs, remainingTime:Dayjs) => {
-    return now.diff(remainingTime, 'hours') % 24
+    return remainingTime.diff(now, 'hours') % 24
 }
 const minutesRemaining = (now:Dayjs, remainingTime:Dayjs) => {
-    return now.diff(remainingTime, 'minutes') % 60
+    return remainingTime.diff(now, 'minutes') % 60
 }
 const secondsRemaining = (now:Dayjs, remainingTime:Dayjs) => {
-    return now.diff(remainingTime, 'seconds') % 60
+   const seconds = remainingTime.diff(now, 'seconds') % 60
+   return seconds
 }
 
