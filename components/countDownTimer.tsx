@@ -27,6 +27,7 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     }
 
     useEffect(() => {
+        console.log("use Effect", {start})
         if (start) {
             console.log("started")
             const intervalId = setInterval(() => {
