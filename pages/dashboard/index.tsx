@@ -13,7 +13,6 @@ const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>(
-        dayjs().add(12, 'hours')
     )
 
     useEffect(() => {
@@ -43,13 +42,7 @@ const Home = () => {
         }
     }, [])
 
-    useEffect(() => {
-        console.log('count', miningStart)
-        if (miningStart) {
-            const prev = localStorage.getItem('miningTime')
-            setPrevTimeStore(prev)
-        }
-    }, [miningStart])
+   
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
