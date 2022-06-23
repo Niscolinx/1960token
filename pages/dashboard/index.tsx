@@ -15,13 +15,11 @@ const Home = () => {
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>(
         dayjs().add(12, 'hours')
     )
-    const [initialLoad, setInitialLoad] = useState(true)
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
         if(initialLoad){
             console.log("initial load")
-            setInitialLoad(false)
 
             if (!getTimeStore) {
                 console.log("load the gettime")
@@ -45,7 +43,7 @@ const Home = () => {
                 setMiningStart(true)
             }
         }
-    }, [initialLoad, miningStart, setPrevTimeStore])
+    }, [])
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
