@@ -10,12 +10,6 @@ const defaultTimer = {
     days: '00'
 }
 
-interface ITimer {
-    hours: string,
-    minutes: string,
-    seconds: string,
-    days: string
-}
 
 const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
     const [miningTime, setMiningTime] = useState<number>()
@@ -24,14 +18,14 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (TimerInMs:ITimer) => {
-        console.log(TimerInMs)
-        setRemainingTime(TimerInMs)
+    const updateRemainingTimer = (timerInMs:number) => {
+        console.log(timerInMs)
+        setRemainingTime(countDownTimerInMs(timerInMs))
     }
    
     useEffect(() => {
         const intervalId = setInterval(() => {
-            return updateRemainingTimer(countDownTimerInMs(milliseconds))
+            return updateRemainingTimer(milliseconds)
         }, 1000)
 
         return () => clearInterval(intervalId)
