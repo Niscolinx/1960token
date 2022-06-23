@@ -3,6 +3,7 @@ export const countDownTimerInMs = (hour: number) => {
     const dayjsRemainingTimeStamp = dayjs().add(hour, 'hours')
 
     const getTimeStore = localStorage.getItem('miningTime')
+    let prevTimeStore = ''
 
     if (!getTimeStore) {
         const setTimeStore = localStorage.setItem(
@@ -11,9 +12,11 @@ export const countDownTimerInMs = (hour: number) => {
         )
 
     }else{
-        console.log(JSON.parse(getTimeStore))
+         prevTimeStore = getTimeStore.split('').join('')
     
     }
+
+    console.log({prevTimeStore})
 
     const dayjsNowTimeStamp = dayjs()
 
