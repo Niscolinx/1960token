@@ -21,6 +21,7 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const updateRemainingTimer = (timerInMs: number, prev: Dayjs) => {
+        console.log("count")
         setRemainingTime(countDown(timerInMs, prev))
     }
 
