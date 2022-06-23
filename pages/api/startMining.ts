@@ -8,7 +8,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
     const { email }: IUser = req.body.session.user
     const {remainingTime} = req.body
 
-    console.log('email found', {email})
+    console.log('email found', {email}, {remainingTime})
 
     const user = await User.findOne({ email })
 
