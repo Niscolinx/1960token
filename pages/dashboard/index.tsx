@@ -42,8 +42,8 @@ const Home = () => {
             .post('/api/startMining', { session, remainingTime })
             .then(({ data }) => {
                 const { miningStart } = data
-                const prevTimeStore = dayjs(JSON.parse(miningStart))
-               console.log({prevTimeStore})
+                //const prevTimeStore = dayjs(JSON.parse(miningStart))
+               console.log({miningStart})
             })
             .catch((err) => {
                 console.log({ err })
