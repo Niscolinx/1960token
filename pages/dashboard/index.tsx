@@ -6,10 +6,25 @@ import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import CountDownTimer from '../../components/countDownTimer'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Home = () => {
     const { data: session } = useSession()
+    const [miningStart, setMiningStart] = useState(false)
  
+     useEffect(() => {
+        axios
+            .post('/api/user', session)
+            .then(({ data }) => {
+                console.log({ data })
+                data.isMining !== true
+                    ? localStorage.removeItem('miningStart')
+                    : ''
+            })
+            .catch((err) => {
+                console.log({ err })
+            })
+    }, [])
 
     return (
         <>
@@ -112,7 +127,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <CountDownTimer hour={12} start={false}/> 
+                    <CountDownTimer hour={12} start={miningStart}/> 
                 </div>
             </div>
         </>
