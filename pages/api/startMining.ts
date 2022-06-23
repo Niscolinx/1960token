@@ -12,6 +12,8 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
 
     const user = await User.findOne({ email })
 
+    console.log({user})
+
 
     if (user.isMining) {
         console.log('mining started already')
