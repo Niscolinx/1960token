@@ -9,16 +9,7 @@ import { useEffect, useState } from 'react'
 
 const Home = () => {
     const { data: session } = useSession()
-    const [startMining, setStartMining] = useState(false)
-
-    useEffect(() => {
-        if(localStorage.getItem('miningTime')){
-            setStartMining(true)
-        }
-        else(
-            setStartMining(false)
-        )
-    }, [])
+ 
 
     return (
         <>
@@ -121,7 +112,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    {startMining ? <CountDownTimer hour={12} /> : 'Not Mining'}
+                    <CountDownTimer hour={12} /> 
                 </div>
             </div>
         </>
