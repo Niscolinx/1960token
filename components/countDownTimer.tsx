@@ -30,6 +30,7 @@ function CountDownTimer() {
                         </span>
                     </p>
                     {/* <button onClick={() => handleStart(api)}>Mine</button> */}
+                    <p>Mining</p>
                 </div></div>
 }
 
