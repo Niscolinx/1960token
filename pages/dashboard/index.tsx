@@ -12,19 +12,37 @@ const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
  
-     useEffect(() => {
-        axios
-            .post('/api/user', session)
+    //  useEffect(() => {
+    //     axios
+    //         .post('/api/user', session)
+    //         .then(({ data }) => {
+    //             console.log({ data })
+                
+    //         })
+    //         .catch((err) => {
+    //             console.log({ err })
+    //         })
+    // }, [])
+
+    const handleStart = () => {
+
+        if (!localStorage.getItem('miningStart')) {
+            console.log('handle start init')
+            const date = new Date()
+            
+            axios
+            .post('/api/startMining', { session, date })
             .then(({ data }) => {
-                console.log({ data })
-                data.isMining !== true
-                    ? localStorage.removeItem('miningStart')
-                    : ''
+                const { miningStart } = data
+                localStorage.setItem('miningStart', miningStart)
             })
             .catch((err) => {
                 console.log({ err })
             })
-    }, [])
+        } else {
+            console.log('handle start already')
+        }
+    }
 
     return (
         <>
@@ -128,6 +146,7 @@ const Home = () => {
                     </div>
 
                     <CountDownTimer hour={12} start={miningStart}/> 
+                    <button onClick={handleStart}>Start</button>
                 </div>
             </div>
         </>
