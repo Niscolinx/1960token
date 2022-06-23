@@ -17,7 +17,17 @@ function CountDownTimer() {
     const [timerProp, setTimerProp] = useState(timerData)
 
    
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            updateTimer()
+        }, 1000)
+
+        clearInterval(intervalId)
+    }, [])
        
+    const updateTimer = () => {
+        console.log("hello world")
+    }
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return <div className='grid'><div
