@@ -22,7 +22,7 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
    
     useEffect(() => {
         const intervalId = setInterval(() => {
-            return updateRemainingTimer(countDownTimerInMs())
+            return updateRemainingTimer(countDownTimerInMs(milliseconds))
         }, 1000)
 
         return () => clearInterval(intervalId)
