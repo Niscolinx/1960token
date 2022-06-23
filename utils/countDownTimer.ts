@@ -38,12 +38,16 @@ export const countDownTimerInMs = (hour: number) => {
         minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
         seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
     }
+    else{
+        return {
+
+            hours: '00',
+            minutes: '00',
+            seconds: '00'
+        }
+    }
 }
 
-const daysRemaining = (now: Dayjs, remainingTime: Dayjs) => {
-    const dayjs = remainingTime.diff(now, 'days')
-    return padWithZeros(dayjs, 2)
-}
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
     return padWithZeros(hours, 2)
