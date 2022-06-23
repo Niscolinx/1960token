@@ -1,7 +1,9 @@
 import dayjs, { Dayjs } from 'dayjs'
-export const countDownTimerInMs = (milliseconds: number) => {
-    const dayjsRemainingTimeStamp = dayjs(milliseconds)
+export const countDownTimerInMs = (hour: number) => {
+    const dayjsRemainingTimeStamp = dayjs().add(12, 'hour')
     const dayjsNowTimeStamp = dayjs()
+
+    console.log(dayjsNowTimeStamp.format())
 
     if(dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)){
         console.log("before")

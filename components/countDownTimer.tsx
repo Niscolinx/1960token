@@ -11,7 +11,7 @@ const defaultTimer = {
 }
 
 
-const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
+const CountDownTimer = ({hour}: {hour: number}) => {
     const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
@@ -25,7 +25,7 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
    
     useEffect(() => {
         const intervalId = setInterval(() => {
-            return updateRemainingTimer(milliseconds)
+            return updateRemainingTimer(hour)
         }, 1000)
 
         return () => clearInterval(intervalId)
