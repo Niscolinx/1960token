@@ -10,9 +10,9 @@ const defaultTimer = {
 }
 
 interface ITimer {
-    hours: string,
-    minutes: string,
-    seconds: string
+    hours: number,
+    minutes: number,
+    seconds: number
 }
 
 const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
