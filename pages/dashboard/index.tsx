@@ -12,8 +12,7 @@ import dayjs, { Dayjs } from 'dayjs'
 const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
-    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>(
-    )
+    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
@@ -41,8 +40,6 @@ const Home = () => {
             setMiningStart(true)
         }
     }, [])
-
-   
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
@@ -167,11 +164,13 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <CountDownTimer
-                        hour={12}
-                        start={miningStart}
-                        prevTimeStore={prevTimeStore}
-                    />
+                    {prevTimeStore && (
+                        <CountDownTimer
+                            hour={12}
+                            start={miningStart}
+                            prevTimeStore={prevTimeStore}
+                        />
+                    )}
                     <button onClick={handleStart}>Start</button>
                 </div>
             </div>
