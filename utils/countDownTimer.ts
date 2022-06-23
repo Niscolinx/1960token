@@ -17,15 +17,7 @@ export const countDownTimerInMs = (hour: number) => {
     
     }
 
-    console.log({prevTimeStore})
-
     const dayjsNowTimeStamp = dayjs()
-
-    console.log(
-        'format',
-        dayjsNowTimeStamp.format(),
-        prevTimeStore
-    )
 
     if(prevTimeStore)
     if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
