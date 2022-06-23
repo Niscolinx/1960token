@@ -33,9 +33,6 @@ const Home = () => {
                 .catch((err) => {
                     console.log({ err })
                 })
-        } else {
-            setPrevTimeStore(dayjs(getTimeStore))
-            setMiningStart(true)
         }
     }, [])
 
