@@ -33,16 +33,6 @@ const Home = () => {
      const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
      const getTimeStore = localStorage.getItem('miningTime')
-     let prevTimeStore = null
-
-     if (!getTimeStore) {
-         localStorage.setItem(
-             'miningTime',
-             JSON.stringify(dayjsRemainingTimeStamp)
-         )
-     } else {
-         prevTimeStore = dayjs(JSON.parse(getTimeStore))
-     }
 
         if (!getTimeStore) {
             console.log('handle start init')
@@ -53,7 +43,7 @@ const Home = () => {
             .then(({ data }) => {
                 const { miningStart } = data
                 const prevTimeStore = dayjs(JSON.parse(miningStart))
-               
+               console.log({prevTimeStore})
             })
             .catch((err) => {
                 console.log({ err })
