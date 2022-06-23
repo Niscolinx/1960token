@@ -6,13 +6,16 @@ export const countDown = (hour: number, prevTimeStore: Dayjs) => {
         // if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
         //     console.log('before')
         // }
-    if (prevTimeStore)
+    if (prevTimeStore){
+        console.log({prevTimeStore})
         return {
             hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
             minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
             seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
         }
+    }
     else {
+        console.log("not counting", {prevTimeStore})
         return {
             hours: '00',
             minutes: '00',
