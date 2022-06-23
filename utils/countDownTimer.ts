@@ -3,15 +3,21 @@ export const countDownTimerInMs = (milliseconds: number) => {
     const dayjsRemainingTimeStamp = dayjs(milliseconds)
     const dayjsNowTimeStamp = dayjs()
 
-    console.log({ dayjsRemainingTimeStamp }, { dayjsNowTimeStamp })
-
+    if(dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)){
+        console.log("before")
+    }
     return {
+        days: daysRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
         hours: hoursRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
         minutes: minutesRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
         seconds: secondsRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
     }
 }
 
+const daysRemaining = (now: Dayjs, remainingTime: Dayjs) => {
+    const dayjs = remainingTime.diff(now, 'days') 
+    return padWithZeros(dayjs, 2)
+}
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
     return padWithZeros(hours, 2)

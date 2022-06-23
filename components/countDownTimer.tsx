@@ -6,13 +6,15 @@ import axios from 'axios'
 const defaultTimer = {
     hours: '00',
     minutes: '00',
-    seconds: '00'
+    seconds: '00',
+    days: '00'
 }
 
 interface ITimer {
     hours: string,
     minutes: string,
-    seconds: string
+    seconds: string,
+    days: string
 }
 
 const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
@@ -35,7 +37,7 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
         return () => clearInterval(intervalId)
     }, [])
        
-    const {hours, minutes, seconds} = remainingTime
+    const {days, hours, minutes, seconds} = remainingTime
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return <div className='grid'><div
@@ -55,7 +57,7 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
                         </span>
                     </p>
                     {/* <button onClick={() => handleStart(api)}>Mine</button> */}
-                    <p>{hours}:{minutes}:{seconds}</p>
+                    <p>{days}:{hours}:{minutes}:{seconds}</p>
                 </div></div>
 }
 
