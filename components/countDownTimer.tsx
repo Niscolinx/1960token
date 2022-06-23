@@ -9,6 +9,12 @@ const defaultTimer = {
     seconds: '00'
 }
 
+interface ITimer {
+    hours: string,
+    minutes: string,
+    seconds: string
+}
+
 const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
     const [miningTime, setMiningTime] = useState<number>()
 
@@ -16,7 +22,7 @@ const CountDownTimer = ({milliseconds}: {milliseconds: number}) => {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (TimerInMs:number) => {
+    const updateRemainingTimer = (TimerInMs:ITimer) => {
         console.log(TimerInMs)
     }
    
