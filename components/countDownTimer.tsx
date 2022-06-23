@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react'
 import { countDown } from '../utils/countDown'
-import { useSession } from 'next-auth/react'
 import { Dayjs } from 'dayjs'
 
 const defaultTimer = {
