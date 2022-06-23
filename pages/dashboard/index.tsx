@@ -158,7 +158,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <CountDownTimer hour={12} start={miningStart} />
+                    <CountDownTimer hour={12} start={miningStart} prevTimeStore={prevTimeStore}/>
                     <button onClick={handleStart}>Start</button>
                 </div>
             </div>

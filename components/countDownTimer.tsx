@@ -2,6 +2,7 @@ import React, { useState, useLayoutEffect, useEffect } from 'react'
 import { countDownTimerInMs } from '../utils/countDownTimer'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
+import { Dayjs } from 'dayjs'
 
 const defaultTimer = {
     hours: '00',
@@ -9,20 +10,26 @@ const defaultTimer = {
     seconds: '00',
 }
 
-const CountDownTimer = ({ hour, start }: { hour: number; start: boolean }) => {
+interface ICountDown {
+    hour: number
+    start: boolean,
+    prevTimeStore: Dayjs
+}
+
+const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     const [miningTime, setMiningTime] = useState<number>()
 
     const { data: session } = useSession()
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     if (start) {
-        const updateRemainingTimer = (timerInMs: number) => {
-            setRemainingTime(countDownTimerInMs(timerInMs))
+        const updateRemainingTimer = (timerInMs: number, prev:Dayjs) => {
+            setRemainingTime(countDownTimerInMs(timerInMs, prev))
         }
 
         useEffect(() => {
             const intervalId = setInterval(() => {
-                return updateRemainingTimer(hour)
+                return updateRemainingTimer(hour, prevTimeStore)
             }, 1000)
 
             return () => clearInterval(intervalId)

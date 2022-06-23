@@ -1,5 +1,5 @@
 import dayjs, { Dayjs } from 'dayjs'
-export const countDownTimerInMs = (hour: number, prevTimeStore) => {
+export const countDownTimerInMs = (hour: number, prevTimeStore: Dayjs) => {
     
     const dayjsNowTimeStamp = dayjs()
 
