@@ -42,14 +42,7 @@ const CountDownTimer = ({ hour }: { hour: number }) => {
                     borderRadius: '50px',
                 }}
             >
-                <p>
-                    {miningTime ? 'Remaining time - ' : ''}
-                    <span className='font-semibold'>
-                        {/* {zeroPad(hours)}:{zeroPad(minutes)}:
-                            {zeroPad(seconds)} */}
-                    </span>
-                </p>
-                {/* <button onClick={() => handleStart(api)}>Mine</button> */}
+              
                 <p>
                     {hours}:{minutes}:{seconds}
                 </p>
