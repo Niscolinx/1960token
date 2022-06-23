@@ -1,10 +1,10 @@
 import dayjs, { Dayjs } from 'dayjs'
 export const countDownTimerInMs = (hour: number) => {
-    const dayjsRemainingTimeStamp = dayjs().add(1, 'year')
+    const dayjsRemainingTimeStamp = dayjs().add(1, 'day')
     const dayjsNowTimeStamp = dayjs()
 
     console.log('format', dayjsNowTimeStamp.format(), dayjsRemainingTimeStamp.format())
-    console.log('difference', dayjsRemainingTimeStamp.diff(dayjsNowTimeStamp, 'days'))
+    console.log('difference', dayjsRemainingTimeStamp.diff(dayjsNowTimeStamp, 'hours'))
 
     if(dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)){
         console.log("before")
