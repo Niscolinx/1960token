@@ -14,18 +14,6 @@ const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
 
-     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
-
-    const getTimeStore = localStorage.getItem('miningTime')
-    let prevTimeStore = null
-
-    if (!getTimeStore) {
-        localStorage.setItem(
-            'miningTime',
-            JSON.stringify(dayjsRemainingTimeStamp)
-        )
-    } else {
-        prevTimeStore = dayjs(JSON.parse(getTimeStore))}
  
     //  useEffect(() => {
     //     axios
@@ -41,7 +29,22 @@ const Home = () => {
 
     const handleStart = () => {
 
-        if (!localStorage.getItem('miningStart')) {
+
+     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
+
+     const getTimeStore = localStorage.getItem('miningTime')
+     let prevTimeStore = null
+
+     if (!getTimeStore) {
+         localStorage.setItem(
+             'miningTime',
+             JSON.stringify(dayjsRemainingTimeStamp)
+         )
+     } else {
+         prevTimeStore = dayjs(JSON.parse(getTimeStore))
+     }
+
+        if (!getTimeStore) {
             console.log('handle start init')
             const date = new Date()
             
