@@ -27,6 +27,7 @@ const Home = () => {
                     if (isMining) {
                         localStorage.setItem('miningTime', miningStart)
                         setMiningStart(true)
+                        setPrevTimeStore(dayjs(miningStart))
                     }
                 })
                 .catch((err) => {
@@ -36,7 +37,7 @@ const Home = () => {
             setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
         }
-    }, [miningStart])
+    }, [miningStart, prevTimeStore])
 
     const handleStart = () => {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
