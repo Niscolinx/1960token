@@ -1,9 +1,9 @@
 import dayjs, { Dayjs } from 'dayjs'
 export const countDownTimerInMs = (hour: number) => {
-    const dayjsRemainingTimeStamp = dayjs().add(12, 'hour')
+    const dayjsRemainingTimeStamp = dayjs().add(hour, 'hour')
     const dayjsNowTimeStamp = dayjs()
 
-    console.log(dayjsNowTimeStamp.format())
+    console.log('difference', dayjsNowTimeStamp.diff(dayjsNowTimeStamp))
 
     if(dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)){
         console.log("before")
