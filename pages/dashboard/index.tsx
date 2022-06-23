@@ -60,6 +60,8 @@ const Home = () => {
         }
     }
 
+    console.log({miningStart})
+
     return (
         <>
             <div className='grid mt-10 gap-5'>
