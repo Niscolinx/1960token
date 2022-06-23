@@ -18,7 +18,6 @@ const Home = () => {
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
-        if(initialLoad){
             console.log("initial load")
 
             if (!getTimeStore) {
