@@ -36,7 +36,7 @@ const Home = () => {
 
         if (!getTimeStore) {
             console.log('handle start init')
-            const remainingTime = JSON.stringify(dayjsRemainingTimeStamp)
+            const remainingTime = dayjsRemainingTimeStamp
             
             axios
             .post('/api/startMining', { session, remainingTime })
