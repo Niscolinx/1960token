@@ -17,6 +17,7 @@ const Home = () => {
     )
 
     useEffect(() => {
+        console.log("useEffect to start")
         const getTimeStore = localStorage.getItem('miningTime')
         if (!getTimeStore) {
             console.log('local not found')
