@@ -3,11 +3,7 @@ export const countDown = (hour: number, prevTimeStore: Dayjs) => {
     
     const dayjsNowTimeStamp = dayjs()
 
-        // if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
-        //     console.log('before')
-        // }
     if (prevTimeStore){
-        console.log({prevTimeStore})
         return {
             hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
             minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
@@ -15,7 +11,6 @@ export const countDown = (hour: number, prevTimeStore: Dayjs) => {
         }
     }
     else {
-        console.log("not counting", {prevTimeStore})
         return {
             hours: '00',
             minutes: '00',
