@@ -9,46 +9,44 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import dayjs, { Dayjs } from 'dayjs'
 
-
 const Home = () => {
     const { data: session } = useSession()
     const [miningStart, setMiningStart] = useState(false)
 
- 
-    //  useEffect(() => {
-    //     axios
-    //         .post('/api/user', session)
-    //         .then(({ data }) => {
-    //             console.log({ data })
-                
-    //         })
-    //         .catch((err) => {
-    //             console.log({ err })
-    //         })
-    // }, [])
+    const getTimeStore = localStorage.getItem('miningTime')
 
+    if (!getTimeStore) {
+        useEffect(() => {
+            axios
+                .post('/api/miningStart', {session})
+                .then(({ data }) => {
+                    console.log({ data })
+                })
+                .catch((err) => {
+                    console.log({ err })
+                })
+        }, [])
+    }
     const handleStart = () => {
+        const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
-
-     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
-
-     const getTimeStore = localStorage.getItem('miningTime')
+        const getTimeStore = localStorage.getItem('miningTime')
 
         if (!getTimeStore) {
             console.log('handle start init')
             const remainingTime = dayjsRemainingTimeStamp
-            
+
             axios
-            .post('/api/startMining', { session, remainingTime })
-            .then(({ data }) => {
-                const { miningStart } = data
-                //const prevTimeStore = dayjs(JSON.parse(miningStart))
-               console.log({miningStart})
-               localStorage.setItem('miningTime', miningStart)
-            })
-            .catch((err) => {
-                console.log({ err })
-            })
+                .post('/api/startMining', { session, remainingTime })
+                .then(({ data }) => {
+                    const { miningStart } = data
+                    //const prevTimeStore = dayjs(JSON.parse(miningStart))
+                    console.log({ miningStart })
+                    localStorage.setItem('miningTime', miningStart)
+                })
+                .catch((err) => {
+                    console.log({ err })
+                })
         } else {
             console.log('handle start already')
         }
@@ -155,7 +153,7 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    <CountDownTimer hour={12} start={miningStart}/> 
+                    <CountDownTimer hour={12} start={miningStart} />
                     <button onClick={handleStart}>Start</button>
                 </div>
             </div>
@@ -183,4 +181,3 @@ export async function getServerSideProps(
         props: { session },
     }
 }
-
