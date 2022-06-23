@@ -32,14 +32,16 @@ export const countDownTimerInMs = (hour: number) => {
     //     prevTimeStore!.diff(dayjsNowTimeStamp, 'seconds')
     // )
 
-    if (dayjsRemainingTimeStamp.isBefore(dayjsNowTimeStamp)) {
+    if(prevTimeStore)
+    if (prevTimeStore.isBefore(dayjsNowTimeStamp)) {
         console.log('before')
     }
+    if(prevTimeStore)
     return {
-        days: daysRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
-        hours: hoursRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
-        minutes: minutesRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
-        seconds: secondsRemaining(dayjsNowTimeStamp, dayjsRemainingTimeStamp),
+        days: daysRemaining(dayjsNowTimeStamp, prevTimeStore),
+        hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
+        minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
+        seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
     }
 }
 
