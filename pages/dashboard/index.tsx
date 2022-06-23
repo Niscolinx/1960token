@@ -12,7 +12,12 @@ const Home = () => {
     const [startMining, setStartMining] = useState(false)
 
     useEffect(() => {
-        
+        if(localStorage.getItem('miningTime')){
+            setStartMining(true)
+        }
+        else(
+            setStartMining(false)
+        )
     }, [])
 
     return (
