@@ -116,7 +116,7 @@ function mine() {
                     />
                 )}
 
-                <div className='flex opacity-[9999] bg-white absolute right-0 mr-4'>
+                <div className='flex opacity-[9999] bg-white absolute right-0 mr-4 p-10'>
                     <GiTrade
                         onClick={handleStart}
                         className='text-orange-300 light:text-[#1a1a2d] text-2xl  '
