@@ -3,6 +3,7 @@ export const countDown = (hour: number, prevTimeStore: Dayjs) => {
     
     const dayjsNowTimeStamp = dayjs()
     if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
+        console.log("Timer finished")
        return {
            hours: '00',
            minutes: '00',
