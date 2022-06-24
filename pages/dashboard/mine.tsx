@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import CountDownTimer from '../../components/countDownTimer'
-import {HiOutlineArrowNarrowUp} from 'react-icons/hi'
+import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 
 function mine() {
     const { data: session } = useSession()
@@ -117,14 +117,16 @@ function mine() {
                     />
                 )}
 
-                <div className='grid absolute right-0 mr-4 justify-center'>
-                    <div className='grid bg-white  p-3 rounded-full'>
-                        <GiTrade
-                            onClick={handleStart}
-                            className='text-orange-300 light:text-[#1a1a2d] text-2xl'
-                        />
-                    </div>
-                    <HiOutlineArrowNarrowUp className='text-orange-300 light:text-[#1a1a2d] text-2xl ' />
+                <div className='absolute grid right-0 mr-4 justify-center justify-items-center'>
+                 
+                        <div className='bg-white  p-3 rounded-full'>
+                            <GiTrade
+                                onClick={handleStart}
+                                className='text-orange-300 light:text-[#1a1a2d] text-2xl'
+                            />
+                        </div>
+                        <HiOutlineArrowNarrowUp className='text-white text-2xl' />
+                    
                 </div>
             </div>
         </div>
