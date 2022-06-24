@@ -1,18 +1,36 @@
-import React from 'react'
+import { useTheme } from 'next-themes'
+import React, { useEffect, useState } from 'react'
 import { AiTwotoneMail } from 'react-icons/ai'
 import { BsTelephoneFill } from 'react-icons/bs'
 
 function customerService() {
+
+      const { theme } = useTheme()
+      const [neuToUse, setNeuToUse] = useState<{}>()
+      
+    useEffect(() => {
+        if (theme === 'dark') {
+            setNeuToUse({
+                background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                boxShadow: `7px 7px 14px #161625,
+                 -7px -7px 14px #1e1e35`,
+                borderRadius: '50px',
+            })
+        } else {
+            setNeuToUse({
+                background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
+                boxShadow: `7px 7px 14px #a5a5a8,
+             -7px -7px 14px #f3f3f8`,
+                borderRadius: '50px',
+                color: '#1a1a2d',
+            })
+        }
+    }, [theme])
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10'>
             <h1
                 className='text-center px-2 py-5 text-3xl font-semibold mb-5'
-                style={{
-                    background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                    boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                    borderRadius: '50px',
-                }}
+                style={neuToUse}
             >
                 CUSTOMER SERVICE
             </h1>
