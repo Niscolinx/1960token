@@ -102,7 +102,7 @@ function mine() {
         }
     }
     return (
-        <div className='grid justify-center h-[82vh] self-center relative'>
+        <div className='grid justify-center h-[82vh] self-center'>
             <div
                 className='w-full h-full bg-gray-700 opacity-[20] absolute top-0 bottom-0 left-0 right-0'
                 style={{ display: isDim ? 'block' : 'none' }}
