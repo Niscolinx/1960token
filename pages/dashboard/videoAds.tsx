@@ -7,7 +7,7 @@ function videoAds() {
             <div className='grid'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
-                   
+                    width='300px'
                 />
             </div>
         </div>
