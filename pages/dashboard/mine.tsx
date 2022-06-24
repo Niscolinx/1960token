@@ -122,6 +122,7 @@ function mine() {
                         onClick={handleStart}
                         className='text-orange-300 light:text-[#1a1a2d] text-2xl  '
                     />
+                    <HiOutlineArrowNarrowUp/>
                 </div>
             </div>
         </div>
