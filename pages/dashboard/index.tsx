@@ -14,7 +14,6 @@ const Home = () => {
 
     useEffect(() => {
         if (theme === 'dark') {
-            console.log('dark theme', { theme })
 
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
@@ -23,7 +22,6 @@ const Home = () => {
                 borderRadius: '50px',
             })
         } else {
-            console.log('light theme', { theme })
             setNeuToUse({
                 background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
                 boxShadow: `7px 7px 14px #a5a5a8,
@@ -59,7 +57,7 @@ const Home = () => {
                 </form>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
-                    <h3 className='border-b border-gray-700 pb-2 text-xl font-semibold'>
+                    <h3 className='border-b border-gray-700 pb-2 text-xl font-semibold light:#1a1a2d'>
                         Account
                     </h3>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
