@@ -66,7 +66,7 @@ function mine() {
         }
     }
     return (
-        <div className='grid justify-center h-[82vh] bg-red-50 self-center '>
+        <div className='grid justify-center h-[82vh] self-center '>
             <div className='grid self-center'>
                 {prevTimeStore && (
                     <CountDownTimer
