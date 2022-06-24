@@ -11,6 +11,7 @@ function mine() {
 
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
+    const [isDim, setIsDim] = useState(true)
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -36,6 +37,14 @@ function mine() {
             })
         }
     }, [theme])
+
+    useEffect(() => {
+
+        if(!isDim){
+            setIsDim(true)
+        }
+
+    }, [])
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
@@ -94,7 +103,7 @@ function mine() {
     }
     return (
         <div className='grid justify-center h-[82vh] self-center '>
-            <div className='w-full h-full bg-gray-700 opacity-[20] absolute top-0 bottom-0 left-0 right-0'></div>
+            <div className='w-full h-full bg-gray-700 opacity-[20] absolute top-0 bottom-0 left-0 right-0' style={{display: isDim ? 'block': 'none'}}></div>
             <div className='grid self-center'>
                 {prevTimeStore && (
                     <CountDownTimer
