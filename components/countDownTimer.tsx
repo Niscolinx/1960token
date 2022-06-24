@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react'
 import { countDown } from '../utils/countDown'
 import { Dayjs } from 'dayjs'
+import { useTheme } from 'next-themes'
 
 const defaultTimer = {
     hours: '00',
@@ -63,12 +64,7 @@ useEffect(() => {
         <div className='grid'>
             <div
                 className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
-                style={{
-                    background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                    boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                    borderRadius: '50px',
-                }}
+                style={neuToUse}
             >
                 <p>
                     {hours}:{minutes}:{seconds}
