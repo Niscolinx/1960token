@@ -57,13 +57,13 @@ const Home = () => {
                 </form>
 
                 <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3'>
-                    <h3 className='border-b border-gray-700 pb-2 text-xl font-semibold light:#1a1a2d'>
+                    <h3 className='border-b border-gray-700 pb-2 text-xl font-semibold light:text-[#1a1a2d]'>
                         Account
                     </h3>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <GiWallet className='text-blue-400 text-3xl' />
+                                <GiWallet className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-sm p-1'
                                     style={neuToUse}
@@ -74,7 +74,7 @@ const Home = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <AiFillCarryOut className='text-blue-400 text-3xl' />
+                                <AiFillCarryOut className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-sm p-1'
                                     style={neuToUse}
@@ -85,7 +85,7 @@ const Home = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <ImProfile className='text-blue-400 text-3xl' />
+                                <ImProfile className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-sm p-1'
                                     style={neuToUse}
@@ -96,7 +96,7 @@ const Home = () => {
                         </Link>
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
-                                <IoIosPeople className='text-blue-400 text-3xl' />
+                                <IoIosPeople className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-sm p-1'
                                     style={neuToUse}
