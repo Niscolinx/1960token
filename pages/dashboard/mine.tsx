@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import CountDownTimer from '../../components/countDownTimer'
+import {HiOutlineArrowNarrowUp} from 'react-icons/hi'
 
 function mine() {
     const { data: session } = useSession()
