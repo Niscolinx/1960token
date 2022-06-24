@@ -10,18 +10,21 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     return (
         <>
                 <div className='w-full h-full bg-gray-700 opacity-[20] absolute top-0 bottom-0 left-0 right-0'></div>
+                <div className="grid relative opacity-10">
+
             <SessionProvider session={session}>
                 <ThemeProvider
                     attribute='class'
                     enableSystem={true}
                     defaultTheme='dark'
-                >
+                    >
 
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
                 </ThemeProvider>
             </SessionProvider>{' '}
+                    </div>
         </>
     )
 }
