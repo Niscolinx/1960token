@@ -9,15 +9,19 @@ import {ThemeProvider} from 'next-themes'
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     return (
         <>
-
-                <SessionProvider session={session}>
-                    <ThemeProvider attribute='class' enableSystem={true} defaultTheme='dark'>
+            <SessionProvider session={session}>
+                <ThemeProvider
+                    attribute='class'
+                    enableSystem={true}
+                    defaultTheme='dark'
+                >
+                    <div className='absolute w-full h-full bg-gray-700 opacity-[20]'>hello</div>
 
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
-                    </ThemeProvider>
-                </SessionProvider>{' '}
+                </ThemeProvider>
+            </SessionProvider>{' '}
         </>
     )
 }
