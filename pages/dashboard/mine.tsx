@@ -118,7 +118,7 @@ function mine() {
                     />
                 )}
 
-                <div className='absolute grid right-0 mr-4 justify-center justify-items-center'>
+                <div className='absolute grid right-0 mr-4 justify-center justify-items-center' style={{display: isDim ? 'grid' : 'none'}}>
                  
                         <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
                             <GiTrade
