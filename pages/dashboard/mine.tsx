@@ -66,7 +66,7 @@ function mine() {
          }
      }
   return (
-      <div className='grid justify-center items-center'>
+      <div className='grid justify-center items-center h-1/3 bg-red-50' >
           {prevTimeStore && (
               <CountDownTimer
                   hour={12}
