@@ -2,7 +2,7 @@ import React from 'react'
 
 function videoAds() {
   return (
-    <div>videoAds</div>
+    <div className='h-screen'>videoAds</div>
   )
 }
 
