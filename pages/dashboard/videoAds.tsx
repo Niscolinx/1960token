@@ -8,6 +8,7 @@ function videoAds() {
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
+                    controls={false}
                 />
             </div>
         </div>
