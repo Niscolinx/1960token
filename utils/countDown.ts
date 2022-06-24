@@ -5,6 +5,9 @@ export const countDown = (hour: number, prevTimeStore: Dayjs) => {
     if(dayjsNowTimeStamp.isBefore(prevTimeStore)){
         console.log("previous day")
     }
+    else{
+        console.log("running current day")
+    }
 
     if (prevTimeStore){
         return {

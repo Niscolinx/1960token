@@ -28,7 +28,7 @@ const Home = () => {
                     if (isMining) {
                         localStorage.setItem('miningTime', miningStart)
                         setMiningStart(true)
-                        //setPrevTimeStore(dayjs(miningStart))
+                        setPrevTimeStore(dayjs(miningStart))
                     }
                 })
                 .catch((err) => {
@@ -36,7 +36,7 @@ const Home = () => {
                 })
         } else {
             console.log("Didn't load the get time")
-          //  setPrevTimeStore(dayjs(getTimeStore))
+            setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
         }
     }, [])
