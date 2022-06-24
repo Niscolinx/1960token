@@ -9,6 +9,7 @@ function videoAds() {
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
                     controls={false}
+                    light={true}
                 />
             </div>
         </div>
