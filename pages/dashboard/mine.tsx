@@ -3,6 +3,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
+import { GiTrade } from 'react-icons/gi'
 import CountDownTimer from '../../components/countDownTimer'
 
 function mine() {
@@ -101,7 +102,10 @@ function mine() {
                         prevTimeStore={prevTimeStore}
                     />
                 )}
-                <button onClick={handleStart}>Start</button>
+                <GiTrade
+                    onClick={handleStart}
+                    className='text-orange-300 light:text-[#1a1a2d] text-2xl'
+                />
             </div>
         </div>
     )
