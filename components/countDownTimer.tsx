@@ -20,6 +20,30 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     const updateRemainingTimer = (timerInMs: number, prev: Dayjs) => {
         setRemainingTime(countDown(timerInMs, prev))
     }
+const { theme } = useTheme()
+const [neuToUse, setNeuToUse] = useState<{}>()
+
+useEffect(() => {
+    if (theme === 'dark') {
+        console.log('dark theme', { theme })
+
+        setNeuToUse({
+            background: `linear-gradient(145deg, #1c1c30, #171729)`,
+            boxShadow: `7px 7px 14px #161625,
+                 -7px -7px 14px #1e1e35`,
+            borderRadius: '50px',
+        })
+    } else {
+        console.log('light theme', { theme })
+        setNeuToUse({
+            background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
+            boxShadow: `7px 7px 14px #a5a5a8,
+             -7px -7px 14px #f3f3f8`,
+            borderRadius: '50px',
+            color: '#1a1a2d',
+        })
+    }
+}, [theme])
 
     useEffect(() => {
         if (start) {
