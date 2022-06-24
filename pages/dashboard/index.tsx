@@ -4,13 +4,8 @@ import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
-import CountDownTimer from '../../components/countDownTimer'
-
 
 const Home = () => {
-    const { data: session } = useSession()
-   
-
     return (
         <>
             <div className='grid mt-10 gap-5'>
@@ -111,8 +106,6 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-
-                    
                 </div>
             </div>
         </>

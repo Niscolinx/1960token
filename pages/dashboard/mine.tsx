@@ -1,9 +1,12 @@
 import axios from 'axios'
 import dayjs, { Dayjs } from 'dayjs'
+import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import CountDownTimer from '../../components/countDownTimer'
 
 function mine() {
+        const { data: session } = useSession()
+
      const [miningStart, setMiningStart] = useState(false)
      const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
 
