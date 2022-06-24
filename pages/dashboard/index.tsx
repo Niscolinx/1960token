@@ -68,12 +68,7 @@ const Home = () => {
                                 <GiWallet className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-sm p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     Deposits
                                 </button>
@@ -84,12 +79,7 @@ const Home = () => {
                                 <AiFillCarryOut className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-sm p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     Withdrawals
                                 </button>
@@ -100,12 +90,7 @@ const Home = () => {
                                 <ImProfile className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-sm p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     Vendors
                                 </button>
@@ -116,12 +101,7 @@ const Home = () => {
                                 <IoIosPeople className='text-blue-400 text-3xl' />
                                 <button
                                     className='text-sm p-1'
-                                    style={{
-                                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                                        borderRadius: '50px',
-                                    }}
+                                    style={neuToUse}
                                 >
                                     My team
                                 </button>
