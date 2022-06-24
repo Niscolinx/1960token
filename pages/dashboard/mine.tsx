@@ -94,6 +94,7 @@ function mine() {
     }
     return (
         <div className='grid justify-center h-[82vh] self-center '>
+           
             <div className='grid self-center'>
                 {prevTimeStore && (
                     <CountDownTimer
@@ -102,7 +103,7 @@ function mine() {
                         prevTimeStore={prevTimeStore}
                     />
                 )}
-                
+
                 <GiTrade
                     onClick={handleStart}
                     className='text-orange-300 light:text-[#1a1a2d] text-2xl absolute right-0 mr-4'
