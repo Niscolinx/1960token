@@ -40,7 +40,7 @@ const Footer = () => {
                     <RiHome5Line className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-            <Link href='/'>
+            <Link href='/dashboard/videoAds'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
