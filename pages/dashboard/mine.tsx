@@ -38,13 +38,13 @@ function mine() {
         }
     }, [theme])
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if(!isDim){
-            setIsDim(true)
-        }
+    //     if(!isDim){
+    //         setIsDim(true)
+    //     }
 
-    }, [])
+    // }, [])
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningTime')
