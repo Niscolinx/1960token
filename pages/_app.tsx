@@ -9,7 +9,7 @@ import {ThemeProvider} from 'next-themes'
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     return (
         <>
-                <div className='w-full h-full bg-gray-700 opacity-[20]'>hello</div>
+                <div className='w-full h-full bg-gray-700 opacity-[20] absolute top-0 bottom-0 left-0 right-0'></div>
             <SessionProvider session={session}>
                 <ThemeProvider
                     attribute='class'
