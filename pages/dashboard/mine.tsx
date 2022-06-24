@@ -123,10 +123,10 @@ function mine() {
                         <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
                             <GiTrade
                                 onClick={handleStart}
-                                className='text-orange-300 light:text-[#1a1a2d] text-3xl'
+                                className='text-orange-300 light:text-[#1a1a2d] text-4xl'
                             />
                         </div>
-                        <HiOutlineArrowNarrowUp className='text-white text-2xl animate-bounce' />
+                        <HiOutlineArrowNarrowUp className='text-white text-3xl animate-bounce' />
                     
                 </div>
             </div>
