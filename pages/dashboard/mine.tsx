@@ -102,7 +102,7 @@ function mine() {
         }
     }
     return (
-        <div className='grid justify-center h-[82vh] self-center '>
+        <div className='grid justify-center h-[82vh] self-center relative'>
             <div
                 className='w-full h-full bg-gray-700 opacity-[20] absolute top-0 bottom-0 left-0 right-0'
                 style={{ display: isDim ? 'block' : 'none' }}
@@ -116,7 +116,7 @@ function mine() {
                     />
                 )}
 
-                <div className='flex opacity-[9999] bg-white absolute right-0 mr-4 p-10'>
+                <div className='flex bg-white absolute right-0 mr-4 p-10'>
                     <GiTrade
                         onClick={handleStart}
                         className='text-orange-300 light:text-[#1a1a2d] text-2xl  '
