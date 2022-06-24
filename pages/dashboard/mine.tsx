@@ -120,7 +120,7 @@ function mine() {
 
                 <div className='absolute grid right-0 mr-4 justify-center justify-items-center'>
                  
-                        <div className='bg-white grid p-3 rounded-full mb-2'>
+                        <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
                             <GiTrade
                                 onClick={handleStart}
                                 className='text-orange-300 light:text-[#1a1a2d] text-2xl'
