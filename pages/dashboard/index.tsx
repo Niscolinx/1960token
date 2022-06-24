@@ -4,19 +4,41 @@ import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
+import { useTheme } from 'next-themes'
+import { useState, useEffect } from 'react'
 
 const Home = () => {
+
+    const { theme } = useTheme()
+    const [neuToUse, setNeuToUse] = useState<{}>()
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            console.log('dark theme', { theme })
+
+            setNeuToUse({
+                background: `linear-gradient(145deg, #1c1c30, #171729)`,
+                boxShadow: `7px 7px 14px #161625,
+                 -7px -7px 14px #1e1e35`,
+                borderRadius: '50px',
+            })
+        } else {
+            console.log('light theme', { theme })
+            setNeuToUse({
+                background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
+                boxShadow: `7px 7px 14px #a5a5a8,
+             -7px -7px 14px #f3f3f8`,
+                borderRadius: '50px',
+                color: '#1a1a2d',
+            })
+        }
+    }, [theme])
     return (
         <>
             <div className='grid mt-10 gap-5'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
-                    style={{
-                        background: `linear-gradient(145deg, #1c1c30, #171729)`,
-                        boxShadow: `7px 7px 14px #161625,
-             -7px -7px 14px #1e1e35`,
-                        borderRadius: '50px',
-                    }}
+                    style={neuToUse}
                 >
                     <p className='text-sm'>Total Asset</p>
                     <p className='font-bold text-3xl'>$2312.08</p>
