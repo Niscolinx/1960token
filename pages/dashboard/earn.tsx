@@ -107,7 +107,7 @@ function earn() {
     }
     return (
         <div className='grid h-[82vh]'>
-            <nav className='flex justify-between items-center px-4'>
+            <nav className='flex justify-between items-center px-4 fixed top-0'>
                
                 
                         <button className='px-2 py-2 border rounded-lg self-center flex'>
