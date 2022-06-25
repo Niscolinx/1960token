@@ -137,7 +137,7 @@ function earn() {
                         />
                     {/* )} */}
 
-                    <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6'>
+                    <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 opacity-[999]'>
                         <div className='grid text-white justify-center justify-items-center'>
                             <IoIosPeople className='text-white text-4xl' />
                             <p className='font-bold'>1/1</p>
