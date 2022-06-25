@@ -129,12 +129,12 @@ function earn() {
                 )}
 
                 <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'>
-                    <IoIosPeople className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                    <IoIosPeople className='text-[#1a1a2d] text-4xl' />
 
                     <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
                         <GiTrade
                             onClick={handleStart}
-                            className='text-orange-300 light:text-[#1a1a2d] text-4xl'
+                            className='text-[#1a1a2d] text-4xl'
                         />
                     </div>
                     <HiOutlineArrowNarrowUp
