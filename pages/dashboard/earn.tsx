@@ -105,8 +105,8 @@ function earn() {
         }
     }
     return (
-        <div className='grid justify-center h-[82vh] self-center'>
-            <div className='grid self-center bg-red-500 w-full'>
+        <div className='grid h-[82vh]'>
+            <div className='grid  bg-red-500 w-full'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
