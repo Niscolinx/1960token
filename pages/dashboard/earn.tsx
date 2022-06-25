@@ -9,7 +9,7 @@ import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 
 
-function mine() {
+function earn() {
     const { data: session } = useSession()
 
     const [miningStart, setMiningStart] = useState(false)
@@ -143,4 +143,4 @@ function mine() {
     )
 }
 
-export default mine
+export default earn
