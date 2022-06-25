@@ -63,7 +63,7 @@ useEffect(() => {
     return (
         <div className='grid'>
             <div
-                className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mt-10'
+                className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                 style={neuToUse}
             >
                 <p>
