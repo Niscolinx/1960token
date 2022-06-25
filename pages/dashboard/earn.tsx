@@ -112,7 +112,7 @@ function earn() {
                     width='100%'
                 />
             </div>
-                <ul className='bg-white'>
+                <ul className='bg-white text-black'>
                     <li>Earn</li>
                     <li>Mine</li>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error debitis recusandae eos accusantium, nostrum eligendi? Commodi molestiae blanditiis temporibus suscipit. Quidem fugit odio beatae repudiandae porro maiores earum eum molestias?
