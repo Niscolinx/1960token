@@ -106,7 +106,6 @@ function earn() {
         }
     }
 
-    console.log({prevTimeStore})
     return (
         <>
             <div className='grid h-[82vh]'>
