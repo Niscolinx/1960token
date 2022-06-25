@@ -124,6 +124,10 @@ function earn() {
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
                     />
+                    <ul>
+                        <li>Earn</li>
+                        <li>Mine</li>
+                    </ul>
                 </div>
 
                 <div
