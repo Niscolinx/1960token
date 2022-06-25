@@ -128,10 +128,10 @@ function earn() {
                     />
                 )}
 
-                <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5'>
+                <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-10'>
                     <div className="grid text-white justify-center justify-items-center">
                     <IoIosPeople className='text-white text-4xl' />
-                    <p>1/1</p>
+                    <p className='font-bold'>1/1</p>
                     </div>
 
                     <div className=''>
