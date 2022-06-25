@@ -134,7 +134,7 @@ function earn() {
                     <p>1/1</p>
                     </div>
 
-                    <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
+                    <div className=''>
                         <GiTrade
                             onClick={handleStart}
                             className='text-[#1a1a2d] text-4xl'
