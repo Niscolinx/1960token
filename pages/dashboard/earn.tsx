@@ -129,7 +129,7 @@ function earn() {
                 )}
 
                 <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'>
-                    <div className=''>
+                    <div className='grid'>
                     <IoIosPeople className='text-white text-4xl' />
 
                         <GiTrade
