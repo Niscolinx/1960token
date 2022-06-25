@@ -117,7 +117,7 @@ function earn() {
                     <p className='font-bold text-3xl'>0.0001</p>
                    
                 </div>
-                <div className='grid w-full relative opacity-[1]'>
+                <div className='grid w-full relative'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
@@ -138,7 +138,7 @@ function earn() {
                         />
                     {/* )} */}
 
-                    <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 opacity-[999]'>
+                    <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 z-10'>
                         <div className='grid text-white justify-center justify-items-center'>
                             <IoIosPeople className='text-white text-4xl' />
                             <p className='font-bold'>1/1</p>
