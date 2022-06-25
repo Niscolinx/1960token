@@ -107,6 +107,14 @@ function earn() {
     }
     return (
         <div className='grid h-[82vh]'>
+            <nav className='flex justify-between items-center px-4'>
+               
+                
+                        <button className='px-2 py-2 border rounded-lg self-center flex'>
+                           Hello
+                        </button>
+                
+            </nav>
             <div className='grid w-full fixed'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
@@ -129,9 +137,9 @@ function earn() {
                 )}
 
                 <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6'>
-                    <div className="grid text-white justify-center justify-items-center">
-                    <IoIosPeople className='text-white text-4xl' />
-                    <p className='font-bold'>1/1</p>
+                    <div className='grid text-white justify-center justify-items-center'>
+                        <IoIosPeople className='text-white text-4xl' />
+                        <p className='font-bold'>1/1</p>
                     </div>
 
                     <div className=''>
@@ -140,10 +148,10 @@ function earn() {
                             className='text-white text-4xl'
                             // className='text-white text-4xl animate-spin animate-duration-[4s]'
                         />
-                    <HiOutlineArrowNarrowUp
-                        className='text-white text-3xl animate-bounce mt-1'
-                        style={{ display: isDim ? 'block' : 'none' }}
-                    />
+                        <HiOutlineArrowNarrowUp
+                            className='text-white text-3xl animate-bounce mt-1'
+                            style={{ display: isDim ? 'block' : 'none' }}
+                        />
                     </div>
                 </div>
             </div>
