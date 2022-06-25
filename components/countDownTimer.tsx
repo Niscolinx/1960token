@@ -12,13 +12,13 @@ const defaultTimer = {
 interface ICountDown {
     hour: number
     start: boolean
-    prevTimeStore: Dayjs
+    prevTimeStore?: Dayjs
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (timerInMs: number, prev: Dayjs) => {
+    const updateRemainingTimer = (timerInMs: number, prev?: Dayjs) => {
         setRemainingTime(countDown(timerInMs, prev))
     }
 const { theme } = useTheme()
