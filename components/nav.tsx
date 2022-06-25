@@ -2,27 +2,25 @@ import { Session } from 'next-auth'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import {BsFillMoonFill, BsFillSunFill} from 'react-icons/bs'
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 
 function nav({ session }: { session: Session | null }) {
-    const { theme, setTheme, systemTheme} = useTheme()
+    const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
         setMounted(true)
-     
     }, [])
 
     const renderTheme = () => {
-        if(!mounted) return null
+        if (!mounted) return null
 
         const currentTheme = theme === 'system' ? systemTheme : theme
 
-        if(currentTheme === 'dark') return <BsFillMoonFill onClick={() => setTheme('light')}/>
+        if (currentTheme === 'dark')
+            return <BsFillMoonFill onClick={() => setTheme('light')} />
         else return <BsFillSunFill onClick={() => setTheme('dark')} />
-
     }
-    
 
     let isSession = null
     if (session) {
@@ -58,11 +56,9 @@ function nav({ session }: { session: Session | null }) {
         )
     }
     return (
-        <nav className='flex justify-between items-center'>
+        <nav className='flex justify-between items-center px-4'>
             {isSession}
-            <button
-               className='px-2 py-2 border rounded-lg self-center flex'
-            >
+            <button className='px-2 py-2 border rounded-lg self-center flex'>
                 {renderTheme()}
             </button>
         </nav>
