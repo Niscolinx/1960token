@@ -133,7 +133,7 @@ function earn() {
                             // className='text-white text-4xl animate-spin animate-duration-[4s]'
                         />
                         <HiOutlineArrowNarrowUp
-                            className='text-white text-3xl animate-bounce mt-1'
+                            className='text-white text-3xl animate-bounce mt-1 flex'
                             style={{ display: isDim ? 'block' : 'none' }}
                         />
                     </div>
