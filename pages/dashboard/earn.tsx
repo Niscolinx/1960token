@@ -14,7 +14,7 @@ function earn() {
 
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
-    const [isDim, setIsDim] = useState(true)
+    const [isDim, setIsDim] = useState(false)
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -119,7 +119,7 @@ function earn() {
                         prevTimeStore={prevTimeStore}
                     />
                 )}
-                <div className='grid self-center'>
+                <div className='grid self-center bg-red-500 w-full'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
