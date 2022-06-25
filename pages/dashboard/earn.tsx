@@ -123,9 +123,9 @@ function earn() {
                         width='100%'
                         height='40rem'
                     />
-                    <div className='absolute grid right-0 left-0 mr-4 justify-center justify-items-center top-1/5 gap-6 z-10'>
+                    <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-10 justify-end'>
                         <div className='grid text-white justify-center justify-items-center'>
-                            <IoIosPeople className='text-white text-4xl' />
+                            <IoIosPeople className='text-white text-4xl' onClick={() => console.log("team clicked")} />
                             <p className='font-bold'>1/1</p>
                         </div>
 
