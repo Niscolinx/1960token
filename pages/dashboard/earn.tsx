@@ -7,6 +7,7 @@ import { GiTrade } from 'react-icons/gi'
 import CountDownTimer from '../../components/countDownTimer'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
+import { IoIosPeople } from 'react-icons/io'
 
 function earn() {
     const { data: session } = useSession()
@@ -111,10 +112,9 @@ function earn() {
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
                     height='40rem'
-                   
                 />
             </div>
-               
+
             <div
                 className='w-full h-full bg-black opacity-[20] bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
                 style={{ display: isDim ? 'block' : 'none' }}
@@ -128,10 +128,9 @@ function earn() {
                     />
                 )}
 
-                <div
-                    className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'
+                <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'>
+                    <IoIosPeople className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                     
-                >
                     <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
                         <GiTrade
                             onClick={handleStart}
