@@ -40,7 +40,7 @@ const Footer = () => {
                     <RiHome5Line className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-            <Link href='/dashboard/videoAds'>
+            <Link href='/dashboard/earn'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
@@ -48,14 +48,7 @@ const Footer = () => {
                     <MdOutlineOndemandVideo className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-            <Link href='/dashboard/mine'>
-                <div
-                    className='grid justify-items-center p-2 rounded-full cursor-pointer'
-                    style={neuToUse}
-                >
-                    <GiTrade className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
-                </div>
-            </Link>
+           
             <Link href='/dashboard'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
