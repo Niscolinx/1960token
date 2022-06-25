@@ -110,13 +110,11 @@ function earn() {
             <nav className='flex justify-between items-center px-4'>
                 <button className='px-2 py-2 border rounded-lg self-center flex'>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Delectus, ipsam. Vel enim tempore omnis cumque quaerat quod
-                    eius repellendus laboriosam facilis dolores fugit ex impedit
-                    nostrum, voluptas aliquid ipsa iste.
+                    Delectus, ipsam
                 </button>
             </nav>
             <div className='grid h-[82vh]'>
-                <div className='grid w-full fixed'>
+                <div className='grid w-full relative'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
