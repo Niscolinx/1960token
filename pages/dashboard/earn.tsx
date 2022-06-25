@@ -107,13 +107,10 @@ function earn() {
     }
     return (
         <>
-            <nav className='flex justify-between items-center px-4'>
-                <button className='px-2 py-2 border rounded-lg self-center flex'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Delectus, ipsam
-                </button>
-            </nav>
             <div className='grid h-[82vh]'>
+            <nav className='flex justify-between items-center px-4'>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aliquid consectetur velit veniam corporis quasi consequatur repudiandae enim, aliquam quod amet nobis maiores deleniti. Excepturi, aperiam. Ex ipsam perferendis molestiae?
+            </nav>
                 <div className='grid w-full relative'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
