@@ -139,11 +139,11 @@ function earn() {
                             onClick={handleStart}
                             className='text-white text-4xl'
                         />
-                    </div>
                     <HiOutlineArrowNarrowUp
                         className='text-white text-3xl animate-bounce'
                         style={{ display: isDim ? 'block' : 'none' }}
                     />
+                    </div>
                 </div>
             </div>
         </div>
