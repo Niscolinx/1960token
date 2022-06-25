@@ -110,7 +110,7 @@ function earn() {
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
-                    height='600px'
+                    height='50rem'
                    
                 />
             </div>
