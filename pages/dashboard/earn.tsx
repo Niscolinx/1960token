@@ -137,10 +137,10 @@ function earn() {
                     <div className=''>
                         <GiTrade
                             onClick={handleStart}
-                            className='text-white text-4xl animate-spin animate-delay-900 anim'
+                            className='text-white text-4xl animate-spin animate-duration-[4s]'
                         />
                     <HiOutlineArrowNarrowUp
-                        className='text-white text-3xl animate-bounce'
+                        className='text-white text-3xl animate-bounce mt-3'
                         style={{ display: isDim ? 'block' : 'none' }}
                     />
                     </div>
