@@ -106,16 +106,17 @@ function earn() {
     }
     return (
         <div className='grid h-[82vh]'>
-            <div className='grid  bg-red-500 w-full'>
+            <div className='grid  bg-red-500 w-full fixed'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
                 />
-                <ul>
+            </div>
+                <ul className='bg-white'>
                     <li>Earn</li>
                     <li>Mine</li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error debitis recusandae eos accusantium, nostrum eligendi? Commodi molestiae blanditiis temporibus suscipit. Quidem fugit odio beatae repudiandae porro maiores earum eum molestias?
                 </ul>
-            </div>
             <div
                 className='w-full h-full bg-black opacity-[20] bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
                 style={{ display: isDim ? 'block' : 'none' }}
