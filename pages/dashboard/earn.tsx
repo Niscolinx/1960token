@@ -124,7 +124,7 @@ function earn() {
                         height='40rem'
                     />
                 </div>
-                <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-red-400'>
+                <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer'>
                     <div className=''>
                         <GiTrade
                             onClick={handleStart}
