@@ -84,7 +84,7 @@ const Index = () => {
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
                             <Link href='/api/auth/signin'>
                                 <Image
-                                    src='/Web.png'
+                                    src='/slider1.png'
                                     alt=''
                                     width='1920px'
                                     height='1080px'
@@ -95,7 +95,7 @@ const Index = () => {
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Image
-                                src='/carousel22.png'
+                                src='/slider2.png'
                                 alt=''
                                 width='1920px'
                                 height='1080px'
@@ -105,7 +105,7 @@ const Index = () => {
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Image
-                                src='/carousel33.png'
+                                src='/slider3.png'
                                 alt=''
                                 width='1920px'
                                 height='1080px'
