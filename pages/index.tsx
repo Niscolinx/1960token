@@ -90,7 +90,7 @@ const Index = () => {
                                         height='1080px'
                                     />
                                     <div className='grid absolute right-[30%] top-[22%] px-3 gap-4 '>
-                                        <p className='font-semibold text-white animate-ease-in animate-delay-500 animate-duration-500'>
+                                        <p className='font-semibold text-white animate-bounce animate-delay-500 animate-duration-500'>
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
                                             </span>{' '}
@@ -105,7 +105,7 @@ const Index = () => {
                             </Link>
                         </div>
                     </SwiperSlide>
-                    {/* <SwiperSlide>
+                    <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Image
                                 src='/slider2.png'
@@ -124,16 +124,11 @@ const Index = () => {
                                 height='1080px'
                             />
                         </div>
-                    </SwiperSlide> */}
+                    </SwiperSlide>
                 </Swiper>
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
-                    <p className='font-semibold text-white ease-in animate-delay-500 animate-duration-500'>
-                        <span className='text-orange-300 font-bold'>
-                            Superior
-                        </span>{' '}
-                        Digital currency you can mine on your phone
-                    </p>
+                  
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
