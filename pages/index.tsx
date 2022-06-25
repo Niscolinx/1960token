@@ -90,11 +90,16 @@ const Index = () => {
                                         height='1080px'
                                     />
                                     <div className='grid absolute right-[50%] top-[20%]'>
-                                        <p className='font-semibold text-3xl'>
-                                            <span className='text-orange-300 text-4xl font-bold'>Superior</span> Digital currency you can
-                                            mine on your phone
+                                        <p className='font-semibold text-xl text-white'>
+                                            <span className='text-orange-300 text-2xl font-bold'>
+                                                Superior
+                                            </span>{' '}
+                                            Digital currency you can mine on
+                                            your phone
                                         </p>
-                                        <button>Get Started</button>
+                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
+                                            Get Started
+                                        </button>{' '}
                                     </div>
                                 </div>
                             </Link>
