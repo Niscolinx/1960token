@@ -8,7 +8,6 @@ import CountDownTimer from '../../components/countDownTimer'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 
-
 function earn() {
     const { data: session } = useSession()
 
@@ -107,6 +106,16 @@ function earn() {
     }
     return (
         <div className='grid justify-center h-[82vh] self-center'>
+            <div className='grid self-center bg-red-500 w-full'>
+                <ReactPlayer
+                    url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                    width='100%'
+                />
+                <ul>
+                    <li>Earn</li>
+                    <li>Mine</li>
+                </ul>
+            </div>
             <div
                 className='w-full h-full bg-black opacity-[20] bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
                 style={{ display: isDim ? 'block' : 'none' }}
@@ -119,16 +128,6 @@ function earn() {
                         prevTimeStore={prevTimeStore}
                     />
                 )}
-                <div className='grid self-center bg-red-500 w-full'>
-                    <ReactPlayer
-                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
-                        width='100%'
-                    />
-                    <ul>
-                        <li>Earn</li>
-                        <li>Mine</li>
-                    </ul>
-                </div>
 
                 <div
                     className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'
