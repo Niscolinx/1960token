@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import CountDownTimer from '../../components/countDownTimer'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
+import ReactPlayer from 'react-player/youtube'
+
 
 function mine() {
     const { data: session } = useSession()
@@ -117,17 +119,24 @@ function mine() {
                         prevTimeStore={prevTimeStore}
                     />
                 )}
+                <div className='grid self-center'>
+                    <ReactPlayer
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                    />
+                </div>
 
-                <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3' style={{display: isDim ? 'grid' : 'none'}}>
-                 
-                        <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
-                            <GiTrade
-                                onClick={handleStart}
-                                className='text-orange-300 light:text-[#1a1a2d] text-4xl'
-                            />
-                        </div>
-                        <HiOutlineArrowNarrowUp className='text-white text-3xl animate-bounce' />
-                    
+                <div
+                    className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'
+                    style={{ display: isDim ? 'grid' : 'none' }}
+                >
+                    <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
+                        <GiTrade
+                            onClick={handleStart}
+                            className='text-orange-300 light:text-[#1a1a2d] text-4xl'
+                        />
+                    </div>
+                    <HiOutlineArrowNarrowUp className='text-white text-3xl animate-bounce' />
                 </div>
             </div>
         </div>
