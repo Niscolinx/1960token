@@ -115,9 +115,26 @@ function earn() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-3xl'>0.0001</p>
-                   
                 </div>
-                <div className='grid w-full relative'>
+                <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 z-10'>
+                    <div className='grid text-white justify-center justify-items-center'>
+                        <IoIosPeople className='text-white text-4xl' />
+                        <p className='font-bold'>1/1</p>
+                    </div>
+
+                    <div className=''>
+                        <GiTrade
+                            onClick={handleStart}
+                            className='text-white text-4xl'
+                            // className='text-white text-4xl animate-spin animate-duration-[4s]'
+                        />
+                        <HiOutlineArrowNarrowUp
+                            className='text-white text-3xl animate-bounce mt-1'
+                            style={{ display: isDim ? 'block' : 'none' }}
+                        />
+                    </div>
+                </div>
+                <div className='grid w-full relative z-0'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
@@ -131,31 +148,12 @@ function earn() {
                 ></div>
                 <div className='grid self-center mt-2'>
                     {/* {prevTimeStore && ( */}
-                        <CountDownTimer
-                            hour={12}
-                            start={miningStart}
-                            prevTimeStore={prevTimeStore}
-                        />
+                    <CountDownTimer
+                        hour={12}
+                        start={miningStart}
+                        prevTimeStore={prevTimeStore}
+                    />
                     {/* )} */}
-
-                    <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 z-10'>
-                        <div className='grid text-white justify-center justify-items-center'>
-                            <IoIosPeople className='text-white text-4xl' />
-                            <p className='font-bold'>1/1</p>
-                        </div>
-
-                        <div className=''>
-                            <GiTrade
-                                onClick={handleStart}
-                                className='text-white text-4xl'
-                                // className='text-white text-4xl animate-spin animate-duration-[4s]'
-                            />
-                            <HiOutlineArrowNarrowUp
-                                className='text-white text-3xl animate-bounce mt-1'
-                                style={{ display: isDim ? 'block' : 'none' }}
-                            />
-                        </div>
-                    </div>
                 </div>
             </div>
         </>
