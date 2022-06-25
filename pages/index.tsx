@@ -89,7 +89,7 @@ const Index = () => {
                                         width='1920px'
                                         height='1080px'
                                     />
-                                    <div className='grid absolute left-0 top-0 bg-red-400'>
+                                    <div className='grid absolute right-[50%] top-[30%] bg-red-400'>
                                         <p>
                                             Superior Digital currency you can
                                             mine on your phone
