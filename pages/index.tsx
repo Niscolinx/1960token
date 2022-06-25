@@ -26,7 +26,6 @@ import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper'
 
 const Index = () => {
-
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [stepsNeu, setStepsNeu] = useState<{}>()
@@ -50,7 +49,7 @@ const Index = () => {
                 boxShadow: `7px 7px 14px #a5a5a8,
              -7px -7px 14px #f3f3f8`,
                 borderRadius: '50px',
-                color: '#1a1a2d'
+                color: '#1a1a2d',
             })
 
             setStepsNeu({
@@ -89,6 +88,13 @@ const Index = () => {
                                     width='1920px'
                                     height='1080px'
                                 />
+                                <div className='grid'>
+                                    <p>
+                                        Superior Digital currency you can mine
+                                        on your phone
+                                    </p>
+                                    <button>Get Started</button>
+                                </div>
                             </Link>
                         </div>
                     </SwiperSlide>
