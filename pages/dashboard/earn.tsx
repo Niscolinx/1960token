@@ -13,7 +13,7 @@ function earn() {
 
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
-    const [isDim, setIsDim] = useState(false)
+    const [isDim, setIsDim] = useState(true)
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -106,7 +106,7 @@ function earn() {
     }
     return (
         <div className='grid h-[82vh]'>
-            <div className='grid  bg-red-500 w-full fixed bottom-0'>
+            <div className='grid  bg-red-500 w-full fixed'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
@@ -114,11 +114,7 @@ function earn() {
                    
                 />
             </div>
-                <ul className='bg-white text-black'>
-                    <li>Earn</li>
-                    <li>Mine</li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error debitis recusandae eos accusantium, nostrum eligendi? Commodi molestiae blanditiis temporibus suscipit. Quidem fugit odio beatae repudiandae porro maiores earum eum molestias?
-                </ul>
+               
             <div
                 className='w-full h-full bg-black opacity-[20] bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
                 style={{ display: isDim ? 'block' : 'none' }}
