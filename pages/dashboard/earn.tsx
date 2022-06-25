@@ -129,13 +129,13 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center'>
-                    {prevTimeStore && (
+                    {/* {prevTimeStore && ( */}
                         <CountDownTimer
                             hour={12}
                             start={miningStart}
                             prevTimeStore={prevTimeStore}
                         />
-                    )}
+                    {/* )} */}
 
                     <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6'>
                         <div className='grid text-white justify-center justify-items-center'>
