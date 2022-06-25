@@ -106,7 +106,7 @@ function earn() {
     }
     return (
         <div className='grid h-[82vh]'>
-            <div className='grid  bg-red-500 w-full fixed'>
+            <div className='grid  bg-red-500 w-full fixed bottom-0'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
@@ -134,7 +134,7 @@ function earn() {
 
                 <div
                     className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/3'
-                    style={{ display: isDim ? 'grid' : 'none' }}
+                    
                 >
                     <div className='bg-white grid p-3 rounded-full mb-2 cursor-pointer'>
                         <GiTrade
