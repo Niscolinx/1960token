@@ -111,7 +111,7 @@ function earn() {
                
                 
                         <button className='px-2 py-2 border rounded-lg self-center flex'>
-                           Hello
+                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, ipsam. Vel enim tempore omnis cumque quaerat quod eius repellendus laboriosam facilis dolores fugit ex impedit nostrum, voluptas aliquid ipsa iste.
                         </button>
                 
             </nav>
