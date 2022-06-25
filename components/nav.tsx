@@ -3,14 +3,12 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 function nav({ session }: { session: Session | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
     const router = useRouter()
-
-    console.log({router})
 
     useEffect(() => {
         setMounted(true)
@@ -59,7 +57,7 @@ function nav({ session }: { session: Session | null }) {
             </Link>
         )
     }
-  
+
     return (
         <nav className='flex justify-between items-center px-4'>
             {router.asPath.includes('earn') ? null : (
