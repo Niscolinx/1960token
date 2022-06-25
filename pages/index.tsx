@@ -128,6 +128,12 @@ const Index = () => {
                 </Swiper>
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
+                    <p className='font-semibold text-white ease-in animate-delay-500 animate-duration-500'>
+                        <span className='text-orange-300 font-bold'>
+                            Superior
+                        </span>{' '}
+                        Digital currency you can mine on your phone
+                    </p>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
