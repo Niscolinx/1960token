@@ -83,7 +83,7 @@ function earn() {
     }, [])
 
     const handleStart = () => {
-        console.log("clicked on mine")
+        console.log('clicked on mine')
         setIsDim(false)
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
@@ -150,13 +150,13 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
-                    {/* {prevTimeStore && ( */}
-                    <CountDownTimer
-                        hour={12}
-                        start={miningStart}
-                        prevTimeStore={prevTimeStore}
-                    />
-                    {/* )} */}
+                    {prevTimeStore && (
+                        <CountDownTimer
+                            hour={12}
+                            start={miningStart}
+                            prevTimeStore={prevTimeStore}
+                        />
+                    )}
                 </div>
             </div>
         </>
