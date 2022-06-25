@@ -109,7 +109,7 @@ function earn() {
         <>
             <div className='grid h-[82vh]'>
                 <div
-                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
+                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
                     <p className='font-bold text-3xl'>0.0001</p>
