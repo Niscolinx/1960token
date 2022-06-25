@@ -62,16 +62,12 @@ function nav({ session }: { session: Session | null }) {
   
     return (
         <nav className='flex justify-between items-center px-4'>
-            {router.asPath.includes('earn') ? (
-                <p>Mining</p>
-            ) : (
-                <>
-                    {isSession}
-                    <button className='px-2 py-2 border rounded-lg self-center flex'>
-                        {renderTheme()}
-                    </button>
-                </>
-            )}
+            <>
+                {isSession}
+                <button className='px-2 py-2 border rounded-lg self-center flex'>
+                    {renderTheme()}
+                </button>
+            </>
         </nav>
     )
 }
