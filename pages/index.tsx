@@ -82,12 +82,13 @@ const Index = () => {
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
                             <Link href='/api/auth/signin'>
+                                <>
                                 <Image
                                     src='/slider1.png'
                                     alt=''
                                     width='1920px'
                                     height='1080px'
-                                />
+                                    />
                                 <div className='grid'>
                                     <p>
                                         Superior Digital currency you can mine
@@ -95,6 +96,7 @@ const Index = () => {
                                     </p>
                                     <button>Get Started</button>
                                 </div>
+                                    </>
                             </Link>
                         </div>
                     </SwiperSlide>
