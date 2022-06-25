@@ -117,7 +117,7 @@ function earn() {
                     <p className='font-bold text-3xl'>0.0001</p>
                 </div>
 
-                <div className='relative z-10 hidden'>
+                <div className='relative z-10'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
