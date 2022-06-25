@@ -27,7 +27,7 @@ function customerService() {
         }
     }, [theme])
     return (
-        <div className='grid justify-center mt-10 gap-5 pb-10'>
+        <div className='grid justify-center mt-10 gap-5 pb-10 px-4'>
             <h1
                 className='text-center px-2 py-5 text-3xl font-semibold mb-5'
                 style={neuToUse}
@@ -51,12 +51,13 @@ function customerService() {
                 <div className='text-justify'>
                     Our dedicated customer service team is here 24/7 to assist
                     you. Call Us Email Inquiries +1…. support@1960Token
-
                     <h3 className='grad mt-10 text-xl'>Send us a message</h3>
-                    <p>Whether you're new to 1960Token platform or have a question
-                    about your existing account, we can help. Simply fill in
-                    your details below and we'll get back to you soon. All
-                    fields are required.</p>
+                    <p>
+                        Whether you're new to 1960Token platform or have a
+                        question about your existing account, we can help.
+                        Simply fill in your details below and we'll get back to
+                        you soon. All fields are required.
+                    </p>
                     <form className='grid mt-10 w-full md:w-2/3 lg:w-2/4 mx-auto px-10'>
                         <div className='mb-4'>
                             <label
