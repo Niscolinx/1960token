@@ -129,17 +129,6 @@ function earn() {
                             <p className='font-bold'>1/1</p>
                         </div>
 
-                        <div className=''>
-                            <GiTrade
-                                onClick={handleStart}
-                                className='text-white text-4xl'
-                                // className='text-white text-4xl animate-spin animate-duration-[4s]'
-                            />
-                            <HiOutlineArrowNarrowUp
-                                className='text-white text-3xl animate-bounce mt-1'
-                                style={{ display: isDim ? 'block' : 'none' }}
-                            />
-                        </div>
                     </div>
                 </div>
 
