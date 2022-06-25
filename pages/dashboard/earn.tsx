@@ -83,6 +83,7 @@ function earn() {
     }, [])
 
     const handleStart = () => {
+        console.log("clicked on mine")
         setIsDim(false)
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
