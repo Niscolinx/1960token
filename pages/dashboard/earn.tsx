@@ -107,7 +107,7 @@ function earn() {
     }
     return (
         <div className='grid h-[82vh]'>
-            <div className='grid  bg-red-500 w-full fixed'>
+            <div className='grid w-full fixed'>
                 <ReactPlayer
                     url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                     width='100%'
