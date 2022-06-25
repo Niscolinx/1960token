@@ -125,7 +125,14 @@ function earn() {
                     />
                 </div>
                 <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-red-300'>
-                    <div className=''>
+                    {/* <div className='grid text-white justify-center justify-items-center'>
+                        <IoIosPeople
+                            className='text-white text-4xl'
+                            onClick={() => console.log('team clicked')}
+                        />
+                        <p className='font-bold'>1/1</p>
+                    </div> */}
+                    <div className='grid text-white justify-center justify-items-center'>
                         <GiTrade
                             onClick={handleStart}
                             className='text-white text-4xl'
@@ -135,13 +142,6 @@ function earn() {
                             className='text-white text-3xl animate-bounce mt-1'
                             style={{ display: isDim ? 'block' : 'none' }}
                         />
-                    </div>
-                    <div className='grid text-white justify-center justify-items-center'>
-                        <IoIosPeople
-                            className='text-white text-4xl'
-                            onClick={() => console.log('team clicked')}
-                        />
-                        <p className='font-bold'>1/1</p>
                     </div>
                 </div>
 
