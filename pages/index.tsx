@@ -100,7 +100,7 @@ const Index = () => {
                             </Link>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    {/* <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
                             <Image
                                 src='/slider2.png'
@@ -119,7 +119,7 @@ const Index = () => {
                                 height='1080px'
                             />
                         </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
