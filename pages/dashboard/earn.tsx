@@ -128,7 +128,7 @@ function earn() {
                     className='w-full h-full bg-black opacity-[20] bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
-                <div className='grid self-center'>
+                <div className='grid self-center mt-2'>
                     {/* {prevTimeStore && ( */}
                         <CountDownTimer
                             hour={12}
