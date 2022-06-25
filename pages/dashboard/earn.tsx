@@ -116,34 +116,35 @@ function earn() {
                 >
                     <p className='font-bold text-3xl'>0.0001</p>
                 </div>
-                <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 z-10'>
-                    <div className='grid text-white justify-center justify-items-center'>
-                        <IoIosPeople className='text-white text-4xl' />
-                        <p className='font-bold'>1/1</p>
-                    </div>
 
-                    <div className=''>
-                        <GiTrade
-                            onClick={handleStart}
-                            className='text-white text-4xl'
-                            // className='text-white text-4xl animate-spin animate-duration-[4s]'
-                        />
-                        <HiOutlineArrowNarrowUp
-                            className='text-white text-3xl animate-bounce mt-1'
-                            style={{ display: isDim ? 'block' : 'none' }}
-                        />
-                    </div>
-                </div>
                 <div className='grid w-full relative z-0'>
                     <ReactPlayer
                         url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                         width='100%'
                         height='40rem'
                     />
+                    <div className='absolute grid right-0 mr-4 justify-center justify-items-center top-1/5 gap-6 z-10'>
+                        <div className='grid text-white justify-center justify-items-center'>
+                            <IoIosPeople className='text-white text-4xl' />
+                            <p className='font-bold'>1/1</p>
+                        </div>
+
+                        <div className=''>
+                            <GiTrade
+                                onClick={handleStart}
+                                className='text-white text-4xl'
+                                // className='text-white text-4xl animate-spin animate-duration-[4s]'
+                            />
+                            <HiOutlineArrowNarrowUp
+                                className='text-white text-3xl animate-bounce mt-1'
+                                style={{ display: isDim ? 'block' : 'none' }}
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <div
-                    className='w-full h-full bg-black opacity-[20] bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
+                    className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0'
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
