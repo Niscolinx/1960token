@@ -137,7 +137,7 @@ function earn() {
                     <div className=''>
                         <GiTrade
                             onClick={handleStart}
-                            className='text-[#1a1a2d] text-4xl'
+                            className='text-white text-4xl'
                         />
                     </div>
                     <HiOutlineArrowNarrowUp
