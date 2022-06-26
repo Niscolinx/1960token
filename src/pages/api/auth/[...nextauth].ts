@@ -1,4 +1,3 @@
-import { serverUrl } from '../../../../config/index'
 
 import axios from 'axios'
 import NextAuth from 'next-auth'
@@ -9,6 +8,7 @@ import dbConnect from '../../../lib/dbConnect'
 
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from '../../../lib/mongodb'
+import { serverUrl } from '../../../config'
 
 dbConnect()
 export default NextAuth({
