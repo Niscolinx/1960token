@@ -154,21 +154,14 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
-                    {/* {prevTimeStore && (
+                    {prevTimeStore && (
                         <CountDownTimer
                             hour={12}
                             start={miningStart}
                             prevTimeStore={prevTimeStore}
                         />
-                    )} */}
-                    <div
-                        className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
-                        style={neuToUse}
-                    >
-                        <p>
-                            00:00:00
-                        </p>
-                    </div>
+                    )}
+                
                 </div>
             </div>
         </>
