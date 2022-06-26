@@ -93,6 +93,9 @@ const Register = () => {
             case 'email':
                 setEmail(value)
                 break
+            case 'phoneNumber':
+                setPhoneNumber(value)
+                break
             case 'password':
                 setPassword(value)
                 break
