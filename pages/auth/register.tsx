@@ -114,7 +114,7 @@ const Register = () => {
         <div className='w-full md:w-1/3 mx-auto'>
             <form
                 id='register'
-                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
+                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 grid'
                 onSubmit={handleSubmit}
             >
                 <div className='mb-4'>
@@ -234,7 +234,7 @@ const Register = () => {
 
 
                 <button
-                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline grid justify-center background'
+                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline  justify-self-center'
                     type='submit'
                 >
                     Register
