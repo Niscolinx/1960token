@@ -1,4 +1,4 @@
-import { serverUrl } from './../../../config/index'
+import { serverUrl } from '../../../../config/index'
 
 import axios from 'axios'
 import NextAuth from 'next-auth'
