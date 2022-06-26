@@ -28,7 +28,7 @@ export default NextAuth({
                     type: 'email',
                 },
                 password: { label: 'Password', type: 'password' },
-                
+                username: {label: 'username', type: 'text'}
             },
             async authorize(credentials, req) {
                 const email = credentials?.email
