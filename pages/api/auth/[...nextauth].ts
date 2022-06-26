@@ -30,11 +30,13 @@ export default NextAuth({
                 password: { label: 'Password', type: 'password' },
                 username: {label: 'username', type: 'text'},
                 phoneNumber: {label: 'phoneNumber', type: 'text'}
-                
+
             },
             async authorize(credentials, req) {
                 const email = credentials?.email
                 const password = credentials?.password
+                const username = credentials?.username
+                const phoneNumber = credentials?.phoneNumber
 
                 return axios
                     .post(`${serverUrl}/api/auth/login`, {
