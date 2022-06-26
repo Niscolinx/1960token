@@ -4,10 +4,10 @@ import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
-import CountDownTimer from '../../../components/countDownTimer'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
+import CountDownTimer from '../../components/countDownTimer'
 
 function earn() {
     const { data: session } = useSession()
