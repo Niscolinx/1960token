@@ -24,6 +24,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import { Autoplay, Pagination } from 'swiper'
+import Counter from '../features/counter/Counter'
 
 const Index = () => {
     const { theme } = useTheme()
@@ -128,7 +129,6 @@ const Index = () => {
                 </Swiper>
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
-                  
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -276,6 +276,7 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
+                <Counter />
             </div>
         </>
     )

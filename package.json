@@ -5,6 +5,7 @@
         "build": "next build",
         "start": "next start"
     },
+    "resolutions": { "@types/react": "17.0.43" },
     "dependencies": {
         "@next-auth/mongodb-adapter": "^1.0.3",
         "axios": "^0.27.2",

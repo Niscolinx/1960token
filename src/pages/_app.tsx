@@ -3,10 +3,10 @@ import '../styles/globals.scss'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
-import Layout from '../../components/Layout'
+import Layout from '../components/Layout'
 import { ThemeProvider } from 'next-themes'
 import { Provider } from 'react-redux'
-import store from '../../app/store'
+import store from '../app/store'
 
 
 
