@@ -6,6 +6,7 @@ const Register = () => {
 
     const [username, setUsername] = useState('hello')
     const [email, setEmail] = useState('hello@hello.com')
+    const [phoneNumber, setPhoneNumber] = useState('08148233233')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
@@ -146,7 +147,7 @@ const Register = () => {
                         className='block text-gray-700 text-sm font-bold mb-2'
                         htmlFor='email'
                     >
-                        Email
+                        Phone No
                     </label>
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
@@ -154,11 +155,11 @@ const Register = () => {
                                 ? 'border-red-500'
                                 : ''
                         }`}
-                        id='email'
-                        type='email'
-                        name='email'
+                        id='phoneNumber'
+                        type='text'
+                        name='phoneNumber'
                         required
-                        value={email}
+                        value={phoneNumber}
                         onChange={changeHandler}
                     />
                 </div>
