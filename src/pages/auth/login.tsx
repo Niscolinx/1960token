@@ -66,8 +66,7 @@ const Login = ({ providers }: LoginProps) => {
             // } 
             else if (!isError) {
                 console.log('sign in.....', isError)
-                signIn('credentials')
-                // signIn('credentials', { redirect: false, emailOrUsername, password })
+                signIn('credentials', { redirect: false, emailOrUsername, password })
                 //     .then((data:any) => {
                 //         console.log('data returned', data)
 
