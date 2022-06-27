@@ -1,4 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
+import User, { IUser } from '../../models/User'
+
+export type IreturnUser = {
+    
+}
 
 export default async function StartMining(req: NextApiRequest, res: NextApiResponse) {
     console.log('req body', req.body)
