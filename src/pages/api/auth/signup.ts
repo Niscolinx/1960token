@@ -7,6 +7,8 @@ import User from '../../../models/User';
 async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
 
     try{
+        await dbConnect()
+
     if (req.method === 'POST') {
         console.log("checking")
         //Getting email and password from body
@@ -18,7 +20,24 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
             return
         }
 
-        await dbConnect()
+        const existingUser = await User.findOne({ email })
+        const existingUsername = await User.findOne({
+            username
+        })
+        const existingPhoneNumber = await User.findOne({phoneNumber})
+
+       if (existingUser) {
+           const error = new Error('User already exists')
+           throw error
+       }
+
+       if (existingUsername) {
+           throw new Error('Username already taken')
+       }
+
+       if(existingPhoneNumber){
+        throw new Error('Number already in use')
+       }
 
         const storeUser = new User({
             email,
