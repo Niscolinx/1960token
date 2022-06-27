@@ -35,6 +35,8 @@ export default NextAuth({
                 const emailOrUsername = credentials?.emailOrUsername
                 const password = credentials?.password
 
+                console.log('nextauth login')
+
                 return axios
                     .post(`${serverUrl}/api/auth/login`, {
                         emailOrUsername,

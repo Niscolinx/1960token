@@ -19,9 +19,11 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
             username: emailOrUsername,
         })
 
-        if (email || username) {
-            console.log({ email })
-            console.log({ username })
+       // console.log({email, username})
+
+
+        if (!email || !username) {
+           console.log("not found")
         } else {
             console.log('invalid user')
         }

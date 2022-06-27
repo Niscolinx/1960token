@@ -66,22 +66,23 @@ const Login = ({ providers }: LoginProps) => {
             // } 
             else if (!isError) {
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect: false, emailOrUsername, password })
-                    .then((data:any) => {
-                        console.log('data returned', data)
+                signIn('credentials')
+                // signIn('credentials', { redirect: false, emailOrUsername, password })
+                //     .then((data:any) => {
+                //         console.log('data returned', data)
 
-                        if(data.error){
-                            setError(true)
-                              setMessage({
-                                  value: "Invalid User",
-                                  type: 'error',
-                                  style: 'text-red-500',
-                              })
-                              setMessageDisplay('block')
-                            return
-                        }
-                        Router.push('/dashboard')
-                    })
+                //         if(data.error){
+                //             setError(true)
+                //               setMessage({
+                //                   value: "Invalid User",
+                //                   type: 'error',
+                //                   style: 'text-red-500',
+                //               })
+                //               setMessageDisplay('block')
+                //             return
+                //         }
+                //         Router.push('/dashboard')
+                //     })
                    
             }
         }
