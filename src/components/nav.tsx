@@ -26,21 +26,14 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     let isSession = null
     if (session) {
-        console.log({session})
+        console.log({ session })
         isSession = (
             <div className='flex justify-between'>
-                <div className='flex items-center gap-2'>
-                    <img
-                        src={`${session?.user?.image}`}
-                        alt=''
-                        className='rounded-full w-10'
-                    />
-                    <div className='block text-sm font-semibold'>
-                        <p>{session?.user?.name}</p>
-                        <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
-                            Not verified
-                        </p>
-                    </div>
+                <div className='block text-sm font-semibold'>
+                    <p>{session?.user?.name}</p>
+                    <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
+                        Not verified
+                    </p>
                 </div>
                 <Link href='/api/auth/signout'>
                     <button className='bg-gray-300 text-black rounded px-2'>
