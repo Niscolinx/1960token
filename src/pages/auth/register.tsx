@@ -77,8 +77,9 @@ const Register = () => {
                     console.log({ data })
                 })
                 .catch(({response: {data}}) => {
+                    
                      setMessageDisplay('block')
-                     setMessage({ ...message, value: data })
+                     setMessage({ ...message, value: data.message })
                 })
         }
     }
