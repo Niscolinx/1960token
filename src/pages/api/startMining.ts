@@ -1,22 +1,21 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
-export type IreturnUser = {
-    isMining: boolean,
-    miningStart: string
-}
 
-export default async function StartMining(req: NextApiRequest, res: NextApiResponse) {
+export default async function StartMining(
+    req: NextApiRequest,
+    res: NextApiResponse
+){
     console.log('req body', req.body)
 
     const { email }: IUser = req.body.session.user
-    const {remainingTime} = req.body
+    const { remainingTime } = req.body
 
-    console.log('email found', {email}, {remainingTime})
+    console.log('email found', { email }, { remainingTime })
 
     const user = await User.findOne({ email })
 
-    console.log({user})
+    console.log({ user })
 
 
     if (user.isMining) {
@@ -33,7 +32,7 @@ export default async function StartMining(req: NextApiRequest, res: NextApiRespo
 
         return res.json({
             isMining: user.isMining,
-            miningStart: user.miningStart
+            miningStart: user.miningStart,
         })
     }
 }
