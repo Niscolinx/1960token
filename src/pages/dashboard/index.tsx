@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react'
 const Home = () => {
     const {data: session} = useSession()
 
-    //console.log({session})
+    console.log({session})
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()

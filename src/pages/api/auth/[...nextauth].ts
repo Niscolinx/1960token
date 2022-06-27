@@ -73,7 +73,8 @@ export default NextAuth({
         signIn: async ({user}) => {
             console.log({user})
             if (user) {
-                return '/dashboard'
+                console.log({user})
+                return true
             } else {
                 return false
 
