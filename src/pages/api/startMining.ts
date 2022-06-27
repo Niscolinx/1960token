@@ -2,7 +2,8 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
 export type IreturnUser = {
-    
+    isMining: boolean,
+    miningStart: string
 }
 
 export default async function StartMining(req: NextApiRequest, res: NextApiResponse) {
