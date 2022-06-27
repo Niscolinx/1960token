@@ -17,7 +17,7 @@ const initialState: MiningState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const incrementAsync = createAsyncThunk('co', async (amount: number) => {
+export const initMineAsync = createAsyncThunk('mine', async (amount: number) => {
     const response = await (amount)
     // The value we return becomes the `fulfilled` action payload
     return response.data
