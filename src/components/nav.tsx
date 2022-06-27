@@ -30,7 +30,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
         isSession = (
             <div className='flex justify-between'>
                 <div className='block text-sm font-semibold'>
-                    <p>{session?.user?.name}</p>
+                    <p>{session.user?.email}</p>
                     <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
                         Not verified
                     </p>
