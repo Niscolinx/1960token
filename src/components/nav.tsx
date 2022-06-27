@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 import { nextAuthSession } from '../lib/types'
+import { IUser } from '../models/User'
 
 function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
@@ -26,11 +27,12 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     let isSession = null
     if (session) {
+        const username = session.foundUser as IUser
         console.log({ session })
         isSession = (
             <div className='flex justify-between'>
                 <div className='block text-sm font-semibold'>
-                    <p>{session.user?.email}</p>
+                    <p>{}</p>
                     <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
                         Not verified
                     </p>
