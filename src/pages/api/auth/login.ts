@@ -12,9 +12,13 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         const email: IUser | null = await User.findOne({ email: emailOrUsername })
         const username: IUser | null = await User.findOne({ username: emailOrUsername })
 
-        if (!user) {
+        if (!email || !username) {
             return res.status(400).json('invalid user')
+        }else{
+            console.log({email})
+            console.log({username})
         }
+        
 
         const checkPassword = await bcrypt.compare(password, user!.password)
         if (!checkPassword) {
