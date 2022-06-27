@@ -77,9 +77,8 @@ const Register = () => {
                     console.log({ data })
                 })
                 .catch(({response: {data}}) => {
-                     setErrorFields(['email'])
                      setMessageDisplay('block')
-                     setMessage({ ...message, value: 'Email already exists' })
+                     setMessage({ ...message, value: data })
                 })
         }
     }
