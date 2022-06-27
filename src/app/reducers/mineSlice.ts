@@ -3,13 +3,13 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { AppState, AppThunk } from '../../app/store'
 
 export interface MiningState {
-    value: number
-    status: 'idle' | 'loading' | 'failed'
+    miningStart: string
+    isMining: boolean
 }
 
 const initialState: MiningState = {
-    value: 0,
-    status: 'idle',
+    miningStart: '',
+    isMining: false,
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
