@@ -27,12 +27,14 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     let isSession = null
     if (session) {
-        const username = session.foundUser as IUser
+        const foundUser = session.foundUser as {
+            user:IUser
+        }
         console.log({ session })
         isSession = (
             <div className='flex justify-between'>
                 <div className='block text-sm font-semibold'>
-                    <p>{}</p>
+                    <p>{foundUser.user.username}</p>
                     <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
                         Not verified
                     </p>
