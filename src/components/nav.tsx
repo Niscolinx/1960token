@@ -1,11 +1,11 @@
-import { Session } from 'next-auth'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { useRouter } from 'next/router'
+import { nextAuthSession } from '../lib/types'
 
-function nav({ session }: { session: Session | null }) {
+function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
     const router = useRouter()
