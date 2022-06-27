@@ -70,6 +70,7 @@ const Register = () => {
                     .post('/api/auth/signup', {
                         username,
                         email,
+                        phoneNumber,
                         password: confirmPassword,
                     })
                     .then((data) => {
