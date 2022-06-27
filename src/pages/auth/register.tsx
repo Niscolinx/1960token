@@ -75,6 +75,12 @@ const Register = () => {
                 })
                 .then(({data}) => {
                     console.log({ data })
+                    setMessage({
+                        value: data.message,
+                        type: 'success',
+                        style: 'text-green-500',
+                    })
+                    setMessageDisplay('block')
                 })
                 .catch(({response: {data}}) => {
                     
