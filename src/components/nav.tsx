@@ -30,7 +30,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
         const foundUser = session.foundUser as {
             user:IUser
         }
-        console.log({ session })
         isSession = (
             <div className='flex justify-between'>
                 <div className='block text-sm font-semibold'>
