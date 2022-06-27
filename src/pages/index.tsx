@@ -275,7 +275,6 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-                <Counter />
             </div>
         </>
     )
