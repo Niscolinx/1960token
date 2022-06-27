@@ -12,7 +12,7 @@ import { serverUrl } from '../../../config'
 
 dbConnect()
 export default NextAuth({
-    adapter: MongoDBAdapter(clientPromise),
+    //adapter: MongoDBAdapter(clientPromise),
 
     providers: [
         CredentialsProvider({

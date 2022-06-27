@@ -21,11 +21,12 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
 
        // console.log({email, username})
 
+       const user = email || username
 
-        if (!email || !username) {
+        if (!user) {
            console.log("not found")
         } else {
-            console.log('invalid user')
+            console.log('====================', user)
         }
 
         // const checkPassword = await bcrypt.compare(password, user!.password)
