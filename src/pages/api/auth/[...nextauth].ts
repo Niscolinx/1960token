@@ -1,4 +1,3 @@
-
 import axios from 'axios'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
@@ -28,8 +27,6 @@ export default NextAuth({
                     type: 'text',
                 },
                 password: { label: 'Password', type: 'password' },
-           
-
             },
             async authorize(credentials, req) {
                 const emailOrUsername = credentials?.emailOrUsername
@@ -51,8 +48,7 @@ export default NextAuth({
                         return
                     })
             },
-        })
-       
+        }),
     ],
 
     pages: {
@@ -61,23 +57,17 @@ export default NextAuth({
     callbacks: {
         jwt: async ({ token, user }) => {
             user && (token.user = user)
-            console.log('callback token', {token})
             return token
         },
         session: async ({ session, token }) => {
             session.user = token
-
-            console.log('callback session', {session}, {token})
-         return session
+            return session
         },
-        signIn: async ({user}) => {
-            console.log({user})
+        signIn: async ({ user }) => {
             if (user) {
-                console.log({user})
                 return true
             } else {
                 return false
-
             }
         },
         async redirect({ url, baseUrl }) {
