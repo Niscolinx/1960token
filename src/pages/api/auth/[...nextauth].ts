@@ -70,15 +70,15 @@ export default NextAuth({
         //     console.log('callback session', {session}, {token})
         //  return session
         // },
-        // signIn: async ({user}) => {
-        //     console.log({user})
-        //     if (user) {
-        //         return '/dashboard'
-        //     } else {
-        //         return false
+        signIn: async ({user}) => {
+            console.log({user})
+            if (user) {
+                return '/dashboard'
+            } else {
+                return false
 
-        //     }
-        // },
+            }
+        },
         async redirect({ url, baseUrl }) {
             // Allows relative callback URLs
             return `${baseUrl}/dashboard`
