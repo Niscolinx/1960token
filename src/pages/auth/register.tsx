@@ -78,7 +78,7 @@ const Register = () => {
                     setMessage({
                         value: data.message,
                         type: 'success',
-                        style: 'text-green-500',
+                        style: 'text-green-500 font-semibold uppercase',
                     })
                     setMessageDisplay('block')
                 })
