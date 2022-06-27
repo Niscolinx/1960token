@@ -1,8 +1,7 @@
-import { IUser } from '../../../../models/User'
 import bcrypt from 'bcryptjs'
 import { NextApiRequest, NextApiResponse } from 'next'
-import User from '../../../../models/User'
 import jwt from 'jsonwebtoken'
+import User from '../../../models/User'
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
     console.log('login...', req.body)
