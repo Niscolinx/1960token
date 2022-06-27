@@ -18,7 +18,7 @@ interface LoginProps {
 const Login = ({ providers }: LoginProps) => {
     type message = { value: string; type?: string; style?: string }
 
-    const [email, setEmail] = useState('hello@hello.com')
+    const [emailOrUsername, setEmailOrUsername] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
@@ -56,17 +56,17 @@ const Login = ({ providers }: LoginProps) => {
                 setMessageDisplay('block')
             }
 
-            if (key === 'email') {
-                const checkemail = isValidMail(value.toString())
+            // if (key === 'emailOrUsername') {
+            //     const checkemail = isValidMail(value.toString())
 
-                if (!checkemail) {
-                    isError = true
-                    setErrorFields((oldArr) => [...oldArr, key])
-                }
-            } 
+            //     if (!checkemail) {
+            //         isError = true
+            //         setErrorFields((oldArr) => [...oldArr, key])
+            //     }
+            // } 
             else if (!isError) {
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect: false, email, password })
+                signIn('credentials', { redirect: false, emailOrUsername, password })
                     .then((data:any) => {
                         console.log('data returned', data)
 
@@ -110,8 +110,8 @@ const Login = ({ providers }: LoginProps) => {
         const { name, value } = e.target
 
         switch (name) {
-            case 'email':
-                setEmail(value)
+            case 'emailOrUsername':
+                setEmailOrUsername(value)
                 break
             case 'password':
                 setPassword(value)
@@ -154,7 +154,7 @@ const Login = ({ providers }: LoginProps) => {
                             type='text'
                             name='emailOrUsername'
                             required
-                            value={email}
+                            value={emailOrUsername}
                             onChange={changeHandler}
                         />
                     </div>
@@ -192,7 +192,7 @@ const Login = ({ providers }: LoginProps) => {
                 </form>
 
                 {Object.values(providers).map((provider) => {
-                    if (provider.name === 'Credentials' || provider.name === 'Email') {
+                    if (provider.name === 'Credentials' || provider.name === 'EmailOrUsername') {
                         return
                     }
 
