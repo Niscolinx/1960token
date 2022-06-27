@@ -26,6 +26,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     let isSession = null
     if (session) {
+        console.log({session})
         isSession = (
             <div className='flex justify-between'>
                 <div className='flex items-center gap-2'>
