@@ -1,6 +1,6 @@
-import axios from 'axios';
-import dayjs from 'dayjs';
-import { Session } from 'next-auth';
+import axios from 'axios'
+import dayjs from 'dayjs'
+import { Session } from 'next-auth'
 export async function startMine(session: Session): Promise<{ data: number }> {
     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
@@ -22,7 +22,7 @@ export async function startMine(session: Session): Promise<{ data: number }> {
     } else {
         console.log('handle start already')
     }
-return {
-    data:1
-}
+    return {
+        data: 1,
+    }
 }
