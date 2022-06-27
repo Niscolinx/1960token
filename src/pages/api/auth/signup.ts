@@ -26,7 +26,9 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
             if (existingUserEmail) {
                 const error = new Error('Email already exists')
-                throw error
+                 return res.status(401).json({
+                     error
+                 })
             }
 
             if (existingUsername) {
