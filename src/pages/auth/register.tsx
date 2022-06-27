@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
 const Register = () => {
+    const router = useRouter()
     type message = { value: string; type?: string; style?: string }
 
     const [username, setUsername] = useState('hello')
@@ -81,6 +83,10 @@ const Register = () => {
                         style: 'text-green-500 font-semibold uppercase',
                     })
                     setMessageDisplay('block')
+
+                    setTimeout(() => {
+                        router.push("/auth/login")
+                    }, 500)
                 })
                 .catch(({response: {data}}) => {
                     
