@@ -60,7 +60,7 @@ export default NextAuth({
             return token
         },
         session: async ({ session, token }) => {
-            session.user = token
+            session.foundUser = token
             return session
         },
         signIn: async ({ user }) => {
