@@ -66,20 +66,17 @@ const Register = () => {
         if (!isError) {
             console.log('sending protocol')
             console.log({ password, phoneNumber, username, email })
-            try {
-                axios
-                    .post('/api/auth/signup', {
-                        username,
-                        email,
-                        phoneNumber,
-                        password: confirmPassword,
-                    })
-                    .then((data) => {
-                        console.log({ data })
-                    }).catch(r => console.log({r}))
-            } catch (err) {
-                console.log({ err })
-            }
+            axios
+                .post('/api/auth/signup', {
+                    username,
+                    email,
+                    phoneNumber,
+                    password: confirmPassword,
+                })
+                .then((data) => {
+                    console.log({ data })
+                })
+                .catch((r) => console.log({ r }))
         }
     }
 
