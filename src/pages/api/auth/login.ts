@@ -25,8 +25,10 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
 
         if (!user) {
            console.log("not found")
+           return res.status(401).json('Not found')
         } else {
             console.log('====================', user)
+           return res.status(200).json(user)
         }
 
         // const checkPassword = await bcrypt.compare(password, user!.password)
