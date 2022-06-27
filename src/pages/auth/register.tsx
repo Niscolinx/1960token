@@ -73,10 +73,10 @@ const Register = () => {
                     phoneNumber,
                     password: confirmPassword,
                 })
-                .then((data) => {
+                .then(({data}) => {
                     console.log({ data })
                 })
-                .catch((r) => console.log({ r }))
+                .catch((err) => console.log(err))
         }
     }
 
