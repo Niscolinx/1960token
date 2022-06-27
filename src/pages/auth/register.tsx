@@ -76,7 +76,7 @@ const Register = () => {
                 .then(({data}) => {
                     console.log({ data })
                 })
-                .catch((err) => console.log(err))
+                .catch(({response: data}) => console.log(data))
         }
     }
 
