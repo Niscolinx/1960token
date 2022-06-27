@@ -12,7 +12,7 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
         //Getting email and password from body
         const { email, password, username, phoneNumber } = req.body
         //Validate
-        if (!email || !email.includes('@') || !password) {
+        if (!email || !email.includes('@') || !password || !phoneNumber) {
             console.log('failed')
             res.status(422).json({ message: 'Invalid Data' })
             return
@@ -23,7 +23,8 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
         const storeUser = new User({
             email,
             password: await bcrypt.hash(password, 12),
-            username
+            username,
+            phoneNumber
         })
 
         const verifyStored = await storeUser.save()
