@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { AppState, AppThunk } from '../../app/store'
+import { nextAuthSession } from '../../lib/types'
 
 export interface MiningState {
     miningStart: string
@@ -17,7 +18,7 @@ const initialState: MiningState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const initMineAsync = createAsyncThunk('mine', async (session: Session) => {
+export const initMineAsync = createAsyncThunk('mine', async (session: nextAuthSession) => {
     const response = await (amount)
     // The value we return becomes the `fulfilled` action payload
     return response.data
