@@ -1,15 +1,16 @@
 import bcrypt from 'bcryptjs'
 import { NextApiRequest, NextApiResponse } from 'next'
 import jwt from 'jsonwebtoken'
-import User from '../../../models/User'
+import User, { IUser } from '../../../models/User'
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
     console.log('login...', req.body)
 
-    const { email, password } = req.body
+    const { emailOrUsername, password } = req.body
 
     try {
-        const user: IUser | null = await User.findOne({ email })
+        const email: IUser | null = await User.findOne({ email: emailOrUsername })
+        const username: IUser | null = await User.findOne({ username: emailOrUsername })
 
         if (!user) {
             return res.status(400).json('invalid user')
