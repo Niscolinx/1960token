@@ -150,9 +150,9 @@ const Login = ({ providers }: LoginProps) => {
                                     ? 'border-red-500'
                                     : ''
                             }`}
-                            id='email'
-                            type='email'
-                            name='email'
+                            id='emailOrUsername'
+                            type='text'
+                            name='emailOrUsername'
                             required
                             value={email}
                             onChange={changeHandler}
