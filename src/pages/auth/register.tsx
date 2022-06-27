@@ -65,7 +65,7 @@ const Register = () => {
         setError(isError)
         if (!isError) {
             console.log('sending protocol')
-            console.log({password, phoneNumber, username, email})
+            console.log({ password, phoneNumber, username, email })
             try {
                 axios
                     .post('/api/auth/signup', {
@@ -233,7 +233,6 @@ const Register = () => {
                         onChange={changeHandler}
                     />
                 </div>
-
 
                 <button
                     className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline  justify-self-center'

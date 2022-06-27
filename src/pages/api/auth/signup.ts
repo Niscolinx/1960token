@@ -18,14 +18,14 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 return
             }
 
-            const existingUser = await User.findOne({ email })
+            const existingUserEmail = await User.findOne({ email })
             const existingUsername = await User.findOne({
                 username,
             })
             const existingPhoneNumber = await User.findOne({ phoneNumber })
 
-            if (existingUser) {
-                const error = new Error('User already exists')
+            if (existingUserEmail) {
+                const error = new Error('Email already exists')
                 throw error
             }
 
