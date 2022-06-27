@@ -1,7 +1,8 @@
 import axios from 'axios'
 import dayjs from 'dayjs'
 import { Session } from 'next-auth'
-export async function startMine(session: Session): Promise<{ data: number }> {
+
+export async function startMine(session: Session): Promise<void> {
     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
     const getTimeStore = localStorage.getItem('miningTime')
@@ -22,7 +23,5 @@ export async function startMine(session: Session): Promise<{ data: number }> {
     } else {
         console.log('handle start already')
     }
-    return {
-        data: 1,
-    }
+    
 }
