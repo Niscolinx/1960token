@@ -190,7 +190,7 @@ const Login = ({ providers }: LoginProps) => {
                         </button>
                     </div>
                 </form>
-
+{/* 
                 {Object.values(providers).map((provider) => {
                     if (provider.name === 'Credentials' || provider.name === 'EmailOrUsername') {
                         return
@@ -209,7 +209,7 @@ const Login = ({ providers }: LoginProps) => {
                             </button>
                         </div>
                     )
-                })}
+                })} */}
                 <div className='grid mt-10 gap-2 px-8'>
                  
                     <Link
