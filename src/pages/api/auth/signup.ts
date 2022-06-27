@@ -10,7 +10,7 @@ async function signupHandler(req:NextApiRequest, res:NextApiResponse) {
     if (req.method === 'POST') {
         console.log("checking")
         //Getting email and password from body
-        const { email, password, username } = req.body
+        const { email, password, username, phoneNumber } = req.body
         //Validate
         if (!email || !email.includes('@') || !password) {
             console.log('failed')
