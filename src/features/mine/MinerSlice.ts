@@ -25,11 +25,11 @@ const initialState: CounterState = {
 export const incrementAsync = createAsyncThunk('mining', async (userSession: nextAuthSession) => {
     const response = await startMining(userSession)
     // The value we return becomes the `fulfilled` action payload
-    return response.data
+    return response
 })
 
-export const counterSlice = createSlice({
-    name: 'counter',
+export const MiningSlice = createSlice({
+    name: 'mine',
     initialState,
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
