@@ -1,24 +1,18 @@
-import axios from "axios"
-import dayjs from "dayjs"
-import { nextAuthSession } from "../../lib/types"
+import axios, { AxiosResponse } from 'axios'
+import dayjs from 'dayjs'
+import { nextAuthSession } from '../../lib/types'
 
-export async function startMining(session:nextAuthSession): Promise<void> {
+export async function startMining(
+    session: nextAuthSession
+): Promise<AxiosResponse<any, any>> {
     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
     const getTimeStore = localStorage.getItem('miningTime')
 
-   // if (!getTimeStore) {
-        //const remainingTime = dayjsRemainingTimeStamp
+    // if (!getTimeStore) {
+    //const remainingTime = dayjsRemainingTimeStamp
 
-        axios
-            .post('/api/startMining', { session })
-            .then(({ data }) => {
-                // const { miningStart } = data
-                // localStorage.setItem('miningTime', miningStart)
-                // setPrevTimeStore(dayjs(miningStart))
+    const response = await axios.post('/api/startMining', { session })
 
-                return data
-            })
-            
-    
+    return response
 }
