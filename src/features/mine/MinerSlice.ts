@@ -1,3 +1,4 @@
+import { Dayjs } from 'dayjs';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { AppState, AppThunk } from '../../app/store'
@@ -6,13 +7,13 @@ import { startMining } from './MineAPI'
 export interface CounterState {
     value: number
     status: 'idle' | 'loading' | 'failed'
-    startedMining: ''
+    startedMining: Dayjs
 }
 
 const initialState: CounterState = {
     value: 0,
     status: 'idle',
-    startedMining: ''
+    startedMining: 
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
