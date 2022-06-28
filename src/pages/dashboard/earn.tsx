@@ -7,7 +7,7 @@ import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
-import CountDownTimer from '../../features/mine/MineTimer'
+import MineTimer from '../../features/mine/MineTimer'
 
 function earn() {
     const { data: session } = useSession()
@@ -136,7 +136,7 @@ function earn() {
                 ></div>
                 <div className='grid self-center mt-2'>
                     {prevTimeStore && (
-                        <CountDownTimer
+                        <MineTimer
                             hour={12}
                             start={miningStart}
                             prevTimeStore={prevTimeStore}
