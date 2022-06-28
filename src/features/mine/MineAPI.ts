@@ -1,12 +1,25 @@
-export async function fetchCount(amount = 1): Promise<{ data: number }> {
-    const response = await fetch('/api/counter', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ amount }),
-    })
-    const result = await response.json()
+import axios from "axios"
+import dayjs from "dayjs"
 
-    return result
+export async function fetchCount(amount = 1): Promise<void> {
+    const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
+
+    const getTimeStore = localStorage.getItem('miningTime')
+
+    if (!getTimeStore) {
+        const remainingTime = dayjsRemainingTimeStamp
+
+        axios
+            .post('/api/startMining', { session, remainingTime })
+            .then(({ data }) => {
+                const { miningStart } = data
+                localStorage.setItem('miningTime', miningStart)
+                setPrevTimeStore(dayjs(miningStart))
+            })
+            .catch((err) => {
+                console.log({ err })
+            })
+    } else {
+        console.log('handle start already')
+    }
 }
