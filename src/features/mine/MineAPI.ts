@@ -7,11 +7,11 @@ export async function startMining(session:nextAuthSession): Promise<void> {
 
     const getTimeStore = localStorage.getItem('miningTime')
 
-    if (!getTimeStore) {
-        const remainingTime = dayjsRemainingTimeStamp
+   // if (!getTimeStore) {
+        //const remainingTime = dayjsRemainingTimeStamp
 
         axios
-            .post('/api/startMining', { session, remainingTime })
+            .post('/api/startMining', { session })
             .then(({ data }) => {
                 // const { miningStart } = data
                 // localStorage.setItem('miningTime', miningStart)
