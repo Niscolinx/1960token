@@ -7,7 +7,7 @@ import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
-import CountDownTimer from '../../features/mine/countDownTimer'
+import CountDownTimer from '../../features/mine/MineTimer'
 
 function earn() {
     const { data: session } = useSession()
