@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { AppState, AppThunk } from '../../app/store'
-import { fetchCount } from './MineAPI'
+import { startMining } from './MineAPI'
 
 export interface CounterState {
     value: number
@@ -20,8 +20,8 @@ const initialState: CounterState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const incrementAsync = createAsyncThunk('co', async (amount: number) => {
-    const response = await fetchCount(amount)
+export const incrementAsync = createAsyncThunk('mining', async (amount: number) => {
+    const response = await startMining(amount)
     // The value we return becomes the `fulfilled` action payload
     return response.data
 })
