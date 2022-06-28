@@ -20,7 +20,5 @@ export async function startMining(session:nextAuthSession): Promise<void> {
                 return data
             })
             
-    } else {
-        console.log('handle start already')
-    }
+    
 }
