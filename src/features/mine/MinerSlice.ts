@@ -6,11 +6,13 @@ import { fetchCount } from './MineAPI'
 export interface CounterState {
     value: number
     status: 'idle' | 'loading' | 'failed'
+    startedMining: ''
 }
 
 const initialState: CounterState = {
     value: 0,
     status: 'idle',
+    startedMining: ''
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
