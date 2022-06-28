@@ -1,7 +1,8 @@
 import axios from "axios"
 import dayjs from "dayjs"
+import { nextAuthSession } from "../../lib/types"
 
-export async function startMining(amount = 1): Promise<void> {
+export async function startMining(session:nextAuthSession): Promise<void> {
     const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
     const getTimeStore = localStorage.getItem('miningTime')
