@@ -13,13 +13,13 @@ export async function startMining(session:nextAuthSession): Promise<void> {
         axios
             .post('/api/startMining', { session, remainingTime })
             .then(({ data }) => {
-                const { miningStart } = data
-                localStorage.setItem('miningTime', miningStart)
-                setPrevTimeStore(dayjs(miningStart))
+                // const { miningStart } = data
+                // localStorage.setItem('miningTime', miningStart)
+                // setPrevTimeStore(dayjs(miningStart))
+
+                return data
             })
-            .catch((err) => {
-                console.log({ err })
-            })
+            
     } else {
         console.log('handle start already')
     }
