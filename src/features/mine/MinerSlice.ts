@@ -1,4 +1,4 @@
-import { Dayjs } from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { AppState, AppThunk } from '../../app/store'
@@ -13,7 +13,7 @@ export interface CounterState {
 const initialState: CounterState = {
     value: 0,
     status: 'idle',
-    startedMining: 
+    startedMining: dayjs().add(12, 'hours')
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
