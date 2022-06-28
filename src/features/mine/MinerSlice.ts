@@ -1,3 +1,4 @@
+import { nextAuthSession } from './../../lib/types';
 import dayjs, { Dayjs } from 'dayjs';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
@@ -21,8 +22,8 @@ const initialState: CounterState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const incrementAsync = createAsyncThunk('mining', async (amount: number) => {
-    const response = await startMining(amount)
+export const incrementAsync = createAsyncThunk('mining', async (userSession: nextAuthSession) => {
+    const response = await startMining(userSession)
     // The value we return becomes the `fulfilled` action payload
     return response.data
 })
