@@ -1,11 +1,14 @@
 import { initStopMineAsync } from './../src/features/mine/MinerSlice';
 import { useAppDispatch } from './../src/app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
+import { useSession } from 'next-auth/react';
+
 
 export const countDown = (prevTimeStore?: Dayjs) => {
+   // const { data: session } = useSession()
     
     const dayjsNowTimeStamp = dayjs()
-    const dispatch = useAppDispatch()
+   // const dispatch = useAppDispatch()
     if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
         console.log("Timer finished")
        // dispatch(initStopMineAsync())
