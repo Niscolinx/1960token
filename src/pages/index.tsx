@@ -20,7 +20,6 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import { Autoplay, Pagination } from 'swiper'
-import Counter from '../features/counter/Counter'
 
 const Index = () => {
     const { theme } = useTheme()
