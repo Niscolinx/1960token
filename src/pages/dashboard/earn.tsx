@@ -13,8 +13,6 @@ function earn() {
     const { data: session } = useSession()
     const miningState = useAppSelector(selectMining)
 
-    const [checkMining, setCheckMining] = useState(miningState)
-
     const [miningStart, setMiningStart] = useState(false)
     const [isDim, setIsDim] = useState(false)
 
@@ -61,6 +59,7 @@ function earn() {
         if (session && !getTimeStore) {
             console.log('about to dispatch')
             dispatch(initMineAsync(session))
+            console.log("mining state",{miningState})
         }
         //}
         // else {
