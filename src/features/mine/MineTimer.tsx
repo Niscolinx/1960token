@@ -3,7 +3,6 @@ import { countDown } from '../../../utils/countDown'
 import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { useAppSelector } from '../../app/hooks'
-import { MineState } from '../../app/store'
 import { selectMining } from './MinerSlice'
 
 
@@ -21,9 +20,8 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
-    const mineState = useAppSelector(selectMining)
+    const mininingState = useAppSelector(selectMining)
 
-    console.log({ mineState })
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
