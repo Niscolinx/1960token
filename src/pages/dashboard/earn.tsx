@@ -6,11 +6,13 @@ import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
-import { useAppDispatch } from '../../app/hooks'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { initMineAsync } from '../../features/mine/MinerSlice'
 
 function earn() {
     const { data: session } = useSession()
+    const miningState = useAppDispatch()
+    console.log({miningState})
 
     console.log({session})
 
