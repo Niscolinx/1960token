@@ -8,6 +8,7 @@ export interface IUser {
     isMining: boolean
     miningStartedAt: string
     role: string
+    hello: string
     status: string
     password: string
     pendingWithdrawals: Types.ObjectId[]
@@ -54,6 +55,9 @@ const userSchema = new Schema<IUser>(
             default: 'Active',
         },
 
+        hello : {
+            type: String,
+        },
         pendingDeposits: [
             {
                 type: Schema.Types.ObjectId,
@@ -82,4 +86,4 @@ const userSchema = new Schema<IUser>(
     { timestamps: true }
 )
 
-export default models.User || model('User', userSchema)
+export default models.user || model('user', userSchema)
