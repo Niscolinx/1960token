@@ -26,7 +26,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     const dayjsNowTimeStamp = dayjs()
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
         console.log('Timer finished')
-        dispatch(initStopMineAsync(session))
+        //dispatch(initStopMineAsync(session))
     }
 
     const updateRemainingTimer = (prev?: Dayjs) => {
