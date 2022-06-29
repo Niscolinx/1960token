@@ -6,7 +6,7 @@ import { SessionProvider } from 'next-auth/react'
 import Layout from '../components/Layout'
 import { ThemeProvider } from 'next-themes'
 import { Provider } from 'react-redux'
-import {store} from '../app/store'
+import {store, persistedStore} from '../app/store'
 import { PersistGate } from 'redux-persist/integration/react'
 
 
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
         <>
             <SessionProvider session={session}>
                 <Provider store={store}>
-                    <PersistGate loading={null} persistor={persistor}>
+                    <PersistGate loading={null} persistor={persistedStore}>
 
                     <ThemeProvider
                         attribute='class'
