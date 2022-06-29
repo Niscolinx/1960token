@@ -8,9 +8,8 @@ export default async function StartMining(
 ){
     console.log('req body', req.body)
 
-    const { email }: IUser = req.body.session.user
+    const { email }: IUser = req.body.user
 
-    console.log('email found', { email }, { remainingTime })
 
     const user = await User.findOne({ email })
 
