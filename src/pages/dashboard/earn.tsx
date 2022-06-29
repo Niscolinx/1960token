@@ -44,6 +44,9 @@ function earn() {
         }
     }, [theme])
 
+    useEffect(() => {
+        console.log("loaded")
+    }, [])
 
 
     useEffect(() => {
