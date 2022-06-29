@@ -88,11 +88,12 @@ function earn() {
 
     const handleStart = () => {
         console.log('clicked on mine')
-            const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
+        const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
+        if (session) {
             dispatch(initMineAsync(session))
+        }
         setIsDim(false)
-       
     }
 
     return (
@@ -142,12 +143,7 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
-                        <MineTimer
-                            hour={12}
-                            start={miningStart}
-                        />
-                    
-                
+                    <MineTimer hour={12} start={miningStart} />
                 </div>
             </div>
         </>

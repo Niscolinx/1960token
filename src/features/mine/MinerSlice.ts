@@ -23,6 +23,7 @@ const initialState: MiningState = {
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
 export const initMineAsync = createAsyncThunk('mining', async (userSession: nextAuthSession) => {
+    console.log("reducer mining async")
     const response = await startMining(userSession)
     // The value we return becomes the `fulfilled` action payload
     return response
