@@ -47,11 +47,7 @@ function earn() {
             })
         }
     }, [theme])
-
-    useLayoutEffect(() => {
-        console.log('session', {session})
-    },[])
-
+    
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
 
