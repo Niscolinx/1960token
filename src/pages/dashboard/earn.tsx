@@ -7,13 +7,17 @@ import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { initMineAsync, MiningState, selectMining } from '../../features/mine/MinerSlice'
+import {
+    initMineAsync,
+    MiningState,
+    selectMining,
+} from '../../features/mine/MinerSlice'
 import dayjs, { Dayjs } from 'dayjs'
 
 function earn() {
     const { data: session } = useSession()
-   const mineState =  useAppSelector(selectMining)
-   const [totalMined, setTotalMined] = useState(0)
+    const mineState = useAppSelector(selectMining)
+    const [totalMined, setTotalMined] = useState(0)
 
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
@@ -24,7 +28,6 @@ function earn() {
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     const dispatch = useAppDispatch()
-
 
     useEffect(() => {
         setTotalMined(mineState.totalMined)
@@ -54,25 +57,26 @@ function earn() {
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
+        const dayjsNowTimeStamp = dayjs()
 
-         if (getTimeStore) {
-             setPrevTimeStore(dayjs(getTimeStore))
-             setMiningStart(true)
-         }
+        if (getTimeStore) {
+            setPrevTimeStore(dayjs(getTimeStore))
+            setMiningStart(true)
+        }
 
         //  if (!getTimeStore) {
         if (session && !getTimeStore) {
             dispatch(initMineAsync(session))
         }
 
-        if(mineState.miningSession === 'over'){
+        if (mineState.miningSession === 'over') {
             setMiningStart(false)
         }
-         if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
-             console.log('Timer finished')
-             setStopMining(true)
-             //dispatch(initStopMineAsync(session))
-         }
+        if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
+            console.log('Timer finished')
+            setStopMining(true)
+            //dispatch(initStopMineAsync(session))
+        }
         //}
         // else {
         //     console.log("Didn't load the get time")
@@ -86,8 +90,6 @@ function earn() {
         //     setMiningStart(true)
         // }
     }, [session])
-
-
 
     const handleStart = () => {
         console.log('clicked on mine')
@@ -113,9 +115,7 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>
-                        {totalMined}
-                    </p>
+                    <p className='font-bold text-3xl'>{totalMined}</p>
                 </div>
 
                 <div className='relative z-10'>
