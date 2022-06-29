@@ -13,3 +13,10 @@ export async function startMining(
 
     return response.data
 }
+export async function stopMining(
+    session: nextAuthSession
+): Promise<IFetchedData> {
+    const response = await axios.post('/api/stopMining', session)
+
+    return response.data
+}
