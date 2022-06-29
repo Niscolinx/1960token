@@ -47,7 +47,7 @@ export const MiningSlice = createSlice({
             state.value -= 1
         },
         // Use the PayloadAction type to declare the contents of `action.payload`
-        initMine: (state, action: PayloadAction<Dayjs>) => {
+        initMineTime: (state, action: PayloadAction<string>) => {
             state.startedMining = action.payload
         },
     },
@@ -64,7 +64,7 @@ export const MiningSlice = createSlice({
     },
 })
 
-export const { increment, decrement, initMine } = MiningSlice.actions
+export const { increment, decrement, initMineTime } = MiningSlice.actions
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
