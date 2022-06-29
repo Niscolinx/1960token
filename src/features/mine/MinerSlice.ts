@@ -8,13 +8,13 @@ import { startMining } from './MineAPI'
 export interface MiningState {
     value: number
     status: 'idle' | 'loading' | 'failed'
-    startedMining?: string
+    startedMining: Dayjs
 }
 
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
- startedMining: JSON.stringify(dayjs().add(12, 'hours')),
+ startedMining: dayjs().add(12, 'hours'),
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
