@@ -6,15 +6,15 @@ import type { AppState, AppThunk, MineState } from '../../app/store'
 import { startMining } from './MineAPI'
 
 export interface MiningState {
-    value: number
+    isMining: boolean
     status: 'idle' | 'loading' | 'failed'
-    startedMining: string
+    miningStartedAt: string
 }
 
 const initialState: MiningState = {
-    value: 0,
+    isMining: false,
     status: 'idle',
-    startedMining: JSON.stringify(dayjs().add(12, 'hour')),
+    miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
