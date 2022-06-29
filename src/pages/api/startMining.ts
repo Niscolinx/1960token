@@ -17,13 +17,13 @@ export default async function StartMining(
     req: NextApiRequest,
     res: TypedReqBody<returnTypeJson>
 ) {
+    console.log(req.body)
     const startTimeStamp = dayjs().add(12, 'hours')
 
     const { email }: IUser = req.body.session
 
     const user = await User.findOne({ email })
 
-    console.log({user})
 
     if (user.isMining) {
         return res.json({
