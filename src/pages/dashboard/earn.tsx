@@ -60,21 +60,10 @@ function earn() {
         console.log('initial load')
 
       //  if (!getTimeStore) {
-            console.log('load the gettime')
-            axios
-                .post('/api/startMining',  session )
-                .then(({ data }) => {
-                    console.log({ data })
-                    const { miningStart, isMining } = data
-                    if (isMining) {
-                        localStorage.setItem('miningTime', miningStart)
-                        setMiningStart(true)
-                        setPrevTimeStore(dayjs(miningStart))
-                    }
-                })
-                .catch((err) => {
-                    console.log({ err })
-                })
+           if (session) {
+               console.log('about to dispatch')
+               dispatch(initMineAsync(session))
+           }
         //} 
         // else {
         //     console.log("Didn't load the get time")
