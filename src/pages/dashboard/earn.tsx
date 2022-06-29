@@ -91,6 +91,7 @@ function earn() {
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
         if (session) {
+            console.log("about to dispatch")
             dispatch(initMineAsync(session))
         }
         setIsDim(false)
