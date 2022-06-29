@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { increment, initMineAsync, selectMining } from '../../features/mine/MinerSlice'
+import { initMineAsync, MiningState, selectMining } from '../../features/mine/MinerSlice'
 import dayjs, { Dayjs } from 'dayjs'
 
 function earn() {
@@ -99,7 +99,9 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>{}</p>
+                    <p className='font-bold text-3xl'>
+                        {}
+                    </p>
                 </div>
 
                 <div className='relative z-10'>
