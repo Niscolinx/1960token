@@ -1,5 +1,3 @@
-import axios from 'axios'
-import dayjs, { Dayjs } from 'dayjs'
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
@@ -76,7 +74,7 @@ function earn() {
         //     setPrevTimeStore(dayjs(getTimeStore))
         //     setMiningStart(true)
         // }
-    }, [])
+    }, [session])
 
     const handleStart = () => {
         console.log('clicked on mine')
