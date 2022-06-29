@@ -25,9 +25,9 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    const updateRemainingTimer = (timerInMs: number, prev?: Dayjs) => {
+    const updateRemainingTimer = ( prev?: Dayjs) => {
         console.log("mining update")
-        setRemainingTime(countDown(timerInMs, prev))
+        setRemainingTime(countDown(prev))
     }
 const { theme } = useTheme()
 const [neuToUse, setNeuToUse] = useState<{}>()
@@ -58,7 +58,7 @@ useEffect(() => {
         if (start) {
             console.log("started")
             const intervalId = setInterval(() => {
-                return updateRemainingTimer(hour, prevTimeStore)
+                return updateRemainingTimer(prevTimeStore)
             }, 1000)
 
             return () => clearInterval(intervalId)
