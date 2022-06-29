@@ -11,10 +11,14 @@ import User, { IUser } from '../../models/User'
      [name: string]: returnTypeJson
  }
 
+ export interface TypedReqBody<returnTypeJson> extends NextApiResponse {
+    body: returnTypeJson
+ }
+
 export default async function StartMining(
     req: NextApiRequest,
-    res: NextApiResponse
-):Promise<returnTypeJson> {
+    res: TypedReqBody<returnTypeJson>
+) {
     console.log('req body', req.body)
 
    
