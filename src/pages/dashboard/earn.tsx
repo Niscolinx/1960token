@@ -6,8 +6,8 @@ import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
+import { useAppDispatch } from '../../app/hooks'
+import { initMineAsync } from '../../features/mine/MinerSlice'
 import dayjs, { Dayjs } from 'dayjs'
 
 function earn() {
