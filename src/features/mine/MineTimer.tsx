@@ -17,10 +17,12 @@ interface ICountDown {
     prevTimeStore?: Dayjs
 }
 
+
 const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     const dispatch = useAppDispatch()
     const { data: session } = useSession()
 
+    const [stopMining, setStopMining] = useState(start)
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const dayjsNowTimeStamp = dayjs()
