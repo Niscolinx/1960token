@@ -8,12 +8,13 @@ import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
+import { Dayjs } from 'dayjs'
 
 function earn() {
     const { data: session } = useSession()
 
     const [miningStart, setMiningStart] = useState(false)
-    const [prevTimeStore, setPrevTimeStore] = useState()
+    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
 
     const [isDim, setIsDim] = useState(false)
 
@@ -76,6 +77,7 @@ function earn() {
         console.log('clicked on mine')
 
         const getTimeStore = localStorage.getItem('miningTime')
+        setPrevTimeStore(getTimeStore)
 
         if (session) {
             console.log('about to dispatch')
