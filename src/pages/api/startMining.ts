@@ -19,7 +19,7 @@ export default async function StartMining(
 ) {
     const startTimeStamp = dayjs().add(12, 'hours')
 
-    const { email }: IUser = req.body.user
+    const { email }: IUser = req.body.session
 
     const user = await User.findOne({ email })
 
