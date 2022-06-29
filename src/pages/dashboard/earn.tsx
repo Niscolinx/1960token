@@ -7,11 +7,11 @@ import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { initMineAsync } from '../../features/mine/MinerSlice'
+import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 
 function earn() {
     const { data: session } = useSession()
-    const miningState = useAppDispatch()
+    const miningState = useAppSelector(selectMining)
     console.log({miningState})
 
     console.log({session})
