@@ -7,7 +7,7 @@ import User, { IUser } from '../../models/User'
      isMining: boolean
  }
 
- type JsonType<returnTypeJson> = (body: returnTypeJson) => void
+ type JsonType<returnTypeJson> = (body: returnTypeJson) => object
 
  export interface TypedReqBody<T> extends NextApiResponse {
     json: JsonType<T>
@@ -17,10 +17,7 @@ export default async function StartMining(
     req: NextApiRequest,
     res: TypedReqBody<returnTypeJson>
 ) {
-    console.log('req body', req.body)
-
-   
-
+  
     const startTimeStamp = dayjs().add(12, 'hours')
 
     const { email }: IUser = req.body.user
