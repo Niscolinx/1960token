@@ -35,6 +35,16 @@ export const initMineAsync = createAsyncThunk(
         return response
     }
 )
+export const initStopMineAsync = createAsyncThunk(
+    'stopMining',
+    async (userSession: nextAuthSession) => {
+        const response = await startMining(userSession)
+
+        console.log({ response })
+        // The value we return becomes the `fulfilled` action payload
+        return response
+    }
+)
 
 export const MiningSlice = createSlice({
     name: 'mine',
