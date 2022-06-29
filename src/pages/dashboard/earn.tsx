@@ -15,7 +15,6 @@ function earn() {
     console.log({session})
 
     const [miningStart, setMiningStart] = useState(false)
-    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
     const [isDim, setIsDim] = useState(false)
 
     const { theme } = useTheme()
