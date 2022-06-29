@@ -14,7 +14,7 @@ export async function startMining(
     // if (!getTimeStore) {
     //const remainingTime = dayjsRemainingTimeStamp
 
-    const response = await axios.post('/api/startMining', { session })
+    const response = await axios.post('/api/startMining', session )
 
     return response.data
 }

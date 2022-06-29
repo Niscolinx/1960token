@@ -9,7 +9,6 @@ export default async function StartMining(
     console.log('req body', req.body)
 
     const { email }: IUser = req.body.session.user
-    const { remainingTime } = req.body
 
     console.log('email found', { email }, { remainingTime })
 
