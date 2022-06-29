@@ -12,9 +12,8 @@ import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 function earn() {
     const { data: session } = useSession()
     const miningState = useAppSelector(selectMining)
-    console.log({ miningState })
 
-    console.log({ session })
+    const [checkMining, setCheckMining] = useState(miningState)
 
     const [miningStart, setMiningStart] = useState(false)
     const [isDim, setIsDim] = useState(false)
@@ -48,35 +47,34 @@ function earn() {
 
     // useEffect(() => {
 
-    //     if(!isDim){
-    //         setIsDim(true)
+    //     if(checkMining.status === 'success'){
+
     //     }
 
-    // }, [])
+    // }, [checkMining])
 
-        useEffect(() => {
-            //const getTimeStore = localStorage.getItem('miningTime')
-            console.log('initial load')
+    useEffect(() => {
+        //const getTimeStore = localStorage.getItem('miningTime')
+        console.log('initial load')
 
-            //  if (!getTimeStore) {
-            if (session) {
-                console.log('about to dispatch')
-                dispatch(initMineAsync(session))
-            }
-            //}
-            // else {
-            //     console.log("Didn't load the get time")
+        //  if (!getTimeStore) {
+        if (session && checkMining.status !== 'success') {
+            console.log('about to dispatch')
+            dispatch(initMineAsync(session))
+        }
+        //}
+        // else {
+        //     console.log("Didn't load the get time")
 
-            //     const dayjsNowTimeStamp = dayjs()
-            //     if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
-            //         console.log('Timer finished')
-            //         return setMiningStart(false)
-            //     }
-            //     setPrevTimeStore(dayjs(getTimeStore))
-            //     setMiningStart(true)
-            // }
-        }, [session])
-    
+        //     const dayjsNowTimeStamp = dayjs()
+        //     if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
+        //         console.log('Timer finished')
+        //         return setMiningStart(false)
+        //     }
+        //     setPrevTimeStore(dayjs(getTimeStore))
+        //     setMiningStart(true)
+        // }
+    }, [session, checkMining])
 
     const handleStart = () => {
         console.log('clicked on mine')
