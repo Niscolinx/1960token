@@ -8,7 +8,7 @@ export default function countDown (prevTimeStore?: Dayjs) {
    // const { data: session } = useSession()
     
     const dayjsNowTimeStamp = dayjs()
-   // const dispatch = useAppDispatch()
+   const dispatch = useAppDispatch()
     if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
         console.log("Timer finished")
        // dispatch(initStopMineAsync())
