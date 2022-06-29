@@ -64,6 +64,10 @@ function earn() {
         if (session && !getTimeStore) {
             dispatch(initMineAsync(session))
         }
+
+        if(mineState.miningSession === 'over'){
+            setMiningStart(false)
+        }
         //}
         // else {
         //     console.log("Didn't load the get time")
