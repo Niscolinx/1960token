@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { CountDown } from '../../../utils/countDown'
+import { countDown } from '../../../utils/countDown'
 import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increment } from '../../features/mine/MinerSlice'
@@ -25,7 +25,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         console.log('mining update')
-        //setRemainingTime(countDown(prev))
+        setRemainingTime(countDown(prev))
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -76,7 +76,6 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
                 <p>
                     {hours}:{minutes}:{seconds}
                 </p>
-                <CountDown/>
             </div>
         </div>
     )

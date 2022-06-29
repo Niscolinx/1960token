@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react';
 import React, { useState } from 'react';
 
 
-export const countDown = (prevTimeStore?: Dayjs) => {
+export const CountDown = (prevTimeStore?: Dayjs) => {
    // const { data: session } = useSession()
 
    const [count, setcount] = useState(0)
