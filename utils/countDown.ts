@@ -1,5 +1,5 @@
 import dayjs, { Dayjs } from 'dayjs'
-export const countDown = (hour: number, prevTimeStore?: Dayjs) => {
+export const countDown = (prevTimeStore?: Dayjs) => {
     
     const dayjsNowTimeStamp = dayjs()
     if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
