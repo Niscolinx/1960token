@@ -8,14 +8,14 @@ import { startMining } from './MineAPI'
 export interface MiningState {
     value: number
     status: 'idle' | 'loading' | 'failed'
-    startedMining: Dayjs
+    startedMining: string
     hello: any
 }
 
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
-    startedMining: dayjs().add(12, 'hours'),
+    startedMining: JSON.stringify(dayjs().add(12, 'hours')),
     hello: ''
 }
 
