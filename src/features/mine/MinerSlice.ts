@@ -5,13 +5,13 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { AppState, AppThunk, MineState } from '../../app/store'
 import { startMining } from './MineAPI'
 
-export interface CounterState {
+export interface MiningState {
     value: number
     status: 'idle' | 'loading' | 'failed'
     startedMining: Dayjs
 }
 
-const initialState: CounterState = {
+const initialState: MiningState = {
     value: 0,
     status: 'idle',
     startedMining: dayjs().add(12, 'hours')
