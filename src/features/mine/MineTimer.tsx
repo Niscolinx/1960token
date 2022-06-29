@@ -6,9 +6,7 @@ import { useAppSelector } from '../../app/hooks'
 import { MineState } from '../../app/store'
 import { selectMining } from './MinerSlice'
 
-const mineState = useAppSelector(selectMining)
 
-console.log({mineState})
 
 const defaultTimer = {
     hours: '00',
@@ -23,6 +21,10 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
+    const mineState = useAppSelector(selectMining)
+
+    console.log({ mineState })
+    
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const updateRemainingTimer = (timerInMs: number, prev?: Dayjs) => {
