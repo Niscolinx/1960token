@@ -2,7 +2,7 @@ import { nextAuthSession } from './../../lib/types'
 import dayjs, { Dayjs } from 'dayjs'
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import type { AppState, AppThunk, MineState } from '../../app/store'
+import type { AppThunk, MineState } from '../../app/store'
 import { startMining } from './MineAPI'
 
 export interface MiningState {

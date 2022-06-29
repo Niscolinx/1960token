@@ -15,7 +15,7 @@ export type AppDispatch = typeof store.dispatch
 
 export type AppThunk<ReturnType = void> = ThunkAction<
     ReturnType,
-    AppState,
+    MineState,
     unknown,
     Action<string>
 >
