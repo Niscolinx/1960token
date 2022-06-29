@@ -78,6 +78,19 @@ export const MiningSlice = createSlice({
             .addCase(initMineAsync.rejected, (state) => {
                 state.status = 'failed'
             })
+            .addCase(initStopMineAsync.pending, (state) => {
+                state.status = 'loading'
+            })
+            .addCase(initStopMineAsync.fulfilled, (state, action) => {
+                const { isMining, miningStartedAt } = action.payload
+                state.status = 'success'
+                state.miningStartedAt = miningStartedAt
+                state.isMining = isMining
+                localStorage.setItem('miningStartedAt', miningStartedAt)
+            })
+            .addCase(initStopMineAsync.rejected, (state) => {
+                state.status = 'failed'
+            })
     },
 })
 
