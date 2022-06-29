@@ -59,7 +59,6 @@ function earn() {
         if (session && !getTimeStore) {
             console.log('about to dispatch')
             dispatch(initMineAsync(session))
-            console.log("mining state",{miningState})
         }
         //}
         // else {
