@@ -74,7 +74,7 @@ function earn() {
         //     setPrevTimeStore(dayjs(getTimeStore))
         //     setMiningStart(true)
         // }
-    }, [session])
+    }, [session, initialLoad])
 
     const handleStart = () => {
         console.log('clicked on mine')
