@@ -11,8 +11,10 @@ import User, { IUser } from '../../models/User'
      [name: string]: returnTypeJson
  }
 
- export interface TypedReqBody<returnTypeJson> extends NextApiResponse {
-    body: returnTypeJson
+ type JsonType<returnTypeJson> = (body: returnTypeJson) => void
+
+ export interface TypedReqBody<T> extends NextApiResponse {
+    json: JsonType<T>
  }
 
 export default async function StartMining(
@@ -33,10 +35,11 @@ export default async function StartMining(
 
     if (user.isMining) {
         console.log('mining started already')
-       return {
+       return res.json({
             miningStart: user.miningStart,
             isMining: true,
-        }
+
+        })
     } else {
         console.log('start user mining')
         user.isMining = true
