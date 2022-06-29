@@ -71,7 +71,7 @@ function earn() {
     const handleStart = () => {
         console.log('clicked on mine')
 
-        const getTimeStore = localStorage.getItem('miningTime')
+        const getTimeStore = localStorage.getItem('miningStartedAt')
         if (getTimeStore) {
             console.log({ getTimeStore })
             setPrevTimeStore(getTimeStore)
