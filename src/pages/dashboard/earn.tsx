@@ -60,30 +60,31 @@ function earn() {
         if (!getTimeStore) {
             console.log('load the gettime')
             axios
-                .post('/api/startMining', { session })
+                .post('/api/startMining',  session )
                 .then(({ data }) => {
                     console.log({ data })
                     const { miningStart, isMining } = data
-                    if (isMining) {
-                        localStorage.setItem('miningTime', miningStart)
-                        setMiningStart(true)
-                        setPrevTimeStore(dayjs(miningStart))
-                    }
+                    // if (isMining) {
+                    //     localStorage.setItem('miningTime', miningStart)
+                    //     setMiningStart(true)
+                    //     setPrevTimeStore(dayjs(miningStart))
+                    // }
                 })
                 .catch((err) => {
                     console.log({ err })
                 })
-        } else {
-            console.log("Didn't load the get time")
+        } 
+        //else {
+        //     console.log("Didn't load the get time")
 
-            const dayjsNowTimeStamp = dayjs()
-            if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
-                console.log('Timer finished')
-                return setMiningStart(false)
-            }
-            setPrevTimeStore(dayjs(getTimeStore))
-            setMiningStart(true)
-        }
+        //     const dayjsNowTimeStamp = dayjs()
+        //     if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
+        //         console.log('Timer finished')
+        //         return setMiningStart(false)
+        //     }
+        //     setPrevTimeStore(dayjs(getTimeStore))
+        //     setMiningStart(true)
+        // }
     }, [])
 
     const handleStart = () => {
