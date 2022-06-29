@@ -62,7 +62,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     }, [theme])
 
     useEffect(() => {
-        if (start) {
+        if (start && !stopMining) {
             const intervalId = setInterval(() => {
                 dispatch(increment())
 
@@ -71,7 +71,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
 
             return () => clearInterval(intervalId)
         }
-    }, [start])
+    }, [start, stopMining])
 
     const { hours, minutes, seconds } = remainingTime
 
