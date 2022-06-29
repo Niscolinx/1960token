@@ -19,16 +19,15 @@ interface ICountDown {
 
 
 const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
+    console.log({start})
     const dispatch = useAppDispatch()
     const { data: session } = useSession()
 
-    const [stopMining, setStopMining] = useState(false)
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const dayjsNowTimeStamp = dayjs()
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
         console.log('Timer finished')
-        setStopMining(true)
         //dispatch(initStopMineAsync(session))
     }
 
