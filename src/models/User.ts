@@ -6,8 +6,7 @@ export interface IUser {
     email: string
     phoneNumber: string
     isMining: boolean
-    miningStart: string
-    miningSession: string
+    miningStartedAt: string
     role: string
     status: string
     password: string
@@ -42,7 +41,7 @@ const userSchema = new Schema<IUser>(
             type: Boolean,
             default: false,
         },
-        miningStart: {
+        miningStartedAt: {
             type: String,
         },
         status: {
