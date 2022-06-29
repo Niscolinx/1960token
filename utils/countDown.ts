@@ -1,9 +1,13 @@
+import { initStopMineAsync } from './../src/features/mine/MinerSlice';
+import { useAppDispatch } from './../src/app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
 export const countDown = (prevTimeStore?: Dayjs) => {
     
     const dayjsNowTimeStamp = dayjs()
+    const dispatch = useAppDispatch()
     if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
         console.log("Timer finished")
+        dispatch(initStopMineAsync)
        return {
            hours: '00',
            minutes: '00',
