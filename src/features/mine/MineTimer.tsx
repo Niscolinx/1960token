@@ -19,8 +19,6 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
-    const mininingState = useAppSelector(selectMining)
-
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
