@@ -11,7 +11,7 @@ import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 
 function earn() {
     const { data: session } = useSession()
-    const mountedRef = useRef()
+    const mountedRef = useRef<string>()
     const miningState = useAppSelector(selectMining)
     
 
@@ -46,12 +46,16 @@ function earn() {
     }, [theme])
 
     useEffect(() => {
-
+        console.log("ref", mountedRef.current)
         if(miningState.status === 'success'){
             console.log("success")
+            mountedRef.current = 'success'
         }
 
+
     }, [miningState])
+
+    console.log(mountedRef.current)
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
