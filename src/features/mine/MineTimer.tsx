@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { countDown } from '../../../utils/countDown'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
-import { increment } from '../../features/mine/MinerSlice'
+import { increment, initStopMineAsync } from '../../features/mine/MinerSlice'
 import { useAppDispatch } from '../../app/hooks'
 import { useSession } from 'next-auth/react'
 
@@ -24,10 +24,9 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const dayjsNowTimeStamp = dayjs()
-    // const dispatch = useAppDispatch()
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
         console.log('Timer finished')
-        // dispatch(initStopMineAsync())
+        dispatch(initStopMineAsync())
     }
 
     const updateRemainingTimer = (prev?: Dayjs) => {
