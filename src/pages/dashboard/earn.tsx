@@ -27,7 +27,7 @@ function earn() {
 
 
     useEffect(() => {
-        setTotalMined()
+        setTotalMined(mineState.totalMined)
     }, [mineState])
 
     useEffect(() => {
@@ -105,7 +105,7 @@ function earn() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-3xl'>
-                        {}
+                        {totalMined}
                     </p>
                 </div>
 
