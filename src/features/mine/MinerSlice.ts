@@ -9,12 +9,14 @@ export interface MiningState {
     value: number
     status: 'idle' | 'loading' | 'failed'
     startedMining: Dayjs
+    hello: any
 }
 
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
-    startedMining: dayjs().add(12, 'hours')
+    startedMining: dayjs().add(12, 'hours'),
+    hello: ''
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -25,6 +27,8 @@ const initialState: MiningState = {
 export const initMineAsync = createAsyncThunk('mining', async (userSession: nextAuthSession) => {
     console.log("reducer mining async")
     const response = await startMining(userSession)
+
+    console.log({response})
     // The value we return becomes the `fulfilled` action payload
     return response
 })
@@ -46,7 +50,7 @@ export const MiningSlice = createSlice({
         },
         // Use the PayloadAction type to declare the contents of `action.payload`
         initMine: (state, action: PayloadAction<Dayjs>) => {
-            state.startedMining = action.payload
+            state.hello = action.payload
         },
     },
     // The `extraReducers` field lets the slice handle actions defined elsewhere,
