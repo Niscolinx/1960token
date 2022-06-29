@@ -1,7 +1,7 @@
 import { Schema, Types, model, models } from 'mongoose'
 
 export interface IUser {
-    _id: Object;
+    _id: Object
     username: string
     email: string
     phoneNumber: string
@@ -20,16 +20,20 @@ const userSchema = new Schema<IUser>(
     {
         username: {
             type: String,
-            required: true
+            required: true,
         },
 
         email: {
             type: String,
-            required: true
+            required: true,
+        },
+        password: {
+            type: String,
+            required: true,
         },
         phoneNumber: {
             type: String,
-            required: true
+            required: true,
         },
 
         role: {
@@ -48,10 +52,6 @@ const userSchema = new Schema<IUser>(
             type: String,
             required: true,
             default: 'Active',
-        },
-
-        password: {
-            type: String,
         },
 
         pendingDeposits: [
@@ -83,5 +83,3 @@ const userSchema = new Schema<IUser>(
 )
 
 export default models.User || model('User', userSchema)
-
-
