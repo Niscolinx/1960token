@@ -75,6 +75,7 @@ export const MiningSlice = createSlice({
                 state.status = 'success'
                 state.miningStartedAt = miningStartedAt
                 state.isMining = isMining
+                state.miningSession = 'active'
                 localStorage.setItem('miningStartedAt', miningStartedAt)
             })
             .addCase(initMineAsync.rejected, (state) => {
@@ -88,6 +89,7 @@ export const MiningSlice = createSlice({
                 state.status = 'success'
                 state.miningStartedAt = miningStartedAt
                 state.isMining = isMining
+                state.miningSession = 'over'
                 localStorage.setItem('miningStartedAt', miningStartedAt)
             })
             .addCase(initStopMineAsync.rejected, (state) => {
