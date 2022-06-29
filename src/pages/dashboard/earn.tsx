@@ -27,7 +27,7 @@ function earn() {
 
 
     useEffect(() => {
-        setTotalMined
+        setTotalMined()
     }, [mineState])
 
     useEffect(() => {
