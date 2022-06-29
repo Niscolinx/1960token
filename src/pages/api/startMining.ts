@@ -36,7 +36,9 @@ export default async function StartMining(
         console.log('start user mining')
         user.isMining = true
         user.miningStartedAt = startTimeStamp
-        await user.save()
+        const updatedUser = await user.save()
+
+        console.log({updatedUser})
 
         return res.json({
             isMining: user.isMining,
