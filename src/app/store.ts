@@ -12,7 +12,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, MiningReducer)
 
 export const store = configureStore({
-    reducer: { mine: persistedReducer },
+    reducer: { mine: MiningReducer },
     devTools: process.env.NODE_ENV !== 'production',
     middleware: [thunk],
 })
