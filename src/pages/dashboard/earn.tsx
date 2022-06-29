@@ -58,7 +58,7 @@ function earn() {
         console.log('initial load')
 
         //  if (!getTimeStore) {
-        if (session && checkMining.status !== 'success') {
+        if (session) {
             console.log('about to dispatch')
             dispatch(initMineAsync(session))
         }
@@ -74,7 +74,7 @@ function earn() {
         //     setPrevTimeStore(dayjs(getTimeStore))
         //     setMiningStart(true)
         // }
-    }, [session, checkMining])
+    }, [session])
 
     const handleStart = () => {
         console.log('clicked on mine')
