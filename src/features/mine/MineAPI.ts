@@ -16,5 +16,5 @@ export async function startMining(
 
     const response = await axios.post('/api/startMining', { session })
 
-    return response
+    return response.data
 }

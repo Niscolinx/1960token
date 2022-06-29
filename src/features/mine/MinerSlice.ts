@@ -9,14 +9,12 @@ export interface MiningState {
     value: number
     status: 'idle' | 'loading' | 'failed'
     startedMining?: string
-    hello: any
 }
 
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
-   // startedMining: JSON.stringify(dayjs().add(12, 'hours')),
-    hello: ''
+ startedMining: JSON.stringify(dayjs().add(12, 'hours')),
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -50,7 +48,7 @@ export const MiningSlice = createSlice({
         },
         // Use the PayloadAction type to declare the contents of `action.payload`
         initMine: (state, action: PayloadAction<Dayjs>) => {
-            state.hello = ''
+            state.startedMining = action.payload
         },
     },
     // The `extraReducers` field lets the slice handle actions defined elsewhere,
