@@ -63,8 +63,6 @@ export const MiningSlice = createSlice({
             })
             .addCase(initMineAsync.fulfilled, (state, action) => {
                 const payload =  action.payload
-                console.log({payload})
-                console.log('payload data', payload.isMining)
                 state.status = 'success'
                 // state.miningStartedAt =  payload.miningStartedAt
                 // state.isMining = isMining

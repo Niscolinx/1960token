@@ -11,5 +11,5 @@ export async function startMining(
 ): Promise<IFetchedData> {
     const response = await axios.post('/api/startMining', session)
 
-    return response.data 
+    return response.data as IFetchedData
 }
