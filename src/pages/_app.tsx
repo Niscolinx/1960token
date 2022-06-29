@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import { ThemeProvider } from 'next-themes'
 import { Provider } from 'react-redux'
 import store from '../app/store'
-
+import { PersistGate } from 'redux-persist/integration/react'
 
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
