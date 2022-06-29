@@ -13,6 +13,7 @@ import dayjs, { Dayjs } from 'dayjs'
 function earn() {
     const { data: session } = useSession()
    const mineState =  useAppSelector(selectMining)
+   const [totalMined, setTotalMined] = useState(0)
 
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
@@ -24,6 +25,11 @@ function earn() {
 
     const dispatch = useAppDispatch()
 
+
+    useEffect(() => {
+        setTotalMined
+    
+    }, [mineState])
 
     useEffect(() => {
         if (theme === 'dark') {
