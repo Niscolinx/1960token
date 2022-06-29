@@ -6,12 +6,13 @@ import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
-import { useAppDispatch } from '../../app/hooks'
-import { increment, initMineAsync } from '../../features/mine/MinerSlice'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { increment, initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 import dayjs, { Dayjs } from 'dayjs'
 
 function earn() {
     const { data: session } = useSession()
+   const mineState =  useAppSelector(selectMining)
 
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
