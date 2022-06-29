@@ -9,12 +9,14 @@ export interface MiningState {
     isMining: boolean
     status: 'idle' | 'loading' | 'failed' | 'success'
     miningStartedAt: string
+    totalMined: number
 }
 
 const initialState: MiningState = {
     isMining: false,
     status: 'idle',
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
+    totalMined: 0
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -39,13 +41,9 @@ export const MiningSlice = createSlice({
     initialState,
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
-        // increment: (state) => {
-        // Redux Toolkit allows us to write "mutating" logic in reducers. It
-        // doesn't actually mutate the state because it uses the Immer library,
-        // which detects changes to a "draft state" and produces a brand new
-        // immutable state based off those changes
-        //     state.value += 1
-        // },
+        increment: (state) => {
+            state.totalMined += 1
+        },
         // decrement: (state) => {
         //     state.value -= 1
         // },
@@ -74,7 +72,7 @@ export const MiningSlice = createSlice({
     },
 })
 
-//export const { increment, decrement } = MiningSlice.actions
+export const { increment } = MiningSlice.actions
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
