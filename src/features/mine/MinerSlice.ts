@@ -8,7 +8,7 @@ import { startMining } from './MineAPI'
 export interface MiningState {
     value: number
     status: 'idle' | 'loading' | 'failed'
-    startedMining: string
+    startedMining?: string
     hello: any
 }
 
