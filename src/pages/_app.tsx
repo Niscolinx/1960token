@@ -7,6 +7,8 @@ import { ThemeProvider } from 'next-themes'
 import { Provider } from 'react-redux'
 import { store, persistedStore } from '../app/store'
 import { PersistGate } from 'redux-persist/integration/react'
+import LogRocket from 'logrocket';
+LogRocket.init('u0nffn/1960token');
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     return (
