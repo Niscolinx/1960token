@@ -54,7 +54,6 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
 
     useEffect(() => {
         if (start) {
-            console.log('started')
             const intervalId = setInterval(() => {
                 dispatch(increment())
 
