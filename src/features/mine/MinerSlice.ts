@@ -3,7 +3,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { AppThunk, MineState } from '../../app/store'
-import { startMining } from './MineAPI'
+import { startMining, stopMining } from './MineAPI'
 
 export interface MiningState {
     isMining: boolean
@@ -27,7 +27,6 @@ const initialState: MiningState = {
 export const initMineAsync = createAsyncThunk(
     'mining',
     async (userSession: nextAuthSession) => {
-        console.log('reducer mining async')
         const response = await startMining(userSession)
 
         console.log({ response })
@@ -38,7 +37,7 @@ export const initMineAsync = createAsyncThunk(
 export const initStopMineAsync = createAsyncThunk(
     'stopMining',
     async (userSession: nextAuthSession) => {
-        const response = await startMining(userSession)
+        const response = await stopMining(userSession)
 
         console.log({ response })
         // The value we return becomes the `fulfilled` action payload
