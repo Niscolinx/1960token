@@ -29,7 +29,7 @@ export default async function StartMining(
     if (user.isMining) {
         console.log('mining started already')
        return res.json({
-            miningStart: user.miningStart,
+            miningStart: 'hello world',
             isMining: true,
 
         })
