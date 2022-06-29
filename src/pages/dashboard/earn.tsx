@@ -24,6 +24,8 @@ function earn() {
 
     const dispatch = useAppDispatch()
 
+     console.log({mineState})
+
     useEffect(() => {
         if (theme === 'dark') {
             console.log('dark theme', { theme })
