@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { countDown } from '../../../utils/countDown'
 import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
