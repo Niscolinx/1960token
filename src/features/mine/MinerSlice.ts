@@ -1,5 +1,5 @@
-import { nextAuthSession } from './../../lib/types';
-import dayjs, { Dayjs } from 'dayjs';
+import { nextAuthSession } from './../../lib/types'
+import dayjs, { Dayjs } from 'dayjs'
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { AppState, AppThunk, MineState } from '../../app/store'
@@ -14,7 +14,7 @@ export interface MiningState {
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
- startedMining: JSON.stringify(dayjs().add(12, 'hour')),
+    startedMining: JSON.stringify(dayjs().add(12, 'hour')),
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -22,14 +22,17 @@ const initialState: MiningState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const initMineAsync = createAsyncThunk('mining', async (userSession: nextAuthSession) => {
-    console.log("reducer mining async")
-    const response = await startMining(userSession)
+export const initMineAsync = createAsyncThunk(
+    'mining',
+    async (userSession: nextAuthSession) => {
+        console.log('reducer mining async')
+        const response = await startMining(userSession)
 
-    console.log({response})
-    // The value we return becomes the `fulfilled` action payload
-    return response
-})
+        console.log({ response })
+        // The value we return becomes the `fulfilled` action payload
+        return response
+    }
+)
 
 export const MiningSlice = createSlice({
     name: 'mine',
