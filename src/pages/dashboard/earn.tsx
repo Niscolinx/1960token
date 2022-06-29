@@ -90,8 +90,10 @@ function earn() {
         console.log('clicked on mine')
         const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
+        const getTimeStore = localStorage.getItem('miningTime')
+
         if (session) {
-            console.log("about to dispatch")
+            console.log('about to dispatch')
             dispatch(initMineAsync(session))
         }
         setIsDim(false)
