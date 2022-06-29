@@ -23,6 +23,8 @@ export default async function StartMining(
 
     const user = await User.findOne({ email })
 
+    console.log({user})
+
     if (user.isMining) {
         return res.json({
             miningStartedAt: user.miningStartedAt,
