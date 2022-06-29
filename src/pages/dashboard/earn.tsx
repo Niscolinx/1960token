@@ -23,7 +23,7 @@ function earn() {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-    const dispatch = useAppDispatch() as unknown
+    const dispatch = useAppDispatch()
 
 
     useEffect(() => {
