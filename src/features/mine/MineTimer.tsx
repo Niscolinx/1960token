@@ -3,7 +3,7 @@ import { countDown } from '../../../utils/countDown'
 import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increment } from '../../features/mine/MinerSlice'
-import { useAppSelector } from '../../app/hooks'
+import { useAppDispatch } from '../../app/hooks'
 
 
 
@@ -19,6 +19,8 @@ interface ICountDown {
 }
 
 const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
+        const dispatch = useAppDispatch()
+
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
