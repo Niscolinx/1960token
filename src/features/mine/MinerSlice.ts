@@ -14,7 +14,7 @@ export interface MiningState {
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
- startedMining: dayjs().add(12, 'hours'),
+ startedMining: dayjs(),
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
