@@ -14,12 +14,11 @@ const defaultTimer = {
 }
 
 interface ICountDown {
-    hour: number
     start: boolean
     prevTimeStore?: Dayjs
 }
 
-const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
+const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     const mininingState = useAppSelector(selectMining)
 
 
