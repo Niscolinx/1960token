@@ -4,11 +4,11 @@ import dayjs, { Dayjs } from 'dayjs'
 import { useSession } from 'next-auth/react';
 
 
-export default function countDown (prevTimeStore?: Dayjs) {
+export const countDown = (prevTimeStore?: Dayjs) => {
    // const { data: session } = useSession()
     
     const dayjsNowTimeStamp = dayjs()
-   const dispatch = useAppDispatch()
+   // const dispatch = useAppDispatch()
     if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
         console.log("Timer finished")
        // dispatch(initStopMineAsync())
