@@ -156,10 +156,10 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
-                    <MineTimer
+                    {/* <MineTimer
                         start={false}
                         prevTimeStore={prevTimeStore}
-                    />
+                    /> */}
                 </div>
             </div>
         </>
