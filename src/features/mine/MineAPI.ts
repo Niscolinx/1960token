@@ -9,6 +9,8 @@ export async function startMining(
 
     const getTimeStore = localStorage.getItem('miningTime')
 
+    console.log('in start mining api')
+
     // if (!getTimeStore) {
     //const remainingTime = dayjsRemainingTimeStamp
 
