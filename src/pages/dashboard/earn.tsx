@@ -8,7 +8,7 @@ import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
-import { Dayjs } from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 
 function earn() {
     const { data: session } = useSession()
@@ -74,7 +74,7 @@ function earn() {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         if (getTimeStore) {
             console.log({ getTimeStore })
-            setPrevTimeStore(getTimeStore)
+            setPrevTimeStore(dayjs(getTimeStore))
         }
 
         if (session) {
