@@ -21,9 +21,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
-    useEffect(() => {
-        dispatch(increment())
-    }, [remainingTime])
+ 
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         console.log('mining update')
