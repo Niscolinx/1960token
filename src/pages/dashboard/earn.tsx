@@ -13,7 +13,6 @@ function earn() {
     const { data: session } = useSession()
     const miningState = useAppSelector(selectMining)
     const [initialLoad, setInitialLoad] = useState(false)
-    
 
     const [miningStart, setMiningStart] = useState(false)
     const [isDim, setIsDim] = useState(false)
@@ -46,16 +45,17 @@ function earn() {
     }, [theme])
 
     useEffect(() => {
-        console.log("loaded")
-                const getTimeStore = localStorage.getItem('miningStartedAt')
+        console.log('loaded')
+        const getTimeStore = localStorage.getItem('miningStartedAt')
 
+        setInitialLoad(true)
     }, [])
 
+    console.log({initialLoad})
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         console.log('initial load')
-
 
         //  if (!getTimeStore) {
         if (session && !getTimeStore) {
