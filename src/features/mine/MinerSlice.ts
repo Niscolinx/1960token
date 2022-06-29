@@ -67,7 +67,7 @@ export const MiningSlice = createSlice({
                 state.miningStartedAt = miningStatedAt
                 state.isMining = isMining
             })
-            .addCase(initMineAsync.rejected, (state, action) => {
+            .addCase(initMineAsync.rejected, (state) => {
                 state.status = 'failed'
             })
     },
