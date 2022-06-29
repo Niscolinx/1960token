@@ -1,5 +1,4 @@
 import axios, { AxiosResponse } from 'axios'
-import dayjs from 'dayjs'
 import { nextAuthSession } from '../../lib/types'
 
 export async function startMining(
