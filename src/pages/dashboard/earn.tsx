@@ -47,7 +47,6 @@ function earn() {
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
-        console.log('initial load')
 
          if (getTimeStore) {
              setPrevTimeStore(dayjs(getTimeStore))
@@ -56,7 +55,6 @@ function earn() {
 
         //  if (!getTimeStore) {
         if (session && !getTimeStore) {
-            console.log('about to dispatch')
             dispatch(initMineAsync(session))
         }
         //}
