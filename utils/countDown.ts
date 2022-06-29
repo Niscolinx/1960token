@@ -4,7 +4,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import { useSession } from 'next-auth/react';
 
 
-export const countDown = (prevTimeStore?: Dayjs) => {
+export default function countDown (prevTimeStore?: Dayjs) {
    // const { data: session } = useSession()
     
     const dayjsNowTimeStamp = dayjs()
