@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
@@ -11,7 +11,9 @@ import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 
 function earn() {
     const { data: session } = useSession()
+    const mountedRef = useRef()
     const miningState = useAppSelector(selectMining)
+    
 
     const [miningStart, setMiningStart] = useState(false)
     const [isDim, setIsDim] = useState(false)
@@ -43,17 +45,18 @@ function earn() {
         }
     }, [theme])
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     if(checkMining.status === 'success'){
+        if(miningState.status === 'success'){
+            console.log("success")
+        }
 
-    //     }
-
-    // }, [checkMining])
+    }, [miningState])
 
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         console.log('initial load')
+
 
         //  if (!getTimeStore) {
         if (session && !getTimeStore) {
