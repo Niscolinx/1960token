@@ -68,6 +68,11 @@ function earn() {
         if(mineState.miningSession === 'over'){
             setMiningStart(false)
         }
+         if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
+             console.log('Timer finished')
+             setStopMining(true)
+             //dispatch(initStopMineAsync(session))
+         }
         //}
         // else {
         //     console.log("Didn't load the get time")
