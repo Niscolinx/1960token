@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch } from '../../app/hooks'
-import { initMineAsync } from '../../features/mine/MinerSlice'
+import { increment, initMineAsync } from '../../features/mine/MinerSlice'
 import dayjs, { Dayjs } from 'dayjs'
 
 function earn() {
@@ -85,7 +85,7 @@ function earn() {
             console.log({ getTimeStore })
             setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
-            dispatch()
+            dispatch(increment())
         }
 
         if (session) {
