@@ -26,13 +26,11 @@ export default async function StartMining(
     console.log({ user })
 
     if (user.isMining) {
-        console.log('mining started already')
         return res.json({
             miningStartedAt: user.miningStartedAt,
             isMining: user.isMining,
         })
     } else {
-        console.log('start user mining', { startTimeStamp })
         user.miningStartedAt = startTimeStamp
         user.isMining = true
         await user.save()
