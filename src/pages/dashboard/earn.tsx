@@ -47,7 +47,7 @@ function earn() {
             })
         }
     }, [theme])
-    
+
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
 
@@ -84,7 +84,6 @@ function earn() {
             console.log({ getTimeStore })
             setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
-            dispatch(increment())
         }
 
         if (session) {

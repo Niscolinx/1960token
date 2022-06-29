@@ -2,6 +2,8 @@ import React, { useState, useLayoutEffect, useEffect } from 'react'
 import { countDown } from '../../../utils/countDown'
 import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
+import { increment } from '../../features/mine/MinerSlice'
+import { useAppSelector } from '../../app/hooks'
 
 
 
@@ -53,6 +55,8 @@ useEffect(() => {
         if (start) {
             console.log("started")
             const intervalId = setInterval(() => {
+                            dispatch(increment())
+
                 return updateRemainingTimer(prevTimeStore)
             }, 1000)
 
