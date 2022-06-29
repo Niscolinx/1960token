@@ -39,11 +39,11 @@ export const MiningSlice = createSlice({
     initialState,
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
-       // increment: (state) => {
-            // Redux Toolkit allows us to write "mutating" logic in reducers. It
-            // doesn't actually mutate the state because it uses the Immer library,
-            // which detects changes to a "draft state" and produces a brand new
-            // immutable state based off those changes
+        // increment: (state) => {
+        // Redux Toolkit allows us to write "mutating" logic in reducers. It
+        // doesn't actually mutate the state because it uses the Immer library,
+        // which detects changes to a "draft state" and produces a brand new
+        // immutable state based off those changes
         //     state.value += 1
         // },
         // decrement: (state) => {
@@ -62,10 +62,10 @@ export const MiningSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(initMineAsync.fulfilled, (state, action) => {
-                const {isMining, miningStatedAt} =  action.payload
+                const { isMining, miningStatedAt } = action.payload
                 state.status = 'success'
-                state.miningStartedAt =  payload.miningStartedAt
-                 state.isMining = isMining
+                state.miningStartedAt = miningStatedAt
+                state.isMining = isMining
             })
             .addCase(initMineAsync.rejected, (state, action) => {
                 state.status = 'failed'
