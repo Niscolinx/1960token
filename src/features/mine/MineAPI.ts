@@ -4,14 +4,9 @@ import { nextAuthSession } from '../../lib/types'
 
 export async function startMining(
     session: nextAuthSession
-): Promise<AxiosResponse<boolean>> {
+): Promise<AxiosResponse<void>> {
 
     const getTimeStore = localStorage.getItem('miningTime')
-
-
-    // if (!getTimeStore) {
-    //const remainingTime = dayjsRemainingTimeStamp
-
     const response = await axios.post('/api/startMining', session )
 
     return response.data
