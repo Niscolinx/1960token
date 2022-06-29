@@ -15,7 +15,7 @@ export interface MiningState {
 const initialState: MiningState = {
     value: 0,
     status: 'idle',
-    startedMining: JSON.stringify(dayjs().add(12, 'hours')),
+   // startedMining: JSON.stringify(dayjs().add(12, 'hours')),
     hello: ''
 }
 
@@ -50,7 +50,7 @@ export const MiningSlice = createSlice({
         },
         // Use the PayloadAction type to declare the contents of `action.payload`
         initMine: (state, action: PayloadAction<Dayjs>) => {
-            state.hello = action.payload
+            state.hello = ''
         },
     },
     // The `extraReducers` field lets the slice handle actions defined elsewhere,
