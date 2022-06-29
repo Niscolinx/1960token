@@ -85,6 +85,7 @@ function earn() {
             console.log({ getTimeStore })
             setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
+            dispatch()
         }
 
         if (session) {
