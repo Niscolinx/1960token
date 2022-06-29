@@ -7,10 +7,6 @@ import User, { IUser } from '../../models/User'
      isMining: boolean
  }
 
- interface myReturnType {
-     [name: string]: returnTypeJson
- }
-
  type JsonType<returnTypeJson> = (body: returnTypeJson) => void
 
  export interface TypedReqBody<T> extends NextApiResponse {
