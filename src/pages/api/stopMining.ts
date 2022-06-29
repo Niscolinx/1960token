@@ -17,19 +17,16 @@ export default async function StartMining(
     req: NextApiRequest,
     res: TypedReqBody<returnTypeJson>
 ) {
-
     const { email }: IUser = req.body.user
 
     const user = await User.findOne({ email })
 
-    
-        user.miningStartedAt = null
-        user.isMining = false
-        await user.save()
+    user.miningStartedAt = null
+    user.isMining = false
+    await user.save()
 
-        return res.json({
-            isMining: user.isMining,
-            miningStartedAt: user.miningStartedAt,
-        })
-    
+    return res.json({
+        isMining: user.isMining,
+        miningStartedAt: user.miningStartedAt,
+    })
 }
