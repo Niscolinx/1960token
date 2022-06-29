@@ -8,6 +8,7 @@ import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
+import { useAppDispatch } from '../../app/hooks'
 
 function earn() {
     const { data: session } = useSession()
@@ -18,6 +19,8 @@ function earn() {
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
+
+    const dispatch = useAppDispatch(start)
 
     useEffect(() => {
         if (theme === 'dark') {
