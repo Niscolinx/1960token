@@ -62,9 +62,9 @@ export const MiningSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(initMineAsync.fulfilled, (state, action) => {
-                const { isMining, miningStatedAt } = action.payload
+                const { isMining, miningStartedAt } = action.payload
                 state.status = 'success'
-                state.miningStartedAt = miningStatedAt
+                state.miningStartedAt = miningStartedAt
                 state.isMining = isMining
             })
             .addCase(initMineAsync.rejected, (state) => {

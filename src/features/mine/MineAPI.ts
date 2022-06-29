@@ -3,7 +3,7 @@ import { nextAuthSession } from '../../lib/types'
 
 interface IFetchedData {
     isMining: boolean
-    miningStatedAt: string
+    miningStartedAt: string
 }
 
 export async function startMining(
