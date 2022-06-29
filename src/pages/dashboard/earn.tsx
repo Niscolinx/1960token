@@ -24,7 +24,6 @@ function earn() {
 
     const dispatch = useAppDispatch()
 
-     console.log({mineState})
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -100,7 +99,7 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>0.0001</p>
+                    <p className='font-bold text-3xl'>{}</p>
                 </div>
 
                 <div className='relative z-10'>
