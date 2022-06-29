@@ -21,7 +21,7 @@ export const persistedStore = persistStore(store)
 
 export type MineState = ReturnType<typeof store.getState>
 
-export type AppDispatch = typeof store.dispatch
+export type AppDispatch = void
 
 export type AppThunk<ReturnType = void> = ThunkAction<
     ReturnType,
