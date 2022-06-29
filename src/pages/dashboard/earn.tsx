@@ -14,6 +14,8 @@ import { initMineAsync } from '../../features/mine/MinerSlice'
 function earn() {
     const { data: session } = useSession()
 
+    console.log({session})
+
     const [miningStart, setMiningStart] = useState(false)
     const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
     const [isDim, setIsDim] = useState(true)

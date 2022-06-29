@@ -19,14 +19,14 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
             username: emailOrUsername,
         })
 
-       // console.log({email, username})
+        // console.log({email, username})
 
-       const user = email || username
+        const user = email || username
 
         if (!user) {
-           console.log("not found")
-           return res.status(401).json('Not found')
-        } 
+            console.log('not found')
+            return res.status(401).json('Not found')
+        }
 
         const checkPassword = await bcrypt.compare(password, user!.password)
         if (!checkPassword) {
@@ -40,14 +40,14 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
             },
             process.env.JWT_SECRET!,
             {
-                expiresIn: '199hr',
+                expiresIn: '1hr',
             }
         )
 
-        return res.status(200).json({
-            user,
-            token,
-        })
+        return res.status(200).json(
+            user
+            //token,
+        )
     } catch (err) {
         console.log({ err })
         res.status(400).json('error')
