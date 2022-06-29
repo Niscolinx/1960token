@@ -12,6 +12,7 @@ import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 function earn() {
     const { data: session } = useSession()
     const miningState = useAppSelector(selectMining)
+    const [initialLoad, setInitialLoad] = useState(false)
     
 
     const [miningStart, setMiningStart] = useState(false)
@@ -46,6 +47,8 @@ function earn() {
 
     useEffect(() => {
         console.log("loaded")
+                const getTimeStore = localStorage.getItem('miningStartedAt')
+
     }, [])
 
 
