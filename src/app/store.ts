@@ -19,7 +19,7 @@ export function makeStore() {
     })
 }
 
-const store = makeStore()
+const store = persistStore(makeStore())
 
 export type MineState = ReturnType<typeof store.getState>
 
