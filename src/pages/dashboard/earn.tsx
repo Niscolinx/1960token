@@ -75,6 +75,7 @@ function earn() {
         if (getTimeStore) {
             console.log({ getTimeStore })
             setPrevTimeStore(dayjs(getTimeStore))
+            setMiningStart(true)
         }
 
         if (session) {
@@ -132,8 +133,7 @@ function earn() {
                 ></div>
                 <div className='grid self-center mt-2'>
                     <MineTimer
-                        hour={12}
-                        start={false}
+                        start={miningStart}
                         prevTimeStore={prevTimeStore}
                     />
                 </div>
