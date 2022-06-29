@@ -24,10 +24,11 @@ const CountDownTimer = ({ hour, start, prevTimeStore }: ICountDown) => {
     const mineState = useAppSelector(selectMining)
 
     console.log({ mineState })
-    
+
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
     const updateRemainingTimer = (timerInMs: number, prev?: Dayjs) => {
+        console.log("mining update")
         setRemainingTime(countDown(timerInMs, prev))
     }
 const { theme } = useTheme()
