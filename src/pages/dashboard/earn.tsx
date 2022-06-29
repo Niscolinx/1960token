@@ -58,7 +58,7 @@ function earn() {
         console.log('initial load')
 
         //  if (!getTimeStore) {
-        if (session && !getTimeStore) {
+        if (session && initialLoad) {
             console.log('about to dispatch')
             dispatch(initMineAsync(session))
         }
