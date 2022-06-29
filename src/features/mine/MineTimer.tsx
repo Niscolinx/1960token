@@ -21,6 +21,18 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
+    const dayjsNowTimeStamp = dayjs()
+    // const dispatch = useAppDispatch()
+    if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
+        console.log('Timer finished')
+        // dispatch(initStopMineAsync())
+        return {
+            hours: '00',
+            minutes: '00',
+            seconds: '00',
+        }
+    }
+
  
 
     const updateRemainingTimer = (prev?: Dayjs) => {

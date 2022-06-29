@@ -5,19 +5,9 @@ import { useSession } from 'next-auth/react';
 
 
 export const countDown = (prevTimeStore?: Dayjs) => {
-   // const { data: session } = useSession()
     
     const dayjsNowTimeStamp = dayjs()
-   // const dispatch = useAppDispatch()
-    if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
-        console.log("Timer finished")
-       // dispatch(initStopMineAsync())
-       return {
-           hours: '00',
-           minutes: '00',
-           seconds: '00',
-       }
-    }
+   
   
 
     if (prevTimeStore){
