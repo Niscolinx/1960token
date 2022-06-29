@@ -9,6 +9,7 @@ import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
 import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch } from '../../app/hooks'
+import { initMineAsync } from '../../features/mine/MinerSlice'
 
 function earn() {
     const { data: session } = useSession()
@@ -20,7 +21,7 @@ function earn() {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-    const dispatch = useAppDispatch(start)
+    const dispatch = useAppDispatch()
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -89,6 +90,7 @@ function earn() {
         console.log('clicked on mine')
             const dayjsRemainingTimeStamp = dayjs().add(12, 'hours')
 
+            dispatch(initMineAsync(session))
         setIsDim(false)
        
     }
