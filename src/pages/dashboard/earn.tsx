@@ -74,7 +74,8 @@ function earn() {
         }
         if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
             console.log('Timer finished')
-            setStopMining(true)
+            setMiningStart(false)
+            localStorage.removeItem('miningStartedAt')
             //dispatch(initStopMineAsync(session))
         }
         //}
