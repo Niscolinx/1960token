@@ -1,17 +1,14 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
-import counterReducer from '../features/counter/counterSlice'
-import MiningReducer from '../features/mine/MinerSlice'
 
 export function makeStore() {
     return configureStore({
-        reducer: { counter: counterReducer, mine: MiningReducer },
+        reducer: { mine: MiningReducer },
     })
 }
 
 const store = makeStore()
 
-export type AppState = ReturnType<typeof store.getState>
 export type MineState = ReturnType<typeof store.getState>
 
 export type AppDispatch = typeof store.dispatch
