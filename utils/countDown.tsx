@@ -1,42 +1,20 @@
-import { initStopMineAsync } from './../src/features/mine/MinerSlice';
-import { useAppDispatch } from './../src/app/hooks';
+import { initStopMineAsync } from '../src/features/mine/MinerSlice';
+import { useAppDispatch } from '../src/app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
 import { useSession } from 'next-auth/react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 
 export const countDown = (prevTimeStore?: Dayjs) => {
    // const { data: session } = useSession()
 
-   const [count, setcount] = useState()
+   const [count, setcount] = useState(0)
     
     const dayjsNowTimeStamp = dayjs()
    // const dispatch = useAppDispatch()
-    if(dayjsNowTimeStamp.isAfter(prevTimeStore)){
-        console.log("Timer finished")
-       // dispatch(initStopMineAsync())
-       return {
-           hours: '00',
-           minutes: '00',
-           seconds: '00',
-       }
-    }
-  
-
-    if (prevTimeStore){
-        return {
-            hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
-            minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
-            seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
-        }
-    }
-    else {
-        return {
-            hours: '00',
-            minutes: '00',
-            seconds: '00',
-        }
-    }
+    return (
+        <div>Hello world, {count}</div>
+    )
 }
 
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {

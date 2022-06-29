@@ -4,6 +4,7 @@ import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increment } from '../../features/mine/MinerSlice'
 import { useAppDispatch } from '../../app/hooks'
+import Countdown from 'react-countdown'
 
 const defaultTimer = {
     hours: '00',
@@ -25,7 +26,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         console.log('mining update')
-        setRemainingTime(countDown(prev))
+        //setRemainingTime(countDown(prev))
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -76,6 +77,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
                 <p>
                     {hours}:{minutes}:{seconds}
                 </p>
+                <Countdown/>
             </div>
         </div>
     )
