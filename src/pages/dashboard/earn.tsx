@@ -11,9 +11,10 @@ import { initMineAsync, selectMining } from '../../features/mine/MinerSlice'
 
 function earn() {
     const { data: session } = useSession()
-    const miningState = useAppSelector(selectMining)
 
     const [miningStart, setMiningStart] = useState(false)
+    const [prevTimeStore, setPrevTimeStore] = useState()
+
     const [isDim, setIsDim] = useState(false)
 
     const { theme } = useTheme()
