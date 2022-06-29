@@ -7,7 +7,7 @@ import { startMining } from './MineAPI'
 
 export interface MiningState {
     isMining: boolean
-    status: 'idle' | 'loading' | 'failed'
+    status: 'idle' | 'loading' | 'failed' | 'success'
     miningStartedAt: string
 }
 
@@ -62,7 +62,7 @@ export const MiningSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(initMineAsync.fulfilled, (state, action) => {
-                state.status = 'idle'
+                state.status = 'success'
             })
             .addCase(initMineAsync.rejected, (state, action) => {
                 state.status = 'failed'
