@@ -2,10 +2,13 @@ import { initStopMineAsync } from './../src/features/mine/MinerSlice';
 import { useAppDispatch } from './../src/app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
 import { useSession } from 'next-auth/react';
+import { useState } from 'react';
 
 
 export const countDown = (prevTimeStore?: Dayjs) => {
    // const { data: session } = useSession()
+
+   const [count, setcount] = useState()
     
     const dayjsNowTimeStamp = dayjs()
    // const dispatch = useAppDispatch()
