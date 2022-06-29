@@ -67,7 +67,7 @@ function earn() {
         //     setPrevTimeStore(dayjs(getTimeStore))
         //     setMiningStart(true)
         // }
-    }, [session, initialLoad])
+    }, [session])
 
        
 
