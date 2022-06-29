@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
  interface returnTypeJson {
-     miningStart: string
+     miningStartedAt: string
      isMining: boolean
  }
 
@@ -29,18 +29,18 @@ export default async function StartMining(
     if (user.isMining) {
         console.log('mining started already')
        return res.json({
-            miningStart: user.miningStartAt,
-            isMining: true,
-
-        })
+           miningStartedAt: user.miningStartedAt,
+           isMining: true,
+       })
     } else {
         console.log('start user mining')
         user.isMining = true
+        user.miningStartedAt = startTimeStamp
         await user.save()
 
         return res.json({
             isMining: user.isMining,
-            miningStart: user.miningStart,
+            miningStartedAt: user.miningStartedAt,
         })
     }
 }
