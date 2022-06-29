@@ -54,7 +54,6 @@ function earn() {
 
     // }, [])
 
-    if (miningState.status !== 'success') {
         useEffect(() => {
             //const getTimeStore = localStorage.getItem('miningTime')
             console.log('initial load')
@@ -77,7 +76,7 @@ function earn() {
             //     setMiningStart(true)
             // }
         }, [session])
-    }
+    
 
     const handleStart = () => {
         console.log('clicked on mine')
