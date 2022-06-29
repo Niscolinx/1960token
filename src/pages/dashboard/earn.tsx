@@ -46,6 +46,10 @@ function earn() {
     }, [theme])
 
     useEffect(() => {
+        console.log('session', {session})
+    },[])
+
+    useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
 
          if (getTimeStore) {
@@ -70,6 +74,8 @@ function earn() {
         //     setMiningStart(true)
         // }
     }, [session])
+
+
 
     const handleStart = () => {
         console.log('clicked on mine')
