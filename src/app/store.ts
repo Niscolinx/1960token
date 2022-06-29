@@ -12,16 +12,15 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, MiningReducer)
 
 export const store = configureStore({
-    reducer: { mine: MiningReducer },
+    reducer: { mine: persistedReducer },
     devTools: process.env.NODE_ENV !== 'production',
-    middleware: [thunk],
 })
 
 export const persistedStore = persistStore(store)
 
 export type MineState = ReturnType<typeof store.getState>
 
-export type AppDispatch = void
+export type AppDispatch = typeof store.dispatch
 
 export type AppThunk<ReturnType = void> = ThunkAction<
     ReturnType,
