@@ -45,9 +45,6 @@ function earn() {
         }
     }, [theme])
 
- 
-
-
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         console.log('initial load')
@@ -71,13 +68,14 @@ function earn() {
         // }
     }, [session])
 
-       
-
     const handleStart = () => {
         console.log('clicked on mine')
 
         const getTimeStore = localStorage.getItem('miningTime')
-        setPrevTimeStore(getTimeStore)
+        if (getTimeStore) {
+            console.log({ getTimeStore })
+            setPrevTimeStore(getTimeStore)
+        }
 
         if (session) {
             console.log('about to dispatch')
@@ -133,7 +131,11 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
-                    <MineTimer hour={12} start={false} />
+                    <MineTimer
+                        hour={12}
+                        start={false}
+                        prevTimeStore={prevTimeStore}
+                    />
                 </div>
             </div>
         </>
