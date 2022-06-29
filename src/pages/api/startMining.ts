@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
@@ -7,6 +8,9 @@ export default async function StartMining(
     res: NextApiResponse
 ){
     console.log('req body', req.body)
+
+        const startTimeStamp = dayjs().add(12, 'hours')
+
 
     const { email }: IUser = req.body.user
 
@@ -24,7 +28,6 @@ export default async function StartMining(
         })
     } else {
         console.log('start user mining')
-        user.miningStart = remainingTime
         user.isMining = true
         await user.save()
 
