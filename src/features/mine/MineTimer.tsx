@@ -4,12 +4,11 @@ import { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { useAppSelector } from '../../app/hooks'
 import { MineState } from '../../app/store'
+import { selectMining } from './MinerSlice'
 
-const mineState = useAppSelector((state: {
-    mine: MineState
-}) => {
-    console.log({mine})
-})
+const mineState = useAppSelector(selectMining)
+
+console.log({mineState})
 
 const defaultTimer = {
     hours: '00',
