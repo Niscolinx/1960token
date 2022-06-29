@@ -54,11 +54,11 @@ function earn() {
     // }, [checkMining])
 
     useEffect(() => {
-        //const getTimeStore = localStorage.getItem('miningTime')
+        const getTimeStore = localStorage.getItem('miningStartedAt')
         console.log('initial load')
 
         //  if (!getTimeStore) {
-        if (session) {
+        if (session && !getTimeStore) {
             console.log('about to dispatch')
             dispatch(initMineAsync(session))
         }
