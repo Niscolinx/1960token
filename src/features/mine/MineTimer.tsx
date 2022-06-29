@@ -27,6 +27,7 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     const updateRemainingTimer = ( prev?: Dayjs) => {
         console.log("mining update")
         setRemainingTime(countDown(prev))
+        dispatch(increment())
     }
 const { theme } = useTheme()
 const [neuToUse, setNeuToUse] = useState<{}>()
