@@ -44,12 +44,7 @@ function earn() {
         }
     }, [theme])
 
-    useEffect(() => {
-        console.log('loaded')
-        const getTimeStore = localStorage.getItem('miningStartedAt')
-
-        setInitialLoad(false)
-    }, [])
+ 
 
     console.log({initialLoad})
 
@@ -75,6 +70,13 @@ function earn() {
         //     setMiningStart(true)
         // }
     }, [session, initialLoad])
+
+       useEffect(() => {
+           console.log('loaded')
+           const getTimeStore = localStorage.getItem('miningStartedAt')
+
+           setInitialLoad(false)
+       }, [])
 
     const handleStart = () => {
         console.log('clicked on mine')
