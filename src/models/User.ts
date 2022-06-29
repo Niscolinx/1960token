@@ -86,6 +86,6 @@ const userSchema = new Schema<IUser>(
     { timestamps: true }
 )
 
-console.log('models user init', models.user)
+console.log('models user init', models.User)
 
 export default models.User || model('User', userSchema)
