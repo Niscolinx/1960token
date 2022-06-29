@@ -17,7 +17,6 @@ export default async function StartMining(
     req: NextApiRequest,
     res: TypedReqBody<returnTypeJson>
 ) {
-    console.log(req.body)
     const startTimeStamp = dayjs().add(12, 'hours')
 
     const { email }: IUser = req.body.user
