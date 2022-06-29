@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
@@ -45,7 +45,7 @@ function earn() {
         }
     }, [theme])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         console.log('session', {session})
     },[])
 
