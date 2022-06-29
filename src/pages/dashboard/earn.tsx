@@ -76,7 +76,7 @@ function earn() {
 
         const getTimeStore = localStorage.getItem('miningTime')
 
-        if (session && !getTimeStore) {
+        if (session) {
             console.log('about to dispatch')
             dispatch(initMineAsync(session))
         }
