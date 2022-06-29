@@ -53,39 +53,39 @@ function earn() {
 
     // }, [])
 
-    useEffect(() => {
-        const getTimeStore = localStorage.getItem('miningTime')
-        console.log('initial load')
+    // useEffect(() => {
+    //     const getTimeStore = localStorage.getItem('miningTime')
+    //     console.log('initial load')
 
-        if (!getTimeStore) {
-            console.log('load the gettime')
-            axios
-                .post('/api/startMining',  session )
-                .then(({ data }) => {
-                    console.log({ data })
-                    const { miningStart, isMining } = data
-                    // if (isMining) {
-                    //     localStorage.setItem('miningTime', miningStart)
-                    //     setMiningStart(true)
-                    //     setPrevTimeStore(dayjs(miningStart))
-                    // }
-                })
-                .catch((err) => {
-                    console.log({ err })
-                })
-        } 
-        //else {
-        //     console.log("Didn't load the get time")
+    //     if (!getTimeStore) {
+    //         console.log('load the gettime')
+    //         axios
+    //             .post('/api/startMining',  session )
+    //             .then(({ data }) => {
+    //                 console.log({ data })
+    //                 const { miningStart, isMining } = data
+    //                 // if (isMining) {
+    //                 //     localStorage.setItem('miningTime', miningStart)
+    //                 //     setMiningStart(true)
+    //                 //     setPrevTimeStore(dayjs(miningStart))
+    //                 // }
+    //             })
+    //             .catch((err) => {
+    //                 console.log({ err })
+    //             })
+    //     } 
+    //     //else {
+    //     //     console.log("Didn't load the get time")
 
-        //     const dayjsNowTimeStamp = dayjs()
-        //     if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
-        //         console.log('Timer finished')
-        //         return setMiningStart(false)
-        //     }
-        //     setPrevTimeStore(dayjs(getTimeStore))
-        //     setMiningStart(true)
-        // }
-    }, [])
+    //     //     const dayjsNowTimeStamp = dayjs()
+    //     //     if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
+    //     //         console.log('Timer finished')
+    //     //         return setMiningStart(false)
+    //     //     }
+    //     //     setPrevTimeStore(dayjs(getTimeStore))
+    //     //     setMiningStart(true)
+    //     // }
+    // }, [])
 
     const handleStart = () => {
         console.log('clicked on mine')
