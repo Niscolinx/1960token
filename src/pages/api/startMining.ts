@@ -35,7 +35,7 @@ export default async function StartMining(
        })
     } else {
         console.log('start user mining', {startTimeStamp})
-        user.miningStartedAt = JSON.stringify(startTimeStamp)
+        user.miningStartedAt = startTimeStamp
         user.hello = 'hello world'
         const updatedUser = await user.save()
 
