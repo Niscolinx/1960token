@@ -14,10 +14,16 @@ const secondsRemaining = (now: Dayjs, remainingTime: Dayjs) => {
 }
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
     const seconds = now.second()
-    return padWithZeros(seconds, 2)
+    return padWithDecimalZeros(seconds, 2)
 }
 
 const padWithZeros = (number: number, minLength: number) => {
+    const numberString = number.toString()
+    if (numberString.length >= minLength) return numberString
+
+    return '0'.repeat(minLength - numberString.length) + numberString
+}
+const padWithDecimalZeros = (number: number, minLength: number) => {
     const numberString = number.toString()
     if (numberString.length >= minLength) return numberString
 
