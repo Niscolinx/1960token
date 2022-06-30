@@ -65,7 +65,7 @@ function earn() {
             dispatch(initMineAsync(session))
         }
 
-        if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+        if (dayjsNowTimeStamp.isBefore(dayjs(mineState.miningStartedAt))) {
             console.log('Timer finished')
             setMiningStart(false)
             dispatch(initStopMineAsync(session))
