@@ -59,18 +59,6 @@ function earn() {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
 
-        if (getTimeStore) {
-            setPrevTimeStore(dayjs(getTimeStore))
-            setMiningStart(true)
-        }
-
-        //  if (!getTimeStore) {
-        if(!getTimeStore){
-            console.log("get time store")
-            console.log(' not get time store',  JSON.parse(getTimeStore))
-        }    else{
-           
-        }
 
         if (session && !getTimeStore) {
             console.log('run code')
