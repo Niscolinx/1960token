@@ -69,6 +69,7 @@ function earn() {
             console.log("get time store")
         }    else{
             console.log(' not get time store')
+           
         }
 
         if (session && !getTimeStore) {
