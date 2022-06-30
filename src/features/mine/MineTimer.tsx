@@ -23,13 +23,17 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const { data: session } = useSession()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
-    const [prevTimeStore, setPrevTimeStore] = useState()
+    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
 
     const dayjsNowTimeStamp = dayjs()
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
         console.log('Timer finished')
     }else{
-        console.log("mine", typeof mineState.miningStartedAt)
+        console.log("mine", mineState.miningStartedAt)
+
+        if(mineState){
+            setPrevTimeStore(dayjs(mineState.miningStartedAt))
+        }
     }
 
     const updateRemainingTimer = (prev?: Dayjs) => {
