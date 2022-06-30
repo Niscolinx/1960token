@@ -13,7 +13,7 @@ import {
     MiningState,
     selectMining,
 } from '../../features/mine/MinerSlice'
-import dayjs, { Dayjs } from 'dayjs'
+import dayjs from 'dayjs'
 
 function earn() {
     const { data: session } = useSession()
