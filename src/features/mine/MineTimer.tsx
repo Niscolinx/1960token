@@ -26,7 +26,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
         console.log('Timer finished')
     }else{
-        console.log("still mining", mineState.miningStartedAt)
+        console.log("still mining", mineState.miningStartedAt, mineState.miningSession)
 
        
     }
