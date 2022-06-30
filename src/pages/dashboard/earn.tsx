@@ -74,11 +74,11 @@ function earn() {
         
         if (session) {
             console.log('the session')
-            if(persistedStorage){
-                const parsedJSON:MiningState = JSON.parse(persistedStorage)
+                const parsedJSON:MiningState = JSON.parse(persistedStorage!)
 
                 console.log('parsed json', parsedJSON.miningSession)
-            }
+
+            
             // if (!getTimeStore) {
             //     console.log('run code')
             //     dispatch(initMineAsync(session))
