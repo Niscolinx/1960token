@@ -11,9 +11,7 @@ const defaultTimer = {
     seconds: '00',
 }
 
-const defaultTokenCountDown = {
-    seconds: '00'
-}
+const defaultTokenCountDown = '00'
 
 const CountDownTimer = ({ start }: {start: boolean}) => {
     console.log({start})
@@ -22,6 +20,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const dispatch = useAppDispatch()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
+    const [tempTokenCount, setTempTokenCount] = useState(defaultTokenCountDown)
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
