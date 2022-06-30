@@ -38,15 +38,8 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     }
 }
 
-export const tokenCountDown = (prevTimeStore?: Dayjs) => {
+export const tokenCountDown = (prevTimeStore: Dayjs): string => {
     const dayjsNowTimeStamp = dayjs()
-    
-    if (prevTimeStore) {
-        console.log(
-            'token countdown',
-            secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
-        )
-        return secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
-    }
 
+    return secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
 }
