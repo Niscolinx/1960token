@@ -74,6 +74,7 @@ function earn() {
 
         if (session) {
             console.log('the session')
+            const persistedStorage = localStorage.getItem("persist:root")
             // if (!getTimeStore) {
             //     console.log('run code')
             //     dispatch(initMineAsync(session))
