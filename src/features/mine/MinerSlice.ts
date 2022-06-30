@@ -11,6 +11,7 @@ export interface MiningState {
     miningStartedAt: string
     totalMined: number
     miningSession: 'over' | 'active' | 'stall'
+    countDownToken: string
 }
 
 const initialState: MiningState = {
@@ -18,7 +19,8 @@ const initialState: MiningState = {
     status: 'idle',
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
     totalMined: 0,
-    miningSession: 'stall'
+    miningSession: 'stall',
+    countDownToken: ''
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
