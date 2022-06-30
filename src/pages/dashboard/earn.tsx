@@ -61,6 +61,7 @@ function earn() {
         const dayjsNowTimeStamp = dayjs()
 
         if (session) {
+            console.log("the session")
             if (!getTimeStore) {
                 console.log('run code')
                 dispatch(initMineAsync(session))
