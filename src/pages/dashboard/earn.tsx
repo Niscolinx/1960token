@@ -60,23 +60,24 @@ function earn() {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
 
-        if (session && !getTimeStore) {
-            console.log('run code')
-            dispatch(initMineAsync(session))
-        }
+        if (session) {
+            if (!getTimeStore) {
+                console.log('run code')
+                dispatch(initMineAsync(session))
+            }
 
-        if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
-            console.log('Timer finished')
-            setMiningStart(false)
-            dispatch(initStopMineAsync(session))
-        } else if (mineState.miningSession !== 'active') {
-            console.log('mining is running')
-            setMiningStart(false)
-        } else {
-            console.log('mine is over')
-            setMiningStart(true)
+            if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+                console.log('Timer finished')
+                setMiningStart(false)
+                dispatch(initStopMineAsync(session))
+            } else if (mineState.miningSession !== 'active') {
+                console.log('mining is running')
+                setMiningStart(false)
+            } else {
+                console.log('mine is over')
+                setMiningStart(true)
+            }
         }
-
         //}
         // else {
         //     console.log("Didn't load the get time")
