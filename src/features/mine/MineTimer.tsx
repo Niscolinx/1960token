@@ -18,7 +18,7 @@ interface ICountDown {
 }
 
 
-const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
+const CountDownTimer = ({ start }: ICountDown) => {
     console.log({start})
     const dispatch = useAppDispatch()
     const { data: session } = useSession()
