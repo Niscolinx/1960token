@@ -9,6 +9,7 @@ import MineTimer from '../../features/mine/MineTimer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import {
     initMineAsync,
+    initStopMineAsync,
     MiningState,
     selectMining,
 } from '../../features/mine/MinerSlice'
@@ -64,6 +65,12 @@ function earn() {
             console.log('run code')
             dispatch(initMineAsync(session))
         }
+
+        if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+                console.log('Timer finished')
+                setMiningStart(false)
+                dispatch(initStopMineAsync(session))
+            }
 
         if (mineState.miningSession !== 'active' ) {
             console.log("mining is running")
