@@ -23,6 +23,10 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     }
 }
 
+export const totalMinedTokens = () => {
+    
+}
+
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
     return padWithZeros(hours, 2)
