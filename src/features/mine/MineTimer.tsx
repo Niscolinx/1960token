@@ -24,7 +24,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
-        tokenCountDown(prev)
+       setTempTokenCount(tokenCountDown(prev))
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
