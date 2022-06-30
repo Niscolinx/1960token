@@ -69,7 +69,6 @@ function earn() {
     }, [mineState])
 
     useEffect(() => {
-        const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
         
         if (session) {
