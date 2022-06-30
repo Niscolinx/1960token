@@ -13,6 +13,7 @@ import {
     selectMining,
 } from '../../features/mine/MinerSlice'
 import dayjs from 'dayjs'
+import { tokenCountDown } from '../../features/mine/MineCountDown'
 
 function earn() {
     const { data: session } = useSession()
@@ -100,7 +101,7 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>{totalMined}</p>
+                    <p className='font-bold text-3xl'>{tokenCountDown}</p>
                 </div>
 
                 <div className='relative z-10'>
