@@ -62,6 +62,9 @@ function earn() {
                 console.log('start mining')
                 setMiningStart(true)
             }
+            else {
+                setMiningStart(false)
+            }
         }
     }, [mineState])
 
