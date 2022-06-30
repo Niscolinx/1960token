@@ -91,18 +91,7 @@ function earn() {
                 setMiningStart(true)
             }
         }
-        //}
-        // else {
-        //     console.log("Didn't load the get time")
-
-        //     const dayjsNowTimeStamp = dayjs()
-        //     if (dayjsNowTimeStamp.isAfter(dayjs(getTimeStore))) {
-        //         console.log('Timer finished')
-        //         return setMiningStart(false)
-        //     }
-        //     setPrevTimeStore(dayjs(getTimeStore))
-        //     setMiningStart(true)
-        // }
+       
     }, [session])
 
     const handleStart = () => {
