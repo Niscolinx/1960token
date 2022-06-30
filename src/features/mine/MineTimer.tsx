@@ -17,7 +17,6 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     console.log({start})
     const mineState = useAppSelector(selectMining)
 
-    console.log({mineState})
     const dispatch = useAppDispatch()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
