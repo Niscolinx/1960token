@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { countDown } from './MineCountDown'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increment, selectMining } from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { MineCountDown } from './MineCountDown'
 
 const defaultTimer = {
     hours: '00',
@@ -24,7 +24,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         console.log('mining update')
-        setRemainingTime(countDown(prev))
+        setRemainingTime(MineCountDown(prev))
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
