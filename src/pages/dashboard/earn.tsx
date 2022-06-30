@@ -67,8 +67,8 @@ function earn() {
         //  if (!getTimeStore) {
         if(!getTimeStore){
             console.log("get time store")
-        }    else{
             console.log(' not get time store',  JSON.parse(getTimeStore))
+        }    else{
            
         }
 
