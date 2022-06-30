@@ -94,19 +94,18 @@ function earn() {
 
     const handleStart = () => {
         console.log('clicked on mine')
-        dispatch(initStopMineAsync(session))
 
-        // const getTimeStore = localStorage.getItem('miningStartedAt')
-        // if (getTimeStore) {
-        //     console.log({ getTimeStore })
-        //     setMiningStart(true)
-        // }
+        const getTimeStore = localStorage.getItem('miningStartedAt')
+        if (getTimeStore) {
+            console.log({ getTimeStore })
+            setMiningStart(true)
+        }
 
-        // if (session) {
-        //     console.log('about to dispatch')
-        //     dispatch(initMineAsync(session))
-        // }
-        // setIsDim(false)
+        if (session) {
+            console.log('about to dispatch')
+            dispatch(initMineAsync(session))
+        }
+        setIsDim(false)
     }
     console.log({ miningStart })
 
