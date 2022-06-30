@@ -46,7 +46,8 @@ export const tokenCountDown = (prevTimeStore?: Dayjs) => {
     
     if (prevTimeStore) {
         
-        return  secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
-    }
+        const seconds = secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
+        return seconds
+  }
 
 }
