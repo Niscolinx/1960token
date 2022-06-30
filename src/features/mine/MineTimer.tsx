@@ -29,6 +29,8 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
+    dispatch(tempTokenCount)
+
     useEffect(() => {
         if (theme === 'dark') {
             console.log('dark theme', { theme })
