@@ -68,7 +68,7 @@ function earn() {
         if(!getTimeStore){
             console.log("get time store")
         }    else{
-            console.log(' not get time store')
+            console.log(' not get time store', typeof getTimeStore)
            
         }
 
