@@ -85,11 +85,11 @@ function earn() {
                 }
 
 
-            // if (dayjsNowTimeStamp.isBefore(dayjs(mineState.miningStartedAt))) {
-            //     console.log('Timer finished')
-            //     setMiningStart(false)
-            //     dispatch(initStopMineAsync(session))
-            // }
+            if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+                console.log('Timer finished')
+                setMiningStart(false)
+                dispatch(initStopMineAsync(session))
+            }
             
         }
        
