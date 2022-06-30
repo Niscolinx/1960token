@@ -75,7 +75,7 @@ function earn() {
         if (session) {
             console.log('the session')
             if(persistedStorage){
-                const parsedJSON = JSON.parse(persistedStorage)
+                const parsedJSON:MiningState = JSON.parse(persistedStorage)
 
                 console.log('parsed json', parsedJSON.miningSession)
             }
