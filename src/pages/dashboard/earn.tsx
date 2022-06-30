@@ -58,6 +58,9 @@ function earn() {
     useEffect(() => {
         if (mineState) {
             console.log('mining state', { mineState })
+            if(mineState.isMining && mineState.miningSession === 'active'){
+
+            }
         }
     }, [mineState])
 
