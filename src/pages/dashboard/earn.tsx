@@ -59,6 +59,10 @@ function earn() {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
 
+        if(mineState){
+            console.log("mining state", {mineState})
+        }
+
         if (session) {
             console.log("the session")
             if (!getTimeStore) {
@@ -90,7 +94,7 @@ function earn() {
         //     setPrevTimeStore(dayjs(getTimeStore))
         //     setMiningStart(true)
         // }
-    }, [session])
+    }, [session, mineState])
 
     const handleStart = () => {
         console.log('clicked on mine')
