@@ -1,8 +1,6 @@
 import { useAppDispatch } from './../../app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
 
-const dispatch = useAppDispatch()
-
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
     return padWithZeros(hours, 2)
