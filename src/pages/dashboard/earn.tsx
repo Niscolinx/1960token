@@ -84,11 +84,6 @@ function earn() {
                     console.log("not ready to start")
                 }
 
-            
-            // if (!getTimeStore) {
-            //     console.log('run code')
-            //     dispatch(initMineAsync(session))
-            // }
 
             // if (dayjsNowTimeStamp.isBefore(dayjs(mineState.miningStartedAt))) {
             //     console.log('Timer finished')
