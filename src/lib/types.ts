@@ -1,3 +1,3 @@
 import { Session } from 'next-auth';
 
-export type nextAuthSession = Session | null
+export type nextAuthSession = Session
