@@ -65,7 +65,14 @@ function earn() {
         }
 
         //  if (!getTimeStore) {
+        if(!getTimeStore){
+            console.log("get time store")
+        }    else{
+            console.log(' not get time store')
+        }
+
         if (session && !getTimeStore) {
+            console.log('run code')
             dispatch(initMineAsync(session))
         }
 
