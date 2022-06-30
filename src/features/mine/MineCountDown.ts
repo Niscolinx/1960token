@@ -1,4 +1,3 @@
-import { useAppDispatch } from './../../app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
 
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
