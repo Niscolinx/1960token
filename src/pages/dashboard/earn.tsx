@@ -60,6 +60,7 @@ function earn() {
             console.log('mining state', { mineState })
             if(mineState.isMining && mineState.miningSession === 'active'){
                 console.log('start mining')
+                setMiningStart(true)
             }
         }
     }, [mineState])
