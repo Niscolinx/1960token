@@ -89,13 +89,8 @@ function earn() {
             //     console.log('Timer finished')
             //     setMiningStart(false)
             //     dispatch(initStopMineAsync(session))
-            // } else if (mineState.miningSession !== 'active') {
-            //     console.log('mining is running')
-            //     setMiningStart(false)
-            // } else {
-            //     console.log('mine is over')
-            //     setMiningStart(true)
             // }
+            
         }
        
     }, [session])
