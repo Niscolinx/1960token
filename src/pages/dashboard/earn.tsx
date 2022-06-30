@@ -97,7 +97,6 @@ function earn() {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         if (getTimeStore) {
             console.log({ getTimeStore })
-            setPrevTimeStore(dayjs(getTimeStore))
             setMiningStart(true)
         }
 
