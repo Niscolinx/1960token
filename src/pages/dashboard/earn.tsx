@@ -60,27 +60,23 @@ function earn() {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
 
-
         if (session && !getTimeStore) {
             console.log('run code')
             dispatch(initMineAsync(session))
         }
 
         if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
-                console.log('Timer finished')
-                setMiningStart(false)
-                dispatch(initStopMineAsync(session))
-            }
-
-        if (mineState.miningSession !== 'active' ) {
-            console.log("mining is running")
+            console.log('Timer finished')
+            setMiningStart(false)
+            dispatch(initStopMineAsync(session))
+        } else if (mineState.miningSession !== 'active') {
+            console.log('mining is running')
             setMiningStart(true)
-        }
-        else{
-            console.log("mine is over")
+        } else {
+            console.log('mine is over')
             setMiningStart(false)
         }
-        
+
         //}
         // else {
         //     console.log("Didn't load the get time")
@@ -111,7 +107,7 @@ function earn() {
         }
         setIsDim(false)
     }
-    console.log({miningStart})
+    console.log({ miningStart })
 
     return (
         <>
@@ -160,9 +156,7 @@ function earn() {
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
                 <div className='grid self-center mt-2'>
-                    <MineTimer
-                        start={miningStart}
-                    />
+                    <MineTimer start={miningStart} />
                 </div>
             </div>
         </>
