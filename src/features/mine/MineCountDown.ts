@@ -1,6 +1,5 @@
 import dayjs, { Dayjs } from 'dayjs'
 
-
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
     return padWithZeros(hours, 2)
@@ -22,19 +21,15 @@ const padWithZeros = (number: number, minLength: number) => {
 }
 
 export const MineCountDown = (prevTimeStore?: Dayjs) => {
-    
     const dayjsNowTimeStamp = dayjs()
-   
-  
 
-    if (prevTimeStore){
+    if (prevTimeStore) {
         return {
             hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
             minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
             seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
         }
-    }
-    else {
+    } else {
         return {
             hours: '00',
             minutes: '00',
@@ -44,19 +39,12 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
 }
 
 export const tokenCountDown = (prevTimeStore?: Dayjs) => {
+    console.log('token countdown')
     const dayjsNowTimeStamp = dayjs()
 
     if (prevTimeStore) {
         return {
             seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
         }
-    } else {
-        return {
-            hours: '00',
-            minutes: '00',
-            seconds: '00',
-        }
-    }}
-
-
-
+    }
+}
