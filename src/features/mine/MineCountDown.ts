@@ -13,7 +13,7 @@ const secondsRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     return padWithZeros(seconds, 2)
 }
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
-    const seconds = remainingTime.diff(now, 'seconds') % 60
+    const seconds = now.diff(remainingTime, 'seconds') % 60
     return padWithZeros(seconds, 2)
 }
 
@@ -46,7 +46,7 @@ export const tokenCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
     if (prevTimeStore) {
-        const seconds = secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
+        const seconds = IncrementSeconds(dayjsNowTimeStamp, prevTimeStore)
         return seconds
     }
     else return '00'
