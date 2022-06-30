@@ -20,7 +20,6 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
     console.log({mineState})
     const dispatch = useAppDispatch()
-    const { data: session } = useSession()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
 
