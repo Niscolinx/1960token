@@ -56,15 +56,17 @@ function earn() {
     }, [theme])
 
     useEffect(() => {
+        if (mineState) {
+            console.log('mining state', { mineState })
+        }
+    }, [mineState])
+
+    useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
 
-        if(mineState){
-            console.log("mining state", {mineState})
-        }
-
         if (session) {
-            console.log("the session")
+            console.log('the session')
             if (!getTimeStore) {
                 console.log('run code')
                 dispatch(initMineAsync(session))
