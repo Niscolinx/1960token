@@ -29,7 +29,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
         console.log('Timer finished')
     }else{
-        console.log("mine", prevTimeStore)
+        console.log("mine", typeof mineState.miningStartedAt)
     }
 
     const updateRemainingTimer = (prev?: Dayjs) => {
