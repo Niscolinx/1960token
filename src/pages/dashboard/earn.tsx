@@ -74,22 +74,22 @@ function earn() {
 
         if (session) {
             console.log('the session')
-            if (!getTimeStore) {
-                console.log('run code')
-                dispatch(initMineAsync(session))
-            }
+            // if (!getTimeStore) {
+            //     console.log('run code')
+            //     dispatch(initMineAsync(session))
+            // }
 
-            if (dayjsNowTimeStamp.isBefore(dayjs(mineState.miningStartedAt))) {
-                console.log('Timer finished')
-                setMiningStart(false)
-                dispatch(initStopMineAsync(session))
-            } else if (mineState.miningSession !== 'active') {
-                console.log('mining is running')
-                setMiningStart(false)
-            } else {
-                console.log('mine is over')
-                setMiningStart(true)
-            }
+            // if (dayjsNowTimeStamp.isBefore(dayjs(mineState.miningStartedAt))) {
+            //     console.log('Timer finished')
+            //     setMiningStart(false)
+            //     dispatch(initStopMineAsync(session))
+            // } else if (mineState.miningSession !== 'active') {
+            //     console.log('mining is running')
+            //     setMiningStart(false)
+            // } else {
+            //     console.log('mine is over')
+            //     setMiningStart(true)
+            // }
         }
        
     }, [session])
