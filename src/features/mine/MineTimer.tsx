@@ -61,7 +61,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     }, [theme])
 
     useEffect(() => {
-        if (start) {
+        if (start && mineState.miningSession === 'active') {
             const intervalId = setInterval(() => {
                 dispatch(increment())
 
