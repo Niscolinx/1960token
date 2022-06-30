@@ -14,7 +14,7 @@ const secondsRemaining = (now: Dayjs, remainingTime: Dayjs) => {
 }
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
     const seconds = now.second()
-    return padWithDecimalZeros(seconds, 2)
+    return padWithDecimalZeros(seconds, 4)
 }
 
 const padWithZeros = (number: number, minLength: number) => {
