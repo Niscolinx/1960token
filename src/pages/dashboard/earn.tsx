@@ -76,7 +76,7 @@ function earn() {
             console.log('the session')
                 const parsedJSON:MiningState = JSON.parse(persistedStorage!)
 
-                console.log('parsed json', parsedJSON.miningSession)
+                console.log('parsed json', JSON.parse(parsedJSON.miningSession))
 
                 if(parsedJSON.miningSession === 'stall'){
                     console.log("stalled... ready to init mine")
