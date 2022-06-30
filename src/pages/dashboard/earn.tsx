@@ -100,6 +100,7 @@ function earn() {
         }
         setIsDim(false)
     }
+    console.log({miningStart})
 
     return (
         <>
