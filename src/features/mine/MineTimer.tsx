@@ -4,7 +4,6 @@ import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increment, initStopMineAsync, selectMining } from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { useSession } from 'next-auth/react'
 
 const defaultTimer = {
     hours: '00',
