@@ -28,6 +28,8 @@ const CountDownTimer = ({ start, prevTimeStore }: ICountDown) => {
     const dayjsNowTimeStamp = dayjs()
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
         console.log('Timer finished')
+    }else{
+        console.log("mine", prevTimeStore)
     }
 
     const updateRemainingTimer = (prev?: Dayjs) => {
