@@ -71,11 +71,11 @@ function earn() {
     useEffect(() => {
         const getTimeStore = localStorage.getItem('miningStartedAt')
         const dayjsNowTimeStamp = dayjs()
+        const persistedStorage = localStorage.getItem('persist:root')
+        console.log('persist storage', {persistedStorage})
 
         if (session) {
             console.log('the session')
-            const persistedStorage = localStorage.getItem("persist:root")
-            console.log('persist storage', {persistedStorage})
             // if (!getTimeStore) {
             //     console.log('run code')
             //     dispatch(initMineAsync(session))
