@@ -13,7 +13,6 @@ import {
     selectMining,
 } from '../../features/mine/MinerSlice'
 import dayjs from 'dayjs'
-import { tokenCountDown } from '../../features/mine/MineCountDown'
 
 function earn() {
     const { data: session } = useSession()
