@@ -74,7 +74,10 @@ function earn() {
         
         if (session) {
             console.log('the session')
-            console.log('persist storage', JSON.parse(persistedStorage!))
+            if(persistedStorage){
+                console.log('persist storage', JSON.parse(persistedStorage!))
+
+            }
             // if (!getTimeStore) {
             //     console.log('run code')
             //     dispatch(initMineAsync(session))
