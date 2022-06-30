@@ -22,12 +22,9 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const dispatch = useAppDispatch()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
-    const [tokenCountDown, setTokenCountDown] = useState(defaultTokenCountDown)
-
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
-
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
