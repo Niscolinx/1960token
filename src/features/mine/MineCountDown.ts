@@ -13,7 +13,7 @@ const secondsRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     return padWithZeros(seconds, 2)
 }
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
-    const seconds = (remainingTime.diff(now, 'seconds') % 60)  - (now.diff(remainingTime, 'seconds') % 60)
+    const seconds = (remainingTime.diff(now, 'seconds') % 60) + (now.diff(remainingTime, 'seconds') % 60) + 1
     return padWithZeros(seconds, 2)
 }
 
