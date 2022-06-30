@@ -21,7 +21,6 @@ function earn() {
     const [totalMined, setTotalMined] = useState(0)
 
     const [miningStart, setMiningStart] = useState(false)
-    const [prevTimeStore, setPrevTimeStore] = useState<Dayjs>()
 
     const [isDim, setIsDim] = useState(false)
 
