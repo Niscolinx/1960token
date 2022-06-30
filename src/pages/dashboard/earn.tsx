@@ -66,6 +66,7 @@ function earn() {
         }
 
         if (mineState.miningSession === 'over') {
+            console.log("mining is over")
             setMiningStart(false)
         }
         
