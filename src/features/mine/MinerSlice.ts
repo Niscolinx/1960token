@@ -54,8 +54,8 @@ export const MiningSlice = createSlice({
     initialState,
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
-        increment: (state) => {
-            state.totalMined += 1
+        increment: (state, action) => {
+            state.countDownToken = action.payload
         },
         // decrement: (state) => {
         //     state.value -= 1
