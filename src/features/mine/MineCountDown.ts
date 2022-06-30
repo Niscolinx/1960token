@@ -48,8 +48,6 @@ export const totalMinedTokens = (prevTimeStore?: Dayjs) => {
 
     if (prevTimeStore) {
         return {
-            hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
-            minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
             seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
         }
     } else {
