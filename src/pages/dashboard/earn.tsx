@@ -166,7 +166,6 @@ function earn() {
                 <div className='grid self-center mt-2'>
                     <MineTimer
                         start={miningStart}
-                        prevTimeStore={prevTimeStore}
                     />
                 </div>
             </div>
