@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { countDown } from '../../../utils/countDown'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
-import { increment, initStopMineAsync } from '../../features/mine/MinerSlice'
-import { useAppDispatch } from '../../app/hooks'
+import { increment, initStopMineAsync, selectMining } from '../../features/mine/MinerSlice'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { useSession } from 'next-auth/react'
 
 const defaultTimer = {
@@ -20,6 +20,9 @@ interface ICountDown {
 
 const CountDownTimer = ({ start }: ICountDown) => {
     console.log({start})
+    const mineState = useAppSelector(selectMining)
+
+    console.log({mineState})
     const dispatch = useAppDispatch()
     const { data: session } = useSession()
 
