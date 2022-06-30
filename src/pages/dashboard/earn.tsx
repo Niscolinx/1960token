@@ -58,11 +58,10 @@ function earn() {
     useEffect(() => {
         if (mineState) {
             console.log('mining state', { mineState })
-            if(mineState.isMining && mineState.miningSession === 'active'){
+            if (mineState.isMining && mineState.miningSession === 'active') {
                 console.log('start mining')
                 setMiningStart(true)
-            }
-            else {
+            } else {
                 setMiningStart(false)
             }
         }
@@ -71,28 +70,21 @@ function earn() {
     useEffect(() => {
         const dayjsNowTimeStamp = dayjs()
         const persistedStorage = localStorage.getItem('persist:root')
-        
+
         if (session) {
             console.log('the session')
-                const parsedJSON = JSON.parse(persistedStorage!)
+            const parsedJSON = JSON.parse(persistedStorage!)
 
-                if(JSON.parse(parsedJSON.miningSession) === 'stall'){
-                    console.log("stalled... ready to init mine")
-                    dispatch(initMineAsync(session))
-                }
-                else{
-                    console.log("not ready to start")
-                }
-
+            if (JSON.parse(parsedJSON.miningSession) === 'stall') {
+                dispatch(initMineAsync(session))
+            }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 console.log('Timer finished')
                 setMiningStart(false)
                 dispatch(initStopMineAsync(session))
             }
-            
         }
-       
     }, [session])
 
     const handleStart = () => {
@@ -100,8 +92,8 @@ function earn() {
 
         if (session) {
             console.log('about to dispatch')
-         dispatch(initMineAsync(session))
-        //   dispatch(initStopMineAsync(session))
+            dispatch(initMineAsync(session))
+            //   dispatch(initStopMineAsync(session))
         }
         setIsDim(false)
     }
