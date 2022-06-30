@@ -2,7 +2,6 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import MiningReducer from '../features/mine/MinerSlice'
 import storage from 'redux-persist/lib/storage'
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
-import thunk from 'redux-thunk'
 
 const persistConfig = {
     key: 'root',
