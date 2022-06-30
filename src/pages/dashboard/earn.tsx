@@ -60,7 +60,7 @@ function earn() {
         const dayjsNowTimeStamp = dayjs()
 
         if(mineState){
-            console.log("mining state", {mineState})
+           // console.log("mining state", {mineState})
         }
 
         if (session) {
@@ -94,7 +94,7 @@ function earn() {
         //     setPrevTimeStore(dayjs(getTimeStore))
         //     setMiningStart(true)
         // }
-    }, [session, mineState])
+    }, [session])
 
     const handleStart = () => {
         console.log('clicked on mine')
