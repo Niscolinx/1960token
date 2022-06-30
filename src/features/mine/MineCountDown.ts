@@ -38,7 +38,7 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     }
 }
 
-export const tokenCountDown = (prevTimeStore: Dayjs) => {
+export const tokenCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
     
     if (prevTimeStore) {
