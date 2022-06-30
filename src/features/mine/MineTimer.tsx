@@ -21,7 +21,6 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
 
     const updateRemainingTimer = (prev?: Dayjs) => {
-        console.log('mining update')
         setRemainingTime(MineCountDown(prev))
     }
     const { theme } = useTheme()
