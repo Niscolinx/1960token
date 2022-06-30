@@ -31,9 +31,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     }else{
         console.log("mine", mineState.miningStartedAt)
 
-        if(mineState){
-            setPrevTimeStore(dayjs(mineState.miningStartedAt))
-        }
+       
     }
 
     const updateRemainingTimer = (prev?: Dayjs) => {
@@ -70,7 +68,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
             const intervalId = setInterval(() => {
                 dispatch(increment())
 
-                return updateRemainingTimer(prevTimeStore)
+                return updateRemainingTimer(dayjs(mineState.miningStartedAt))
             }, 1000)
 
             return () => clearInterval(intervalId)
