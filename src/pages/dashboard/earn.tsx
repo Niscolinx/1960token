@@ -18,7 +18,7 @@ import { tokenCountDown } from '../../features/mine/MineCountDown'
 function earn() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
-    const [totalMined, setTotalMined] = useState(tokenCountDown)
+    const [totalMined, setTotalMined] = useState('')
 
     const [miningStart, setMiningStart] = useState(false)
 
