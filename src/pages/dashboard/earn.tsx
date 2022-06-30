@@ -72,7 +72,6 @@ function earn() {
         const persistedStorage = localStorage.getItem('persist:root')
 
         if (session) {
-            console.log('the session')
             const parsedJSON = JSON.parse(persistedStorage!)
 
             if (JSON.parse(parsedJSON.miningSession) === 'stall') {
