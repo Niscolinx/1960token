@@ -55,7 +55,6 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     useEffect(() => {
         if (start && mineState.miningSession === 'active') {
             const intervalId = setInterval(() => {
-                dispatch(increment())
 
                 return updateRemainingTimer(dayjs(mineState.miningStartedAt))
             }, 1000)

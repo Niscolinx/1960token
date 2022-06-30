@@ -1,4 +1,7 @@
+import { useAppDispatch } from './../../app/hooks';
 import dayjs, { Dayjs } from 'dayjs'
+
+const dispatch = useAppDispatch()
 
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
@@ -42,11 +45,8 @@ export const tokenCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
     
     if (prevTimeStore) {
-        console.log(
-            'token countdown',
-            secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
-        )
-        return secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
+        
+        return  secondsRemaining(dayjsNowTimeStamp, prevTimeStore)
     }
 
 }
