@@ -77,7 +77,7 @@ function earn() {
             if(persistedStorage){
                 const parsedJSON = JSON.parse(persistedStorage)
 
-                console.log('parsed json', parsedJSON)
+                console.log('parsed json', parsedJSON.miningSession)
             }
             // if (!getTimeStore) {
             //     console.log('run code')
