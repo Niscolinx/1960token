@@ -78,6 +78,10 @@ function earn() {
 
                 console.log('parsed json', parsedJSON.miningSession)
 
+                if(parsedJSON.miningSession === 'stall'){
+                    console.log("stalled")
+                }
+
             
             // if (!getTimeStore) {
             //     console.log('run code')
