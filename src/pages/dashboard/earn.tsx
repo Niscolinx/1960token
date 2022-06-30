@@ -110,8 +110,8 @@ function earn() {
 
         if (session) {
             console.log('about to dispatch')
-        // dispatch(initMineAsync(session))
-          dispatch(initStopMineAsync(session))
+         dispatch(initMineAsync(session))
+        //   dispatch(initStopMineAsync(session))
         }
         setIsDim(false)
     }
