@@ -1,7 +1,7 @@
 import dayjs, { Dayjs } from 'dayjs'
 
 
-export const countDown = (prevTimeStore?: Dayjs) => {
+export const MineCountDown = (prevTimeStore?: Dayjs) => {
     
     const dayjsNowTimeStamp = dayjs()
    
