@@ -3,7 +3,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increment, selectMining } from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { MineCountDown } from './MineCountDown'
+import { MineCountDown, tokenCountDown } from './MineCountDown'
 
 const defaultTimer = {
     hours: '00',
@@ -25,6 +25,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
+        tokenCountDown(prev)
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
