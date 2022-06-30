@@ -60,7 +60,7 @@ function earn() {
         const dayjsNowTimeStamp = dayjs()
 
         if(mineState){
-           // console.log("mining state", {mineState})
+            console.log("mining state", {mineState})
         }
 
         if (session) {
