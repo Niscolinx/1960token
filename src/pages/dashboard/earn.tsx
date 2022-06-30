@@ -65,8 +65,12 @@ function earn() {
             dispatch(initMineAsync(session))
         }
 
-        if (mineState.miningSession === 'over') {
-            console.log("mining is over")
+        if (mineState.miningSession === 'active' ) {
+            console.log("mining is running")
+            setMiningStart(true)
+        }
+        else{
+            console.log("mine is over")
             setMiningStart(false)
         }
         
