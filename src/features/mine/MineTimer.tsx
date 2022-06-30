@@ -11,6 +11,10 @@ const defaultTimer = {
     seconds: '00',
 }
 
+const defaultTokenCountDown = {
+    seconds: '00'
+}
+
 const CountDownTimer = ({ start }: {start: boolean}) => {
     console.log({start})
     const mineState = useAppSelector(selectMining)
@@ -18,10 +22,12 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const dispatch = useAppDispatch()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
+    const [tokenCountDown, setTokenCountDown] = useState(defaultTokenCountDown)
 
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
+
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
