@@ -23,9 +23,23 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     }
 }
 
-export const totalMinedTokens = () => {
-    
-}
+export const totalMinedTokens = (prevTimeStore?: Dayjs) => {
+    const dayjsNowTimeStamp = dayjs()
+
+    if (prevTimeStore) {
+        return {
+            hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
+            minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
+            seconds: secondsRemaining(dayjsNowTimeStamp, prevTimeStore),
+        }
+    } else {
+        return {
+            hours: '00',
+            minutes: '00',
+            seconds: '00',
+        }
+    }
+
 
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
