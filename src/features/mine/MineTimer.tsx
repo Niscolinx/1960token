@@ -24,6 +24,7 @@ const CountDownTimer = ({ start }: ICountDown) => {
     const { data: session } = useSession()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
+    const [prevTimeStore, setPrevTimeStore] = useState()
 
     const dayjsNowTimeStamp = dayjs()
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
