@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { countDown } from '../../../utils/countDown'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
-import { increment, initStopMineAsync, selectMining } from '../../features/mine/MinerSlice'
+import { increment, selectMining } from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 
 const defaultTimer = {
