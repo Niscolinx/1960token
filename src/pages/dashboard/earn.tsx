@@ -10,7 +10,6 @@ import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import {
     initMineAsync,
     initStopMineAsync,
-    MiningState,
     selectMining,
 } from '../../features/mine/MinerSlice'
 import dayjs from 'dayjs'
