@@ -11,8 +11,6 @@ const defaultTimer = {
     seconds: '00',
 }
 
-
-
 const CountDownTimer = ({ start }: {start: boolean}) => {
     console.log({start})
     const mineState = useAppSelector(selectMining)
