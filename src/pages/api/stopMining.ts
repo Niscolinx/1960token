@@ -23,7 +23,7 @@ export default async function StartMining(
 
     console.log("the user", user)
 
-    user.miningStartedAt = null
+    user.miningStartedAt = ''
     user.isMining = false
     user.totalMined = user.totalMined + 0.5
     await user.save()
