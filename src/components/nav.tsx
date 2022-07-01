@@ -29,7 +29,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
 
     if (session) {
-        setIsAuth('signin')
+        setIsAuth(true)
         const foundUser = session.foundUser as {
             user: IUser
         }
@@ -49,7 +49,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
             </div>
         )
     } else {
-        setIsAuth('signout')
+        setIsAuth(false)
         isSession = (
             <Link href='/api/auth/signin'>
                 <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
