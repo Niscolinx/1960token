@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
         <>
             <SessionProvider session={session}>
                 <Provider store={store}>
-                    <PersistGate loading={null} persistor={persistedStore}>
                         <ThemeProvider
                             attribute='class'
                             enableSystem={true}
@@ -25,7 +24,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                                 <Component {...pageProps} />
                             </Layout>
                         </ThemeProvider>
-                    </PersistGate>
                 </Provider>
             </SessionProvider>{' '}
         </>
