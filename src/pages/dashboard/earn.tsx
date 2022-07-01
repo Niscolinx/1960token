@@ -17,7 +17,7 @@ import dayjs from 'dayjs'
 function earn() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
-    const [tokenCount, setTokenCount] = useState<number>()
+    const [tokenCount, setTokenCount] = useState<string>()
 
     const [miningStart, setMiningStart] = useState(false)
 
