@@ -14,6 +14,14 @@ function nav({ session }: { session: nextAuthSession | null }) {
         setMounted(true)
     }, [])
 
+    useEffect(() => {
+        if(session){
+            setIsAuth(true)
+        }else{
+            setIsAuth(false)
+        }
+    }, [session])
+
     const renderTheme = () => {
         if (!mounted) return null
 
@@ -27,7 +35,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     let isSession = null
 
     if (session) {
-       // setIsAuth(true)
+        setIsAuth(true)
         const foundUser = session.foundUser as {
             user: IUser
         }
@@ -40,7 +48,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
             </div>
         )
     } else {
-       // setIsAuth(false)
+        setIsAuth(false)
         isSession = null
     }
 
