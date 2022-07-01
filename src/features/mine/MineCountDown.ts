@@ -23,9 +23,17 @@ const padWithZeros = (number: number, minLength: number) => {
 
 //token utils
 let count = 0.00001158
+// X = 0.5/12
+// X = 0.04166 per hour ~ 0.0417Tk
+
+// Per Minute
+// X = 0.000695 
+
+// Per Second
+// X = 0.00001158
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
     count += 0.00001158
-    const seconds = count.toPrecision(4) 
+    const seconds = count.toFixed(7) 
    // return padWithDecimalZeros(seconds, 8)
    return seconds
 }
