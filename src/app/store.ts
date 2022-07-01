@@ -11,7 +11,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, MiningReducer)
 
 export const store = configureStore({
-    reducer: { mine: persistedReducer },
+    reducer: { mine: MiningReducer },
     devTools: process.env.NODE_ENV !== 'production',
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
@@ -28,11 +28,7 @@ export const store = configureStore({
         }),
 })
 
-export const persistedStore = persistStore(store)
-
-persistedStore.flush().then(data => {
-    console.log({data})
-}).catch(err => console.log(err))
+export const persistedStore = store
 
 export type MineState = ReturnType<typeof store.getState>
 
