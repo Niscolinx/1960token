@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Footer from './Footer'
 import Nav from './nav'
 import { useSession } from 'next-auth/react'
@@ -11,13 +11,16 @@ const Layout: React.FC<{}> = ({ children }) => {
 
     useEffect(() => {
         if(router.asPath.includes("earn")){
-
+            setAddMargin('')
+        }
+        else{
+            setAddMargin('mb-25')
         }
     }, [router])
     return (
         <div className='py-2 bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])'>
             <Nav session={session} />
-            <main className='mb-25'>{children}</main>
+            <main className={addMargin}>{children}</main>
             <Footer />
         </div>
     )
