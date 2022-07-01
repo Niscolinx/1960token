@@ -37,7 +37,7 @@ const Footer = () => {
 
     
     return (
-        <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 fixed bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0])'>
+        <div className={`bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0])`}>
             <Link href='/'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
