@@ -1,4 +1,3 @@
-import { persistedStore } from './../../app/store';
 import { nextAuthSession } from './../../lib/types'
 import dayjs from 'dayjs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
