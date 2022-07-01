@@ -124,7 +124,7 @@ function earn() {
                             onClick={handleStart}
                             // className='text-white text-4xl'
                             className={`text-white text-4xl ${
-                                !isDim
+                                !isDim && miningStart
                                     ? 'animate-spin animate-duration-[4s]'
                                     : ''
                             }`}
