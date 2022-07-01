@@ -4,10 +4,13 @@ import { useTheme } from 'next-themes'
 import { CgProfile } from 'react-icons/cg'
 import { RiHome5Line } from 'react-icons/ri'
 import { MdOutlineOndemandVideo } from 'react-icons/md'
+import { useRouter } from 'next/router'
 
 const Footer = () => {
+    const router = useRouter()
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
+    
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -28,6 +31,8 @@ const Footer = () => {
             })
         }
     }, [theme])
+
+    console.log({router})
     
     return (
         <div className='bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 fixed bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0])'>
