@@ -54,9 +54,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
         <nav className='flex justify-between items-center px-4'>
             {isSession}
             <div className='div'>
-                <button className='px-2 py-2 border rounded-lg self-center flex'>
-                    {renderTheme()}
-                </button>
                 <Link href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}>
                     <button
                         className={`bg-${
@@ -68,6 +65,9 @@ function nav({ session }: { session: nextAuthSession | null }) {
                         {isAuth ? 'Sign Out' : 'Sign In'}
                     </button>
                 </Link>
+                <button className='px-2 py-2 border rounded-lg self-center flex'>
+                    {renderTheme()}
+                </button>
             </div>
         </nav>
     )
