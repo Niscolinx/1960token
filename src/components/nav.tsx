@@ -4,8 +4,7 @@ import { useTheme } from 'next-themes'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { nextAuthSession } from '../lib/types'
 import { IUser } from '../models/User'
-import {useRouter} from 'next/router'
-
+import { useRouter } from 'next/router'
 
 function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
@@ -18,9 +17,9 @@ function nav({ session }: { session: nextAuthSession | null }) {
     }, [])
 
     useEffect(() => {
-        if(session){
+        if (session) {
             setIsAuth(true)
-        }else{
+        } else {
             setIsAuth(false)
         }
     }, [session])
@@ -52,32 +51,33 @@ function nav({ session }: { session: nextAuthSession | null }) {
     } else {
         isSession = null
     }
-    
-    return (
-        {router.asPath.includes('earn') ? null : (
 
-        
+    return (
         <nav className='flex justify-between items-center px-4'>
-            {isSession}
-            <div className='flex gap-4'>
-                <Link href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}>
-                    <button
-                        className={`bg-${
-                            isAuth ? 'orange-300' : 'gray-300'
-                        } text-${
-                            isAuth ? '[#1a1a2d]' : 'black'
-                        } rounded px-2 text-sm`}
-                    >
-                        {isAuth ? 'Sign Out' : 'Sign In'}
-                    </button>
-                </Link>
-                <button className='px-2 py-2 border rounded-lg self-center flex'>
-                    {renderTheme()}
-                </button>
-            </div>
+            {router.asPath.includes('earn') ? null : (
+                <>
+                    {isSession}
+                    <div className='flex gap-4'>
+                        <Link
+                            href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}
+                        >
+                            <button
+                                className={`bg-${
+                                    isAuth ? 'orange-300' : 'gray-300'
+                                } text-${
+                                    isAuth ? '[#1a1a2d]' : 'black'
+                                } rounded px-2 text-sm`}
+                            >
+                                {isAuth ? 'Sign Out' : 'Sign In'}
+                            </button>
+                        </Link>
+                        <button className='px-2 py-2 border rounded-lg self-center flex'>
+                            {renderTheme()}
+                        </button>
+                    </div>
+                </>
+            )}
         </nav>
-        )}
-               
     )
 }
 
