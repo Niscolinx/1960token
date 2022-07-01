@@ -25,8 +25,9 @@ const padWithZeros = (number: number, minLength: number) => {
 let count = 0.00001158
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
     count += 0.00001158
-    const seconds = count
-    return padWithDecimalZeros(seconds, 4)
+    const seconds = count.toPrecision(4) 
+   // return padWithDecimalZeros(seconds, 8)
+   return seconds
 }
 
 
