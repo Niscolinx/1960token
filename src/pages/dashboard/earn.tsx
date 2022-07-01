@@ -33,7 +33,7 @@ function earn() {
         //setTokenCount(mineState.tokensCount)
     }, [mineState])
 
-    console.log('minestate', mineState.totalMined)
+    console.log('minestate', mineState)
 
     useEffect(() => {
         if (theme === 'dark') {
