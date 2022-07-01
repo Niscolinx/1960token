@@ -60,7 +60,7 @@ export const MiningSlice = createSlice({
             state.countDownToken = action.payload
         },
         increaseTokenCount: (state) => {
-            state.tokensCount = 0.00001158.toFixed(6)
+            state.tokensCount += 0
         }
         // decrement: (state) => {
         //     state.value -= 1
