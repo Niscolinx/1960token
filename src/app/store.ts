@@ -29,6 +29,8 @@ export const store = configureStore({
 
 export const persistedStore = persistStore(store)
 
+persistedStore.flush()
+
 export type MineState = ReturnType<typeof store.getState>
 
 export type AppDispatch = typeof store.dispatch
