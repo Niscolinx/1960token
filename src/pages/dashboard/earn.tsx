@@ -17,7 +17,7 @@ import dayjs from 'dayjs'
 function earn() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
-    const [tokenCount, setTokenCount] = useState('')
+    const [tokenCount, setTokenCount] = useState<number>()
 
     const [miningStart, setMiningStart] = useState(false)
 
@@ -29,7 +29,8 @@ function earn() {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        setTokenCount(mineState.countDownToken)
+        //setTokenCount(mineState.countDownToken)
+        setTokenCount(mineState.tokensCount)
     }, [mineState])
 
     useEffect(() => {
