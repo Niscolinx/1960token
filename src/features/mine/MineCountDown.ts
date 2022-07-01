@@ -23,7 +23,7 @@ const padWithZeros = (number: number, minLength: number) => {
 
 //token utils
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
-    const seconds = remainingTime.diff(now, 'second')
+    const seconds = remainingTime.diff(now, 'minute')
     return padWithDecimalZeros(seconds, 4)
 }
 
