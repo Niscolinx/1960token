@@ -9,7 +9,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     return (
         <div className='py-2 bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])'>
             <Nav session={session} />
-            <main className='mb-25'>{children}</main>
+            <main>{children}</main>
             <Footer />
         </div>
     )
