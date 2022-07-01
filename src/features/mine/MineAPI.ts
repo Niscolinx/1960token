@@ -4,6 +4,7 @@ import { nextAuthSession } from '../../lib/types'
 interface IFetchedData {
     isMining: boolean
     miningStartedAt: string
+    totalMined?: number
 }
 
 export async function startMining(
