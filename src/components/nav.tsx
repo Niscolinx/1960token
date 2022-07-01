@@ -33,12 +33,11 @@ function nav({ session }: { session: nextAuthSession | null }) {
             user: IUser
         }
         isSession = (
-                <div className='block text-sm font-semibold'>
-                    <p>{foundUser.user.username}</p>
-                    <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
-                        Not verified
-                    </p>
-               
+            <div className='block text-sm font-semibold'>
+                <p>{foundUser.user.username}</p>
+                <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
+                    Not verified
+                </p>
             </div>
         )
     } else {
