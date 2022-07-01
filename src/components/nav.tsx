@@ -53,7 +53,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     return (
         <nav className='flex justify-between items-center px-4'>
             {isSession}
-            <div className='flex'>
+            <div className='flex gap-4'>
                 <Link href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}>
                     <button
                         className={`bg-${
