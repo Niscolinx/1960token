@@ -28,7 +28,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     let isSession = null
     if (session) {
         const foundUser = session.foundUser as {
-            user:IUser
+            user: IUser
         }
         isSession = (
             <div className='flex justify-between'>
@@ -56,14 +56,11 @@ function nav({ session }: { session: nextAuthSession | null }) {
     }
 
     return (
-        <nav className='flex justify-between items-center px-4'>
-                <div>
-                    {isSession}
-                    <button className='px-2 py-2 border rounded-lg self-center flex'>
-                        {renderTheme()}
-                    </button>
-                </div>
-            
+        <nav className='flex justify-between items-center px-4 bg-red-500'>
+            {isSession}
+            <button className='px-2 py-2 border rounded-lg self-center flex'>
+                {renderTheme()}
+            </button>
         </nav>
     )
 }
