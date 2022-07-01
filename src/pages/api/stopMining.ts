@@ -4,6 +4,7 @@ import User, { IUser } from '../../models/User'
 interface returnTypeJson {
     miningStartedAt: string
     isMining: boolean
+    totalMined: number
 }
 
 type JsonType<returnTypeJson> = (body: returnTypeJson) => object
@@ -30,5 +31,6 @@ export default async function StartMining(
     return res.json({
         isMining: user.isMining,
         miningStartedAt: user.miningStartedAt,
+        totalMined: user.totalMined
     })
 }
