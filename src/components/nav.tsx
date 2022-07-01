@@ -65,7 +65,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
                             isAuth ? '[#1a1a2d]' : 'black'
                         } rounded px-2 py-1`}
                     >
-                        {isAuth ? 'Sign In' : 'Sign Out'}
+                        {isAuth ? 'Sign Out' : 'Sign In'}
                     </button>
                 </Link>
             </div>
