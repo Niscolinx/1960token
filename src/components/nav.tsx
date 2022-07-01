@@ -35,7 +35,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
     let isSession = null
 
     if (session) {
-        setIsAuth(true)
         const foundUser = session.foundUser as {
             user: IUser
         }
@@ -48,7 +47,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
             </div>
         )
     } else {
-        setIsAuth(false)
         isSession = null
     }
 
