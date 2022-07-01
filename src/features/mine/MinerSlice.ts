@@ -1,6 +1,7 @@
+import { persistedStore } from './../../app/store';
 import { nextAuthSession } from './../../lib/types'
 import dayjs from 'dayjs'
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import type { MineState } from '../../app/store'
 import { startMining, stopMining } from './MineAPI'
@@ -63,7 +64,7 @@ export const MiningSlice = createSlice({
             state.tokensCount += 0.00001158
         },
         flush: (state) => {
-            persistor
+            persistedStore.flush()
         }
         // decrement: (state) => {
         //     state.value -= 1
