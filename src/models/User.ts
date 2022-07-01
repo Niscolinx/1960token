@@ -9,6 +9,7 @@ export interface IUser {
     miningStartedAt: string
     role: string
     totalMined: number
+    portfolio: number
     status: string
     password: string
     pendingWithdrawals: Types.ObjectId[]
@@ -40,6 +41,10 @@ const userSchema = new Schema<IUser>(
             type: Number,
             default: 0.0
         },
+        portfolio: {
+            type: Number,
+            default: 0
+        }
         role: {
             type: String,
             default: 'Customer',
