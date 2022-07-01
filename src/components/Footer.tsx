@@ -41,6 +41,7 @@ const Footer = () => {
         }
         else{
             console.log("doesn't include earn", router.pathname)
+            setToFixedDisplay('fixed')
         }
     }, [router])
     
