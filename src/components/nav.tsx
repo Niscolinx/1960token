@@ -58,9 +58,16 @@ function nav({ session }: { session: nextAuthSession | null }) {
     return (
         <nav className='flex justify-between items-center px-4 bg-red-500'>
             {isSession}
-            <button className='px-2 py-2 border rounded-lg self-center flex'>
-                {renderTheme()}
-            </button>
+            <div className='div'>
+                <button className='px-2 py-2 border rounded-lg self-center flex'>
+                    {renderTheme()}
+                </button>
+                <Link href={`/api/auth/{}`}>
+                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
+                        Sign in
+                    </button>
+                </Link>
+            </div>
         </nav>
     )
 }
