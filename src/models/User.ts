@@ -36,10 +36,9 @@ const userSchema = new Schema<IUser>(
             type: String,
             required: true,
         },
-
         totalMined: {
             type: Number,
-            default: '0.0'
+            default: 0.0
         },
         role: {
             type: String,
