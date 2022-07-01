@@ -24,6 +24,7 @@ export default async function StartMining(
 
     user.miningStartedAt = null
     user.isMining = false
+    user.totalMined = 0.5
     await user.save()
 
     return res.json({
