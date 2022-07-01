@@ -32,7 +32,6 @@ const Footer = () => {
         }
     }, [theme])
 
-    console.log({router})
 
     useEffect(() => {
         if(router.pathname.includes("earn")){
