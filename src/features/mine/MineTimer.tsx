@@ -32,7 +32,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     useEffect(() => {
         console.log({tempTokenCount})
         dispatch(increment(tempTokenCount))
-        dispatch(increaseTokenCount)
+        dispatch(increaseTokenCount())
     }, [tempTokenCount])
 
     useEffect(() => {
