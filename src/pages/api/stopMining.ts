@@ -1,4 +1,3 @@
-import dayjs from 'dayjs'
 import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
