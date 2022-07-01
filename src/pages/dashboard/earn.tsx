@@ -140,7 +140,7 @@ function earn() {
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
-                <div className='grid self-center mt-10'>
+                <div className='grid self-center mt-5'>
                     <MineTimer start={miningStart} />
                 </div>
             </div>

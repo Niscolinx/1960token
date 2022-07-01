@@ -11,7 +11,7 @@ const Layout: React.FC<{}> = ({ children }) => {
 
     useEffect(() => {
         if(router.asPath.includes("earn")){
-            setAddMargin('')
+            setAddMargin('mb-15')
         }
         else{
             setAddMargin('mb-25')
