@@ -11,11 +11,24 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, MiningReducer)
 
 export const store = configureStore({
-    reducer: { mine: MiningReducer },
-    devTools: process.env.NODE_ENV !== 'production'
+    reducer: { mine: persistedReducer },
+    devTools: process.env.NODE_ENV !== 'production',
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [
+                    FLUSH,
+                    REHYDRATE,
+                    PAUSE,
+                    PERSIST,
+                    PURGE,
+                    REGISTER,
+                ],
+            },
+        }),
 })
 
-export const persistedStore = store
+export const persistedStore = persistStore(store)
 
 export type MineState = ReturnType<typeof store.getState>
 
