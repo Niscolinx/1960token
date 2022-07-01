@@ -77,7 +77,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
                 className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                 style={neuToUse}
             >
-                <p className='text-2xl'>
+                <p className='text-lg'>
                     {hours}:{minutes}:{seconds}
                 </p>
             </div>
