@@ -1,5 +1,6 @@
 import dayjs, { Dayjs } from 'dayjs'
 
+//mining utils
 const hoursRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const hours = remainingTime.diff(now, 'hours') % 24
     return padWithZeros(hours, 2)
@@ -12,17 +13,21 @@ const secondsRemaining = (now: Dayjs, remainingTime: Dayjs) => {
     const seconds = remainingTime.diff(now, 'seconds') % 60
     return padWithZeros(seconds, 2)
 }
+
+const padWithZeros = (number: number, minLength: number) => {
+    const numberString = number.toString()
+    if (numberString.length >= minLength) return numberString
+    
+    return '0'.repeat(minLength - numberString.length) + numberString
+}
+
+//token utils
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
     const seconds = now.second()
     return padWithDecimalZeros(seconds, 4)
 }
 
-const padWithZeros = (number: number, minLength: number) => {
-    const numberString = number.toString()
-    if (numberString.length >= minLength) return numberString
 
-    return '0'.repeat(minLength - numberString.length) + numberString
-}
 const padWithDecimalZeros = (number: number, minLength: number) => {
     const numberString = number.toString()
     if (numberString.length >= minLength) return numberString
@@ -30,6 +35,7 @@ const padWithDecimalZeros = (number: number, minLength: number) => {
     return '0'.repeat(minLength - numberString.length) + numberString
 }
 
+//mining function
 export const MineCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
@@ -48,6 +54,7 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     }
 }
 
+//token function
 export const tokenCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
