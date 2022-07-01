@@ -67,8 +67,8 @@ function nav({ session }: { session: nextAuthSession | null }) {
                     {renderTheme()}
                 </button>
                 <Link href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}>
-                    <button className={`bg-orange-300 text-[#1a1a2d] rounded px-2 py-1`}>
-                        Sign in
+                    <button className={`${isAuth ? '': ''} bg-orange-300 text-[#1a1a2d] rounded px-2 py-1`}>
+                        {isAuth ? 'Sign In' : 'Sign Out'}
                     </button>
                 </Link>
             </div>
