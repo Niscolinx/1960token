@@ -12,7 +12,7 @@ export interface MiningState {
     totalMined: number
     miningSession: 'over' | 'active' | 'stall'
     countDownToken: string
-    tokensCount: string
+    tokensCount: number
 }
 
 const initialState: MiningState = {
@@ -22,7 +22,7 @@ const initialState: MiningState = {
     totalMined: 0,
     miningSession: 'stall',
     countDownToken: '',
-    tokensCount: ''
+    tokensCount: 0
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
