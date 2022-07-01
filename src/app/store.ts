@@ -29,7 +29,9 @@ export const store = configureStore({
 
 export const persistedStore = persistStore(store)
 
-persistedStore.flush()
+persistedStore.flush().then(data => {
+    console.log({data})
+}).catch(err => console.log(err))
 
 export type MineState = ReturnType<typeof store.getState>
 
