@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { CgProfile } from 'react-icons/cg'
 import { RiHome5Line } from 'react-icons/ri'
-import { GiTrade } from 'react-icons/gi'
 import { MdOutlineOndemandVideo } from 'react-icons/md'
 
 const Footer = () => {
