@@ -9,7 +9,7 @@ import { IUser } from '../models/User'
 function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
-    const [isAuth, setIsAuth] = useState("")
+    const [isAuth, setIsAuth] = useState(false)
 
     useEffect(() => {
         setMounted(true)
