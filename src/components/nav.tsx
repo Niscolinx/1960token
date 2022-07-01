@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
-import { useRouter } from 'next/router'
 import { nextAuthSession } from '../lib/types'
 import { IUser } from '../models/User'
 
