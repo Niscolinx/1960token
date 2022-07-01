@@ -86,7 +86,7 @@ const Index = () => {
                                         height='1080px'
                                     />
                                     <div className='grid absolute right-[30%] top-[22%] px-3 gap-4 '>
-                                        <p className='font-semibold text-white animate-delay-500 animate-duration-500'>
+                                        <p className='font-semibold text-white animate-delay-500 animate-duration-500' style={{animation: 'moveInLeft'}}>
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
                                             </span>{' '}
