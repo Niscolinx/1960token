@@ -12,6 +12,7 @@ export interface MiningState {
     totalMined: number
     miningSession: 'over' | 'active' | 'stall'
     countDownToken: string
+    tokensCount: number
 }
 
 const initialState: MiningState = {
@@ -20,7 +21,8 @@ const initialState: MiningState = {
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
     totalMined: 0,
     miningSession: 'stall',
-    countDownToken: ''
+    countDownToken: '',
+    tokensCount: 0.00001158
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -57,6 +59,9 @@ export const MiningSlice = createSlice({
         increment: (state, action) => {
             state.countDownToken = action.payload
         },
+        increaseTokenCount: (state) => {
+            state.tokensCount += 0.00001158
+        }
         // decrement: (state) => {
         //     state.value -= 1
         // },
