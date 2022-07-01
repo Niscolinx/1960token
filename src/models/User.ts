@@ -44,7 +44,7 @@ const userSchema = new Schema<IUser>(
         portfolio: {
             type: Number,
             default: 0
-        }
+        },
         role: {
             type: String,
             default: 'Customer',
