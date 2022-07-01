@@ -51,7 +51,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     }
 
     return (
-        <nav className='flex justify-between items-center px-4 bg-red-500'>
+        <nav className='flex justify-between items-center px-4'>
             {isSession}
             <div className='div'>
                 <button className='px-2 py-2 border rounded-lg self-center flex'>
