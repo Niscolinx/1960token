@@ -19,7 +19,7 @@ const initialState: MiningState = {
     isMining: false,
     status: 'idle',
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
-    totalMined: 89,
+    totalMined: 0.0,
     miningSession: 'stall',
     countDownToken: '',
     tokensCount: 0
@@ -61,6 +61,9 @@ export const MiningSlice = createSlice({
         },
         increaseTokenCount: (state) => {
             state.tokensCount += 0.00001158
+        },
+        flush: (state) => {
+            persistor
         }
         // decrement: (state) => {
         //     state.value -= 1
