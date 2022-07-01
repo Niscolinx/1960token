@@ -27,10 +27,10 @@ function earn() {
 
     const dispatch = useAppDispatch()
 
-    useEffect(() => {
+   // useEffect(() => {
         //setTokenCount(mineState.countDownToken)
         //setTokenCount(mineState.tokensCount)
-    }, [mineState])
+    //}, [mineState])
 
 
     useEffect(() => {
