@@ -9,7 +9,7 @@ import { IUser } from '../models/User'
 function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
-    const router = useRouter()
+    const [isAuth, setIsAuth] = useState("")
 
     useEffect(() => {
         setMounted(true)
@@ -26,7 +26,10 @@ function nav({ session }: { session: nextAuthSession | null }) {
     }
 
     let isSession = null
+
+
     if (session) {
+        setIsAuth('signin')
         const foundUser = session.foundUser as {
             user: IUser
         }
@@ -46,6 +49,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
             </div>
         )
     } else {
+        setIsAuth('signout')
         isSession = (
             <Link href='/api/auth/signin'>
                 <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
