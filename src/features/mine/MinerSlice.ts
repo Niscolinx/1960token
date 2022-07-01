@@ -19,7 +19,7 @@ const initialState: MiningState = {
     isMining: false,
     status: 'idle',
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
-    totalMined: 0.0,
+    totalMined: 89,
     miningSession: 'stall',
     countDownToken: '',
     tokensCount: 0
