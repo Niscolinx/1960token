@@ -10,7 +10,7 @@ const Footer = () => {
     const router = useRouter()
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
-    const [toFixedDisplay, setToFixedDisplay] = useState()
+    const [toFixedDisplay, setToFixedDisplay] = useState<string>('fixed')
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -37,7 +37,7 @@ const Footer = () => {
 
     
     return (
-        <div className={`bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0])`}>
+        <div className={`bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0]) ${toFixedDisplay}`}>
             <Link href='/'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
