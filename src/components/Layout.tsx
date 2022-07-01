@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
     const router = useRouter()
+    const [addMargin, setAddMargin] = useState("")
 
     useEffect(() => {
         if(router.asPath.includes("earn")){
