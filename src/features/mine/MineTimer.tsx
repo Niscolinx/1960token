@@ -72,7 +72,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return (
-        <div className='grid my-10'>
+        <div className='grid mt-10'>
             <div
                 className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                 style={neuToUse}
