@@ -4,12 +4,15 @@ import { useTheme } from 'next-themes'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { nextAuthSession } from '../lib/types'
 import { IUser } from '../models/User'
+import {useRouter} from 'next/router'
+
 
 function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
 
+    const router = useRouter()
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -49,8 +52,11 @@ function nav({ session }: { session: nextAuthSession | null }) {
     } else {
         isSession = null
     }
-
+    
     return (
+        {router.asPath.includes('earn') ? null : (
+
+        
         <nav className='flex justify-between items-center px-4'>
             {isSession}
             <div className='flex gap-4'>
@@ -70,6 +76,8 @@ function nav({ session }: { session: nextAuthSession | null }) {
                 </button>
             </div>
         </nav>
+        )}
+               
     )
 }
 
