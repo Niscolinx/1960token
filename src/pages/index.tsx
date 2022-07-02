@@ -124,7 +124,7 @@ const Index = () => {
                 </Swiper>
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
-                    <p>
+                    <p style={{animation: 'moveInLeft'}}>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur beatae nesciunt fuga quasi illum, nam commodi necessitatibus porro dolore reprehenderit, et, ratione facilis eligendi quos officia dolores iure adipisci iste!
                     </p>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
