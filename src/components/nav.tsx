@@ -59,7 +59,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
                     {isSession}
                     <div className='flex gap-4'>
                         <Link
-                            href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}
+                            href={`/api/auth/${isAuth ? 'signout' : 'signin'}`}
                         >
                             <button
                                 className={`bg-${
