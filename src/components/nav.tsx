@@ -63,7 +63,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
                         >
                             <button
                                 className={`bg-${
-                                    isAuth ? 'orange-300' : 'white'
+                                    isAuth ? 'orange-300' : 'gray-700'
                                 } text-${
                                     isAuth ? '[#1a1a2d]' : 'black'
                                 } rounded px-2 text-sm`}
