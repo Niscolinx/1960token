@@ -53,13 +53,13 @@ function nav({ session }: { session: nextAuthSession | null }) {
     }
 
     return (
-        <nav className='flex justify-between items-center px-4'>
+        <nav className='flex items-center px-4 bg-blue-400'>
             {router.asPath.includes('earn') ? null : (
                 <>
                     {isSession}
-                    <div className='flex gap-4'>
+                    <div className='flex gap-4 bg-red-400 justify-self-end'>
                         <Link
-                            href={`/api/auth/${isAuth ? 'signin' : 'signout'}`}
+                            href={`/api/auth/${isAuth ? 'signout' : 'signin'}`}
                         >
                             <button
                                 className={`bg-${
