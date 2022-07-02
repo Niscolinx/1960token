@@ -57,7 +57,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
             {router.asPath.includes('earn') ? null : (
                 <>
                     {isSession}
-                    <div className='flex gap-4 bg-red-400 justify-self-end w-full'>
+                    <div className='flex gap-4 justify-end w-full'>
                         <Link
                             href={`/api/auth/${isAuth ? 'signout' : 'signin'}`}
                         >
