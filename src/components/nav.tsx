@@ -53,7 +53,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     }
 
     return (
-        <nav className='flex justify-between items-center px-4 bg-blue-400'>
+        <nav className='grid justify-between items-center px-4 bg-blue-400'>
             {router.asPath.includes('earn') ? null : (
                 <>
                     {isSession}
