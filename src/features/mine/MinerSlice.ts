@@ -97,6 +97,7 @@ export const MiningSlice = createSlice({
                 state.isMining = isMining
                 state.miningSession = 'over'
                 state.totalMined = totalMined
+                localStorage.removeItem('persist:root')
             })
             .addCase(initStopMineAsync.rejected, (state) => {
                 state.status = 'failed'
