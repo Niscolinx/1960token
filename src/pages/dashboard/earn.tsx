@@ -57,7 +57,7 @@ function earn() {
     }, [theme])
 
     useEffect(() => {
-        console.log({mineState})
+        console.log({ mineState })
         if (mineState) {
             if (mineState.isMining && mineState.miningSession === 'active') {
                 setMiningStart(true)
@@ -73,7 +73,11 @@ function earn() {
 
         if (session) {
             const parsedJSON = JSON.parse(persistedStorage!)
-            console.log('parsedJson',  parsedJSON.mine, typeof parsedJSON.mine)
+            console.log(
+                'parsedJson',
+                parsedJSON.mine,
+                typeof JSON.parse(parsedJSON.mine)
+            )
 
             // if (JSON.parse(parsedJSON.mine.miningSession) === 'stall') {
             //     dispatch(initMineAsync(session))
@@ -99,8 +103,8 @@ function earn() {
     }
 
     const handleVideoEnded = () => {
-        console.log("video ended")
-        if(session){
+        console.log('video ended')
+        if (session) {
             dispatch(initVideoEnded(session))
         }
     }
