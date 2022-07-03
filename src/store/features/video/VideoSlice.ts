@@ -30,19 +30,9 @@ export const initVideoEnded = createAsyncThunk(
         return response
     }
 )
-export const initStopMineAsync = createAsyncThunk(
-    'stopMining',
-    async (userSession: nextAuthSession) => {
-        const response = await stopMining(userSession)
 
-        console.log({ response })
-        // The value we return becomes the `fulfilled` action payload
-        return response
-    }
-)
-
-export const MiningSlice = createSlice({
-    name: 'mine',
+export const VideoSlice = createSlice({
+    name: 'videoEnded',
     initialState,
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
