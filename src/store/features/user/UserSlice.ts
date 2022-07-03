@@ -52,7 +52,8 @@ export const UserSlice = createSlice({
                 // }
 
                 Object.entries(payload).forEach((field) => {
-                    state['_id'] = field[1] as string
+                    const key = field[0] as 'username'
+                    state[key] = field[1] as string
                 })
             })
             .addCase(getUser.rejected, (state) => {
