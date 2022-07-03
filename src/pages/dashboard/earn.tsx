@@ -17,12 +17,12 @@ import MineTimer from '../../store/features/mine/MineTimer'
 import {
     initVideoEnded,
 } from '../../store/features/video/VideoSlice'
-import { getUser } from '../../store/features/user/UserSlice'
+import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function earn() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
-    const 
+    const fetchedUser = useAppDispatch(selectUser)
 
     const [miningStart, setMiningStart] = useState(false)
 
