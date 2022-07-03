@@ -48,8 +48,7 @@ export const UserSlice = createSlice({
                 const payload = action.payload
                 state.status = 'success'
                 for(let i in payload){
-                    console.log(i)
-                  // state[]
+                  state[i] = payload[i]
                 }
 
             })
