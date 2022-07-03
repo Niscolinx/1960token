@@ -11,7 +11,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     mine: MiningReducer,
-    vidoe: VideoReducer
+    video: VideoReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
