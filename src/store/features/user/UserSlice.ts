@@ -50,7 +50,6 @@ export const UserSlice = createSlice({
                 // for(let i in payload){
                 //   state[i] = payload[i]
                 // }
-                type userFields = keyof IUser
 
                 Object.entries(payload).forEach((field) => {
                     state[field[0]] = field[1]
