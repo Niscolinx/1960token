@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-import type { MineState } from '../../app/store'
+import type { AppState } from '../../app/store'
 import { startMining, stopMining } from './MineAPI'
 import { nextAuthSession } from '../../../lib/types'
 
@@ -110,7 +110,7 @@ export const { increment, increaseTokenCount} = MiningSlice.actions
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectMining = (state: MineState) => state.mine as MiningState
+export const selectMining = (state: AppState) => state.mine as MiningState
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.

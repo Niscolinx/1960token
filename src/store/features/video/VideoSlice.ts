@@ -1,7 +1,6 @@
 import dayjs from 'dayjs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-import type { MineState } from '../../app/store'
 import { nextAuthSession } from '../../../lib/types'
 import { videoEnded } from './VideoAPI'
 
