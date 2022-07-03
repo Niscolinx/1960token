@@ -1,4 +1,4 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit'
 import MiningReducer from '../features/mine/MinerSlice'
 import VideoReducer from '../features/video/VideoSlice'
 import storage from 'redux-persist/lib/storage'
@@ -9,10 +9,15 @@ const persistConfig = {
     storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, MiningReducer)
+const rootReducer = combineReducers({
+    mine: MiningReducer,
+    vidoe: VideoReducer
+})
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
-    reducer: { mine: persistedReducer, video: VideoReducer },
+    reducer: rootReducer,
     devTools: process.env.NODE_ENV !== 'production',
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
