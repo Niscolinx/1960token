@@ -73,11 +73,10 @@ function earn() {
 
         if (session) {
             const parsedJSON = JSON.parse(persistedStorage!)
-            console.log(parsedJSON.mine)
 
-            // if (JSON.parse(parsedJSON.miningSession) === 'stall') {
-            //     dispatch(initMineAsync(session))
-            // }
+            if (JSON.parse(parsedJSON.mine.miningSession) === 'stall') {
+                dispatch(initMineAsync(session))
+            }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 console.log('stop mining')
