@@ -30,7 +30,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     useEffect(() => {
-        console.log({tempTokenCount})
+       // console.log({tempTokenCount})
         dispatch(increment(tempTokenCount))
         dispatch(increaseTokenCount())
     }, [tempTokenCount])
