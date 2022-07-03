@@ -1,3 +1,4 @@
+import { AppState } from './../../app/store';
 import dayjs from 'dayjs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
@@ -45,6 +46,6 @@ export const VideoSlice = createSlice({
     },
 })
 
-export const selectVideo = (state: videoState) => state.totalMined
+export const selectVideo = (state: AppState) => state.video as videoState
 
 export default VideoSlice.reducer
