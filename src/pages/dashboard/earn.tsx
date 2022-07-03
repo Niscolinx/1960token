@@ -97,7 +97,7 @@ function earn() {
     }
 
     const handleVideoEnded = () => {
-
+        console.log("video ended")
         if(session){
             dispatch(initVideoEnded(session))
         }
