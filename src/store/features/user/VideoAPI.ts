@@ -1,14 +1,11 @@
 import axios from 'axios'
 import { nextAuthSession } from '../../../lib/types'
-
-interface IFetchedData {
-    totalMined: number
-}
+import { IUser } from '../../../models/User'
 
 export async function videoEnded(
     session: nextAuthSession
-): Promise<IFetchedData> {
-    const response = await axios.post('/api/videoEnded', session)
+): Promise<IUser> {
+    const response = await axios.post('/api/user', session)
 
     return response.data
 }
