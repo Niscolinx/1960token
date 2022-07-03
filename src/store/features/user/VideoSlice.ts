@@ -33,8 +33,8 @@ export const getUser = createAsyncThunk(
     }
 )
 
-export const VideoSlice = createSlice({
-    name: 'videoEnded',
+export const UserSlice = createSlice({
+    name: 'userData',
     initialState,
     reducers: {},
 
@@ -55,6 +55,6 @@ export const VideoSlice = createSlice({
     },
 })
 
-export const selectVideo = (state: AppState) => state.video as videoState
+export const selectUser = (state: AppState) => state.user
 
 export default VideoSlice.reducer
