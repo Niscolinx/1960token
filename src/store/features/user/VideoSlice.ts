@@ -40,16 +40,16 @@ export const UserSlice = createSlice({
 
     extraReducers: (builder) => {
         builder
-            .addCase(initVideoEnded.pending, (state) => {
+            .addCase(getUser.pending, (state) => {
                 state.status = 'loading'
             })
-            .addCase(initVideoEnded.fulfilled, (state, action) => {
+            .addCase(getUser.fulfilled, (state, action) => {
                 const { totalMined } = action.payload
                 state.status = 'success'
 
                 state.totalMined = totalMined
             })
-            .addCase(initVideoEnded.rejected, (state) => {
+            .addCase(getUser.rejected, (state) => {
                 state.status = 'failed'
             })
     },
@@ -57,4 +57,4 @@ export const UserSlice = createSlice({
 
 export const selectUser = (state: AppState) => state.user
 
-export default VideoSlice.reducer
+export default UserSlice.reducer
