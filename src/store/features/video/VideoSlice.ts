@@ -45,6 +45,6 @@ export const VideoSlice = createSlice({
     },
 })
 
-export const selectMining = (state: videoState) => state.totalMined
+export const selectVideo = (state: videoState) => state.totalMined
 
 export default VideoSlice.reducer
