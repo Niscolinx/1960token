@@ -2,7 +2,7 @@ import { AppState } from './../../app/store';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { nextAuthSession } from '../../../lib/types'
-import { videoEnded } from './VideoAPI'
+import { videoEnded } from './UserApi'
 
 export interface videoState {
     status: 'idle' | 'loading' | 'failed' | 'success'
