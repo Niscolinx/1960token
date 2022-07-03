@@ -74,6 +74,7 @@ function earn() {
             }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+                console.log("stop mining")
                 setMiningStart(false)
                 dispatch(initStopMineAsync(session))
             }
