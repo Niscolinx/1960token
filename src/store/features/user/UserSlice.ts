@@ -16,12 +16,12 @@ const initialState: IUser = {
     role: '',
     totalMined: 0,
     portfolio: 0,
-    status: '',
+    status: 'idle' ,
     password: '',
     pendingWithdrawals: [],
     pendingDeposits: [],
     totalWithdrawals: [],
-    totalDeposits: []
+    totalDeposits: [],
 }
 export const getUser = createAsyncThunk(
     'user',
