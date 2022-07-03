@@ -8,7 +8,7 @@ import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, R
 const persistConfig = {
     key: 'root',
     storage,
-    blacklist: ['video']
+    blacklist: ['video', 'user']
 }
 
 const rootReducer = combineReducers({
