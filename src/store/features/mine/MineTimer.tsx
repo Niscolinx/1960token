@@ -3,7 +3,7 @@ import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import { increaseTokenCount, increment, selectMining } from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { MineCountDown, tokenCountDown } from './MineCountDown'
+import { MineCountDown } from './MineCountDown'
 
 const defaultTimer = {
     hours: '00',
