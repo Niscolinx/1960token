@@ -51,8 +51,9 @@ export const UserSlice = createSlice({
                 //   state[i] = payload[i]
                 // }
 
-               Object.keys(payload).forEach((field) => {
+               Object.values(payload).forEach((field) => {
                 console.log({field})
+                console.log(payload.field)
                })
             })
             .addCase(getUser.rejected, (state) => {
