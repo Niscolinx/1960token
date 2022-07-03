@@ -101,12 +101,16 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>{mineState.totalMined === 0 ? '0.0' : mineState.totalMined}</p>
+                    <p className='font-bold text-3xl'>
+                        {mineState.totalMined === 0
+                            ? '0.0'
+                            : mineState.totalMined}
+                    </p>
                 </div>
 
                 <div className='relative z-10'>
                     <ReactPlayer
-                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        url='https://youtu.be/HoPNOczYU4Y'
                         width='100%'
                         height='40rem'
                     />
