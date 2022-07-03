@@ -9,17 +9,5 @@ export default async function user(req: NextApiRequest, res: NextApiResponse) {
 
     const user = await User.findOne({ email })
 
-    console.log({user})
-
-    if (user.isMining) {
-        console.log('mining started already')
-        return res.json({
-            miningStart: user.miningStart,
-            isMining: true,
-        })
-    } else {
-        return res.json({
-            isMining: false,
-        })
-    }
+    return res.json(user)
 }
