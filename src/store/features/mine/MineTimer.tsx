@@ -20,7 +20,7 @@ const defaultTimer = {
 const defaultTokenCountDown = '00'
 
 const CountDownTimer = ({ start }: { start: boolean }) => {
-        const { data: session } = useSession()
+    const { data: session } = useSession()
 
     console.log({ start })
     const mineState = useAppSelector(selectMining)
@@ -39,10 +39,12 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
 
     const dayjsNowTimeStamp = dayjs()
 
-    if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
-        console.log('stop from mine timer')
-        dispatch(initStopMineAsync(session!))
-    }
+    useEffect(() => {
+        if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+            console.log('stop from mine timer')
+            dispatch(initStopMineAsync(session!))
+        }
+    }, [session])
 
     // useEffect(() => {
     //    // console.log({tempTokenCount})
