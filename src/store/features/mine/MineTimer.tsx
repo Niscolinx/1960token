@@ -29,6 +29,13 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
+            const dayjsNowTimeStamp = dayjs()
+
+     if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+         console.log('stop from mine timer')
+         
+     }
+
     // useEffect(() => {
     //    // console.log({tempTokenCount})
     //     dispatch(increment(tempTokenCount))
