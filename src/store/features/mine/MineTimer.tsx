@@ -20,7 +20,7 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const dispatch = useAppDispatch()
 
     const [remainingTime, setRemainingTime] = useState(defaultTimer)
-    const [tempTokenCount, setTempTokenCount] = useState(defaultTokenCountDown)
+    //const [tempTokenCount, setTempTokenCount] = useState(defaultTokenCountDown)
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
@@ -29,11 +29,11 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-    useEffect(() => {
-       // console.log({tempTokenCount})
-        dispatch(increment(tempTokenCount))
-        dispatch(increaseTokenCount())
-    }, [tempTokenCount])
+    // useEffect(() => {
+    //    // console.log({tempTokenCount})
+    //     dispatch(increment(tempTokenCount))
+    //     dispatch(increaseTokenCount())
+    // }, [tempTokenCount])
 
     useEffect(() => {
         if (theme === 'dark') {
