@@ -19,16 +19,10 @@ export default async function StartMining(
 
     const user = await User.findOne({ email })
 
-    console.log('the user', user)
-
-    user.miningStartedAt = ''
-    user.isMining = false
     user.totalMined = user.totalMined + 0.5
     await user.save()
 
     return res.json({
-        isMining: user.isMining,
-        miningStartedAt: user.miningStartedAt,
-        totalMined: user.totalMined,
+        totalMined: user.totalMined
     })
 }
