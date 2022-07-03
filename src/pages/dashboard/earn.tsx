@@ -14,7 +14,11 @@ import {
     initStopMineAsync,
 } from '../../store/features/mine/MinerSlice'
 import MineTimer from '../../store/features/mine/MineTimer'
-import { initVideoEnded, selectVideo } from '../../store/features/video/VideoSlice'
+import {
+    initVideoEnded,
+    selectVideo,
+} from '../../store/features/video/VideoSlice'
+import { getUser } from '../../store/features/user/UserSlice'
 
 function earn() {
     const { data: session } = useSession()
@@ -36,8 +40,10 @@ function earn() {
     //}, [mineState])
 
     useEffect(() => {
-        
-    })
+        if (session) {
+            dispatch(getUser(session))
+        }
+    }, [])
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -110,11 +116,12 @@ function earn() {
     }
 
     const totalToDisplay = () => {
+        mineState.totalMined === 0
+            ? '0.0'
+            : mineState.totalMined + videoState.totalMined
 
-        mineState.totalMined  === 0 ? '0.0' : mineState.totalMined + videoState.totalMined
-
-        console.log('mine state',mineState.totalMined)
-        console.log("vide state", videoState.totalMined)
+        console.log('mine state', mineState.totalMined)
+        console.log('vide state', videoState.totalMined)
 
         return videoState.totalMined
     }
@@ -125,9 +132,7 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>
-                        {totalToDisplay()}
-                    </p>
+                    <p className='font-bold text-3xl'>{totalToDisplay()}</p>
                 </div>
 
                 <div className='relative z-10'>
