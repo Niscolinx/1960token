@@ -84,7 +84,7 @@ function earn() {
         }
     }, [session])
 
-    const handleStart = () => {
+    const handleMineStart = () => {
         console.log('clicked on mine')
 
         if (session) {
@@ -95,6 +95,9 @@ function earn() {
         setIsDim(false)
     }
 
+    const handleVideoEnded = () => {
+        console.log("video ended")
+    }
     return (
         <>
             <div className='grid h-[100vh]'>
@@ -114,7 +117,7 @@ function earn() {
                         url='https://youtu.be/HoPNOczYU4Y'
                         width='100%'
                         height='40rem'
-                        onEnded={handleVideo}
+                        onEnded={handleVideoEnded}
                     />
                 </div>
                 <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer '>
@@ -127,7 +130,7 @@ function earn() {
                     </div>
                     <div className='grid text-white justify-center justify-items-center'>
                         <GiTrade
-                            onClick={handleStart}
+                            onClick={handleMineStart}
                             // className='text-white text-4xl'
                             className={`text-white text-4xl ${
                                 !isDim && miningStart
