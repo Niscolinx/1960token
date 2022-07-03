@@ -2,16 +2,25 @@ import { AppState } from './../../app/store';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { nextAuthSession } from '../../../lib/types'
-import { videoEnded } from './UserApi'
+import { IUser } from '../../../models/User';
 
-export interface videoState {
-    status: 'idle' | 'loading' | 'failed' | 'success'
+
+const initialState: IUser = {
+     _id: Object
+    username: string
+    email: string
+    phoneNumber: string
+    isMining: boolean
+    miningStartedAt: string
+    role: string
     totalMined: number
-}
-
-const initialState: videoState = {
-    status: 'idle',
-    totalMined: 0.0,
+    portfolio: number
+    status: string
+    password: string
+    pendingWithdrawals: Types.ObjectId[]
+    pendingDeposits: Types.ObjectId[]
+    totalWithdrawals: Types.ObjectId[]
+    totalDeposits: Types.ObjectId[]
 }
 export const initVideoEnded = createAsyncThunk(
     'video',
