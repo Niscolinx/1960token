@@ -125,7 +125,7 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>{fetchedUser.totalMined}</p>
+                    <p className='font-bold text-3xl'>{fetchedUser.user.totalMined}</p>
                 </div>
 
                 <div className='relative z-10'>
