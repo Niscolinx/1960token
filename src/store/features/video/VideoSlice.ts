@@ -21,7 +21,7 @@ const initialState: videoState = {
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
 export const initVideoEnded = createAsyncThunk(
-    'mining',
+    'video',
     async (userSession: nextAuthSession) => {
         const response = await videoEnded(userSession)
 
