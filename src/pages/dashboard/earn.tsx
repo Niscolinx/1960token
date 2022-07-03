@@ -22,7 +22,7 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 function earn() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
-    const fetchedUser = useAppDispatch(selectUser)
+    const fetchedUser = useAppSelector(selectUser)
 
     const [miningStart, setMiningStart] = useState(false)
 
@@ -121,7 +121,7 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>{fetchedUser.totalMined}</p>
+                    <p className='font-bold text-3xl'>{fetchedUser}</p>
                 </div>
 
                 <div className='relative z-10'>
