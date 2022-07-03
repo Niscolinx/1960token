@@ -4,17 +4,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import type { MineState } from '../../app/store'
 import { nextAuthSession } from '../../../lib/types'
 
-export interface MiningState {
-    isMining: boolean
+export interface videoState {
     status: 'idle' | 'loading' | 'failed' | 'success'
-    miningStartedAt: string
     totalMined: number
-    miningSession: 'over' | 'active' | 'stall'
-    countDownToken: string
-    tokensCount: number
 }
 
-const initialState: MiningState = {
+const initialState: videoState = {
     isMining: false,
     status: 'idle',
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
@@ -29,7 +24,7 @@ const initialState: MiningState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const initMineAsync = createAsyncThunk(
+export const initVideoEnded = createAsyncThunk(
     'mining',
     async (userSession: nextAuthSession) => {
         const response = await startMining(userSession)
@@ -122,4 +117,4 @@ export const selectMining = (state: MineState) => state.mine as MiningState
 //         }
 //     }
 
-export default MiningSlice.reducer
+export default VideoSlice.reducer
