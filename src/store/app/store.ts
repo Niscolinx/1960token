@@ -31,13 +31,13 @@ export const store = configureStore({
 
 export const persistedStore = persistStore(store)
 
-export type MineState = ReturnType<typeof store.getState>
+export type AppState = ReturnType<typeof store.getState>
 
 export type AppDispatch = typeof store.dispatch
 
 export type AppThunk<ReturnType = void> = ThunkAction<
     ReturnType,
-    MineState,
+    AppState,
     unknown,
     Action<string>
 >
