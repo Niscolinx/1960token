@@ -5,14 +5,11 @@ import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
-import MineTimer from '../../features/mine/MineTimer'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import {
-    initMineAsync,
-    initStopMineAsync,
-    selectMining,
-} from '../../features/mine/MinerSlice'
+
 import dayjs from 'dayjs'
+import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
+import { selectMining, initMineAsync, initStopMineAsync } from '../../store/features/mine/MinerSlice'
+import MineTimer from '../../store/features/mine/MineTimer'
 
 function earn() {
     const { data: session } = useSession()
