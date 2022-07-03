@@ -10,13 +10,9 @@ export interface videoState {
 }
 
 const initialState: videoState = {
-    isMining: false,
     status: 'idle',
-    miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
+
     totalMined: 0.0,
-    miningSession: 'stall',
-    countDownToken: '',
-    tokensCount: 0,
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
