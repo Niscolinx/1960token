@@ -111,6 +111,8 @@ function earn() {
 
         console.log('mine state',mineState.totalMined)
         console.log("vide state", videoState.totalMined)
+
+        return videoState.totalMined
     }
     return (
         <>
