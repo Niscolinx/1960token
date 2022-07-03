@@ -114,6 +114,7 @@ function earn() {
                         width='100%'
                         height='40rem'
                         onStart={() => console.log("video started")}
+                        onEnded={() => console.log("video ended")}
                     />
                 </div>
                 <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer '>
