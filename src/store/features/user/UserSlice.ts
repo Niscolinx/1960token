@@ -44,17 +44,19 @@ export const UserSlice = createSlice({
             })
             .addCase(getUser.fulfilled, (state, action) => {
                 console.log('user payload', action.payload)
-                const payload: {} = action.payload
+                const payload = action.payload
                 state.status = 'success'
 
                 // for(let i in payload){
                 //   state[i] = payload[i]
                 // }
 
-                Object.entries(payload).forEach((field) => {
-                    const key = field[0] as 'username'
-                    state[key] = field[1] as string 
-                })
+                // Object.entries(payload).forEach((field) => {
+                //     const key = field[0] as 'username'
+                //     state[key] = field[1] as string 
+                // })
+
+                state.totalMined = payload.totalMined
             })
             .addCase(getUser.rejected, (state) => {
                 state.status = 'failed'
