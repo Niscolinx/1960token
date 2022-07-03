@@ -1,6 +1,7 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit'
 import MiningReducer from '../features/mine/MinerSlice'
 import VideoReducer from '../features/video/VideoSlice'
+import User from '../features/user/UserSlice'
 import storage from 'redux-persist/lib/storage'
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 
@@ -12,7 +13,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     mine: MiningReducer,
-    video: VideoReducer
+    video: VideoReducer,
+
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
