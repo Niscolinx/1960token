@@ -3,29 +3,30 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { nextAuthSession } from '../../../lib/types'
 import { IUser } from '../../../models/User';
+import { userData } from './UserApi';
 
 
 const initialState: IUser = {
-     _id: Object
-    username: string
-    email: string
-    phoneNumber: string
-    isMining: boolean
-    miningStartedAt: string
-    role: string
-    totalMined: number
-    portfolio: number
-    status: string
-    password: string
-    pendingWithdrawals: Types.ObjectId[]
-    pendingDeposits: Types.ObjectId[]
-    totalWithdrawals: Types.ObjectId[]
-    totalDeposits: Types.ObjectId[]
+     _id: {},
+    username: '',
+    email: '',
+    phoneNumber: '',
+    isMining: false,
+    miningStartedAt: '',
+    role: '',
+    totalMined: 0,
+    portfolio: 0,
+    status: '',
+    password: '',
+    pendingWithdrawals: [],
+    pendingDeposits: [],
+    totalWithdrawals: [],
+    totalDeposits: []
 }
-export const initVideoEnded = createAsyncThunk(
-    'video',
+export const getUser = createAsyncThunk(
+    'user',
     async (userSession: nextAuthSession) => {
-        const response = await videoEnded(userSession)
+        const response = await userData(userSession)
 
         console.log({ response })
         return response
