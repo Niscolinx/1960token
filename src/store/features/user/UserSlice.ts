@@ -44,10 +44,9 @@ export const UserSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(getUser.fulfilled, (state, action) => {
-                const { totalMined } = action.payload
                 state.status = 'success'
 
-                state.totalMined = totalMined
+                state = action.payload
             })
             .addCase(getUser.rejected, (state) => {
                 state.status = 'failed'

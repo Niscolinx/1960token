@@ -36,6 +36,10 @@ function earn() {
     //}, [mineState])
 
     useEffect(() => {
+        
+    })
+
+    useEffect(() => {
         if (theme === 'dark') {
             console.log('dark theme', { theme })
 
