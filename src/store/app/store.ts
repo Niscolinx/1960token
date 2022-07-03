@@ -1,5 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import MiningReducer from '../features/mine/MinerSlice'
+import VideoReducer from '../features/video/VideoSlice'
 import storage from 'redux-persist/lib/storage'
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 
@@ -11,7 +12,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, MiningReducer)
 
 export const store = configureStore({
-    reducer: { mine: persistedReducer },
+    reducer: { mine: persistedReducer, video: VideoReducer },
     devTools: process.env.NODE_ENV !== 'production',
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
