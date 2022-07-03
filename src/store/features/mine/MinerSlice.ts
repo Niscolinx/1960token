@@ -1,9 +1,9 @@
-import { nextAuthSession } from './../../lib/types'
 import dayjs from 'dayjs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import type { MineState } from '../../app/store'
 import { startMining, stopMining } from './MineAPI'
+import { nextAuthSession } from '../../../lib/types'
 
 export interface MiningState {
     isMining: boolean
