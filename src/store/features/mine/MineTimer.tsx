@@ -44,7 +44,7 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
             console.log('stop from mine timer')
             dispatch(initStopMineAsync(session!))
         }
-    }, [session])
+    }, [session, updateRemainingTimer])
 
     // useEffect(() => {
     //    // console.log({tempTokenCount})
