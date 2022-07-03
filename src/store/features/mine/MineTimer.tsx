@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
-import { increaseTokenCount, increment, selectMining } from '../../features/mine/MinerSlice'
+import {
+    increaseTokenCount,
+    increment,
+    initStopMineAsync,
+    selectMining,
+} from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { MineCountDown } from './MineCountDown'
+import { useSession } from 'next-auth/react'
 
 const defaultTimer = {
     hours: '00',
@@ -13,8 +19,10 @@ const defaultTimer = {
 
 const defaultTokenCountDown = '00'
 
-const CountDownTimer = ({ start }: {start: boolean}) => {
-    console.log({start})
+const CountDownTimer = ({ start }: { start: boolean }) => {
+        const { data: session } = useSession()
+
+    console.log({ start })
     const mineState = useAppSelector(selectMining)
 
     const dispatch = useAppDispatch()
@@ -24,17 +32,17 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
 
     const updateRemainingTimer = (prev?: Dayjs) => {
         setRemainingTime(MineCountDown(prev))
-       //setTempTokenCount(tokenCountDown(prev))
+        //setTempTokenCount(tokenCountDown(prev))
     }
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-            const dayjsNowTimeStamp = dayjs()
+    const dayjsNowTimeStamp = dayjs()
 
-     if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
-         console.log('stop from mine timer')
-         
-     }
+    if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
+        console.log('stop from mine timer')
+        dispatch(initStopMineAsync(session!))
+    }
 
     // useEffect(() => {
     //    // console.log({tempTokenCount})
@@ -67,7 +75,6 @@ const CountDownTimer = ({ start }: {start: boolean}) => {
     useEffect(() => {
         if (start && mineState.miningSession === 'active') {
             const intervalId = setInterval(() => {
-
                 return updateRemainingTimer(dayjs(mineState.miningStartedAt))
             }, 1000)
 
