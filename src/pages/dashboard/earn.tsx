@@ -76,7 +76,7 @@ function earn() {
             console.log(
                 'parsedJson',
                 parsedJSON.mine,
-                typeof JSON.parse(parsedJSON.mine)
+                JSON.parse(parsedJSON.mine)
             )
 
             // if (JSON.parse(parsedJSON.mine.miningSession) === 'stall') {
