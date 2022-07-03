@@ -122,7 +122,7 @@ function earn() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-3xl'>
-                        {totalToDisplay}
+                        {totalToDisplay()}
                     </p>
                 </div>
 
