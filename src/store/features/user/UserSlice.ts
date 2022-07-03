@@ -47,10 +47,13 @@ export const UserSlice = createSlice({
                 console.log('user payload', action.payload)
                 const payload = action.payload
                 state.status = 'success'
-                for(let i in payload){
-                  state[i] = payload[i]
-                }
+                // for(let i in payload){
+                //   state[i] = payload[i]
+                // }
 
+               Object.keys(payload).forEach((field) => {
+                console.log({field})
+               })
             })
             .addCase(getUser.rejected, (state) => {
                 state.status = 'failed'
