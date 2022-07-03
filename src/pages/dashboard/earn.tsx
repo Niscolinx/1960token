@@ -108,6 +108,9 @@ function earn() {
     const totalToDisplay = () => {
 
         mineState.totalMined  === 0 ? '0.0' : mineState.totalMined + videoState.totalMined
+
+        console.log('mine state',mineState.totalMined)
+        console.log("vide state", videoState.totalMined)
     }
     return (
         <>
