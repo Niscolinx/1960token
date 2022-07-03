@@ -1,5 +1,4 @@
 import { AppState } from './../../app/store';
-import dayjs from 'dayjs'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { nextAuthSession } from '../../../lib/types'
