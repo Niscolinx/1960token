@@ -105,8 +105,10 @@ function earn() {
         }
     }
 
-    const totalToDisplay =
-        mineState.totalMined && videoState.totalMined === 0 ? '0.0' : mineState.totalMined + videoState.totalMined
+    const totalToDisplay = () => {
+
+        mineState.totalMined  === 0 ? '0.0' : mineState.totalMined + videoState.totalMined
+    }
     return (
         <>
             <div className='grid h-[100vh]'>
