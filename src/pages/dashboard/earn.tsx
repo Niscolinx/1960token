@@ -14,11 +14,12 @@ import {
     initStopMineAsync,
 } from '../../store/features/mine/MinerSlice'
 import MineTimer from '../../store/features/mine/MineTimer'
-import { initVideoEnded } from '../../store/features/video/VideoSlice'
+import { initVideoEnded, selectVideo } from '../../store/features/video/VideoSlice'
 
 function earn() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
+    const videoState = useAppSelector(selectVideo)
 
     const [miningStart, setMiningStart] = useState(false)
 
@@ -103,6 +104,9 @@ function earn() {
             dispatch(initVideoEnded(session))
         }
     }
+
+    const totalToDisplay =
+        mineState.totalMined && videoState.totalMined === 0 ? '0.0' : mineState.totalMined + videoState.totalMined
     return (
         <>
             <div className='grid h-[100vh]'>
@@ -111,9 +115,7 @@ function earn() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-3xl'>
-                        {mineState.totalMined === 0
-                            ? '0.0'
-                            : mineState.totalMined}
+                        {totalToDisplay}
                     </p>
                 </div>
 
