@@ -49,7 +49,6 @@ export const UserSlice = createSlice({
                 state.status = 'success'
 
                 for(let i in payload){
-                    i = typeof 1
                   state[i] = payload[i]
                 }
             //     type userFields = keyof IUser
