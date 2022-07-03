@@ -14,6 +14,7 @@ import {
     initStopMineAsync,
 } from '../../store/features/mine/MinerSlice'
 import MineTimer from '../../store/features/mine/MineTimer'
+import { initVideoEnded } from '../../store/features/video/VideoSlice'
 
 function earn() {
     const { data: session } = useSession()
@@ -96,7 +97,10 @@ function earn() {
     }
 
     const handleVideoEnded = () => {
-        console.log("video ended")
+
+        if(session){
+            dispatch(initVideoEnded(session))
+        }
     }
     return (
         <>
