@@ -51,7 +51,7 @@ export const UserSlice = createSlice({
                 //   state[i] = payload[i]
                 // }
 
-               Object.values(payload).forEach((field) => {
+               Object.entries(payload).forEach((field) => {
                 console.log({field})
                 console.log(payload.field)
                })
