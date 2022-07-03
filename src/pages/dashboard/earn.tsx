@@ -8,7 +8,11 @@ import { IoIosPeople } from 'react-icons/io'
 
 import dayjs from 'dayjs'
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
-import { selectMining, initMineAsync, initStopMineAsync } from '../../store/features/mine/MinerSlice'
+import {
+    selectMining,
+    initMineAsync,
+    initStopMineAsync,
+} from '../../store/features/mine/MinerSlice'
 import MineTimer from '../../store/features/mine/MineTimer'
 
 function earn() {
@@ -24,11 +28,10 @@ function earn() {
 
     const dispatch = useAppDispatch()
 
-   // useEffect(() => {
-        //setTokenCount(mineState.countDownToken)
-        //setTokenCount(mineState.tokensCount)
+    // useEffect(() => {
+    //setTokenCount(mineState.countDownToken)
+    //setTokenCount(mineState.tokensCount)
     //}, [mineState])
-
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -74,7 +77,7 @@ function earn() {
             }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
-                console.log("stop mining")
+                console.log('stop mining')
                 setMiningStart(false)
                 dispatch(initStopMineAsync(session))
             }
@@ -111,8 +114,7 @@ function earn() {
                         url='https://youtu.be/HoPNOczYU4Y'
                         width='100%'
                         height='40rem'
-                        onStart={() => console.log("video started")}
-                        onEnded={() => console.log("video ended")}
+                        onEnded={handleVideo}
                     />
                 </div>
                 <div className='absolute grid right-0 left-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer '>
