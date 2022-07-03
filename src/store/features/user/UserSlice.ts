@@ -48,6 +48,7 @@ export const UserSlice = createSlice({
                 state.status = 'success'
 
                 state.totalMined = action.payload.totalMined
+                state.username = action.payload.username
             })
             .addCase(getUser.rejected, (state) => {
                 state.status = 'failed'
@@ -55,6 +56,6 @@ export const UserSlice = createSlice({
     },
 })
 
-export const selectUser = (state: AppState) => state.user 
+export const selectUser = (state: AppState) => state
 
 export default UserSlice.reducer
