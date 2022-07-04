@@ -51,12 +51,14 @@ function team() {
               </div>
               <div className='grid'>
                   <p>
-                      Referrals <span>$97</span>
+                      Referrals <span>35</span>
                   </p>
                   <p>35</p>
               </div>
               <div className='grid'>
-                  <p>Actival Referrals</p>
+                  <p>
+                      Actival Referrals <span>$97</span>
+                  </p>
                   <p>22</p>
               </div>
           </div>
