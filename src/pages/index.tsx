@@ -103,7 +103,7 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute left-[5%] top-[30%] px-3 gap-4 md:(left:[20%])'>
+                            <div className='grid absolute left-[5%] top-[30%] px-3 gap-4 md:(left-[20%])'>
                                 <AnimationOnScroll
                                     animateIn='animate__zoomInLeft'
                                     animateOnce={true}
