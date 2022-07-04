@@ -33,6 +33,7 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
     //const [tempTokenCount, setTempTokenCount] = useState(defaultTokenCountDown)
 
     const updateRemainingTimer = (prev?: Dayjs) => {
+        console.log('update remaining time')
         setRemainingTime(MineCountDown(prev))
         //setTempTokenCount(tokenCountDown(prev))
     }
@@ -79,6 +80,7 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
     useEffect(() => {
         if (start && mineState.miningSession === 'active') {
             const intervalId = setInterval(() => {
+                
                 return updateRemainingTimer(dayjs(mineState.miningStartedAt))
             }, 1000)
 
