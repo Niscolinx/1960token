@@ -2,8 +2,6 @@ import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 export async function middleware(req: NextRequest, ev: NextFetchEvent) {
     const { cookies } = req
-    console.log('the req headers', req.headers)
-
     const sessionToken = cookies['next-auth.session-token']
 
     let auth: Boolean = false
