@@ -135,47 +135,53 @@ function earn() {
                     <MineTimer start={miningStart} />
                 </div>
                 <div className='relative'>
-                    <div className='absolute grid right-0 mr-4 justify-items-center  gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 animateRight'>
+                    <div className='absolute grid right-0 mr-4 justify-items-center  gap-6 z-90 justify-end cursor-pointer  dark:bg-gray-300 rounded p-2 animateRight'>
                         <AnimationOnScroll
                             initiallyVisible={true}
                             animateIn='animate__slideInLeft'
                         >
-                            <div className="grid">
-                                
-                            <div className='grid text-white justify-center justify-items-center mb-4'>
-                                <IoIosPeople
-                                    className='text-white text-4xl dark:text-[#1a1a2d]'
-                                    onClick={() => console.log('team clicked')}
-                                />
-                                <p className='font-bold dark:text-[#1a1a2d]'>
-                                    1/1
-                                </p>
-                            </div>
-                            <div className='grid text-white justify-center justify-items-center'>
-                                <GiTrade
-                                    onClick={handleMineStart}
-                                    // className='text-white text-4xl'
-                                    className={` cursor-pointer text-white dark:text-[#1a1a2d] text-4xl ${
-                                        !isDim && miningStart
-                                            ? 'animate-spin animate-duration-[4s]'
-                                            : ''
-                                    }`}
-                                />
-                                <div className='grid justify-center justify-items-center'>
-                                    <HiOutlineArrowNarrowUp
-                                        className='text-white dark:text-[#1a1a2d] text-3xl animate-bounce mt-7 animate-duration-[4s]'
-                                        style={{
-                                            display: isDim ? 'block' : 'none',
-                                        }}
+                            <div className='grid bg-[#1a1a2d]'>
+                                <div className='grid text-white justify-center justify-items-center mb-4'>
+                                    <IoIosPeople
+                                        className='text-white text-4xl dark:text-[#1a1a2d]'
+                                        onClick={() =>
+                                            console.log('team clicked')
+                                        }
                                     />
-                                    <span
-                                        className='dark:text-[#1a1a2d] text-white w-10'
-                                        style={{
-                                            display: isDim ? 'block' : 'none',
-                                        }}
-                                    >
-                                        Click to mine!
-                                    </span>
+                                    <p className='font-bold dark:text-[#1a1a2d]'>
+                                        1/1
+                                    </p>
+                                </div>
+                                <div className='grid text-white justify-center justify-items-center'>
+                                    <GiTrade
+                                        onClick={handleMineStart}
+                                        // className='text-white text-4xl'
+                                        className={` cursor-pointer text-white dark:text-[#1a1a2d] text-4xl ${
+                                            !isDim && miningStart
+                                                ? 'animate-spin animate-duration-[4s]'
+                                                : ''
+                                        }`}
+                                    />
+                                    <div className='grid justify-center justify-items-center'>
+                                        <HiOutlineArrowNarrowUp
+                                            className='text-white dark:text-[#1a1a2d] text-3xl animate-bounce mt-7 animate-duration-[4s]'
+                                            style={{
+                                                display: isDim
+                                                    ? 'block'
+                                                    : 'none',
+                                            }}
+                                        />
+                                        <span
+                                            className='dark:text-[#1a1a2d] text-white'
+                                            style={{
+                                                display: isDim
+                                                    ? 'block'
+                                                    : 'none',
+                                            }}
+                                        >
+                                            Click to mine!
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </AnimationOnScroll>
