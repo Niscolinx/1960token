@@ -140,6 +140,8 @@ function earn() {
                             initiallyVisible={true}
                             animateIn='animate__slideInLeft'
                         >
+                            <div className="grid">
+                                
                             <div className='grid text-white justify-center justify-items-center mb-4'>
                                 <IoIosPeople
                                     className='text-white text-4xl dark:text-[#1a1a2d]'
