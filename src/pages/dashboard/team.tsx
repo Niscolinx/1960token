@@ -26,30 +26,41 @@ function team() {
      }, [theme])
      
   return (
-    <div className='py-5 px-2 grid justify-center justify-items-center'>
-        <h1 style={neuToUse} className=' justify-self-center text-2xl px-2 py-1 mt-4 mb-5'>My Team</h1>
-        <div className="grid justify-items-center">
-            <BsFillFilePersonFill className='text-4xl mb-2'/>
+      <div className='py-5 px-2 grid justify-center justify-items-center'>
+          <h1
+              style={neuToUse}
+              className=' justify-self-center text-2xl px-2 py-1 mt-4 mb-5'
+          >
+              My Team
+          </h1>
+          <div className='grid justify-items-center gap-4'>
+              <BsFillFilePersonFill className='text-4xl' />
 
-            <div className="grid">
-                <h3 className='text-xl'>Upline: <span className='font-semibold'>Tester1</span></h3>
-            </div>
-        </div>
-        <div className="grid">
-            <div className="grid">
-                <p>Total Referral Commission</p>
-                <p>$97</p>
-            </div>
-            <div className="grid">
-                <p>Referrals</p>
-                <p>35</p>
-            </div>
-            <div className="grid">
-                <p>Actival Referrals</p>
-                <p>22</p>
-            </div>
-        </div>
-    </div>
+              <div className='grid'>
+                  <h3 className='text-xl'>
+                      Upline: <span className='font-semibold'>Tester1</span>
+                  </h3>
+              </div>
+          </div>
+          <div className='grid'>
+              <div className='grid'>
+                  <p>
+                      Total Referral Commission <span>$97</span>
+                  </p>
+                  <p>$97</p>
+              </div>
+              <div className='grid'>
+                  <p>
+                      Referrals <span>$97</span>
+                  </p>
+                  <p>35</p>
+              </div>
+              <div className='grid'>
+                  <p>Actival Referrals</p>
+                  <p>22</p>
+              </div>
+          </div>
+      </div>
   )
 }
 
