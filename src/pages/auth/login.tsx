@@ -190,31 +190,12 @@ const Login = ({ providers }: LoginProps) => {
                         </button>
                     </div>
                 </form>
-                {/* 
-                {Object.values(providers).map((provider) => {
-                    if (provider.name === 'Credentials' || provider.name === 'EmailOrUsername') {
-                        return
-                    }
-
-                    return (
-                        <div
-                            key={provider.id}
-                            className='grid justify-center mt-10'
-                        >
-                            <button
-                                onClick={() => signIn(provider.id)}
-                                className='bg-blue-300 py-1 px-6  rounded'
-                            >
-                                Sign in with {provider.name}
-                            </button>
-                        </div>
-                    )
-                })} */}
+                
                 <div className='grid mt-10 gap-2 px-8'>
                     <Link
                         href='/auth/register'
                     >
-                        <button className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'>
+                        <button className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 text-left'>
                             Register
                         </button>
                     </Link>
