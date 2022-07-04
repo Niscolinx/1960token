@@ -38,20 +38,22 @@ function earn() {
     //}, [mineState])
 
     useEffect(() => {
-        console.log("get the user")
+        console.log('get the user')
         if (session) {
             dispatch(getUser(session))
 
             console.log('the user', fetchedUser.user)
-
-            if(fetchedUser.user.isMining){
-                setIsDim(false)
-            }else{
-                setIsDim(true)
-            }
         }
     }, [session])
 
+    useEffect(() => {
+        if (fetchedUser.user.isMining) {
+            setIsDim(false)
+            setMiningStart(true)
+        } else {
+            setIsDim(true)
+        }
+    }, [fetchedUser.user])
 
     useEffect(() => {
         if (theme === 'dark') {
