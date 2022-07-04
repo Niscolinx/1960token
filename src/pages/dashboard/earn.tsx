@@ -140,7 +140,7 @@ function earn() {
                             initiallyVisible={true}
                             animateIn='animate__slideInLeft'
                         >
-                            <div className='grid text-white justify-center justify-items-center mb-4'>
+                            {/* <div className='grid text-white justify-center justify-items-center mb-4'>
                                 <IoIosPeople
                                     className='text-white text-4xl dark:text-[#1a1a2d]'
                                     onClick={() => console.log('team clicked')}
@@ -148,7 +148,7 @@ function earn() {
                                 <p className='font-bold dark:text-[#1a1a2d]'>
                                     1/1
                                 </p>
-                            </div>
+                            </div> */}
                             <div className='grid text-white justify-center justify-items-center'>
                                 <GiTrade
                                     onClick={handleMineStart}
