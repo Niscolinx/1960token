@@ -10,6 +10,7 @@ export interface IUser {
     role: string
     totalMined: number
     portfolio: number
+    referral: string
     status: string
     password: string
     pendingWithdrawals: Types.ObjectId[]
