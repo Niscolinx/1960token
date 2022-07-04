@@ -140,11 +140,14 @@ function aboutUs() {
                     SUPERIOR MINING PLATFORM{' '}
                 </h2>
                 </AnimationOnScroll>
+                            <AnimationOnScroll animateIn='animate__zoomInRight'>
+
                 <p className='text-justify'>
                     1960Token has revolutionized Miners and Affiliate by giving
                     them direct access to a superior platform and popular Mining
                     and Affiliate platform.
                 </p>
+                </AnimationOnScroll>
             </div>
             <div className='grid'>
                             <AnimationOnScroll animateIn='animate__slideInDown'>
