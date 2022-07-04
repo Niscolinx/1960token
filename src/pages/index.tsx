@@ -90,7 +90,7 @@ const Index = () => {
                                             className='font-semibold text-white'
                                             style={{
                                                 animation:
-                                                    'moveInTop 1s cubic-bezier(0, 0.96, 1, 1)',
+                                                    'moveInBottom 1s cubic-bezier(0, 0.96, 1, 1)',
                                             }}
                                         >
                                             <span className='text-orange-300 font-bold'>
