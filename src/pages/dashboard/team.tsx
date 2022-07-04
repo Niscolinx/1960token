@@ -42,7 +42,7 @@ function team() {
                     </h3>
                 </div>
             </div>
-            <div className='grid mt-5'>
+            <div className='grid mt-5 border border-gray-500 rounded-lg'>
                 <div className='grid'>
                     <p>
                         Total Referral Commission
