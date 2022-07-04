@@ -38,6 +38,9 @@ const userSchema = new Schema<IUser>(
             type: String,
             required: true,
         },
+        referral: {
+            type: String,
+        },
         totalMined: {
             type: Number,
             default: 0.0
