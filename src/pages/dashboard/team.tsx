@@ -26,6 +26,8 @@ function team() {
     }, [theme])
 
     return (
+        <div className="grid">
+
         <div className='py-5 px-2 grid justify-center justify-items-center'>
             <h1
                 style={neuToUse}
@@ -61,6 +63,7 @@ function team() {
                     </p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
