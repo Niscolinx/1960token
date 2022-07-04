@@ -91,7 +91,7 @@ const Index = () => {
                                     <Link href='/api/auth/signin'>
                                         <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
                                             Get Started
-                                        </button>{' '}
+                                        </button>
                                     </Link>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ const Index = () => {
                                 <Link href='/api/auth/signin'>
                                     <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-md animateBottom'>
                                         Get Started
-                                    </button>{' '}
+                                    </button>
                                 </Link>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ const Index = () => {
                                 <Link href='/api/auth/signin'>
                                     <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
                                         Get Started
-                                    </button>{' '}
+                                    </button>
                                 </Link>
                             </div>
                         </div>
