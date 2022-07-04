@@ -171,6 +171,9 @@ function earn() {
                                                     : 'none',
                                             }}
                                         />
+                                    </div>
+                                </div>
+                            </div>
                                         <span
                                             className='dark:text-[#1a1a2d] text-white'
                                             style={{
@@ -181,9 +184,6 @@ function earn() {
                                         >
                                             Click to mine!
                                         </span>
-                                    </div>
-                                </div>
-                            </div>
                         </AnimationOnScroll>
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
