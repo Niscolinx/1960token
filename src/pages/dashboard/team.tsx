@@ -47,7 +47,6 @@ function team() {
                   <p>
                       Total Referral Commission <span>$97</span>
                   </p>
-                  <p>$97</p>
               </div>
               <div className='grid'>
                   <p>
