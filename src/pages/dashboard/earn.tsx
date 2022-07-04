@@ -102,6 +102,10 @@ function earn() {
         }
     }, [session])
 
+    useEffect(() => {
+        console.log("mining start")
+    }, [miningStart])
+
     const handleMineStart = () => {
         console.log('clicked on mine')
 
