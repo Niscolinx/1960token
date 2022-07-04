@@ -151,7 +151,7 @@ function earn() {
                             </div>
                             <div className='grid text-white justify-center justify-items-center'>
                                 <GiTrade
-                                    onClick={handleMineStart}
+                                    onClick={() => alert('mine now')}
                                     // className='text-white text-4xl'
                                     className={` cursor-pointer text-white dark:text-[#1a1a2d] text-4xl ${
                                         !isDim && miningStart
