@@ -139,6 +139,7 @@ function aboutUs() {
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
                     SUPERIOR MINING PLATFORM{' '}
                 </h2>
+                </AnimationOnScroll>
                 <p className='text-justify'>
                     1960Token has revolutionized Miners and Affiliate by giving
                     them direct access to a superior platform and popular Mining
@@ -146,9 +147,12 @@ function aboutUs() {
                 </p>
             </div>
             <div className='grid'>
+                            <AnimationOnScroll animateIn='animate__slideInDown'>
+
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
                     TRUST AND TRANSPARENCY{' '}
                 </h2>
+                </AnimationOnScroll>
                 <p className='text-justify'>
                     Trust and Transparency form the basis of 1960Token core
                     values. So here there is no requotes, no manipulation and
