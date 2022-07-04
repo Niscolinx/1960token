@@ -60,10 +60,10 @@ const Index = () => {
                     spaceBetween={30}
                     centeredSlides={true}
                     loop={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 5000,
+                    //     disableOnInteraction: false,
+                    // }}
                     pagination={{
                         clickable: true,
                     }}
@@ -105,7 +105,7 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 '>
+                            <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 text-3xl'>
                                 <p className='font-semibold text-white animateTop'>
                                     Invite Your friends
                                 </p>
