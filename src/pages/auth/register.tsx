@@ -74,6 +74,7 @@ const Register = () => {
                     username: username.toLowerCase(),
                     email: email.toLowerCase(),
                     phoneNumber,
+                    referral: referral.toLowerCase()
                     password: confirmPassword.toLowerCase(),
                 })
                 .then(({data}) => {
