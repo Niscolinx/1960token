@@ -5,7 +5,7 @@ import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
 import { IoIosPeople } from 'react-icons/io'
-
+import { Player } from 'video-react'
 import dayjs from 'dayjs'
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
 import {
@@ -185,13 +185,16 @@ function earn() {
                         </span>
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
-                        <ReactPlayer
+                        {/* <ReactPlayer
                             url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
                             width='100%'
                             height='100%'
                             //onEnded={handleVideoEnded}
                             onStart={handleVideoEnded}
-                        />
+                        /> */}
+                        <Player>
+                            <source src='https://media.w3.org/2010/05/sintel/trailer_hd.mp4' />
+                        </Player>
                     </div>
                 </div>
                 <div
