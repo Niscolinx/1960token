@@ -190,7 +190,7 @@ const Login = ({ providers }: LoginProps) => {
                         </button>
                     </div>
                 </form>
-{/* 
+                {/* 
                 {Object.values(providers).map((provider) => {
                     if (provider.name === 'Credentials' || provider.name === 'EmailOrUsername') {
                         return
@@ -211,13 +211,12 @@ const Login = ({ providers }: LoginProps) => {
                     )
                 })} */}
                 <div className='grid mt-10 gap-2 px-8'>
-                 
                     <Link
                         href='/auth/register'
-                        className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 bg-orange-300'
-                        style={{background: 'orange'}}
                     >
-                        Register
+                        <button className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'>
+                            Register
+                        </button>
                     </Link>
 
                     <a
