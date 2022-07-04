@@ -17,7 +17,7 @@ const secondsRemaining = (now: Dayjs, remainingTime: Dayjs) => {
 const padWithZeros = (number: number, minLength: number) => {
     const numberString = number.toString()
     if (numberString.length >= minLength) return numberString
-    
+
     return '0'.repeat(minLength - numberString.length) + numberString
 }
 
@@ -27,17 +27,16 @@ let count = 0.00001158
 // X = 0.04166 per hour ~ 0.0417Tk
 
 // Per Minute
-// X = 0.000695 
+// X = 0.000695
 
 // Per Second
 // X = 0.00001158
 const IncrementSeconds = (now: Dayjs, remainingTime: Dayjs) => {
     count += 0.00001158
-    const seconds = count.toFixed(7) 
-   // return padWithDecimalZeros(seconds, 8)
-   return seconds
+    const seconds = count.toFixed(7)
+    // return padWithDecimalZeros(seconds, 8)
+    return seconds
 }
-
 
 const padWithDecimalZeros = (number: number, minLength: number) => {
     const numberString = number.toString()
@@ -51,10 +50,13 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
-        console.log('stop from counting....')
+        return {
+            hours: '00',
+            minutes: '00',
+            seconds: '00',
+        }
     }
     if (prevTimeStore) {
-        console.log("counting....")
         return {
             hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
             minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
@@ -76,6 +78,5 @@ export const tokenCountDown = (prevTimeStore?: Dayjs) => {
     if (prevTimeStore) {
         const seconds = IncrementSeconds(dayjsNowTimeStamp, prevTimeStore)
         return seconds
-    }
-    else return '00'
+    } else return '00'
 }
