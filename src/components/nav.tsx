@@ -62,7 +62,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
                             href={`/api/auth/${isAuth ? 'signout' : 'signin'}`}
                         >
                             <button
-                                className={`bg-${
+                                className={` bg-gray-300 bg-${
                                     isAuth ? 'orange-300' : 'gray-300'
                                 } text-${
                                     isAuth ? '[#1a1a2d]' : 'black'
