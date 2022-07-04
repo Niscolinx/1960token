@@ -161,9 +161,12 @@ function aboutUs() {
                 </p>
             </div>
             <div className='grid mt-10'>
+                            <AnimationOnScroll animateIn='animate__slideInDown'>
+
                 <h3 className='text-center font-semibold text-2xl grad p-2'>
                     Who We Are{' '}
                 </h3>
+                </AnimationOnScroll>
                 <p className='text-justify'>
                     1960Token is one of the most superior Mining and Affiliate
                     platform, offering Mining and Affiliate solutions for active
