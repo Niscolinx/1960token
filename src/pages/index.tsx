@@ -191,7 +191,7 @@ const Index = () => {
                             </div>
                         </div>
                     </AnimationOnScroll>
-                    <AnimationOnScroll>
+                    <AnimationOnScroll animateIn='animateRight'>
                         <div
                             className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
                             style={stepsNeu}
@@ -209,7 +209,7 @@ const Index = () => {
                             </div>
                         </div>
                     </AnimationOnScroll>
-                    <AnimationOnScroll>
+                    <AnimationOnScroll animateIn='animateLeft'>
                         <div
                             className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] '
                             style={stepsNeu}
