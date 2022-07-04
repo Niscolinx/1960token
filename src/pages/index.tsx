@@ -114,11 +114,10 @@ const Index = () => {
                                         Invite Your Friends
                                     </p>
                                 </AnimationOnScroll>
-                                                            <Link href='/api/auth/signin'>
-
-                                <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-md animateBottom'>
-                                    Get Started
-                                </button>{' '}
+                                <Link href='/api/auth/signin'>
+                                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-md animateBottom'>
+                                        Get Started
+                                    </button>{' '}
                                 </Link>
                             </div>
                         </div>
@@ -135,9 +134,11 @@ const Index = () => {
                                 <p className='font-semibold text-white animateTop text-3xl'>
                                     Start mining and affiliate with us
                                 </p>
-                                <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
-                                    Get Started
-                                </button>{' '}
+                                <Link href='/api/auth/signin'>
+                                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
+                                        Get Started
+                                    </button>{' '}
+                                </Link>
                             </div>
                         </div>
                     </SwiperSlide>
