@@ -12,7 +12,7 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
 
     if (!auth && req.url.includes('dashboard')) {
         const url = req.nextUrl.clone()
-        url.pathname = '/auth/signin'
+        url.pathname = '/'
         return NextResponse.rewrite(url)
     }
 }
