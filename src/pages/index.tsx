@@ -81,7 +81,7 @@ const Index = () => {
                                         width='1920px'
                                         height='1080px'
                                     />
-                                    <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 '>
+                                    <div className='grid absolute right-[30%] top-[28%] md:top-[19%] px-3 gap-4 '>
                                         <p className='font-semibold text-white animateTop'>
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
@@ -125,7 +125,7 @@ const Index = () => {
                             />
                             <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 '>
                                 <p className='font-semibold text-white animateTop'>
-                            Start mining and affiliate with us
+                                    Start mining and affiliate with us
                                 </p>
                                 <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
                                     Get Started
