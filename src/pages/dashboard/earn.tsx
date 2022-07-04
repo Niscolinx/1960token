@@ -25,7 +25,7 @@ function earn() {
 
     const [miningStart, setMiningStart] = useState(false)
 
-    const [isDim, setIsDim] = useState(true)
+    const [isDim, setIsDim] = useState(false)
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -38,22 +38,14 @@ function earn() {
     //}, [mineState])
 
     useEffect(() => {
-        console.log('get the user')
         if (session) {
             dispatch(getUser(session))
 
-            console.log('the user', fetchedUser.user)
+            console.log('the user', fetchedUser)
         }
     }, [session])
 
-    useEffect(() => {
-        if (fetchedUser.user.isMining) {
-            setIsDim(false)
-            setMiningStart(true)
-        } else {
-            setIsDim(true)
-        }
-    }, [fetchedUser.user])
+    console.log({ fetchedUser })
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -77,17 +69,17 @@ function earn() {
         }
     }, [theme])
 
-    // useEffect(() => {
-    //     console.log({ mineState })
-    //     if (mineState) {
-    //         if (mineState.isMining && mineState.miningSession === 'active') {
-    //             setMiningStart(true)
-    //             setIsDim(false)
-    //         } else {
-    //             setMiningStart(false)
-    //         }
-    //     }
-    // }, [mineState])
+    useEffect(() => {
+        console.log({ mineState })
+        if (mineState) {
+            if (mineState.isMining && mineState.miningSession === 'active') {
+                setMiningStart(true)
+                setIsDim(false)
+            } else {
+                setMiningStart(false)
+            }
+        }
+    }, [mineState])
 
     useEffect(() => {
         const dayjsNowTimeStamp = dayjs()
@@ -96,12 +88,12 @@ function earn() {
         if (session) {
             const parsedJSON = JSON.parse(persistedStorage!)
 
-            // if (persistedStorage) {
-            //     if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
-            //         dispatch(initMineAsync(session))
-            //         setIsDim(false)
-            //     }
-            // }
+            if (persistedStorage) {
+                if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
+                    dispatch(initMineAsync(session))
+                    setIsDim(false)
+                }
+            }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 console.log('stop mining')
