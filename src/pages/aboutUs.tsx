@@ -96,90 +96,85 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
-                            <AnimationOnScroll animateIn='animate__slideInDown'>
-
-                <h2 className='text-center font-semibold text-2xl grad p-2'>
-                    WHY US{' '}
-                </h2>
+                <AnimationOnScroll animateIn='animate__slideInDown'>
+                    <h2 className='text-center font-semibold text-2xl grad p-2'>
+                        WHY US{' '}
+                    </h2>
                 </AnimationOnScroll>
-                            <AnimationOnScroll animateIn='animate__zoomInLeft'>
-
-                <div className='grid'>
+                <AnimationOnScroll animateIn='animate__zoomInLeft'>
+                    <div className='grid'>
+                        <p className='text-justify'>
+                            1960Token has grown to become one of the largest
+                            Mining and Affiliate Platform in the world by giving
+                            her clients what they really want. These are:
+                        </p>
+                        <ul className='list-disc list-inside p-5 grid gap-5'>
+                            <li className='text-justify'>
+                                <span className='font-semibold'>
+                                    FAST PAYMENT -
+                                </span>{' '}
+                                You can make your withdrawal anytime you want as
+                                an Affiliate and as for Miners you withdraw only
+                                once in a month. You will receive your money on
+                                your crypto wallet within 24/hrs.{' '}
+                            </li>
+                            <li className='text-justify'>
+                                <span className='font-semibold'>
+                                    SUPERIOR TECHNOLOGY -{' '}
+                                </span>{' '}
+                                1960Token has partnered with the world best
+                                mining technology companies to bring you the
+                                ultimate Mining and Affiliate experience
+                            </li>
+                        </ul>
+                    </div>
+                </AnimationOnScroll>
+            </div>
+            <div className='grid'>
+                <AnimationOnScroll animateIn='animate__slideInDown'>
+                    <h2 className='text-center font-semibold text-2xl grad p-2'>
+                        SUPERIOR MINING PLATFORM{' '}
+                    </h2>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__zoomInRight'>
                     <p className='text-justify'>
-                        1960Token has grown to become one of the largest Mining
-                        and Affiliate Platform in the world by giving her
-                        clients what they really want. These are:
+                        1960Token has revolutionized Miners and Affiliate by
+                        giving them direct access to a superior platform and
+                        popular Mining and Affiliate platform.
                     </p>
-                    <ul className='list-disc list-inside p-5 grid gap-5'>
-                        <li className='text-justify'>
-                            <span className='font-semibold'>
-                                FAST PAYMENT -
-                            </span>{' '}
-                            You can make your withdrawal anytime you want as an
-                            Affiliate and as for Miners you withdraw only once
-                            in a month. You will receive your money on your
-                            crypto wallet within 24/hrs.{' '}
-                        </li>
-                        <li className='text-justify'>
-                            <span className='font-semibold'>
-                                SUPERIOR TECHNOLOGY -{' '}
-                            </span>{' '}
-                            1960Token has partnered with the world best mining
-                            technology companies to bring you the ultimate
-                            Mining and Affiliate experience
-                        </li>
-                    </ul>
-                    
-                </div>
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
-                            <AnimationOnScroll animateIn='animate__slideInDown'>
-
-                <h2 className='text-center font-semibold text-2xl grad p-2'>
-                    SUPERIOR MINING PLATFORM{' '}
-                </h2>
+                <AnimationOnScroll animateIn='animate__slideInDown'>
+                    <h2 className='text-center font-semibold text-2xl grad p-2'>
+                        TRUST AND TRANSPARENCY{' '}
+                    </h2>
                 </AnimationOnScroll>
-                            <AnimationOnScroll animateIn='animate__zoomInRight'>
-
-                <p className='text-justify'>
-                    1960Token has revolutionized Miners and Affiliate by giving
-                    them direct access to a superior platform and popular Mining
-                    and Affiliate platform.
-                </p>
+                <AnimationOnScroll animateIn='animate__animate__zoomInLeft'>
+                    <p className='text-justify'>
+                        Trust and Transparency form the basis of 1960Token core
+                        values. So here there is no requotes, no manipulation
+                        and also no restrictions. All client earnings are held
+                        on a segregated trust accounts with security.
+                    </p>
                 </AnimationOnScroll>
-            </div>
-            <div className='grid'>
-                            <AnimationOnScroll animateIn='animate__slideInDown'>
-
-                <h2 className='text-center font-semibold text-2xl grad p-2'>
-                    TRUST AND TRANSPARENCY{' '}
-                </h2>
-                </AnimationOnScroll>
-                <p className='text-justify'>
-                    Trust and Transparency form the basis of 1960Token core
-                    values. So here there is no requotes, no manipulation and
-                    also no restrictions. All client earnings are held on a
-                    segregated trust accounts with security.
-                </p>
             </div>
             <div className='grid mt-10'>
-                            <AnimationOnScroll animateIn='animate__slideInDown'>
-
-                <h3 className='text-center font-semibold text-2xl grad p-2'>
-                    Who We Are{' '}
-                </h3>
+                <AnimationOnScroll animateIn='animate__slideInDown'>
+                    <h3 className='text-center font-semibold text-2xl grad p-2'>
+                        Who We Are{' '}
+                    </h3>
                 </AnimationOnScroll>
-                            <AnimationOnScroll animateIn='animate__zoomInRight'>
-
-                <p className='text-justify'>
-                    1960Token is one of the most superior Mining and Affiliate
-                    platform, offering Mining and Affiliate solutions for active
-                    day Miner and Affiliate as well as client that are new to
-                    the Platform. 1960Token offers its clients the best Mining
-                    and Affiliate platforms, with superior connectivity.
-                    1960Token is revolutionizing online Mining and Affiliate.
-                </p>
+                <AnimationOnScroll animateIn='animate__zoomInRight'>
+                    <p className='text-justify'>
+                        1960Token is one of the most superior Mining and
+                        Affiliate platform, offering Mining and Affiliate
+                        solutions for active day Miner and Affiliate as well as
+                        client that are new to the Platform. 1960Token offers
+                        its clients the best Mining and Affiliate platforms,
+                        with superior connectivity. 1960Token is revolutionizing
+                        online Mining and Affiliate.
+                    </p>
                 </AnimationOnScroll>
             </div>
         </div>
