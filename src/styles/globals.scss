@@ -103,7 +103,7 @@ a {
 @keyframes moveInBottom{
     0%{
         opacity: 0;
-        transform: translateY(-10rem);
+        transform: translateY(-3rem);
     }
 
     100%{
@@ -114,7 +114,7 @@ a {
 @keyframes moveInTop{
     0%{
         opacity: 0;
-        transform: translateY(10rem);
+        transform: translateY(3rem);
     }
 
     100%{
@@ -124,8 +124,8 @@ a {
 }
 
 .animateTop{
-    animation: moveInBottom 1s cubic-bezier(0, 1.07, 1, 1);
+    animation: moveInBottom 1s ease-in-out;
 }
 .animateBottom{
-    animation: moveInTop 1s cubic-bezier(0, 1.07, 1, 1)
+    animation: moveInTop 1s ease-in
 }
