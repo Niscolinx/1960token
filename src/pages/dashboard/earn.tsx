@@ -43,6 +43,12 @@ function earn() {
             dispatch(getUser(session))
 
             console.log('the user', fetchedUser.user)
+
+            if(fetchedUser.user.isMining){
+                setIsDim(false)
+            }else{
+                setIsDim(true)
+            }
         }
     }, [session])
 
