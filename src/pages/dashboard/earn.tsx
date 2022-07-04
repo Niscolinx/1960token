@@ -139,15 +139,6 @@ function earn() {
                     <MineTimer start={miningStart} />
                 </div>
 
-                <div className='relative z-10'>
-                    <ReactPlayer
-                        url='https://youtu.be/HoPNOczYU4Y'
-                        width='100%'
-                        height='100%'
-                        //onEnded={handleVideoEnded}
-                        onStart={handleVideoEnded}
-                    />
-                </div>
                 <AnimationOnScroll
                     initiallyVisible={true}
                     animateIn='animate__zoomInUp'
@@ -189,6 +180,15 @@ function earn() {
                         </div>
                     </div>
                 </AnimationOnScroll>
+                <div className='relative z-10'>
+                    <ReactPlayer
+                        url='https://youtu.be/HoPNOczYU4Y'
+                        width='100%'
+                        height='100%'
+                        //onEnded={handleVideoEnded}
+                        onStart={handleVideoEnded}
+                    />
+                </div>
 
                 <div
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
