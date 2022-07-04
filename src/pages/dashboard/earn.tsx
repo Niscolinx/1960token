@@ -144,8 +144,8 @@ function earn() {
                         //onEnded={handleVideoEnded}
                         onStart={handleVideoEnded}
                     />
-                    </div>
-                <div className='absolute grid right-0 mr-4 justify-items-center top-2/5 gap-6 z-90 justify-end cursor-pointer bg-red-500'>
+                </div>
+                <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d]'>
                     <div className='grid text-white justify-center justify-items-center'>
                         <IoIosPeople
                             className='text-white text-4xl'
