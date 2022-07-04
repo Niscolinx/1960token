@@ -27,7 +27,7 @@ function team() {
      
   return (
     <div className='py-5 px-2 grid'>
-        <h1 style={neuToUse} className='justify-center text-2xl'>My Team</h1>
+        <h1 style={neuToUse} className=' justify-self-center text-2xl'>My Team</h1>
         <div className="grid">
             <BsFillFilePersonFill/>
 
