@@ -41,11 +41,9 @@ function earn() {
         if (session) {
             dispatch(getUser(session))
 
-            console.log('the user', fetchedUser)
         }
     }, [session])
 
-    console.log({ fetchedUser })
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -68,7 +66,6 @@ function earn() {
     }, [theme])
 
     useEffect(() => {
-        console.log({ mineState })
         if (mineState) {
             if (mineState.isMining && mineState.miningSession === 'active') {
                 setMiningStart(true)
