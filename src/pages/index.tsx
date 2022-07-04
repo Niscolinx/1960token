@@ -106,7 +106,7 @@ const Index = () => {
                                 height='1080px'
                             />
                             <div className='grid absolute right-[12%] top-[30%] px-3 gap-4 '>
-                                <AnimationOnScroll animateOnce={true}>
+                                <AnimationOnScroll animateIn='animate__zoomInLeft' animateOnce={true}>
 
                                 <p className='font-semibold text-[#1a1a2d] text-3xl'>
                                     Invite Your Friends
@@ -127,7 +127,7 @@ const Index = () => {
                                 height='1080px'
                             />
                             <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 '>
-                                <p className='font-semibold text-white animateTop'>
+                                <p className='font-semibold text-white animateTop text-3xl'>
                                     Start mining and affiliate with us
                                 </p>
                                 <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
