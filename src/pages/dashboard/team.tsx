@@ -26,7 +26,7 @@ function team() {
      }, [theme])
      
   return (
-    <div>
+    <div className='py-5 px-2'>
         <h1 style={neuToUse}>My Team</h1>
         <div className="grid">
             <BsFillFilePersonFill/>
