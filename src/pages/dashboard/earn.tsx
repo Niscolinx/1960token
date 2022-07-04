@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
@@ -186,6 +186,7 @@ function earn() {
                             height='100%'
                             //onEnded={handleVideoEnded}
                             onStart={handleVideoEnded}
+                           
                         />
                     </div>
                 </div>
