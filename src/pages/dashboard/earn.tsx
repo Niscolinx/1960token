@@ -49,7 +49,6 @@ function earn() {
 
     useEffect(() => {
         if (theme === 'dark') {
-            console.log('dark theme', { theme })
 
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
@@ -58,7 +57,6 @@ function earn() {
                 borderRadius: '50px',
             })
         } else {
-            console.log('light theme', { theme })
             setNeuToUse({
                 background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
                 boxShadow: `7px 7px 14px #a5a5a8,
