@@ -12,6 +12,11 @@ function team() {
                 <h3>Upline: <span>Tester1</span></h3>
             </div>
         </div>
+        <div className="grid">
+            <div className="grid">
+                <p>Total</p>
+            </div>
+        </div>
     </div>
   )
 }
