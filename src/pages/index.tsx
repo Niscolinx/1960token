@@ -108,7 +108,7 @@ const Index = () => {
                                     animateIn='animate__zoomInLeft'
                                     animateOnce={true}
                                 >
-                                    <p className='font-semibold text-[#1a1a2d] text-4xl'>
+                                    <p className='font-semibold text-[#1a1a2d] text-4xl md:text-5xl'>
                                         Invite Your Friends
                                     </p>
                                 </AnimationOnScroll>
