@@ -170,38 +170,44 @@ const Index = () => {
                 </div>
 
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(20rem,100px))]'>
-                    <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr] animateLeft'
-                        style={stepsNeu}
-                    >
-                        <div className='flex'>
-                            <BsPersonPlusFill className='flex mr-8 text-6xl' />
-                        </div>
-                        <div className='grid text-lg'>
-                            <p className=' font-semibold '>Register Today</p>
-                            <p className='py-2 text-2xl font-extrabold'>$5</p>
-                        </div>
-                    </div>
-                    <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateRight'
-                        style={stepsNeu}
-                    >
-                        <div className='flex'>
-                            <BsCheck className='flex mr-8 text-6xl' />
-                        </div>
-                        <div className='grid text-lg'>
-                            <p className=' font-semibold '>
-                                Registration Bonus
-                            </p>
-                            <p className='py-2 text-2xl font-extrabold'>$2</p>
-                        </div>
-                    </div>
                     <AnimationOnScroll
                         animateOnce={false}
                         animateIn='animateLeft'
                     >
-                        <h2>Look what i am doing</h2>
+                        <div
+                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr] animateLeft'
+                            style={stepsNeu}
+                        >
+                            <div className='flex'>
+                                <BsPersonPlusFill className='flex mr-8 text-6xl' />
+                            </div>
+                            <div className='grid text-lg'>
+                                <p className=' font-semibold '>
+                                    Register Today
+                                </p>
+                                <p className='py-2 text-2xl font-extrabold'>
+                                    $5
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateRight'
+                            style={stepsNeu}
+                        >
+                            <div className='flex'>
+                                <BsCheck className='flex mr-8 text-6xl' />
+                            </div>
+                            <div className='grid text-lg'>
+                                <p className=' font-semibold '>
+                                    Registration Bonus
+                                </p>
+                                <p className='py-2 text-2xl font-extrabold'>
+                                    $2
+                                </p>
+                            </div>
+                        </div>
                     </AnimationOnScroll>
+
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateLeft'
                         style={stepsNeu}
