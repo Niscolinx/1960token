@@ -170,14 +170,17 @@ function earn() {
                                         : ''
                                 }`}
                             />
-                            <div className="grid justify-center just">
-
-                            <HiOutlineArrowNarrowUp
-                                className='text-white dark:text-[#1a1a2d] text-3xl animate-bounce mt-7 animate-duration-[4s]'
-                                style={{ display: isDim ? 'block' : 'none' }}
+                            <div className='grid justify-center justify-items-center'>
+                                <HiOutlineArrowNarrowUp
+                                    className='text-white dark:text-[#1a1a2d] text-3xl animate-bounce mt-7 animate-duration-[4s]'
+                                    style={{
+                                        display: isDim ? 'block' : 'none',
+                                    }}
                                 />
-                                <span>Click to mine!</span>
-                                </div>
+                                <span className='dark:text-[#1a1a2d] text-white px-2'>
+                                    Click to mine!
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </AnimationOnScroll>
