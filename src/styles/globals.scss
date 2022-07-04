@@ -134,3 +134,10 @@ a {
 .animateBottom{
     animation: moveInTop 1s cubic-bezier(0.46, 0.03, 0, 1.49)
 }
+
+.animateLeft{
+    animation: moveInLeft .5s ease-in;
+}
+.animateRight{
+    animation: moveInRight .5s ease-in;
+}
