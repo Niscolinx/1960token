@@ -21,7 +21,7 @@ const Layout: React.FC<{}> = ({ children }) => {
         }
     }, [router])
     return (
-        <div className={` bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])'}>
+        <div className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}>
             <Nav session={session} />
             <main className={`${addMargin} overflow-x-hidden`}>{children}</main>
             <Footer />
