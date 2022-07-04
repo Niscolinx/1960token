@@ -14,7 +14,7 @@ function team() {
         </div>
         <div className="grid">
             <div className="grid">
-                <p>Total</p>
+                <p>Total Referral Commission</p>
             </div>
         </div>
     </div>
