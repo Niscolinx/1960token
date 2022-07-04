@@ -136,7 +136,7 @@ function earn() {
                     <MineTimer start={miningStart} />
                 </div>
                 <div className='relative'>
-                    <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 animateRight'>
+                    <div className='absolute grid right-0 mr-4 justify-items-center  gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 animateRight'>
                         <AnimationOnScroll
                             initiallyVisible={true}
                             animateIn='animate__slideInLeft'
@@ -181,12 +181,11 @@ function earn() {
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <ReactPlayer
-                            url='https://youtu.be/HoPNOczYU4Y'
+                            url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
                             width='100%'
                             height='100%'
                             //onEnded={handleVideoEnded}
                             onStart={handleVideoEnded}
-                           
                         />
                     </div>
                 </div>
