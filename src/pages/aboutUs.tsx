@@ -29,7 +29,7 @@ function aboutUs() {
 
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10 px-4'>
-            <AnimationOnScroll animateIn='animate__slideInDown'>
+            <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                 <h1
                     className='text-center px-2 py-5 text-3xl font-semibold mb-5  '
                     style={neuToUse}
@@ -49,7 +49,7 @@ function aboutUs() {
             </div>
 
             <div className='grid'>
-                <AnimationOnScroll animateIn='animate__slideInDown'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                     <h2 className='text-center font-semibold text-2xl grad p-2'>
                         OUR MISSION{' '}
                     </h2>
@@ -64,7 +64,7 @@ function aboutUs() {
             </div>
             <div className='grid'>
                 <h3>Core Values</h3>
-                <AnimationOnScroll animateIn='animate__slideInLeft'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInLeft'>
                     <ol className='list-decimal list-inside'>
                         <li>Integrity and Trust</li>
                         <li>Honesty and Fairness</li>
@@ -79,12 +79,12 @@ function aboutUs() {
             </div>
 
             <div className='grid'>
-                <AnimationOnScroll animateIn='animate__slideInDown'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                     <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
                         Confidentiality{' '}
                     </h2>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__zoomInLeft'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__zoomInLeft'>
                     <p className='text-justify'>
                         1960Token maintains appropriate controls and monitors
                         the transfer of confidential and sensitive client
@@ -96,12 +96,12 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
-                <AnimationOnScroll animateIn='animate__slideInDown'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                     <h2 className='text-center font-semibold text-2xl grad p-2'>
                         WHY US{' '}
                     </h2>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__zoomInLeft'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__zoomInLeft'>
                     <div className='grid'>
                         <p className='text-justify'>
                             1960Token has grown to become one of the largest
@@ -131,12 +131,12 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
-                <AnimationOnScroll animateIn='animate__slideInDown'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                     <h2 className='text-center font-semibold text-2xl grad p-2'>
                         SUPERIOR MINING PLATFORM{' '}
                     </h2>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__zoomInRight'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__zoomInRight'>
                     <p className='text-justify'>
                         1960Token has revolutionized Miners and Affiliate by
                         giving them direct access to a superior platform and
@@ -145,12 +145,12 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
-                <AnimationOnScroll animateIn='animate__slideInDown'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                     <h2 className='text-center font-semibold text-2xl grad p-2'>
                         TRUST AND TRANSPARENCY{' '}
                     </h2>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__zoomInLeft'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__zoomInLeft'>
                     <p className='text-justify'>
                         Trust and Transparency form the basis of 1960Token core
                         values. So here there is no requotes, no manipulation
@@ -160,12 +160,12 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid mt-10'>
-                <AnimationOnScroll animateIn='animate__slideInDown'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__slideInDown'>
                     <h3 className='text-center font-semibold text-2xl grad p-2'>
                         Who We Are{' '}
                     </h3>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__zoomInRight'>
+                <AnimationOnScroll animateOnce={true} animateIn='animate__zoomInRight'>
                     <p className='text-justify'>
                         1960Token is one of the most superior Mining and
                         Affiliate platform, offering Mining and Affiliate
