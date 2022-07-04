@@ -95,7 +95,7 @@ const Home = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/'>
+                        <Link href='/dashboard/team'>
                             <div className='grid justify-center place-items-center'>
                                 <IoIosPeople className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
