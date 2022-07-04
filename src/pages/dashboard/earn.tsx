@@ -136,11 +136,11 @@ function earn() {
                     <MineTimer start={miningStart} />
                 </div>
                 <div className='relative'>
-                    <AnimationOnScroll
-                        initiallyVisible={true}
-                        animateIn='animate__zoomInUp'
-                    >
-                        <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded animateLeft p-2'>
+                    <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded animateLeft p-2'>
+                        <AnimationOnScroll
+                            initiallyVisible={true}
+                            animateIn='animate__zoomInUp'
+                        >
                             <div className='grid text-white justify-center justify-items-center'>
                                 <IoIosPeople
                                     className='text-white text-4xl dark:text-[#1a1a2d]'
@@ -177,9 +177,9 @@ function earn() {
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                    </AnimationOnScroll>
-                    <div className='absolute '>
+                        </AnimationOnScroll>
+                    </div>
+                    <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <ReactPlayer
                             url='https://youtu.be/HoPNOczYU4Y'
                             width='100%'
