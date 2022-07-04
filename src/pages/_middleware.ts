@@ -10,9 +10,9 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
 
     console.log('the auth', { auth })
 
-    // if (!auth && req.url.includes('dashboard')) {
-    //     const url = req.nextUrl.clone()
-    //     url.pathname = '/api/auth/signin'
-    //     return NextResponse.rewrite(url)
-    // }
+    if (!auth && req.url.includes('dashboard')) {
+        const url = req.nextUrl.clone()
+        url.pathname = '/auth/signin'
+        return NextResponse.rewrite(url)
+    }
 }
