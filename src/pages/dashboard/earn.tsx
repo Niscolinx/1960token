@@ -177,7 +177,12 @@ function earn() {
                                         display: isDim ? 'block' : 'none',
                                     }}
                                 />
-                                <span className='dark:text-[#1a1a2d] text-white px-2'>
+                                <span
+                                    className='dark:text-[#1a1a2d] text-white px-2'
+                                    style={{
+                                        display: isDim ? 'block' : 'none',
+                                    }}
+                                >
                                     Click to mine!
                                 </span>
                             </div>
