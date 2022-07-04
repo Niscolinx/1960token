@@ -135,7 +135,7 @@ function earn() {
                     <MineTimer start={miningStart} />
                 </div>
                 <div className='relative'>
-                    <div className='absolute grid right-0 mr-4 justify-items-center  gap-6 z-90 justify-end cursor-pointer  dark:bg-gray-300 rounded p-2 animateRight'>
+                    <div className='absolute grid right-0 justify-items-center  gap-6 z-90 justify-end cursor-pointer  dark:bg-gray-300 rounded p-2 animateRight'>
                         <AnimationOnScroll
                             initiallyVisible={true}
                             animateIn='animate__slideInLeft'
