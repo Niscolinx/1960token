@@ -153,7 +153,7 @@ function earn() {
                     <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded animateLeft'>
                         <div className='grid text-white justify-center justify-items-center'>
                             <IoIosPeople
-                                className='text-white text-4xl'
+                                className='text-white text-4xl dark:text-[#1a1a2d]'
                                 onClick={() => console.log('team clicked')}
                             />
                             <p className='font-bold'>1/1</p>
@@ -162,7 +162,7 @@ function earn() {
                             <GiTrade
                                 onClick={handleMineStart}
                                 // className='text-white text-4xl'
-                                className={`text-white text-4xl ${
+                                className={`text-white dark:text-[#1a1a2d] text-4xl ${
                                     !isDim && miningStart
                                         ? 'animate-spin animate-duration-[4s]'
                                         : ''
