@@ -128,7 +128,12 @@ function earn() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-3xl'>{fetchedUser.user.totalMined}</p>
+                    <p className='font-bold text-2xl'>
+                        {fetchedUser.user.totalMined}
+                    </p>
+                </div>
+                <div className='grid self-center mt-5'>
+                    <MineTimer start={miningStart} />
                 </div>
 
                 <div className='relative z-10'>
@@ -169,9 +174,6 @@ function earn() {
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
                     style={{ display: isDim ? 'block' : 'none' }}
                 ></div>
-                <div className='grid self-center mt-5'>
-                    <MineTimer start={miningStart} />
-                </div>
             </div>
         </>
     )
