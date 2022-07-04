@@ -51,6 +51,7 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
     if (prevTimeStore) {
+        console.log("counting....")
         return {
             hours: hoursRemaining(dayjsNowTimeStamp, prevTimeStore),
             minutes: minutesRemaining(dayjsNowTimeStamp, prevTimeStore),
