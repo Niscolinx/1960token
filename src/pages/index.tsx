@@ -87,10 +87,10 @@ const Index = () => {
                                     />
                                     <div className='grid absolute right-[30%] top-[22%] px-3 gap-4 '>
                                         <p
-                                            className='font-semibold text-white animate-delay-500 animate-duration-500'
+                                            className='font-semibold text-white'
                                             style={{
                                                 animation:
-                                                    'moveInLeft 1s cubic-bezier(0, 0.96, 1, 1)',
+                                                    'moveInTop 1s cubic-bezier(0, 0.96, 1, 1)',
                                             }}
                                         >
                                             <span className='text-orange-300 font-bold'>
