@@ -135,12 +135,12 @@ function earn() {
                     <MineTimer start={miningStart} />
                 </div>
                 <div className='relative'>
-                    <div className='absolute grid right-0 justify-items-center  gap-6 z-90 justify-end cursor-pointer  dark:bg-gray-300 rounded p-2 animateRight'>
+                    <div className='absolute grid right-0 justify-items-center  gap-6 z-90 justify-end cursor-pointer animateRight'>
                         <AnimationOnScroll
                             initiallyVisible={true}
                             animateIn='animate__slideInLeft'
                         >
-                            <div className='grid bg-[#1a1a2d]'>
+                            <div className='grid bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 '>
                                 <div className='grid text-white justify-center justify-items-center mb-4'>
                                     <IoIosPeople
                                         className='text-white text-4xl dark:text-[#1a1a2d]'
@@ -175,16 +175,14 @@ function earn() {
                                 </div>
                             </div>
                         </AnimationOnScroll>
-                                        <span
-                                            className='dark:text-[#1a1a2d] text-white'
-                                            style={{
-                                                display: isDim
-                                                    ? 'block'
-                                                    : 'none',
-                                            }}
-                                        >
-                                            Click to mine!
-                                        </span>
+                        <span
+                            className='dark:text-[#1a1a2d] text-white'
+                            style={{
+                                display: isDim ? 'block' : 'none',
+                            }}
+                        >
+                            Click to mine!
+                        </span>
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <ReactPlayer
