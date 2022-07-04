@@ -121,7 +121,9 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute top-[30%] px-3 gap-4 md:(left-[7%] top-[40%])'>
+                            <div className='grid absolute left-0 top-0 bottom-0 right-0 px-3 gap-4'>
+                                <div className="grid">
+                                    
                                 <p className='font-semibold text-white text-3xl md:text-4xl'>
                                     Start mining and affiliate with us
                                 </p>
@@ -130,6 +132,7 @@ const Index = () => {
                                         Get Started
                                     </button>
                                 </Link>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
