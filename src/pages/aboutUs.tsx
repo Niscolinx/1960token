@@ -3,13 +3,12 @@ import { useTheme } from 'next-themes'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function aboutUs() {
-
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     useEffect(() => {
         if (theme === 'dark') {
-            console.log("dark theme", { theme })
+            console.log('dark theme', { theme })
 
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
@@ -18,7 +17,7 @@ function aboutUs() {
                 borderRadius: '50px',
             })
         } else {
-            console.log("light theme", {theme})
+            console.log('light theme', { theme })
             setNeuToUse({
                 background: `linear-gradient(145deg, #dadadf, #b8b8bb)`,
                 boxShadow: `7px 7px 14px #a5a5a8,
@@ -31,14 +30,13 @@ function aboutUs() {
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10 px-4'>
             <AnimationOnScroll animateIn='animate__slideInDown'>
-
-            <h1
-                className='text-center px-2 py-5 text-3xl font-semibold mb-5  '
-                style={neuToUse}
+                <h1
+                    className='text-center px-2 py-5 text-3xl font-semibold mb-5  '
+                    style={neuToUse}
                 >
-                ABOUT US
-            </h1>
-                </AnimationOnScroll>
+                    ABOUT US
+                </h1>
+            </AnimationOnScroll>
             <div className='grid'>
                 <p className='text-justify'>
                     1960Token is one of the most superior Mining and Affiliate
@@ -51,11 +49,10 @@ function aboutUs() {
             </div>
 
             <div className='grid'>
-                            <AnimationOnScroll animateIn='animate__slideInDown'>
-
-                <h2 className='text-center font-semibold text-2xl grad p-2'>
-                    OUR MISSION{' '}
-                </h2>
+                <AnimationOnScroll animateIn='animate__slideInDown'>
+                    <h2 className='text-center font-semibold text-2xl grad p-2'>
+                        OUR MISSION{' '}
+                    </h2>
                 </AnimationOnScroll>
                 <p className='text-justify'>
                     1960Token Mission is to create the best Mining and Affiliate
@@ -67,38 +64,35 @@ function aboutUs() {
             </div>
             <div className='grid'>
                 <h3>Core Values</h3>
-                            <AnimationOnScroll animateIn='animate__slideInLeft'>
-
-                <ol className='list-decimal list-inside'>
-                    <li>Integrity and Trust</li>
-                    <li>Honesty and Fairness</li>
-                    <li>Transparency</li>
-                    <li>Commitments and Responsibility</li>
-                    <li>Reliability </li>
-                    <li>Flexibility</li>
-                    <li>Constant Innovation</li>
-                    <li>Strong Corporate Governance</li>
-                </ol>
+                <AnimationOnScroll animateIn='animate__slideInLeft'>
+                    <ol className='list-decimal list-inside'>
+                        <li>Integrity and Trust</li>
+                        <li>Honesty and Fairness</li>
+                        <li>Transparency</li>
+                        <li>Commitments and Responsibility</li>
+                        <li>Reliability </li>
+                        <li>Flexibility</li>
+                        <li>Constant Innovation</li>
+                        <li>Strong Corporate Governance</li>
+                    </ol>
                 </AnimationOnScroll>
             </div>
 
             <div className='grid'>
-                            <AnimationOnScroll animateIn='animate__slideInDown'>
-
-                <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
-                    Confidentiality{' '}
-                </h2>
+                <AnimationOnScroll animateIn='animate__slideInDown'>
+                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
+                        Confidentiality{' '}
+                    </h2>
                 </AnimationOnScroll>
-                            <AnimationOnScroll animateIn='animate__slideInTop'>
-
-                <p className='text-justify'>
-                    1960Token maintains appropriate controls and monitors the
-                    transfer of confidential and sensitive client information
-                    within and outside the Company on a need-to-know basis.
-                    1960Token does not deliberately disclose client information
-                    unless this is upon request of the client, or as required to
-                    do so by law.
-                </p>
+                <AnimationOnScroll animateIn='animate__slideInTop'>
+                    <p className='text-justify'>
+                        1960Token maintains appropriate controls and monitors
+                        the transfer of confidential and sensitive client
+                        information within and outside the Company on a
+                        need-to-know basis. 1960Token does not deliberately
+                        disclose client information unless this is upon request
+                        of the client, or as required to do so by law.
+                    </p>
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
