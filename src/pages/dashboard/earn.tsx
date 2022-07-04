@@ -91,7 +91,6 @@ function earn() {
             if (persistedStorage) {
                 if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
                     dispatch(initMineAsync(session))
-                    setIsDim(false)
                 }
             }
 
@@ -111,7 +110,6 @@ function earn() {
             dispatch(initMineAsync(session))
             //dispatch(initStopMineAsync(session))
         }
-        setIsDim(false)
     }
 
     const handleVideoEnded = () => {
