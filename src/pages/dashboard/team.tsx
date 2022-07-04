@@ -45,18 +45,18 @@ function team() {
             <div className='grid'>
                 <div className='grid'>
                     <p>
-                        Total Referral Commission{' '}
+                        Total Referral Commission
                         <span className='font-semibold'>: $97</span>
                     </p>
                 </div>
                 <div className='grid'>
                     <p>
-                        Referrals <span className='font-semibold'>: 35</span>
+                        Referrals<span className='font-semibold'>: 35</span>
                     </p>
                 </div>
                 <div className='grid'>
                     <p>
-                        Actival Referrals{' '}
+                        Actival Referrals
                         <span className='font-semibold'>: 27</span>
                     </p>
                 </div>
