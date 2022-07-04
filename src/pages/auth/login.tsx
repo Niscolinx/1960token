@@ -214,7 +214,8 @@ const Login = ({ providers }: LoginProps) => {
                  
                     <Link
                         href='/auth/register'
-                        className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800'
+                        className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 bg-orange-300'
+                        style={{background: 'orange'}}
                     >
                         Register
                     </Link>
