@@ -190,12 +190,10 @@ const Login = ({ providers }: LoginProps) => {
                         </button>
                     </div>
                 </form>
-                
-                <div className='grid mt-10 gap-2 px-8'>
-                    <Link
-                        href='/auth/register'
-                    >
-                        <button className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 text-left'>
+
+                <div className='grid mt-10 gap-2 px-8 justify-start'>
+                    <Link href='/auth/register'>
+                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 text-left'>
                             Register
                         </button>
                     </Link>
