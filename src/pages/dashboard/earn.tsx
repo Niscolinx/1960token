@@ -140,7 +140,7 @@ function earn() {
                     <ReactPlayer
                         url='https://youtu.be/HoPNOczYU4Y'
                         width='100%'
-                        height='40rem'
+                        height='100%'
                         //onEnded={handleVideoEnded}
                         onStart={handleVideoEnded}
                     />
