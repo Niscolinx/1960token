@@ -86,7 +86,13 @@ const Index = () => {
                                         height='1080px'
                                     />
                                     <div className='grid absolute right-[30%] top-[22%] px-3 gap-4 '>
-                                        <p className='font-semibold text-white animate-delay-500 animate-duration-500' style={{animation: 'moveInLeft 1s linear infinite'}}>
+                                        <p
+                                            className='font-semibold text-white animate-delay-500 animate-duration-500'
+                                            style={{
+                                                animation:
+                                                    'moveInLeft 1s cubic-bezier(0, 0.96, 1, 1)',
+                                            }}
+                                        >
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
                                             </span>{' '}
@@ -124,7 +130,6 @@ const Index = () => {
                 </Swiper>
 
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
-                 
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
