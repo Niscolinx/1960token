@@ -167,6 +167,8 @@ function aboutUs() {
                     Who We Are{' '}
                 </h3>
                 </AnimationOnScroll>
+                            <AnimationOnScroll animateIn='animate__slideInTop'>
+
                 <p className='text-justify'>
                     1960Token is one of the most superior Mining and Affiliate
                     platform, offering Mining and Affiliate solutions for active
@@ -175,6 +177,7 @@ function aboutUs() {
                     and Affiliate platforms, with superior connectivity.
                     1960Token is revolutionizing online Mining and Affiliate.
                 </p>
+                </AnimationOnScroll>
             </div>
         </div>
     )
