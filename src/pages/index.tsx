@@ -190,6 +190,7 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
+                        </AnimationOnScroll>
                         <div
                             className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateRight'
                             style={stepsNeu}
@@ -206,7 +207,6 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                    </AnimationOnScroll>
 
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateLeft'
