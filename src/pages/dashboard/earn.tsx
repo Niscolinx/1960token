@@ -148,7 +148,7 @@ function earn() {
                 </div>
                 <AnimationOnScroll
                     initiallyVisible={true}
-                    animateIn='animate__zoomInLeft'
+                    animateIn='animate__animate__rotateInDownLeft'
                 >
                     <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] rounded animateLeft'>
                         <div className='grid text-white justify-center justify-items-center'>
