@@ -51,9 +51,12 @@ function aboutUs() {
             </div>
 
             <div className='grid'>
+                            <AnimationOnScroll animateIn='animate__slideInDown'>
+
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
                     OUR MISSION{' '}
                 </h2>
+                </AnimationOnScroll>
                 <p className='text-justify'>
                     1960Token Mission is to create the best Mining and Affiliate
                     experience for all her clients alike Miners to focus more on
@@ -64,6 +67,8 @@ function aboutUs() {
             </div>
             <div className='grid'>
                 <h3>Core Values</h3>
+                            <AnimationOnScroll animateIn='animate__slideInLeft'>
+
                 <ol className='list-decimal list-inside'>
                     <li>Integrity and Trust</li>
                     <li>Honesty and Fairness</li>
@@ -74,6 +79,7 @@ function aboutUs() {
                     <li>Constant Innovation</li>
                     <li>Strong Corporate Governance</li>
                 </ol>
+                </AnimationOnScroll>
             </div>
 
             <div className='grid'>
