@@ -77,17 +77,17 @@ function earn() {
         }
     }, [theme])
 
-    useEffect(() => {
-        console.log({ mineState })
-        if (mineState) {
-            if (mineState.isMining && mineState.miningSession === 'active') {
-                setMiningStart(true)
-                setIsDim(false)
-            } else {
-                setMiningStart(false)
-            }
-        }
-    }, [mineState])
+    // useEffect(() => {
+    //     console.log({ mineState })
+    //     if (mineState) {
+    //         if (mineState.isMining && mineState.miningSession === 'active') {
+    //             setMiningStart(true)
+    //             setIsDim(false)
+    //         } else {
+    //             setMiningStart(false)
+    //         }
+    //     }
+    // }, [mineState])
 
     useEffect(() => {
         const dayjsNowTimeStamp = dayjs()
