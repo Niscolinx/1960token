@@ -247,6 +247,28 @@ const Register = () => {
                         onChange={changeHandler}
                     />
                 </div>
+                <div className='mb-6'>
+                    <label
+                        className='block text-gray-700 text-sm font-bold mb-2'
+                        htmlFor='referral'
+                    >
+                        Referral
+                    </label>
+                    <input
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                            error && errorFields.includes('confirmPassword')
+                                ? 'border-red-500'
+                                : ''
+                        }`}
+                        id='confirmPassword'
+                        name='confirmPassword'
+                        type='password'
+                        minLength={6}
+                        required
+                        value={confirmPassword}
+                        onChange={changeHandler}
+                    />
+                </div>
 
                 <button
                     className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline  justify-self-center'
