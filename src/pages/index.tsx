@@ -232,7 +232,9 @@ const Index = () => {
                         </div>
                     </AnimationOnScroll>
                 </div>
+
                 <div className='grid mt-10'>
+                <AnimationOnScroll animateIn='animate__bounce'>
                     <div className='grid' style={neuToUse}>
                         <h3 className='text-center font-semibold text-2xl grad p-2 uppercase px-4'>
                             How 1960token works
@@ -242,6 +244,7 @@ const Index = () => {
                             member of 1960TOKEN in various ways;
                         </p>
                     </div>
+                </AnimationOnScroll>
 
                     <div className='grid mt-10 gap-10 md:grid-cols-[repeat(auto-fit,minmax(15%,1fr))]'>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
