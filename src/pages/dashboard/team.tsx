@@ -5,7 +5,13 @@ function team() {
   return (
     <div>
         <h1>My Team</h1>
+        <div className="grid">
+            <BsFillFilePersonFill/>
 
+            <div className="grid">
+                <h3>Upline: <span>Tester1</span></h3>
+            </div>
+        </div>
     </div>
   )
 }
