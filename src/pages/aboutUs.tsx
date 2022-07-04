@@ -134,6 +134,8 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
+                            <AnimationOnScroll animateIn='animate__slideInDown'>
+
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
                     SUPERIOR MINING PLATFORM{' '}
                 </h2>
