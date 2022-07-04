@@ -150,7 +150,7 @@ function aboutUs() {
                         TRUST AND TRANSPARENCY{' '}
                     </h2>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__animate__zoomInLeft'>
+                <AnimationOnScroll animateIn='animate__zoomInLeft'>
                     <p className='text-justify'>
                         Trust and Transparency form the basis of 1960Token core
                         values. So here there is no requotes, no manipulation
