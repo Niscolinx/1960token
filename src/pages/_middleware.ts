@@ -15,4 +15,6 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
         url.pathname = '/auth/login'
         return NextResponse.rewrite(url)
     }
+
+    return NextResponse.next()
 }
