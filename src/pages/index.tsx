@@ -106,8 +106,8 @@ const Index = () => {
                                 height='1080px'
                             />
                             <div className='grid absolute right-[12%] top-[30%] px-3 gap-4 text-3xl'>
-                                <p className='font-semibold text-black animateTop'>
-                                    Invite Your friends
+                                <p className='font-semibold text-[#1a1a2d] animateTop'>
+                                    Invite Your Friends
                                 </p>
                                 <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
                                     Get Started
