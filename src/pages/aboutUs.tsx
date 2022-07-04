@@ -167,7 +167,7 @@ function aboutUs() {
                     Who We Are{' '}
                 </h3>
                 </AnimationOnScroll>
-                            <AnimationOnScroll animateIn='animate__slideInTop'>
+                            <AnimationOnScroll animateIn='animate__zoomInRight'>
 
                 <p className='text-justify'>
                     1960Token is one of the most superior Mining and Affiliate
