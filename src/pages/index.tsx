@@ -197,8 +197,8 @@ const Index = () => {
                         </div>
                     </div>
                     <AnimationOnScroll
-                        animateOnce={true}
-                        animateIn='animate__rubberBand'
+                        animateOnce={false}
+                        animateIn='animateLeft'
                     >
                         <h2>Look what i am doing</h2>
                     </AnimationOnScroll>
