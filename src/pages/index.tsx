@@ -71,9 +71,8 @@ const Index = () => {
                     className='mySwiper'
                 >
                     <SwiperSlide>
-                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
+                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden relative'>
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
-                            <div className='relative'>
                                 <Image
                                     src='/slider1.png'
                                     alt=''
@@ -94,11 +93,10 @@ const Index = () => {
                                         </button>
                                     </Link>
                                 </div>
-                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
+                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden relative'>
                             <Image
                                 src='/slider2.png'
                                 alt=''
