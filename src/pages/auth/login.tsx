@@ -145,7 +145,7 @@ const Login = ({ providers }: LoginProps) => {
                         </label>
 
                         <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-red-500 ${
                                 error && errorFields.includes('email')
                                     ? 'border-red-500'
                                     : ''
