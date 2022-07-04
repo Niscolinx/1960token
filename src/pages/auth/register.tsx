@@ -259,6 +259,7 @@ const Register = () => {
                         id='referral'
                         name='referral'
                         type='text'
+                        placeholder='optional'
                         minLength={3}
                         value={referral}
                         onChange={changeHandler}
