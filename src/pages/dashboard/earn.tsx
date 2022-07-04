@@ -123,7 +123,7 @@ function earn() {
 
     return (
         <>
-            <div className='grid'>
+            <div className='grid h-[screen]'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
