@@ -88,7 +88,7 @@ const Index = () => {
                                         phone
                                     </p>
                                     <Link href='/api/auth/signin'>
-                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
+                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom md:text-lg'>
                                             Get Started
                                         </button>
                                     </Link>
@@ -128,7 +128,7 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute top-[30%] px-3 gap-4 md:(left-[10%] top-[40%] )'>
+                            <div className='grid absolute top-[30%] px-3 gap-4 md:(left-[10%] top-[40%])'>
                                 <p className='font-semibold text-white text-3xl md:text-4xl'>
                                     Start mining and affiliate with us
                                 </p>
