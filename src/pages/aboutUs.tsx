@@ -101,6 +101,9 @@ function aboutUs() {
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
                     WHY US{' '}
                 </h2>
+                </AnimationOnScroll>
+                            <AnimationOnScroll animateIn='animate__zoomInLeft'>
+
                 <div className='grid'>
                     <p className='text-justify'>
                         1960Token has grown to become one of the largest Mining
@@ -126,7 +129,9 @@ function aboutUs() {
                             Mining and Affiliate experience
                         </li>
                     </ul>
+                    
                 </div>
+                </AnimationOnScroll>
             </div>
             <div className='grid'>
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
