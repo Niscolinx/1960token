@@ -234,76 +234,70 @@ const Index = () => {
                 </div>
 
                 <div className='grid mt-10'>
-                <AnimationOnScroll animateIn='animate__pulse'>
-                    <div className='grid' style={neuToUse}>
-                        <h3 className='text-center font-semibold text-2xl grad p-2 uppercase px-4'>
-                            How 1960token works
-                        </h3>
-                        <p className='text-center'>
-                            You are guaranteed to earn massively as an active
-                            member of 1960TOKEN in various ways;
-                        </p>
-                    </div>
-                </AnimationOnScroll>
+                    <AnimationOnScroll animateIn='animate__pulse'>
+                        <div className='grid' style={neuToUse}>
+                            <h3 className='text-center font-semibold text-2xl grad p-2 uppercase px-4'>
+                                How 1960token works
+                            </h3>
+                            <p className='text-center'>
+                                You are guaranteed to earn massively as an
+                                active member of 1960TOKEN in various ways;
+                            </p>
+                        </div>
+                    </AnimationOnScroll>
 
                     <div className='grid mt-10 gap-10 md:grid-cols-[repeat(auto-fit,minmax(15%,1fr))]'>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
                             <AnimationOnScroll animateIn='animate__slideInLeft'>
-
-                            <FaPeopleArrows className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
+                                <FaPeopleArrows className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             </AnimationOnScroll>
                             <div className='grid md:justify-items-center'>
                                 <AnimationOnScroll animateIn='animate__slideInRight'>
-
-                                <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
-                                    Affiliate Referral
-                                </h3>
-                                <p className='md:text-center light:text-[#1a1a2d]'>
-                                    You are handsomely rewarded for telling your
-                                    friends and family about the services of
-                                    1960token. You earn $3 on each successful
-                                    referral. This option enables increase in
-                                    earning
-                                </p>
+                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
+                                        Affiliate Referral
+                                    </h3>
+                                    <p className='md:text-center light:text-[#1a1a2d]'>
+                                        You are handsomely rewarded for telling
+                                        your friends and family about the
+                                        services of 1960token. You earn $3 on
+                                        each successful referral. This option
+                                        enables increase in earning
+                                    </p>
                                 </AnimationOnScroll>
                             </div>
                         </div>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
-                                                        <AnimationOnScroll animateIn='animate__slideInRight'>
-
-                            <FiAirplay className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
+                            <AnimationOnScroll animateIn='animate__slideInRight'>
+                                <FiAirplay className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             </AnimationOnScroll>
                             <div className='grid md:justify-items-center'>
-                                                            <AnimationOnScroll animateIn='animate__slideInLeft'>
-
-                                <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
-                                    Entertainment
-                                </h3>
-                                <p className='md:text-center light:text-[#1a1a2d]'>
-                                    You earn when you Trade and watch videos on
-                                    the website. You earn $1 on each Task you
-                                    complete 24hrs/daily.
-                                </p>
+                                <AnimationOnScroll animateIn='animate__slideInLeft'>
+                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
+                                        Entertainment
+                                    </h3>
+                                    <p className='md:text-center light:text-[#1a1a2d]'>
+                                        You earn when you Trade and watch videos
+                                        on the website. You earn $1 on each Task
+                                        you complete 24hrs/daily.
+                                    </p>
                                 </AnimationOnScroll>
                             </div>
                         </div>
                         <div className='grid grid-cols-[max-content,1fr] md:(flex flex-col items-center grid-cols-none) gap-5'>
-                                                        <AnimationOnScroll animateIn='animate__slideInLeft'>
-
-                            <GiTeamDowngrade className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
+                            <AnimationOnScroll animateIn='animate__slideInLeft'>
+                                <GiTeamDowngrade className='text-blue-400 light:text-[#1a1a2d] text-6xl' />
                             </AnimationOnScroll>
                             <div className='grid md:justify-items-center'>
-                                                            <AnimationOnScroll animateIn='animate__slideInLeft'>
-
-                                <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
-                                    Team Building
-                                </h3>
-                                <p className='md:text-center light:text-[#1a1a2d]'>
-                                    Building a team of Networkers, while earning
-                                    upto $20 minimum withdrawal threshold and
-                                    above. This uses a matrix system of
-                                    marketing and affiliation.
-                                </p>
+                                <AnimationOnScroll animateIn='animate__slideInRight'>
+                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
+                                        Team Building
+                                    </h3>
+                                    <p className='md:text-center light:text-[#1a1a2d]'>
+                                        Building a team of Networkers, while
+                                        earning upto $20 minimum withdrawal
+                                        threshold and above. This uses a matrix
+                                        system of marketing and affiliation.
+                                    </p>
                                 </AnimationOnScroll>
                             </div>
                         </div>
