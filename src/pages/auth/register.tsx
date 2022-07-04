@@ -120,6 +120,9 @@ const Register = () => {
                     setConfirmPassword(value)
                 }).call(this)
                 break
+            case 'referral':
+                setReferral(value)
+                break
             default:
                 ''
                 break
