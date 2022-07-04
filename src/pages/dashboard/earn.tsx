@@ -167,7 +167,7 @@ function earn() {
                                         }}
                                     />
                                     <span
-                                        className='dark:text-[#1a1a2d] text-white'
+                                        className='dark:text-[#1a1a2d] text-white w-10'
                                         style={{
                                             display: isDim ? 'block' : 'none',
                                         }}
