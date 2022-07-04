@@ -38,6 +38,7 @@ function earn() {
     //}, [mineState])
 
     useEffect(() => {
+        console.log("get the user")
         if (session) {
             dispatch(getUser(session))
 
