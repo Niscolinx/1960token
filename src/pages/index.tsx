@@ -105,7 +105,7 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 text-3xl'>
+                            <div className='grid absolute right-[10%] top-[30%] px-3 gap-4 text-3xl'>
                                 <p className='font-semibold text-white animateTop'>
                                     Invite Your friends
                                 </p>
