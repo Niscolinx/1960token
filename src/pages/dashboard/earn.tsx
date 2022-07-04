@@ -156,7 +156,7 @@ function earn() {
                                 className='text-white text-4xl dark:text-[#1a1a2d]'
                                 onClick={() => console.log('team clicked')}
                             />
-                            <p className='font-bold'>1/1</p>
+                            <p className='font-bold dark:text-[#1a1a2d]'>1/1</p>
                         </div>
                         <div className='grid text-white justify-center justify-items-center'>
                             <GiTrade
