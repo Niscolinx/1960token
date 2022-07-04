@@ -27,7 +27,7 @@ function team() {
      
   return (
     <div>
-        <h1>My Team</h1>
+        <h1 style={neuToUse}>My Team</h1>
         <div className="grid">
             <BsFillFilePersonFill/>
 
