@@ -53,7 +53,6 @@ function team() {
                   <p>
                       Referrals <span>35</span>
                   </p>
-                  <p>35</p>
               </div>
               <div className='grid'>
                   <p>
