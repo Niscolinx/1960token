@@ -13,7 +13,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     useEffect(() => {
         if(router.asPath.includes("earn")){
             setAddMargin('mb-0')
-            setAddPadding('pt-2')
+            setAddPadding('')
         }
         else{
             setAddMargin('mb-25')
