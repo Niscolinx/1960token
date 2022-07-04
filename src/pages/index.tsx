@@ -172,7 +172,7 @@ const Index = () => {
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(20rem,100px))]'>
                     <AnimationOnScroll
                         animateOnce={false}
-                        animateIn='animateLeft'
+                        animateIn='fadeInLeft'
                     >
                         <div
                             className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr] '
