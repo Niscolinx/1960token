@@ -97,6 +97,12 @@ function earn() {
     }, [session])
 
     useEffect(() => {
+        if(miningStart){
+            setIsDim(false)
+        }
+        else{
+            setIsDim(true)
+        }
     }, [miningStart])
 
     const handleMineStart = () => {
