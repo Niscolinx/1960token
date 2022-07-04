@@ -70,26 +70,25 @@ const Index = () => {
                     <SwiperSlide>
                         <div className='w-full md:w-2/3 rounded-4xl overflow-hidden relative'>
                             {/* file sizes are too big, check for optimization <Carousel1/> */}
-                                <Image
-                                    src='/slider1.png'
-                                    alt=''
-                                    width='1920px'
-                                    height='1080px'
-                                />
-                                <div className='grid absolute right-[30%] top-[28%] md:(top-[35%] text-3xl) px-3 gap-4'>
-                                    <p className='font-semibold text-white animateTop'>
-                                        <span className='text-orange-300 font-bold'>
-                                            Superior
-                                        </span>{' '}
-                                        Digital currency you can mine on your
-                                        phone
-                                    </p>
-                                    <Link href='/api/auth/signin'>
-                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom md:text-lg'>
-                                            Get Started
-                                        </button>
-                                    </Link>
-                                </div>
+                            <Image
+                                src='/slider1.png'
+                                alt=''
+                                width='1920px'
+                                height='1080px'
+                            />
+                            <div className='grid absolute right-[30%] top-[28%] md:(top-[35%] text-3xl) px-3 gap-4'>
+                                <p className='font-semibold text-white animateTop'>
+                                    <span className='text-orange-300 font-bold'>
+                                        Superior
+                                    </span>{' '}
+                                    Digital currency you can mine on your phone
+                                </p>
+                                <Link href='/api/auth/signin'>
+                                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom md:text-lg'>
+                                        Get Started
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -104,6 +103,7 @@ const Index = () => {
                                 <AnimationOnScroll
                                     animateIn='animate__zoomInLeft'
                                     animateOnce={true}
+                                    initiallyVisible={true}
                                 >
                                     <p className='font-semibold text-[#1a1a2d] text-4xl md:text-5xl'>
                                         Invite Your Friends
