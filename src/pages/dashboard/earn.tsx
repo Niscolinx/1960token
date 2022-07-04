@@ -171,7 +171,6 @@ function earn() {
                                             }}
                                         />
                                     </div>
-                                </div>
                             </div>
                         </AnimationOnScroll>
                         <span
