@@ -11,6 +11,7 @@ const Register = () => {
     const [phoneNumber, setPhoneNumber] = useState('08148233233')
     const [password, setPassword] = useState('testing')
     const [confirmPassword, setConfirmPassword] = useState('testing')
+    const [referral, setReferral] = useState('tester1')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [message, setMessage] = useState<message>({
