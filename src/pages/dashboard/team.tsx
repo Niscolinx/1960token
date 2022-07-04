@@ -17,6 +17,14 @@ function team() {
                 <p>Total Referral Commission</p>
                 <p>$32</p>
             </div>
+            <div className="grid">
+                <p>Total Referral Commission</p>
+                <p>$32</p>
+            </div>
+            <div className="grid">
+                <p>Total Referral Commission</p>
+                <p>$32</p>
+            </div>
         </div>
     </div>
   )
