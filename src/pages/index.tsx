@@ -175,7 +175,7 @@ const Index = () => {
                         animateIn='animateLeft'
                     >
                         <div
-                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr] animateLeft'
+                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg w-full grid-cols-[min-content,1fr] '
                             style={stepsNeu}
                         >
                             <div className='flex'>
@@ -209,7 +209,7 @@ const Index = () => {
                         </div>
 
                     <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateLeft'
+                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] '
                         style={stepsNeu}
                     >
                         <div className='flex'>
