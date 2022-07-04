@@ -26,8 +26,6 @@ export const getUser = createAsyncThunk(
     'user',
     async (userSession: nextAuthSession) => {
         const response = await userData(userSession)
-
-        console.log({ response })
         return response
     }
 )
