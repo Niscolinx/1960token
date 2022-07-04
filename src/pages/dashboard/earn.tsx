@@ -132,7 +132,7 @@ function earn() {
                         {fetchedUser.user.totalMined}
                     </p>
                 </div>
-                <div className='grid self-center mt-5'>
+                <div className='grid self-center'>
                     <MineTimer start={miningStart} />
                 </div>
 
