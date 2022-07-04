@@ -102,10 +102,8 @@ function earn() {
     }, [miningStart])
 
     const handleMineStart = () => {
-        console.log('clicked on mine')
 
         if (session) {
-            console.log('about to dispatch')
             dispatch(initMineAsync(session))
             //dispatch(initStopMineAsync(session))
         }
