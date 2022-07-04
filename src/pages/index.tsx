@@ -10,15 +10,10 @@ import Image from 'next/image'
 import { BsPersonPlusFill, BsCheck } from 'react-icons/bs'
 import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
 import { FiAirplay } from 'react-icons/fi'
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-
 import { Autoplay, Pagination } from 'swiper'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
