@@ -99,8 +99,8 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute left-0 top-0 bottom-0 right-0 px-3 gap-4 md:(left-[17%] top-[35%]) bg-red-500'>
-                                <div className='grid justify-center content-center place-content-center'>
+                            <div className='grid absolute left-0 top-0 bottom-0 right-0 px-3 gap-4'>
+                                <div className='grid justify-center content-center place-content-center gap-2'>
                                     <p className='font-semibold text-[#1a1a2d] text-4xl md:text-5xl'>
                                         Invite Your Friends
                                     </p>
