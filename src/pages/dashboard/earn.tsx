@@ -43,9 +43,8 @@ function earn() {
 
             console.log('the user', fetchedUser.user)
         }
-    }, [session])
+    }, [session, fetchedUser])
 
-    console.log({ fetchedUser })
 
     useEffect(() => {
         if (theme === 'dark') {
