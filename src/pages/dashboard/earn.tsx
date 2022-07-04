@@ -18,6 +18,7 @@ import {
     initVideoEnded,
 } from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function earn() {
     const { data: session } = useSession()
@@ -145,30 +146,32 @@ function earn() {
                         onStart={handleVideoEnded}
                     />
                 </div>
-                <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d]'>
-                    <div className='grid text-white justify-center justify-items-center'>
-                        <IoIosPeople
-                            className='text-white text-4xl'
-                            onClick={() => console.log('team clicked')}
-                        />
-                        <p className='font-bold'>1/1</p>
+                <AnimationOnScroll animateIn='animate__'>
+                    <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] rounded'>
+                        <div className='grid text-white justify-center justify-items-center'>
+                            <IoIosPeople
+                                className='text-white text-4xl'
+                                onClick={() => console.log('team clicked')}
+                            />
+                            <p className='font-bold'>1/1</p>
+                        </div>
+                        <div className='grid text-white justify-center justify-items-center'>
+                            <GiTrade
+                                onClick={handleMineStart}
+                                // className='text-white text-4xl'
+                                className={`text-white text-4xl ${
+                                    !isDim && miningStart
+                                        ? 'animate-spin animate-duration-[4s]'
+                                        : ''
+                                }`}
+                            />
+                            <HiOutlineArrowNarrowUp
+                                className='text-white text-3xl animate-bounce mt-1'
+                                style={{ display: isDim ? 'block' : 'none' }}
+                            />
+                        </div>
                     </div>
-                    <div className='grid text-white justify-center justify-items-center'>
-                        <GiTrade
-                            onClick={handleMineStart}
-                            // className='text-white text-4xl'
-                            className={`text-white text-4xl ${
-                                !isDim && miningStart
-                                    ? 'animate-spin animate-duration-[4s]'
-                                    : ''
-                            }`}
-                        />
-                        <HiOutlineArrowNarrowUp
-                            className='text-white text-3xl animate-bounce mt-1'
-                            style={{ display: isDim ? 'block' : 'none' }}
-                        />
-                    </div>
-                </div>
+                </AnimationOnScroll>
 
                 <div
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
