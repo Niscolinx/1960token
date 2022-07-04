@@ -198,3 +198,5 @@ function earn() {
 }
 
 export default earn
+
+
