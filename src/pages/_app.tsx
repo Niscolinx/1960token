@@ -1,5 +1,6 @@
 import 'windi.css'
 import '../styles/globals.scss'
+import 'animate.css/animate.min.css'
 import { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
 import Layout from '../components/Layout'
