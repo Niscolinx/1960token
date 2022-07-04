@@ -190,9 +190,10 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-                        </AnimationOnScroll>
+                    </AnimationOnScroll>
+                    <AnimationOnScroll>
                         <div
-                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateRight'
+                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
                             style={stepsNeu}
                         >
                             <div className='flex'>
@@ -207,21 +208,23 @@ const Index = () => {
                                 </p>
                             </div>
                         </div>
-
-                    <div
-                        className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] '
-                        style={stepsNeu}
-                    >
-                        <div className='flex'>
-                            <FaDollarSign className='flex mr-8 text-6xl' />
+                    </AnimationOnScroll>
+                    <AnimationOnScroll>
+                        <div
+                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] '
+                            style={stepsNeu}
+                        >
+                            <div className='flex'>
+                                <FaDollarSign className='flex mr-8 text-6xl' />
+                            </div>
+                            <div className='grid text-lg'>
+                                <p className=' font-semibold '>
+                                    Referral Commission
+                                </p>
+                                <p className='py-2 text-2xl font-bold'>$3</p>
+                            </div>
                         </div>
-                        <div className='grid text-lg'>
-                            <p className=' font-semibold '>
-                                Referral Commission
-                            </p>
-                            <p className='py-2 text-2xl font-bold'>$3</p>
-                        </div>
-                    </div>
+                    </AnimationOnScroll>
                 </div>
                 <div className='grid mt-10'>
                     <div className='grid' style={neuToUse}>
