@@ -76,6 +76,7 @@ function earn() {
         if (mineState) {
             if (mineState.isMining && mineState.miningSession === 'active') {
                 setMiningStart(true)
+                setIsDim(false)
             } else {
                 setMiningStart(false)
             }
@@ -93,6 +94,7 @@ function earn() {
 
                 if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
                     dispatch(initMineAsync(session))
+                    setIsDim(false)
                 }
             }
 
