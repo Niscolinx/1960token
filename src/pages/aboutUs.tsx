@@ -84,7 +84,7 @@ function aboutUs() {
                         Confidentiality{' '}
                     </h2>
                 </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__slideInTop'>
+                <AnimationOnScroll animateIn='animate__zoomInLeft'>
                     <p className='text-justify'>
                         1960Token maintains appropriate controls and monitors
                         the transfer of confidential and sensitive client
@@ -96,6 +96,8 @@ function aboutUs() {
                 </AnimationOnScroll>
             </div>
             <div className='grid'>
+                            <AnimationOnScroll animateIn='animate__slideInDown'>
+
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
                     WHY US{' '}
                 </h2>
