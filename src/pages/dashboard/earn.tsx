@@ -43,7 +43,7 @@ function earn() {
 
             console.log('the user', fetchedUser.user)
         }
-    }, [session])
+    }, [])
 
 
     useEffect(() => {
