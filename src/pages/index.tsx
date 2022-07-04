@@ -171,7 +171,6 @@ const Index = () => {
 
                 <div className='grid justify-center gap-5 my-10 md:grid-cols-[repeat(auto-fit,minmax(20rem,100px))]'>
                     <AnimationOnScroll
-                        animateOnce={false}
                         animateIn='fadeInLeft'
                     >
                         <div
@@ -191,7 +190,7 @@ const Index = () => {
                             </div>
                         </div>
                     </AnimationOnScroll>
-                    <AnimationOnScroll animateIn='animateRight'>
+                    <AnimationOnScroll animateIn='fadeInRight'>
                         <div
                             className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
                             style={stepsNeu}
@@ -209,7 +208,7 @@ const Index = () => {
                             </div>
                         </div>
                     </AnimationOnScroll>
-                    <AnimationOnScroll animateIn='animateLeft'>
+                    <AnimationOnScroll animateIn='fadeInLeft'>
                         <div
                             className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] '
                             style={stepsNeu}
