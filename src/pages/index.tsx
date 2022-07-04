@@ -87,11 +87,8 @@ const Index = () => {
                                     />
                                     <div className='grid absolute right-[30%] top-[22%] px-3 gap-4 '>
                                         <p
-                                            className='font-semibold text-white'
-                                            style={{
-                                                animation:
-                                                    'moveInBottom 1s cubic-bezier(0, 0.96, 1, 1)',
-                                            }}
+                                            className='font-semibold text-white animateTop'
+                                           
                                         >
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
@@ -99,7 +96,7 @@ const Index = () => {
                                             Digital currency you can mine on
                                             your phone
                                         </p>
-                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm'>
+                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
                                             Get Started
                                         </button>{' '}
                                     </div>

@@ -122,3 +122,10 @@ a {
         transform: translateY(0);
     }
 }
+
+.animateTop{
+    animation: moveInBottom 1s ease-in-out;
+}
+.animateBottom{
+    animation: moveInTop 1s ease-in
+}
