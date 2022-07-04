@@ -70,10 +70,10 @@ const Register = () => {
             console.log({ password, phoneNumber, username, email })
             axios
                 .post('/api/auth/signup', {
-                    username,
-                    email,
+                    username: username.toLowerCase(),
+                    email: email.toLowerCase(),
                     phoneNumber,
-                    password: confirmPassword,
+                    password: confirmPassword.toLowerCase(),
                 })
                 .then(({data}) => {
                     console.log({ data })
