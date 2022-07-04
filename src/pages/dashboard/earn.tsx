@@ -171,7 +171,7 @@ function earn() {
                                 }`}
                             />
                             <HiOutlineArrowNarrowUp
-                                className='text-white text-3xl animate-bounce mt-1'
+                                className='text-white dark:text-[#1a1a2d] text-3xl animate-bounce mt-1'
                                 style={{ display: isDim ? 'block' : 'none' }}
                             />
                         </div>
