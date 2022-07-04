@@ -152,7 +152,7 @@ function earn() {
                     initiallyVisible={true}
                     animateIn='animate__zoomInUp'
                 >
-                    <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded animateLeft'>
+                    <div className='absolute grid right-0 mr-4 justify-items-center top-1/5 gap-6 z-90 justify-end cursor-pointer bg-[#1a1a2d] dark:bg-gray-300 rounded animateLeft p-2'>
                         <div className='grid text-white justify-center justify-items-center'>
                             <IoIosPeople
                                 className='text-white text-4xl dark:text-[#1a1a2d]'
@@ -178,7 +178,7 @@ function earn() {
                                     }}
                                 />
                                 <span
-                                    className='dark:text-[#1a1a2d] text-white px-2'
+                                    className='dark:text-[#1a1a2d] text-white'
                                     style={{
                                         display: isDim ? 'block' : 'none',
                                     }}
