@@ -124,7 +124,7 @@ const Login = ({ providers }: LoginProps) => {
 
     return (
         <>
-            <div className='w-full md:w-1/3 mx-auto h-[69vh]'>
+            <div className='w-full md:w-1/3 mx-auto h-[70vh]'>
                 <form
                     id='login'
                     className='bg-white rounded px-8 pt-6 pb-8 mb-4 mt-10 m-2'
