@@ -133,6 +133,7 @@ function earn() {
                     </p>
                 </div>
                 <div className='grid self-center'>
+                    <button onClick={handleMineStart}>start mining</button>
                     <MineTimer start={miningStart} />
                 </div>
                 <div className='relative'>
