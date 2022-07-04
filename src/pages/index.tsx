@@ -20,6 +20,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import { Autoplay, Pagination } from 'swiper'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Index = () => {
     const { theme } = useTheme()
@@ -86,10 +87,7 @@ const Index = () => {
                                         height='1080px'
                                     />
                                     <div className='grid absolute right-[30%] top-[19%] px-3 gap-4 '>
-                                        <p
-                                            className='font-semibold text-white animateTop'
-                                           
-                                        >
+                                        <p className='font-semibold text-white animateTop'>
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
                                             </span>{' '}
@@ -203,6 +201,12 @@ const Index = () => {
                             <p className='py-2 text-2xl font-extrabold'>$2</p>
                         </div>
                     </div>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__rubberBand'
+                    >
+                        <h2>Look what i am doing</h2>
+                    </AnimationOnScroll>
                     <div
                         className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr] animateLeft'
                         style={stepsNeu}
