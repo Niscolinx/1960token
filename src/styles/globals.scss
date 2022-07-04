@@ -124,8 +124,8 @@ a {
 }
 
 .animateTop{
-    animation: moveInBottom 1s ease-in-out;
+    animation: moveInBottom 1s cubic-bezier(0, 1.07, 1, 1);
 }
 .animateBottom{
-    animation: moveInTop 1s ease-in
+    animation: moveInTop 1s cubic-bezier(0, 1.07, 1, 1)
 }
