@@ -36,7 +36,7 @@ const Footer = () => {
     useEffect(() => {
         if(router.pathname.includes("earn")){
             console.log("includes earn", router.pathname)
-            setToFixedDisplay('')
+            setToFixedDisplay('hidden')
         }
         else{
             console.log("doesn't include earn", router.pathname)
