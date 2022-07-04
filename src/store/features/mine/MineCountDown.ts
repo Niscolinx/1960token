@@ -51,7 +51,7 @@ export const MineCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
     if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
-        console.log('stop from mine timer')
+        console.log('stop from counting....)
     }
     if (prevTimeStore) {
         console.log("counting....")
