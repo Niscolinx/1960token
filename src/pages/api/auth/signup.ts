@@ -43,6 +43,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 password: await bcrypt.hash(password, 12),
                 username,
                 phoneNumber,
+                referral
             })
 
             const verifyStored = await storeUser.save()
