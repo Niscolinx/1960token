@@ -41,7 +41,7 @@ function earn() {
         if (session) {
             dispatch(getUser(session))
 
-            console.log('the user', fetchedUser)
+            console.log('the user', fetchedUser.user)
         }
     }, [session])
 
