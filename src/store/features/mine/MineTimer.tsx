@@ -22,10 +22,8 @@ const defaultTokenCountDown = '00'
 const CountDownTimer = ({ start }: { start: boolean }) => {
     const { data: session } = useSession()
 
-    console.log({ start })
     const mineState = useAppSelector(selectMining)
 
-    console.log({mineState})
 
     const dispatch = useAppDispatch()
 
