@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
 import {
-    increaseTokenCount,
-    increment,
     initStopMineAsync,
     selectMining,
 } from '../../features/mine/MinerSlice'
@@ -17,7 +15,6 @@ const defaultTimer = {
     seconds: '00',
 }
 
-const defaultTokenCountDown = '00'
 
 const CountDownTimer = ({ start }: { start: boolean }) => {
     const { data: session } = useSession()
