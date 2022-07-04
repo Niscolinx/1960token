@@ -29,7 +29,7 @@ function team() {
     <div className='py-5 px-2 grid justify-center'>
         <h1 style={neuToUse} className=' justify-self-center text-2xl px-2 py-1 mt-4'>My Team</h1>
         <div className="grid">
-            <BsFillFilePersonFill/>
+            <BsFillFilePersonFill className='text-4xl'/>
 
             <div className="grid">
                 <h3>Upline: <span>Tester1</span></h3>
