@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function aboutUs() {
 
@@ -29,12 +30,15 @@ function aboutUs() {
 
     return (
         <div className='grid justify-center mt-10 gap-5 pb-10 px-4'>
+            <AnimationOnScroll animateIn='animate__bounce'>
+
             <h1
                 className='text-center px-2 py-5 text-3xl font-semibold mb-5  '
                 style={neuToUse}
-            >
+                >
                 ABOUT US
             </h1>
+                </AnimationOnScroll>
             <div className='grid'>
                 <p className='text-justify'>
                     1960Token is one of the most superior Mining and Affiliate
