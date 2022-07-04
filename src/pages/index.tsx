@@ -123,14 +123,14 @@ const Index = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden'>
+                        <div className='w-full md:w-2/3 rounded-4xl overflow-hidden relative'>
                             <Image
                                 src='/slider3.png'
                                 alt=''
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute top-[30%] px-3 gap-4 '>
+                            <div className='grid absolute top-[30%] px-3 gap-4 md:left-[50%] '>
                                 <p className='font-semibold text-white text-3xl'>
                                     Start mining and affiliate with us
                                 </p>
