@@ -81,7 +81,7 @@ const Index = () => {
                                         width='1920px'
                                         height='1080px'
                                     />
-                                    <div className='grid absolute right-[30%] top-[28%] md:top-[19%] px-3 gap-4 '>
+                                    <div className='grid absolute right-[30%] top-[28%] md:top-[35%] px-3 gap-4 '>
                                         <p className='font-semibold text-white animateTop'>
                                             <span className='text-orange-300 font-bold'>
                                                 Superior
