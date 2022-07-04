@@ -135,7 +135,7 @@ function earn() {
                 <div className='grid self-center'>
                     <MineTimer start={miningStart} />
                 </div>
-                <div className='grid'>
+                <div className='relative'>
                     <AnimationOnScroll
                         initiallyVisible={true}
                         animateIn='animate__zoomInUp'
@@ -179,7 +179,7 @@ function earn() {
                             </div>
                         </div>
                     </AnimationOnScroll>
-                    <div className='relative z-10'>
+                    <div className='absolute '>
                         <ReactPlayer
                             url='https://youtu.be/HoPNOczYU4Y'
                             width='100%'
