@@ -99,21 +99,17 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute left-0 top-0 px-3 gap-4 md:(left-[17%] top-[35%]) bg-red-500'>
-                                <AnimationOnScroll
-                                    animateIn='animate__zoomInLeft'
-                                    animateOnce={true}
-                                    initiallyVisible={true}
-                                >
+                            <div className='grid absolute left-0 top-0 bottom-0 px-3 gap-4 md:(left-[17%] top-[35%]) bg-red-500'>
+                                <div className='grid'>
                                     <p className='font-semibold text-[#1a1a2d] text-4xl md:text-5xl'>
                                         Invite Your Friends
                                     </p>
-                                </AnimationOnScroll>
-                                <Link href='/api/auth/signin'>
-                                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-md md:text-lg'>
-                                        Get Started
-                                    </button>
-                                </Link>
+                                    <Link href='/api/auth/signin'>
+                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-md md:text-lg'>
+                                            Get Started
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </SwiperSlide>
