@@ -105,6 +105,14 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
+                            <div className='grid absolute right-[30%] top-[28%] px-3 gap-4 '>
+                                <p className='font-semibold text-white animateTop'>
+                                    Invite Your friends
+                                </p>
+                                <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm animateBottom'>
+                                    Get Started
+                                </button>{' '}
+                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
