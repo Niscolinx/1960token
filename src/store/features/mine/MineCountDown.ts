@@ -50,6 +50,9 @@ const padWithDecimalZeros = (number: number, minLength: number) => {
 export const MineCountDown = (prevTimeStore?: Dayjs) => {
     const dayjsNowTimeStamp = dayjs()
 
+    if (dayjsNowTimeStamp.isAfter(prevTimeStore)) {
+        console.log('stop from mine timer')
+    }
     if (prevTimeStore) {
         console.log("counting....")
         return {
