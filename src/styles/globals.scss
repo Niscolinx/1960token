@@ -132,5 +132,5 @@ a {
     animation: moveInBottom 1s ease-in-out;
 }
 .animateBottom{
-    animation: moveInTop .5s ease-in
+    animation: moveInTop 1s cubic-bezier(0.46, 0.03, 0, 1.49)
 }
