@@ -60,10 +60,10 @@ const Index = () => {
                     spaceBetween={30}
                     centeredSlides={true}
                     loop={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 5000,
+                    //     disableOnInteraction: false,
+                    // }}
                     pagination={{
                         clickable: true,
                     }}
@@ -128,7 +128,7 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute top-[30%] px-3 gap-4 md:(left-[10%] top-[40%])'>
+                            <div className='grid absolute top-[30%] px-3 gap-4 md:(left-[7%] top-[40%])'>
                                 <p className='font-semibold text-white text-3xl md:text-4xl'>
                                     Start mining and affiliate with us
                                 </p>
