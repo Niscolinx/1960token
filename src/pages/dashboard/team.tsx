@@ -2,7 +2,10 @@ import React from 'react'
 
 function team() {
   return (
-    <div>team</div>
+    <div>
+        <h1>My Team</h1>
+        
+    </div>
   )
 }
 
