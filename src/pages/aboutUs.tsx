@@ -83,9 +83,14 @@ function aboutUs() {
             </div>
 
             <div className='grid'>
+                            <AnimationOnScroll animateIn='animate__slideInDown'>
+
                 <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
                     Confidentiality{' '}
                 </h2>
+                </AnimationOnScroll>
+                            <AnimationOnScroll animateIn='animate__slideInTop'>
+
                 <p className='text-justify'>
                     1960Token maintains appropriate controls and monitors the
                     transfer of confidential and sensitive client information
@@ -94,6 +99,7 @@ function aboutUs() {
                     unless this is upon request of the client, or as required to
                     do so by law.
                 </p>
+                </AnimationOnScroll>
             </div>
             <div className='grid'>
                 <h2 className='text-center font-semibold text-2xl grad p-2'>
