@@ -128,7 +128,7 @@ const Index = () => {
                                 width='1920px'
                                 height='1080px'
                             />
-                            <div className='grid absolute top-[30%] px-3 gap-4 md:left-[10%] '>
+                            <div className='grid absolute top-[30%] px-3 gap-4 md:left-[13%] '>
                                 <p className='font-semibold text-white text-3xl'>
                                     Start mining and affiliate with us
                                 </p>
