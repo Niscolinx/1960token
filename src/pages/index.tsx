@@ -322,7 +322,7 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div className='relative'>
+            <div className='relative mt-4'>
                 <img
                     src='footer_crypto.jpeg'
                     alt=''
@@ -331,7 +331,7 @@ const Index = () => {
                         objectFit: 'cover',
                         zIndex: 10,
                     }}
-                    className='h-30 md:h-50'
+                    className='h-40 md:h-50'
                 />
                 <div className='absolute z-40 left-0 right-0 top-0 bottom-0 grid'>
                     <div
