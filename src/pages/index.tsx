@@ -323,15 +323,13 @@ const Index = () => {
                 </div>
             </div>
             <div className='grid'>
-                <Image
-                    src='footer_crypto.jpeg'
-                    alt=''
-                    width='1920px'
-                    height='1080px'
-                />
+                <Image src='footer_crypto.jpeg' alt='' />
                 <h1>GET STARTED TODAY WITH</h1>
                 <p>1960TOKEN</p>
                 <p>Open an account today and start trading!</p>
+                <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm '>
+                    Register Now
+                </button>
             </div>
         </>
     )
