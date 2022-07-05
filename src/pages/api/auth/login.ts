@@ -15,13 +15,11 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         const email: IUser | null = await User.findOne({
             email: emailOrUsername,
         })
-        // const username: IUser | null = await User.findOne({
-        //     username: emailOrUsername,
-        // })
+        const username: IUser | null = await User.findOne({
+            username: emailOrUsername,
+        })
 
-        // console.log({email, username})
-
-        const user = email
+        const user = email || username
 
         console.log({user})
 
@@ -35,21 +33,21 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
             return res.status(401).json('Incorrect password')
         }
 
-        const token = jwt.sign(
-            {
-                email,
-                userId: user!._id.toString(),
-            },
-            process.env.JWT_SECRET!,
-            {
-                expiresIn: '1hr',
-            }
-        )
+        // const token = jwt.sign(
+        //     {
+        //         email,
+        //         userId: user!._id.toString(),
+        //     },
+        //     process.env.JWT_SECRET!,
+        //     {
+        //         expiresIn: '1hr',
+        //     }
+        // )
 
-        return res.status(200).json(
-            user
-            //token,
-        )
+        // return res.status(200).json(
+        //     user
+        //     //token,
+        // )
     } catch (err) {
         console.log({ err })
         res.status(400).json('error')
