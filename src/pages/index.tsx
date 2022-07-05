@@ -322,11 +322,16 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid">
-            <img src="footer_crypto.jpeg" alt=""/>
-                   <h1>GET STARTED TODAY WITH</h1>
-                   <p>1960TOKEN</p>
-                   <p>Open an account today and start trading!</p>
+            <div className='grid'>
+                <Image
+                    src='footer_crypto.jpeg'
+                    alt=''
+                    width='1920px'
+                    height='1080px'
+                />
+                <h1>GET STARTED TODAY WITH</h1>
+                <p>1960TOKEN</p>
+                <p>Open an account today and start trading!</p>
             </div>
         </>
     )
