@@ -358,7 +358,7 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-around mt-2'>
+            <div className='flex justify-around mt-2 py-2 px-4'>
                 <BsFacebook className='text-2xl'/>
                 <BsTelegram className='text-2xl'/>
                 <BsYoutube className='text-2xl'/>
