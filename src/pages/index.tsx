@@ -323,7 +323,7 @@ const Index = () => {
                 </div>
             </div>
             <div className='grid'>
-                <Image src='footer_crypto.jpeg' alt='' />
+                <Image src='footer_crypto.jpeg' alt='' width='100%' height='100%' />
                 <h1>GET STARTED TODAY WITH</h1>
                 <p>1960TOKEN</p>
                 <p>Open an account today and start trading!</p>
