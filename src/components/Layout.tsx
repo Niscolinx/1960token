@@ -10,6 +10,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     const router = useRouter()
     const [addMargin, setAddMargin] = useState('')
     const [addPadding, setAddPadding] = useState('')
+    const [visibility, setVisibility] = useState('flex')
 
     useEffect(() => {
         if (router.asPath.includes('earn')) {
@@ -19,11 +20,12 @@ const Layout: React.FC<{}> = ({ children }) => {
         } else {
             setAddMargin('mb-25')
             setAddPadding('py-2')
+            setVisibility('flex')
         }
     }, [router])
     return (
         <>
-            <div className=''>
+            <div className={visibility}>
                 <LiveTicker />
             </div>
             <div
