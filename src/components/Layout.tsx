@@ -13,10 +13,12 @@ const Layout: React.FC<{}> = ({ children }) => {
     const [visibility, setVisibility] = useState('flex')
 
     useEffect(() => {
+        if (router.asPath.includes('dashboard')) {
+            setVisibility('hidden')
+        }
         if (router.asPath.includes('earn')) {
             setAddMargin('mb-0')
             setAddPadding('')
-            setVisibility('hidden')
         } else {
             setAddMargin('mb-25')
             setAddPadding('py-2')
