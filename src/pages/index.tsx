@@ -355,7 +355,7 @@ const Index = () => {
                         </div>
                         <p>Open an account today and start trading!</p>
                         <Link href={'/auth/register'}>
-                            <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 text-sm uppercase'>
+                            <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm uppercase'>
                                 Register Now
                             </button>
                         </Link>
