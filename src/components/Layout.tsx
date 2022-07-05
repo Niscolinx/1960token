@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from './Footer'
 import Nav from './nav'
 import { useSession } from 'next-auth/react'
@@ -8,26 +8,31 @@ import LiveTicker from '../widgets/LiveTicker'
 const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
     const router = useRouter()
-    const [addMargin, setAddMargin] = useState("")
-    const [addPadding, setAddPadding] = useState("")
+    const [addMargin, setAddMargin] = useState('')
+    const [addPadding, setAddPadding] = useState('')
 
     useEffect(() => {
-        if(router.asPath.includes("earn")){
+        if (router.asPath.includes('earn')) {
             setAddMargin('mb-0')
             setAddPadding('')
-        }
-        else{
+        } else {
             setAddMargin('mb-25')
             setAddPadding('py-2')
         }
     }, [router])
     return (
-        <div className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}>
-            <LiveTicker/>
-            <Nav session={session} />
-            <main className={`${addMargin} overflow-x-hidden`}>{children}</main>
-            <Footer />
-        </div>
+        <>
+            <LiveTicker />
+            <div
+                className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}
+            >
+                <Nav session={session} />
+                <main className={`${addMargin} overflow-x-hidden`}>
+                    {children}
+                </main>
+                <Footer />
+            </div>
+        </>
     )
 }
 
