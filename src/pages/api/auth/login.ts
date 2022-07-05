@@ -24,7 +24,6 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         console.log({user})
 
         if (!user) {
-            console.log('not found')
             return res.status(401).json('Not found')
         }
 
