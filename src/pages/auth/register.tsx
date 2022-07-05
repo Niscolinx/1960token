@@ -14,6 +14,7 @@ const Register = () => {
     const [referral, setReferral] = useState('tester1')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
+    const [loading, setLoading]  = useState(false)
     const [message, setMessage] = useState<message>({
         value: 'invalid Entries',
         type: 'error',
@@ -32,6 +33,7 @@ const Register = () => {
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        setLoading(true)
 
         const formData = new FormData(e.currentTarget)
 
