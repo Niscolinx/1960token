@@ -13,6 +13,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     const [visibility, setVisibility] = useState('flex')
 
     useEffect(() => {
+        console.log(router)
         if (router.asPath.includes('dashboard')) {
             setVisibility('hidden')
         }
