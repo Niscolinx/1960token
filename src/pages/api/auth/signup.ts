@@ -31,11 +31,15 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             }
 
             if (existingUsername) {
-                throw new Error('Username already taken')
+                 return res.status(401).json({
+                     message: 'Email already exists',
+                 })
             }
 
             if (existingPhoneNumber) {
-                throw new Error('Number already in use')
+                 return res.status(401).json({
+                     message: 'Email already exists',
+                 })
             }
 
             const storeUser = new User({

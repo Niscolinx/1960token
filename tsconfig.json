@@ -16,6 +16,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/mongodb.ts", "src/store/features/user/UserSlice.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/mongodb.ts"],
   "exclude": ["node_modules"]
 }
