@@ -331,16 +331,18 @@ const Index = () => {
                         height: '5rem',
                         width: '100%',
                         objectFit: 'cover',
-                        zIndex:10
+                        zIndex: 10,
                     }}
                 />
                 <div className='absolute z-40 left-0 right-0 top-0 bottom-0'>
-                    <h1>GET STARTED TODAY WITH</h1>
-                    <p>1960TOKEN</p>
-                    <p>Open an account today and start trading!</p>
-                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm uppercase'>
-                        Register Now
-                    </button>
+                    <div className='grid'>
+                        <h1>GET STARTED TODAY WITH</h1>
+                        <p>1960TOKEN</p>
+                        <p>Open an account today and start trading!</p>
+                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm uppercase'>
+                            Register Now
+                        </button>
+                    </div>
                 </div>
             </div>
         </>
