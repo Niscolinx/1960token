@@ -328,7 +328,7 @@ const Index = () => {
                     alt=''
                     style={{
                         position: 'absolute',
-                        height: '10rem',
+                        height: '7rem',
                         width: '100%',
                         objectFit: 'cover',
                         zIndex: 10,
