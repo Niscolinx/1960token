@@ -20,6 +20,7 @@ const Login = ({ providers }: LoginProps) => {
 
     const [emailOrUsername, setEmailOrUsername] = useState('hello@hello.com')
     const [password, setPassword] = useState('testing')
+    const [loading, setLoading] = useState(false)
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [message, setMessage] = useState<message>({
@@ -66,6 +67,7 @@ const Login = ({ providers }: LoginProps) => {
             // } 
             else if (!isError) {
                 console.log('sign in.....', isError)
+                setLoading(true)
                 signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase(), password: password.toLowerCase() })
                     .then((data:any) => {
                         console.log('data returned', data)
