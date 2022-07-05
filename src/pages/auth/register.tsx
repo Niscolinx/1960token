@@ -80,7 +80,7 @@ const Register = () => {
                     email: email.toLowerCase(),
                     phoneNumber,
                     referral: referral.toLowerCase(),
-                    password: confirmPassword.toLowerCase(),
+                    password
                 })
                 .then(({ data }) => {
                     console.log({ data })
