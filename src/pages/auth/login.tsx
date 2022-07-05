@@ -56,6 +56,7 @@ const Login = ({ providers }: LoginProps) => {
                 })
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
+                setLoading(false)
             }
 
             // if (key === 'emailOrUsername') {
@@ -90,7 +91,7 @@ const Login = ({ providers }: LoginProps) => {
             }
         }
 
-        setError(isError)
+        // setError(isError)
         // if (!isError) {
         //     console.log('sending protocol')
         //     try {

@@ -14,7 +14,7 @@ const Register = () => {
     const [referral, setReferral] = useState('tester1')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
-    const [loading, setLoading]  = useState(false)
+    const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState<message>({
         value: 'invalid Entries',
         type: 'error',
@@ -48,6 +48,7 @@ const Register = () => {
                 })
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
+                setLoading(false)
             }
 
             if (key === 'email') {
@@ -79,7 +80,7 @@ const Register = () => {
                     referral: referral.toLowerCase(),
                     password: confirmPassword.toLowerCase(),
                 })
-                .then(({data}) => {
+                .then(({ data }) => {
                     console.log({ data })
                     setMessage({
                         value: data.message,
@@ -89,13 +90,12 @@ const Register = () => {
                     setMessageDisplay('block')
 
                     setTimeout(() => {
-                        router.push("/auth/login")
+                        router.push('/auth/login')
                     }, 500)
                 })
-                .catch(({response: {data}}) => {
-                    
-                     setMessageDisplay('block')
-                     setMessage({ ...message, value: data.message })
+                .catch(({ response: { data } }) => {
+                    setMessageDisplay('block')
+                    setMessage({ ...message, value: data.message })
                 })
         }
     }
