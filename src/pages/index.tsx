@@ -339,12 +339,12 @@ const Index = () => {
                     }}
                     className='h-40 md:h-50'
                 />
-                <div className='absolute left-0 right-0 top-0 bottom-0 grid'>
+                <div className='absolute left-0 right-0 top-0 bottom-0 grid bg-red-500'>
                     <div
                         className='grid text-white justify-center justify-items-center items-center place-items-center py-2 px-4'
                         style={{
                             background:
-                                'linear-gradient(to bottom, rgb(2 13 43 / 77%) 90%, #2c3981ab)',
+                                'linear-gradient(to bottom, rgb(2 13 43 / 77%) 30%, #2c3981ab)',
                         }}
                     >
                         <div className='justify-items-center grid gap-2'>
