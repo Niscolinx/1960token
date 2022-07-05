@@ -69,7 +69,7 @@ const Login = ({ providers }: LoginProps) => {
             // } 
             else if (!isError) {
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase(), password: password.toLowerCase() })
+                signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase(), password })
                     .then((data:any) => {
                         console.log('data returned', data)
                         setLoading(false)
