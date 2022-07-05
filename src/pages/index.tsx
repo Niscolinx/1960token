@@ -322,7 +322,7 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div className=' bg-red-500  relative'>
+            <div className='relative'>
                 <img
                     src='footer_crypto.jpeg'
                     alt=''
