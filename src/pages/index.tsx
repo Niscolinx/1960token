@@ -327,7 +327,7 @@ const Index = () => {
                 <h1>GET STARTED TODAY WITH</h1>
                 <p>1960TOKEN</p>
                 <p>Open an account today and start trading!</p>
-                <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm '>
+                <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm uppercase'>
                     Register Now
                 </button>
             </div>
