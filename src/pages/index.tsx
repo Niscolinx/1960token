@@ -347,8 +347,12 @@ const Index = () => {
                                 'linear-gradient(to bottom, rgb(2 13 43 / 77%) 90%, #2c3981ab)',
                         }}
                     >
-                        <h1 className='font-bold'>GET STARTED TODAY WITH</h1>
-                        <p className='font-bold'>1960TOKEN</p>
+                        <>
+                            <h1 className='font-bold'>
+                                GET STARTED TODAY WITH
+                            </h1>
+                            <p className='font-bold'>1960TOKEN</p>
+                        </>
                         <p>Open an account today and start trading!</p>
                         <Link href={'/auth/register'}>
                             <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm uppercase'>
