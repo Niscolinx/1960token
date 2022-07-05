@@ -331,9 +331,10 @@ const Index = () => {
                         height: '5rem',
                         width: '100%',
                         objectFit: 'cover',
+                        zIndex:10
                     }}
                 />
-                <div className='absolute'>
+                <div className='absolute z-40'>
                     <h1>GET STARTED TODAY WITH</h1>
                     <p>1960TOKEN</p>
                     <p>Open an account today and start trading!</p>
