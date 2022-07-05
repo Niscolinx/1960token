@@ -323,7 +323,7 @@ const Index = () => {
                 </div>
             </div>
             <div className=' bg-red-500  relative'>
-                <img src="footer_crypto.jpeg" alt=""  style={{position: 'relative'}}/>
+                <img src="footer_crypto.jpeg" alt=""  style={{position: 'relative', height: '10rem', width: '100%', objectFit: 'cover'}}/>
                 <h1>GET STARTED TODAY WITH</h1>
                 <p>1960TOKEN</p>
                 <p>Open an account today and start trading!</p>
