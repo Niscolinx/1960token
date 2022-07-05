@@ -22,7 +22,6 @@ const Layout: React.FC<{}> = ({ children }) => {
         } else {
             setAddMargin('mb-25')
             setAddPadding('py-2')
-            setVisibility('flex')
         }
     }, [router])
     return (
