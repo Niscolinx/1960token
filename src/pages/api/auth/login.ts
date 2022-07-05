@@ -15,13 +15,15 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         const email: IUser | null = await User.findOne({
             email: emailOrUsername,
         })
-        const username: IUser | null = await User.findOne({
-            username: emailOrUsername,
-        })
+        // const username: IUser | null = await User.findOne({
+        //     username: emailOrUsername,
+        // })
 
         // console.log({email, username})
 
-        const user = email || username
+        const user = email
+
+        console.log({user})
 
         if (!user) {
             console.log('not found')
