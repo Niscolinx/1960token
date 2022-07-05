@@ -15,6 +15,7 @@ const Layout: React.FC<{}> = ({ children }) => {
         if (router.asPath.includes('earn')) {
             setAddMargin('mb-0')
             setAddPadding('')
+            setVisibility('hidden')
         } else {
             setAddMargin('mb-25')
             setAddPadding('py-2')
@@ -22,7 +23,9 @@ const Layout: React.FC<{}> = ({ children }) => {
     }, [router])
     return (
         <>
-            <LiveTicker />
+            <div className=''>
+                <LiveTicker />
+            </div>
             <div
                 className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}
             >
