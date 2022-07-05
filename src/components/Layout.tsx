@@ -10,12 +10,11 @@ const Layout: React.FC<{}> = ({ children }) => {
     const router = useRouter()
     const [addMargin, setAddMargin] = useState('')
     const [addPadding, setAddPadding] = useState('')
-    const [visibility, setVisibility] = useState('flex')
+    const [visibility, setVisibility] = useState('hidden')
 
     useEffect(() => {
-        console.log(router)
-        if (router.asPath.includes('dashboard')) {
-            setVisibility('hidden')
+        if (router.asPath === '/') {
+            setVisibility('flex')
         }
         if (router.asPath.includes('earn')) {
             setAddMargin('mb-0')
