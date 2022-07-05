@@ -13,6 +13,7 @@ const initialState: IUser = {
     isMining: false,
     miningStartedAt: '',
     role: '',
+    referral: '',
     totalMined: 0,
     portfolio: 0,
     status: 'idle',
