@@ -358,10 +358,10 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex'>
-                <BsFacebook className='text-4xl'/>
-                <BsTelegram className='text-4xl'/>
-                <BsYoutube className='text-4xl'/>
+            <div className='flex justify-around'>
+                <BsFacebook className='text-2xl'/>
+                <BsTelegram className='text-2xl'/>
+                <BsYoutube className='text-2xl'/>
             </div>
         </>
     )
