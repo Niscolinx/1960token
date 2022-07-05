@@ -323,9 +323,10 @@ const Index = () => {
                 </div>
             </div>
             <div className="grid">
+            <img src="footer_crypto.jpeg" alt=""/>
+                   <h1>GET STARTED TODAY WITH</h1>
                    
             </div>
-            <img src="footer_crypto.jpeg" alt=""/>
         </>
     )
 }
