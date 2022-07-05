@@ -101,11 +101,11 @@ const Index = () => {
                             />
                             <div className='grid absolute left-0 top-0 bottom-0 right-0 px-3 gap-4'>
                                 <div className='grid place-content-center gap-2'>
-                                    <p className='font-semibold text-[#1a1a2d] text-4xl md:text-5xl'>
+                                    <p className='font-semibold text-[#1a1a2d] text-2xl md:text-4xl'>
                                         Invite Your Friends
                                     </p>
                                     <Link href='/api/auth/signin'>
-                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-md md:text-lg'>
+                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm md:text-lg'>
                                             Get Started
                                         </button>
                                     </Link>
