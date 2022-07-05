@@ -33,7 +33,7 @@ const Home = () => {
         }
     }, [theme])
     return (
-        <div className='h-[71vh] px-4'>
+        <div className='h-[93vh] px-4'>
             <div className='grid mt-10 gap-5'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
