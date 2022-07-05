@@ -7,7 +7,13 @@ import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
 import Logo from '../../public/logo.svg'
 import Image from 'next/image'
-import { BsPersonPlusFill, BsCheck, BsFacebook, BsTelegram, BsYoutube } from 'react-icons/bs'
+import {
+    BsPersonPlusFill,
+    BsCheck,
+    BsFacebook,
+    BsTelegram,
+    BsYoutube,
+} from 'react-icons/bs'
 import { FaDollarSign, FaPeopleArrows } from 'react-icons/fa'
 import { FiAirplay } from 'react-icons/fi'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -351,11 +357,11 @@ const Index = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="flex">
-                    <BsFacebook/>
-                    <BsTelegram/>
-                    <BsYoutube/>
-                </div>
+            </div>
+            <div className='flex'>
+                <BsFacebook />
+                <BsTelegram />
+                <BsYoutube />
             </div>
         </>
     )
