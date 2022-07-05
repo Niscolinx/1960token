@@ -71,9 +71,11 @@ const Login = ({ providers }: LoginProps) => {
                 signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase(), password: password.toLowerCase() })
                     .then((data:any) => {
                         console.log('data returned', data)
+                        setLoading(false)
 
                         if(data.error){
                             setError(true)
+                            setLoading(false)
                               setMessage({
                                   value: "Invalid User",
                                   type: 'error',
