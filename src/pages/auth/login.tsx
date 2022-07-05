@@ -41,6 +41,7 @@ const Login = ({ providers }: LoginProps) => {
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        setLoading(true)
 
         const formData = new FormData(e.currentTarget)
 
@@ -67,7 +68,6 @@ const Login = ({ providers }: LoginProps) => {
             // } 
             else if (!isError) {
                 console.log('sign in.....', isError)
-                setLoading(true)
                 signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase(), password: password.toLowerCase() })
                     .then((data:any) => {
                         console.log('data returned', data)
