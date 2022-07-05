@@ -322,6 +322,9 @@ const Index = () => {
                     </div>
                 </div>
             </div>
+            <div className="grid" style={{backgroundImage: `url(footer_crypto.jpeg)`}}>
+
+            </div>
         </>
     )
 }
