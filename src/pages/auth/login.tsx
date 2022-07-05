@@ -198,7 +198,7 @@ const Login = ({ providers }: LoginProps) => {
                 <div className='grid mt-10 gap-2 px-8 justify-start'>
                     <Link href='/auth/register'>
                         <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 text-left justify-self-start'>
-                            Register
+                            {loading ? 'Loading...' : 'Register'}
                         </button>
                     </Link>
 
