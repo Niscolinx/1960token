@@ -190,7 +190,7 @@ const Login = ({ providers }: LoginProps) => {
                             className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline'
                             type='submit'
                         >
-                            Sign In
+                            {loading ? 'Loading...' : 'Sign In'}
                         </button>
                     </div>
                 </form>
@@ -198,7 +198,7 @@ const Login = ({ providers }: LoginProps) => {
                 <div className='grid mt-10 gap-2 px-8 justify-start'>
                     <Link href='/auth/register'>
                         <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 text-left justify-self-start'>
-                            {loading ? 'Loading...' : 'Register'}
+                            Register
                         </button>
                     </Link>
 
