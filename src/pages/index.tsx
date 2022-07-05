@@ -353,6 +353,7 @@ const Index = () => {
                 </div>
                 <div className="flex">
                     <BsFacebook/>
+                    <BsTelegram/>
                 </div>
             </div>
         </>
