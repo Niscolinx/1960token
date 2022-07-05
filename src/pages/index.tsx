@@ -335,8 +335,8 @@ const Index = () => {
                 />
                 <div className='absolute z-40 left-0 right-0 top-0 bottom-0 grid'>
                     <div className='grid text-white justify-center justify-items-center items-center place-items-center py-2 px-4'>
-                        <h1>GET STARTED TODAY WITH</h1>
-                        <p>1960TOKEN</p>
+                        <h1 className='font-bold'>GET STARTED TODAY WITH</h1>
+                        <p className='font-bold'>1960TOKEN</p>
                         <p>Open an account today and start trading!</p>
                         <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm uppercase'>
                             Register Now
