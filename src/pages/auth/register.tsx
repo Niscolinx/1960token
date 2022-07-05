@@ -57,6 +57,7 @@ const Register = () => {
                 if (!checkemail) {
                     isError = true
                     setErrorFields((oldArr) => [...oldArr, key])
+                    setLoading(false)
                 }
             }
 
@@ -65,6 +66,7 @@ const Register = () => {
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
                 setMessage({ ...message, value: 'Passwords do not match' })
+                setLoading(false)
             }
         }
 
@@ -88,6 +90,7 @@ const Register = () => {
                         style: 'text-green-500 font-semibold uppercase',
                     })
                     setMessageDisplay('block')
+                    setLoading(false)
 
                     setTimeout(() => {
                         router.push('/auth/login')
@@ -95,6 +98,7 @@ const Register = () => {
                 })
                 .catch(({ response: { data } }) => {
                     setMessageDisplay('block')
+                    setLoading(false)
                     setMessage({ ...message, value: data.message })
                 })
         }
