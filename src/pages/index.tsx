@@ -347,7 +347,7 @@ const Index = () => {
                                 'linear-gradient(to bottom, rgb(2 13 43 / 77%) 90%, #2c3981ab)',
                         }}
                     >
-                        <div className='justify-items-center grid'>
+                        <div className='justify-items-center grid gap-2'>
                             <h1 className='font-bold'>
                                 GET STARTED TODAY WITH
                             </h1>
