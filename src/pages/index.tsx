@@ -322,8 +322,8 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid" style={{backgroundImage: `url(footer_crypto.jpeg)`}}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas numquam temporibus officiis accusantium saepe ut earum optio! Quos rem iste obcaecati saepe, dolorum quaerat, sit animi laboriosam eius dolore sunt?
+            <div className="grid">
+                   
             </div>
             <img src="footer_crypto.jpeg" alt=""/>
         </>
