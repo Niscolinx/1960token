@@ -19,7 +19,7 @@ const Layout: React.FC<{}> = ({ children }) => {
             setVisibility('hidden')
         } else {
             setAddMargin('mb-25')
-            setAddPadding('py-5')
+            setAddPadding('py-2')
             setVisibility('flex')
         }
     }, [router])
