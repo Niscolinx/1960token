@@ -334,7 +334,7 @@ const Index = () => {
                         zIndex: 10,
                     }}
                 />
-                <div className='absolute z-40 left-0 right-0 top-0 bottom-0 bg-red-400'>
+                <div className='absolute z-40 left-0 right-0 top-0 bottom-0'>
                     <div className='grid text-white justify-center justify-items-center'>
                         <h1>GET STARTED TODAY WITH</h1>
                         <p>1960TOKEN</p>
