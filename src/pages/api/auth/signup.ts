@@ -37,7 +37,9 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             }
 
             if (existingPhoneNumber) {
-                throw new Error('Number already in use')
+                return res.status(401).json({
+                    message: 'Number already in use',
+                })
             }
 
             const storeUser = new User({
