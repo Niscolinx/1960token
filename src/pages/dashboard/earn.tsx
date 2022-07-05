@@ -176,7 +176,7 @@ function earn() {
                             </div>
                         </AnimationOnScroll>
                         <span
-                            className='dark:text-[#1a1a2d] text-white'
+                            className='light:text-[#1a1a2d] text-#1a1a2d]'
                             style={{
                                 display: isDim ? 'block' : 'none',
                             }}
