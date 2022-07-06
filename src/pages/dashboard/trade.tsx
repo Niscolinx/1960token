@@ -1,6 +1,5 @@
 import React from 'react'
 import AdvancedRealChart from '../../widgets/AdvancedRealChart'
-import TechnicalAnalysis from '../../widgets/LiveTicker'
 
 function trade() {
   return (
