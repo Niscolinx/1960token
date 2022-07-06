@@ -2,7 +2,7 @@ import React from 'react'
 
 function trade() {
   return (
-    <div>trade</div>
+    <div className='h-[90vh]'>trade</div>
   )
 }
 
