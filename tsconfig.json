@@ -16,6 +16,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/mongodb.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/mongodb.ts", "src/widgets/AdvancedRealChart.js"],
   "exclude": ["node_modules"]
 }
