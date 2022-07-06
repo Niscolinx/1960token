@@ -6,7 +6,6 @@ function trade() {
   return (
     <div className='h-[90vh]'>trade
     <AdvancedRealChart/>
-    <TechnicalAnalysis/>
     </div>
   )
 }
