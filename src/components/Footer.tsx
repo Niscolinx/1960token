@@ -5,7 +5,7 @@ import { CgProfile } from 'react-icons/cg'
 import { RiHome5Line } from 'react-icons/ri'
 import { MdOutlineOndemandVideo } from 'react-icons/md'
 import { useRouter } from 'next/router'
-import {TbArrowsDoubleNeSw} from 'react-icons/tb'
+import { TbArrowsDoubleNeSw } from 'react-icons/tb'
 
 const Footer = () => {
     const router = useRouter()
@@ -15,7 +15,6 @@ const Footer = () => {
 
     useEffect(() => {
         if (theme === 'dark') {
-
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
                 boxShadow: `5px 5px 16px #0c0c15,
@@ -33,18 +32,16 @@ const Footer = () => {
         }
     }, [theme])
 
-
     useEffect(() => {
-        if(router.pathname.includes("earn")){
-            console.log("includes earn", router.pathname)
+        if (router.pathname.includes('earn')) {
+            console.log('includes earn', router.pathname)
             setToFixedDisplay('fixed')
-        }
-        else{
+        } else {
             console.log("doesn't include earn", router.pathname)
             setToFixedDisplay('fixed')
         }
     }, [router])
-    
+
     return (
         <div
             className={`bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0]) ${toFixedDisplay}`}
@@ -57,14 +54,7 @@ const Footer = () => {
                     <RiHome5Line className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-            <Link href='/dashboard/earn'>
-                <div
-                    className='grid justify-items-center p-2 rounded-full cursor-pointer'
-                    style={neuToUse}
-                >
-                    <MdOutlineOndemandVideo className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
-                </div>
-            </Link>
+
             <Link href='/dashboard/trade'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
@@ -73,7 +63,14 @@ const Footer = () => {
                     <TbArrowsDoubleNeSw className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-
+            <Link href='/dashboard/earn'>
+                <div
+                    className='grid justify-items-center p-2 rounded-full cursor-pointer'
+                    style={neuToUse}
+                >
+                    <MdOutlineOndemandVideo className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
+                </div>
+            </Link>
             <Link href='/dashboard'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
