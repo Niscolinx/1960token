@@ -5,6 +5,7 @@ import { CgProfile } from 'react-icons/cg'
 import { RiHome5Line } from 'react-icons/ri'
 import { MdOutlineOndemandVideo } from 'react-icons/md'
 import { useRouter } from 'next/router'
+import {TbArrowsDoubleNeSw} from 'react-icons/tb'
 
 const Footer = () => {
     const router = useRouter()
@@ -45,7 +46,9 @@ const Footer = () => {
     }, [router])
     
     return (
-        <div className={`bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0]) ${toFixedDisplay}`}>
+        <div
+            className={`bg-[#1a1a2d] text-[#ccccd0] flex justify-between max-w-3xl mx-auto p-2 bottom-0 left-0 right-0 rounded-lg pb-5 light:(text-[#1a1a2d] bg-[#ccccd0]) ${toFixedDisplay}`}
+        >
             <Link href='/'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
@@ -67,10 +70,10 @@ const Footer = () => {
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
                 >
-                    <MdOutlineOndemandVideo className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
+                    <TbArrowsDoubleNeSw className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-           
+
             <Link href='/dashboard'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
