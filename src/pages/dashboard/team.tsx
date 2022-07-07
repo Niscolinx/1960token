@@ -29,11 +29,11 @@ function team() {
             <div className='py-5 px-2 grid'>
                 <div className='flex justify-around bg-orange-300 rounded-lg py-5 px-8'>
                     <div className='grid justify-items-center'>
-                        <p>Referral Income</p>
+                        <p className='font-semibold'>Referral Income</p>
                         <p>0</p>
                     </div>
                     <div className='grid justify-items-center'>
-                        <p>Mine/Video Income</p>
+                        <p className='font-semibold'>Mine/Video Income</p>
                         <p>0</p>
                     </div>
                 </div>
