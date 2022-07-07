@@ -39,6 +39,9 @@ function team() {
                 </div>
                 <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg'>Transfer</button>
             </div>
+            <div className="grid">
+                <h3>Team Details</h3>
+            </div>
         </div>
     )
 }
