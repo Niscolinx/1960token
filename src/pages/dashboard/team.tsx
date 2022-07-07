@@ -51,9 +51,9 @@ function team() {
                     <div className='grid'>
                         <table>
                             <tbody>
-                                <tr className='text-center'>
+                                <tr className='text-center border-b'>
                                     <td className='py-2 px-4'>LV1</td>
-                                    <td className='py-2 px-4'>1</td>
+                                    <td className='py-2 px-4 border-l border-r'>1</td>
                                     <td className='py-2 px-4'>$3</td>
                                 </tr>
                                 <tr className='text-center'>
