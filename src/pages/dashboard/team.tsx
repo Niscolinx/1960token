@@ -27,7 +27,7 @@ function team() {
     return (
         <div className='h-[71vh]'>
             <div className='py-5 px-2 grid'>
-                <div className='flex justify-around bg-orange-300 rounded-t-lg py-5 px-4'>
+                <div className='flex justify-around bg-orange-300 rounded-t-lg py-5 px-4 dark:text-[#1a1a2d]'>
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
                         <p className='font-bold'>$10</p>
@@ -37,7 +37,7 @@ function team() {
                         <p className='font-bold'>$15</p>
                     </div>
                 </div>
-                <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg'>
+                <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'>
                     Transfer
                 </button>
             </div>
