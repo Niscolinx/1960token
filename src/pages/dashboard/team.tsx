@@ -29,7 +29,8 @@ function team() {
             <div className='py-5 px-2 grid justify-center justify-items-center'>
                 <div className="flex">
                     <div className="grid">
-                        <p>Total Incomes</p>
+                        <p>Referral Income</p>
+                        <p>0</p>
                     </div>
                 </div>
             </div>
