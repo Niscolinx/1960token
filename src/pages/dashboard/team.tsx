@@ -37,21 +37,34 @@ function team() {
                         <p className='font-bold'>$15</p>
                     </div>
                 </div>
-                <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg'>Transfer</button>
+                <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg'>
+                    Transfer
+                </button>
             </div>
-            <div className="grid">
+            <div className='grid'>
                 <h3>Team Details</h3>
-                <div className="grid">
-                    <p>Total Referral: <span>32</span></p>
+                <div className='grid'>
+                    <p>
+                        Total Referral: <span>32</span>
+                    </p>
 
-                    <div className="grid">
-                        <div className="flex">
-                            <p><span>LV1</span> <span>1</span> <span>$3</span></p>
-                            <p><span>LV1</span> <span>1</span> <span>$3</span></p>
-                            <p><span>LV1</span> <span>1</span> <span>$3</span></p>
+                    <div className='grid'>
+                        <div className='grid'>
+                            <p>
+                                <span>LV1</span> <span>1</span> <span>$3</span>
+                            </p>
                         </div>
-                        <div className="flex"></div>
-                        <div className="flex"></div>
+                        <div className='flex'>
+                            {' '}
+                            <p>
+                                <span>LV1</span> <span>1</span> <span>$3</span>
+                            </p>
+                        </div>
+                        <div className='flex'>
+                            <p>
+                                <span>LV1</span> <span>1</span> <span>$3</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
