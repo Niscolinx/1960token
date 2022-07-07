@@ -51,17 +51,17 @@ function team() {
                     <div className='grid bg-blue-700'>
                         <table>
                             <tbody>
-                                <tr className=' text-center'>
-                                    <td className='py-2 px-4'>LV1</td>
-                                    <td className='py-2 px-4'>1</td>
-                                    <td className='py-2 px-4' >$3</td>
-                                </tr>
-                                <tr>
+                                <tr className='text-center'>
                                     <td className='py-2 px-4'>LV1</td>
                                     <td className='py-2 px-4'>1</td>
                                     <td className='py-2 px-4'>$3</td>
                                 </tr>
-                                <tr>
+                                <tr className='text-center'>
+                                    <td className='py-2 px-4'>LV1</td>
+                                    <td className='py-2 px-4'>1</td>
+                                    <td className='py-2 px-4'>$3</td>
+                                </tr>
+                                <tr className='text-center'>
                                     <td className='py-2 px-4'>LV1</td>
                                     <td className='py-2 px-4'>1</td>
                                     <td className='py-2 px-4'>$3</td>
