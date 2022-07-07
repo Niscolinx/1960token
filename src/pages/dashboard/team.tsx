@@ -27,7 +27,7 @@ function team() {
     return (
         <div className='h-[71vh]'>
             <div className='py-5 px-2 grid'>
-                <div className='flex justify-around bg-red-400 '>
+                <div className='flex justify-around bg-orange-300 '>
                     <div className='grid justify-items-center'>
                         <p>Referral Income</p>
                         <p>0</p>
