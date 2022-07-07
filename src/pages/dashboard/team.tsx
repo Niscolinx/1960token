@@ -32,6 +32,10 @@ function team() {
                         <p>Referral Income</p>
                         <p>0</p>
                     </div>
+                    <div className="grid">
+                        <p>Mine/Video Income</p>
+                        <p>0</p>
+                    </div>
                 </div>
             </div>
         </div>
