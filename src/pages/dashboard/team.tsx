@@ -41,7 +41,7 @@ function team() {
                     Transfer
                 </button>
             </div>
-            <div className='grid'>
+            <div className='grid px-2'>
                 <h3>Team Details</h3>
                 <div className='grid'>
                     <p>
@@ -51,6 +51,16 @@ function team() {
                     <div className='grid bg-blue-700'>
                         <table>
                             <tbody>
+                                <tr>
+                                    <td className='py-2 px-4'>LV1</td>
+                                    <td className='py-2 px-4'>1</td>
+                                    <td className='py-2 px-4'>$3</td>
+                                </tr>
+                                <tr>
+                                    <td className='py-2 px-4'>LV1</td>
+                                    <td className='py-2 px-4'>1</td>
+                                    <td className='py-2 px-4'>$3</td>
+                                </tr>
                                 <tr>
                                     <td className='py-2 px-4'>LV1</td>
                                     <td className='py-2 px-4'>1</td>
