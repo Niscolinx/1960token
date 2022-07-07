@@ -41,9 +41,9 @@ function team() {
                     Transfer
                 </button>
             </div>
-            <div className='grid justify-center'>
+            <div className='grid'>
                 <h3>Team Details</h3>
-                <div className='grid justify-items-center'>
+                <div className='grid'>
                     <p>
                         Total Referral: <span>32</span>
                     </p>
@@ -51,14 +51,19 @@ function team() {
                     <div className='grid bg-blue-700'>
                         <table>
                             <tr>
-                                <td>Emil</td>
-                                <td>Tobias</td>
-                                <td>Linus</td>
+                                <td className='py-2 px-4'>LV1</td>{' '}
+                                <td className='py-2 px-4'>1</td>{' '}
+                                <td className='py-2 px-4'>$3</td>
                             </tr>
                             <tr>
-                                <td>16</td>
-                                <td>14</td>
-                                <td>10</td>
+                                <td className='py-2 px-4'>LV1</td>{' '}
+                                <td className='py-2 px-4'>1</td>{' '}
+                                <td className='py-2 px-4'>$3</td>
+                            </tr>
+                            <tr>
+                                <td className='py-2 px-4'>LV1</td>{' '}
+                                <td className='py-2 px-4'>1</td>{' '}
+                                <td className='py-2 px-4'>$3</td>
                             </tr>
                         </table>
                         <div className='grid'>
