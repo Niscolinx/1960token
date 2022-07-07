@@ -42,9 +42,8 @@ function team() {
                 </button>
             </div>
             <div className='grid px-2'>
-                <h3>Team Details</h3>
                 <div className='grid'>
-                    <p>
+                    <p className='justify-self-center'>
                         Total Referral: <span>32</span>
                     </p>
 
