@@ -41,7 +41,7 @@ function team() {
                     Transfer
                 </button>
             </div>
-            <div className='grid'>
+            <div className='grid justify-center'>
                 <h3>Team Details</h3>
                 <div className='grid'>
                     <p>
