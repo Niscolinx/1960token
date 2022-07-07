@@ -41,7 +41,7 @@ function team() {
                     Transfer
                 </button>
             </div>
-            <div className='grid px-2'>
+            <div className='grid px-2 mt-8'>
                 <div className='grid'>
                     <p className='justify-self-center'>
                         Total Referral: <span>32</span>
