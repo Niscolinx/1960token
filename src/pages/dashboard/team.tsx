@@ -43,7 +43,7 @@ function team() {
             </div>
             <div className='grid px-2 mt-8'>
                 <div className='grid'>
-                    <p className='justify-self-center'>
+                    <p className='justify-self-center font-semibold'>
                         Total Referral: <span>32</span>
                     </p>
 
