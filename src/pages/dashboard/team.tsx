@@ -49,20 +49,38 @@ function team() {
                     </p>
 
                     <div className='grid'>
+                        <table>
+                            <tr>
+                                <td>Emil</td>
+                                <td>Tobias</td>
+                                <td>Linus</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>14</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
                         <div className='grid'>
                             <p>
-                                <span className='py-2 px-4'>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
+                                <span className='py-2 px-4'>LV1</span>{' '}
+                                <span className='py-2 px-4'>1</span>{' '}
+                                <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                         <div className='flex'>
                             {' '}
                             <p>
-                                <span className='py-2 px-4'>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
+                                <span className='py-2 px-4'>LV1</span>{' '}
+                                <span className='py-2 px-4'>1</span>{' '}
+                                <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                         <div className='flex'>
                             <p>
-                                <span className='py-2 px-4'>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
+                                <span className='py-2 px-4'>LV1</span>{' '}
+                                <span className='py-2 px-4'>1</span>{' '}
+                                <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                     </div>
