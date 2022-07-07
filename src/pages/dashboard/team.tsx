@@ -47,6 +47,8 @@ function team() {
                     <div className="grid">
                         <div className="flex">
                             <p><span>LV1</span> <span>1</span> <span>$3</span></p>
+                            <p><span>LV1</span> <span>1</span> <span>$3</span></p>
+                            <p><span>LV1</span> <span>1</span> <span>$3</span></p>
                         </div>
                         <div className="flex"></div>
                         <div className="flex"></div>
