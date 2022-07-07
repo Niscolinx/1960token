@@ -48,7 +48,7 @@ function team() {
                         Total Referral: <span>32</span>
                     </p>
 
-                    <div className='grid bg-blue-700'>
+                    <div className='grid'>
                         <table>
                             <tbody>
                                 <tr className='text-center'>
