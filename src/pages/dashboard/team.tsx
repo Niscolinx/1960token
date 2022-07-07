@@ -56,7 +56,7 @@ function team() {
                                     <td className='py-2 px-4'>1</td>
                                     <td className='py-2 px-4'>$3</td>
                                 </tr>
-                                <tr className='text-center border-b border-t border-gray-600 light:border-gray-400'>
+                                <tr className='text-center border-b border-t border-gray-700 light:border-gray-300'>
                                     <td className='py-2 px-4'>LV1</td>
                                     <td className='py-2 px-4'>1</td>
                                     <td className='py-2 px-4'>$3</td>
