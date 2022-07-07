@@ -43,7 +43,7 @@ function team() {
             </div>
             <div className='grid justify-center'>
                 <h3>Team Details</h3>
-                <div className='grid justify-center'>
+                <div className='grid justify-items-center'>
                     <p>
                         Total Referral: <span>32</span>
                     </p>
