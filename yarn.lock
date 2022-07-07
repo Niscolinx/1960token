@@ -1776,11 +1776,6 @@ esutils@^2.0.2:
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-fancy-canvas@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/fancy-canvas/-/fancy-canvas-0.2.2.tgz#33fd4976724169a1eda5015f515a2a1302d1ec91"
-  integrity sha512-50qi8xA0QkHbjmb8h7XQ6k2fvD7y/yMfiUw9YTarJ7rWrq6o5/3CCXPouYk+XSLASvvxtjyiQLRBFt3qkE3oyA==
-
 fast-glob@^3.2.11:
   version "3.2.11"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.11.tgz"
@@ -2028,13 +2023,6 @@ kareem@2.4.1:
   version "2.4.1"
   resolved "https://registry.npmjs.org/kareem/-/kareem-2.4.1.tgz"
   integrity sha512-aJ9opVoXroQUPfovYP5kaj2lM7Jn02Gw13bL0lg9v0V7SaUc0qavPs0Eue7d2DcC3NjqI6QAUElXNsuZSeM+EA==
-
-lightweight-charts@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/lightweight-charts/-/lightweight-charts-3.8.0.tgz#8c41ad7c1c083f18621f11ece7fc1096e131a0d3"
-  integrity sha512-7yFGnYuE1RjRJG9RwUTBz5wvF1QtjBOSW4FFlikr8Dh+/TDNt4ci+HsWSYmStgQUpawpvkCJ3j5/W25GppGj9Q==
-  dependencies:
-    fancy-canvas "0.2.2"
 
 lines-and-columns@^1.1.6:
   version "1.2.4"
@@ -2444,13 +2432,6 @@ react-countdown@^2.3.2:
   integrity sha512-Q4SADotHtgOxNWhDdvgupmKVL0pMB9DvoFcxv5AzjsxVhzOVxnttMbAywgqeOdruwEAmnPhOhNv/awAgkwru2w==
   dependencies:
     prop-types "^15.7.2"
-
-react-crypto-chart@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/react-crypto-chart/-/react-crypto-chart-0.0.6.tgz#64b350d984f34b19e7acde871756a179d30fe05e"
-  integrity sha512-OA0p7vrtDWnn8QeFHyi2Ghn7xHFJW/fz15tO/vc8ogteqrtP2Xl8IJkD1dmLEgfQmeZtRm607sXYeF6tvA/qUA==
-  dependencies:
-    lightweight-charts "^3.8.0"
 
 react-dom@^17.0.2:
   version "17.0.2"
