@@ -66,28 +66,7 @@ function team() {
                                 <td className='py-2 px-4'>$3</td>
                             </tr>
                         </table>
-                        <div className='grid'>
-                            <p>
-                                <span className='py-2 px-4'>LV1</span>{' '}
-                                <span className='py-2 px-4'>1</span>{' '}
-                                <span className='py-2 px-4'>$3</span>
-                            </p>
-                        </div>
-                        <div className='flex'>
-                            {' '}
-                            <p>
-                                <span className='py-2 px-4'>LV1</span>{' '}
-                                <span className='py-2 px-4'>1</span>{' '}
-                                <span className='py-2 px-4'>$3</span>
-                            </p>
-                        </div>
-                        <div className='flex'>
-                            <p>
-                                <span className='py-2 px-4'>LV1</span>{' '}
-                                <span className='py-2 px-4'>1</span>{' '}
-                                <span className='py-2 px-4'>$3</span>
-                            </p>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
