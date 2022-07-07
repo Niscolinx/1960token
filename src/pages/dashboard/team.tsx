@@ -37,7 +37,7 @@ function team() {
                         <p>0</p>
                     </div>
                 </div>
-                <button className='text-center bg-blue-400 just'>Transfer</button>
+                <button className='text-center bg-blue-400'>Transfer</button>
             </div>
         </div>
     )
