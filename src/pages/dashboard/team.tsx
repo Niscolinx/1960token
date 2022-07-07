@@ -43,7 +43,7 @@ function team() {
             </div>
             <div className='grid justify-center'>
                 <h3>Team Details</h3>
-                <div className='grid'>
+                <div className='grid justify-center'>
                     <p>
                         Total Referral: <span>32</span>
                     </p>
@@ -57,12 +57,12 @@ function team() {
                         <div className='flex'>
                             {' '}
                             <p>
-                                <span>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
+                                <span className='py-2 px-4'>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                         <div className='flex'>
                             <p>
-                                <span>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
+                                <span className='py-2 px-4'>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                     </div>
