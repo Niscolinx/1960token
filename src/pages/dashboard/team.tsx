@@ -43,6 +43,10 @@ function team() {
                 <h3>Team Details</h3>
                 <div className="grid">
                     <p>Total Referral: <span>32</span></p>
+
+                    <div className="grid">
+                        
+                    </div>
                 </div>
             </div>
         </div>
