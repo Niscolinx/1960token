@@ -28,16 +28,16 @@ function team() {
         <div className='h-[71vh]'>
             <div className='py-5 px-2'>
                 <div className='flex justify-around bg-red-400 '>
-                    <div className='grid'>
+                    <div className='grid justify-items-center'>
                         <p>Referral Income</p>
                         <p>0</p>
                     </div>
-                    <div className='grid'>
+                    <div className='grid justify-items-center'>
                         <p>Mine/Video Income</p>
                         <p>0</p>
                     </div>
                 </div>
-                <button>Transfer</button>
+                <button className='text-center bg-blue-400'>Transfer</button>
             </div>
         </div>
     )
