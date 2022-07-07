@@ -51,18 +51,18 @@ function team() {
                     <div className='grid'>
                         <div className='grid'>
                             <p>
-                                <span>LV1</span> <span>1</span> <span>$3</span>
+                                <span className='py-2 px-4'>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                         <div className='flex'>
                             {' '}
                             <p>
-                                <span>LV1</span> <span>1</span> <span>$3</span>
+                                <span>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                         <div className='flex'>
                             <p>
-                                <span>LV1</span> <span>1</span> <span>$3</span>
+                                <span>LV1</span> <span className='py-2 px-4'>1</span> <span className='py-2 px-4'>$3</span>
                             </p>
                         </div>
                     </div>
