@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, {useEffect, useState} from 'react'
+import Script from 'next/script'
 
 function trade() {
     const [tradingView, setTradingView] = useState()
@@ -11,8 +12,16 @@ function trade() {
     useEffect(() => {
         console.log({tradingView})
     }, [tradingView])
+    
 
-    return <div className='h-[90vh]'>Trade</div>
+    return (
+        <div className='h-[90vh]'>
+            <Script
+                src='https://s3.tradingview.com/tv.js'
+            ></Script>
+            Trade
+        </div>
+    )
 }
 
 export default trade
