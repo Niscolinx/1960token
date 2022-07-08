@@ -27,10 +27,8 @@ function trade() {
 
     return (
         <div className='h-[90vh]'>
-            <div className="grid h-52">
 
-            <iframe src='/tradingView.html' width='100%' height={'100vh'}></iframe>
-            </div>
+            <iframe src='/tradingView.html' width='100%'></iframe>
         </div>
     )
 }
