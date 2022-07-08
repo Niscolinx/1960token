@@ -3,7 +3,10 @@ import AdvancedChart from '../../tradeviewWidgets/AdvancedRealChart'
 
 function trade() {
     console.log('the window location', window.location)
-    return <div className='h-[90vh]'>Trade</div>
+
+    return <div className='h-[90vh]'>Trade
+        <AdvancedChart/>
+    </div>
 }
 
 export default trade
