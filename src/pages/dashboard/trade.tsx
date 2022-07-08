@@ -6,7 +6,6 @@ import TradingViewWidget, { Themes } from 'react-tradingview-widget'
 
 function trade() {
 
-    console.log('window', tradingView)
     useEffect(() => {
         Array.from(document.getElementsByTagName('iframe')).forEach(
             (iframe) => {
