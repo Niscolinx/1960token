@@ -16,7 +16,7 @@ function trade() {
                     'resize',
                     () => {
                         iframe.height = (
-                            iframe.contentWindow!.document.body.scrollHeight
+                            iframe.contentWindow!.document.body.scrollHeight + 400
                         ).toString()
                     },
                     true
