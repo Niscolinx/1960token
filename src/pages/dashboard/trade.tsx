@@ -6,6 +6,7 @@ function trade() {
     useEffect(() => {
         Array.from(document.getElementsByTagName('iframe')).forEach(
             (iframe) => {
+            
                 iframe.contentWindow.addEventListener(
                     'load',
                     () => {
