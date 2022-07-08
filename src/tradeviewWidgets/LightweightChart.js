@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import Chart from 'kaktana-react-lightweight-charts'
-
+import Chart from '@qognicafinance/react-lightweight-charts'
 export default class App extends Component {
     constructor(props) {
         super(props)
@@ -117,8 +116,6 @@ export default class App extends Component {
     render() {
         return (
             <Chart
-                darkTheme={true}
-                from={'2018-06-25'}
                 options={this.state.options}
                 candlestickSeries={this.state.candlestickSeries}
                 autoWidth
