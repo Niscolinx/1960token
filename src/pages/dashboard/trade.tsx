@@ -5,13 +5,30 @@ import TradingViewWidget, { Themes } from 'react-tradingview-widget'
 
 
 function trade() {
-    const [tradingView, setTradingView] = useState({})
-
-    // useEffect(() => {
-    //      axios.get('https://s3.tradingview.com/tv.js').then(({data}) => setTradingView(data)).catch(err => console.log(err))
-    // }, [])
 
     console.log('window', tradingView)
+    useEffect(() => {
+        Array.from(document.getElementsByTagName('iframe')).forEach(
+            (iframe) => {
+                iframe.contentWindow.addEventListener(
+                    'load',
+                    () => {
+                        const doc = iframe.contentWindow.document
+                        iframe.height = doc.body.scrollHeight
+                    },
+                    true
+                )
+                iframe.contentWindow.addEventListener(
+                    'resize',
+                    () => {
+                        iframe.height =
+                            iframe.contentWindow.document.body.scrollHeight + 40
+                    },
+                    true
+                )
+            }
+        )
+    }, [])
 
     return (
         <div className='h-[90vh]'>
