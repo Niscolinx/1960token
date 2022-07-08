@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react'
 
-
 function trade() {
-
     useEffect(() => {
         Array.from(document.getElementsByTagName('iframe')).forEach(
             (iframe) => {
-            
-                iframe.contentWindow.addEventListener(
+                iframe.contentWindow!.addEventListener(
                     'load',
                     () => {
-                        const doc = iframe.contentWindow.document
-                        iframe.height = doc.body.scrollHeight
+                        const doc = iframe.contentWindow!.document
+                        iframe.height = doc.body.scrollHeight.toString()
                     },
                     true
                 )
-                iframe.contentWindow.addEventListener(
+                iframe.contentWindow!.addEventListener(
                     'resize',
                     () => {
-                        iframe.height =
-                            iframe.contentWindow.document.body.scrollHeight + 40
+                        iframe.height = (
+                            iframe.contentWindow!.document.body.scrollHeight +
+                            40
+                        ).toString()
                     },
                     true
                 )
