@@ -12,6 +12,7 @@ import { store, persistedStore } from '../store/app/store'
 LogRocket.init('u0nffn/1960token');
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+   
     return (
         <>
             <SessionProvider session={session}>
