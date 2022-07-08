@@ -1,5 +1,5 @@
 import React from 'react'
-//import AdvancedChart from '../../tradeviewWidgets/AdvancedRealChart'
+import AdvancedChart from '../../tradeviewWidgets/AdvancedRealChart'
 
 function trade() {
     console.log('the window location', window.location)
