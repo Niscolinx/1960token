@@ -16,7 +16,7 @@ function trade() {
                     'resize',
                     () => {
                         iframe.height = (
-                            iframe.contentWindow!.document.body.scrollHeight + 400
+                            iframe.contentWindow!.document.body.scrollHeight
                         ).toString()
                     },
                     true
@@ -28,7 +28,7 @@ function trade() {
     return (
         <div className='h-[90vh]'>
 
-            <iframe src='/tradingView.html' width='100%'></iframe>
+            <iframe src='/tradingView.html' width='100%' height={'100vh'}></iframe>
         </div>
     )
 }
