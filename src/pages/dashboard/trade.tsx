@@ -28,7 +28,7 @@ function trade() {
     return (
         <div className='h-[90vh]'>
 
-            <iframe src='/tradingView.html' width='100%' height={'600px'}/>
+            <iframe src='/tradingView.html' width='100%' style={{height: '60vh'}}/>
         </div>
     )
 }
