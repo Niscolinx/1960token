@@ -39,8 +39,7 @@ const Register = () => {
 
         let isError = false
         for (let [key, value] of formData.entries()) {
-            console.log({key}, {value})
-            if (!value) {
+            if (!value && key !== 'referral') {
                 isError = true
                 setMessage({
                     value: "Value can't be empty",
