@@ -23,14 +23,22 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 username,
             })
             const existingPhoneNumber = await User.findOne({ phoneNumber })
-            const checkReferral = await User.findOne({referral})
-
+            
             if(referral){
                 console.log("referral added")
+                const checkReferral = await User.findOne({referral})
+
+                if(!checkReferral){
+                    console.log("referral not found")
+                }else{
+                    console.log('referral exists')
+                }
             }
             else{
-                
+                console.log('referral not added')
             }
+
+            return
 
 
             if (existingUserEmail) {
