@@ -23,6 +23,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 username,
             })
             const existingPhoneNumber = await User.findOne({ phoneNumber })
+            const checkReferral = await User.findOne({})
 
             if (existingUserEmail) {
                  return res.status(401).json({
