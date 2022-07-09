@@ -13,6 +13,7 @@ export interface IUser {
     referral: string
     status: string
     password: string
+    referrals: Types.ObjectId[]
     pendingWithdrawals: Types.ObjectId[]
     pendingDeposits: Types.ObjectId[]
     totalWithdrawals: Types.ObjectId[]
