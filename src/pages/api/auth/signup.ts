@@ -63,7 +63,6 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             })
 
             const verifyStored = await storeUser.save()
-            console.log({ verifyStored })
 
             if (verifyStored) {
                 res.status(201).json({
