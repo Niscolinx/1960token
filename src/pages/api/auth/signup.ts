@@ -29,7 +29,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 const checkReferral = await User.findOne({username: referral})
 
                 if(!checkReferral){
-                     return res.json({
+                     return res.status(401).json({
                          message: 'Referral not found',
                      })
                 }else{
