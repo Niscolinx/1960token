@@ -277,7 +277,7 @@ const Index = () => {
                             </AnimationOnScroll>
                             <div className='grid md:justify-items-center'>
                                 <AnimationOnScroll animateIn='animate__slideInRight'>
-                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
+                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black md:text-center'>
                                         Affiliate Referral
                                     </h3>
                                     <p className='md:text-center light:text-[#1a1a2d]'>
@@ -296,7 +296,7 @@ const Index = () => {
                             </AnimationOnScroll>
                             <div className='grid md:justify-items-center'>
                                 <AnimationOnScroll animateIn='animate__slideInRight'>
-                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
+                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black md:text-center'>
                                         Entertainment
                                     </h3>
                                     <p className='md:text-center light:text-[#1a1a2d]'>
@@ -313,7 +313,7 @@ const Index = () => {
                             </AnimationOnScroll>
                             <div className='grid md:justify-items-center'>
                                 <AnimationOnScroll animateIn='animate__slideInRight'>
-                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black'>
+                                    <h3 className='text-2xl font-semibold text-white pb-2 light:text-black md:text-center'>
                                         Team Building
                                     </h3>
                                     <p className='md:text-center light:text-[#1a1a2d]'>
