@@ -69,8 +69,8 @@ const userSchema = new Schema<IUser>(
         },
         referrals: [
             {
-                type: Schema.Types.ObjectId,
-                ref: 'userReferrals',
+                
+                
             },
         ],
         pendingDeposits: [
