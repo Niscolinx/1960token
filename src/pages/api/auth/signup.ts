@@ -28,7 +28,9 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 const checkReferral = await User.findOne({username: referral})
 
                 if(!checkReferral){
-                    console.log("referral not found")
+                     return res.json({
+                         message: 'Referral not found',
+                     })
                 }else{
                     console.log('referral exists', checkReferral)
                 }
@@ -37,9 +39,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 console.log('referral not added')
             }
 
-            return res.json({
-                message: 'working on referral'
-            })
+           
 
 
             if (existingUserEmail) {
