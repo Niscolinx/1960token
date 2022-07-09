@@ -15,9 +15,8 @@ function trade() {
                 iframe.contentWindow!.addEventListener(
                     'resize',
                     () => {
-                        iframe.height = (
-                            iframe.contentWindow!.document.body.scrollHeight
-                        ).toString()
+                        iframe.height =
+                            iframe.contentWindow!.document.body.scrollHeight.toString()
                     },
                     true
                 )
@@ -27,8 +26,13 @@ function trade() {
 
     return (
         <div className='h-[90vh]'>
-
-            <iframe src='/tradingView.html' width='100%' style={{height: '60vh'}}/>
+            <div className='grid mt-4'>
+                <iframe
+                    src='/tradingView.html'
+                    width='100%'
+                    style={{ height: '70vh' }}
+                />
+            </div>
         </div>
     )
 }
