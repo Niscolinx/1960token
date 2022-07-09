@@ -26,7 +26,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             
             if(referral){
                 console.log("referral added")
-                const checkReferral = await User.findOne({referral})
+                const checkReferral = await User.findOne({username: referral})
 
                 if(!checkReferral){
                     console.log("referral not found")
