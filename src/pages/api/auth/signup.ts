@@ -38,7 +38,9 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 console.log('referral not added')
             }
 
-            return
+            return res.json({
+                message: 'working on referral'
+            })
 
 
             if (existingUserEmail) {
