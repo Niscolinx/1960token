@@ -36,9 +36,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     console.log('referral exists', checkReferral)
                 }
             }
-            else{
-                console.log('referral not added')
-            }
+            
 
            
 
