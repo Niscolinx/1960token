@@ -31,8 +31,6 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                      return res.status(401).json({
                          message: 'Referral not found',
                      })
-                }else{
-                    console.log('referral exists', checkReferral)
                 }
             }
             
