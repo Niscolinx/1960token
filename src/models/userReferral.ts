@@ -8,6 +8,10 @@ const userReferral = new Schema(
             type: Number,
             required: true,
         },
+        level: {
+            type: Number,
+            required: true
+        },
        
         referral: {
             type: Schema.Types.ObjectId,
