@@ -54,6 +54,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                         message: 'Referral not found',
                     })
                 } else {
+                    console.log('referral found')
                     const userReferral = new UserReferral({
                         username,
                         level: 1,
@@ -67,6 +68,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     checkReferral.referral.push(referredUser)
 
                     await checkReferral.save()
+
+                    console.log({checkReferral})
 
                     if(checkReferral.upliner){
                         console.log("user upliner", checkReferral.upliner)
