@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { IoIosPeople } from 'react-icons/io'
 import { ImProfile } from 'react-icons/im'
 import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useAppDispatch } from '../../store/app/hooks'
 import { getUser } from '../../store/features/user/UserSlice'
 
@@ -14,11 +14,17 @@ const Home = () => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-    useEffect(() => {
-        if (session) {
-            dispatch(getUser(session))
-        }
-    }, [session])
+  const memoizedCallback = useCallback(() => {
+      console.log('useCallback...........')
+      if (session) {
+          return dispatch(getUser(session))
+      }
+  }, [session])
+
+  useMemo(() => {
+      console.log('useMemo.............')
+      return memoizedCallback()
+  }, [])
 
     useEffect(() => {
         if (theme === 'dark') {
