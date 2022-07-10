@@ -15,14 +15,17 @@ function team() {
       const memoizedCallback = useCallback(
         () => {
           if (session) {
-              dispatch(getUser(session))
+              return dispatch(getUser(session))
           }
         },
         [session]
       )
      
+      useEffect(() => {
+        return memoizedCallback()
+      }, [])
 
-      console.log('team',{user})
+      console.log('team', memoizedCallback())
 
     useEffect(() => {
         if (theme === 'dark') {
