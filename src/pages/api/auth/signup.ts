@@ -56,6 +56,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 } else {
                     const userReferral = new UserReferral({
                         username,
+                        referral: checkReferral
                     })
                 }
             }
