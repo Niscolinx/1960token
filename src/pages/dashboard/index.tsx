@@ -1,18 +1,27 @@
-import { getSession, GetSessionParams } from 'next-auth/react'
+import { getSession, GetSessionParams, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { IoIosPeople } from 'react-icons/io'
 import { ImProfile } from 'react-icons/im'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
+import { useAppDispatch } from '../../store/app/hooks'
+import { getUser } from '../../store/features/user/UserSlice'
 
 const Home = () => {
+    const { data: session } = useSession()
+    const dispatch = useAppDispatch()
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     useEffect(() => {
-        if (theme === 'dark') {
+        if (session) {
+            dispatch(getUser(session))
+        }
+    }, [session])
 
+    useEffect(() => {
+        if (theme === 'dark') {
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
                 boxShadow: `7px 7px 14px #161625,
