@@ -72,8 +72,6 @@ const Register = () => {
 
         setError(isError)
         if (!isError) {
-            console.log('sending protocol')
-            console.log({ password, phoneNumber, username, email })
             axios
                 .post('/api/auth/signup', {
                     username: username.toLowerCase().trim(),
