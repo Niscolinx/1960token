@@ -13,10 +13,14 @@ const userReferral = new Schema(
             required: true
         },
        
-   
+        referral: {
+            type: Schema.Types.ObjectId,
+            ref: 'users',
+            required: true,
+        },
     },
     { timestamps: true }
 )
 
-export default models.user || model('userReferral', userReferral)
+export default models.userReferral || model('userReferral', userReferral)
 
