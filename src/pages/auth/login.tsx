@@ -18,8 +18,8 @@ interface LoginProps {
 const Login = ({ providers }: LoginProps) => {
     type message = { value: string; type?: string; style?: string }
 
-    const [emailOrUsername, setEmailOrUsername] = useState('hello@hello.com')
-    const [password, setPassword] = useState('testing')
+    const [emailOrUsername, setEmailOrUsername] = useState('')
+    const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
