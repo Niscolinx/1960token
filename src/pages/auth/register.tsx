@@ -8,7 +8,7 @@ const Register = () => {
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
-    const [phoneNumber, setPhoneNumber] = useState<number>()
+    const [phoneNumber, setPhoneNumber] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [referral, setReferral] = useState('')
@@ -62,7 +62,11 @@ const Register = () => {
             }
 
             if(key === 'phoneNumber'){
-
+                if(typeof value !== 'number'){
+                    isError = true
+                    setErrorFields((oldArr) => [...oldArr, key])
+                    setLoading(false)
+                }
             }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
