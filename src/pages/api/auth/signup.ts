@@ -59,7 +59,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
                 console.log({referredUser})
 
-        checkReferral.referral.push(referredUser)
+        checkReferral.referrals.push(referredUser)
 
         await checkReferral.save()
 
