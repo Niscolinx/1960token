@@ -2,16 +2,13 @@ import Mongoose from './utils'
 
 const { Schema } = Mongoose
 
-const withdrawalSchema = new Schema(
+const userReferral = new Schema(
     {
-        amount: {
+        username: {
             type: Number,
             required: true,
         },
-        currency: {
-            type: String,
-            required: true,
-        },
+       
         creator: {
             type: Schema.Types.ObjectId,
             ref: 'users',
@@ -21,4 +18,4 @@ const withdrawalSchema = new Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('withdrawal', withdrawalSchema)
+module.exports = mongoose.model('userRerral', userReferral)
