@@ -47,7 +47,7 @@ function earn() {
    useMemo(() => {
        console.log('useMemo.............')
        return memoizedCallback()
-   }, [])
+   },[])
 
    console.log({fetchedUser})
 
