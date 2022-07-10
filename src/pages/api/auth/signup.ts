@@ -50,26 +50,21 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 console.log('referral found')
                 const userReferral = {
                     username,
-                    level: 1
+                    level: 1,
                 }
 
-                
+                checkReferral.referrals.push(userReferral)
 
-                console.log({userReferral})
+                await checkReferral.save()
 
-        checkReferral.referrals.push(userReferral)
+                console.log({ checkReferral })
 
-        await checkReferral.save()
-
-        console.log({checkReferral})
-
-        if(checkReferral.upliner){
-            console.log("user upliner", checkReferral.upliner)
-        }
-        else{
-            console.log('no upliner')
-         }
-         }
+                if (checkReferral.upliner) {
+                    console.log('user upliner', checkReferral.upliner)
+                } else {
+                    console.log('no upliner')
+                }
+            }
         }
 
         const storeUser = new User({
@@ -77,7 +72,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             password: await bcrypt.hash(password, 12),
             username,
             phoneNumber,
-            upliner: referral
+            upliner: referral,
         })
 
         const verifyStored = await storeUser.save()
@@ -86,10 +81,9 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             res.status(201).json({
                 message: 'successful',
             })
-        }
-        else{
+        } else {
             res.status(404).json({
-                message: 'failed'
+                message: 'failed',
             })
         }
     } catch (err) {
