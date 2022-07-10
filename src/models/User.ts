@@ -1,7 +1,6 @@
 import Mongoose from './utils'
 
-const {Schema, model, models, Types} = Mongoose
-
+const {Schema, model, models} = Mongoose
 export interface IUser {
     _id: Object
     username: string
@@ -15,11 +14,11 @@ export interface IUser {
     referral: string
     status: string
     password: string
-    referrals: Types.ObjectId[]
-    pendingWithdrawals: Types.ObjectId[]
-    pendingDeposits: Types.ObjectId[]
-    totalWithdrawals: Types.ObjectId[]
-    totalDeposits: Types.ObjectId[]
+    referrals: any[]
+    pendingWithdrawals: any[]
+    pendingDeposits: any[]
+    totalWithdrawals: any[]
+    totalDeposits: any[]
 }
 
 const userSchema = new Schema<IUser>(

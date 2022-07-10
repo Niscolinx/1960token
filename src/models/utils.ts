@@ -1,5 +1,7 @@
 import { Schema, Types, model, models } from 'mongoose'
 
 export default mongoose = {
-    Schema, Types, model, models
+    Schema, model, models
 }
+
+export const Type = Types
