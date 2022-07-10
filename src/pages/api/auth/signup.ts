@@ -51,8 +51,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 console.log('referral found')
                 const userReferral = {
                     username,
-                    level: 1,
-                    referral: checkReferral
+                    level: 1
                 }
 
                 
