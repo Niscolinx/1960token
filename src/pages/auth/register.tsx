@@ -8,7 +8,7 @@ const Register = () => {
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
-    const [phoneNumber, setPhoneNumber] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState<number>()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [referral, setReferral] = useState('')
@@ -84,7 +84,7 @@ const Register = () => {
                 .post('/api/auth/signup', {
                     username: username.toLowerCase().trim(),
                     email: email.toLowerCase().trim(),
-                    phoneNumber: phoneNumber.trim(),
+                    phoneNumber,
                     referral: referral.toLowerCase().trim(),
                     password
                 })
