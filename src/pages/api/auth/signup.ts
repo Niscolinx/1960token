@@ -64,41 +64,41 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
                     console.log({referredUser})
 
-                    checkReferral.referral.push(referredUser)
+                    // checkReferral.referral.push(referredUser)
 
-                    await checkReferral.save()
+                    // await checkReferral.save()
 
-                    console.log({checkReferral})
+                    // console.log({checkReferral})
 
-                    if(checkReferral.upliner){
-                        console.log("user upliner", checkReferral.upliner)
-                    }
-                    else{
-                        console.log('no upliner')
-                    }
+                    // if(checkReferral.upliner){
+                    //     console.log("user upliner", checkReferral.upliner)
+                    // }
+                    // else{
+                    //     console.log('no upliner')
+                    // }
                 }
             }
 
-            const storeUser = new User({
-                email,
-                password: await bcrypt.hash(password, 12),
-                username,
-                phoneNumber,
-                referral
-            })
+            // const storeUser = new User({
+            //     email,
+            //     password: await bcrypt.hash(password, 12),
+            //     username,
+            //     phoneNumber,
+            //     referral
+            // })
 
-            const verifyStored = await storeUser.save()
+            // const verifyStored = await storeUser.save()
 
-            if (verifyStored) {
-                res.status(201).json({
-                    message: 'successful',
-                })
-            }
-            else{
-                res.status(404).json({
-                    message: 'failed'
-                })
-            }
+            // if (verifyStored) {
+            //     res.status(201).json({
+            //         message: 'successful',
+            //     })
+            // }
+            // else{
+            //     res.status(404).json({
+            //         message: 'failed'
+            //     })
+            // }
         } else {
             //Response for other methods other than POST
             res.status(500).json({ message: 'Route not valid' })
