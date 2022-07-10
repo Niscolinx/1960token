@@ -9,7 +9,7 @@ const userReferral = new Schema(
             required: true,
         },
        
-        creator: {
+        referral: {
             type: Schema.Types.ObjectId,
             ref: 'users',
             required: true,
