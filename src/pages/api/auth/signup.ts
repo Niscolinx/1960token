@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import bcrypt from 'bcryptjs'
 import dbConnect from '../../../lib/dbConnect'
 import User from '../../../models/User'
+import UserReferral from '../../../models/userReferral'
 
 async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
     try {
@@ -31,6 +32,11 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                      return res.status(401).json({
                          message: 'Referral not found',
                      })
+                }
+                else{
+                    const userReferral = new UserReferral({
+                        
+                    })
                 }
             }
             

@@ -1,6 +1,6 @@
 import Mongoose from './utils'
 
-const { Schema } = Mongoose
+const { Schema, model, models } = Mongoose
 
 const userReferral = new Schema(
     {
@@ -18,4 +18,5 @@ const userReferral = new Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('userRerral', userReferral)
+export default models.user || model('userReferral', userReferral)
+
