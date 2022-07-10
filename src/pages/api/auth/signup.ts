@@ -59,9 +59,12 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
                 if (checkReferral.upliner) {
                     console.log('user upliner', checkReferral.upliner)
-                } else {
-                    console.log('no upliner')
-                }
+                    const findUpliner = await User.findOne({username: checkReferral.upliner})
+                    
+                    if(findUpliner){
+
+                    }
+                } 
             }
         }
 
