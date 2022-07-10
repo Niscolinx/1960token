@@ -13,7 +13,8 @@ const initialState: IUser = {
     isMining: false,
     miningStartedAt: '',
     role: '',
-    referral: '',
+    upliner: '',
+    referrals: [],
     totalMined: 0,
     portfolio: 0,
     status: 'idle',
@@ -61,6 +62,6 @@ export const UserSlice = createSlice({
     },
 })
 
-export const selectUser = (state: AppState) => state
+export const selectUser = (state: AppState) => state.user
 
 export default UserSlice.reducer
