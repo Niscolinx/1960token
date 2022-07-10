@@ -62,6 +62,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
                     const referredUser = await userReferral.save()
 
+                    console.log({referredUser})
+
                     checkReferral.referral.push(referredUser)
 
                     await checkReferral.save()
