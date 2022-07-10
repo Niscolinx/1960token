@@ -61,13 +61,6 @@ const Register = () => {
                 }
             }
 
-            if(key === 'phoneNumber'){
-                if(typeof value !== 'number'){
-                    isError = true
-                    setErrorFields((oldArr) => [...oldArr, key])
-                    setLoading(false)
-                }
-            }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
                 isError = true
