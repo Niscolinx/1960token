@@ -56,10 +56,12 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 } else {
                     const userReferral = new UserReferral({
                         username,
+                        level: 1,
                         referral: checkReferral
                     })
 
-                    await userReferral.save()
+                    const referredUser = await userReferral.save()
+                    
                 }
             }
 
