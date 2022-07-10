@@ -52,13 +52,17 @@ const Register = () => {
             }
 
             if (key === 'email') {
-                const checkemail = isValidMail(value.toString())
+                const checkEmail = isValidMail(value.toString())
 
-                if (!checkemail) {
+                if (!checkEmail) {
                     isError = true
                     setErrorFields((oldArr) => [...oldArr, key])
                     setLoading(false)
                 }
+            }
+
+            if(key === 'phoneNumber'){
+
             }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
