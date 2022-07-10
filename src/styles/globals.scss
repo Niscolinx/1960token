@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        //background-color: red;
+    //background-color: red;
 }
 
 a {
@@ -70,74 +70,79 @@ a {
 
 //Animations
 
-@keyframes moveInLeft{
-    0%{
+@keyframes moveInLeft {
+    0% {
         opacity: 0;
         transform: translateX(-8rem);
     }
-    80%{
+    80% {
         transform: translateY(1rem);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-@keyframes moveInRight{
-    0%{
+@keyframes moveInRight {
+    0% {
         opacity: 0;
         transform: translateX(8rem);
     }
-    80%{
+    80% {
         transform: translateY(-1rem);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-@keyframes moveInBottom{
-    0%{
+@keyframes moveInBottom {
+    0% {
         opacity: 0;
         transform: translateY(-3rem);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-@keyframes moveInTop{
-    0%{
+@keyframes moveInTop {
+    0% {
         opacity: 0;
         transform: translateY(3rem);
     }
 
     60% {
-        opacity: .4;
+        opacity: 0.4;
         transform: translateX(-4rem);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.animateTop{
+.animateTop {
     animation: moveInBottom 1s ease-in-out;
 }
-.animateBottom{
-    animation: moveInTop 1s cubic-bezier(0.46, 0.03, 0, 1.49)
+.animateBottom {
+    animation: moveInTop 1s cubic-bezier(0.46, 0.03, 0, 1.49);
 }
 
-.animateLeft{
-    animation: moveInLeft .5s ease-in;
+.animateLeft {
+    animation: moveInLeft 0.5s ease-in;
 }
-.animateRight{
-    animation: moveInRight .5s ease-in;
+.animateRight {
+    animation: moveInRight 0.5s ease-in;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
 }
