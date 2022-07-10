@@ -123,7 +123,7 @@ const Register = () => {
                 setEmail(value)
                 break
             case 'phoneNumber':
-                setPhoneNumber(value)
+                setPhoneNumber(Number(value))
                 break
             case 'password':
                 setPassword(value)
