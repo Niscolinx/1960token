@@ -69,6 +69,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                             level: 2,
                         })
 
+                        await secondUpliner.save()
+
                         if (secondUpliner.upliner) {
                             const thirdUpliner = await User.findOne({
                                 username: secondUpliner.upliner,
@@ -80,6 +82,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                                     username,
                                     level: 3,
                                 })
+
+                                await thirdUpliner.save()
                             }
                         }
                     }
