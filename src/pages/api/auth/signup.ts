@@ -67,7 +67,10 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     await checkReferral.save()
 
                     if(checkReferral.upliner){
-                        
+                        console.log("user upliner", checkReferral.upliner)
+                    }
+                    else{
+                        console.log('no upliner')
                     }
                 }
             }
