@@ -59,20 +59,20 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
                 console.log({referredUser})
 
-        // checkReferral.referral.push(referredUser)
+        checkReferral.referral.push(referredUser)
 
-        // await checkReferral.save()
+        await checkReferral.save()
 
-        // console.log({checkReferral})
+        console.log({checkReferral})
 
-        // if(checkReferral.upliner){
-        //     console.log("user upliner", checkReferral.upliner)
-        // }
-        // else{
-        //     console.log('no upliner')
+        if(checkReferral.upliner){
+            console.log("user upliner", checkReferral.upliner)
+        }
+        else{
+            console.log('no upliner')
          }
          }
-        // }
+        }
 
         // const storeUser = new User({
         //     email,
