@@ -49,17 +49,17 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 })
             } else {
                 console.log('referral found')
-                const userReferral = new UserReferral({
+                const userReferral = {
                     username,
                     level: 1,
                     referral: checkReferral
-                })
+                }
 
-                const referredUser = await userReferral.save()
+                
 
-                console.log({referredUser})
+                console.log({userReferral})
 
-        checkReferral.referrals.push(referredUser)
+        checkReferral.referrals.push(userReferral)
 
         await checkReferral.save()
 
