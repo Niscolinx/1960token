@@ -1,7 +1,7 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
-import { useAppDispatch } from '../../store/app/hooks'
+import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import { getUser } from '../../store/features/user/UserSlice'
 
 function team() {
