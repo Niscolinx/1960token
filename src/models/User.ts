@@ -1,3 +1,6 @@
+import Mongoose from './utils'
+
+const {Schema, model, models, Types} = Mongoose
 
 export interface IUser {
     _id: Object
