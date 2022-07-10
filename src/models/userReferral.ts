@@ -5,7 +5,7 @@ const { Schema, model, models } = Mongoose
 const userReferral = new Schema(
     {
         username: {
-            type: Number,
+            type: string,
             required: true,
         },
         level: {
