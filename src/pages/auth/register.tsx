@@ -61,6 +61,7 @@ const Register = () => {
                 }
             }
 
+           
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
                 isError = true
