@@ -1,6 +1,5 @@
 import { getSession, GetSessionParams, useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { GiWallet } from 'react-icons/gi'
 import { IoIosPeople } from 'react-icons/io'
 import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
@@ -8,7 +7,6 @@ import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
 
 const Home = () => {
-    const {data: session} = useSession()
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
