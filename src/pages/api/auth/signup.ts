@@ -72,26 +72,26 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
          }
         }
 
-        // const storeUser = new User({
-        //     email,
-        //     password: await bcrypt.hash(password, 12),
-        //     username,
-        //     phoneNumber,
-        //     referral
-        // })
+        const storeUser = new User({
+            email,
+            password: await bcrypt.hash(password, 12),
+            username,
+            phoneNumber,
+            upliner: referral
+        })
 
-        // const verifyStored = await storeUser.save()
+        const verifyStored = await storeUser.save()
 
-        // if (verifyStored) {
-        //     res.status(201).json({
-        //         message: 'successful',
-        //     })
-        // }
-        // else{
-        //     res.status(404).json({
-        //         message: 'failed'
-        //     })
-        // }
+        if (verifyStored) {
+            res.status(201).json({
+                message: 'successful',
+            })
+        }
+        else{
+            res.status(404).json({
+                message: 'failed'
+            })
+        }
     } catch (err) {
         console.log({ err })
     }
