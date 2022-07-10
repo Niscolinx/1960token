@@ -128,7 +128,7 @@ function earn() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-2xl'>
-                        {fetchedUser.user.totalMined}
+                        {fetchedUser.totalMined}
                     </p>
                 </div>
                 <div className='grid self-center'>
