@@ -1,4 +1,3 @@
-import { Schema, Types, model, models } from 'mongoose'
 
 export interface IUser {
     _id: Object
@@ -70,7 +69,7 @@ const userSchema = new Schema<IUser>(
         referrals: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'userReferral'
+                ref: 'userReferrals'
             },
         ],
         pendingDeposits: [
