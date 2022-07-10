@@ -6,7 +6,7 @@ const Register = () => {
     const router = useRouter()
     type message = { value: string; type?: string; style?: string }
 
-    const [username, setUsername] = useState('hello')
+    const [username, setUsername] = useState('')
     const [email, setEmail] = useState('hello@hello.com')
     const [phoneNumber, setPhoneNumber] = useState('08148233233')
     const [password, setPassword] = useState('testing')
