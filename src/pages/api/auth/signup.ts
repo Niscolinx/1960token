@@ -58,6 +58,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                         username,
                         referral: checkReferral
                     })
+
+                    await userReferral.save()
                 }
             }
 
