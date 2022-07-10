@@ -59,13 +59,16 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
 
                 if (checkReferral.upliner) {
                     console.log('user upliner', checkReferral.upliner)
-                    const findUpliner = await User.findOne({username: checkReferral.upliner})
+                    const secondUpliner = await User.findOne({username: checkReferral.upliner})
                     
-                    if(findUpliner){
-                        findUpliner.referrals.push({
+                    if(secondUpliner){
+                        secondUpliner.referrals.push({
                             username,
                             level: 2
                         })
+
+
+                    const thirdUpliner = 
                     }
                 } 
             }
