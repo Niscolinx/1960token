@@ -14,17 +14,17 @@ const Home = () => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-  const memoizedCallback = useCallback(() => {
-      console.log('useCallback...........')
-      if (session) {
-          return dispatch(getUser(session))
-      }
-  }, [session])
+    const memoizedCallback = useCallback(() => {
+        console.log('useCallback...........')
+        if (session) {
+            return dispatch(getUser(session))
+        }
+    }, [session])
 
-  useMemo(() => {
-      console.log('useMemo.............')
-      return memoizedCallback()
-  }, [])
+    useMemo(() => {
+        console.log('useMemo.............')
+        return memoizedCallback()
+    }, [])
 
     useEffect(() => {
         if (theme === 'dark') {
