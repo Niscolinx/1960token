@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useState,useMemo } from 'react'
+import React, { useEffect, useState,useMemo, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
@@ -12,11 +12,15 @@ function team() {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-      useMemo(() => {
+      const memoizedCallback = useCallback(
+        () => {
           if (session) {
               dispatch(getUser(session))
           }
-      }, [session])
+        },
+        [session]
+      )
+     
 
       console.log('team',{user})
 
