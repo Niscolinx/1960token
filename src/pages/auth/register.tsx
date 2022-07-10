@@ -76,10 +76,10 @@ const Register = () => {
             console.log({ password, phoneNumber, username, email })
             axios
                 .post('/api/auth/signup', {
-                    username: username.toLowerCase(),
-                    email: email.toLowerCase(),
-                    phoneNumber,
-                    referral: referral.toLowerCase(),
+                    username: username.toLowerCase().trim(),
+                    email: email.toLowerCase().trim(),
+                    phoneNumber: phoneNumber.trim(),
+                    referral: referral.toLowerCase().trim(),
                     password
                 })
                 .then(({ data }) => {
