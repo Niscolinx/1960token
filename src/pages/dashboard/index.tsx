@@ -1,7 +1,6 @@
-import { getSession, GetSessionParams, useSession } from 'next-auth/react'
+import { getSession, GetSessionParams } from 'next-auth/react'
 import Link from 'next/link'
 import { IoIosPeople } from 'react-icons/io'
-import { AiFillCarryOut } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
