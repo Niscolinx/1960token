@@ -9,8 +9,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
         await dbConnect()
 
         if (req.method === 'POST') {
-            console.log('checking')
-            //Getting email and password from body
+            console.log('req body', req.body)
             const { email, password, username, phoneNumber, referral } = req.body
             //Validate
             if (!email || !email.includes('@') || !password || !phoneNumber) {
