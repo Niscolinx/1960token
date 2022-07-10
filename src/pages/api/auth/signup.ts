@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import bcrypt from 'bcryptjs'
 import dbConnect from '../../../lib/dbConnect'
 import User from '../../../models/User'
-import UserReferral from '../../../models/userReferral'
 
 async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
     try {
