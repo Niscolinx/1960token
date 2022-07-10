@@ -7,11 +7,11 @@ const Register = () => {
     type message = { value: string; type?: string; style?: string }
 
     const [username, setUsername] = useState('')
-    const [email, setEmail] = useState('hello@hello.com')
-    const [phoneNumber, setPhoneNumber] = useState('08148233233')
-    const [password, setPassword] = useState('testing')
-    const [confirmPassword, setConfirmPassword] = useState('testing')
-    const [referral, setReferral] = useState('tester1')
+    const [email, setEmail] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [referral, setReferral] = useState('')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
