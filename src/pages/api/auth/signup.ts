@@ -8,7 +8,6 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
     try {
         await dbConnect()
 
-        if (req.method === 'POST') {
             console.log('req body', req.body)
             const { email, password, username, phoneNumber, referral } = req.body
             //Validate
@@ -45,24 +44,24 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     message: 'Number already in use',
                 })
             }
-            if (referral) {
-                const checkReferral = await User.findOne({ username: referral })
+            // if (referral) {
+            //     const checkReferral = await User.findOne({ username: referral })
 
-                if (!checkReferral) {
-                    return res.status(401).json({
-                        message: 'Referral not found',
-                    })
-                } else {
-                    console.log('referral found')
-                    const userReferral = new UserReferral({
-                        username,
-                        level: 1,
-                        referral: checkReferral
-                    })
+            //     if (!checkReferral) {
+            //         return res.status(401).json({
+            //             message: 'Referral not found',
+            //         })
+            //     } else {
+            //         console.log('referral found')
+            //         const userReferral = new UserReferral({
+            //             username,
+            //             level: 1,
+            //             referral: checkReferral
+            //         })
 
-                    const referredUser = await userReferral.save()
+            //         const referredUser = await userReferral.save()
 
-                    console.log({referredUser})
+            //         console.log({referredUser})
 
                     // checkReferral.referral.push(referredUser)
 
@@ -76,8 +75,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     // else{
                     //     console.log('no upliner')
                     // }
-                }
-            }
+               // }
+           // }
 
             // const storeUser = new User({
             //     email,
@@ -99,10 +98,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             //         message: 'failed'
             //     })
             // }
-        } else {
-            //Response for other methods other than POST
-            res.status(500).json({ message: 'Route not valid' })
-        }
+        
     } catch (err) {
         console.log({ err })
     }
