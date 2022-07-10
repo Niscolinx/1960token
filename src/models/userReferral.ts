@@ -1,3 +1,6 @@
+import Mongoose from './utils'
+
+const { Schema } = Mongoose
 
 const withdrawalSchema = new Schema(
     {
