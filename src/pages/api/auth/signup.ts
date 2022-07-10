@@ -65,6 +65,10 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     checkReferral.referral.push(referredUser)
 
                     await checkReferral.save()
+
+                    if(checkReferral.upliner){
+                        
+                    }
                 }
             }
 

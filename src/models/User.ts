@@ -11,7 +11,7 @@ export interface IUser {
     role: string
     totalMined: number
     portfolio: number
-    referral: string
+    upliner: string
     status: string
     password: string
     referrals: any[]
@@ -40,7 +40,7 @@ const userSchema = new Schema<IUser>(
             type: String,
             required: true,
         },
-        referral: {
+        upliner: {
             type: String,
         },
         totalMined: {
