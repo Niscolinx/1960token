@@ -70,8 +70,8 @@ const userSchema = new Schema<IUser>(
         },
         referrals: [
             {
-                type: Schema.Types.ObjectId,
-                ref: 'userReferrals'
+                username: String,
+                level: Number
             },
         ],
         pendingDeposits: [
