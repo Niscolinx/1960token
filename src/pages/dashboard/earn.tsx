@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 import ReactPlayer from 'react-player/youtube'
@@ -37,13 +37,19 @@ function earn() {
     //setTokenCount(mineState.tokensCount)
     //}, [mineState])
 
-    useEffect(() => {
-        if (session) {
-            dispatch(getUser(session))
+   const memoizedCallback = useCallback(() => {
+       console.log('useCallback...........')
+       if (session) {
+           return dispatch(getUser(session))
+       }
+   }, [session])
 
-        }
-    }, [session])
+   useMemo(() => {
+       console.log('useMemo.............')
+       return memoizedCallback()
+   }, [])
 
+   console.log({fetchedUser})
 
     useEffect(() => {
         if (theme === 'dark') {
