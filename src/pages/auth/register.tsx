@@ -180,13 +180,13 @@ const Register = () => {
                 <div className='mb-4'>
                     <label
                         className='block text-gray-700 text-sm font-bold mb-2'
-                        htmlFor='email'
+                        htmlFor='phoneNumber'
                     >
                         Phone No
                     </label>
                     <input
                         className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                            error && errorFields.includes('email')
+                            error && errorFields.includes('phoneNumber')
                                 ? 'border-red-500'
                                 : ''
                         }`}
