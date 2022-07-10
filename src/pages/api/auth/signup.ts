@@ -48,12 +48,11 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 })
             } else {
                 console.log('referral found')
-                const userReferral = {
+
+                firstUpliner.referrals.push( {
                     username,
                     level: 1,
-                }
-
-                firstUpliner.referrals.push(userReferral)
+                })
 
                 await firstUpliner.save()
 
