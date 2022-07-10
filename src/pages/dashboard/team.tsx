@@ -18,6 +18,8 @@ function team() {
           }
       }, [session])
 
+      console.log({user})
+
     useEffect(() => {
         if (theme === 'dark') {
             setNeuToUse({
