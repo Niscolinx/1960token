@@ -191,7 +191,7 @@ const Register = () => {
                                 : ''
                         }`}
                         id='phoneNumber'
-                        type='text'
+                        type='tel'
                         name='phoneNumber'
                         required
                         value={phoneNumber}
