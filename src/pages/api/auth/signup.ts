@@ -25,20 +25,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             })
             const existingPhoneNumber = await User.findOne({ phoneNumber })
             
-            if(referral){
-                const checkReferral = await User.findOne({username: referral})
-
-                if(!checkReferral){
-                     return res.status(401).json({
-                         message: 'Referral not found',
-                     })
-                }
-                else{
-                    const userReferral = new UserReferral({
-                        
-                    })
-                }
-            }
+            
             
 
 
@@ -58,6 +45,19 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 return res.status(401).json({
                     message: 'Number already in use',
                 })
+            }
+            if (referral) {
+                const checkReferral = await User.findOne({ username: referral })
+
+                if (!checkReferral) {
+                    return res.status(401).json({
+                        message: 'Referral not found',
+                    })
+                } else {
+                    const userReferral = new UserReferral({
+                        username,
+                    })
+                }
             }
 
             const storeUser = new User({
