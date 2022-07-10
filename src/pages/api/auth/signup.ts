@@ -40,9 +40,9 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             })
         }
         if (referral) {
-            const checkReferral = await User.findOne({ username: referral })
+            const firstUpliner = await User.findOne({ username: referral })
 
-            if (!checkReferral) {
+            if (!firstUpliner) {
                 return res.status(401).json({
                     message: 'Referral not found',
                 })
@@ -53,14 +53,14 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     level: 1,
                 }
 
-                checkReferral.referrals.push(userReferral)
+                firstUpliner.referrals.push(userReferral)
 
-                await checkReferral.save()
+                await firstUpliner.save()
 
-                if (checkReferral.upliner) {
-                    console.log('user upliner', checkReferral.upliner)
+                if (firstUpliner.upliner) {
+                    console.log('user upliner', firstUpliner.upliner)
                     const secondUpliner = await User.findOne({
-                        username: checkReferral.upliner,
+                        username: firstUpliner.upliner,
                     })
 
                     if (secondUpliner) {
@@ -70,6 +70,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                         })
 
                         if (secondUpliner.upliner) {
+                            const thirdUpliner = await User.findOne({username: secondUpliner.})
                         }
                     }
                 }
