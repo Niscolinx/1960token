@@ -2,11 +2,12 @@ import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
-import { getUser } from '../../store/features/user/UserSlice'
+import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
+    const user = useAppSelector(selectUser)
     
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
