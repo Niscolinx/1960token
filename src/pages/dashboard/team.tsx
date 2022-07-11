@@ -115,7 +115,7 @@ function team() {
         setDisplayButton(display ? 'Transfer' : 'Close')
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
     }
 
@@ -167,7 +167,7 @@ function team() {
                                 Portfolio
                             </p>
                         </div>
-                        <button className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8'>
+                        <button className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8' type='submit'>
                             Transfer
                         </button>
                     </form>
