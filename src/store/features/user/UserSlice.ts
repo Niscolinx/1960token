@@ -69,7 +69,7 @@ export const UserSlice = createSlice({
             .addCase(updatePortolio.pending, (state) => {
                 state.status = 'loading'
             })
-            .addCase(updatePortolio.fulfilled, (state) => {
+            .addCase(updatePortolio.fulfilled, (state, action) => {
                 state.status = 'success'
             })
             .addCase(updatePortolio.rejected, (state) => {
