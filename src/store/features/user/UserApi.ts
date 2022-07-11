@@ -13,9 +13,9 @@ export async function userData(
 
 export async function userPortfolio(
     session: nextAuthSession,
-    data: number
+    portfolio: number
 ): Promise<number> {
-    const response = await axios.post('/api/portfolio', {session, data})
+    const response = await axios.post('/api/portfolio', {session, portfolio})
 
     return response.data
 }
