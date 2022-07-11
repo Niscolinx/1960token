@@ -4,12 +4,13 @@ import { IoIosPeople } from 'react-icons/io'
 import { ImProfile } from 'react-icons/im'
 import { useTheme } from 'next-themes'
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import { useAppDispatch } from '../../store/app/hooks'
-import { getUser } from '../../store/features/user/UserSlice'
+import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
+import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 const Home = () => {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
+    const fetchedUser = useAppSelector(selectUser)
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -52,7 +53,7 @@ const Home = () => {
                     style={neuToUse}
                 >
                     <p className='text-sm'>Total Asset</p>
-                    <p className='font-bold text-3xl'>$2312.08</p>
+                    <p className='font-bold text-3xl'>${fetchedUser.portfolio}</p>
                     {/* <button className='bg-green-500 text-[#1a1a2d] rounded px-1 text-sm mt-5'>
                         Withdraw
                     </button> */}
