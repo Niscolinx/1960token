@@ -7,7 +7,7 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
-        const fetchedUser = useAppSelector(selectUser)
+    const fetchedUser = useAppSelector(selectUser)
 
     const [referrals, setReferrals] = useState<TeamRow[]>()
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
@@ -76,16 +76,13 @@ function team() {
                     teamNumber += 1
                     teamIncome += 1
                 }
-
-            
             })
         }
 
-        
         setReferrals([teamRow1, teamRow2, teamRow3])
         setReferralTotalNumberAndIncome({
             teamIncome,
-            teamNumber
+            teamNumber,
         })
     }, [user])
 
@@ -110,6 +107,8 @@ function team() {
         }
     }, [theme])
 
+    const dropDown = () => {}
+
     return (
         <div className='h-[71vh]'>
             <div className='py-5 px-2 grid'>
@@ -125,8 +124,16 @@ function team() {
                         <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
-                <div className="grid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nam velit dolorem non voluptate provident quos, sit nemo maxime quasi autem debitis harum. Quisquam quod laborum sequi doloribus accusantium. Ex.</div>
-                <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'>
+                <div className='grid'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur nam velit dolorem non voluptate provident quos, sit
+                    nemo maxime quasi autem debitis harum. Quisquam quod laborum
+                    sequi doloribus accusantium. Ex.
+                </div>
+                <button
+                    className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'
+                    onClick={dropDown}
+                >
                     Transfer
                 </button>
             </div>
@@ -137,9 +144,7 @@ function team() {
                         style={neuToUse}
                     >
                         Total Referral:{' '}
-                        <span>
-                            {referralTotalNumberAndIncome?.teamNumber}
-                        </span>
+                        <span>{referralTotalNumberAndIncome?.teamNumber}</span>
                     </p>
 
                     <div className='grid'>
