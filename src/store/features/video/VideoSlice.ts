@@ -27,7 +27,7 @@ export const VideoSlice = createSlice({
     name: 'videoEnded',
     initialState,
     reducers: {
-        clearTotalMined: (state, action) => {
+        clearVideoM: (state, action) => {
             state.totalMined = 0
         },
     },
@@ -49,7 +49,7 @@ export const VideoSlice = createSlice({
     },
 })
 
-export const {clearTotalMined} = VideoSlice.actions
+export const {clearVideoM} = VideoSlice.actions
 
 export const selectVideo = (state: AppState) => state.video as videoState
 
