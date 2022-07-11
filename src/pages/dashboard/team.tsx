@@ -26,35 +26,35 @@ function team() {
     }, [session])
 
     useEffect(() => {
-        const teamRow1:TeamRow = {
+        const teamRow1: TeamRow = {
             totalMember: 0,
             totalAmount: 0,
-            level: 1
+            level: 1,
         }
-        const teamRow2:TeamRow = {
+        const teamRow2: TeamRow = {
             totalMember: 0,
             totalAmount: 0,
-            level: 2
+            level: 2,
         }
-        const teamRow3:TeamRow = {
+        const teamRow3: TeamRow = {
             totalMember: 0,
             totalAmount: 0,
-            level: 3
+            level: 3,
         }
-     
+
         if (user.referrals.length > 0) {
             //setReferrals(user.referrals)
             user.referrals.forEach((val, i) => {
-                console.log({val})
-                if(val.level === 1){
+                console.log({ val })
+                if (val.level === 1) {
                     teamRow1.totalMember += 1
                     teamRow1.totalAmount += 3
                 }
-                if(val.level === 2){
+                if (val.level === 2) {
                     teamRow2.totalMember += 1
                     teamRow2.totalAmount += 1.5
                 }
-                if(val.level === 3){
+                if (val.level === 3) {
                     teamRow3.totalMember += 1
                     teamRow3.totalAmount += 1
                 }
@@ -113,29 +113,23 @@ function team() {
 
                     <div className='grid'>
                         <table>
-                        
                             <tbody>
+                                {referrals &&
+                                    referrals.map((val, i) => {
+                                        ;<tr
+                                            className={`text-center ${
+                                                i === 1
+                                                    ? 'border-b border-t border-gray-700 light:border-gray-400'
+                                                    : ''
+                                            }`}
+                                        >
+                                            <td className='py-2 px-4'>LV1</td>
+                                            <td className='py-2 px-4'></td>
+                                            <td className='py-2 px-4'>$3</td>
+                                        </tr>
+                                    })}
 
-                                <tr className='text-center '>
-                                    <td className='py-2 px-4'>LV1</td>
-                                    <td className='py-2 px-4'>{referrals}</td>
-                                    <td className='py-2 px-4'>$3</td>
-                                    {/* <td className='py-2 px-4 max-w-3 '>
-                                        <button className='bg-blue-400 dark:text-[#1a1a2d] rounded-lg px-4'>
-                                            View
-                                        </button>
-                                    </td> */}
-                                </tr>
-                                <tr className='text-center border-b border-t border-gray-700 light:border-gray-400'>
-                                    <td className='py-2 px-4'>LV2</td>
-                                    <td className='py-2 px-4'>1</td>
-                                    <td className='py-2 px-4'>$3</td>
-                                </tr>
-                                <tr className='text-center'>
-                                    <td className='py-2 px-4'>LV3</td>
-                                    <td className='py-2 px-4'>1</td>
-                                    <td className='py-2 px-4'>$3</td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
