@@ -2,7 +2,7 @@ import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
-import { getUser, selectUser } from '../../store/features/user/UserSlice'
+import { getUser, selectUser, updatePortolio } from '../../store/features/user/UserSlice'
 import { TbArrowsSort } from 'react-icons/tb'
 import { clearMineTokens } from '../../store/features/mine/MinerSlice'
 import { clearVideoTokens } from '../../store/features/video/VideoSlice'
@@ -131,6 +131,7 @@ function team() {
 
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
+        dispatch(updatePortolio({userSession: session!, data: toPortolio}))
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
