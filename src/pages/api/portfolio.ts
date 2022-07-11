@@ -21,7 +21,7 @@ export default async function StartMining(
 
     const user = await User.findOne({ email })
 
-    user.portfolio = portfolio
+    user.portfolio += portfolio
     await user.save()
 
     return res.json({
