@@ -147,7 +147,7 @@ function team() {
                                         return (
                                             <tr
                                                 key={i}
-                                                className={`text-center ${
+                                                className={`text-center font-bold ${
                                                     i === 1
                                                         ? 'border-b border-t border-gray-700 light:border-gray-400'
                                                         : ''
