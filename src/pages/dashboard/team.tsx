@@ -158,8 +158,8 @@ function team() {
                                     Mine/Video Income
                                 </option>
                             </select>
-                            <TbArrowsSort className='text-xl' />
-                            <p className='text-3xl py-4 px-6 bg-orange-300 font-bold rounded-lg'>
+                            <TbArrowsSort className='text-3xl' />
+                            <p className='text-2xl py-4 px-6 bg-orange-300 font-bold rounded-lg'>
                                 Portfolio
                             </p>
                         </div>
