@@ -17,7 +17,7 @@ function team() {
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
         useState<TeamTotalNumberAndIncome>()
     const [neuToUse, setNeuToUse] = useState<{}>()
-    const [display, toggleDisplay] = useState(true)
+    const [display, toggleDisplay] = useState(false)
     const [displayButton, setDisplayButton] = useState('transfer')
 
     type TeamRow = {
