@@ -8,6 +8,7 @@ function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
     const [referrals, setReferrals] = useState<TeamRow[]>()
+    const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] = useState()
     const user = useAppSelector(selectUser)
 
     const { theme } = useTheme()
@@ -45,7 +46,6 @@ function team() {
         if (user.referrals.length > 0) {
             //setReferrals(user.referrals)
             user.referrals.forEach((val, i) => {
-                console.log({ val })
                 if (val.level === 1) {
                     teamRow1.totalMember += 1
                     teamRow1.totalAmount += 3
