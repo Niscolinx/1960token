@@ -35,7 +35,7 @@ function team() {
         }
         const teamRow3:TeamRow = {
             totalMember: 1,
-            totalAmount: 3
+            totalAmount: 0
         }
      
         if (user.referrals.length > 0) {
@@ -44,6 +44,15 @@ function team() {
                 console.log({val})
                 if(val.level === 1){
                     teamRow1.totalMember += 1
+                    teamRow2.totalAmount += 3
+                }
+                if(val.level === 2){
+                    teamRow1.totalMember += 1
+                    teamRow2.totalAmount += 1.5
+                }
+                if(val.level === 3){
+                    teamRow1.totalMember += 1
+                    teamRow2.totalAmount += 1
                 }
             })
         }
