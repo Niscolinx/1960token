@@ -117,6 +117,7 @@ function team() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        
     }
 
     return (
