@@ -125,7 +125,7 @@ function team() {
                         <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
-                <div className='grid'>
+                <div className='grid' style={{width: display ? '100%' : '0'}}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tenetur nam velit dolorem non voluptate provident quos, sit
                     nemo maxime quasi autem debitis harum. Quisquam quod laborum
