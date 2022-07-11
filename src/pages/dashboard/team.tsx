@@ -19,8 +19,7 @@ function team() {
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [display, toggleDisplay] = useState(false)
     const [displayButton, setDisplayButton] = useState('Transfer')
-    const [optionReferral, setOptionReferral] = useState('')
-    const [optionVideoAndMine, setOptionVideoAndMine] = useState('')
+    const [selectedOption, setSelectedOption] = useState('')
 
     type TeamRow = {
         totalMember: number
