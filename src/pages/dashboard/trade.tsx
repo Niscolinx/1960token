@@ -4,28 +4,22 @@ function trade() {
     useEffect(() => {
         Array.from(document.getElementsByTagName('iframe')).forEach(
             (iframe) => {
-                console.log({ iframe })
-                if (iframe.contentWindow)
-                    iframe.contentWindow.addEventListener(
-                        'load',
-                        () => {
-                            if (iframe.contentWindow?.document) {
-                                const doc = iframe.contentWindow.document
-                                iframe.height = doc.body.scrollHeight.toString()
-                            }
-                        },
-                        true
-                    )
-                if (iframe.contentWindow)
-                    iframe.contentWindow.addEventListener(
-                        'resize',
-                        () => {
-                            if (iframe.contentWindow)
-                                iframe.height =
-                                    iframe.contentWindow.document.body.scrollHeight.toString()
-                        },
-                        true
-                    )
+                iframe.contentWindow!.addEventListener(
+                    'load',
+                    () => {
+                        const doc = iframe.contentWindow!.document
+                        iframe.height = doc.body.scrollHeight.toString()
+                    },
+                    true
+                )
+                iframe.contentWindow!.addEventListener(
+                    'resize',
+                    () => {
+                        iframe.height =
+                            iframe.contentWindow!.document.body.scrollHeight.toString()
+                    },
+                    true
+                )
             }
         )
     }, [])
