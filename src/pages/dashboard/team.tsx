@@ -50,29 +50,29 @@ function team() {
         }
 
         if (user.referrals.length > 0) {
-            let number = 0
-            let income = 0
+            let teamNumber = 0
+            let teamIncome = 0
             user.referrals.forEach((val) => {
                 if (val.level === 1) {
                     teamRow1.totalMember += 1
                     teamRow1.totalAmount += 3
 
-                    number += 1
-                    income += 3
+                    teamNumber += 1
+                    teamIncome += 3
                 }
                 if (val.level === 2) {
                     teamRow2.totalMember += 1
                     teamRow2.totalAmount += 1.5
 
-                    number += 1
-                    income += 3
+                    teamNumber += 1
+                    teamIncome += 3
                 }
                 if (val.level === 3) {
                     teamRow3.totalMember += 1
                     teamRow3.totalAmount += 1
 
-                    number += 1
-                    income += 3
+                    teamNumber += 1
+                    teamIncome += 3
                 }
 
             
@@ -80,6 +80,9 @@ function team() {
         }
 
         setReferrals([teamRow1, teamRow2, teamRow3])
+        setReferralTotalNumberAndIncome({
+            totalReferralNumber: Number
+        })
     }, [user])
 
     console.log({ referrals })
