@@ -125,6 +125,7 @@ function team() {
                         <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
+                <div className="grid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nam velit dolorem non voluptate provident quos, sit nemo maxime quasi autem debitis harum. Quisquam quod laborum sequi doloribus accusantium. Ex.</div>
                 <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'>
                     Transfer
                 </button>
