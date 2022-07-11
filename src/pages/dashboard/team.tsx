@@ -116,20 +116,18 @@ function team() {
                             <tbody>
                                 {referrals &&
                                     referrals.map((val, i) => {
-                                        ;<tr
+                                        return <tr
                                             className={`text-center ${
                                                 i === 1
                                                     ? 'border-b border-t border-gray-700 light:border-gray-400'
                                                     : ''
                                             }`}
                                         >
-                                            <td className='py-2 px-4'>LV1</td>
-                                            <td className='py-2 px-4'></td>
-                                            <td className='py-2 px-4'>$3</td>
+                                            <td className='py-2 px-4'>LV{val.level}</td>
+                                            <td className='py-2 px-4'>{val.totalMember}</td>
+                                            <td className='py-2 px-4'>${val.totalAmount}</td>
                                         </tr>
                                     })}
-
-                                
                             </tbody>
                         </table>
                     </div>
