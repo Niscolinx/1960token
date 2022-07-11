@@ -116,7 +116,7 @@ function team() {
     }
 
     return (
-        <div className='h-[71vh]'>
+        <div className='h-[80vh]'>
             <div className='py-5 px-2 grid'>
                 <div className='flex justify-around bg-orange-300 rounded-t-lg py-5 px-4 dark:text-[#1a1a2d]'>
                     <div className='grid justify-items-center'>
@@ -146,7 +146,7 @@ function team() {
                               }
                     }
                 >
-                    <form className='px-10 py-12 grid'>
+                    <form className='px-10 py-12 grid justify-items-center'>
                         <select
                             className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                         >
