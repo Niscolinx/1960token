@@ -13,18 +13,6 @@ function team() {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-    //   const memoizedCallback = useCallback(
-    //     () => {
-    //       if (session) {
-    //           return dispatch(getUser(session))
-    //       }
-    //     },
-    //     [session]
-    //   )
-
-    //   useMemo(() => {
-    //     return memoizedCallback()
-    //   }, [])
 
     useEffect(() => {
         if (session) {
