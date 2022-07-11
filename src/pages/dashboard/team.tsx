@@ -18,7 +18,7 @@ function team() {
         useState<TeamTotalNumberAndIncome>()
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [display, toggleDisplay] = useState(false)
-    const [displayButton, setDisplayButton] = useState('transfer')
+    const [displayButton, setDisplayButton] = useState('Transfer')
 
     type TeamRow = {
         totalMember: number
