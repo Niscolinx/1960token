@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 
 function trade() {
-    const router = useRouter()
-
  
 
     // useEffect(() => {
