@@ -130,13 +130,14 @@ function team() {
                     </div>
                 </div>
                 <div
-                    className='grid'
+                    className='grid animate-fade-in-top-left transition-all delay-75'
                     style={
                         !display
                             ? {
                                   opacity: '0',
                                   height: '0',
                                   visibility: 'hidden'
+                            
                               }
                             : {}
                     }
