@@ -61,6 +61,10 @@ export const MiningSlice = createSlice({
         },
         increaseTokenCount: (state) => {
             state.tokensCount += 0.00001158
+        },
+
+        clearTokensMined: (state) => {
+            state.totalMined = 0
         }
         // decrement: (state) => {
         //     state.value -= 1
@@ -105,7 +109,7 @@ export const MiningSlice = createSlice({
     },
 })
 
-export const { increment, increaseTokenCount} = MiningSlice.actions
+export const { increment, increaseTokenCount, clearTokensMined} = MiningSlice.actions
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
