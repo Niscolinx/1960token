@@ -20,8 +20,12 @@ function team() {
     const [display, toggleDisplay] = useState(false)
     const [displayButton, setDisplayButton] = useState('Transfer')
     const [selectedOption, setSelectedOption] = useState<
-        'Mine/Video Income' | 'Referral Income'
+        TOption
     >('Mine/Video Income')
+
+    type TOption = 
+'Mine/Video Income' | 'Referral Income'
+    
 
     type TeamRow = {
         totalMember: number
@@ -127,7 +131,8 @@ function team() {
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedOption(e.target.value)
+        const value = e.target.value
+        setSelectedOption(value)
 
     }
 
