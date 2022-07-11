@@ -24,9 +24,10 @@ const initialState: IUser = {
     totalWithdrawals: [],
     totalDeposits: [],
 }
-export const updatePortolio = createAsyncThunk<{userSession: nextAuthSession, data:number}>(
+export const updatePortolio = createAsyncThunk(
     'updatePortolio',
-    async (userSession: nextAuthSession, data) => {
+    async (userData: {userSession: nextAuthSession, data: number}) => {
+        const {userSession, data} = userData
         const response = await userPortfolio(userSession, data)
         return response
     }
