@@ -14,7 +14,6 @@ function team() {
 
       const memoizedCallback = useCallback(
         () => {
-            console.log('useCallback...........')
           if (session) {
               return dispatch(getUser(session))
           }
@@ -23,7 +22,6 @@ function team() {
       )
      
       useMemo(() => {
-        console.log('useMemo.............')
         return memoizedCallback()
       }, [])
 
