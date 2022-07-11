@@ -112,7 +112,7 @@ function team() {
 
     const dropDown = () => {
         toggleDisplay(display ? false : true)
-        setDisplayButton(display ? 'Close': 'Transfer')
+        setDisplayButton(display ? 'Transfer' : 'Close')
     }
 
     return (
