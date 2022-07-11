@@ -112,6 +112,7 @@ function team() {
 
     const dropDown = () => {
         toggleDisplay(display ? false : true)
+        setDisplayButton('Close')
     }
 
     return (
@@ -164,7 +165,7 @@ function team() {
                     className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'
                     onClick={dropDown}
                 >
-                    Transfer
+                    {displayButton}
                 </button>
             </div>
             <div className='grid px-2 mt-8'>
