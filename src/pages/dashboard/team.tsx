@@ -155,6 +155,8 @@ function team() {
                         </select>
                         <TbArrowsSort/>
                         <p>Portfolio</p>
+
+                        <button>Transfer</button>
                     </form>
                 </div>
                 <button
