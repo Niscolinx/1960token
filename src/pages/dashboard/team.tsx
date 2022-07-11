@@ -96,7 +96,6 @@ function team() {
         })
     }, [user])
 
-    console.log({ referrals })
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -173,7 +172,7 @@ function team() {
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                                 onChange={handleChange}
                             >
-                                <option value='Referral Income'>
+                                <option value='Referral Inco'>
                                     Referral Income
                                 </option>
                                 <option value='Mine/Video Income'>
