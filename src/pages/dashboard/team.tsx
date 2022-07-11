@@ -130,7 +130,7 @@ function team() {
                     </div>
                 </div>
                 <div
-                    className='grid animateTop'
+                    className='grid animateTop transition-all'
                     style={
                         !display
                             ? {
