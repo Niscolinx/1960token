@@ -6,16 +6,17 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function team() {
     const { data: session } = useSession()
+    const { theme } = useTheme()
+
     const dispatch = useAppDispatch()
     const fetchedUser = useAppSelector(selectUser)
+    const user = useAppSelector(selectUser)
 
     const [referrals, setReferrals] = useState<TeamRow[]>()
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
         useState<TeamTotalNumberAndIncome>()
-    const user = useAppSelector(selectUser)
-
-    const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
+    const [display, setDisplay] = useState(false)
 
     type TeamRow = {
         totalMember: number
