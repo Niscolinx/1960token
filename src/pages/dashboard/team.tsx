@@ -112,8 +112,6 @@ function team() {
         toggleDisplay(display ? false : true)
     }
 
-   
-
     return (
         <div className='h-[71vh]'>
             <div className='py-5 px-2 grid'>
@@ -136,10 +134,13 @@ function team() {
                             ? {
                                   opacity: '0',
                                   height: '0',
-                                  visibility: 'hidden'
-                            
+                                  visibility: 'hidden',
                               }
-                            : {}
+                            : {
+                                  opacity: '1',
+                                  height: '100%',
+                                  visibility: 'visible',
+                              }
                     }
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
