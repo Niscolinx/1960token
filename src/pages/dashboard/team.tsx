@@ -147,7 +147,7 @@ function team() {
                     }
                 >
                     <form className='px-10 py-12 grid justify-center'>
-                        <div className=' grid justify-items-center gap-4'>
+                        <div className=' grid justify-items-center gap-4 dark:text-[#1a1a2d]'>
                             <select
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                             >
@@ -158,12 +158,14 @@ function team() {
                                     Mine/Video Income
                                 </option>
                             </select>
-                            <TbArrowsSort className='text-3xl'/>
+                            <TbArrowsSort className='text-2xl' />
                             <p className='text-3xl py-4 px-6 bg-orange-300 font-bold'>
                                 Portfolio
                             </p>
                         </div>
-                        <button className='bg-green-300 font-semibold py-2 px-4'>Transfer</button>
+                        <button className='bg-green-300 font-semibold py-2 px-4'>
+                            Transfer
+                        </button>
                     </form>
                 </div>
                 <button
