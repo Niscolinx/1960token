@@ -147,7 +147,9 @@ function team() {
                     }
                 >
                     <form>
-                        <select>
+                        <select
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
+                        >
                             <option value='Referral Income'>
                                 Referral Income
                             </option>
@@ -155,7 +157,7 @@ function team() {
                                 Mine/Video Income
                             </option>
                         </select>
-                        <TbArrowsSort/>
+                        <TbArrowsSort />
                         <p>Portfolio</p>
 
                         <button>Transfer</button>
