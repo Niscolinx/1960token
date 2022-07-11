@@ -83,11 +83,11 @@ function team() {
                                     <td className='py-2 px-4'>LV1</td>
                                     <td className='py-2 px-4'>1</td>
                                     <td className='py-2 px-4'>$3</td>
-                                    <td className='py-2 px-4 max-w-3 '>
-                                        <button className='bg-blue-400 dark:text-[#1a1a2d] rounded-lg py-2 px-4'>
+                                    {/* <td className='py-2 px-4 max-w-3 '>
+                                        <button className='bg-blue-400 dark:text-[#1a1a2d] rounded-lg px-4'>
                                             View
                                         </button>
-                                    </td>
+                                    </td> */}
                                 </tr>
                                 <tr className='text-center border-b border-t border-gray-700 light:border-gray-400'>
                                     <td className='py-2 px-4'>LV2</td>
