@@ -22,7 +22,10 @@ function team() {
 
     useEffect(() => {
         if (user.referrals.length > 0) {
-            setReferrals(user.referrals)
+            //setReferrals(user.referrals)
+            user.referrals.forEach((val, i) => {
+                console.log({val})
+            })
         }
     }, [user])
 
