@@ -15,17 +15,14 @@ function team() {
 
     const [referrals, setReferrals] = useState<TeamRow[]>()
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
-        useState<TeamTotalNumberAndIncome>()
+        useState<TeamTotalNumberAndIncome>({ teamIncome: 0, teamNumber: 0 })
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [display, toggleDisplay] = useState(false)
     const [displayButton, setDisplayButton] = useState('Transfer')
-    const [selectedOption, setSelectedOption] = useState<
-        TOption
-    >('Referral Income')
+    const [selectedOption, setSelectedOption] =
+        useState<TOption>('Referral Income')
 
-    type TOption = 
-'Mine/Video Income' | 'Referral Income'
-    
+    type TOption = 'Mine/Video Income' | 'Referral Income'
 
     type TeamRow = {
         totalMember: number
@@ -96,7 +93,6 @@ function team() {
         })
     }, [user])
 
-
     useEffect(() => {
         if (theme === 'dark') {
             setNeuToUse({
@@ -125,9 +121,9 @@ function team() {
         e.preventDefault()
 
         let toPortolio = 0
-        if(selectedOption === 'Mine/Video Income'){
+        if (selectedOption === 'Mine/Video Income') {
             toPortolio = fetchedUser.totalMined
-        }else {
+        } else {
             toPortolio = referralTotalNumberAndIncome.teamIncome
         }
     }
@@ -135,7 +131,7 @@ function team() {
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
         setSelectedOption(value)
-        console.log({value})
+        console.log({ value })
     }
 
     return (
@@ -145,7 +141,7 @@ function team() {
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
                         <p className='font-bold'>
-                            ${referralTotalNumberAndIncome?.teamIncome}
+                            ${referralTotalNumberAndIncome.teamIncome}
                         </p>
                     </div>
                     <div className='grid justify-items-center'>
@@ -183,11 +179,17 @@ function team() {
                                 </option>
                             </select>
                             <TbArrowsSort className='text-2xl' />
-                            <p className='text-2xl py-4 px-6 border border-[#1a1a2d] font-bold rounded-lg' style={neuToUse}>
+                            <p
+                                className='text-2xl py-4 px-6 border border-[#1a1a2d] font-bold rounded-lg'
+                                style={neuToUse}
+                            >
                                 Portfolio
                             </p>
                         </div>
-                        <button className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8' type='submit'>
+                        <button
+                            className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8'
+                            type='submit'
+                        >
                             Transfer
                         </button>
                     </form>
