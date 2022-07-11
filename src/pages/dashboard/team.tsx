@@ -7,7 +7,7 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
-    const [referrals, setReferrals] = useState()
+    const [referrals, setReferrals] = useState<{}[]>()
     const user = useAppSelector(selectUser)
     
     const { theme } = useTheme()
@@ -28,12 +28,12 @@ function team() {
 
     useEffect(() => {
 
-        if(user){
-            console.log("the user", user)
+        if(user.referrals.length > 0){
+            setReferrals(user.referrals)
         }
     }, [user])
 
-    console.log({user})
+    console.log({referrals})
 
     useEffect(() => {
         if (theme === 'dark') {
