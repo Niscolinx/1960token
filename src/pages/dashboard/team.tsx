@@ -146,7 +146,7 @@ function team() {
                               }
                     }
                 >
-                    <form className='px-10 py-12 grid justify-center'>
+                    <form className='px-8 py-12 grid'>
                         <div className=' grid justify-items-center gap-4 dark:text-[#1a1a2d]'>
                             <select
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
