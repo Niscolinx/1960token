@@ -4,6 +4,8 @@ import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 import { TbArrowsSort } from 'react-icons/tb'
+import { clearMineTokens } from '../../store/features/mine/MinerSlice'
+import { clearVideoTokens } from '../../store/features/video/VideoSlice'
 
 function team() {
     const { data: session } = useSession()
@@ -126,6 +128,9 @@ function team() {
         } else {
             toPortolio = referralTotalNumberAndIncome.teamIncome
         }
+
+        dispatch(clearMineTokens)
+        dispatch(clearVideoTokens)
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
