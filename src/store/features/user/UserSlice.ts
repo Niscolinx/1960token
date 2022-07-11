@@ -67,10 +67,10 @@ export const UserSlice = createSlice({
                 state.status = 'failed'
             })
             .addCase(updatePortolio.pending, (state) => {
-                state.status = 'failed'
+                state.status = 'loading'
             })
             .addCase(updatePortolio.fulfilled, (state) => {
-                state.status = 'failed'
+                state.status = 'success'
             })
             .addCase(updatePortolio.rejected, (state) => {
                 state.status = 'failed'
