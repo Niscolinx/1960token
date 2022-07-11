@@ -146,9 +146,15 @@ function team() {
                 >
                     <form>
                         <select>
-                            <option value="Referral Income">Referral Income</option>
-                            <option value="Mine/Video Income">Mine/Video Income</option>
+                            <option value='Referral Income'>
+                                Referral Income
+                            </option>
+                            <option value='Mine/Video Income'>
+                                Mine/Video Income
+                            </option>
                         </select>
+                        <TbArrowsSort/>
+                        <p>Portfolio</p>
                     </form>
                 </div>
                 <button
