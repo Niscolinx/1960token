@@ -143,10 +143,12 @@ function team() {
                               }
                     }
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tenetur nam velit dolorem non voluptate provident quos, sit
-                    nemo maxime quasi autem debitis harum. Quisquam quod laborum
-                    sequi doloribus accusantium
+                    <form>
+                        <select>
+                            <option value="Referral Income">Referral Income</option>
+                            <option value="Mine/Video Income">Mine/Video Income</option>
+                        </select>
+                    </form>
                 </div>
                 <button
                     className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'
