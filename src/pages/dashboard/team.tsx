@@ -19,7 +19,9 @@ function team() {
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [display, toggleDisplay] = useState(false)
     const [displayButton, setDisplayButton] = useState('Transfer')
-    const [selectedOption, setSelectedOption] = useState('')
+    const [selectedOption, setSelectedOption] = useState<
+        'Mine/Video Income' | 'Referral Income'
+    >('Mine/Video Income')
 
     type TeamRow = {
         totalMember: number
@@ -120,7 +122,7 @@ function team() {
         e.preventDefault()
 
         if(selectedOption === 'Mine/Video Income'){
-            
+
         }
     }
 
