@@ -26,8 +26,8 @@ const initialState: IUser = {
 }
 export const updatePortolio = createAsyncThunk(
     'updatePortolio',
-    async (userData: {userSession: nextAuthSession, data: number}) => {
-        const {userSession, data} = userData
+    async (userData: { userSession: nextAuthSession; data: number }) => {
+        const { userSession, data } = userData
         const response = await userPortfolio(userSession, data)
         return response
     }
@@ -60,7 +60,7 @@ export const UserSlice = createSlice({
 
                 Object.entries(payload).forEach((field) => {
                     const key = field[0] as 'username'
-                    state[key] = field[1] as string 
+                    state[key] = field[1] as string
                 })
             })
             .addCase(getUser.rejected, (state) => {
@@ -70,7 +70,7 @@ export const UserSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(updatePortolio.fulfilled, (state, action) => {
-                const {updatedPortfolio} = action.payload
+                const { updatedPortfolio } = action.payload
                 state.status = 'success'
                 state.portfolio = updatedPortfolio
             })
