@@ -158,12 +158,12 @@ function team() {
                                     Mine/Video Income
                                 </option>
                             </select>
-                            <TbArrowsSort className='text-3xl' />
+                            <TbArrowsSort className='text-2xl' />
                             <p className='text-2xl py-4 px-6 bg-orange-300 font-bold rounded-lg'>
                                 Portfolio
                             </p>
                         </div>
-                        <button className='bg-green-300 font-semibold py-2 px-4 justify-self-center rounded-lg'>
+                        <button className='bg-green-300 font-semibold py-2 px-4 justify-self-center rounded-lg mt-5'>
                             Transfer
                         </button>
                     </form>
