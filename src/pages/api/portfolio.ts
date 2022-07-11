@@ -17,7 +17,7 @@ export default async function StartMining(
 ) {
     console.log(req.body)
     const { email }: IUser = req.body.session.user
-    const {portfolio} = req.body
+    const { portfolio } = req.body.data
 
     const user = await User.findOne({ email })
 
