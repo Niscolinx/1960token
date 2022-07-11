@@ -112,11 +112,7 @@ function team() {
         toggleDisplay(display ? false : true)
     }
 
-    const toDisplay = {
-        opacity: '0',
-        height: '0',
-        visibility: 'hidden'
-    }
+   
 
     return (
         <div className='h-[71vh]'>
@@ -133,7 +129,18 @@ function team() {
                         <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
-                <div className='grid' style={toDisplay}>
+                <div
+                    className='grid'
+                    style={
+                        !display
+                            ? {
+                                  opacity: '0',
+                                  height: '0',
+                                  visibility: 'hidden'
+                              }
+                            : {}
+                    }
+                >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tenetur nam velit dolorem non voluptate provident quos, sit
                     nemo maxime quasi autem debitis harum. Quisquam quod laborum
