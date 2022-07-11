@@ -91,22 +91,7 @@ const Login = ({ providers }: LoginProps) => {
             }
         }
 
-        // setError(isError)
-        // if (!isError) {
-        //     console.log('sending protocol')
-        //     try {
-        //         axios
-        //             .post('/api/auth/login', {
-        //                 email,
-        //                 password,
-        //             })
-        //             .then(({ data }) => {
-        //                 console.log({ data })
-        //             })
-        //     } catch (err) {
-        //         console.log({ err })
-        //     }
-        // }
+    
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -115,8 +115,8 @@ function team() {
         setDisplayButton(display ? 'Transfer' : 'Close')
     }
 
-    const handleSubmit = () => {
-        
+    const handleSubmit = (e) => {
+        e.preventDefault()
     }
 
     return (
