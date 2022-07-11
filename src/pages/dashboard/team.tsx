@@ -163,7 +163,7 @@ function team() {
                                 Portfolio
                             </p>
                         </div>
-                        <button>Transfer</button>
+                        <button className='bg-green-300 font-semibold py-2 px-4'>Transfer</button>
                     </form>
                 </div>
                 <button
