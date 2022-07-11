@@ -8,7 +8,8 @@ function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
     const [referrals, setReferrals] = useState<TeamRow[]>()
-    const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] = useState()
+    const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
+        useState<ReferralTotalNumberAndIncome>()
     const user = useAppSelector(selectUser)
 
     const { theme } = useTheme()
@@ -18,6 +19,11 @@ function team() {
         totalMember: number
         totalAmount: number
         level: number
+    }
+
+    type ReferralTotalNumberAndIncome = {
+        totalReferralNumber: number
+        totalReferralIncome: number
     }
 
     useEffect(() => {
@@ -116,17 +122,26 @@ function team() {
                             <tbody>
                                 {referrals &&
                                     referrals.map((val, i) => {
-                                        return <tr key={i}
-                                            className={`text-center ${
-                                                i === 1
-                                                    ? 'border-b border-t border-gray-700 light:border-gray-400'
-                                                    : ''
-                                            }`}
-                                        >
-                                            <td className='py-2 px-4'>LV{val.level}</td>
-                                            <td className='py-2 px-4'>{val.totalMember}</td>
-                                            <td className='py-2 px-4'>${val.totalAmount}</td>
-                                        </tr>
+                                        return (
+                                            <tr
+                                                key={i}
+                                                className={`text-center ${
+                                                    i === 1
+                                                        ? 'border-b border-t border-gray-700 light:border-gray-400'
+                                                        : ''
+                                                }`}
+                                            >
+                                                <td className='py-2 px-4'>
+                                                    LV{val.level}
+                                                </td>
+                                                <td className='py-2 px-4'>
+                                                    {val.totalMember}
+                                                </td>
+                                                <td className='py-2 px-4'>
+                                                    ${val.totalAmount}
+                                                </td>
+                                            </tr>
+                                        )
                                     })}
                             </tbody>
                         </table>
