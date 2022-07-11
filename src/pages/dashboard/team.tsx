@@ -129,6 +129,8 @@ function team() {
             toPortolio = referralTotalNumberAndIncome.teamIncome
         }
 
+        //Store the referral Income in Database first
+
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
         dispatch(updatePortolio({userSession: session!, data: toPortolio}))
