@@ -59,14 +59,7 @@ const Login = ({ providers }: LoginProps) => {
                 setLoading(false)
             }
 
-            // if (key === 'emailOrUsername') {
-            //     const checkemail = isValidMail(value.toString())
-
-            //     if (!checkemail) {
-            //         isError = true
-            //         setErrorFields((oldArr) => [...oldArr, key])
-            //     }
-            // } 
+          
             else if (!isError) {
                 console.log('sign in.....', isError)
                 signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase().trim(), password: password })
