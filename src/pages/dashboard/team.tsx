@@ -127,6 +127,8 @@ function team() {
         let toPortolio = 0
         if(selectedOption === 'Mine/Video Income'){
             toPortolio = fetchedUser.totalMined
+        }else {
+            toPortolio = referralTotalNumberAndIncome.teamIncome
         }
     }
 
