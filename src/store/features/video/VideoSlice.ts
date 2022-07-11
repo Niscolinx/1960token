@@ -26,7 +26,11 @@ export const initVideoEnded = createAsyncThunk(
 export const VideoSlice = createSlice({
     name: 'videoEnded',
     initialState,
-    reducers: {},
+    reducers: {
+        clearTotalMined: (state, action) => {
+            state.totalMined = 0
+        },
+    },
 
     extraReducers: (builder) => {
         builder
