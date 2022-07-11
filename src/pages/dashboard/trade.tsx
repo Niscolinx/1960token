@@ -3,9 +3,12 @@ import { useRouter } from 'next/router'
 
 function trade() {
     const router = useRouter()
+    
     useEffect(() => {
-        router.reload()
+        return router.reload()
     }, [])
+
+
     useEffect(() => {
         Array.from(document.getElementsByTagName('iframe')).forEach(
             (iframe) => {
