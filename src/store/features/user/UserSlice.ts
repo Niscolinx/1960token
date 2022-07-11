@@ -70,6 +70,7 @@ export const UserSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(updatePortolio.fulfilled, (state, action) => {
+                const {portfolio} = action.payload
                 state.status = 'success'
             })
             .addCase(updatePortolio.rejected, (state) => {
