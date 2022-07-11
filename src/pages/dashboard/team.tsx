@@ -13,6 +13,10 @@ function team() {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
+    type TeamRow = {
+        level: number
+        totalAmount: number
+    }
 
     useEffect(() => {
         if (session) {
@@ -21,15 +25,25 @@ function team() {
     }, [session])
 
     useEffect(() => {
-        const teamRow1 = {}
-        const teamRow2 = {}
-        const teamRow1 = {}
+        const teamRow1:TeamRow = {
+            level: 1,
+            totalAmount: 3
+        }
+        const teamRow2:TeamRow = {
+            level: 1,
+            totalAmount: 3
+        }
+        const teamRow3:TeamRow = {
+            level: 1,
+            totalAmount: 3
+        }
+     
         if (user.referrals.length > 0) {
             //setReferrals(user.referrals)
             user.referrals.forEach((val, i) => {
                 console.log({val})
                 if(val.level === 1){
-                    team
+                    teamRow1.level = 1
                 }
             })
         }
