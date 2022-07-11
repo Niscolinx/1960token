@@ -84,7 +84,7 @@ function team() {
                                     <td className='py-2 px-4'>1</td>
                                     <td className='py-2 px-4'>$3</td>
                                     <td className='py-2 px-4 max-w-3 bg-blue-400 dark:text-[#1a1a2d]'>
-                                        <button>More</button>
+                                        <button>View</button>
                                     </td>
                                 </tr>
                                 <tr className='text-center border-b border-t border-gray-700 light:border-gray-400'>
