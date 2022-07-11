@@ -128,7 +128,7 @@ function team() {
                     </div>
                 </div>
                 <div
-                    className='grid animateTop transition-all delay-[1s]'
+                    className='grid animate-rotate-out transition-all delay-100'
                     style={
                         !display
                             ? {
