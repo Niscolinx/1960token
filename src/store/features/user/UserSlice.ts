@@ -27,7 +27,7 @@ const initialState: IUser = {
 export const updatePortolio = createAsyncThunk(
     'updatePortolio',
     async (userSession: nextAuthSession) => {
-        const response = await userPortfolio({userSession, data})
+        const response = await userPortfolio(userSession, data)
         return response
     }
 )
