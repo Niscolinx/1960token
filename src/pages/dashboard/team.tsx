@@ -124,8 +124,9 @@ function team() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
+        let toPortolio = 0
         if(selectedOption === 'Mine/Video Income'){
-
+            toPortolio = fetchedUser.totalMined
         }
     }
 
