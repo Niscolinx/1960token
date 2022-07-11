@@ -21,10 +21,16 @@ function team() {
     }, [session])
 
     useEffect(() => {
+        const teamRow1 = {}
+        const teamRow2 = {}
+        const teamRow1 = {}
         if (user.referrals.length > 0) {
             //setReferrals(user.referrals)
             user.referrals.forEach((val, i) => {
                 console.log({val})
+                if(val.level === 1){
+                    team
+                }
             })
         }
     }, [user])
