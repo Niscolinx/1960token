@@ -50,8 +50,7 @@ function team() {
         }
 
         if (user.referrals.length > 0) {
-            let number = 0
-            let income = 0
+         
             user.referrals.forEach((val) => {
                 if (val.level === 1) {
                     teamRow1.totalMember += 1
@@ -65,7 +64,6 @@ function team() {
                     teamRow3.totalMember += 1
                     teamRow3.totalAmount += 1
                 }
-
                
             })
         }
