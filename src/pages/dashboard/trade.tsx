@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 function trade() {
     const router = useRouter()
     useEffect(() => {
-
-    })
+        router.reload()
+    }, [])
     useEffect(() => {
         Array.from(document.getElementsByTagName('iframe')).forEach(
             (iframe) => {
