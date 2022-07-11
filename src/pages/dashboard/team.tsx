@@ -119,7 +119,7 @@ function team() {
         e.preventDefault()
     }
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         console.log(e.target.value)
     }
 
