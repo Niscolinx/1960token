@@ -49,9 +49,9 @@ function team() {
             level: 3,
         }
 
+        let teamNumber = 0
+        let teamIncome = 0
         if (user.referrals.length > 0) {
-            let teamNumber = 0
-            let teamIncome = 0
             user.referrals.forEach((val) => {
                 if (val.level === 1) {
                     teamRow1.totalMember += 1
@@ -81,7 +81,8 @@ function team() {
 
         setReferrals([teamRow1, teamRow2, teamRow3])
         setReferralTotalNumberAndIncome({
-            totalReferralNumber: Number
+            teamIncome,
+            teamNumber
         })
     }, [user])
 
