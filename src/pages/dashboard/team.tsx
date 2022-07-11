@@ -43,16 +43,17 @@ function team() {
             user.referrals.forEach((val, i) => {
                 console.log({val})
                 if(val.level === 1){
+                    console.log('the first member', val)
                     teamRow1.totalMember += 1
-                    teamRow2.totalAmount += 3
+                    teamRow1.totalAmount += 3
                 }
                 if(val.level === 2){
-                    teamRow1.totalMember += 1
+                    teamRow2.totalMember += 1
                     teamRow2.totalAmount += 1.5
                 }
                 if(val.level === 3){
-                    teamRow1.totalMember += 1
-                    teamRow2.totalAmount += 1
+                    teamRow3.totalMember += 1
+                    teamRow3.totalAmount += 1
                 }
             })
         }
