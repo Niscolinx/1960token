@@ -7,7 +7,7 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
-    const [referrals, setReferrals] = useState<any[]>()
+    const [referrals, setReferrals] = useState<TeamRow[]>()
     const user = useAppSelector(selectUser)
 
     const { theme } = useTheme()
@@ -113,10 +113,12 @@ function team() {
 
                     <div className='grid'>
                         <table>
+                        
                             <tbody>
+
                                 <tr className='text-center '>
                                     <td className='py-2 px-4'>LV1</td>
-                                    <td className='py-2 px-4'>1</td>
+                                    <td className='py-2 px-4'>{referrals}</td>
                                     <td className='py-2 px-4'>$3</td>
                                     {/* <td className='py-2 px-4 max-w-3 '>
                                         <button className='bg-blue-400 dark:text-[#1a1a2d] rounded-lg px-4'>
