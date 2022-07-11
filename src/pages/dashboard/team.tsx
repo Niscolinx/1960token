@@ -121,7 +121,8 @@ function team() {
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        console.log(e.target.value)
+        setSelectedOption(e.target.value)
+
     }
 
     return (
