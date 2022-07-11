@@ -21,7 +21,7 @@ function team() {
     const [displayButton, setDisplayButton] = useState('Transfer')
     const [selectedOption, setSelectedOption] = useState<
         TOption
-    >('Mine/Video Income')
+    >('Referral Income')
 
     type TOption = 
 'Mine/Video Income' | 'Referral Income'
