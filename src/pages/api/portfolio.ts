@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
 interface returnTypeJson {
-    portfolio: number
+    updatedPortfolio: number
 }
 
 type JsonType<returnTypeJson> = (body: returnTypeJson) => object
@@ -25,6 +25,6 @@ export default async function StartMining(
     await user.save()
 
     return res.json({
-        portfolio: user.portfolio,
+        updatedPortfolio: user.portfolio,
     })
 }
