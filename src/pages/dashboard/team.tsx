@@ -47,6 +47,8 @@ function team() {
                 }
             })
         }
+
+        setReferrals([teamRow1, teamRow2, teamRow3])
     }, [user])
 
     console.log({ referrals })
