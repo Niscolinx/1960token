@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { nextAuthSession } from '../../../lib/types'
 import { IUser } from '../../../models/User'
-import { userData } from './UserApi'
+import { userData, userPortfolio } from './UserApi'
 
 const initialState: IUser = {
     _id: {},
@@ -27,7 +27,7 @@ const initialState: IUser = {
 export const updatePortolio = createAsyncThunk(
     'updatePortolio',
     async (userSession: nextAuthSession) => {
-        const response = await userData(userSession)
+        const response = await userPortfolio({userSession, data})
         return response
     }
 )
