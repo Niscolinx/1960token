@@ -16,7 +16,7 @@ function team() {
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
         useState<TeamTotalNumberAndIncome>()
     const [neuToUse, setNeuToUse] = useState<{}>()
-    const [display, setDisplay] = useState(false)
+    const [display, toggleDisplay] = useState(false)
 
     type TeamRow = {
         totalMember: number
@@ -108,7 +108,9 @@ function team() {
         }
     }, [theme])
 
-    const dropDown = () => {}
+    const dropDown = () => {
+        toggleDisplay(display ? false : true)
+    }
 
     return (
         <div className='h-[71vh]'>
