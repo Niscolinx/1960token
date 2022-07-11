@@ -112,6 +112,10 @@ function team() {
         toggleDisplay(display ? false : true)
     }
 
+    const toDisplay = !display ? {
+        display: 'none'
+    }: {}
+
     return (
         <div className='h-[71vh]'>
             <div className='py-5 px-2 grid'>
@@ -127,7 +131,7 @@ function team() {
                         <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
-                <div className='grid animate-ease-out transition-all' style={{visibility: display ? 'visible' : 'hidden'}}>
+                <div className='grid animate-ease-out transition-all' style={toDisplay}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tenetur nam velit dolorem non voluptate provident quos, sit
                     nemo maxime quasi autem debitis harum. Quisquam quod laborum
