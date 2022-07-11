@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useState,useMemo, useCallback } from 'react'
+import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
@@ -9,31 +9,34 @@ function team() {
     const dispatch = useAppDispatch()
     const [referrals, setReferrals] = useState<{}[]>()
     const user = useAppSelector(selectUser)
-    
+
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-      const memoizedCallback = useCallback(
-        () => {
-          if (session) {
-              return dispatch(getUser(session))
-          }
-        },
-        [session]
-      )
-     
-      useMemo(() => {
-        return memoizedCallback()
-      }, [])
+    //   const memoizedCallback = useCallback(
+    //     () => {
+    //       if (session) {
+    //           return dispatch(getUser(session))
+    //       }
+    //     },
+    //     [session]
+    //   )
+
+    //   useMemo(() => {
+    //     return memoizedCallback()
+    //   }, [])
 
     useEffect(() => {
+        if (session) return dispatch(getUser(session))
+    }, [session])
 
-        if(user.referrals.length > 0){
+    useEffect(() => {
+        if (user.referrals.length > 0) {
             setReferrals(user.referrals)
         }
     }, [user])
 
-    console.log({referrals})
+    console.log({ referrals })
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -73,7 +76,10 @@ function team() {
             </div>
             <div className='grid px-2 mt-8'>
                 <div className='grid'>
-                    <p className='justify-self-center font-semibold py-2 px-4 uppercase mb-4' style={neuToUse}>
+                    <p
+                        className='justify-self-center font-semibold py-2 px-4 uppercase mb-4'
+                        style={neuToUse}
+                    >
                         Total Referral: <span>32</span>
                     </p>
 
