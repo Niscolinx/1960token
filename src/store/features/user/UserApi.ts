@@ -11,7 +11,7 @@ export async function userData(
 }
 
 
-export async function videoEnded(
+export async function userPortfolio(
     session: nextAuthSession
 ): Promise<number> {
     const response = await axios.post('/api/portfolio', session)
