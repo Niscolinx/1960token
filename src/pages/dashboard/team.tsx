@@ -22,8 +22,8 @@ function team() {
     }
 
     type ReferralTotalNumberAndIncome = {
-        totalReferralNumber: number
-        totalReferralIncome: number
+        teamNumber: number
+        teamIncome: number
     }
 
     useEffect(() => {
