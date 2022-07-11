@@ -159,7 +159,7 @@ function team() {
                                 </option>
                             </select>
                             <TbArrowsSort className='text-2xl' />
-                            <p className='text-2xl py-4 px-6 border-orange-400 font-bold rounded-lg'>
+                            <p className='text-2xl py-4 px-6 border border-orange-400 font-bold rounded-lg'>
                                 Portfolio
                             </p>
                         </div>
