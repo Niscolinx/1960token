@@ -117,7 +117,10 @@ function team() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        
+    }
+
+    const handlechange = (e) => {
+        console.log(e.target.value)
     }
 
     return (
@@ -155,6 +158,7 @@ function team() {
                         <div className=' grid justify-items-center gap-4 dark:text-[#1a1a2d]'>
                             <select
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
+                                onChange={handleChange}
                             >
                                 <option value='Referral Income'>
                                     Referral Income
