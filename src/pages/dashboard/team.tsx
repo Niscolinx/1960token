@@ -130,7 +130,7 @@ function team() {
                     </div>
                 </div>
                 <div
-                    className='grid animateTop transition-all delay-75'
+                    className='grid animateTop transition-all delay-[1s]'
                     style={
                         !display
                             ? {
