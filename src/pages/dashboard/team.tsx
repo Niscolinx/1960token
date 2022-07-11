@@ -50,6 +50,8 @@ function team() {
         }
 
         if (user.referrals.length > 0) {
+            let number = 0
+            let income = 0
             user.referrals.forEach((val) => {
                 if (val.level === 1) {
                     teamRow1.totalMember += 1
@@ -63,6 +65,8 @@ function team() {
                     teamRow3.totalMember += 1
                     teamRow3.totalAmount += 1
                 }
+
+               
             })
         }
 
@@ -96,7 +100,9 @@ function team() {
                 <div className='flex justify-around bg-orange-300 rounded-t-lg py-5 px-4 dark:text-[#1a1a2d]'>
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
-                        <p className='font-bold'>${referralTotalNumberAndIncome?.totalReferralIncome}</p>
+                        <p className='font-bold'>
+                            ${referralTotalNumberAndIncome?.totalReferralIncome}
+                        </p>
                     </div>
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Mine/Video Income</p>
@@ -113,7 +119,10 @@ function team() {
                         className='justify-self-center font-semibold py-2 px-4 uppercase mb-4'
                         style={neuToUse}
                     >
-                        Total Referral: <span>{referralTotalNumberAndIncome?.totalReferralNumber}</span>
+                        Total Referral:{' '}
+                        <span>
+                            {referralTotalNumberAndIncome?.totalReferralNumber}
+                        </span>
                     </p>
 
                     <div className='grid'>
