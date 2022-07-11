@@ -14,7 +14,7 @@ function team() {
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     type TeamRow = {
-        level: number
+        totalMember: number
         totalAmount: number
     }
 
@@ -26,15 +26,15 @@ function team() {
 
     useEffect(() => {
         const teamRow1:TeamRow = {
-            level: 1,
-            totalAmount: 3
+            totalMember: 1,
+            totalAmount: 0
         }
         const teamRow2:TeamRow = {
-            level: 1,
-            totalAmount: 3
+            totalMember: 1,
+            totalAmount: 0
         }
         const teamRow3:TeamRow = {
-            level: 1,
+            totalMember: 1,
             totalAmount: 3
         }
      
@@ -43,7 +43,7 @@ function team() {
             user.referrals.forEach((val, i) => {
                 console.log({val})
                 if(val.level === 1){
-                    teamRow1.level = 1
+                    teamRow1.totalMember += 1
                 }
             })
         }
