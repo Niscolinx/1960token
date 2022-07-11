@@ -118,6 +118,10 @@ function team() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+
+        if(selectedOption === 'Mine/Video Income'){
+            
+        }
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
