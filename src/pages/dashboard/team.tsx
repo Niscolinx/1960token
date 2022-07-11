@@ -7,6 +7,8 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 function team() {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
+        const fetchedUser = useAppSelector(selectUser)
+
     const [referrals, setReferrals] = useState<TeamRow[]>()
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
         useState<TeamTotalNumberAndIncome>()
@@ -120,7 +122,7 @@ function team() {
                     </div>
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Mine/Video Income</p>
-                        <p className='font-bold'>$15</p>
+                        <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
                 <button className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'>
