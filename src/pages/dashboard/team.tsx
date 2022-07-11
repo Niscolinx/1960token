@@ -172,7 +172,7 @@ function team() {
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                                 onChange={handleChange}
                             >
-                                <option value='Referral Inco'>
+                                <option value='Referral Income'>
                                     Referral Income
                                 </option>
                                 <option value='Mine/Video Income'>
