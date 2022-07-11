@@ -26,8 +26,11 @@ function team() {
         return memoizedCallback()
       }, [])
 
-    useMemo(() => {
-        console.log("the user", user)
+    useEffect(() => {
+
+        if(user){
+            console.log("the user", user)
+        }
     }, [user])
 
     console.log({user})
