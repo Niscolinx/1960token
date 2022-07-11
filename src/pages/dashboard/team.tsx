@@ -25,6 +25,7 @@ function team() {
         return memoizedCallback()
       }, [])
 
+      console.log({user})
 
     useEffect(() => {
         if (theme === 'dark') {
