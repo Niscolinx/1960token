@@ -9,7 +9,7 @@ function team() {
     const dispatch = useAppDispatch()
     const [referrals, setReferrals] = useState<TeamRow[]>()
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
-        useState<ReferralTotalNumberAndIncome>()
+        useState<TeamTotalNumberAndIncome>()
     const user = useAppSelector(selectUser)
 
     const { theme } = useTheme()
@@ -21,7 +21,7 @@ function team() {
         level: number
     }
 
-    type ReferralTotalNumberAndIncome = {
+    type TeamTotalNumberAndIncome = {
         teamNumber: number
         teamIncome: number
     }
@@ -113,7 +113,7 @@ function team() {
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
                         <p className='font-bold'>
-                            ${referralTotalNumberAndIncome?.totalReferralIncome}
+                            ${referralTotalNumberAndIncome?.teamIncome}
                         </p>
                     </div>
                     <div className='grid justify-items-center'>
@@ -133,7 +133,7 @@ function team() {
                     >
                         Total Referral:{' '}
                         <span>
-                            {referralTotalNumberAndIncome?.totalReferralNumber}
+                            {referralTotalNumberAndIncome?.teamNumber}
                         </span>
                     </p>
 
