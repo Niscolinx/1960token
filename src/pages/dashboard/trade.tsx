@@ -28,7 +28,7 @@ function trade() {
         <div className='h-[90vh]'>
             <div className='grid mt-4'>
                 <iframe
-                    src='/tradingView.html'
+                    src={`/tradingView.html`}
                     width='100%'
                     style={{ height: '70vh' }}
                 />
