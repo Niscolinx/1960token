@@ -127,7 +127,7 @@ function team() {
                         <p className='font-bold'>${fetchedUser.totalMined}</p>
                     </div>
                 </div>
-                <div className='grid animate-ease-out transition-all' style={{width: display ? '100%' : '0'}}>
+                <div className='grid animate-ease-out transition-all' style={{visibility: display ? 'visible' : 'hidden'}}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tenetur nam velit dolorem non voluptate provident quos, sit
                     nemo maxime quasi autem debitis harum. Quisquam quod laborum
