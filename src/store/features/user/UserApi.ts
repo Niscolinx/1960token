@@ -10,3 +10,13 @@ export async function userData(
     return response.data
 }
 
+
+export async function videoEnded(
+    session: nextAuthSession
+): Promise<IUser> {
+    const response = await axios.post('/api/referral', session)
+
+    return response.data
+}
+
+
