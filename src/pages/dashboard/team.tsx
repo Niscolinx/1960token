@@ -16,6 +16,7 @@ function team() {
     type TeamRow = {
         totalMember: number
         totalAmount: number
+        level: number
     }
 
     useEffect(() => {
@@ -26,16 +27,19 @@ function team() {
 
     useEffect(() => {
         const teamRow1:TeamRow = {
-            totalMember: 1,
-            totalAmount: 0
+            totalMember: 0,
+            totalAmount: 0,
+            level: 1
         }
         const teamRow2:TeamRow = {
-            totalMember: 1,
-            totalAmount: 0
+            totalMember: 0,
+            totalAmount: 0,
+            level: 2
         }
         const teamRow3:TeamRow = {
-            totalMember: 1,
-            totalAmount: 0
+            totalMember: 0,
+            totalAmount: 0,
+            level: 3
         }
      
         if (user.referrals.length > 0) {
@@ -43,7 +47,6 @@ function team() {
             user.referrals.forEach((val, i) => {
                 console.log({val})
                 if(val.level === 1){
-                    console.log('the first member', val)
                     teamRow1.totalMember += 1
                     teamRow1.totalAmount += 3
                 }
