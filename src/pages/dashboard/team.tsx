@@ -116,7 +116,7 @@ function team() {
                             <tbody>
                                 {referrals &&
                                     referrals.map((val, i) => {
-                                        return <tr
+                                        return <tr key={i}
                                             className={`text-center ${
                                                 i === 1
                                                     ? 'border-b border-t border-gray-700 light:border-gray-400'
