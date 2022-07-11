@@ -65,20 +65,21 @@ function team() {
                     teamRow2.totalAmount += 1.5
 
                     teamNumber += 1
-                    teamIncome += 3
+                    teamIncome += 1.5
                 }
                 if (val.level === 3) {
                     teamRow3.totalMember += 1
                     teamRow3.totalAmount += 1
 
                     teamNumber += 1
-                    teamIncome += 3
+                    teamIncome += 1
                 }
 
             
             })
         }
 
+        
         setReferrals([teamRow1, teamRow2, teamRow3])
         setReferralTotalNumberAndIncome({
             teamIncome,
