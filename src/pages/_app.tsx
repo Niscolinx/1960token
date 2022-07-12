@@ -20,7 +20,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                     <PersistGate loading={null} persistor={persistedStore}>
                         <ThemeProvider
                             attribute='class'
-                            enableSystem={true}
                             defaultTheme='dark'
                         >
                             <Layout>
