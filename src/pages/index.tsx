@@ -146,10 +146,10 @@ const Index = () => {
                 <div className='grid text-gray-400 border-b border-t border-gray-800 py-3 '>
                     <div className='grid mt-4 grid-cols-tc gap-5'>
                         <Link href='/aboutUs'>
-                            <div className='grid justify-center place-items-center cursor-pointer bg-orange-300'>
+                            <div className='grid justify-center place-items-center cursor-pointer bg-orange-400 rounded-lg'>
                                 <Logo className='text-blue-400 text-3xl light:text-[#1a1a2d] w-12 h-12' />
                                 <button
-                                    className='text-md p-1 text-[#1a1a2d]'
+                                    className='text-md p-1 light:text-[#1a1a2d]'
                                     // style={neuToUse}
                                 >
                                     About Us
@@ -157,11 +157,11 @@ const Index = () => {
                             </div>
                         </Link>
                         <Link href='/'>
-                            <div className='grid justify-center place-items-center cursor-pointer bg-orange-300'>
+                            <div className='grid justify-center place-items-center cursor-pointer bg-orange-400'>
                                 <GiWallet className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
-                                    className='text-md p-1'
-                                    style={neuToUse}
+                                    className='text-md p-1 light:text-[#1a1a2d]'
+                                    //style={neuToUse}
                                 >
                                     Vendors
                                 </button>
@@ -172,8 +172,8 @@ const Index = () => {
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <FaQuestionCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
-                                    className='text-md p-1'
-                                    style={neuToUse}
+                                    className='text-md p-1 light:text-[#1a1a2d]'
+                                    //style={neuToUse}
                                 >
                                     FAQ
                                 </button>
