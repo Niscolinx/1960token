@@ -59,6 +59,7 @@ const Index = () => {
     return (
         <>
             <div className='grid gap-5 max-w-5xl mx-auto text-gray-400 px-4'>
+                hello
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
