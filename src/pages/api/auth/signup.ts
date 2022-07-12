@@ -47,7 +47,6 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     message: 'Referral not found',
                 })
             } else {
-                console.log('referral found')
 
                 firstUpliner.referrals.push( {
                     username,
