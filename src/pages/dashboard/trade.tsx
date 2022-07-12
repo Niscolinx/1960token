@@ -2,8 +2,6 @@ import { GetSessionParams, getSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 
 function trade() {
- 
-
     // useEffect(() => {
     //     Array.from(document.getElementsByTagName('iframe')).forEach(
     //         (iframe) => {
@@ -50,7 +48,7 @@ export async function getServerSideProps(
     if (!session) {
         return {
             redirect: {
-                destination: '/',
+                destination: '/auth/login',
                 permanent: false,
             },
         }

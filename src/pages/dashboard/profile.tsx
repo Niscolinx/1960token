@@ -2,7 +2,7 @@ import { GetSessionParams, getSession } from 'next-auth/react'
 import React from 'react'
 
 function profile() {
-  return <div className='px-4'>profile</div>
+    return <div className='px-4'>profile</div>
 }
 
 export default profile
@@ -15,7 +15,7 @@ export async function getServerSideProps(
     if (!session) {
         return {
             redirect: {
-                destination: '/',
+                destination: '/auth/login',
                 permanent: false,
             },
         }

@@ -37,23 +37,22 @@ function earn() {
     //setTokenCount(mineState.tokensCount)
     //}, [mineState])
 
-   const memoizedCallback = useCallback(() => {
-       console.log('useCallback...........')
-       if (session) {
-           return dispatch(getUser(session))
-       }
-   }, [session])
+    const memoizedCallback = useCallback(() => {
+        console.log('useCallback...........')
+        if (session) {
+            return dispatch(getUser(session))
+        }
+    }, [session])
 
-   useMemo(() => {
-       console.log('useMemo.............')
-       return memoizedCallback()
-   },[])
+    useMemo(() => {
+        console.log('useMemo.............')
+        return memoizedCallback()
+    }, [])
 
-   console.log({fetchedUser})
+    console.log({ fetchedUser })
 
     useEffect(() => {
         if (theme === 'dark') {
-
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
                 boxShadow: `7px 7px 14px #161625,
@@ -103,16 +102,14 @@ function earn() {
     }, [session])
 
     useEffect(() => {
-        if(miningStart){
+        if (miningStart) {
             setIsDim(false)
-        }
-        else{
+        } else {
             setIsDim(true)
         }
     }, [miningStart])
 
     const handleMineStart = () => {
-
         if (session) {
             dispatch(initMineAsync(session))
             //dispatch(initStopMineAsync(session))
@@ -219,7 +216,7 @@ export async function getServerSideProps(
     if (!session) {
         return {
             redirect: {
-                destination: '/',
+                destination: '/auth/login',
                 permanent: false,
             },
         }
@@ -229,5 +226,3 @@ export async function getServerSideProps(
         props: { session },
     }
 }
-
-

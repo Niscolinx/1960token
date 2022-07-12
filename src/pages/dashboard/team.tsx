@@ -2,7 +2,11 @@ import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
-import { getUser, selectUser, updatePortolio } from '../../store/features/user/UserSlice'
+import {
+    getUser,
+    selectUser,
+    updatePortolio,
+} from '../../store/features/user/UserSlice'
 import { TbArrowsSort } from 'react-icons/tb'
 import { clearMineTokens } from '../../store/features/mine/MinerSlice'
 import { clearVideoTokens } from '../../store/features/video/VideoSlice'
@@ -133,7 +137,7 @@ function team() {
 
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
-        dispatch(updatePortolio({userSession: session!, data: toPortolio}))
+        dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -264,7 +268,7 @@ export async function getServerSideProps(
     if (!session) {
         return {
             redirect: {
-                destination: '/',
+                destination: '/auth/login',
                 permanent: false,
             },
         }
