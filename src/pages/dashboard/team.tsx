@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/react'
+import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
@@ -255,3 +255,22 @@ function team() {
 }
 
 export default team
+
+export async function getServerSideProps(
+    context: GetSessionParams | undefined
+) {
+    const session = await getSession(context)
+
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: { session },
+    }
+}
