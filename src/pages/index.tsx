@@ -60,7 +60,7 @@ const Index = () => {
         <>
             <div className='flex items-center text-[#cb8f10] font-bold relative mt-4'>
                 <Logo className='text-blue-400 light:text-[#1a1a2d] w-21 h-21 absolute left-0' />
-                <p className='text-xl'>1960TOKEN</p>
+                <p className='text-xl ml-18'>1960TOKEN</p>
             </div>
             <div className='grid max-w-5xl mx-auto text-gray-400 px-4'>
                 <Swiper
