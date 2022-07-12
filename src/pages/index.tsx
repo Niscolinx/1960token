@@ -263,7 +263,7 @@ const Index = () => {
 
                 <div className='grid mt-10'>
                     <AnimationOnScroll animateIn='animate__pulse'>
-                        <div className='grid' style={neuToUse}>
+                        <div className='grid px-4' style={neuToUse}>
                             <h3 className='text-center font-semibold text-2xl grad p-2 uppercase px-4'>
                                 How 1960token works
                             </h3>
