@@ -9,6 +9,7 @@ export interface IUser {
     isMining: boolean
     miningStartedAt: string
     role: string
+    referralBonus: number
     totalMined: number
     portfolio: number
     upliner: string
@@ -42,6 +43,10 @@ const userSchema = new Schema<IUser>(
         },
         upliner: {
             type: String,
+        },
+        referralBonus: {
+            type: Number,
+            default: 0
         },
         totalMined: {
             type: Number,
