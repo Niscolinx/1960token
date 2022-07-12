@@ -59,7 +59,10 @@ const Index = () => {
     return (
         <>
             <div className='grid gap-5 max-w-5xl mx-auto text-gray-400 px-4'>
-                hello
+                <div className='flex'>
+                    <Logo className='text-blue-400 text-3xl light:text-[#1a1a2d] w-12 h-12' />
+                    1960Token
+                </div>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
