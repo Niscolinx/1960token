@@ -16,6 +16,7 @@ const initialState: IUser = {
     upliner: '',
     referrals: [],
     totalMined: 0,
+    referralBonus: 0,
     portfolio: 0,
     status: 'idle',
     password: '',
