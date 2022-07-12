@@ -52,12 +52,10 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     username,
                     level: 1,
                 })
-                console.log('referral bonus', firstUpliner.referralBonus)
                 firstUpliner.referralBonus += 3
 
                 await firstUpliner.save()
 
-                console.log({firstUpliner})
 
                 if (firstUpliner.upliner) {
                     const secondUpliner = await User.findOne({
