@@ -224,8 +224,8 @@ const Index = () => {
                         animateOnce={true}
                     >
                         <div
-                            className='grid items-center bg-[#ccccd0] text-black py-2 px-4 rounded-lg grid-cols-[min-content,1fr]'
-                            style={stepsNeu}
+                            className='grid items-center text-[#1a1a2d] py-2 px-4 rounded-lg grid-cols-[min-content,1fr] bg-orange-300'
+                            // style={stepsNeu}
                         >
                             <div className='flex'>
                                 <BsCheck className='flex mr-8 text-6xl' />
