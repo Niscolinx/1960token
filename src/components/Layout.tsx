@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import LiveTicker from '../widgets/LiveTicker'
 
+
 const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
     const router = useRouter()
@@ -27,6 +28,7 @@ const Layout: React.FC<{}> = ({ children }) => {
         <>
             <div className={visibility}>
                 <LiveTicker />
+                
             </div>
             <div
                 className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}

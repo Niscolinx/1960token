@@ -58,11 +58,8 @@ const Index = () => {
     }, [theme])
     return (
         <>
+                
             <div className='grid max-w-5xl mx-auto text-gray-400 px-4'>
-                <div className='flex items-center text-[#cb8f10] font-bold'>
-                    <Logo className='text-blue-400 light:text-[#1a1a2d] w-21 h-21' />
-                    <p className='text-xl'>1960TOKEN</p>
-                </div>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
