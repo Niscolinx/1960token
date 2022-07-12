@@ -47,11 +47,11 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                     message: 'Referral not found',
                 })
             } else {
-
-                firstUpliner.referrals.push( {
+                firstUpliner.referrals.push({
                     username,
                     level: 1,
                 })
+                firstUpliner.referralBonus += 3
 
                 await firstUpliner.save()
 
@@ -65,6 +65,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                             username,
                             level: 2,
                         })
+                        secondUpliner.referralBonus += 1.5
 
                         await secondUpliner.save()
 
@@ -78,6 +79,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                                     username,
                                     level: 3,
                                 })
+                                thirdUpliner.referralBonus += 1
 
                                 await thirdUpliner.save()
                             }
