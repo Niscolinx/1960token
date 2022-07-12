@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/react'
+import { GetSessionParams, useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
@@ -210,5 +210,24 @@ function earn() {
 }
 
 export default earn
+
+export async function getServerSideProps(
+    context: GetSessionParams | undefined
+) {
+    const session = await getSession(context)
+
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: { session },
+    }
+}
 
 
