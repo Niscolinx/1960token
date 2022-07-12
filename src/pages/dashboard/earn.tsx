@@ -191,13 +191,14 @@ function earn() {
                         </span>
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
-                        <ReactPlayer
+                        {/* <ReactPlayer
                             url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
                             width='100%'
                             height='100%'
                             //onEnded={handleVideoEnded}
                             onStart={handleVideoEnded}
-                        />
+                        /> */}
+                        <video src='blob:https://www.udemy.com/33ba05a4-c075-4144-8a78-960df8c7ec3f'>hello</video>
                     </div>
                 </div>
                 <div
