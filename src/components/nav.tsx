@@ -54,7 +54,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     return (
         <nav className='flex justify-between items-center px-4'>
-            {router.asPath.includes('earn') || router.asPath === '/' ? null : (
+            { router.asPath !== '/dashboard' ? null : (
                 <>
                     {isSession}
                     <div className='flex gap-4 justify-end w-full'>
