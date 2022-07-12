@@ -58,7 +58,7 @@ const Index = () => {
     }, [theme])
     return (
         <>
-            <div className='grid gap-5 max-w-5xl mx-auto text-gray-400 px-4'>
+            <div className='grid max-w-5xl mx-auto text-gray-400 px-4'>
                 <div className='flex items-center text-[#cb8f10] font-bold'>
                     <Logo className='text-blue-400 text-3xl light:text-[#1a1a2d] w-12 h-12' />
                     1960Token
