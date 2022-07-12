@@ -1,3 +1,4 @@
+import { IUser } from './../../../models/User';
 import { NextApiRequest, NextApiResponse } from 'next'
 import bcrypt from 'bcryptjs'
 import dbConnect from '../../../lib/dbConnect'
@@ -54,6 +55,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
                 firstUpliner.referralBonus += 3
 
                 await firstUpliner.save()
+
+                console.log({firstUpliner})
 
                 if (firstUpliner.upliner) {
                     const secondUpliner = await User.findOne({
