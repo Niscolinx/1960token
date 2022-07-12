@@ -1,3 +1,4 @@
+import { GetSessionParams, getSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 
 function trade() {
@@ -40,3 +41,22 @@ function trade() {
 }
 
 export default trade
+
+export async function getServerSideProps(
+    context: GetSessionParams | undefined
+) {
+    const session = await getSession(context)
+
+    if (!session) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+        }
+    }
+
+    return {
+        props: { session },
+    }
+}
