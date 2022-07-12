@@ -1,4 +1,4 @@
-import { GetSessionParams, useSession } from 'next-auth/react'
+import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
