@@ -16,6 +16,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/mongodb.ts", "src/widgets/AdvancedRealChart.js", "src/pages/dashboard/trade.tsx", "src/tradeviewWidgets/AdvancedRealChart.js"],
   "exclude": ["node_modules"]
 }
