@@ -160,17 +160,7 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/'>
-                            <div className='grid justify-center place-items-center cursor-pointer '>
-                                <GiWallet className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
-                                <button
-                                    className='text-md p-1 '
-                                    style={neuToUse}
-                                >
-                                    Vendors
-                                </button>
-                            </div>
-                        </Link>
+                        
 
                         <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
