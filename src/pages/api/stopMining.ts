@@ -21,7 +21,6 @@ export default async function StartMining(
 
     const user = await User.findOne({ email })
 
-    console.log("the user", user)
 
     user.miningStartedAt = ''
     user.isMining = false

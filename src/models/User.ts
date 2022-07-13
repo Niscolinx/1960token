@@ -11,6 +11,8 @@ export interface IUser {
     role: string
     referralBonus: number
     totalMined: number
+    tokensMined: number
+    videoMined:number
     portfolio: number
     upliner: string
     status: string
@@ -45,6 +47,14 @@ const userSchema = new Schema<IUser>(
             type: String,
         },
         referralBonus: {
+            type: Number,
+            default: 0
+        },
+        tokensMined: {
+            type: Number,
+            default: 0
+        },
+        videoMined: {
             type: Number,
             default: 0
         },
