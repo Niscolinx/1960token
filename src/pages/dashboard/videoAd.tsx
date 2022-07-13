@@ -38,11 +38,11 @@ function videoAd() {
 
     useEffect(() => {
         console.log("diplay token useEffect")
-        const onFirstLoad = videoState.videoMined === 0 ? fetchedUser.videoMined : videoState
+        const onFirstLoad = videoState.videoMined === 0 ? fetchedUser.videoMined : videoState.videoMined
 
         console.log(onFirstLoad)
         setDisplayToken(onFirstLoad)
-    }, [videoState])
+    }, [videoState, fetchedUser])
 
     useEffect(() => {
         if (theme === 'dark') {
