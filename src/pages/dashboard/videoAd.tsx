@@ -37,6 +37,10 @@ function videoAd() {
     console.log({ fetchedUser })
 
     useEffect(() => {
+        setDisplayToken(fetchedUser.videoMined)
+    }, [fetchedUser])
+
+    useEffect(() => {
         if (theme === 'dark') {
             setNeuToUse({
                 background: `linear-gradient(145deg, #1c1c30, #171729)`,
@@ -69,7 +73,7 @@ function videoAd() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-2xl'>
-                        {fetchedUser.videoMined}
+                        {displayToken}
                     </p>
                 </div>
 
