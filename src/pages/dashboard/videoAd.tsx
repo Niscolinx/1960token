@@ -4,23 +4,25 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
-import { getUser } from '../../store/features/user/UserSlice'
-import {
-    initVideoEnded,
-    selectVideo,
-} from '../../store/features/video/VideoSlice'
+
+import { initVideoEnded, selectVideo } from '../../store/features/video/VideoSlice'
+import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function videoAd() {
     const { data: session } = useSession()
+    const fetchedUser = useAppSelector(selectUser)
     const videoState = useAppSelector(selectVideo)
     const [displayToken, setDisplayToken] = useState<number>()
+
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     const dispatch = useAppDispatch()
 
+
     const memoizedCallback = useCallback(() => {
+        console.log('useCallback...........')
         if (session) {
             return dispatch(getUser(session))
         }
@@ -31,9 +33,11 @@ function videoAd() {
         return memoizedCallback()
     }, [])
 
-    console.log({ videoState })
+    console.log({ fetchedUser })
+    console.log({videoState})
 
     useEffect(() => {
+        console.log("diplay token useEffect")
         setDisplayToken(videoState.videoMined)
     }, [videoState])
 
@@ -69,7 +73,9 @@ function videoAd() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-2xl'>{displayToken}</p>
+                    <p className='font-bold text-2xl'>
+                        {displayToken}
+                    </p>
                 </div>
 
                 <div className='relative'>
