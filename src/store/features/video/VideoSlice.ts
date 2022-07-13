@@ -28,7 +28,7 @@ export const VideoSlice = createSlice({
     initialState,
     reducers: {
         clearVideoTokens: (state, action) => {
-            state.totalMined = 0
+            state.videoMined = 0
         },
     },
 
