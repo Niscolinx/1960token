@@ -13,7 +13,7 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 function videoAd() {
     const { data: session } = useSession()
     const fetchedUser = useAppSelector(selectUser)
-    const [displayToken, setDisplayToken] = useState('')
+    const [displayToken, setDisplayToken] = useState<number>()
 
 
     const { theme } = useTheme()
