@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
 
 interface returnTypeJson {
-    totalMined: number
+    videoMined: number
 }
 
 type JsonType<returnTypeJson> = (body: returnTypeJson) => object
@@ -19,10 +19,10 @@ export default async function StartMining(
 
     const user = await User.findOne({ email })
 
-    user.totalMined = user.totalMined + 0.5
+    user.videoMined = user.videoMined + 0.5
     await user.save()
 
     return res.json({
-        totalMined: user.totalMined
+        videoMined: user.videoMined
     })
 }
