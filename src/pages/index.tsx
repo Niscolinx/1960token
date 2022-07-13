@@ -358,13 +358,13 @@ const Index = () => {
             </div>
             <div className='flex justify-around py-6 px-4 border-b'>
                 <Link href={'/'}>
-                    <BsFacebook className='text-2xl text-blue-700' />
+                    <BsFacebook className='cursor-pointer text-2xl text-blue-700' />
                 </Link>
                 <Link href={'/'}>
-                    <BsTelegram className='text-2xl text-blue-400' />
+                    <BsTelegram className='cursor-pointer text-2xl text-blue-400' />
                 </Link>
                 <Link href={'/'}>
-                    <BsYoutube className='text-2xl text-red-500' />
+                    <BsYoutube className='cursor-pointer text-2xl text-red-500' />
                 </Link>
             </div>
         </>
