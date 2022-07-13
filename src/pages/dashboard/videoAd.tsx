@@ -104,7 +104,6 @@ function videoAd() {
                             onStart={handleVideoEnded}
                         />
                     </div>
-                </div>
                 
             </div>
         </>
