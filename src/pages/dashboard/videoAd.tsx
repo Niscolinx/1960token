@@ -12,22 +12,15 @@ import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function videoAd() {
     const { data: session } = useSession()
-    const mineState = useAppSelector(selectMining)
     const fetchedUser = useAppSelector(selectUser)
 
-    const [miningStart, setMiningStart] = useState(false)
 
-    const [isDim, setIsDim] = useState(false)
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     const dispatch = useAppDispatch()
 
-    // useEffect(() => {
-    //setTokenCount(mineState.countDownToken)
-    //setTokenCount(mineState.tokensCount)
-    //}, [mineState])
 
     const memoizedCallback = useCallback(() => {
         console.log('useCallback...........')
