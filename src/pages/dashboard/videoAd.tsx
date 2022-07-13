@@ -4,15 +4,14 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
-import {
-    selectMining
-} from '../../store/features/mine/MinerSlice'
-import { initVideoEnded } from '../../store/features/video/VideoSlice'
+
+import { initVideoEnded, selectVideo } from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function videoAd() {
     const { data: session } = useSession()
     const fetchedUser = useAppSelector(selectUser)
+    const videoState = useAppSelector(selectVideo)
     const [displayToken, setDisplayToken] = useState<number>()
 
 
