@@ -13,6 +13,7 @@ const initialState: videoState = {
     status: 'idle',
     videoMined: 0,
 }
+
 export const initVideoEnded = createAsyncThunk(
     'video',
     async (userSession: nextAuthSession) => {
