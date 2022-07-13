@@ -32,13 +32,13 @@ const Footer = () => {
         }
     }, [theme])
 
-    useEffect(() => {
-        if (router.pathname.includes('video')) {
-            setToFixedDisplay('')
-        } else {
-            setToFixedDisplay('fixed')
-        }
-    }, [router])
+    // useEffect(() => {
+    //     if (router.pathname.includes('video')) {
+    //         setToFixedDisplay('fixed')
+    //     } else {
+    //         setToFixedDisplay('fixed')
+    //     }
+    // }, [router])
 
     return (
         <div
