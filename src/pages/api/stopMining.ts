@@ -4,7 +4,7 @@ import User, { IUser } from '../../models/User'
 interface returnTypeJson {
     miningStartedAt: string
     isMining: boolean
-    totalMined: number
+    tokensMined: number
 }
 
 type JsonType<returnTypeJson> = (body: returnTypeJson) => object
