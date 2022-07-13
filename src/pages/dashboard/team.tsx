@@ -194,7 +194,7 @@ function team() {
                             </select>
                             <TbArrowsSort className='text-2xl' />
                             <p
-                                className='text-2xl py-4 px-6 border border-[#1a1a2d] font-bold rounded-lg'
+                                className='text-2xl py-4 px-6 border border-[#1a1a2d] font-bold rounded-lg text-gray-300'
                                 style={neuToUse}
                             >
                                 Portfolio
