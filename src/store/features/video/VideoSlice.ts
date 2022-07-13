@@ -1,4 +1,4 @@
-import { AppState } from './../../app/store';
+import { AppState } from './../../app/store'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { nextAuthSession } from '../../../lib/types'
@@ -49,7 +49,7 @@ export const VideoSlice = createSlice({
     },
 })
 
-export const {clearVideoTokens} = VideoSlice.actions
+export const { clearVideoTokens } = VideoSlice.actions
 
 export const selectVideo = (state: AppState) => state.video as videoState
 
