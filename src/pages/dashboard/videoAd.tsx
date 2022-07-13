@@ -1,40 +1,37 @@
 import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
-
-import { initVideoEnded, selectVideo } from '../../store/features/video/VideoSlice'
-import { getUser, selectUser } from '../../store/features/user/UserSlice'
+import {
+    initVideoEnded,
+    selectVideo,
+} from '../../store/features/video/VideoSlice'
 
 function videoAd() {
     const { data: session } = useSession()
-    const fetchedUser = useAppSelector(selectUser)
     const videoState = useAppSelector(selectVideo)
     const [displayToken, setDisplayToken] = useState<number>()
-
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     const dispatch = useAppDispatch()
 
+    // const memoizedCallback = useCallback(() => {
+    //     console.log('useCallback...........')
+    //     if (session) {
+    //         return dispatch(getUser(session))
+    //     }
+    // }, [session])
 
-    const memoizedCallback = useCallback(() => {
-        console.log('useCallback...........')
-        if (session) {
-            return dispatch(getUser(session))
-        }
-    }, [session])
+    // useMemo(() => {
+    //     console.log('useMemo.............')
+    //     return memoizedCallback()
+    // }, [])
 
-    useMemo(() => {
-        console.log('useMemo.............')
-        return memoizedCallback()
-    }, [])
-
-    console.log({ fetchedUser })
-    console.log({videoState})
+    console.log({ videoState })
 
     useEffect(() => {
         setDisplayToken(videoState.videoMined)
@@ -72,9 +69,7 @@ function videoAd() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-2xl'>
-                        {displayToken}
-                    </p>
+                    <p className='font-bold text-2xl'>{displayToken}</p>
                 </div>
 
                 <div className='relative'>
