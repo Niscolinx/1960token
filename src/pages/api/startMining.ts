@@ -5,7 +5,7 @@ import User, { IUser } from '../../models/User'
 interface returnTypeJson {
     miningStartedAt: string
     isMining: boolean
-    totalMined: number
+    tokensMined: number
 }
 
 type JsonType<returnTypeJson> = (body: returnTypeJson) => object
@@ -29,7 +29,7 @@ export default async function StartMining(
         return res.json({
             miningStartedAt: user.miningStartedAt,
             isMining: user.isMining,
-            totalMined: user.totalMined
+            tokensMined: user.tokensMined
         })
     } else {
         user.miningStartedAt = startTimeStamp
@@ -39,7 +39,7 @@ export default async function StartMining(
         return res.json({
             isMining: user.isMining,
             miningStartedAt: user.miningStartedAt,
-            totalMined: user.totalMined
+            tokensMined: user.tokensMined
         })
     }
 }
