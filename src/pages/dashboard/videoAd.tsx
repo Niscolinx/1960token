@@ -12,7 +12,7 @@ function videoAd() {
     const { data: session } = useSession()
     const fetchedUser = useAppSelector(selectUser)
     const videoState = useAppSelector(selectVideo)
-    const [displayToken, setDisplayToken] = useState<number>(fetchedUser.videoMined)
+    const [displayToken, setDisplayToken] = useState<number | undefined>()
 
 
     const { theme } = useTheme()
@@ -38,7 +38,10 @@ function videoAd() {
 
     useEffect(() => {
         console.log("diplay token useEffect")
-        setDisplayToken(videoState.videoMined)
+        const onFirstLoad = videoState.videoMined === 0 ? fetchedUser.videoMined : videoState
+
+        console.log(onFirstLoad)
+        setDisplayToken(onFirstLoad)
     }, [videoState])
 
     useEffect(() => {
