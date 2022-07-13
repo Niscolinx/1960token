@@ -15,7 +15,6 @@ const initialState: IUser = {
     role: '',
     upliner: '',
     referrals: [],
-    totalMined: 0,
     videoMined: 0,
     tokensMined: 0,
     referralBonus: 0,

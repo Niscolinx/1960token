@@ -10,8 +10,8 @@ export interface IUser {
     miningStartedAt: string
     role: string
     referralBonus: number
-    totalMined: number
     tokensMined: number
+    videoMined:number
     portfolio: number
     upliner: string
     status: string
