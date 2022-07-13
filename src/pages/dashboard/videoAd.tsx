@@ -79,7 +79,7 @@ function videoAd() {
 
     return (
         <>
-            <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[88vh] relative'>
+            <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
                 <div
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
