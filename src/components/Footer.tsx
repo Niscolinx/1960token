@@ -34,7 +34,7 @@ const Footer = () => {
 
     useEffect(() => {
         if (router.pathname.includes('video')) {
-            setToFixedDisplay('fixed')
+            setToFixedDisplay('')
         } else {
             setToFixedDisplay('fixed')
         }
