@@ -361,7 +361,7 @@ const Index = () => {
                     <BsFacebook className='text-2xl text-blue-700' />
                 </Link>
                 <Link href={'/'}>
-                    <BsTelegram className='text-2xl text-blue-300' />
+                    <BsTelegram className='text-2xl text-blue-400' />
                 </Link>
                 <Link href={'/'}>
                     <BsYoutube className='text-2xl text-red-500' />
