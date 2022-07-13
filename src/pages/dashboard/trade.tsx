@@ -188,13 +188,13 @@ function earn() {
                         </span>
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
-                        <ReactPlayer
-                            url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
-                            width='100%'
-                            height='100%'
-                            //onEnded={handleVideoEnded}
-                            onStart={handleVideoEnded}
-                        />
+                        <div className='grid mt-4'>
+                <iframe
+                    src={`/tradingView.html`}
+                    width='100%'
+                    style={{ height: '70vh' }}
+                />
+            </div>
                     </div>
                 </div>
                 <div
