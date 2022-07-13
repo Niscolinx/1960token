@@ -81,40 +81,8 @@ function videoAd() {
         }
     }, [mineState])
 
-    useEffect(() => {
-        const dayjsNowTimeStamp = dayjs()
-        const persistedStorage = localStorage.getItem('persist:root')
 
-        if (session) {
-            const parsedJSON = JSON.parse(persistedStorage!)
 
-            if (persistedStorage) {
-                if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
-                    dispatch(initMineAsync(session))
-                }
-            }
-
-            if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
-                setMiningStart(false)
-                dispatch(initStopMineAsync(session))
-            }
-        }
-    }, [session])
-
-    useEffect(() => {
-        if (miningStart) {
-            setIsDim(false)
-        } else {
-            setIsDim(true)
-        }
-    }, [miningStart])
-
-    const handleMineStart = () => {
-        if (session) {
-            dispatch(initMineAsync(session))
-            //dispatch(initStopMineAsync(session))
-        }
-    }
 
     const handleVideoEnded = () => {
         console.log('video ended')
