@@ -70,17 +70,6 @@ function videoAd() {
         }
     }, [theme])
 
-    useEffect(() => {
-        if (mineState) {
-            if (mineState.isMining && mineState.miningSession === 'active') {
-                setMiningStart(true)
-                setIsDim(false)
-            } else {
-                setMiningStart(false)
-            }
-        }
-    }, [mineState])
-
 
 
 
@@ -105,56 +94,7 @@ function videoAd() {
                 <div className='grid self-center'>
                     <MineTimer start={miningStart} />
                 </div>
-                <div className='relative'>
-                    <div className='absolute grid right-0 justify-items-center  gap-6 z-90 justify-end cursor-pointer animateRight'>
-                        <AnimationOnScroll
-                            initiallyVisible={true}
-                            animateIn='animate__slideInLeft'
-                        >
-                            <div className='grid bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 '>
-                                <div className='grid text-white justify-center justify-items-center mb-4'>
-                                    <IoIosPeople
-                                        className='text-white text-4xl dark:text-[#1a1a2d]'
-                                        onClick={() =>
-                                            console.log('team clicked')
-                                        }
-                                    />
-                                    <p className='font-bold dark:text-[#1a1a2d]'>
-                                        1/1
-                                    </p>
-                                </div>
-                                <div className='grid text-white justify-center justify-items-center'>
-                                    <GiTrade
-                                        onClick={handleMineStart}
-                                        // className='text-white text-4xl'
-                                        className={` cursor-pointer text-white dark:text-[#1a1a2d] text-4xl ${
-                                            !isDim && miningStart
-                                                ? 'animate-spin animate-duration-[4s]'
-                                                : ''
-                                        }`}
-                                    />
-                                    <div className='grid justify-center justify-items-center'>
-                                        <HiOutlineArrowNarrowUp
-                                            className='text-white dark:text-[#1a1a2d] text-3xl animate-bounce mt-7 animate-duration-[4s]'
-                                            style={{
-                                                display: isDim
-                                                    ? 'block'
-                                                    : 'none',
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </AnimationOnScroll>
-                        <span
-                            className='text-white'
-                            style={{
-                                display: isDim ? 'block' : 'none',
-                            }}
-                        >
-                            Click to mine!
-                        </span>
-                    </div>
+                
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <ReactPlayer
                             url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
@@ -165,10 +105,7 @@ function videoAd() {
                         />
                     </div>
                 </div>
-                <div
-                    className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
-                    style={{ display: isDim ? 'block' : 'none' }}
-                ></div>
+                
             </div>
         </>
     )
