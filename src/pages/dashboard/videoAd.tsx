@@ -18,7 +18,7 @@ import { initVideoEnded } from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
-function earn() {
+function videoAd() {
     const { data: session } = useSession()
     const mineState = useAppSelector(selectMining)
     const fetchedUser = useAppSelector(selectUser)
@@ -206,7 +206,7 @@ function earn() {
     )
 }
 
-export default earn
+export default videoAd
 
 export async function getServerSideProps(
     context: GetSessionParams | undefined
