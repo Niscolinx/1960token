@@ -37,6 +37,7 @@ function videoAd() {
     console.log({ fetchedUser })
 
     useEffect(() => {
+        console.log("diplay token")
         setDisplayToken(fetchedUser.videoMined)
     }, [fetchedUser])
 
