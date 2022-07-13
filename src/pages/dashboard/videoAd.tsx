@@ -7,10 +7,8 @@ import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
 import {
     selectMining
 } from '../../store/features/mine/MinerSlice'
-import MineTimer from '../../store/features/mine/MineTimer'
 import { initVideoEnded } from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function videoAd() {
     const { data: session } = useSession()
