@@ -137,7 +137,7 @@ const Index = () => {
                                         Start mining and affiliate with us
                                     </p>
                                     <Link href='/api/auth/signin'>
-                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm '>
+                                        <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 justify-self-center text-sm md:text-lg'>
                                             Get Started
                                         </button>
                                     </Link>
