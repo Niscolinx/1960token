@@ -88,12 +88,10 @@ function videoAd() {
                     style={neuToUse}
                 >
                     <p className='font-bold text-2xl'>
-                        {fetchedUser.totalMined}
+                        {fetchedUser.videoMined}
                     </p>
                 </div>
-                <div className='grid self-center'>
-                    <MineTimer start={miningStart} />
-                </div>
+                
                 
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <ReactPlayer
