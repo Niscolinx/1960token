@@ -33,7 +33,7 @@ const Footer = () => {
     }, [theme])
 
     useEffect(() => {
-        if (router.pathname.includes('earn')) {
+        if (router.pathname.includes('video')) {
             setToFixedDisplay('fixed')
         } else {
             setToFixedDisplay('fixed')
@@ -61,7 +61,7 @@ const Footer = () => {
                     <TbArrowsDoubleNeSw className='text-orange-300 light:text-[#1a1a2d] text-2xl' />
                 </div>
             </Link>
-            <Link href='/dashboard/earn'>
+            <Link href='/dashboard/videoAd'>
                 <div
                     className='grid justify-items-center p-2 rounded-full cursor-pointer'
                     style={neuToUse}
