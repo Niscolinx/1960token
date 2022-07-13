@@ -99,6 +99,8 @@ function team() {
         })
     }, [user])
 
+    const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
+
     useEffect(() => {
         if (theme === 'dark') {
             setNeuToUse({
@@ -128,7 +130,7 @@ function team() {
 
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
-            toPortolio = fetchedUser.totalMined
+            toPortolio = totalMined
         } else {
             toPortolio = referralTotalNumberAndIncome.teamIncome
         }
@@ -158,7 +160,7 @@ function team() {
                     </div>
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Mine/Video Income</p>
-                        <p className='font-bold'>${fetchedUser.totalMined}</p>
+                        <p className='font-bold'>${totalMined}</p>
                     </div>
                 </div>
                 <div
