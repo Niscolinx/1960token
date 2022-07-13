@@ -5,21 +5,24 @@ import ReactPlayer from 'react-player/youtube'
 
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
 
-import { initVideoEnded, selectVideo } from '../../store/features/video/VideoSlice'
+import {
+    initVideoEnded,
+    selectVideo,
+} from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function videoAd() {
     const { data: session } = useSession()
     const fetchedUser = useAppSelector(selectUser)
     const videoState = useAppSelector(selectVideo)
-    const [displayToken, setDisplayToken] = useState<number | typeof videoState>()
-
+    const [displayToken, setDisplayToken] = useState<
+        number | typeof videoState
+    >()
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     const dispatch = useAppDispatch()
-
 
     const memoizedCallback = useCallback(() => {
         console.log('useCallback...........')
@@ -33,14 +36,12 @@ function videoAd() {
         return memoizedCallback()
     }, [])
 
-    console.log({ fetchedUser })
-    console.log({videoState})
-
     useEffect(() => {
-        console.log("diplay token useEffect")
-        const onFirstLoad = videoState.videoMined === 0 ? fetchedUser.videoMined : videoState.videoMined
+        const onFirstLoad =
+            videoState.videoMined === 0
+                ? fetchedUser.videoMined
+                : videoState.videoMined
 
-        console.log(onFirstLoad)
         setDisplayToken(onFirstLoad)
     }, [videoState, fetchedUser])
 
@@ -76,9 +77,7 @@ function videoAd() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-2xl'>
-                        {displayToken}
-                    </p>
+                    <p className='font-bold text-2xl'>{displayToken}</p>
                 </div>
 
                 <div className='relative'>
