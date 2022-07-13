@@ -34,6 +34,7 @@ function videoAd() {
     }, [])
 
     console.log({ fetchedUser })
+    console.log({videoState})
 
     useEffect(() => {
         console.log("diplay token useEffect")
