@@ -89,7 +89,7 @@ function videoAd() {
                     </p>
                 </div>
 
-                <div className='grid'>
+                <div className='relative'>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <ReactPlayer
                             url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
