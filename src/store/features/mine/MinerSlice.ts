@@ -9,7 +9,7 @@ export interface MiningState {
     isMining: boolean
     status: 'idle' | 'loading' | 'failed' | 'success'
     miningStartedAt: string
-    totalMined: number
+    tokensMined: number
     miningSession: 'over' | 'active' | 'stall'
     countDownToken: string
     tokensCount: number
@@ -19,7 +19,7 @@ const initialState: MiningState = {
     isMining: false,
     status: 'idle',
     miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
-    totalMined: 0.0,
+    tokensMined: 0,
     miningSession: 'stall',
     countDownToken: '',
     tokensCount: 0
@@ -64,7 +64,7 @@ export const MiningSlice = createSlice({
         },
 
         clearMineTokens: (state) => {
-            state.totalMined = 0
+            state.tokensMined = 0
         }
         // decrement: (state) => {
         //     state.value -= 1
@@ -95,12 +95,12 @@ export const MiningSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(initStopMineAsync.fulfilled, (state, action) => {
-                const { isMining, miningStartedAt, totalMined } = action.payload
+                const { isMining, miningStartedAt, tokensMined } = action.payload
                 state.status = 'success'
                 state.miningStartedAt = miningStartedAt
                 state.isMining = isMining
                 state.miningSession = 'over'
-                state.totalMined = totalMined
+                state.tokensMined = tokensMined
                 localStorage.removeItem('persist:root')
             })
             .addCase(initStopMineAsync.rejected, (state) => {
