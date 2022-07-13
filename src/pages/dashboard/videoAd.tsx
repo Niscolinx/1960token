@@ -37,7 +37,6 @@ function videoAd() {
     console.log({videoState})
 
     useEffect(() => {
-        console.log("diplay token useEffect")
         setDisplayToken(videoState.videoMined)
     }, [videoState])
 
