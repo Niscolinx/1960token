@@ -6,12 +6,12 @@ import { videoEnded } from './VideoAPI'
 
 export interface videoState {
     status: 'idle' | 'loading' | 'failed' | 'success'
-    totalMined: number
+    videoMined: number
 }
 
 const initialState: videoState = {
     status: 'idle',
-    totalMined: 0.0,
+    videoMined: 0,
 }
 export const initVideoEnded = createAsyncThunk(
     'video',
@@ -38,10 +38,10 @@ export const VideoSlice = createSlice({
                 state.status = 'loading'
             })
             .addCase(initVideoEnded.fulfilled, (state, action) => {
-                const { totalMined } = action.payload
+                const { videoMined } = action.payload
                 state.status = 'success'
 
-                state.totalMined = totalMined
+                state.videoMined = videoMined
             })
             .addCase(initVideoEnded.rejected, (state) => {
                 state.status = 'failed'

@@ -2,7 +2,7 @@ import axios from 'axios'
 import { nextAuthSession } from '../../../lib/types'
 
 interface IFetchedData {
-    totalMined: number
+    videoMined: number
 }
 
 export async function videoEnded(
