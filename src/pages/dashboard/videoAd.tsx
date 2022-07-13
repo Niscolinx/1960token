@@ -56,7 +56,6 @@ function videoAd() {
     }, [theme])
 
     const handleVideoEnded = () => {
-        console.log('video ended')
         if (session) {
             dispatch(initVideoEnded(session))
         }
