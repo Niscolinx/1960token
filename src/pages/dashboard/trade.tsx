@@ -49,7 +49,6 @@ function earn() {
         return memoizedCallback()
     }, [])
 
-    console.log({ fetchedUser })
 
     useEffect(() => {
         if (theme === 'dark') {
