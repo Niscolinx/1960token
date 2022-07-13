@@ -22,6 +22,8 @@ export default async function StartMining(
     user.videoMined = user.videoMined + 0.5
     await user.save()
 
+    console.log({user})
+
     return res.json({
         videoMined: user.videoMined
     })
