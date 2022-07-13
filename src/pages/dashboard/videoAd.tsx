@@ -1,17 +1,11 @@
 import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { GiTrade } from 'react-icons/gi'
-import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
-import { IoIosPeople } from 'react-icons/io'
 
-import dayjs from 'dayjs'
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
 import {
-    selectMining,
-    initMineAsync,
-    initStopMineAsync,
+    selectMining
 } from '../../store/features/mine/MinerSlice'
 import MineTimer from '../../store/features/mine/MineTimer'
 import { initVideoEnded } from '../../store/features/video/VideoSlice'
