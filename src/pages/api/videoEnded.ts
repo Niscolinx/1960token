@@ -19,6 +19,7 @@ export default async function StartMining(
 
     const user = await User.findOne({ email })
 
+    console.log(user.videoMined)
     user.videoMined = user.videoMined + 0.5
     await user.save()
 
