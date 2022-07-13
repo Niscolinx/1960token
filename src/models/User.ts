@@ -12,7 +12,6 @@ export interface IUser {
     referralBonus: number
     totalMined: number
     tokensMined: number
-    videoMined:number
     portfolio: number
     upliner: string
     status: string
@@ -58,10 +57,7 @@ const userSchema = new Schema<IUser>(
             type: Number,
             default: 0
         },
-        totalMined: {
-            type: Number,
-            default: 0.0
-        },
+       
         portfolio: {
             type: Number,
             default: 0
