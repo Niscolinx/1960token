@@ -1,9 +1,10 @@
 import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import ReactPlayer from 'react-player/youtube'
 
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
+import { getUser } from '../../store/features/user/UserSlice'
 import {
     initVideoEnded,
     selectVideo,
@@ -19,17 +20,16 @@ function videoAd() {
 
     const dispatch = useAppDispatch()
 
-    // const memoizedCallback = useCallback(() => {
-    //     console.log('useCallback...........')
-    //     if (session) {
-    //         return dispatch(getUser(session))
-    //     }
-    // }, [session])
+    const memoizedCallback = useCallback(() => {
+        if (session) {
+            return dispatch(getUser(session))
+        }
+    }, [session])
 
-    // useMemo(() => {
-    //     console.log('useMemo.............')
-    //     return memoizedCallback()
-    // }, [])
+    useMemo(() => {
+        console.log('useMemo.............')
+        return memoizedCallback()
+    }, [])
 
     console.log({ videoState })
 
