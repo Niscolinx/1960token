@@ -12,7 +12,7 @@ function videoAd() {
     const { data: session } = useSession()
     const fetchedUser = useAppSelector(selectUser)
     const videoState = useAppSelector(selectVideo)
-    const [displayToken, setDisplayToken] = useState<number>()
+    const [displayToken, setDisplayToken] = useState<number>(fetchedUser.videoMined)
 
 
     const { theme } = useTheme()
