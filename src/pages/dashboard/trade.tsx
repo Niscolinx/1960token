@@ -173,7 +173,7 @@ function earn() {
                                 display: isDim ? 'block' : 'none',
                             }}
                         >
-                            Click to mine!
+                            Tap to mine!
                         </span>
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
