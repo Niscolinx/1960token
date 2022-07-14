@@ -49,7 +49,6 @@ function earn() {
         return memoizedCallback()
     }, [])
 
-
     useEffect(() => {
         if (theme === 'dark') {
             setNeuToUse({
@@ -125,16 +124,18 @@ function earn() {
     return (
         <>
             <div className='grid grid-rows-[.1fr,.1fr,1fr] overflow-hidden h-[88vh] relative'>
-                <div
-                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
-                    style={neuToUse}
-                >
-                    <p className='font-bold text-2xl'>
-                        {fetchedUser.tokensMined}
-                    </p>
-                </div>
-                <div className='grid self-center'>
-                    <MineTimer start={miningStart} />
+                <div className='flex'>
+                    <div
+                        className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
+                        style={neuToUse}
+                    >
+                        <p className='font-bold text-2xl'>
+                            {fetchedUser.tokensMined}
+                        </p>
+                    </div>
+                    <div className='grid self-center'>
+                        <MineTimer start={miningStart} />
+                    </div>
                 </div>
                 <div className='relative'>
                     <div className='absolute grid right-0 justify-items-center  gap-6 z-90 justify-end cursor-pointer animateRight'>
@@ -143,7 +144,6 @@ function earn() {
                             animateIn='animate__slideInLeft'
                         >
                             <div className='grid bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 '>
-                               
                                 <div className='grid text-white justify-center justify-items-center'>
                                     <GiTrade
                                         onClick={handleMineStart}
@@ -178,12 +178,12 @@ function earn() {
                     </div>
                     <div className='absolute right-0 left-0 bottom-0 top-0'>
                         <div className='grid mt-4'>
-                <iframe
-                    src={`/tradingView.html`}
-                    width='100%'
-                    style={{ height: '70vh' }}
-                />
-            </div>
+                            <iframe
+                                src={`/tradingView.html`}
+                                width='100%'
+                                style={{ height: '70vh' }}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div
