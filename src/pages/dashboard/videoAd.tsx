@@ -26,14 +26,12 @@ function videoAd() {
     const dispatch = useAppDispatch()
 
     const memoizedCallback = useCallback(() => {
-        console.log('useCallback...........')
         if (session) {
             return dispatch(getUser(session))
         }
     }, [session])
 
     useMemo(() => {
-        console.log('useMemo.............')
         return memoizedCallback()
     }, [])
 
