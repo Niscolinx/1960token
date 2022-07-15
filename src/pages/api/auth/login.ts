@@ -42,7 +42,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
                 expiresIn: '1hr',
             }
         )
-        setCookie('userSession', user)
+  setCookie('userSession', 'value', { req, res, maxAge: 60 * 60 * 24 })
 
         return res.status(200).json(
             user
