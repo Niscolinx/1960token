@@ -89,7 +89,6 @@ function videoAd() {
                             url='https://www.youtube.com/watch?v=L0CXSh2OVSA'
                             width='100%'
                             height='100%'
-                            light={true}
                             onEnded={handleVideoEnded}
                             //onStart={handleVideoEnded}
                         />
