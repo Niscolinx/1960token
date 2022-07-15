@@ -91,7 +91,7 @@ function videoAd() {
                 >
                     <div className='flex justify-center items-center text-[#1a1a2d]'>
                         <p className='font-bold text-2xl'>
-                            {fetchedUser.tokensMined}
+                            8232
                         </p>
                     </div>
                     <div className='grid self-center'>{displayToken}</div>
