@@ -97,6 +97,11 @@ const Home = () => {
         setSelectedOption(value)
     }
 
+    useEffect(() => {
+        setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
+    }, [fetchedUser])
+
+    console.log({fetchedUser})
     return (
         <div className='h-[93vh] px-4'>
             <div className='grid mt-10 gap-5'>
