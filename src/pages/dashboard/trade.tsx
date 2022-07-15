@@ -121,7 +121,7 @@ function earn() {
                 <div className='flex justify-between items-center bg-purple-500 text-[#1a1a2d] py-2 px-10'>
                     <MineTimer start={miningStart} />
                     <p className='font-bold text-2xl'>
-                        {fetchedUser.tokensMined}
+                        {mineState.tokensMined}
                     </p>
                 </div>
                 <div className='relative'>
