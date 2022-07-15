@@ -60,6 +60,8 @@ const Home = () => {
 
     const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
 
+    console.log({totalMined})
+
     const dropDown = () => {
         toggleDisplay(display ? false : true)
         setDisplayButton(display ? 'Transfer' : 'Close')
@@ -85,7 +87,6 @@ const Home = () => {
         }).catch(() => setLoading(false))
     }
 
-    console.log({ loading })
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
