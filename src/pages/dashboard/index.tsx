@@ -69,7 +69,8 @@ const Home = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-
+        setLoading(true)
+        
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
@@ -196,7 +197,7 @@ const Home = () => {
                               }
                     }
                 >
-                    <form className='px-8 py-12 grid' onSubmit={handleSubmit}>
+                    <form className='px-8 py-12 grid md:mx-20' onSubmit={handleSubmit}>
                         <div className=' grid justify-items-center gap-4 dark:text-[#1a1a2d]'>
                             <select
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
