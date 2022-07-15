@@ -5,13 +5,22 @@ import { ImProfile } from 'react-icons/im'
 import { useTheme } from 'next-themes'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
-import { getUser, selectUser } from '../../store/features/user/UserSlice'
+import { getUser, selectUser, updatePortolio } from '../../store/features/user/UserSlice'
+import { TbArrowsSort } from 'react-icons/tb'
+import { clearMineTokens } from '../../store/features/mine/MinerSlice'
+import { clearVideoTokens } from '../../store/features/video/VideoSlice'
 
 const Home = () => {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
+
+ type TOption = 'Mine/Video Income' | 'Referral Income'
+
     const fetchedUser = useAppSelector(selectUser)
         const [displayButton, setDisplayButton] = useState('Transfer')
+        const [display, toggleDisplay] = useState(false)
+        const [selectedOption, setSelectedOption] =
+            useState<TOption>('Referral Income')
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
@@ -49,7 +58,7 @@ const Home = () => {
 
         const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
 
-        
+
     const dropDown = () => {
         toggleDisplay(display ? false : true)
         setDisplayButton(display ? 'Transfer' : 'Close')
@@ -61,9 +70,10 @@ const Home = () => {
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
-        } else {
-            toPortolio = referralTotalNumberAndIncome.teamIncome
-        }
+         }
+         //else {
+        //     toPortolio = referralTotalNumberAndIncome.teamIncome
+        // }
 
         //Store the referral Income in Database first
 
@@ -162,7 +172,7 @@ const Home = () => {
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
                         <p className='font-bold'>
-                            ${referralTotalNumberAndIncome.teamIncome}
+                            ${}
                         </p>
                     </div>
                     <div className='grid justify-items-center'>

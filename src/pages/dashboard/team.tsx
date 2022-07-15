@@ -22,11 +22,9 @@ function team() {
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
         useState<TeamTotalNumberAndIncome>({ teamIncome: 0, teamNumber: 0 })
     const [neuToUse, setNeuToUse] = useState<{}>()
-    const [display, toggleDisplay] = useState(false)
-    const [selectedOption, setSelectedOption] =
-        useState<TOption>('Referral Income')
+    
 
-    type TOption = 'Mine/Video Income' | 'Referral Income'
+   
 
     type TeamRow = {
         totalMember: number
