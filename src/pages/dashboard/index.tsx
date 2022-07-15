@@ -35,7 +35,9 @@ const Home = () => {
 
     const memoizedCallback = useCallback(() => {
         if (session) {
-            return dispatch(getUser(session))
+            return dispatch(getUser(session)).then((data) => {
+                localStorage.setItem('userSession', JSON.stringify(data.payload))
+            })
         }
     }, [session])
 

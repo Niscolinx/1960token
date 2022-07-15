@@ -132,7 +132,7 @@ function earn() {
         if (session) {
             
             dispatch(initMineAsync(session)).then(data => {
-                console.log(data.type)
+                console.log('started mining', data.type)
                 if(data.type === 'mining/fulfilled'){
                     localStorage.setItem('isMining', data.type)
                 }
