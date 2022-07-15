@@ -115,7 +115,7 @@ const Home = () => {
                     </button>
                 </form>
 
-                <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3 md:px-20'>
+                <div className='grid mt-10 text-[#ccccd0] border-b border-gray-700 pb-3 md:mx-20 '>
                     <h3 className='border-b border-gray-700 pb-2 text-xl font-semibold light:text-[#1a1a2d]'>
                         Account
                     </h3>
@@ -167,7 +167,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='py-5 px-2 grid md:px-20'>
+            <div className='py-5 px-2 grid md:mx-20'>
                 <div className='flex justify-around bg-orange-300 rounded-t-lg py-5 px-4 dark:text-[#1a1a2d]'>
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
