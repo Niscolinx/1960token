@@ -69,16 +69,16 @@ const Home = () => {
         e.preventDefault()
         setLoading(true)
 
-        // let toPortolio = 0
-        // if (selectedOption === 'Mine/Video Income') {
-        //     toPortolio = totalMined
-        // } else {
-        //     toPortolio = fetchedUser.referralBonus
-        // }
+        let toPortolio = 0
+        if (selectedOption === 'Mine/Video Income') {
+            toPortolio = totalMined
+        } else {
+            toPortolio = fetchedUser.referralBonus
+        }
 
-        // dispatch(clearMineTokens)
-        // dispatch(clearVideoTokens)
-        // dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
+        dispatch(clearMineTokens)
+        dispatch(clearVideoTokens)
+        dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
 
         // if(fetchedUser.status !== 'loading'){
         //     setLoading(false)
