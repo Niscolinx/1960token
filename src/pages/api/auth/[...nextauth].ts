@@ -76,6 +76,11 @@ export default NextAuth({
             return `${baseUrl}/dashboard`
         },
     },
+    events: {
+        signOut(message) {
+            localStorage.removeItem('userSession')
+        },
+    }
     // events: {
     //     signIn: async ({ account, user, isNewUser, profile }) => {
     //         console.log('events sign in', { account, user, isNewUser, profile })
