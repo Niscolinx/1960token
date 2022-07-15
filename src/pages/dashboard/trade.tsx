@@ -13,7 +13,6 @@ import {
     initStopMineAsync,
 } from '../../store/features/mine/MinerSlice'
 import MineTimer from '../../store/features/mine/MineTimer'
-import { initVideoEnded } from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
