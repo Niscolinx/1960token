@@ -77,9 +77,11 @@ function videoAd() {
     const handleProgress = ({ playedSeconds }: { playedSeconds: number }) => {
         const played = Math.floor(playedSeconds)
         console.log({played})
-        if (session && played >= 30) {
+        let count = 0
+        if ((session && played >= 30) && count < 1) {
             console.log("dispatch video")
             dispatch(initVideoEnded(session))
+            count++
         }
 
     }
