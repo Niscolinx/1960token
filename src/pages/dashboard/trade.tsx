@@ -113,6 +113,7 @@ function earn() {
         }
     }
 
+    console.log({mineState})
   
 
     return (
