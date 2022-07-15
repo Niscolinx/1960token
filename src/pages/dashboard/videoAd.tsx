@@ -96,7 +96,7 @@ function videoAd() {
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
                     style={{ display: isDim ? 'block' : 'none' }}
                 >
-                    <div className="grid h-full w-full items-center justify-center">
+                    <div className="flex h-full w-full items-center justify-center bg-gray-300 rounded-lg py-4 px-6">
 
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui assumenda velit, corrupti rem aspernatur tempore molestiae eaque veritatis deleniti sit nemo vitae reprehenderit sapiente quisquam quasi eligendi asperiores numquam nobis?
                     </div>
