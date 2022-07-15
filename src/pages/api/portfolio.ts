@@ -24,6 +24,7 @@ export default async function StartMining(
     user.portfolio += portfolio
     user.tokensMined = 0
     user.videoMined = 0
+    user.referralBonus = 0
     await user.save()
 
     return res.json({
