@@ -79,6 +79,7 @@ function videoAd() {
         console.log({played})
         let count = 0
         if ((session && played >= 30) && count < 1) {
+            console.log(count)
             console.log("dispatch video")
             dispatch(initVideoEnded(session))
             count++
