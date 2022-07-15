@@ -15,6 +15,7 @@ import MineTimer from '../../store/features/mine/MineTimer'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import axios from 'axios'
+import { getCookie } from 'cookies-next'
 
 function earn() {
     const { data: session } = useSession()
@@ -112,7 +113,8 @@ function earn() {
         console.log('fetch the user',{fetchedUser})
         const fetchUser = async () => {
 
-            const response = await axios.post('/api/user', session)
+            //const response = await axios.post('/api/user', session)
+        console.log(getCookie('userSession'))
         }
 
        fetchUser()
