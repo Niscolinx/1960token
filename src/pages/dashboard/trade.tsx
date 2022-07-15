@@ -83,13 +83,14 @@ function earn() {
 
         if (session) {
             const parsedJSON = JSON.parse(persistedStorage!)
-            dispatch(initMineAsync(session))
+           // dispatch(initMineAsync(session))
 
-            // if (persistedStorage) {
-            //     if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
-            //         dispatch(initMineAsync(session))
-            //     }
-            // }
+            if (persistedStorage) {
+                if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
+                    console.log('initMineAsync is called')
+                    dispatch(initMineAsync(session))
+                }
+            }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 setMiningStart(false)
