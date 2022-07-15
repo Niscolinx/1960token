@@ -40,7 +40,9 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
     useEffect(() => {
         if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
             console.log('stop from mine timer')
-            dispatch(initStopMineAsync(session!))
+            dispatch(initStopMineAsync(session!)).then((data) => {
+                console.log({ data })
+            })
         }
     }, [session, updateRemainingTimer])
 
