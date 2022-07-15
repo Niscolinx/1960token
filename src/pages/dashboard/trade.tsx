@@ -128,6 +128,9 @@ function earn() {
                 const {isMining} = response.data
                 console.log('the response', isMining)
 
+                if(isMining){
+                    dispatch(initMineAsync(session))
+                }
             }
         }
 
