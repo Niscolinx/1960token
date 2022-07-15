@@ -71,14 +71,6 @@ export default NextAuth({
             return `${baseUrl}/dashboard`
         },
     },
-    events: {
-        signOut: async(message) => {
-            console.log('sign out', message)
-        },
-        signIn: async ({user}) => {
-            console.log('sign in', user)
-        }
-    },
     // events: {
     //     signIn: async ({ account, user, isNewUser, profile }) => {
     //         console.log('events sign in', { account, user, isNewUser, profile })
