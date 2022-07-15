@@ -123,7 +123,7 @@ function earn() {
     return (
         <>
             <div className='grid grid-rows-[.1fr,.1fr,1fr] overflow-hidden h-[88vh] relative'>
-                <div className='flex justify-center items-center bg-purple-500 text-[#1a1a2d]'>
+                <div className='flex justify-between items-center bg-purple-500 text-[#1a1a2d]'>
                     
                         <MineTimer start={miningStart} />
                         <p className='font-bold text-2xl'>
