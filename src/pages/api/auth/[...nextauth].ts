@@ -77,9 +77,13 @@ export default NextAuth({
         },
     },
     events: {
-        signOut(message) {
+        signOut: async(message) => {
+            console.log('sign out', message)
             localStorage.removeItem('userSession')
         },
+        signIn: async ({user}) => {
+            console.log('sign in', user)
+        }
     },
     // events: {
     //     signIn: async ({ account, user, isNewUser, profile }) => {
