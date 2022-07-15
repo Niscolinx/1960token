@@ -94,6 +94,7 @@ function earn() {
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 setMiningStart(false)
                 dispatch(initStopMineAsync(session))
+                localStorage.removeItem('persist:root')
             }
         }
     }, [session])
