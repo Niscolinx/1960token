@@ -16,7 +16,6 @@ function team() {
     const { theme } = useTheme()
 
     const dispatch = useAppDispatch()
-    const fetchedUser = useAppSelector(selectUser)
     const user = useAppSelector(selectUser)
 
     const [referrals, setReferrals] = useState<TeamRow[]>()
@@ -98,7 +97,6 @@ function team() {
         })
     }, [user])
 
-    const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
 
     useEffect(() => {
         if (theme === 'dark') {

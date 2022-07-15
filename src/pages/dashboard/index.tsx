@@ -47,6 +47,9 @@ const Home = () => {
         }
     }, [theme])
 
+        const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
+
+        
     const dropDown = () => {
         toggleDisplay(display ? false : true)
         setDisplayButton(display ? 'Transfer' : 'Close')
@@ -74,7 +77,7 @@ const Home = () => {
         setSelectedOption(value)
         console.log({ value })
     }
-    
+
     return (
         <div className='h-[93vh] px-4'>
             <div className='grid mt-10 gap-5'>
