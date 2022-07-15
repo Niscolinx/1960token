@@ -21,6 +21,7 @@ function videoAd() {
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
+    const [isDim, setIsDim] = useState(false)
 
     const dispatch = useAppDispatch()
 
