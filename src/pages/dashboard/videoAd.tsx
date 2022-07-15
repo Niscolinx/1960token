@@ -87,16 +87,6 @@ function videoAd() {
         }
     }
 
-      function getTime(time:number) {
-          //1:43
-          // console.log(Math.floor(time % 60))
-          return (
-              Math.floor(time / 60) +
-              ':' +
-              ('0' + Math.floor(time % 60)).slice(-2)
-          )
-      }
-
     return (
         <>
             <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
