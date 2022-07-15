@@ -71,6 +71,10 @@ function videoAd() {
         }
     }
 
+    const handleModel = () => {
+        setIsDim(false)
+    }
+
     return (
         <>
             <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
@@ -103,7 +107,7 @@ function videoAd() {
                                 To complete your daily task, you are to Watch
                                 the videos for 2 minutes to get Your earnings.
                             </p>
-                            <button className='bg-orange-300 text-[#1a1a2d] rounded-lg py-2 px-4'>
+                            <button className='bg-orange-300 text-[#1a1a2d] rounded-lg py-2 px-4' onClick={handleModel}>
                                 Ok
                             </button>
                         </div>
