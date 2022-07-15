@@ -77,11 +77,22 @@ function videoAd() {
     const handleProgress = ({ playedSeconds }: { playedSeconds: number }) => {
         const played = Math.floor(playedSeconds)
         setPlayedTime(played)
+        console.log(played)
         if (session && played >= 10 && !isTimeUp) {
             dispatch(initVideoEnded(session))
             setIsTimeUp(true)
         }
     }
+
+      function getTime(time:number) {
+          //1:43
+          // console.log(Math.floor(time % 60))
+          return (
+              Math.floor(time / 60) +
+              ':' +
+              ('0' + Math.floor(time % 60)).slice(-2)
+          )
+      }
 
     return (
         <>
@@ -90,7 +101,7 @@ function videoAd() {
                     className='flex py-2 px-10 rounded-lg place-self-center mb-2 items-center font-bold text-2xl w-full justify-between'
                     //style={neuToUse}
                 >
-                    <p className='text-lg'>8232</p>
+                    <p className='text-lg'>{playedTime}</p>
                     <p className=''>{displayToken}</p>
                 </div>
 
