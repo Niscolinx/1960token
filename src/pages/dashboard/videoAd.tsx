@@ -81,7 +81,7 @@ function videoAd() {
             ('0' + Math.floor(playedSeconds % 60)).slice(-2)
         setPlayedTime(played)
         console.log(played)
-        if (session && Math.floor(playedSeconds) >= 10 && !isTimeUp) {
+        if (session && Math.floor(playedSeconds) >= 120 && !isTimeUp) {
             dispatch(initVideoEnded(session))
             setIsTimeUp(true)
         }
