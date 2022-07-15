@@ -91,9 +91,8 @@ const Home = () => {
     }
 
     useEffect(() => {
-        const checkUser = () => {
             console.log('updated User', fetchedUser)
-        }
+        
     }, [fetchedUser])
 
     return (
