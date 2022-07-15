@@ -42,6 +42,7 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
             console.log('stop from mine timer')
             dispatch(initStopMineAsync(session!)).then((data) => {
                 console.log({ data })
+                localStorage.removeItem('isMining')
             })
         }
     }, [session, updateRemainingTimer])
