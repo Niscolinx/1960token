@@ -103,7 +103,9 @@ function videoAd() {
                                 To complete your daily task, you are to Watch
                                 the videos for 2 minutes to get Your earnings.
                             </p>
-                            <button>Ok</button>
+                            <button className='bg-orange-300 text-[#1a1a2d]'>
+                                Ok
+                            </button>
                         </div>
                     </div>
                 </div>
