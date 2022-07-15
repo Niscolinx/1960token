@@ -86,12 +86,10 @@ function videoAd() {
         <>
             <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
                 <div
-                    className='flex py-2 px-10 rounded-lg place-self-center mb-2 items-center bg-white w-full justify-between'
+                    className='flex py-2 px-10 rounded-lg place-self-center mb-2 items-center font-bold text-2xl w-full justify-between'
                     //style={neuToUse}
                 >
-                        <p className='font-bold text-2xl'>
-                            8232
-                        </p>
+                    <p className='text-lg'>8232</p>
                     <p className=''>{displayToken}</p>
                 </div>
 
