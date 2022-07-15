@@ -22,6 +22,8 @@ export default async function StartMining(
     const user = await User.findOne({ email })
 
     user.portfolio += portfolio
+    user.tokensMined = 0
+    user.videoMined = 0
     await user.save()
 
     return res.json({
