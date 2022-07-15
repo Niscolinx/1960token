@@ -84,6 +84,7 @@ const Home = () => {
         dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
             .then((data) => {
                 console.log({data})
+                setTotalMined(0)
                 setLoading(false)
             })
             .catch(() => setLoading(false))
@@ -94,11 +95,7 @@ const Home = () => {
         setSelectedOption(value)
     }
 
-    useEffect(() => {
-            console.log('updated User', fetchedUser)
-            console.log('total mined in the useEffect', totalMined)
-        setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
-    }, [fetchedUser])
+    
 
     return (
         <div className='h-[93vh] px-4'>
