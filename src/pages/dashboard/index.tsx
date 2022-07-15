@@ -70,7 +70,7 @@ const Home = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setLoading(true)
-        
+
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
@@ -81,6 +81,10 @@ const Home = () => {
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
         dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
+
+        if(fetchedUser.status !== 'loading'){
+            setLoading(false)
+        }
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
