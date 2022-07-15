@@ -23,6 +23,7 @@ function videoAd() {
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [isDim, setIsDim] = useState(true)
     const [isTimeUp, setIsTimeUp] = useState(false)
+    const [playedTime, setPlayedTime] = useState<number>()
     const dispatch = useAppDispatch()
 
     const memoizedCallback = useCallback(() => {
@@ -75,6 +76,7 @@ function videoAd() {
 
     const handleProgress = ({ playedSeconds }: { playedSeconds: number }) => {
         const played = Math.floor(playedSeconds)
+        setPlayedTime(played)
         if (session && played >= 10 && !isTimeUp) {
             dispatch(initVideoEnded(session))
             setIsTimeUp(true)
