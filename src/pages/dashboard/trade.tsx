@@ -108,11 +108,11 @@ function earn() {
     }, [session])
 
     useEffect(() => {
-        console.log({fetchedUser})
+        console.log('fetch the user',{fetchedUser})
         if(fetchedUser.isMining){
-            dispatch(initMineAsync(session))
+            //dispatch(initMineAsync(session))
         }
-    }, [fetchedUser])
+    }, [])
 
     useEffect(() => {
         if (miningStart) {
