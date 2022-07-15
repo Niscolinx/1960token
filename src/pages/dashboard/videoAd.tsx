@@ -98,7 +98,8 @@ function videoAd() {
                 >
                     <div className="flex h-full w-full items-center justify-center bg-gray-300 rounded-lg py-4 px-6">
 
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui assumenda velit, corrupti rem aspernatur tempore molestiae eaque veritatis deleniti sit nemo vitae reprehenderit sapiente quisquam quasi eligendi asperiores numquam nobis?
+                        <h2>NOTICE</h2>
+
                     </div>
                 </div>
             </div>
