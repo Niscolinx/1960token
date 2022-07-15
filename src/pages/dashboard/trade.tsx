@@ -85,6 +85,7 @@ function earn() {
             const parsedJSON = JSON.parse(persistedStorage!)
            // dispatch(initMineAsync(session))
 
+           console.log('the mining state', mineState)
             if (persistedStorage) {
                 if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
                     console.log('initMineAsync is called')
@@ -99,6 +100,10 @@ function earn() {
             }
         }
     }, [session])
+
+    useEffect(() => {
+        console.log("useEffect dispatch getUser")
+    }, [])
 
     useEffect(() => {
         if (miningStart) {
