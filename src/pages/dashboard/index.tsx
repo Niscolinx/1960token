@@ -172,7 +172,7 @@ const Home = () => {
                     <div className='grid justify-items-center'>
                         <p className='font-semibold'>Referral Income</p>
                         <p className='font-bold'>
-                            ${}
+                            ${fetchedUser.referralBonus}
                         </p>
                     </div>
                     <div className='grid justify-items-center'>
