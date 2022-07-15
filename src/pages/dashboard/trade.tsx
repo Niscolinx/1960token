@@ -125,7 +125,8 @@ function earn() {
                 }
                 const response = await axios.post('/api/user', theSession)
 
-                console.log('the response', response)
+                const {isMining} = response.data
+                console.log('the response', isMining)
 
             }
         }
