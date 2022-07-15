@@ -60,8 +60,8 @@ const Home = () => {
 
     const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
 
-    console.log(fetchedUser.tokensMined)
-    console.log(fetchedUser.videoMined)
+    console.log('tokens', fetchedUser.tokensMined)
+    console.log('video', fetchedUser.videoMined)
 
     const dropDown = () => {
         toggleDisplay(display ? false : true)
