@@ -129,7 +129,7 @@ function earn() {
                 console.log('the response', isMining)
 
                 if(isMining){
-                    dispatch(initMineAsync(session))
+                    dispatch(initMineAsync(theSession))
                 }
             }
         }

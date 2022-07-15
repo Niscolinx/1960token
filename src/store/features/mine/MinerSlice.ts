@@ -32,7 +32,7 @@ const initialState: MiningState = {
 // typically used to make async requests.
 export const initMineAsync = createAsyncThunk(
     'mining',
-    async (userSession: nextAuthSession) => {
+    async (userSession: nextAuthSession | any) => {
         const response = await startMining(userSession)
 
         console.log({ response })
