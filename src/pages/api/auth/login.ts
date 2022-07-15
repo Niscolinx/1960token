@@ -3,6 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import jwt from 'jsonwebtoken'
 import User, { IUser } from '../../../models/User'
 import dbConnect from '../../../lib/dbConnect'
+import { setCookie } from 'cookies-next'
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
     console.log('login...', req.body)
@@ -41,6 +42,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
                 expiresIn: '1hr',
             }
         )
+        setCookie('userSession', user)
 
         return res.status(200).json(
             user
