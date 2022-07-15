@@ -26,11 +26,12 @@ const Home = () => {
     const [selectedOption, setSelectedOption] =
         useState<TOption>('Referral Income')
     const [loading, setLoading] = useState(false)
-    const [totalMined, setTotalMined] = useState(fetchedUser.tokensMined + fetchedUser.videoMined)
+    const [totalMined, setTotalMined] = useState(
+        fetchedUser.tokensMined + fetchedUser.videoMined
+    )
 
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
-    
 
     const memoizedCallback = useCallback(() => {
         if (session) {
@@ -61,8 +62,6 @@ const Home = () => {
         }
     }, [theme])
 
-    
-
     const dropDown = () => {
         toggleDisplay(display ? false : true)
         setDisplayButton(display ? 'Transfer' : 'Close')
@@ -83,9 +82,12 @@ const Home = () => {
         dispatch(clearVideoTokens)
         dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
             .then((data) => {
-                console.log({data})
-                setTotalMined(0)
+                console.log({ data })
+
                 setLoading(false)
+                if (selectedOption === 'Mine/Video Income') {
+                    setTotalMined(0)
+                }
             })
             .catch(() => setLoading(false))
     }
@@ -94,8 +96,6 @@ const Home = () => {
         const value = e.target.value as TOption
         setSelectedOption(value)
     }
-
-    
 
     return (
         <div className='h-[93vh] px-4'>
