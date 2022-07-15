@@ -114,7 +114,7 @@ function earn() {
         const fetchUser = async () => {
 
             //const response = await axios.post('/api/user', session)
-        console.log('get Cookie',getCookie('userSession'))
+       // console.log('get Cookie',getCookie('userSession'))
         }
 
        fetchUser()
@@ -129,8 +129,12 @@ function earn() {
     }, [miningStart])
 
     const handleMineStart = () => {
+        
         if (session) {
-            dispatch(initMineAsync(session))
+            
+            dispatch(initMineAsync(session)).then(data => {
+                console.log({data})
+            })
             //dispatch(initStopMineAsync(session))
         }
     }
