@@ -71,21 +71,23 @@ const Home = () => {
         e.preventDefault()
         setLoading(true)
 
-        let toPortolio = 0
-        if (selectedOption === 'Mine/Video Income') {
-            toPortolio = totalMined
-        } else {
-            toPortolio = fetchedUser.referralBonus
-        }
+        // let toPortolio = 0
+        // if (selectedOption === 'Mine/Video Income') {
+        //     toPortolio = totalMined
+        // } else {
+        //     toPortolio = fetchedUser.referralBonus
+        // }
 
-        dispatch(clearMineTokens)
-        dispatch(clearVideoTokens)
-        dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
+        // dispatch(clearMineTokens)
+        // dispatch(clearVideoTokens)
+        // dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
 
-        if(fetchedUser.status !== 'loading'){
-            setLoading(false)
-        }
+        // if(fetchedUser.status !== 'loading'){
+        //     setLoading(false)
+        // }
     }
+
+    console.log({loading})
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
@@ -223,7 +225,7 @@ const Home = () => {
                             </p>
                         </div>
                         <button
-                            className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8'
+                            className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8 text-white'
                             type='submit'
                         >
                             {loading ? 'Loading...' : 'Transfer'}
