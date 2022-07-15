@@ -89,7 +89,6 @@ function earn() {
                 if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
                     console.log('initMineAsync is called')
                     //dispatch(initMineAsync(session))
-                    setMiningStart(true)
                 }
             }
 
