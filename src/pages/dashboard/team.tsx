@@ -24,7 +24,6 @@ function team() {
         useState<TeamTotalNumberAndIncome>({ teamIncome: 0, teamNumber: 0 })
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [display, toggleDisplay] = useState(false)
-    const [displayButton, setDisplayButton] = useState('Transfer')
     const [selectedOption, setSelectedOption] =
         useState<TOption>('Referral Income')
 
@@ -150,71 +149,7 @@ function team() {
 
     return (
         <div className='h-[80vh]'>
-            <div className='py-5 px-2 grid'>
-                <div className='flex justify-around bg-orange-300 rounded-t-lg py-5 px-4 dark:text-[#1a1a2d]'>
-                    <div className='grid justify-items-center'>
-                        <p className='font-semibold'>Referral Income</p>
-                        <p className='font-bold'>
-                            ${referralTotalNumberAndIncome.teamIncome}
-                        </p>
-                    </div>
-                    <div className='grid justify-items-center'>
-                        <p className='font-semibold'>Mine/Video Income</p>
-                        <p className='font-bold'>${totalMined}</p>
-                    </div>
-                </div>
-                <div
-                    className='grid animate-rotate-out transition-all delay-100'
-                    style={
-                        !display
-                            ? {
-                                  opacity: '0',
-                                  height: '0',
-                                  visibility: 'hidden',
-                              }
-                            : {
-                                  opacity: '1',
-                                  height: '100%',
-                                  visibility: 'visible',
-                              }
-                    }
-                >
-                    <form className='px-8 py-12 grid' onSubmit={handleSubmit}>
-                        <div className=' grid justify-items-center gap-4 dark:text-[#1a1a2d]'>
-                            <select
-                                className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
-                                onChange={handleChange}
-                            >
-                                <option value='Referral Income'>
-                                    Referral Income
-                                </option>
-                                <option value='Mine/Video Income'>
-                                    Mine/Video Income
-                                </option>
-                            </select>
-                            <TbArrowsSort className='text-2xl' />
-                            <p
-                                className='text-2xl py-4 px-6 border border-[#1a1a2d] font-bold rounded-lg text-gray-300'
-                                style={neuToUse}
-                            >
-                                Portfolio
-                            </p>
-                        </div>
-                        <button
-                            className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8'
-                            type='submit'
-                        >
-                            Transfer
-                        </button>
-                    </form>
-                </div>
-                <button
-                    className='text-center bg-blue-400 py-2 px-5 rounded-b-lg dark:text-[#1a1a2d]'
-                    onClick={dropDown}
-                >
-                    {displayButton}
-                </button>
-            </div>
+            
             <div className='grid px-2 mt-8'>
                 <div className='grid'>
                     <p
