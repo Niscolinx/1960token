@@ -125,11 +125,13 @@ function earn() {
                 }
                 const response = await axios.post('/api/user', theSession)
 
+                console.log('the response', response)
+
             }
         }
 
        fetchUser()
-    }, [fetchedUser])
+    }, [])
 
     useEffect(() => {
         if (miningStart) {
