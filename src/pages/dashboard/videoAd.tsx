@@ -76,7 +76,7 @@ function videoAd() {
 
     const handleProgress = ({playedSeconds}: {playedSeconds: number}) => {
     
-        console.log('playing>>>>', playedSeconds)
+        console.log('playing>>>>', Math.floor(playedSeconds))
     }
 
     return (
