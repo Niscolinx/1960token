@@ -84,6 +84,7 @@ function earn() {
 
         if (session) {
             const parsedJSON = JSON.parse(persistedStorage!)
+            dispatch(initMineAsync(session))
 
             // if (persistedStorage) {
             //     if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
