@@ -60,7 +60,6 @@ const Home = () => {
 
     const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
 
-
     const dropDown = () => {
         toggleDisplay(display ? false : true)
         setDisplayButton(display ? 'Transfer' : 'Close')
@@ -79,19 +78,23 @@ const Home = () => {
 
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
-        dispatch(
-            updatePortolio({ userSession: session!, data: toPortolio })
-        ).then((data) => {
-            setLoading(false)
-        }).catch(() => setLoading(false))
+        dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
+            .then((data) => {
+                setLoading(false)
+            })
+            .catch(() => setLoading(false))
     }
-
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
         setSelectedOption(value)
-        console.log({ value })
     }
+
+    useEffect(() => {
+        const checkUser = () => {
+            console.log('updated User', fetchedUser)
+        }
+    }, [fetchedUser])
 
     return (
         <div className='h-[93vh] px-4'>
