@@ -73,6 +73,10 @@ function videoAd() {
         setIsDim(false)
     }
 
+    const handleProgress = (t:any) => {
+        console.log('playing>>>>', )
+    }
+
     return (
         <>
             <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
@@ -90,6 +94,7 @@ function videoAd() {
                             width='100%'
                             height='100%'
                             onEnded={handleVideoEnded}
+                            onProgress={handleProgress}
                             //onStart={handleVideoEnded}
                         />
                     </div>
