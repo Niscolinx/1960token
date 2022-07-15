@@ -86,7 +86,7 @@ function videoAd() {
         <>
             <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
                 <div
-                    className='flex text-center py-2 px-10 rounded-lg place-self-center mb-2 items-center bg-white w-full'
+                    className='flex text-center py-2 px-10 rounded-lg place-self-center mb-2 items-center bg-white w-full justify-between'
                     //style={neuToUse}
                 >
                         <p className='font-bold text-2xl'>
