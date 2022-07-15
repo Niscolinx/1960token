@@ -95,7 +95,7 @@ const Home = () => {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                     style={neuToUse}
                 >
-                    <p className='text-sm'>Total Asset</p>
+                    <p className='text-sm'>Portfolio</p>
                     <p className='font-bold text-3xl'>
                         ${fetchedUser.portfolio}
                     </p>
