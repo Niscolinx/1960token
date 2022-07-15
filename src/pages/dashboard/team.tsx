@@ -2,14 +2,7 @@ import { GetSessionParams, useSession, getSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
-import {
-    getUser,
-    selectUser,
-    updatePortolio,
-} from '../../store/features/user/UserSlice'
-import { TbArrowsSort } from 'react-icons/tb'
-import { clearMineTokens } from '../../store/features/mine/MinerSlice'
-import { clearVideoTokens } from '../../store/features/video/VideoSlice'
+import { getUser, selectUser } from '../../store/features/user/UserSlice'
 
 function team() {
     const { data: session } = useSession()
@@ -22,9 +15,6 @@ function team() {
     const [referralTotalNumberAndIncome, setReferralTotalNumberAndIncome] =
         useState<TeamTotalNumberAndIncome>({ teamIncome: 0, teamNumber: 0 })
     const [neuToUse, setNeuToUse] = useState<{}>()
-    
-
-   
 
     type TeamRow = {
         totalMember: number
@@ -95,7 +85,6 @@ function team() {
         })
     }, [user])
 
-
     useEffect(() => {
         if (theme === 'dark') {
             setNeuToUse({
@@ -115,11 +104,8 @@ function team() {
         }
     }, [theme])
 
-    
-
     return (
         <div className='h-[80vh]'>
-            
             <div className='grid px-2 mt-8'>
                 <div className='grid'>
                     <p
