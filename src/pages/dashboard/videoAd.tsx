@@ -10,6 +10,7 @@ import {
     selectVideo,
 } from '../../store/features/video/VideoSlice'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
+import { BaseReactPlayerProps } from 'react-player/base'
 
 function videoAd() {
     const { data: session } = useSession()
@@ -73,7 +74,8 @@ function videoAd() {
         setIsDim(false)
     }
 
-    const handleProgress = (t:any) => {
+    const handleProgress = ({playedSeconds}: {playedSeconds: number}) => {
+    
         console.log('playing>>>>', )
     }
 
