@@ -89,7 +89,12 @@ function videoAd() {
                     className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
                     style={neuToUse}
                 >
-                    <p className='font-bold text-2xl'>{displayToken}</p>
+                    <div className='flex justify-center items-center text-[#1a1a2d]'>
+                        <p className='font-bold text-2xl'>
+                            {fetchedUser.tokensMined}
+                        </p>
+                    </div>
+                    <div className='grid self-center'>{displayToken}</div>
                 </div>
 
                 <div className='relative'>
