@@ -117,6 +117,9 @@ function earn() {
             if(userSession){
                 const destructedUserSession = JSON.parse(userSession)
                 console.log({destructedUserSession})
+                console.log(destructedUserSession.isMining)
+
+                
                 const response = await axios.post('/api/user', session)
 
             }
