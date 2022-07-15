@@ -31,6 +31,7 @@ export const updatePortolio = createAsyncThunk(
     async (userData: { userSession: nextAuthSession; data: number }) => {
         const { userSession, data } = userData
         const response = await userPortfolio(userSession, data)
+        console.log({response})
         return response
     }
 )

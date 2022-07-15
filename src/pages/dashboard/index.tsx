@@ -83,6 +83,7 @@ const Home = () => {
         dispatch(clearVideoTokens)
         dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
             .then((data) => {
+                console.log({data})
                 setLoading(false)
             })
             .catch(() => setLoading(false))
