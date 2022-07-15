@@ -30,14 +30,12 @@ const Home = () => {
     const [neuToUse, setNeuToUse] = useState<{}>()
 
     const memoizedCallback = useCallback(() => {
-        console.log('useCallback...........')
         if (session) {
             return dispatch(getUser(session))
         }
     }, [session])
 
     useMemo(() => {
-        console.log('useMemo.............')
         return memoizedCallback()
     }, [])
 
