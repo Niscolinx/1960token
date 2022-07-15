@@ -26,8 +26,11 @@ const Home = () => {
     const [selectedOption, setSelectedOption] =
         useState<TOption>('Referral Income')
     const [loading, setLoading] = useState(false)
+    const [totalMined, setTotalMined] = useState(fetchedUser.tokensMined + fetchedUser.videoMined)
+
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
+    
 
     const memoizedCallback = useCallback(() => {
         if (session) {
@@ -58,7 +61,7 @@ const Home = () => {
         }
     }, [theme])
 
-    const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
+    
 
     const dropDown = () => {
         toggleDisplay(display ? false : true)
@@ -92,7 +95,7 @@ const Home = () => {
 
     useEffect(() => {
             console.log('updated User', fetchedUser)
-        
+        setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
 
     return (
