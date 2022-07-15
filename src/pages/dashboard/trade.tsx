@@ -111,13 +111,19 @@ function earn() {
     useEffect(() => {
         console.log('fetch the user',{fetchedUser})
         const fetchUser = async () => {
+            const userSession = localStorage.getItem('userSession')
+            console.log(userSession)
 
-            //const response = await axios.post('/api/user', session)
-       // console.log('get Cookie',getCookie('userSession'))
+            if(userSession){
+                const destructedUserSession = JSON.parse(userSession)
+                console.log({destructedUserSession})
+                const response = await axios.post('/api/user', session)
+
+            }
         }
 
        fetchUser()
-    }, [])
+    }, [fetchedUser])
 
     useEffect(() => {
         if (miningStart) {
