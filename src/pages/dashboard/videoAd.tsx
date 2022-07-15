@@ -86,15 +86,13 @@ function videoAd() {
         <>
             <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
                 <div
-                    className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
+                    className=' justify-center flex w-max text-center py-2 px-10 rounded-lg place-self-center mb-2 items-center'
                     style={neuToUse}
                 >
-                    <div className='flex justify-center items-center text-[#1a1a2d]'>
                         <p className='font-bold text-2xl'>
                             8232
                         </p>
-                    </div>
-                    <div className='grid self-center'>{displayToken}</div>
+                    <p className=''>{displayToken}</p>
                 </div>
 
                 <div className='relative'>
