@@ -82,7 +82,7 @@ const Home = () => {
             updatePortolio({ userSession: session!, data: toPortolio })
         ).then((data) => {
             setLoading(false)
-        })
+        }).catch(() => setLoading(false))
     }
 
     console.log({ loading })
