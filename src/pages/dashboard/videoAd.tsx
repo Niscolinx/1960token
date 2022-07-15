@@ -96,10 +96,13 @@ function videoAd() {
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
                     style={{ display: isDim ? 'block' : 'none' }}
                 >
-                    <div className="flex h-full w-full items-center justify-center bg-gray-300 rounded-lg py-4 px-6">
-
+                    <div className='flex h-full w-full items-center justify-center bg-gray-300 rounded-lg py-4 px-6'>
                         <h2>NOTICE</h2>
-
+                        <p>
+                            To complete your daily task, you are to Watch the
+                            videos for 2 minutes to get Your earnings.
+                        </p>
+                        <button>Ok</button>
                     </div>
                 </div>
             </div>
