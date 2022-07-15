@@ -109,15 +109,12 @@ function earn() {
     }, [session])
 
     useEffect(() => {
-        console.log('fetch the user',{fetchedUser})
         const fetchUser = async () => {
             const userSession = localStorage.getItem('userSession')
-            console.log(userSession)
 
             if(userSession){
                 const destructedUserSession = JSON.parse(userSession)
-                console.log({destructedUserSession})
-                console.log(destructedUserSession.isMining)
+            
 
                 const email = destructedUserSession.email
 
