@@ -61,6 +61,7 @@ export default NextAuth({
         },
         session: async ({ session, token }) => {
             session.foundUser = token
+            localStorage.setItem('userSession', JSON.stringify(session))
             return session
         },
         signIn: async ({ user }) => {

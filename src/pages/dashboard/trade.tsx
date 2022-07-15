@@ -14,6 +14,7 @@ import {
 import MineTimer from '../../store/features/mine/MineTimer'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import axios from 'axios'
 
 function earn() {
     const { data: session } = useSession()
@@ -109,9 +110,12 @@ function earn() {
 
     useEffect(() => {
         console.log('fetch the user',{fetchedUser})
-        if(fetchedUser.isMining){
-            //dispatch(initMineAsync(session))
+        const fetchUser = async () => {
+
+            const response = await axios.post('/api/user', session)
         }
+
+       fetchUser()
     }, [])
 
     useEffect(() => {
