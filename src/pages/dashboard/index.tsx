@@ -71,11 +71,10 @@ const Home = () => {
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
          }
-         //else {
-        //     toPortolio = referralTotalNumberAndIncome.teamIncome
-        // }
+         else {
+            toPortolio = fetchedUser.referralBonus
+        }
 
-        //Store the referral Income in Database first
 
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
