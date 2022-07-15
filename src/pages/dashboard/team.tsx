@@ -119,33 +119,7 @@ function team() {
         }
     }, [theme])
 
-    const dropDown = () => {
-        toggleDisplay(display ? false : true)
-        setDisplayButton(display ? 'Transfer' : 'Close')
-    }
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-
-        let toPortolio = 0
-        if (selectedOption === 'Mine/Video Income') {
-            toPortolio = totalMined
-        } else {
-            toPortolio = referralTotalNumberAndIncome.teamIncome
-        }
-
-        //Store the referral Income in Database first
-
-        dispatch(clearMineTokens)
-        dispatch(clearVideoTokens)
-        dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
-    }
-
-    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const value = e.target.value as TOption
-        setSelectedOption(value)
-        console.log({ value })
-    }
+    
 
     return (
         <div className='h-[80vh]'>
