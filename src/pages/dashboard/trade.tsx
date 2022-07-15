@@ -124,9 +124,9 @@ function earn() {
     return (
         <>
             <div className='grid grid-rows-[.1fr,.1fr,1fr] overflow-hidden h-[88vh] relative'>
-                <div className='flex justify-center'>
+                <div className='flex justify-center items-center'>
                     <div
-                        className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center mb-2'
+                        className=' justify-center grid w-max text-center py-2 px-10 rounded-lg place-self-center'
                         style={neuToUse}
                     >
                         <p className='font-bold text-2xl'>
