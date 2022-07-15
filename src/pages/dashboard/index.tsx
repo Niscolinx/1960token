@@ -95,6 +95,7 @@ const Home = () => {
 
     useEffect(() => {
             console.log('updated User', fetchedUser)
+            console.log('total mined in the useEffect', totalMined)
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
 
