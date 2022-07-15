@@ -123,12 +123,11 @@ function earn() {
     return (
         <>
             <div className='grid grid-rows-[.1fr,.1fr,1fr] overflow-hidden h-[88vh] relative'>
-                <div className='flex justify-between items-center bg-purple-500 text-[#1a1a2d]'>
-                    
-                        <MineTimer start={miningStart} />
-                        <p className='font-bold text-2xl'>
-                            {fetchedUser.tokensMined}
-                        </p>
+                <div className='flex justify-between items-center bg-purple-500 text-[#1a1a2d] py-2 px-10'>
+                    <MineTimer start={miningStart} />
+                    <p className='font-bold text-2xl'>
+                        {fetchedUser.tokensMined}
+                    </p>
                 </div>
                 <div className='relative'>
                     <div className='absolute grid right-0 justify-items-center  gap-6 z-90 justify-end cursor-pointer animateRight'>
