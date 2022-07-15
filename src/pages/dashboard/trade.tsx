@@ -81,16 +81,16 @@ function earn() {
         const persistedStorage = localStorage.getItem('persist:root')
 
         if (session) {
-            const parsedJSON = JSON.parse(persistedStorage!)
+           // const parsedJSON = JSON.parse(persistedStorage!)
             // dispatch(initMineAsync(session))
 
-            console.log('the mining state', mineState)
-            if (persistedStorage) {
-                if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
-                    console.log('initMineAsync is called')
-                    //dispatch(initMineAsync(session))
-                }
-            }
+            // console.log('the mining state', mineState)
+            // if (persistedStorage) {
+            //     if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
+            //         console.log('initMineAsync is called')
+            //         //dispatch(initMineAsync(session))
+            //     }
+            // }
 
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 setMiningStart(false)
