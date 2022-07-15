@@ -5,7 +5,11 @@ import { ImProfile } from 'react-icons/im'
 import { useTheme } from 'next-themes'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
-import { getUser, selectUser, updatePortolio } from '../../store/features/user/UserSlice'
+import {
+    getUser,
+    selectUser,
+    updatePortolio,
+} from '../../store/features/user/UserSlice'
 import { TbArrowsSort } from 'react-icons/tb'
 import { clearMineTokens } from '../../store/features/mine/MinerSlice'
 import { clearVideoTokens } from '../../store/features/video/VideoSlice'
@@ -14,14 +18,14 @@ const Home = () => {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
 
- type TOption = 'Mine/Video Income' | 'Referral Income'
+    type TOption = 'Mine/Video Income' | 'Referral Income'
 
     const fetchedUser = useAppSelector(selectUser)
-        const [displayButton, setDisplayButton] = useState('Transfer')
-        const [display, toggleDisplay] = useState(false)
-        const [selectedOption, setSelectedOption] =
-            useState<TOption>('Referral Income')
-
+    const [displayButton, setDisplayButton] = useState('Transfer')
+    const [display, toggleDisplay] = useState(false)
+    const [selectedOption, setSelectedOption] =
+        useState<TOption>('Referral Income')
+    const [loading, setLoading] = useState(false)
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
@@ -56,8 +60,7 @@ const Home = () => {
         }
     }, [theme])
 
-        const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
-
+    const totalMined = fetchedUser.tokensMined + fetchedUser.videoMined
 
     const dropDown = () => {
         toggleDisplay(display ? false : true)
@@ -70,11 +73,9 @@ const Home = () => {
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
-         }
-         else {
+        } else {
             toPortolio = fetchedUser.referralBonus
         }
-
 
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
@@ -220,7 +221,7 @@ const Home = () => {
                             className='bg-green-600 font-semibold py-1 px-4 justify-self-center rounded-lg mt-8'
                             type='submit'
                         >
-                            Transfer
+                            {loading ? 'Loading...' : 'Transfer'}
                         </button>
                     </form>
                 </div>
