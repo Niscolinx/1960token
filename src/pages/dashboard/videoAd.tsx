@@ -74,8 +74,12 @@ function videoAd() {
         setIsDim(false)
     }
 
-    const handleProgress = ({playedSeconds}: {playedSeconds: number}) => {
-    
+    const handleProgress = ({ playedSeconds }: { playedSeconds: number }) => {
+        const played = Math.floor(playedSeconds)
+        if (session && played >= 120) {
+            dispatch(initVideoEnded(session))
+        }
+
         console.log('playing>>>>', Math.floor(playedSeconds))
     }
 
@@ -107,12 +111,17 @@ function videoAd() {
                 >
                     <div className='grid h-full w-full content-around px-6'>
                         <div className='grid justify-center bg-gray-300 rounded-lg py-4 px-6 text-[#1a1a2d] text-center gap-4'>
-                            <h2 className='text-orange-700 font-semibold text-lg'>NOTICE!!</h2>
+                            <h2 className='text-orange-700 font-semibold text-lg'>
+                                NOTICE!!
+                            </h2>
                             <p>
                                 To complete your daily task, you are to Watch
                                 the videos for 2 minutes to get Your earnings.
                             </p>
-                            <button className='bg-orange-300 text-[#1a1a2d] rounded-lg py-2 px-4 cursor-pointer font-semibold' onClick={handleModel}>
+                            <button
+                                className='bg-orange-300 text-[#1a1a2d] rounded-lg py-2 px-4 cursor-pointer font-semibold'
+                                onClick={handleModel}
+                            >
                                 Ok
                             </button>
                         </div>
