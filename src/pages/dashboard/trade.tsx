@@ -108,6 +108,10 @@ function earn() {
     }, [session])
 
     useEffect(() => {
+        console.log({fetchedUser})
+    }, [fetchedUser])
+
+    useEffect(() => {
         if (miningStart) {
             setIsDim(false)
         } else {
