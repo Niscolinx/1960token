@@ -114,7 +114,7 @@ function earn() {
         const fetchUser = async () => {
 
             //const response = await axios.post('/api/user', session)
-        console.log(getCookie('userSession'))
+        console.log('get Cookie',getCookie('userSession'))
         }
 
        fetchUser()
