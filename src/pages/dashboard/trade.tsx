@@ -4,7 +4,6 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { GiTrade } from 'react-icons/gi'
 import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
 
-
 import dayjs from 'dayjs'
 import { useAppSelector, useAppDispatch } from '../../store/app/hooks'
 import {
@@ -83,9 +82,9 @@ function earn() {
 
         if (session) {
             const parsedJSON = JSON.parse(persistedStorage!)
-           // dispatch(initMineAsync(session))
+            // dispatch(initMineAsync(session))
 
-           console.log('the mining state', mineState)
+            console.log('the mining state', mineState)
             if (persistedStorage) {
                 if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
                     console.log('initMineAsync is called')
@@ -102,8 +101,11 @@ function earn() {
     }, [session])
 
     useEffect(() => {
-        console.log("useEffect dispatch getUser")
-    }, [])
+        console.log('useEffect dispatch getUser')
+        if (session) {
+            dispatch(getUser(session))
+        }
+    }, [session])
 
     useEffect(() => {
         if (miningStart) {
@@ -120,8 +122,7 @@ function earn() {
         }
     }
 
-    console.log({mineState})
-  
+    console.log({ mineState })
 
     return (
         <>
