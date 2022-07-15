@@ -1,12 +1,8 @@
 import axios from 'axios'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import GoogleProvider from 'next-auth/providers/google'
-import EmailProvider from 'next-auth/providers/email'
 import dbConnect from '../../../lib/dbConnect'
 
-import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
-import clientPromise from '../../../lib/mongodb'
 import { serverUrl } from '../../../config'
 
 dbConnect()
@@ -61,7 +57,6 @@ export default NextAuth({
         },
         session: async ({ session, token }) => {
             session.foundUser = token
-            localStorage.setItem('userSession', JSON.stringify(session))
             return session
         },
         signIn: async ({ user }) => {
@@ -79,7 +74,6 @@ export default NextAuth({
     events: {
         signOut: async(message) => {
             console.log('sign out', message)
-            localStorage.removeItem('userSession')
         },
         signIn: async ({user}) => {
             console.log('sign in', user)
