@@ -119,8 +119,14 @@ function earn() {
                 console.log({destructedUserSession})
                 console.log(destructedUserSession.isMining)
 
-                
-                const response = await axios.post('/api/user', session)
+                const email = destructedUserSession.email
+
+                const theSession = {
+                    user : {
+                        email
+                    }
+                }
+                const response = await axios.post('/api/user', theSession)
 
             }
         }
