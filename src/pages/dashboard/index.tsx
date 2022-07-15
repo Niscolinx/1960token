@@ -78,14 +78,14 @@ const Home = () => {
 
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
-        dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
-
-        // if(fetchedUser.status !== 'loading'){
-        //     setLoading(false)
-        // }
+        dispatch(
+            updatePortolio({ userSession: session!, data: toPortolio })
+        ).then((data) => {
+            setLoading(false)
+        })
     }
 
-    console.log({loading})
+    console.log({ loading })
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
@@ -201,7 +201,10 @@ const Home = () => {
                               }
                     }
                 >
-                    <form className='px-8 py-12 grid md:mx-20' onSubmit={handleSubmit}>
+                    <form
+                        className='px-8 py-12 grid md:mx-20'
+                        onSubmit={handleSubmit}
+                    >
                         <div className=' grid justify-items-center gap-4 dark:text-[#1a1a2d]'>
                             <select
                                 className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
