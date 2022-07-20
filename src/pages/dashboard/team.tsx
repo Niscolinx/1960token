@@ -145,11 +145,11 @@ function team() {
                             </tbody>
                         </table>
                     </div>
-                    <div className='grid mt-10 justify-center'>
+                    <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6'>
                         <CopyToClipboard text={user.referralLink}>
                             <>
                                 <p>{user.referralLink}</p>
-                                <button className='bg-red'>Copy Link</button>
+                                <button className='bg-red rounded-lg py-2 px-3 font-semibold'>Copy Link</button>
                             </>
                         </CopyToClipboard>{' '}
                     </div>
