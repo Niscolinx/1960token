@@ -13,9 +13,12 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     try {
         await dbConnect()
 
-        const users = User.find()
+        const users = await User.find()
 
-        console.log({users})
+
+        users.forEach((user) => {
+            console.log('*******',user)
+        })
 
 //         const email: IUser | null = await User.findOne({
 //             email: emailOrUsername,
