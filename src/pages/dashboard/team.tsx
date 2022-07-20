@@ -107,7 +107,7 @@ function team() {
 
     return (
         <div className='h-[80vh]'>
-            <div className='grid px-2 mt-8 h-full content-start relative'>
+            <div className='grid px-2 mt-8 h-full content-start relative md:mx-40'>
                 <div className='grid'>
                     <p
                         className='justify-self-center font-semibold py-2 px-4 uppercase mb-4'
@@ -145,14 +145,20 @@ function team() {
                     </table>
                 </div>
                 <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d] absolute bottom-0 right-0 left-0 gap-3'>
-                    <h3 className='text-lg font-bold text-center'>Refer your friends and get $3 bonus for each!!</h3>
-                    <CopyToClipboard text={user.referralLink}>
-                        <>
-                            <p className='bg-white text-center px-4 py-2 text-sm rounded font-semibold'>{user.referralLink}</p>
+                    <h3 className='text-lg font-bold text-center'>
+                        Refer your friends and get $3 bonus for each!!
+                    </h3>
+                    <p className='bg-white text-center p-4 text-sm rounded font-semibold'>
+                        {user.referralLink}
+                    </p>
+                    <CopyToClipboard
+                        text={user.referralLink}
+                    >
+                        
                             <button className='bg-orange-300 rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>
                                 Copy Link
                             </button>
-                        </>
+                        
                     </CopyToClipboard>{' '}
                 </div>
             </div>
