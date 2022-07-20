@@ -50,14 +50,12 @@ function profile() {
                     type: 'error',
                     style: 'text-red-500',
                 })
-                setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
                 setLoading(false)
             }
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
                 isError = true
-                setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
                 setMessage({ ...message, value: 'Passwords do not match' })
                 setLoading(false)
