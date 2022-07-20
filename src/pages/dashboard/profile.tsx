@@ -28,8 +28,7 @@ function profile() {
 
         if (userJSON) {
             const userData = JSON.parse(userJSON)
-        
-            
+
             const { email, username, phoneNumber } = userData
             setEmail(email)
             setUsername(username)
@@ -127,113 +126,116 @@ function profile() {
                     >
                         {message?.value}
                     </p>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-1'
-                        htmlFor='username'
-                    >
-                        Username
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                            error && errorFields.includes('username')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='username'
-                        name='username'
-                        disabled
-                        type='text'
-                        minLength={4}
-                        value={username}
-                        onChange={changeHandler}
-                    />
-                </div>
+                    <div className='grid'>
+                        <h3 className='font-bold text-lg text-black'>Personal</h3>
+                        <label
+                            className='block text-gray-700 text-sm mb-1'
+                            htmlFor='username'
+                        >
+                            Username
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                error && errorFields.includes('username')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='username'
+                            name='username'
+                            disabled
+                            type='text'
+                            minLength={4}
+                            value={username}
+                            onChange={changeHandler}
+                        />
+                    </div>
 
-                <div className='mb-2'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-1'
-                        htmlFor='phoneNumber'
-                    >
-                        Phone No
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                            error && errorFields.includes('phoneNumber')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='phoneNumber'
-                        type='number'
-                        name='phoneNumber'
-                        disabled
-                        value={phoneNumber}
-                        onChange={changeHandler}
-                    />
-                </div>
-                <div className='mb-2'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-1'
-                        htmlFor='username'
-                    >
-                        Email
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                            error && errorFields.includes('email')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='email'
-                        type='email'
-                        name='email'
-                        disabled
-                        value={email}
-                        onChange={changeHandler}
-                    />
-                </div>
-                <div className='mb-6'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-1'
-                        htmlFor='password'
-                    >
-                        Password
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                            error && errorFields.includes('password')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='password'
-                        name='password'
-                        type='password'
-                        minLength={6}
-                        required
-                        value={password}
-                        onChange={changeHandler}
-                    />
-                </div>
-                <div className='mb-6'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-1'
-                        htmlFor='confirmPassword'
-                    >
-                        Confirm Password
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                            error && errorFields.includes('confirmPassword')
-                                ? 'border-red-500'
-                                : ''
-                        }`}
-                        id='confirmPassword'
-                        name='confirmPassword'
-                        type='password'
-                        minLength={6}
-                        required
-                        value={confirmPassword}
-                        onChange={changeHandler}
-                    />
+                    <div className='mb-2'>
+                        <label
+                            className='block text-gray-700 text-sm mb-1'
+                            htmlFor='phoneNumber'
+                        >
+                            Phone No
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                error && errorFields.includes('phoneNumber')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='phoneNumber'
+                            type='number'
+                            name='phoneNumber'
+                            disabled
+                            value={phoneNumber}
+                            onChange={changeHandler}
+                        />
+                    </div>
+                    <div className='mb-2'>
+                        <label
+                            className='block text-gray-700 text-sm mb-1'
+                            htmlFor='username'
+                        >
+                            Email
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                error && errorFields.includes('email')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='email'
+                            type='email'
+                            name='email'
+                            disabled
+                            value={email}
+                            onChange={changeHandler}
+                        />
+                    </div>
+                    <div className='mb-6'>
+                        <label
+                            className='block text-gray-700 text-sm mb-1'
+                            htmlFor='password'
+                        >
+                            Password
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                error && errorFields.includes('password')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='password'
+                            name='password'
+                            type='password'
+                            minLength={6}
+                            required
+                            value={password}
+                            onChange={changeHandler}
+                        />
+                    </div>
+                    <div className='mb-6'>
+                        <label
+                            className='block text-gray-700 text-sm mb-1'
+                            htmlFor='confirmPassword'
+                        >
+                            Confirm Password
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                error && errorFields.includes('confirmPassword')
+                                    ? 'border-red-500'
+                                    : ''
+                            }`}
+                            id='confirmPassword'
+                            name='confirmPassword'
+                            type='password'
+                            minLength={6}
+                            required
+                            value={confirmPassword}
+                            onChange={changeHandler}
+                        />
+                    </div>
                 </div>
 
                 <button
