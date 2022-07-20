@@ -196,6 +196,17 @@ const Home = () => {
                                 </button>
                             </div>
                         </Link>
+                        <Link href='/dashboard/transactions'>
+                            <div className='grid justify-center place-items-center'>
+                                <GrDocumentTime className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                                <button
+                                    className='text-sm p-1'
+                                    style={neuToUse}
+                                >
+                                    Transaction History
+                                </button>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
