@@ -27,10 +27,11 @@ function profile() {
         if (userJSON) {
             const userData = JSON.parse(userJSON)
 
-            const { email, username, phoneNumber } = userData
+            const { email, username, phoneNumber, usdtAddress } = userData
             setEmail(email)
             setUsername(username)
             setPhoneNumber(Number(phoneNumber))
+            setUsdtAddress(usdtAddress)
         }
     }, [])
 
@@ -82,6 +83,7 @@ function profile() {
         setMessageDisplay('hidden')
         const { name, value } = e.target
 
+        console.log({name, value})
         switch (name) {
             case 'password':
                 setPassword(value)
@@ -226,6 +228,7 @@ function profile() {
                             value={usdtAddress}
                             onChange={changeHandler}
                         />
+                        
                     </div>
                 </div>
 
