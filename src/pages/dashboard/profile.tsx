@@ -28,8 +28,11 @@ function profile() {
 
 
     useEffect(() => {
-        console.log({fetchedUser})
-    }, [fetchedUser])
+        console.log('From profile', {fetchedUser})
+        if(fetchedUser){
+            console.log("fetch profile loaded")
+        }
+    })
 
    
 
