@@ -218,6 +218,9 @@ function earn() {
                         </div>
                     </div>
                 </div>
+                <div className="grid">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sint unde cum aspernatur dicta culpa rerum doloremque delectus ipsa, odio doloribus vitae magni aperiam sunt magnam! Perspiciatis, veniam. Tenetur, quaerat!
+                </div>
                 <div
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
                     style={{ display: isDim ? 'block' : 'none' }}
