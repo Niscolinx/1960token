@@ -15,9 +15,9 @@ function profile() {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState<message>({
-        value: 'invalid Entries',
-        type: 'error',
-        style: 'text-red-500',
+        value: 'Successful',
+        type: 'success',
+        style: 'text-green-500 font-semibold text-lg',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
@@ -52,10 +52,8 @@ function profile() {
         if (!isError) {
             axios
                 .post('/api/profile', {
-                    username: username.toLowerCase().trim(),
-                    email: email.toLowerCase().trim(),
-                    phoneNumber,
                     password,
+                    usdtAddress
                 })
                 .then(({ data }) => {
                     console.log({ data })
