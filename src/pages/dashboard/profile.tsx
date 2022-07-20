@@ -27,7 +27,11 @@ function profile() {
     const fetchedUser = useAppSelector(selectUser)
 
     useEffect(() => {
-       
+       const {email, username, phoneNumber} = fetchedUser
+
+       setEmail(email)
+       setUsername(username)
+       setPhoneNumber(phoneNumber)
     }, [fetchedUser])
 
 
