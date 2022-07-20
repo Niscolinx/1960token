@@ -144,10 +144,11 @@ function team() {
                         </tbody>
                     </table>
                 </div>
-                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d] absolute bottom-0'>
+                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d] absolute bottom-0 right-0 left-0 gap-3'>
+                    <h3>Refer your friends and get $3 bonus for each!!</h3>
                     <CopyToClipboard text={user.referralLink}>
                         <>
-                            <p>{user.referralLink}</p>
+                            <p className='bg-white text-center px-4 py-2 text-sm'>{user.referralLink}</p>
                             <button className='bg-orange-300 rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>
                                 Copy Link
                             </button>
