@@ -13,7 +13,6 @@ function profile() {
     const [phoneNumber, setPhoneNumber] = useState<number>()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [referral, setReferral] = useState<string | undefined>('')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -71,7 +70,6 @@ function profile() {
                     username: username.toLowerCase().trim(),
                     email: email.toLowerCase().trim(),
                     phoneNumber,
-                    referral: referral?.toLowerCase().trim(),
                     password,
                 })
                 .then(({ data }) => {
@@ -235,24 +233,7 @@ function profile() {
                         onChange={changeHandler}
                     />
                 </div>
-                <div className='mb-6'>
-                    <label
-                        className='block text-gray-700 text-sm font-bold mb-2'
-                        htmlFor='referral'
-                    >
-                        Referral
-                    </label>
-                    <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white`}
-                        id='referral'
-                        name='referral'
-                        type='text'
-                        placeholder='optional'
-                        minLength={3}
-                        value={referral}
-                        onChange={changeHandler}
-                    />
-                </div>
+                
 
                 <button
                     className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline  justify-self-center'
