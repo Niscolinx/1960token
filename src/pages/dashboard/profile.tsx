@@ -213,7 +213,7 @@ function profile() {
                             id='usdtAddress'
                             name='usdtAddress'
                             type='text'
-                            minLength={20}
+                            minLength={15}
                             value={usdtAddress}
                             onChange={changeHandler}
                         />
