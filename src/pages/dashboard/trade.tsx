@@ -83,7 +83,7 @@ function earn() {
         const persistedStorage = localStorage.getItem('persist:root')
 
         if (session) {
-           // const parsedJSON = JSON.parse(persistedStorage!)
+            // const parsedJSON = JSON.parse(persistedStorage!)
             // dispatch(initMineAsync(session))
 
             // console.log('the mining state', mineState)
@@ -112,29 +112,28 @@ function earn() {
         const fetchUser = async () => {
             const userSession = localStorage.getItem('userSession')
 
-            if(userSession){
+            if (userSession) {
                 const destructedUserSession = JSON.parse(userSession)
-            
 
                 const email = destructedUserSession.email
 
                 const theSession = {
-                    user : {
-                        email
-                    }
+                    user: {
+                        email,
+                    },
                 }
                 const response = await axios.post('/api/user', theSession)
 
-                const {isMining} = response.data
+                const { isMining } = response.data
                 console.log('the response', isMining)
 
-                if(isMining){
+                if (isMining) {
                     dispatch(initMineAsync(theSession))
                 }
             }
         }
 
-       fetchUser()
+        fetchUser()
     }, [])
 
     useEffect(() => {
@@ -146,19 +145,16 @@ function earn() {
     }, [miningStart])
 
     const handleMineStart = () => {
-        
         if (session) {
-            
-            dispatch(initMineAsync(session)).then(data => {
+            dispatch(initMineAsync(session)).then((data) => {
                 console.log('started mining', data.type)
-                if(data.type === 'mining/fulfilled'){
+                if (data.type === 'mining/fulfilled') {
                     localStorage.setItem('isMining', data.type)
                 }
             })
             //dispatch(initStopMineAsync(session))
         }
     }
-
 
     return (
         <>
@@ -218,8 +214,16 @@ function earn() {
                         </div>
                     </div>
                 </div>
-                <div className="grid">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sint unde cum aspernatur dicta culpa rerum doloremque delectus ipsa, odio doloribus vitae magni aperiam sunt magnam! Perspiciatis, veniam. Tenetur, quaerat!
+                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d] absolute bottom-0 right-0 left-0 gap-3'>
+                    <h3 className='text-lg font-bold text-center'>
+                        TAP TO MINE Tk.!!
+                    </h3>
+                    <p className='bg-white text-center p-4 text-sm rounded font-semibold'>
+                        The mining engine have been setup, Tap on the Mine
+                        Button and it starts Mining. In return, you're rewarded
+                        with a higher earning rate. Thank you for being a
+                        contributor.
+                    </p>
                 </div>
                 <div
                     className='w-full h-full bg-black bg-opacity-80 absolute top-0 bottom-0 left-0 right-0 z-20'
