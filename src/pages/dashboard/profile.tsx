@@ -41,7 +41,7 @@ function profile() {
 
         if (password !== confirmPassword) {
             setMessageDisplay('block')
-            setMessage({ ...message, value: 'Passwords do not match' })
+            setMessage({ ...message, value: 'Passwords do not match', style: 'text-red-500' })
             setLoading(false)
         }
 
