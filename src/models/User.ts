@@ -1,6 +1,6 @@
 import Mongoose from './utils'
 
-const {Schema, model, models} = Mongoose
+const { Schema, model, models } = Mongoose
 export interface IUser {
     _id: Object
     username: string
@@ -11,7 +11,7 @@ export interface IUser {
     role: string
     referralBonus: number
     tokensMined: number
-    videoMined:number
+    videoMined: number
     portfolio: number
     upliner: string
     status: string
@@ -49,20 +49,20 @@ const userSchema = new Schema<IUser>(
         },
         referralBonus: {
             type: Number,
-            default: 0
+            default: 0,
         },
         tokensMined: {
             type: Number,
-            default: 0
+            default: 0,
         },
         videoMined: {
             type: Number,
-            default: 0
+            default: 0,
         },
-       
+
         portfolio: {
             type: Number,
-            default: 0
+            default: 0,
         },
         role: {
             type: String,
@@ -84,10 +84,13 @@ const userSchema = new Schema<IUser>(
         referralLink: {
             type: String,
         },
+        usdtAddress: {
+            type: String,
+        },
         referrals: [
             {
                 username: String,
-                level: Number
+                level: Number,
             },
         ],
         pendingDeposits: [
