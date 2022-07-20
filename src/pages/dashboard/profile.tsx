@@ -127,7 +127,9 @@ function profile() {
                         {message?.value}
                     </p>
                     <div className='grid'>
-                        <h3 className='font-bold text-lg text-black'>Personal</h3>
+                        <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
+                            Personal
+                        </h3>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='username'
@@ -236,6 +238,12 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
+                </div>
+
+                <div className='grid'>
+                    <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
+                        Personal
+                    </h3>
                 </div>
 
                 <button
