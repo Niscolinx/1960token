@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { IoIosPeople } from 'react-icons/io'
 import { ImProfile } from 'react-icons/im'
 import { BsFillGearFill } from 'react-icons/bs'
-import { GrDocumentTime } from 'react-icons/gr'
+import { FaScroll } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
@@ -198,12 +198,12 @@ const Home = () => {
                         </Link>
                         <Link href='/dashboard/transactions'>
                             <div className='grid justify-center place-items-center'>
-                                <GrDocumentTime className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                                <FaScroll className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-sm p-1'
                                     style={neuToUse}
                                 >
-                                    Transactions
+                                    Transaction History
                                 </button>
                             </div>
                         </Link>
