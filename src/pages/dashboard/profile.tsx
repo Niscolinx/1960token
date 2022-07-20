@@ -130,29 +130,32 @@ function profile() {
                         <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
                             Personal
                         </h3>
-                        <label
-                            className='block text-gray-700 text-sm mb-1'
-                            htmlFor='username'
-                        >
-                            Username
-                        </label>
-                        <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                                error && errorFields.includes('username')
-                                    ? 'border-red-500'
-                                    : ''
-                            }`}
-                            id='username'
-                            name='username'
-                            disabled
-                            type='text'
-                            minLength={4}
-                            value={username}
-                            onChange={changeHandler}
-                        />
+
+                        <div >
+                            <label
+                                className='block text-gray-700 text-sm mb-1'
+                                htmlFor='username'
+                            >
+                                Username
+                            </label>
+                            <input
+                                className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                    error && errorFields.includes('username')
+                                        ? 'border-red-500'
+                                        : ''
+                                }`}
+                                id='username'
+                                name='username'
+                                disabled
+                                type='text'
+                                minLength={4}
+                                value={username}
+                                onChange={changeHandler}
+                            />
+                        </div>
                     </div>
 
-                    <div className='mb-2'>
+                    <div >
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='phoneNumber'
@@ -173,7 +176,7 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div className='mb-2'>
+                    <div >
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='username'
@@ -200,7 +203,7 @@ function profile() {
                     <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
                         Change Password
                     </h3>
-                    <div className='mb-2'>
+                    <div >
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='password'
@@ -222,7 +225,7 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div className='mb-2'>
+                    <div >
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='confirmPassword'
