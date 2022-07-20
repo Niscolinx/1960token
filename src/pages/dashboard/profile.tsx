@@ -94,7 +94,6 @@ function profile() {
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setErrorFields([])
         setMessageDisplay('hidden')
         const { name, value } = e.target
 
@@ -136,11 +135,7 @@ function profile() {
                                 Username
                             </label>
                             <input
-                                className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                                    error && errorFields.includes('username')
-                                        ? 'border-red-500'
-                                        : ''
-                                }`}
+                                className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white`}
                                 id='username'
                                 name='username'
                                 disabled
@@ -160,11 +155,7 @@ function profile() {
                             Phone No
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                                error && errorFields.includes('phoneNumber')
-                                    ? 'border-red-500'
-                                    : ''
-                            }`}
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                             id='phoneNumber'
                             type='number'
                             name='phoneNumber'
@@ -181,11 +172,7 @@ function profile() {
                             Email
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                                error && errorFields.includes('email')
-                                    ? 'border-red-500'
-                                    : ''
-                            }`}
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                             id='email'
                             type='email'
                             name='email'
@@ -208,11 +195,7 @@ function profile() {
                             Password
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                                error && errorFields.includes('password')
-                                    ? 'border-red-500'
-                                    : ''
-                            }`}
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                             id='password'
                             name='password'
                             type='password'
@@ -230,11 +213,7 @@ function profile() {
                             Confirm Password
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
-                                error && errorFields.includes('confirmPassword')
-                                    ? 'border-red-500'
-                                    : ''
-                            }`}
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white `}
                             id='confirmPassword'
                             name='confirmPassword'
                             type='password'
