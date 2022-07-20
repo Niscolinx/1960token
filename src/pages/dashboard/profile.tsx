@@ -2,8 +2,7 @@ import axios from 'axios'
 import { GetSessionParams, getSession } from 'next-auth/react'
 import router from 'next/router'
 import React, { useEffect, useState } from 'react'
-import { useAppSelector } from '../../store/app/hooks'
-import { selectUser } from '../../store/features/user/UserSlice'
+
 
 function profile() {
     type message = { value: string; type?: string; style?: string }
@@ -232,18 +231,18 @@ function profile() {
                     <div>
                         <label
                             className='block text-gray-700 text-sm mb-1'
-                            htmlFor='confirmPassword'
+                            htmlFor='usdtAddress'
                         >
                             USDT TRC20
                         </label>
                         <input
                             className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white`}
-                            id='confirmPassword'
-                            name='confirmPassword'
+                            id='usdtAddress'
+                            name='usdtAddress'
                             type='text'
                             minLength={6}
                             required
-                            value={confirmPassword}
+                            value={usdtAddress}
                             onChange={changeHandler}
                         />
                     </div>
