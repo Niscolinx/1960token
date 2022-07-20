@@ -57,22 +57,13 @@ function profile() {
                 })
                 .then(({ data }) => {
                     console.log({ data })
-                    setMessage({
-                        value: data.message,
-                        type: 'success',
-                        style: 'text-green-500 font-semibold uppercase',
-                    })
+                   
                     setMessageDisplay('block')
                     setLoading(false)
 
-                    setTimeout(() => {
-                        router.push('/auth/login')
-                    }, 500)
                 })
                 .catch(({ response: { data } }) => {
-                    setMessageDisplay('block')
                     setLoading(false)
-                    setMessage({ ...message, value: data.message })
                 })
         }
     }
