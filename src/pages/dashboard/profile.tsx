@@ -49,7 +49,6 @@ function profile() {
             setLoading(false)
         }
 
-        console.log({email, confirmPassword, usdtAddress})
 
         axios
             .post('/api/profile', {
