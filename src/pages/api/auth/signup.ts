@@ -97,7 +97,7 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             username,
             phoneNumber,
             upliner: referral,
-            referralLink: `https://www.1960token.com/auth/register?reg=${username}`,
+            referralLink: `https://www.1960token.com/auth/register?reg=${username}`
         })
 
         const verifyStored = await storeUser.save()
