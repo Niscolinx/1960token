@@ -1,7 +1,128 @@
+import axios from 'axios';
 import { GetSessionParams, getSession } from 'next-auth/react'
-import React from 'react'
+import router from 'next/router';
+import React, { useEffect, useState } from 'react'
 
 function profile() {
+    type message = { value: string; type?: string; style?: string }
+
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState<number>()
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [referral, setReferral] = useState<string | undefined>('')
+    const [errorFields, setErrorFields] = useState<string[]>([])
+    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState<message>({
+        value: 'invalid Entries',
+        type: 'error',
+        style: 'text-red-500',
+    })
+    const [messageDisplay, setMessageDisplay] = useState('hidden')
+
+    useEffect(() => {
+        const { reg } = router.query
+        setReferral(reg?.toString())
+    }, [router])
+
+   
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setLoading(true)
+
+        const formData = new FormData(e.currentTarget)
+
+        let isError = false
+        for (let [key, value] of formData.entries()) {
+            if (!value && key !== 'referral') {
+                isError = true
+                setMessage({
+                    value: "Value can't be empty",
+                    type: 'error',
+                    style: 'text-red-500',
+                })
+                setErrorFields((oldArr) => [...oldArr, key])
+                setMessageDisplay('block')
+                setLoading(false)
+            }
+
+           
+
+            if (key === 'confirmPassword' && password !== confirmPassword) {
+                isError = true
+                setErrorFields((oldArr) => [...oldArr, key])
+                setMessageDisplay('block')
+                setMessage({ ...message, value: 'Passwords do not match' })
+                setLoading(false)
+            }
+        }
+
+        setError(isError)
+        if (!isError) {
+            axios
+                .post('/api/auth/signup', {
+                    username: username.toLowerCase().trim(),
+                    email: email.toLowerCase().trim(),
+                    phoneNumber,
+                    referral: referral?.toLowerCase().trim(),
+                    password,
+                })
+                .then(({ data }) => {
+                    console.log({ data })
+                    setMessage({
+                        value: data.message,
+                        type: 'success',
+                        style: 'text-green-500 font-semibold uppercase',
+                    })
+                    setMessageDisplay('block')
+                    setLoading(false)
+
+                    setTimeout(() => {
+                        router.push('/auth/login')
+                    }, 500)
+                })
+                .catch(({ response: { data } }) => {
+                    setMessageDisplay('block')
+                    setLoading(false)
+                    setMessage({ ...message, value: data.message })
+                })
+        }
+    }
+
+    const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setErrorFields([])
+        setMessageDisplay('hidden')
+        const { name, value } = e.target
+
+        switch (name) {
+            case 'username':
+                setUsername(value)
+                break
+            case 'email':
+                setEmail(value)
+                break
+            case 'phoneNumber':
+                setPhoneNumber(Number(value))
+                break
+            case 'password':
+                setPassword(value)
+                break
+            case 'confirmPassword':
+                ;(() => {
+                    setConfirmPassword(value)
+                }).call(this)
+                break
+            case 'referral':
+                setReferral(value)
+                break
+            default:
+                ''
+                break
+        }
+    }
     return (
         <div className='px-4 h-[80vh]'>
             <form
