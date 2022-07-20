@@ -15,7 +15,6 @@ import MineTimer from '../../store/features/mine/MineTimer'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import axios from 'axios'
-import { getCookie } from 'cookies-next'
 
 function earn() {
     const { data: session } = useSession()

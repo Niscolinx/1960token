@@ -2,13 +2,18 @@ import axios from 'axios';
 import { GetSessionParams, getSession } from 'next-auth/react'
 import router from 'next/router';
 import React, { useEffect, useState } from 'react'
+import { useAppSelector } from '../../store/app/hooks';
+import { selectUser } from '../../store/features/user/UserSlice';
 
 function profile() {
     type message = { value: string; type?: string; style?: string }
 
- 
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState<number>()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [referral, setReferral] = useState<string | undefined>('')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -18,6 +23,16 @@ function profile() {
         style: 'text-red-500',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
+
+        const fetchedUser = useAppSelector(selectUser)
+
+
+    useEffect(() => {
+        const { reg } = router.query
+        setReferral(reg?.toString())
+    }, [router])
+
+   
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
