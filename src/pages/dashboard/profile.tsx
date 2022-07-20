@@ -102,19 +102,13 @@ function profile() {
         const { name, value } = e.target
 
         switch (name) {
-            case 'phoneNumber':
-                setPhoneNumber(Number(value))
-                break
+           
             case 'password':
                 setPassword(value)
                 break
             case 'confirmPassword':
                 setConfirmPassword(value)
 
-                break
-            case 'referral':
-                setReferral(value)
-                break
             default:
                 ''
                 break
