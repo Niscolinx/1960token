@@ -63,7 +63,7 @@ function profile() {
         setError(isError)
         if (!isError) {
             axios
-                .post('/api/auth/signup', {
+                .post('/api/profile', {
                     username: username.toLowerCase().trim(),
                     email: email.toLowerCase().trim(),
                     phoneNumber,
@@ -111,9 +111,8 @@ function profile() {
                 setPassword(value)
                 break
             case 'confirmPassword':
-                ;(() => {
                     setConfirmPassword(value)
-                }).call(this)
+              
                 break
             case 'referral':
                 setReferral(value)
