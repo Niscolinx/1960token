@@ -80,6 +80,9 @@ const userSchema = new Schema<IUser>(
             required: true,
             default: 'Active',
         },
+        referralLink: {
+            type: String,
+        },
         referrals: [
             {
                 username: String,
