@@ -107,7 +107,7 @@ function team() {
 
     return (
         <div className='h-[80vh]'>
-            <div className='grid px-2 mt-8'>
+            <div className='grid px-2 mt-8 bg-red-300 h-full content-start'>
                 <div className='grid'>
                     <p
                         className='justify-self-center font-semibold py-2 px-4 uppercase mb-4'
@@ -116,45 +116,43 @@ function team() {
                         Total Referral:{' '}
                         <span>{referralTotalNumberAndIncome?.teamNumber}</span>
                     </p>
-                    <div className='grid'>
-                        <table>
-                            <tbody>
-                                {referrals &&
-                                    referrals.map((val, i) => {
-                                        return (
-                                            <tr
-                                                key={i}
-                                                className={`text-center font-bold ${
-                                                    i === 1
-                                                        ? 'border-b border-t border-gray-700 light:border-gray-400'
-                                                        : ''
-                                                }`}
-                                            >
-                                                <td className='py-2 px-4'>
-                                                    LV{val.level}
-                                                </td>
-                                                <td className='py-2 px-4'>
-                                                    {val.totalMember}
-                                                </td>
-                                                <td className='py-2 px-4'>
-                                                    ${val.totalAmount}
-                                                </td>
-                                            </tr>
-                                        )
-                                    })}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d]'>
-                        <CopyToClipboard text={user.referralLink}>
-                            <>
-                                <p>{user.referralLink}</p>
-                                <button className='bg-orange-300 rounded-lg py-2 px-3 font-semibold '>
-                                    Copy Link
-                                </button>
-                            </>
-                        </CopyToClipboard>{' '}
-                    </div>
+                    <table>
+                        <tbody>
+                            {referrals &&
+                                referrals.map((val, i) => {
+                                    return (
+                                        <tr
+                                            key={i}
+                                            className={`text-center font-bold ${
+                                                i === 1
+                                                    ? 'border-b border-t border-gray-700 light:border-gray-400'
+                                                    : ''
+                                            }`}
+                                        >
+                                            <td className='py-2 px-4'>
+                                                LV{val.level}
+                                            </td>
+                                            <td className='py-2 px-4'>
+                                                {val.totalMember}
+                                            </td>
+                                            <td className='py-2 px-4'>
+                                                ${val.totalAmount}
+                                            </td>
+                                        </tr>
+                                    )
+                                })}
+                        </tbody>
+                    </table>
+                </div>
+                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d]'>
+                    <CopyToClipboard text={user.referralLink}>
+                        <>
+                            <p>{user.referralLink}</p>
+                            <button className='bg-orange-300 rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>
+                                Copy Link
+                            </button>
+                        </>
+                    </CopyToClipboard>{' '}
                 </div>
             </div>
         </div>
