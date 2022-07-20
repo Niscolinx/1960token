@@ -13,6 +13,10 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     try {
         await dbConnect()
 
+        const users = User.find()
+
+        console.log({users})
+
 //         const email: IUser | null = await User.findOne({
 //             email: emailOrUsername,
 //         })
