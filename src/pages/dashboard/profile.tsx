@@ -9,7 +9,6 @@ function profile() {
  
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [referral, setReferral] = useState<string | undefined>('')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -19,13 +18,6 @@ function profile() {
         style: 'text-red-500',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
-
-    useEffect(() => {
-        const { reg } = router.query
-        setReferral(reg?.toString())
-    }, [router])
-
-   
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
