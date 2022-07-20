@@ -23,7 +23,6 @@ const Register = () => {
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
     useEffect(() => {
-
         const {reg} = router.query        
         setReferral(reg?.toString())
     }, [router])

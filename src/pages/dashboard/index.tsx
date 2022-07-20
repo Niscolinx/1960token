@@ -2,6 +2,8 @@ import { getSession, GetSessionParams, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { IoIosPeople } from 'react-icons/io'
 import { ImProfile } from 'react-icons/im'
+import { BsFillGearFill } from 'react-icons/bs'
+import { GrDocumentTime } from 'react-icons/gr'
 import { useTheme } from 'next-themes'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
@@ -36,7 +38,10 @@ const Home = () => {
     const memoizedCallback = useCallback(() => {
         if (session) {
             return dispatch(getUser(session)).then((data) => {
-                localStorage.setItem('userSession', JSON.stringify(data.payload))
+                localStorage.setItem(
+                    'userSession',
+                    JSON.stringify(data.payload)
+                )
             })
         }
     }, [session])
@@ -103,7 +108,7 @@ const Home = () => {
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
 
-    console.log({fetchedUser})
+    console.log({ fetchedUser })
     return (
         <div className='h-[93vh] px-4'>
             <div className='grid mt-10 gap-5'>
@@ -177,6 +182,17 @@ const Home = () => {
                                     style={neuToUse}
                                 >
                                     My team
+                                </button>
+                            </div>
+                        </Link>
+                        <Link href='/dashboard/profile'>
+                            <div className='grid justify-center place-items-center'>
+                                <BsFillGearFill className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                                <button
+                                    className='text-sm p-1'
+                                    style={neuToUse}
+                                >
+                                    Settings
                                 </button>
                             </div>
                         </Link>
