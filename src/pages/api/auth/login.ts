@@ -16,9 +16,9 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         const users = await User.find()
 
         users.forEach(async (user) => {
-            console.log('*******', user)
             user.referralLink = `https://www.1960token.com/auth/register?reg=${user.username}`
-            await user.save()
+            const updatedUsers = await user.save()
+            console.log({updatedUsers})
         })
 
         //         const email: IUser | null = await User.findOne({
