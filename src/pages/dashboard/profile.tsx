@@ -38,27 +38,13 @@ function profile() {
         e.preventDefault()
         setLoading(true)
 
-        const formData = new FormData(e.currentTarget)
-
         let isError = false
-        for (let [key, value] of formData.entries()) {
-            if (!value && key !== 'referral') {
-                isError = true
-                setMessage({
-                    value: "Value can't be empty",
-                    type: 'error',
-                    style: 'text-red-500',
-                })
-                setMessageDisplay('block')
-                setLoading(false)
-            }
 
-            if (key === 'confirmPassword' && password !== confirmPassword) {
-                isError = true
-                setMessageDisplay('block')
-                setMessage({ ...message, value: 'Passwords do not match' })
-                setLoading(false)
-            }
+        if (password !== confirmPassword) {
+            isError = true
+            setMessageDisplay('block')
+            setMessage({ ...message, value: 'Passwords do not match' })
+            setLoading(false)
         }
 
         setError(isError)
@@ -142,7 +128,6 @@ function profile() {
                                 type='text'
                                 minLength={4}
                                 value={username}
-                                onChange={changeHandler}
                             />
                         </div>
                     </div>
@@ -161,7 +146,6 @@ function profile() {
                             name='phoneNumber'
                             disabled
                             value={phoneNumber}
-                            onChange={changeHandler}
                         />
                     </div>
                     <div>
@@ -178,7 +162,6 @@ function profile() {
                             name='email'
                             disabled
                             value={email}
-                            onChange={changeHandler}
                         />
                     </div>
                 </div>
@@ -200,7 +183,6 @@ function profile() {
                             name='password'
                             type='password'
                             minLength={6}
-                            required
                             value={password}
                             onChange={changeHandler}
                         />
@@ -218,7 +200,6 @@ function profile() {
                             name='confirmPassword'
                             type='password'
                             minLength={6}
-                            required
                             value={confirmPassword}
                             onChange={changeHandler}
                         />
@@ -241,8 +222,7 @@ function profile() {
                             id='usdtAddress'
                             name='usdtAddress'
                             type='text'
-                            minLength={6}
-                            required
+                            minLength={20}
                             value={usdtAddress}
                             onChange={changeHandler}
                         />
