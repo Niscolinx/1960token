@@ -49,7 +49,7 @@ function profile() {
             setLoading(false)
         }
 
-        
+
         axios
             .post('/api/profile', {
                 email,
@@ -175,7 +175,6 @@ function profile() {
                             minLength={6}
                             value={password}
                             onChange={changeHandler}
-                            autoComplete='off'
                         />
                     </div>
                     <div>
