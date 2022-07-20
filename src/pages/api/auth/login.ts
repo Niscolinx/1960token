@@ -6,7 +6,6 @@ import dbConnect from '../../../lib/dbConnect'
 import { setCookie } from 'cookies-next'
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
-    console.log('login...', req.body)
 
     const { emailOrUsername, password } = req.body
 

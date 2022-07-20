@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import { getUser, selectUser } from '../../store/features/user/UserSlice'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 function team() {
     const { data: session } = useSession()
@@ -115,7 +116,6 @@ function team() {
                         Total Referral:{' '}
                         <span>{referralTotalNumberAndIncome?.teamNumber}</span>
                     </p>
-
                     <div className='grid'>
                         <table>
                             <tbody>
@@ -145,6 +145,14 @@ function team() {
                             </tbody>
                         </table>
                     </div>
+                    <CopyToClipboard text={user.referralLink}>
+                        <p>{user.referralLink}</p>
+                        <button
+                            className='bg-red'
+                        >
+                            Copy Link
+                        </button>
+                    </CopyToClipboard>{' '}
                 </div>
             </div>
         </div>
