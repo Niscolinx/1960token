@@ -18,6 +18,7 @@ export interface IUser {
     password: string
     referrals: any[]
     referralLink: string
+    usdtAddress: string
     pendingWithdrawals: any[]
     pendingDeposits: any[]
     totalWithdrawals: any[]
