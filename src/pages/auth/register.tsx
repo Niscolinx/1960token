@@ -11,7 +11,7 @@ const Register = () => {
     const [phoneNumber, setPhoneNumber] = useState<number>()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [referral, setReferral] = useState('')
+    const [referral, setReferral] = useState<string | undefined>('')
     const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -21,15 +21,11 @@ const Register = () => {
         style: 'text-red-500',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
-    const [getUpliner, setGetUpliner] = useState<string | undefined>('')
 
     useEffect(() => {
 
-        const {reg} = router.query
-        console.log(reg?.toString())
-        
-        setGetUpliner(reg?.toString())
-
+        const {reg} = router.query        
+        setReferral(reg?.toString())
     }, [router])
 
     const isValidMail = (e: string): Boolean => {
@@ -88,7 +84,7 @@ const Register = () => {
                     username: username.toLowerCase().trim(),
                     email: email.toLowerCase().trim(),
                     phoneNumber,
-                    referral: referral.toLowerCase().trim(),
+                    referral: referral?.toLowerCase().trim(),
                     password,
                 })
                 .then(({ data }) => {
