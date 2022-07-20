@@ -41,7 +41,11 @@ function profile() {
 
         if (password !== confirmPassword) {
             setMessageDisplay('block')
-            setMessage({ ...message, value: 'Passwords do not match', style: 'text-red-500' })
+            setMessage({
+                ...message,
+                value: 'Passwords do not match',
+                style: 'text-red-500',
+            })
             setLoading(false)
         }
 
@@ -170,6 +174,8 @@ function profile() {
                             minLength={6}
                             value={password}
                             onChange={changeHandler}
+                            autoFocus={false}
+                            autoComplete={false}
                         />
                     </div>
                     <div>
