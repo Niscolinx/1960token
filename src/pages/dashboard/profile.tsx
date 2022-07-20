@@ -6,9 +6,7 @@ import React, { useEffect, useState } from 'react'
 function profile() {
     type message = { value: string; type?: string; style?: string }
 
-    const [username, setUsername] = useState('')
-    const [email, setEmail] = useState('')
-    const [phoneNumber, setPhoneNumber] = useState<number>()
+ 
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [referral, setReferral] = useState<string | undefined>('')
@@ -98,12 +96,7 @@ function profile() {
         const { name, value } = e.target
 
         switch (name) {
-            case 'username':
-                setUsername(value)
-                break
-            case 'email':
-                setEmail(value)
-                break
+           
             case 'phoneNumber':
                 setPhoneNumber(Number(value))
                 break
