@@ -214,7 +214,7 @@ function earn() {
                         </div>
                     </div>
                 </div>
-                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d] absolute bottom-0 right-0 left-0 gap-3'>
+                <div className='grid mt-10 justify-center bg-purple-500 py-4 px-6 text-[#1a1a2d] absolute bottom-0 right-0 left-0 gap-3'>
                     <h3 className='text-lg font-bold text-center'>
                         TAP TO MINE Tk.!!
                     </h3>
