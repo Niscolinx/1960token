@@ -3,12 +3,12 @@ import { GetSessionParams, getSession } from 'next-auth/react'
 import router from 'next/router'
 import React, { useEffect, useState } from 'react'
 
-
 function profile() {
     type message = { value: string; type?: string; style?: string }
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
+    const [usdtAddress, setUsdtAddress] = useState('')
     const [phoneNumber, setPhoneNumber] = useState<number>()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -102,7 +102,8 @@ function profile() {
                 break
             case 'confirmPassword':
                 setConfirmPassword(value)
-
+            case 'usdtAddress':
+                setUsdtAddress(value)
             default:
                 ''
                 break
