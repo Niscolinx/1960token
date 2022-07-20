@@ -83,7 +83,6 @@ function profile() {
         setMessageDisplay('hidden')
         const { name, value } = e.target
 
-        console.log({name, value})
         switch (name) {
             case 'password':
                 setPassword(value)
