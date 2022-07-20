@@ -93,7 +93,16 @@ function videoAd() {
                     className='flex py-2 px-10 rounded-lg place-self-center mb-2 items-center font-bold text-2xl w-full justify-between'
                     //style={neuToUse}
                 >
-                    <p className='text-lg'>{playedTime}</p>
+                    <div className='grid'>
+                        <p className='text-lg'>{playedTime}</p>
+                        <img
+                            src='/tk.png'
+                            alt=''
+                            className='absolute left-12'
+                            width='75px'
+                            height='75px'
+                        />
+                    </div>
                     <p className=''>{displayToken}</p>
                 </div>
 
