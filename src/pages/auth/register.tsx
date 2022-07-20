@@ -21,13 +21,14 @@ const Register = () => {
         style: 'text-red-500',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
-    const [getUpliner, setGetUpliner] = useState('')
+    const [getUpliner, setGetUpliner] = useState<string | undefined>('')
 
     useEffect(() => {
 
         const {reg} = router.query
-        console.log(reg)
-
+        console.log(reg?.toString())
+        
+        setGetUpliner(reg?.toString())
 
     }, [router])
 
