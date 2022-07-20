@@ -39,15 +39,15 @@ function profile() {
         e.preventDefault()
         setLoading(true)
 
-        // if (password !== confirmPassword) {
-        //     setMessageDisplay('block')
-        //     setMessage({
-        //         ...message,
-        //         value: 'Passwords do not match',
-        //         style: 'text-red-500',
-        //     })
-        //     setLoading(false)
-        // }
+        if (password !== confirmPassword) {
+            setMessageDisplay('block')
+            setMessage({
+                ...message,
+                value: 'Passwords do not match',
+                style: 'text-red-500',
+            })
+            setLoading(false)
+        }
 
         console.log({email, confirmPassword, usdtAddress})
 
