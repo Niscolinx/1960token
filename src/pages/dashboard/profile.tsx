@@ -90,6 +90,7 @@ function profile() {
                 break
             case 'confirmPassword':
                 setConfirmPassword(value)
+                break
             case 'usdtAddress':
                 setUsdtAddress(value)
             default:
