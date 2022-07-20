@@ -28,9 +28,8 @@ function profile() {
 
 
     useEffect(() => {
-        const { reg } = router.query
-        setReferral(reg?.toString())
-    }, [router])
+        console.log({fetchedUser})
+    }, [fetchedUser])
 
    
 
