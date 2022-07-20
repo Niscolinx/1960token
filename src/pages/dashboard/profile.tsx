@@ -23,16 +23,19 @@ function profile() {
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
-    const fetchedUser = useAppSelector(selectUser)
-
     useEffect(() => {
-       const {email, username, phoneNumber} = fetchedUser
+        const userJSON = localStorage.getItem('userSession')
 
-       setEmail(email)
-       setUsername(username)
-       setPhoneNumber(Number(phoneNumber))
-    }, [fetchedUser])
-
+        if (userJSON) {
+            const userData = JSON.parse(userJSON)
+        
+            
+            const { email, username, phoneNumber } = userData
+            setEmail(email)
+            setUsername(username)
+            setPhoneNumber(Number(phoneNumber))
+        }
+    }, [])
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -100,7 +103,6 @@ function profile() {
         const { name, value } = e.target
 
         switch (name) {
-           
             case 'password':
                 setPassword(value)
                 break
@@ -132,14 +134,14 @@ function profile() {
                         Username
                     </label>
                     <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                             error && errorFields.includes('username')
                                 ? 'border-red-500'
                                 : ''
                         }`}
                         id='username'
                         name='username'
-                        required
+                        disabled
                         type='text'
                         minLength={4}
                         value={username}
@@ -155,7 +157,7 @@ function profile() {
                         Phone No
                     </label>
                     <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                             error && errorFields.includes('phoneNumber')
                                 ? 'border-red-500'
                                 : ''
@@ -163,7 +165,7 @@ function profile() {
                         id='phoneNumber'
                         type='number'
                         name='phoneNumber'
-                        required
+                        disabled
                         value={phoneNumber}
                         onChange={changeHandler}
                     />
@@ -176,7 +178,7 @@ function profile() {
                         Email
                     </label>
                     <input
-                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                        className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                             error && errorFields.includes('email')
                                 ? 'border-red-500'
                                 : ''
@@ -184,7 +186,7 @@ function profile() {
                         id='email'
                         type='email'
                         name='email'
-                        required
+                        disabled
                         value={email}
                         onChange={changeHandler}
                     />
@@ -233,7 +235,6 @@ function profile() {
                         onChange={changeHandler}
                     />
                 </div>
-                
 
                 <button
                     className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline  justify-self-center'
