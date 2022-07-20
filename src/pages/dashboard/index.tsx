@@ -203,7 +203,7 @@ const Home = () => {
                                     className='text-sm p-1'
                                     style={neuToUse}
                                 >
-                                    Transaction History
+                                    Transactions
                                 </button>
                             </div>
                         </Link>
