@@ -39,34 +39,27 @@ function profile() {
         e.preventDefault()
         setLoading(true)
 
-        let isError = false
-
         if (password !== confirmPassword) {
-            isError = true
             setMessageDisplay('block')
             setMessage({ ...message, value: 'Passwords do not match' })
             setLoading(false)
         }
 
-        setError(isError)
-        if (!isError) {
-            axios
-                .post('/api/profile', {
-                    email,
-                    password: confirmPassword,
-                    usdtAddress
-                })
-                .then(({ data }) => {
-                    console.log({ data })
-                   
-                    setMessageDisplay('block')
-                    setLoading(false)
+        axios
+            .post('/api/profile', {
+                email,
+                password: confirmPassword,
+                usdtAddress,
+            })
+            .then(({ data }) => {
+                console.log({ data })
 
-                })
-                .catch(({ response: { data } }) => {
-                    setLoading(false)
-                })
-        }
+                setMessageDisplay('block')
+                setLoading(false)
+            })
+            .catch(({ response: { data } }) => {
+                setLoading(false)
+            })
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -218,7 +211,6 @@ function profile() {
                             value={usdtAddress}
                             onChange={changeHandler}
                         />
-                        
                     </div>
                 </div>
 
