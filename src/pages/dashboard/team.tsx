@@ -107,7 +107,7 @@ function team() {
 
     return (
         <div className='h-[80vh]'>
-            <div className='grid px-2 mt-8 bg-red-300 h-full content-start'>
+            <div className='grid px-2 mt-8 h-full content-start relative'>
                 <div className='grid'>
                     <p
                         className='justify-self-center font-semibold py-2 px-4 uppercase mb-4'
@@ -144,7 +144,7 @@ function team() {
                         </tbody>
                     </table>
                 </div>
-                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d]'>
+                <div className='grid mt-10 justify-center bg-blue-400 py-4 px-6 text-[#1a1a2d] absolute bottom-0'>
                     <CopyToClipboard text={user.referralLink}>
                         <>
                             <p>{user.referralLink}</p>
