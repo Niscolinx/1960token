@@ -15,46 +15,47 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
 
         const users = await User.find()
 
-
-        users.forEach((user) => {
-            console.log('*******',user)
+        users.forEach(async (user) => {
+            console.log('*******', user)
+            user.referralLink = `https://www.1960token.com/auth/register?reg=${user.username}`
+            await user.save()
         })
 
-//         const email: IUser | null = await User.findOne({
-//             email: emailOrUsername,
-//         })
-//         const username: IUser | null = await User.findOne({
-//             username: emailOrUsername,
-//         })
+        //         const email: IUser | null = await User.findOne({
+        //             email: emailOrUsername,
+        //         })
+        //         const username: IUser | null = await User.findOne({
+        //             username: emailOrUsername,
+        //         })
 
-//         const user = email || username
+        //         const user = email || username
 
-//         if (!user) {
-//             return res.status(401).json('Not found')
-//         }
+        //         if (!user) {
+        //             return res.status(401).json('Not found')
+        //         }
 
-//         const checkPassword = await bcrypt.compare(password, user!.password)
+        //         const checkPassword = await bcrypt.compare(password, user!.password)
 
-//         if (!checkPassword) {
-//             return res.status(401).json('Incorrect password')
-//         }
+        //         if (!checkPassword) {
+        //             return res.status(401).json('Incorrect password')
+        //         }
 
-//         const token = jwt.sign(
-//             {
-//                 email,
-//                 userId: user!._id.toString(),
-//             },
-//             process.env.JWT_SECRET!,
-//             {
-//                 expiresIn: '1hr',
-//             }
-//         )
-//   setCookie('userSession', 'value', { req, res, maxAge: 60 * 60 * 24 })
+        //         const token = jwt.sign(
+        //             {
+        //                 email,
+        //                 userId: user!._id.toString(),
+        //             },
+        //             process.env.JWT_SECRET!,
+        //             {
+        //                 expiresIn: '1hr',
+        //             }
+        //         )
+        //   setCookie('userSession', 'value', { req, res, maxAge: 60 * 60 * 24 })
 
-//         return res.status(200).json(
-//             user
-//             //token,
-//         )
+        //         return res.status(200).json(
+        //             user
+        //             //token,
+        //         )
     } catch (err) {
         console.log({ err })
         res.status(400).json('error')
