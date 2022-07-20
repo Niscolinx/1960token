@@ -96,7 +96,8 @@ async function signupHandler(req: NextApiRequest, res: NextApiResponse) {
             password: await bcrypt.hash(password, 12),
             username,
             phoneNumber,
-            upliner: referral
+            upliner: referral,
+            referralLink: `https://www.1960token.com/auth/register?reg=${username}`,
         })
 
         const verifyStored = await storeUser.save()
