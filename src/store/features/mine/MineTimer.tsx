@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import dayjs, { Dayjs } from 'dayjs'
 import { useTheme } from 'next-themes'
-import {
-    initStopMineAsync,
-    selectMining,
-} from '../../features/mine/MinerSlice'
+import { initStopMineAsync, selectMining } from '../../features/mine/MinerSlice'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { MineCountDown } from './MineCountDown'
 import { useSession } from 'next-auth/react'
@@ -15,12 +12,10 @@ const defaultTimer = {
     seconds: '00',
 }
 
-
 const CountDownTimer = ({ start }: { start: boolean }) => {
     const { data: session } = useSession()
 
     const mineState = useAppSelector(selectMining)
-
 
     const dispatch = useAppDispatch()
 
@@ -75,7 +70,6 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
     useEffect(() => {
         if (start && mineState.miningSession === 'active') {
             const intervalId = setInterval(() => {
-                
                 return updateRemainingTimer(dayjs(mineState.miningStartedAt))
             }, 1000)
 
@@ -87,16 +81,16 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
 
     // return <div className='grid'>{isLoaded ? displayMine : 'Loading...'}</div>
     return (
-        <div className='grid'>
+        <div className='grid relative'>
             <div
-                className=' justify-center grid w-max text-center rounded-lg place-self-center'
+                className='justify-center grid w-max text-center rounded-lg place-self-center'
                 //style={neuToUse}
             >
                 <p className='text-xl'>
                     {hours}:{minutes}:{seconds}
                 </p>
-                <img src="/tk.png" alt="" className='absolute top-0'/>
             </div>
+            <img src='/tk.png' alt='' className='absolute left-10' />
         </div>
     )
 }
