@@ -31,7 +31,7 @@ function profile() {
 
        setEmail(email)
        setUsername(username)
-       setPhoneNumber(phoneNumber)
+       setPhoneNumber(Number(phoneNumber))
     }, [fetchedUser])
 
 
