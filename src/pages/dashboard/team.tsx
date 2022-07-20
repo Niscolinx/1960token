@@ -152,7 +152,8 @@ function team() {
                         {user.referralLink}
                     </p>
                     <CopyToClipboard
-                        text={user.referralLink}
+                        //text={user.referralLink}
+                        text='http://localhost:3000/auth/register?reg=hello'
                     >
                         
                             <button className='bg-orange-300 rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>

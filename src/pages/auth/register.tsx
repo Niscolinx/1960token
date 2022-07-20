@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Register = () => {
     const router = useRouter()
@@ -21,6 +21,13 @@ const Register = () => {
         style: 'text-red-500',
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
+    const [getUpliner, setGetUpliner] = useState('')
+
+    useEffect(() => {
+
+        const {reg} = router.query
+        console.log({reg})
+    }, [router])
 
     const isValidMail = (e: string): Boolean => {
         const emailRegex = new RegExp(
@@ -31,6 +38,7 @@ const Register = () => {
 
         return isValid
     }
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setLoading(true)
@@ -61,8 +69,6 @@ const Register = () => {
                 }
             }
 
-           
-
             if (key === 'confirmPassword' && password !== confirmPassword) {
                 isError = true
                 setErrorFields((oldArr) => [...oldArr, key])
@@ -80,7 +86,7 @@ const Register = () => {
                     email: email.toLowerCase().trim(),
                     phoneNumber,
                     referral: referral.toLowerCase().trim(),
-                    password
+                    password,
                 })
                 .then(({ data }) => {
                     console.log({ data })
