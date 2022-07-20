@@ -52,7 +52,8 @@ function profile() {
         if (!isError) {
             axios
                 .post('/api/profile', {
-                    password,
+                    email,
+                    password: confirmPassword,
                     usdtAddress
                 })
                 .then(({ data }) => {

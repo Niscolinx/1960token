@@ -7,7 +7,7 @@ import { setCookie } from 'cookies-next'
 
 export default async function Profile(req: NextApiRequest, res: NextApiResponse) {
 
-    const { emailOrUsername, password } = req.body
+    const { email, password, usdtAddress } = req.body
 
     try {
         await dbConnect()
