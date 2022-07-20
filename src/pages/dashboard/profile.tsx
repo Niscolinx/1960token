@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from 'axios'
 import { GetSessionParams, getSession } from 'next-auth/react'
-import router from 'next/router';
+import router from 'next/router'
 import React, { useEffect, useState } from 'react'
-import { useAppSelector } from '../../store/app/hooks';
-import { selectUser } from '../../store/features/user/UserSlice';
+import { useAppSelector } from '../../store/app/hooks'
+import { selectUser } from '../../store/features/user/UserSlice'
 
 function profile() {
     type message = { value: string; type?: string; style?: string }
@@ -24,17 +24,12 @@ function profile() {
     })
     const [messageDisplay, setMessageDisplay] = useState('hidden')
 
-        const fetchedUser = useAppSelector(selectUser)
-
+    const fetchedUser = useAppSelector(selectUser)
 
     useEffect(() => {
-        if(fetchedUser.email){
-            console.log("fetch profile loaded")
-            console.log('From profile', {fetchedUser})
-        }
+       
     }, [fetchedUser])
 
-   
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -55,8 +50,6 @@ function profile() {
                 setMessageDisplay('block')
                 setLoading(false)
             }
-
-           
 
             if (key === 'confirmPassword' && password !== confirmPassword) {
                 isError = true
@@ -105,7 +98,6 @@ function profile() {
         const { name, value } = e.target
 
         switch (name) {
-           
             case 'phoneNumber':
                 setPhoneNumber(Number(value))
                 break
@@ -113,8 +105,8 @@ function profile() {
                 setPassword(value)
                 break
             case 'confirmPassword':
-                    setConfirmPassword(value)
-              
+                setConfirmPassword(value)
+
                 break
             case 'referral':
                 setReferral(value)
