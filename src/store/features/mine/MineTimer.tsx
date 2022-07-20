@@ -95,6 +95,7 @@ const CountDownTimer = ({ start }: { start: boolean }) => {
                 <p className='text-xl'>
                     {hours}:{minutes}:{seconds}
                 </p>
+                <img src="/tk.png" alt="" className='absolute top-0'/>
             </div>
         </div>
     )
