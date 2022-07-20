@@ -26,7 +26,9 @@ const Register = () => {
     useEffect(() => {
 
         const {reg} = router.query
-        console.log({reg})
+        console.log(reg)
+
+
     }, [router])
 
     const isValidMail = (e: string): Boolean => {
