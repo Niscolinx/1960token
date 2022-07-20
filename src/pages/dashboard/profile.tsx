@@ -194,7 +194,13 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div className='mb-6'>
+                </div>
+
+                <div className='grid'>
+                    <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
+                        Change Password
+                    </h3>
+                    <div className='mb-2'>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='password'
@@ -216,7 +222,7 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div className='mb-6'>
+                    <div className='mb-2'>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='confirmPassword'
@@ -238,12 +244,6 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                </div>
-
-                <div className='grid'>
-                    <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
-                        Personal
-                    </h3>
                 </div>
 
                 <button
