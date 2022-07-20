@@ -8,8 +8,6 @@ export default async function Profile(
 ) {
     const { email, password, usdtAddress } = req.body
 
-    console.log(req.body)
-
     try {
         const user = await User.findOne({
             email,
@@ -19,22 +17,15 @@ export default async function Profile(
             return res.status(401).json('Not found')
         }
 
-        if(password){
+        if (password) {
             user.password = await bcrypt.hash(password, 12)
+        }
 
-        }
-        else{
-            console.log('no password')
-        }
-        if(usdtAddress){
-            
+        if (usdtAddress) {
             user.usdtAddress = usdtAddress
         }
-        else{
-            console.log("not usdt address", usdtAddress)
-        }
 
-       // await user.save()
+        await user.save()
 
         return res.status(200).json(user)
     } catch (err) {
