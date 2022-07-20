@@ -28,11 +28,11 @@ function profile() {
 
 
     useEffect(() => {
-        console.log('From profile', {fetchedUser})
-        if(fetchedUser){
+        if(fetchedUser.email){
             console.log("fetch profile loaded")
+            console.log('From profile', {fetchedUser})
         }
-    })
+    }, [fetchedUser])
 
    
 
