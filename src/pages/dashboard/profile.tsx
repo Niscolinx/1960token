@@ -13,7 +13,6 @@ function profile() {
     const [phoneNumber, setPhoneNumber] = useState<number>()
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [errorFields, setErrorFields] = useState<string[]>([])
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState<message>({
@@ -117,7 +116,7 @@ function profile() {
         <div className='px-4'>
             <form
                 id='register'
-                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 grid m-2'
+                className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 grid m-2 gap-6'
                 onSubmit={handleSubmit}
             >
                 <div className='mb-2'>
@@ -127,11 +126,11 @@ function profile() {
                         {message?.value}
                     </p>
                     <div className='grid'>
-                        <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
+                        <h3 className='font-bold text-lg text-black border-b border-b-gray-400 mb-4'>
                             Personal
                         </h3>
 
-                        <div >
+                        <div>
                             <label
                                 className='block text-gray-700 text-sm mb-1'
                                 htmlFor='username'
@@ -139,7 +138,7 @@ function profile() {
                                 Username
                             </label>
                             <input
-                                className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                                className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                                     error && errorFields.includes('username')
                                         ? 'border-red-500'
                                         : ''
@@ -155,7 +154,7 @@ function profile() {
                         </div>
                     </div>
 
-                    <div >
+                    <div>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='phoneNumber'
@@ -163,7 +162,7 @@ function profile() {
                             Phone No
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                                 error && errorFields.includes('phoneNumber')
                                     ? 'border-red-500'
                                     : ''
@@ -176,7 +175,7 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div >
+                    <div>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='username'
@@ -184,7 +183,7 @@ function profile() {
                             Email
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 bg-gray-400 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                                 error && errorFields.includes('email')
                                     ? 'border-red-500'
                                     : ''
@@ -200,10 +199,10 @@ function profile() {
                 </div>
 
                 <div className='grid'>
-                    <h3 className='font-bold text-lg text-black border-b border-b-gray-400'>
+                    <h3 className='font-bold text-lg text-black border-b border-b-gray-400 mb-4'>
                         Change Password
                     </h3>
-                    <div >
+                    <div>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='password'
@@ -211,7 +210,7 @@ function profile() {
                             Password
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                                 error && errorFields.includes('password')
                                     ? 'border-red-500'
                                     : ''
@@ -225,7 +224,7 @@ function profile() {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div >
+                    <div>
                         <label
                             className='block text-gray-700 text-sm mb-1'
                             htmlFor='confirmPassword'
@@ -233,7 +232,7 @@ function profile() {
                             Confirm Password
                         </label>
                         <input
-                            className={`shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white ${
                                 error && errorFields.includes('confirmPassword')
                                     ? 'border-red-500'
                                     : ''
@@ -241,6 +240,30 @@ function profile() {
                             id='confirmPassword'
                             name='confirmPassword'
                             type='password'
+                            minLength={6}
+                            required
+                            value={confirmPassword}
+                            onChange={changeHandler}
+                        />
+                    </div>
+                </div>
+                <div className='grid'>
+                    <h3 className='font-bold text-lg text-black border-b border-b-gray-400 mb-4'>
+                        Wallet Address
+                    </h3>
+
+                    <div>
+                        <label
+                            className='block text-gray-700 text-sm mb-1'
+                            htmlFor='confirmPassword'
+                        >
+                            USDT TRC20
+                        </label>
+                        <input
+                            className={`shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-white`}
+                            id='confirmPassword'
+                            name='confirmPassword'
+                            type='text'
                             minLength={6}
                             required
                             value={confirmPassword}
