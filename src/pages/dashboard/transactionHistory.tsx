@@ -2,7 +2,7 @@ import react from 'react'
 
 let filledArray = new Array(10)
 for (let i = 0; i < filledArray.length; i++) {
-    const date = new Date().toLocaleString()
+    const date = new Date().toLocaleString('en-GB', {month: 'short', day: '2-digit', year: 'numeric'})
     filledArray[i] = {
         date: Math.random() < 0.5 ? date : date,
         type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
