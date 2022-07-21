@@ -23,10 +23,6 @@ type TransactionData = {
 
 type Props = TransactionData[]
 
-const style: React.CSSProperties = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-}
 
 const transactionHistory = () => {
     const result = generateData()
@@ -43,7 +39,7 @@ const transactionHistory = () => {
                         <th>Amount</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className=''>
                     {result.map((value, i) => {
                         return (
                             <tr key={i}>
