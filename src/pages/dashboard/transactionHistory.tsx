@@ -52,7 +52,7 @@ const transactionHistory = () => {
     console.log({ transactionData })
 
     return (
-        <div className=' overflow-scroll overflow-visible min-h-[80vh]'>
+        <div className='min-h-[80vh]'>
             <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
                 <caption className='font-semibold text-lg py-5'>
                     Transaction History
