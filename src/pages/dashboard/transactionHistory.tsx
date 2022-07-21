@@ -1,10 +1,8 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-
-
 type TransactionData = {
-    updatedAt: string
+    createdAt: string
     type: string
     amount: number
     status: string
@@ -16,25 +14,31 @@ const transactionHistory = () => {
     const [email, setEmail] = useState('')
     const [transactionData, setTransactionData] = useState<Props>([])
 
+
     useEffect(() => {
         const userJSON = localStorage.getItem('userSession')
 
         if (userJSON) {
             const userData = JSON.parse(userJSON)
 
-            const { email} = userData
+            const { email } = userData
+
+            
 
             setEmail(email)
-          
         }
     }, [])
 
     useEffect(() => {
         const user = {
-            email
+            email,
         }
-        const fetch = async() => {
-            const res = await axios.post('/api/transactions', {user})
+        const fetch = async () => {
+            const res = await axios.post('/api/transactions', { user })
+
+            const updatedResponse = [...res.data, {...res.data._id}]
+
+            console.log(updatedResponse)
 
             setTransactionData(res.data)
         }
@@ -42,7 +46,7 @@ const transactionHistory = () => {
         fetch()
     }, [email])
 
-    console.log({transactionData})
+    console.log({ transactionData })
 
     return (
         <div className=' overflow-scroll overflow-visible'>
@@ -63,11 +67,11 @@ const transactionHistory = () => {
                     </tr>
                 </thead>
                 <tbody className='text-center'>
-                    {result.map((value, i) => {
+                    {transactionData.map((value, i) => {
                         return (
                             <tr key={i} className='mx-4 py-2'>
                                 <td>{i + 1}</td>
-                                <td>{value.date}</td>
+                                <td>{value.createdAt}</td>
                                 <td>{value.type}</td>
                                 <td>{value.amount}</td>
                                 <td>{value.status}</td>
