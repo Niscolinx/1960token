@@ -27,16 +27,17 @@ const transactionHistory = () => {
     const result = generateData()
 
     return (
-        <div className='grid justify-center'>
-            <table>
-                <caption>Transaction History</caption>
+        <div className=''>
+            <table className='border border-white'>
+                <caption className='font-semibold text-lg py-5'>
+                    Transaction History
+                </caption>
                 <colgroup>
-                    <col className='w-30 min-w-max' span={4}/>
-                  
+                    <col className='w-30 min-w-max' span={4} />
                 </colgroup>
-                <thead className=''>
-                    <tr>
-                        <th>No</th>
+                <thead>
+                    <tr className='mb-10'>
+                        <th rowSpan={4}>No</th>
                         <th>Date</th>
                         <th>Type</th>
                         <th>Amount</th>
@@ -45,8 +46,8 @@ const transactionHistory = () => {
                 <tbody className='text-center'>
                     {result.map((value, i) => {
                         return (
-                            <tr key={i} className='mx-4 py-2'>
-                                <td>{i}</td>
+                            <tr key={i} className='mx-4 py-2' height={''}>
+                                <td>{i + 1}</td>
                                 <td>{value.date}</td>
                                 <td>{value.type}</td>
                                 <td>{value.amount}</td>
