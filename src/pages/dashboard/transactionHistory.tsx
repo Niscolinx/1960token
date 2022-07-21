@@ -4,7 +4,7 @@ let filledArray = new Array(10)
 for (let i = 0; i < filledArray.length; i++) {
     const date = new Date().toLocaleString('en-GB', {month: 'short', day: '2-digit', year: 'numeric'})
     filledArray[i] = {
-        date: Math.random() < 0.5 ? date : date,
+        date,
         type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
         amount: Math.floor(Math.random() * (300 - 10 + 1) + 10),
     }
