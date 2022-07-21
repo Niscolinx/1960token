@@ -35,10 +35,14 @@ export default async function StartMining(
     })
 
     await updatedTransaction.save()
+
+    console.log({updatedTransaction})
     
     await user.transactions.push(updatedTransaction)
 
     await user.save()
+
+    console.log({user})
 
     return res.json({
         updatedPortfolio: user.portfolio,
