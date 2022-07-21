@@ -21,10 +21,11 @@ const initialState: IUser = {
     portfolio: 0,
     status: 'idle',
     password: '',
+    referralLink: '',
+    usdtAddress: '',
     pendingWithdrawals: [],
-    pendingDeposits: [],
-    totalWithdrawals: [],
-    totalDeposits: [],
+    approvedWithdrawals: [],
+    transactions: []
 }
 export const updatePortolio = createAsyncThunk(
     'updatePortolio',

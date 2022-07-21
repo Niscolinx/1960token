@@ -22,7 +22,6 @@ export interface IUser {
     pendingWithdrawals: any[]
     approvedWithdrawals: any[]
     transactions: any[]
-  
 }
 
 const userSchema = new Schema<IUser>(
@@ -110,7 +109,7 @@ const userSchema = new Schema<IUser>(
                 type: Schema.Types.ObjectId,
                 ref: 'pendingWithdrawal',
             },
-        ]
+        ],
     },
     { timestamps: true }
 )
