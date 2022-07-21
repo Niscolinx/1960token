@@ -36,11 +36,14 @@ const transactionHistory = () => {
         const fetch = async () => {
             const res = await axios.post('/api/transactions', { user })
 
-            const updatedResponse = [...res.data, {...res.data._id}]
+            const updatedResponse = res.data.map((data:TransactionData) => {
+                return {
+                    ...data,
+                    createdAt: new Date(data.createdAt).toLocaleDateString('en-GB')
+                }
+            })
 
-            console.log(updatedResponse)
-
-            setTransactionData(res.data)
+            setTransactionData(updatedResponse)
         }
 
         fetch()
@@ -49,7 +52,7 @@ const transactionHistory = () => {
     console.log({ transactionData })
 
     return (
-        <div className=' overflow-scroll overflow-visible'>
+        <div className=' overflow-scroll overflow-visible min-h-[80vh]'>
             <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
                 <caption className='font-semibold text-lg py-5'>
                     Transaction History
