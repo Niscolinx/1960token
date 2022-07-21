@@ -46,7 +46,7 @@ const transactionHistory = () => {
                 <tbody>
                     {result.map((value, i) => {
                         return (
-                            <tr key={i} className='flex' style={style}>
+                            <tr key={i}>
                                 <td>{i}</td>
                                 <td>{value.date}</td>
                                 <td>{value.type}</td>
