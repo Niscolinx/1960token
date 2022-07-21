@@ -23,7 +23,6 @@ type TransactionData = {
 
 type Props = TransactionData[]
 
-
 const transactionHistory = () => {
     const result = generateData()
 
@@ -31,6 +30,12 @@ const transactionHistory = () => {
         <div className='grid justify-center'>
             <table>
                 <caption>Transaction History</caption>
+                <colgroup style={{ background: 'green', display:"flex" }}>
+                    <col style={{ width: '4rem' }} />
+                    <col style={{ width: '4rem' }} />
+                    <col style={{ width: '4rem' }} />
+                    <col style={{ width: '4rem' }} />
+                </colgroup>
                 <thead>
                     <tr>
                         <th>No</th>
@@ -42,7 +47,7 @@ const transactionHistory = () => {
                 <tbody className=''>
                     {result.map((value, i) => {
                         return (
-                            <tr key={i}>
+                            <tr key={i} className='mx-4 py-2'>
                                 <td>{i}</td>
                                 <td>{value.date}</td>
                                 <td>{value.type}</td>
