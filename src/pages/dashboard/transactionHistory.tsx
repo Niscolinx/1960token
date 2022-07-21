@@ -32,7 +32,22 @@ const transactionHistory = () => {
     const result = generateData()
 
     return (
-        <div className='flex flex-wrap'>
+        <div className='grid justify-center'>
+            <table>
+                <caption>Transaction History</caption>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+
+               
+            </table>
             {result.map((value, i) => {
                 return (
                     <div key={i} className='flex' style={style}>
