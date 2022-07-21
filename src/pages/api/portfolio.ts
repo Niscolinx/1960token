@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import User, { IUser } from '../../models/User'
+import Transaction from '../../models/transaction'
 
 interface returnTypeJson {
     updatedPortfolio: number
@@ -25,7 +26,12 @@ export default async function StartMining(
     user.tokensMined = 0
     user.videoMined = 0
     user.referralBonus = 0
+
     await user.save()
+
+    new Transaction({
+        
+    })
 
     return res.json({
         updatedPortfolio: user.portfolio,
