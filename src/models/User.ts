@@ -21,8 +21,8 @@ export interface IUser {
     usdtAddress: string
     pendingWithdrawals: any[]
     approvedWithdrawals: any[]
-    totalWithdrawals: any[]
-    totalDeposits: any[]
+    transactions: any[]
+  
 }
 
 const userSchema = new Schema<IUser>(
@@ -91,6 +91,12 @@ const userSchema = new Schema<IUser>(
             {
                 username: String,
                 level: Number,
+            },
+        ],
+        transactions: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'transaction',
             },
         ],
         approvedWithdrawals: [
