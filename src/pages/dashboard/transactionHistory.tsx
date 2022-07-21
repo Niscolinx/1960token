@@ -28,6 +28,8 @@ type Props = TransactionData[]
 const transactionHistory = () => {
     const result = generateData()
 
+    
+
     return (
         <div className=' overflow-scroll overflow-visible'>
             <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
