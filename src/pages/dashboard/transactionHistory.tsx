@@ -23,6 +23,11 @@ type TransactionData = {
 
 type Props = TransactionData[]
 
+const style: React.CSSProperties = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)'
+}
+
 const transactionHistory = () => {
     const result = generateData()
 
@@ -30,7 +35,7 @@ const transactionHistory = () => {
         <div className='flex flex-wrap'>
             {result.map((value, i) => {
                 return (
-                    <div key={i} className='flex'>
+                    <div key={i} className='flex' style={style}>
                         <p>{value.date}</p>
                         <p>{value.type}</p>
                         <p>{value.amount}</p>
