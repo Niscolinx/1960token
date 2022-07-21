@@ -20,7 +20,7 @@ export interface IUser {
     referralLink: string
     usdtAddress: string
     pendingWithdrawals: any[]
-    pendingDeposits: any[]
+    approvedWithdrawals: any[]
     totalWithdrawals: any[]
     totalDeposits: any[]
 }
@@ -93,10 +93,10 @@ const userSchema = new Schema<IUser>(
                 level: Number,
             },
         ],
-        pendingDeposits: [
+        approvedWithdrawals: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'pendingDeposit',
+                ref: 'approvedWithdrawal',
             },
         ],
         pendingWithdrawals: [
@@ -104,19 +104,7 @@ const userSchema = new Schema<IUser>(
                 type: Schema.Types.ObjectId,
                 ref: 'pendingWithdrawal',
             },
-        ],
-        totalDeposits: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'deposit',
-            },
-        ],
-        totalWithdrawals: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'withdraw',
-            },
-        ],
+        ]
     },
     { timestamps: true }
 )
