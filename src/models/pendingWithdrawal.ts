@@ -1,3 +1,4 @@
+import { Schema, models, model } from "mongoose"
 
 
 const pendingWithdrawal = new Schema(
@@ -25,4 +26,6 @@ const pendingWithdrawal = new Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('pendingWithdrawal', pendingWithdrawal)
+export default models.pendingWithdrawal ||
+    model('pendingWithdrawal', pendingWithdrawal)
+

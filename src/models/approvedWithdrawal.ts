@@ -29,4 +29,5 @@ const approvedWithdrawal = new Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('approvedWithdrawal', approvedWithdrawal)
+export default models.approvedWithdrawal || model('approvedWithdrawal', approvedWithdrawal)
+
