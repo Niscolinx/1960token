@@ -10,6 +10,7 @@ const generateData = (): Props => {
         date,
         type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
         amount: Math.floor(Math.random() * (300 - 10 + 1) + 10),
+        status: Math.random() < 0.5 ? 'Approved' : 'Pending'
     }))
 
     return filledArray
@@ -19,6 +20,7 @@ type TransactionData = {
     date: string
     type: string
     amount: number
+    status: string
 }
 
 type Props = TransactionData[]
@@ -28,7 +30,7 @@ const transactionHistory = () => {
 
     return (
         <div className=''>
-            <table className='border border-white'>
+            <table className='border border-gray-700 transaction-table mx-auto'>
                 <caption className='font-semibold text-lg py-5'>
                     Transaction History
                 </caption>
@@ -51,6 +53,7 @@ const transactionHistory = () => {
                                 <td>{value.date}</td>
                                 <td>{value.type}</td>
                                 <td>{value.amount}</td>
+                                <td>{value.status}</td>
                             </tr>
                         )
                     })}
