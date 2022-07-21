@@ -43,15 +43,18 @@ const transactionHistory = () => {
                         <th>Amount</th>
                     </tr>
                 </thead>
-                {result.map((value, i) => {
-                    return (
-                        <tbody key={i} className='flex'>
-                            <p>{value.date}</p>
-                            <p>{value.type}</p>
-                            <p>{value.amount}</p>
-                        </tbody>
-                    )
-                })}
+                <tbody>
+                    {result.map((value, i) => {
+                        return (
+                            <tr key={i} className='flex' style={style}>
+                                <td>{i}</td>
+                                <td>{value.date}</td>
+                                <td>{value.type}</td>
+                                <td>{value.amount}</td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
             </table>
         </div>
     )
