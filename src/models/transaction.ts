@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+import { Schema, models, model } from "mongoose"
 
 const depositSchema = new Schema(
     {
@@ -24,4 +23,5 @@ const depositSchema = new Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('deposit', depositSchema)
+export default models.transaction ||
+    model('transaction', transaction)
