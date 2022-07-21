@@ -1,24 +1,10 @@
 import axios from 'axios'
-import react, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const generateData = (): Props => {
-    const date = new Date().toLocaleString('en-GB', {
-        month: 'short',
-        day: '2-digit',
-        year: 'numeric',
-    })
-    let filledArray = Array.from({ length: 40 }, () => ({
-        date,
-        type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
-        amount: Math.floor(Math.random() * (300 - 10 + 1) + 10),
-        status: Math.random() < 0.5 ? 'Approved' : 'Pending',
-    }))
 
-    return filledArray
-}
 
 type TransactionData = {
-    date: string
+    updatedAt: string
     type: string
     amount: number
     status: string
@@ -27,8 +13,8 @@ type TransactionData = {
 type Props = TransactionData[]
 
 const transactionHistory = () => {
-    const result = generateData()
     const [email, setEmail] = useState('')
+    const [transactionData, setTransactionData] = useState<Props>([])
 
     useEffect(() => {
         const userJSON = localStorage.getItem('userSession')
@@ -49,11 +35,14 @@ const transactionHistory = () => {
         }
         const fetch = async() => {
             const res = await axios.post('/api/transactions', {user})
-            console.log({res})
+
+            setTransactionData(res.data)
         }
 
         fetch()
     }, [email])
+
+    console.log({transactionData})
 
     return (
         <div className=' overflow-scroll overflow-visible'>
