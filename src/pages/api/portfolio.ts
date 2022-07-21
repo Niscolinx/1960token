@@ -31,6 +31,7 @@ export default async function StartMining(
     const updatedTransaction = new Transaction({
         type: 'transfer',
         status: 'Approved',
+        creator: user,
         amount: portfolio
     })
 
