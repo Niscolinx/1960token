@@ -196,7 +196,7 @@ const Home = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/dashboard/transactions'>
+                        <Link href='/dashboard/transactionHistory'>
                             <div className='grid justify-center place-items-center'>
                                 <FaScroll className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
