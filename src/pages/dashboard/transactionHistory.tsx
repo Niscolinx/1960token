@@ -37,6 +37,7 @@ const transactionHistory = () => {
             const userData = JSON.parse(userJSON)
 
             const { email} = userData
+
             setEmail(email)
           
         }
@@ -52,7 +53,7 @@ const transactionHistory = () => {
         }
 
         fetch()
-    }, [])
+    }, [email])
 
     return (
         <div className=' overflow-scroll overflow-visible'>
