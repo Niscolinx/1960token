@@ -29,13 +29,13 @@ const transactionHistory = () => {
     const result = generateData()
 
     return (
-        <div className=''>
-            <table className='border border-gray-700 transaction-table mx-auto'>
+        <div className=' overflow-scroll overflow-visible'>
+            <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
                 <caption className='font-semibold text-lg py-5'>
                     Transaction History
                 </caption>
                 <colgroup>
-                    <col className='w-30 min-w-max' span={4} />
+                    <col className='w-40 min-w-30' span={5} />
                 </colgroup>
                 <thead>
                     <tr className='mb-10'>
@@ -43,6 +43,7 @@ const transactionHistory = () => {
                         <th>Date</th>
                         <th>Type</th>
                         <th>Amount</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody className='text-center'>
