@@ -78,11 +78,11 @@ const Home = () => {
         e.preventDefault()
         setLoading(true)
 
-        let toPortolio = 0
+        let toPortolio = 10
         if (selectedOption === 'Mine/Video Income') {
-            toPortolio = totalMined
+            //toPortolio = totalMined
         } else {
-            toPortolio = fetchedUser.referralBonus
+           // toPortolio = fetchedUser.referralBonus
         }
 
         dispatch(clearMineTokens)
