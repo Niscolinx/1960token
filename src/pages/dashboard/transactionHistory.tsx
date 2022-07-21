@@ -1,20 +1,18 @@
 import react from 'react'
 
-
 let filledArray = new Array(10)
 for (let i = 0; i < filledArray.length; i++) {
-    const date = new Date()
+    const date = new Date().toLocaleString()
     filledArray[i] = {
-        date: Math.random() < 0.5 ? date.getDate() : date.getDate(),
+        date: Math.random() < 0.5 ? date : date,
         type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
         amount: Math.floor(Math.random() * (300 - 10 + 1) + 10),
     }
 }
 
-
 type HistoryData = {
-    date: Date,
-    type: string,
+    date: Date
+    type: string
     amount: number
 }
 
@@ -24,11 +22,9 @@ type Props = {
 
 const result = filledArray
 
-console.log({result})
+console.log({ result })
 
-const transactionHistory = ({result}: Props) => {
-
-
+const transactionHistory = ({ result }: Props) => {
     return (
         <>
             {result.map((value) => {
