@@ -1,39 +1,43 @@
 import react from 'react'
 
-let filledArray = new Array(10)
-for (let i = 0; i < filledArray.length; i++) {
-    const date = new Date().toLocaleString('en-GB', {month: 'short', day: '2-digit', year: 'numeric'})
-    filledArray[i] = {
-        date,
-        type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
-        amount: Math.floor(Math.random() * (300 - 10 + 1) + 10),
+const generateData = ():Props => {
+
+    let filledArray = new Array(10)
+    for (let i = 0; i < filledArray.length; i++) {
+        const date = new Date().toLocaleString('en-GB', {month: 'short', day: '2-digit', year: 'numeric'})
+        filledArray[i] = {
+            date,
+            type: Math.random() < 0.5 ? 'Transfer' : 'Withdrawn',
+            amount: Math.floor(Math.random() * (300 - 10 + 1) + 10),
+        }
     }
+
+    return filledArray
 }
 
-type HistoryData = {
+type TransactionData = {
     date: Date
     type: string
     amount: number
 }
 
-type Props = {
-    result: HistoryData[]
-}
+type Props =  TransactionData[]
 
-const result = filledArray
 
-console.log({ result })
 
-const transactionHistory = ({ result }: Props) => {
+
+const transactionHistory = () => {
+    const result = generateData()
+
     return (
         <>
-            {result.map((value) => {
+            {result.map((value, i) => {
                 return (
-                    <>
-                        <p>{value.date.toLocaleString()}</p>
+                    <div key={i}>
+                        <p>{value.date}</p>
                         <p>{value.type}</p>
                         <p>{value.amount}</p>
-                    </>
+                    </div>
                 )
             })}
         </>
