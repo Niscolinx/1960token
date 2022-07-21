@@ -1,18 +1,18 @@
 import { Schema, models, model } from "mongoose"
 
-const depositSchema = new Schema(
+const transaction = new Schema(
     {
         amount: {
             type: Number,
             required: true,
         },
-        planName: {
+        status: {
             type: String,
             required: true,
         },
-        profit: {
-            type: Number,
-            default: 0
+        type: {
+            type: String,
+            required: true,
         },
         creator: {
             type: Schema.Types.ObjectId,

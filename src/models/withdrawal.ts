@@ -1,7 +1,6 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+import { Schema, models, model } from "mongoose"
 
-const withdrawalSchema = new Schema(
+const withdrawal = new Schema(
     {
         amount: {
             type: Number,
@@ -20,4 +19,5 @@ const withdrawalSchema = new Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('withdrawal', withdrawalSchema)
+export default models.withdrawal ||
+    model('withdrawal', withdrawal)

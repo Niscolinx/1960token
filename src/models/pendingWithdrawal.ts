@@ -13,10 +13,7 @@ const pendingWithdrawal = new Schema(
             required: true,
             default: 'Pending',
         },
-        currency: {
-            type: String,
-            required: true,
-        },
+       
         creator: {
             type: Schema.Types.ObjectId,
             ref: 'users',

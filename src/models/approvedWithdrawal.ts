@@ -8,18 +8,13 @@ const approvedWithdrawal = new Schema(
             type: Number,
             required: true,
         },
-        planName: {
-            type: String,
-            required: true,
-        },
+       
         status: {
             type: String,
             required: true,
             default: 'Pending',
         },
-        currency: {
-            type: String,
-        },
+       
         creator: {
             type: Schema.Types.ObjectId,
             ref: 'users',
