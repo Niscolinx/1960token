@@ -29,9 +29,11 @@ export default async function StartMining(
 
     await user.save()
 
-    new Transaction({
-        
-    })
+    await new Transaction({
+        type: 'transfer',
+        status: 'Approved',
+        amount: portfolio
+    }).save()
 
     return res.json({
         updatedPortfolio: user.portfolio,
