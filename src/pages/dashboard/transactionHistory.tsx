@@ -46,7 +46,7 @@ const transactionHistory = () => {
                 <tbody className='text-center'>
                     {result.map((value, i) => {
                         return (
-                            <tr key={i} className='mx-4 py-2' height={''}>
+                            <tr key={i} className='mx-4 py-2'>
                                 <td>{i + 1}</td>
                                 <td>{value.date}</td>
                                 <td>{value.type}</td>
