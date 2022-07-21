@@ -30,13 +30,11 @@ const transactionHistory = () => {
         <div className='grid justify-center'>
             <table>
                 <caption>Transaction History</caption>
-                <colgroup style={{ background: 'green', display:"flex" }}>
-                    <col style={{ width: '4rem' }} />
-                    <col style={{ width: '4rem' }} />
-                    <col style={{ width: '4rem' }} />
-                    <col style={{ width: '4rem' }} />
+                <colgroup>
+                    <col className='w-30 min-w-max' span={4}/>
+                  
                 </colgroup>
-                <thead>
+                <thead className=''>
                     <tr>
                         <th>No</th>
                         <th>Date</th>
@@ -44,7 +42,7 @@ const transactionHistory = () => {
                         <th>Amount</th>
                     </tr>
                 </thead>
-                <tbody className=''>
+                <tbody className='text-center'>
                     {result.map((value, i) => {
                         return (
                             <tr key={i} className='mx-4 py-2'>
