@@ -27,13 +27,18 @@ export default async function StartMining(
     user.videoMined = 0
     user.referralBonus = 0
 
-    await user.save()
-
-    await new Transaction({
+    
+    const updatedTransaction = new Transaction({
         type: 'transfer',
         status: 'Approved',
         amount: portfolio
-    }).save()
+    })
+
+    await updatedTransaction.save()
+    
+    await user.transactions.push(updatedTransaction)
+
+    await user.save()
 
     return res.json({
         updatedPortfolio: user.portfolio,
