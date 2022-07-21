@@ -8,9 +8,8 @@ export default async function transactions(req: NextApiRequest, res: NextApiResp
 
     const user = await User.findOne({ email })
 
-    console.log({user})
 
-   //console.log(user.transactions)
+   console.log(user.transactions)
 
 
     return res.json(user)
