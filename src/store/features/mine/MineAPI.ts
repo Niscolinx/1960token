@@ -11,7 +11,7 @@ export async function startMining(
     session: nextAuthSession
 ): Promise<IFetchedData> {
     const response = await axios.post('/api/startMining', session)
-
+    console.log('startMining', { response })
     return response.data
 }
 export async function stopMining(

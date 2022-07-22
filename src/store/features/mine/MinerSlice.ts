@@ -18,7 +18,7 @@ export interface MiningState {
 const initialState: MiningState = {
     isMining: false,
     status: 'idle',
-    miningStartedAt: JSON.stringify(dayjs().add(12, 'hour')),
+    miningStartedAt: '',
     tokensMined: 0,
     miningSession: 'stall',
     countDownToken: '',
