@@ -172,8 +172,8 @@ function earn() {
 
     // isNotNumberUnderscore('kdjsnfd_sfcdshe')
 
-    // console.log({ mineState })
-    // console.log({ fetchedUser })
+    console.log({ mineState })
+    console.log({ fetchedUser })
 
     return (
         <>
@@ -181,7 +181,7 @@ function earn() {
                 <div className='flex justify-between items-center bg-purple-500 text-[#1a1a2d] py-2 px-10'>
                     <MineTimer start={miningStart} />
                     <p className='font-bold text-2xl'>
-                        {mineState.tokensMined}
+                        {mineState.tokensMined === 0 ? fetchedUser.tokensMined : mineState.tokensMined}
                     </p>
                 </div>
                 <div className='relative'>
