@@ -36,14 +36,14 @@ function earn() {
     //}, [mineState])
 
     const memoizedCallback = useCallback(() => {
-        console.log('useCallback...........')
+       // console.log('useCallback...........')
         if (session) {
             return dispatch(getUser(session))
         }
     }, [session])
 
     useMemo(() => {
-        console.log('useMemo.............')
+        //console.log('useMemo.............')
         return memoizedCallback()
     }, [])
 
@@ -79,7 +79,7 @@ function earn() {
 
     useEffect(() => {
         const dayjsNowTimeStamp = dayjs()
-        const persistedStorage = localStorage.getItem('persist:root')
+        //const persistedStorage = localStorage.getItem('persist:root')
 
         if (session) {
             // const parsedJSON = JSON.parse(persistedStorage!)
@@ -101,7 +101,7 @@ function earn() {
     }, [session])
 
     useEffect(() => {
-        console.log('useEffect dispatch getUser')
+        //console.log('useEffect dispatch getUser')
         if (session) {
             dispatch(getUser(session))
         }
@@ -124,7 +124,7 @@ function earn() {
                 const response = await axios.post('/api/user', theSession)
 
                 const { isMining } = response.data
-                console.log('the response', isMining)
+              //  console.log('the response', isMining)
 
                 if (isMining) {
                     dispatch(initMineAsync(theSession))
@@ -154,6 +154,32 @@ function earn() {
             //dispatch(initStopMineAsync(session))
         }
     }
+
+
+    
+    //regex to check if a string starts with a number and ends with underscore
+    const isNumberUnderscore = (str: string) => {
+        return str.match(/^\d+(_)$/)
+    }
+
+    //regex to check if a string does not start with a number and does not end with an underscore
+    const isNotNumberUnderscore = (str: string) => {
+       //const result = str.match(/^[^\d]+$/)
+        const testing = '(?![0-9.])[a-zA-Z0-9]*'
+
+        //const result3 = /(?![0-9.])[a-zA-Z0-9]*/.test(str)
+        //console.log(result3)
+        
+
+        const regex = new RegExp('(?![0-9.])[a-zA-Z0-9]*')
+        const result = regex.test(str)
+        console.log({result})
+    }
+
+    isNotNumberUnderscore('9kdjsnfdsfcdshe')
+
+    // console.log({ mineState })
+    // console.log({ fetchedUser })
 
     return (
         <>
