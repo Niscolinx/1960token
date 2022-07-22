@@ -30,13 +30,8 @@ function earn() {
 
     const dispatch = useAppDispatch()
 
-    // useEffect(() => {
-    //setTokenCount(mineState.countDownToken)
-    //setTokenCount(mineState.tokensCount)
-    //}, [mineState])
-
     const memoizedCallback = useCallback(() => {
-       // console.log('useCallback...........')
+        // console.log('useCallback...........')
         if (session) {
             return dispatch(getUser(session))
         }
@@ -79,20 +74,8 @@ function earn() {
 
     useEffect(() => {
         const dayjsNowTimeStamp = dayjs()
-        //const persistedStorage = localStorage.getItem('persist:root')
 
         if (session) {
-            // const parsedJSON = JSON.parse(persistedStorage!)
-            // dispatch(initMineAsync(session))
-
-            // console.log('the mining state', mineState)
-            // if (persistedStorage) {
-            //     if (JSON.parse(parsedJSON.mine).miningSession === 'stall') {
-            //         console.log('initMineAsync is called')
-            //         //dispatch(initMineAsync(session))
-            //     }
-            // }
-
             if (dayjsNowTimeStamp.isAfter(dayjs(mineState.miningStartedAt))) {
                 setMiningStart(false)
                 dispatch(initStopMineAsync(session))
@@ -124,7 +107,7 @@ function earn() {
                 const response = await axios.post('/api/user', theSession)
 
                 const { isMining } = response.data
-              //  console.log('the response', isMining)
+                //  console.log('the response', isMining)
 
                 if (isMining) {
                     dispatch(initMineAsync(theSession))
@@ -153,27 +136,7 @@ function earn() {
             })
             //dispatch(initStopMineAsync(session))
         }
-    }    
-
-
-    //regex to check if a string does not start with a number and does not end with an underscore
-    // const isNotNumberUnderscore = (str: string) => {
-    //    //const result = str.match(/^[^\d]+$/)
-    //     const testing = '(?![0-9.])[a-zA-Z0-9]*'
-
-    //     //const result3 = /(?![0-9.])[a-zA-Z0-9]*/.test(str)
-    //     //console.log(result3)
-        
-
-    //     const regex = new RegExp('(?![0-9.])[[a-zA-Z0-9]*_[a-zA-Z0-9]*]*')
-    //     const result = regex.test(str)
-    //     console.log({result})
-    // }
-
-    // isNotNumberUnderscore('kdjsnfd_sfcdshe')
-
-    console.log({ mineState })
-    console.log({ fetchedUser })
+    }
 
     return (
         <>
@@ -181,7 +144,9 @@ function earn() {
                 <div className='flex justify-between items-center bg-purple-500 text-[#1a1a2d] py-2 px-10'>
                     <MineTimer start={miningStart} />
                     <p className='font-bold text-2xl'>
-                        {mineState.tokensMined === 0 ? fetchedUser.tokensMined : mineState.tokensMined}
+                        {mineState.tokensMined === 0
+                            ? fetchedUser.tokensMined
+                            : mineState.tokensMined}
                     </p>
                 </div>
                 <div className='relative'>
