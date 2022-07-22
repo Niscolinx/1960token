@@ -49,7 +49,6 @@ export const initStopMineAsync = createAsyncThunk(
 export const MiningSlice = createSlice({
     name: 'mine',
     initialState,
-    // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
         increment: (state, action) => {
             state.countDownToken = action.payload
