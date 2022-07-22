@@ -153,30 +153,24 @@ function earn() {
             })
             //dispatch(initStopMineAsync(session))
         }
-    }
+    }    
 
-
-    
-    //regex to check if a string starts with a number and ends with underscore
-    const isNumberUnderscore = (str: string) => {
-        return str.match(/^\d+(_)$/)
-    }
 
     //regex to check if a string does not start with a number and does not end with an underscore
-    const isNotNumberUnderscore = (str: string) => {
-       //const result = str.match(/^[^\d]+$/)
-        const testing = '(?![0-9.])[a-zA-Z0-9]*'
+    // const isNotNumberUnderscore = (str: string) => {
+    //    //const result = str.match(/^[^\d]+$/)
+    //     const testing = '(?![0-9.])[a-zA-Z0-9]*'
 
-        //const result3 = /(?![0-9.])[a-zA-Z0-9]*/.test(str)
-        //console.log(result3)
+    //     //const result3 = /(?![0-9.])[a-zA-Z0-9]*/.test(str)
+    //     //console.log(result3)
         
 
-        const regex = new RegExp('(?![0-9.])[a-zA-Z0-9]*')
-        const result = regex.test(str)
-        console.log({result})
-    }
+    //     const regex = new RegExp('(?![0-9.])[[a-zA-Z0-9]*_[a-zA-Z0-9]*]*')
+    //     const result = regex.test(str)
+    //     console.log({result})
+    // }
 
-    isNotNumberUnderscore('9kdjsnfdsfcdshe')
+    // isNotNumberUnderscore('kdjsnfd_sfcdshe')
 
     // console.log({ mineState })
     // console.log({ fetchedUser })
