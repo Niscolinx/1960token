@@ -35,7 +35,7 @@ export const initMineAsync = createAsyncThunk(
     async (userSession: nextAuthSession | any) => {
         const response = await startMining(userSession)
 
-        console.log({ response })
+        console.log('mining',{ response })
         // The value we return becomes the `fulfilled` action payload
         return response
     }
@@ -45,7 +45,7 @@ export const initStopMineAsync = createAsyncThunk(
     async (userSession: nextAuthSession) => {
         const response = await stopMining(userSession)
 
-        console.log({ response })
+        console.log('init stopMining', { response })
         // The value we return becomes the `fulfilled` action payload
         return response
     }
