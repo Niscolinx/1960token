@@ -1,27 +1,32 @@
-import {
-    GetServerSideProps,
-    GetServerSidePropsContext,
-    NextPageContext,
-} from 'next'
+import { GetServerSidePropsContext } from 'next'
 import React from 'react'
 
 function index() {
-  //generate random numbers mixed with letters of length 6
-  const randomString = () => {
-    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    let randomString = ''
-    for (let i = 0; i < 6; i++) {
-      randomString += possible.charAt(Math.floor(Math.random() * possible.length))
+    //generate random numbers mixed with letters of length 6
+    const randomString = () => {
+        const possible =
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        let randomString = ''
+        for (let i = 0; i < 6; i++) {
+            randomString += possible.charAt(
+                Math.floor(Math.random() * possible.length)
+            )
+        }
+        return randomString
     }
-    return randomString
-  }
 
-  console.log(randomString())
+    console.log(randomString())
 
-    return <div className='h-[100vh]'>
-      <h1>Welcome Admin</h1>
-    
-    </div>
+    return (
+        <div className='h-[100vh]'>
+            <h1>Welcome Admin</h1>
+            <div className='grid'>
+                <div className='grid'>
+                    <p>{generatedCode}</p>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default index
