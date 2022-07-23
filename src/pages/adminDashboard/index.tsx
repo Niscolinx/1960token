@@ -26,11 +26,14 @@ function index() {
     return (
         <div className='h-[100vh] py-5 px-8'>
             <h1 className='text-lg font-bold'>Welcome Admin</h1>
-            <div className='grid'>
-                <div className='grid'>
-                    <p>{generatedCode}</p>
+            <div className='grid mt-5'>
+                <div className='grid gap-2'>
+                  {
+                    generatedCode.length > 0 ? (
+                    <p className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded'>{generatedCode}</p>) : null
+                  }
                     
-                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={handleRandom}>Generate</button>
+                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-self-center' onClick={handleRandom}>Generate</button>
                 </div>
             </div>
         </div>
