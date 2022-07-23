@@ -5,6 +5,7 @@ import CopyToClipboard from 'react-copy-to-clipboard'
 
 function index() {
     const [generatedCode, setGeneratedCode] = useState('')
+    const [loading, setLoading] = useState(false)
 
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
@@ -20,19 +21,21 @@ function index() {
     }
 
     const handleRandom = () => {
-       // setGeneratedCode(randomString())
+        setLoading(true)
+        const random = randomString()
 
-       const random = randomString()
-
-       //send api to the server with the generated code using axios
-       axios.post('/api/storeGeneratedCode', {
-           code: random
-           }).then(({data}) => {
-            console.log({data})
-           }).catch(err => {
-               console.log(err)
-           })
-        
+        //send api to the server with the generated code using axios
+        axios
+            .post('/api/storeGeneratedCode', {
+                code: random,
+            })
+            .then(({ data }) => {
+                setGeneratedCode(data.code)
+                setLoading(false)
+            })
+            .catch((err) => {
+                setLoading(false)
+            })
     }
 
     return (
@@ -59,7 +62,7 @@ function index() {
                         className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-self-center'
                         onClick={handleRandom}
                     >
-                        Generate
+                        {loading ? 'Generating...' : 'Generate Code'}
                     </button>
                 </div>
             </div>
