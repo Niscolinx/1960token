@@ -25,12 +25,14 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
                 { userId: user._id.toString(), email: user.email },
                 process.env.JWT_SECRET!
             )
-            setCookie('token', token, {
+            setCookie('adminToken', token, {
                 secure: process.env.NODE_ENV! === 'production',
             })
             return res.status(200).json({ user })
         }
 
+        console.log("Is not admin")
+    
         const email: IUser | null = await User.findOne({
             email: emailOrUsername,
         })
