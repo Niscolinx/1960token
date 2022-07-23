@@ -5,7 +5,7 @@ import { ImProfile } from 'react-icons/im'
 import { BsFillGearFill } from 'react-icons/bs'
 import { FaScroll } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import {
     getUser,
@@ -85,7 +85,7 @@ const Home = () => {
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
         } else {
-           toPortolio = fetchedUser.referralBonus
+            toPortolio = fetchedUser.referralBonus
         }
 
         dispatch(clearMineTokens)
@@ -111,18 +111,21 @@ const Home = () => {
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
 
-    const handleActivate = () => {
+    const handleActivate = (e: React.FormEvent) => {
+        e.preventDefault()
         setActivateLoading(true)
-        
-        axios.post('/api/activateCoupon', coupon).then(({data}) => {
-            console.log({data})
-            setActivateLoading(false)
-        }).catch(err => {
-            console.log({err})
-            setActivateLoading(false)
-        })
-    }
 
+        return axios
+            .post('/api/activateCoupon', {coupon})
+            .then(({ data }) => {
+                console.log({ data })
+                setActivateLoading(false)
+            })
+            .catch((err) => {
+                console.log({ err })
+                setActivateLoading(false)
+            })
+    }
 
     return (
         <div className='h-[93vh] px-4'>
@@ -135,10 +138,12 @@ const Home = () => {
                     <p className='font-bold text-3xl'>
                         ${fetchedUser.portfolio}
                     </p>
-                 
                 </div>
 
-                <form className='flex justify-center align-middle gap-2' onSubmit={handleActivate}>
+                <form
+                    className='flex justify-center align-middle gap-2'
+                    onSubmit={handleActivate}
+                >
                     <input
                         type='text'
                         placeholder='Coupon code'
@@ -146,7 +151,10 @@ const Home = () => {
                         onChange={(e) => setCoupon(e.target.value)}
                         className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                     />
-                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1' type='submit'>
+                    <button
+                        className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'
+                        type='submit'
+                    >
                         {activateLoading ? 'Loading...' : 'Activate'}
                     </button>
                 </form>
@@ -156,7 +164,6 @@ const Home = () => {
                         Account
                     </h3>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
-                        
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-blue-400 text-3xl light:text-[#1a1a2d]' />

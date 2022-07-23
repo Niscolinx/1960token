@@ -8,6 +8,8 @@ export default async function activateCoupon(
 ) {
     const { coupon } = req.body
 
+    console.log(req.body)
+
     try {
         await dbConnect()
 
