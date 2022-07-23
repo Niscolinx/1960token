@@ -15,6 +15,7 @@ import {
 import { TbArrowsSort } from 'react-icons/tb'
 import { clearMineTokens } from '../../store/features/mine/MinerSlice'
 import { clearVideoTokens } from '../../store/features/video/VideoSlice'
+import axios from 'axios'
 
 const Home = () => {
     const { data: session } = useSession()
@@ -112,7 +113,14 @@ const Home = () => {
 
     const handleActivate = () => {
         setActivateLoading(true)
-    
+        
+        axios.post('/api/activateCoupon', coupon).then(({data}) => {
+            console.log({data})
+            setActivateLoading(false)
+        }).catch(err => {
+            console.log({err})
+            setActivateLoading(false)
+        })
     }
 
 
