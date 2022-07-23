@@ -25,6 +25,7 @@ const Home = () => {
     const fetchedUser = useAppSelector(selectUser)
     const [displayButton, setDisplayButton] = useState('Transfer')
     const [display, toggleDisplay] = useState(false)
+    const [coupon, setCoupon] = useState('')
     const [selectedOption, setSelectedOption] =
         useState<TOption>('Referral Income')
     const [loading, setLoading] = useState(false)
@@ -108,7 +109,6 @@ const Home = () => {
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
 
-    console.log({ fetchedUser })
     return (
         <div className='h-[93vh] px-4'>
             <div className='grid mt-10 gap-5'>
@@ -120,18 +120,18 @@ const Home = () => {
                     <p className='font-bold text-3xl'>
                         ${fetchedUser.portfolio}
                     </p>
-                    {/* <button className='bg-green-500 text-[#1a1a2d] rounded px-1 text-sm mt-5'>
-                        Withdraw
-                    </button> */}
+                 
                 </div>
 
-                <form className='flex justify-center align-middle gap-2'>
+                <form className='flex justify-center align-middle gap-2' onSubmit={handleActivate}>
                     <input
                         type='text'
                         placeholder='Coupon code'
+                        value={coupon}
+                        onChange={(e) => setCoupon(e.target.value)}
                         className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                     />
-                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'>
+                    <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1' type='submit'>
                         Activate
                     </button>
                 </form>
@@ -141,28 +141,7 @@ const Home = () => {
                         Account
                     </h3>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
-                        {/* <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
-                                <GiWallet className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
-                                <button
-                                    className='text-sm p-1'
-                                    style={neuToUse}
-                                >
-                                    Deposits
-                                </button>
-                            </div>
-                        </Link>
-                        <Link href='/'>
-                            <div className='grid justify-center place-items-center'>
-                                <AiFillCarryOut className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
-                                <button
-                                    className='text-sm p-1'
-                                    style={neuToUse}
-                                >
-                                    Withdrawals
-                                </button>
-                            </div>
-                        </Link> */}
+                        
                         <Link href='/'>
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
