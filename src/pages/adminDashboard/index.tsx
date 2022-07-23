@@ -1,7 +1,10 @@
 import { GetServerSidePropsContext } from 'next'
-import React from 'react'
+import React, { useState } from 'react'
 
 function index() {
+  const [generatedCode, setGeneratedCode] = useState('')
+
+
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
         const possible =
@@ -18,11 +21,13 @@ function index() {
     console.log(randomString())
 
     return (
-        <div className='h-[100vh]'>
-            <h1>Welcome Admin</h1>
+        <div className='h-[100vh] py-5 px-8'>
+            <h1 className='text-lg font-bold'>Welcome Admin</h1>
             <div className='grid'>
                 <div className='grid'>
                     <p>{generatedCode}</p>
+                    style a button using tailwindcss
+                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Generate</button>
                 </div>
             </div>
         </div>
