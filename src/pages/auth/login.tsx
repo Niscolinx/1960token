@@ -43,9 +43,17 @@ const Login = ({ providers }: LoginProps) => {
         e.preventDefault()
         setLoading(true)
 
-        if(emailOrUsername.toLowerCase() === 'admin@1960token.com') {
-            
-            
+        if (
+            emailOrUsername.toLowerCase() === 'admin@1960token.com' ||
+            emailOrUsername.toLowerCase() === 'admin'
+        ) {
+            // admin login
+            //send an axios post request to the server
+            return axios.post('/api/auth/login', {
+                admin: true,
+                emailOrUsername,
+                password,
+            })
         }
 
         const formData = new FormData(e.currentTarget)
@@ -62,34 +70,31 @@ const Login = ({ providers }: LoginProps) => {
                 setErrorFields((oldArr) => [...oldArr, key])
                 setMessageDisplay('block')
                 setLoading(false)
-            }
-
-          
-            else if (!isError) {
+            } else if (!isError) {
                 console.log('sign in.....', isError)
-                signIn('credentials', { redirect: false, emailOrUsername: emailOrUsername.toLowerCase().trim(), password: password })
-                    .then((data:any) => {
-                        console.log('data returned', data)
-                        setLoading(false)
+                signIn('credentials', {
+                    redirect: false,
+                    emailOrUsername: emailOrUsername.toLowerCase().trim(),
+                    password: password,
+                }).then((data: any) => {
+                    console.log('data returned', data)
+                    setLoading(false)
 
-                        if(data.error){
-                            setError(true)
-                            setLoading(false)
-                              setMessage({
-                                  value: "Invalid User",
-                                  type: 'error',
-                                  style: 'text-red-500',
-                              })
-                              setMessageDisplay('block')
-                            return
-                        }
-                        Router.push('/dashboard')
-                    })
-                   
+                    if (data.error) {
+                        setError(true)
+                        setLoading(false)
+                        setMessage({
+                            value: 'Invalid User',
+                            type: 'error',
+                            style: 'text-red-500',
+                        })
+                        setMessageDisplay('block')
+                        return
+                    }
+                    Router.push('/dashboard')
+                })
             }
         }
-
-    
     }
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
