@@ -25,7 +25,7 @@ function index() {
        const random = randomString()
 
        //send api to the server with the generated code using axios
-       axios.post('/api/generateCode', {
+       axios.post('/api/storeGeneratedCode', {
            code: random
            }).then(({data}) => {
             console.log({data})
