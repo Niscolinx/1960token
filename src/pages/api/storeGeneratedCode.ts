@@ -12,12 +12,10 @@ export default async function storeGeneratedCode(
         await dbConnect()
 
         const generatedCode = await new GeneratedCode({
-            code,
-            isUsed: false
+            code
         }).save()
 
         return res.status(200).json(generatedCode)
-
     } catch (err) {
         console.log({ err })
         res.status(400).json('error')
