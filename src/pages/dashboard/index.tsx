@@ -29,6 +29,7 @@ const Home = () => {
     const [selectedOption, setSelectedOption] =
         useState<TOption>('Referral Income')
     const [loading, setLoading] = useState(false)
+    const [activateLoading, setActivateLoading] = useState(false)
     const [totalMined, setTotalMined] = useState(
         fetchedUser.tokensMined + fetchedUser.videoMined
     )
@@ -109,6 +110,10 @@ const Home = () => {
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
 
+    const handleActivate = () => {
+        setLoading(true)
+
+
     return (
         <div className='h-[93vh] px-4'>
             <div className='grid mt-10 gap-5'>
@@ -132,7 +137,7 @@ const Home = () => {
                         className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                     />
                     <button className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1' type='submit'>
-                        Activate
+                        {activateLoading ? 'Loading...' : 'Activate'}
                     </button>
                 </form>
 
