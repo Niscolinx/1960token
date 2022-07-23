@@ -147,20 +147,19 @@ input[type='number']::-webkit-outer-spin-button {
     appearance: none;
 }
 
-.transaction-table{
-    
-    tr{
+.transaction-table {
+    tr {
         border-radius: 5rem;
         border-bottom: 1px solid #62615e99;
-        
-        &>*{
-            padding: 1rem 0;
 
+        & > * {
+            padding: 1rem 0;
         }
     }
-    td:nth-child(even), th:nth-child(even) {
-    background-color: #62615e99;
-  //color: #1a1a2d;
+    td:nth-child(even),
+    th:nth-child(even) {
+        background-color: #62615e99;
+        //color: #1a1a2d;
+    }
 }
 
-}
