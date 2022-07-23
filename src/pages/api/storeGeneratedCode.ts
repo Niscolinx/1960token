@@ -13,6 +13,7 @@ export default async function storeGeneratedCode(
 
         const generatedCode = await new GeneratedCode({
             code,
+            isUsed: false
         }).save()
 
         return res.status(200).json(generatedCode)
