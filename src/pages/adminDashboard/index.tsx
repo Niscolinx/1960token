@@ -6,7 +6,7 @@ import {
 import React from 'react'
 
 function index() {
-    return <div className='h-[80vh]'>Admin index</div>
+    return <div className='h-[100vh]'>Admin index</div>
 }
 
 export default index

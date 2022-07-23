@@ -12,6 +12,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     const [addMargin, setAddMargin] = useState('')
     const [addPadding, setAddPadding] = useState('')
     const [visibility, setVisibility] = useState('hidden')
+    const [hideFooter, setHideFooter] = useState(false)
 
     useEffect(() => {
         router.asPath === '/' ? setVisibility('flex') : setVisibility('hidden')
@@ -22,6 +23,12 @@ const Layout: React.FC<{}> = ({ children }) => {
         } else {
             setAddMargin('mb-25')
             setAddPadding('py-2')
+        }
+
+        if(router.asPath.includes('adminDashboard')) {
+            setHideFooter(true)
+        }else{
+            setHideFooter(false)
         }
     }, [router])
     return (
@@ -37,7 +44,7 @@ const Layout: React.FC<{}> = ({ children }) => {
                 <main className={`${addMargin} overflow-x-hidden`}>
                     {children}
                 </main>
-                <Footer />
+                <Footer hideFooter={hideFooter}/>
             </div>
         </>
     )
