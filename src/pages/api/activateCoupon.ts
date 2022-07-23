@@ -9,7 +9,24 @@ export default async function activateCoupon(
     const { coupon } = req.body
 
     try {
-       
+        await dbConnect()
+
+        const code = await GeneratedCode.findOne({
+            code: coupon,
+        })
+
+        if (!code) {
+            return res.status(401).json('Code not found')
+        }
+
+        if (code.isUsed) {
+            return res.status(401).json('Code already used')
+        }
+
+        code.isUsed = true
+        await code.save()
+
+        return res.status(200).json('Code used')
 
     } catch (err) {
         console.log({ err })

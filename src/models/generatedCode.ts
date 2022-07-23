@@ -5,6 +5,11 @@ const generatedCode = new Schema(
         code: {
             type: String,
             required: true,
+        },
+        isUsed: {
+            type: Boolean,
+            required: true,
+            default: false,
         }
     },
     { timestamps: true }
