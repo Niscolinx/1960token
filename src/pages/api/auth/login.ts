@@ -13,13 +13,23 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     try {
         await dbConnect()
 
+        const email: IUser | null = await User.findOne({
+            email: emailOrUsername,
+        })
+        const username: IUser | null = await User.findOne({
+            username: emailOrUsername,
+        })
+
+        const user = email || username
+
         if (admin) {
-            const user = await User.findOne({ emailOrUsername })
+
+            console.log({ user })
             if (!user) {
-                return res.status(401).json({ error: 'User not found' })
+                return res.status(401).json( 'User not found' )
             }
             if (!bcrypt.compareSync(password, user.password)) {
-                return res.status(401).json({ error: 'Incorrect password' })
+                return res.status(401).json( 'Incorrect password')
             }
             const token = jwt.sign(
                 { userId: user._id.toString(), email: user.email },
@@ -33,14 +43,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
 
         console.log("Is not admin")
     
-        const email: IUser | null = await User.findOne({
-            email: emailOrUsername,
-        })
-        const username: IUser | null = await User.findOne({
-            username: emailOrUsername,
-        })
-
-        const user = email || username
+        
 
         if (!user) {
             return res.status(401).json('Not found')

@@ -49,11 +49,32 @@ const Login = ({ providers }: LoginProps) => {
         ) {
             // admin login
             //send an axios post request to the server
-            return axios.post('/api/auth/login', {
-                admin: true,
-                emailOrUsername,
-                password,
-            })
+            return axios
+                .post('/api/auth/login', {
+                    admin: true,
+                    emailOrUsername: emailOrUsername.toLowerCase(),
+                    password,
+                })
+                .then((res) => {
+                    console.log('res', res.data)
+                    if (res.data.error) {
+                        setError(true)
+                        setMessage({
+                            value: res.data.error,
+                            type: 'error',
+                            style: 'text-red-500',
+                        })
+                    } else {
+                        setError(false)
+                        setMessage({
+                            value: 'Login Successful',
+                            type: 'success',
+                            style: 'text-green-500',
+                        })
+
+                        Router.push('/adminDashboard')
+                    }
+                })
         }
 
         const formData = new FormData(e.currentTarget)
