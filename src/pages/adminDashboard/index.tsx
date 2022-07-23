@@ -6,6 +6,18 @@ import {
 import React from 'react'
 
 function index() {
+  //generate random numbers mixed with letters of length 6
+  const randomString = () => {
+    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    let randomString = ''
+    for (let i = 0; i < 6; i++) {
+      randomString += possible.charAt(Math.floor(Math.random() * possible.length))
+    }
+    return randomString
+  }
+
+  console.log(randomString())
+
     return <div className='h-[100vh]'>
       <h1>Welcome Admin</h1>
     
