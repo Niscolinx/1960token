@@ -111,7 +111,9 @@ const Home = () => {
     }, [fetchedUser])
 
     const handleActivate = () => {
-        setLoading(true)
+        setActivateLoading(true)
+    
+    }
 
 
     return (
