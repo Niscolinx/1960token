@@ -18,7 +18,10 @@ function index() {
         return randomString
     }
 
-    console.log(randomString())
+
+    const handleRandom = () => {
+        setGeneratedCode(randomString())
+    }
 
     return (
         <div className='h-[100vh] py-5 px-8'>
@@ -26,8 +29,8 @@ function index() {
             <div className='grid'>
                 <div className='grid'>
                     <p>{generatedCode}</p>
-                    style a button using tailwindcss
-                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Generate</button>
+                    
+                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={handleRandom}>Generate</button>
                 </div>
             </div>
         </div>
