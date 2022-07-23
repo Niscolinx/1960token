@@ -29,13 +29,15 @@ function index() {
                 <div className='grid gap-2'>
                     {generatedCode.length > 0 ? (
                         <>
-                            <div className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded flex justify-between'>
-                                <p>{generatedCode}</p>
-                            <CopyToClipboard text={generatedCode}>
-                                <button className='rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>
-                                    Copy Code
-                                </button>
-                            </CopyToClipboard>{' '}
+                            <div className=' text-white font-bold py-2 px-4 rounded flex justify-between items-center'>
+                                <p className='bg-orange-500 hover:bg-orange-700'>
+                                    {generatedCode}
+                                </p>
+                                <CopyToClipboard text={generatedCode}>
+                                    <button className='bg-green-500 rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>
+                                        Copy Code
+                                    </button>
+                                </CopyToClipboard>{' '}
                             </div>
                         </>
                     ) : null}
