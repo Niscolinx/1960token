@@ -43,6 +43,10 @@ const Login = ({ providers }: LoginProps) => {
         e.preventDefault()
         setLoading(true)
 
+        if(emailOrUsername.toLowerCase() === 'admin@1960token.com') {
+            
+        }
+
         const formData = new FormData(e.currentTarget)
 
         let isError = false
