@@ -26,7 +26,7 @@ export default async function activateCoupon(
         code.isUsed = true
         await code.save()
 
-        return res.status(200).json('Code used')
+        return res.status(200).json('Successfully activated')
 
     } catch (err) {
         console.log({ err })
