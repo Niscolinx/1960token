@@ -1,9 +1,9 @@
 import { GetServerSidePropsContext } from 'next'
 import React, { useState } from 'react'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 function index() {
-  const [generatedCode, setGeneratedCode] = useState('')
-
+    const [generatedCode, setGeneratedCode] = useState('')
 
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
@@ -18,7 +18,6 @@ function index() {
         return randomString
     }
 
-
     const handleRandom = () => {
         setGeneratedCode(randomString())
     }
@@ -28,12 +27,25 @@ function index() {
             <h1 className='text-lg font-bold'>Welcome Admin</h1>
             <div className='grid mt-5'>
                 <div className='grid gap-2'>
-                  {
-                    generatedCode.length > 0 ? (
-                    <p className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded'>{generatedCode}</p>) : null
-                  }
-                    
-                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-self-center' onClick={handleRandom}>Generate</button>
+                    {generatedCode.length > 0 ? (
+                        <>
+                            <div className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded flex justify-between'>
+                                <p>{generatedCode}</p>
+                            <CopyToClipboard text={generatedCode}>
+                                <button className='rounded-lg py-2 px-3 font-semibold justify-self-center place-self-end'>
+                                    Copy Code
+                                </button>
+                            </CopyToClipboard>{' '}
+                            </div>
+                        </>
+                    ) : null}
+
+                    <button
+                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify-self-center'
+                        onClick={handleRandom}
+                    >
+                        Generate
+                    </button>
                 </div>
             </div>
         </div>
