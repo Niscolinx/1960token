@@ -66,7 +66,7 @@ export default NextAuth({
                 return false
             }
         },
-        async redirect({ url, baseUrl }) {
+        async redirect({ baseUrl }) {
             // Allows relative callback URLs
             return `${baseUrl}/dashboard`
         },
