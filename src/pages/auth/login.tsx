@@ -57,23 +57,21 @@ const Login = ({ providers }: LoginProps) => {
                 })
                 .then((res) => {
                     console.log('res', res.data)
-                    if (res.data.error) {
-                        setError(true)
-                        setMessage({
-                            value: res.data.error,
-                            type: 'error',
-                            style: 'text-red-500',
-                        })
-                    } else {
-                        setError(false)
-                        setMessage({
-                            value: 'Login Successful',
-                            type: 'success',
-                            style: 'text-green-500',
-                        })
+                    setLoading(false)
+                    
 
                         Router.push('/adminDashboard')
-                    }
+                    
+                }).catch((err) => {
+                    setLoading(false)
+                    console.log('err', err)
+                    setError(true)
+                    setMessage({
+                        value: 'Login Failed',
+                        type: 'error',
+                        style: 'text-red-500',
+                    })
+                    setMessageDisplay('block')
                 })
         }
 

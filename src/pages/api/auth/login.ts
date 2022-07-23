@@ -35,9 +35,12 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
                 { userId: user._id.toString(), email: user.email },
                 process.env.JWT_SECRET!
             )
-            setCookie('adminToken', token, {
-                secure: process.env.NODE_ENV! === 'production',
-            })
+            // setCookie('adminToken', token, {
+            //     secure: process.env.NODE_ENV! === 'production',
+            // })
+
+            //set cookie in nodejs
+            res.setHeader('Set-Cookie', `adminToken=${token}; Path=/; HttpOnly; Secure; Max-Age=${60 * 60 * 24 * 7}`)
             return res.status(200).json({ user })
         }
 
