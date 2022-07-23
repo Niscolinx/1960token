@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { GetServerSidePropsContext } from 'next'
 import React, { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
@@ -19,7 +20,19 @@ function index() {
     }
 
     const handleRandom = () => {
-        setGeneratedCode(randomString())
+       // setGeneratedCode(randomString())
+
+       const random = randomString()
+
+       //send api to the server with the generated code using axios
+       axios.post('/api/generateCode', {
+           code: random
+           }).then(({data}) => {
+            console.log({data})
+           }).catch(err => {
+               console.log(err)
+           })
+        
     }
 
     return (
