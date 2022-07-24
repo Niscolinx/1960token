@@ -1,6 +1,7 @@
 import 'windi.css'
 import '../styles/globals.scss'
 import 'animate.css/animate.min.css'
+import { useContext, createContext } from 'react'
 import { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
 import Layout from '../components/Layout'
@@ -10,6 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import LogRocket from 'logrocket';
 import { store, persistedStore } from '../store/app/store'
 LogRocket.init('u0nffn/1960token');
+
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
    
