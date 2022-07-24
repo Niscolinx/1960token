@@ -161,18 +161,16 @@ const List = () => {
     }
 
     const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([])
-    const [selectedItemStyle, setSelectedItemStyle] = useState<boolean>(false)
+    //const [selectedItemStyle, setSelectedItemStyle] = useState<boolean>(false)
 
-    const selectItem = (i: number) => {
-        setSelectedItems([...selectedItems, items[i]])
-        //change the style of the selected item
-
-        //check if an item exists in an array of objects
-        selectedItems.find((v) => {
-            console.log('find', v)
-            return v
-        })
+    const selectItem = (
+        e: any,
+        i: number
+    ) => {
+      e.target.style.opacity = .2
     }
+
+
 
     console.log('inside', selectedItems)
     return (
@@ -198,10 +196,8 @@ const List = () => {
                     <li
                         key={item.name}
                         className={`List__item List__item--${item.color}`}
-                        style={{
-                            backgroundColor: selectedItemStyle ? 'green' : '',
-                        }}
-                        onClick={() => selectItem(i)}
+                        
+                        onClick={(e) => selectItem(e, i)}
                     >
                         {item.name}
                     </li>
