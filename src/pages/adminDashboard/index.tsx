@@ -3,7 +3,7 @@
 // import React, { useState } from 'react'
 // import CopyToClipboard from 'react-copy-to-clipboard'
 
-import { useState, Fragment } from "react"
+import { useState, Fragment } from 'react'
 
 // function index() {
 //     const [generatedCode, setGeneratedCode] = useState('')
@@ -91,9 +91,6 @@ import { useState, Fragment } from "react"
 //     }
 // }
 
-
-
-
 // Implement a feature to allow item selection with the following requirements:
 // 1. Clicking an item selects/unselects it.
 // 2. Multiple items can be selected at a time.
@@ -136,44 +133,37 @@ const List = () => {
         'pineapple',
     ]
 
+    const items = sizes.reduce(
+        (items: any, size: any) => [
+            ...items,
+            ...fruits.reduce(
+                (acc: any, fruit) => [
+                    ...acc,
+                    ...colors.reduce(
+                        (acc: any, color) => [
+                            ...acc,
+                            {
+                                name: `${size} ${color} ${fruit}`,
+                                color,
+                            },
+                        ],
+                        []
+                    ),
+                ],
+                []
+            ),
+        ],
+        []
+    )
+    type SelectedItem = {
+        name: string
+        color: string
+    }
 
+    const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([])
 
-
-const items = sizes.reduce(
-    (items:any, size:any) => [
-        ...items,
-        ...fruits.reduce(
-            (acc:any, fruit) => [
-                ...acc,
-                ...colors.reduce(
-                    (acc:any, color) => [
-                        ...acc,
-                        {
-                            name: `${size} ${color} ${fruit}`,
-                            color,
-                        },
-                    ],
-                    []
-                ),
-            ],
-            []
-        ),
-    ],
-    []
-)
-
-
-
-    const [selectedItems, setSelectedItems] = useState([
-        {
-            id: 1,
-            name: 'hello',
-        },
-    ])
-
-    const selectItem = (e:string, i:number) => {
-       
-        console.log('selectedItem', { selectedItems })
+    const selectItem = (i: number,) => {
+        setSelectedItems([...selectedItems, items[i]])
     }
 
     console.log('inside', selectedItems)
@@ -182,7 +172,12 @@ const items = sizes.reduce(
             <div>
                 <ul className='List'>
                     {selectedItems.map((item) => (
-                        <li key={item.id}>{item.name}</li>
+                        <li
+                            key={item.name}
+                            className={`List__item List__item--${item.color}`}
+                        >
+                            {item.name}
+                        </li>
                     ))}
                 </ul>
             </div>
@@ -191,7 +186,7 @@ const items = sizes.reduce(
                     <li
                         key={item.name}
                         className={`List__item List__item--${item.color}`}
-                        onClick={() => selectItem(item.name, i)}
+                        onClick={() => selectItem(i)}
                     >
                         {item.name}
                     </li>
