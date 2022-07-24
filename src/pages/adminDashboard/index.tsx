@@ -161,18 +161,24 @@ const List = () => {
     }
 
     const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([])
-    //const [selectedItemStyle, setSelectedItemStyle] = useState<boolean>(false)
 
-    const selectItem = (
-        e: any,
-        i: number
-    ) => {
-      e.target.style.opacity = .2
+    const selectItem = (e: any, i: number) => {
+        const findItem = selectedItems.findIndex(
+            (item) => item.name === items[i].name
+        )
+
+        if (findItem !== -1) {
+            setSelectedItems(
+                selectedItems.filter((item) => item.name !== items[i].name)
+            )
+            e.target.style.opacity = 1
+        }
+
+        e.target.style.opacity = 0.2
+        setSelectedItems([...selectedItems, items[i]])
+
     }
 
-
-
-    console.log('inside', selectedItems)
     return (
         <Fragment>
             <div>
@@ -196,7 +202,6 @@ const List = () => {
                     <li
                         key={item.name}
                         className={`List__item List__item--${item.color}`}
-                        
                         onClick={(e) => selectItem(e, i)}
                     >
                         {item.name}
