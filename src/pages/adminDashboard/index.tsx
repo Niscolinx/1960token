@@ -172,12 +172,14 @@ const List = () => {
             <div>
                 <ul className='List'>
                     {selectedItems.map((item) => (
+                        <div className='list__selectedItem'>
                         <li
                             key={item.name}
                             className={`List__item List__item--${item.color}`}
-                        >
+                            >
                             {item.name}
                         </li>
+                            </div>
                     ))}
                 </ul>
             </div>
