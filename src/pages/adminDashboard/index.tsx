@@ -3,7 +3,7 @@
 // import React, { useState } from 'react'
 // import CopyToClipboard from 'react-copy-to-clipboard'
 
-import { useState, Fragment } from 'react'
+import React, { useState, Fragment } from 'react'
 
 // function index() {
 //     const [generatedCode, setGeneratedCode] = useState('')
@@ -161,33 +161,46 @@ const List = () => {
     }
 
     const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([])
+    const [selectedItemStyle, setSelectedItemStyle] = useState<boolean>(false)
 
-    const selectItem = (i: number,) => {
+    const selectItem = (i: number) => {
         setSelectedItems([...selectedItems, items[i]])
+        //change the style of the selected item
+
+        //check if an item exists in an array of objects
+        selectedItems.find((v) => {
+            console.log('find', v)
+            return v
+        })
     }
 
     console.log('inside', selectedItems)
     return (
         <Fragment>
             <div>
-                <ul className='List'>
-                    {selectedItems.map((item) => (
-                        <div className='list__selectedItem'>
-                        <li
-                            key={item.name}
-                            className={`List__item List__item--${item.color}`}
-                            >
-                            {item.name}
-                        </li>
-                            </div>
-                    ))}
-                </ul>
+                {selectedItems.length > 0 && (
+                    <div className='List-selectedItems'>
+                        <ul className='List '>
+                            {selectedItems.map((item) => (
+                                <li
+                                    key={item.name}
+                                    className={`List__item List__item--${item.color}`}
+                                >
+                                    {item.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
             </div>
             <ul className='List'>
                 {items.map((item, i) => (
                     <li
                         key={item.name}
                         className={`List__item List__item--${item.color}`}
+                        style={{
+                            backgroundColor: selectedItemStyle ? 'green' : '',
+                        }}
                         onClick={() => selectItem(i)}
                     >
                         {item.name}
