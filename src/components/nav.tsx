@@ -21,14 +21,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     //     setMounted(true)
     // }, [])
 
-    useEffect(() => {
-        console.log({context})
-        if(context.nav.isVerified){
-            setIsVerified(true)
-        }else{
-            setIsVerified(false)
-        }
-    }, [context.nav])
+   
 
     useEffect(() => {
         if (session) {
@@ -36,6 +29,8 @@ function nav({ session }: { session: nextAuthSession | null }) {
             const foundUser = session.foundUser as {
                 user: IUser
             }
+
+            console.log({session})
 
             if (foundUser.user.isVerified) {
                 setIsVerified(true)

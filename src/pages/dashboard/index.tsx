@@ -5,7 +5,7 @@ import { ImProfile } from 'react-icons/im'
 import { BsFillGearFill } from 'react-icons/bs'
 import { FaScroll } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
-import React, { useState, useEffect, useCallback, useMemo, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import {
     getUser,
@@ -40,7 +40,7 @@ const Home = () => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
-    const memoizedCallback = useCallback(() => {
+ useEffect(() => {
         if (session) {
             return dispatch(getUser(session)).then((data) => {
                 localStorage.setItem(
@@ -51,9 +51,6 @@ const Home = () => {
         }
     }, [session])
 
-    useMemo(() => {
-        return memoizedCallback()
-    }, [])
 
     useEffect(() => {
         if (theme === 'dark') {
