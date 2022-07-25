@@ -1,7 +1,6 @@
 import 'windi.css'
 import '../styles/globals.scss'
 import 'animate.css/animate.min.css'
-import { useContext, createContext } from 'react'
 import { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
 import Layout from '../components/Layout'
@@ -14,17 +13,7 @@ LogRocket.init('u0nffn/1960token')
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 
-    type ContextProps = {
-        nav: {
-            isVerified: boolean
-        }
-    }
-
-    const navContext = createContext<ContextProps>({
-        nav: {
-            isVerified: false,
-        },
-    })
+    
 
     return (
         <>
@@ -32,7 +21,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
                 <Provider store={store}>
                     <PersistGate loading={null} persistor={persistedStore}>
                         <ThemeProvider attribute='class' defaultTheme='dark'>
-                            <Layout navContext>
+                            <Layout>
                                 <Component {...pageProps} />
                             </Layout>
                         </ThemeProvider>

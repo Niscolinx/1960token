@@ -5,7 +5,7 @@ import { ImProfile } from 'react-icons/im'
 import { BsFillGearFill } from 'react-icons/bs'
 import { FaScroll } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import React, { useState, useEffect, useCallback, useMemo, useContext } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store/app/hooks'
 import {
     getUser,
@@ -16,10 +16,12 @@ import { TbArrowsSort } from 'react-icons/tb'
 import { clearMineTokens } from '../../store/features/mine/MinerSlice'
 import { clearVideoTokens } from '../../store/features/video/VideoSlice'
 import axios from 'axios'
+import { MyContext } from '../../components/Layout'
 
 const Home = () => {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
+    const context = useContext(MyContext)
 
     type TOption = 'Mine/Video Income' | 'Referral Income'
 

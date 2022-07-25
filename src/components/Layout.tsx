@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext, createContext } from 'react'
 import Footer from './Footer'
 import Nav from './nav'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import LiveTicker from '../widgets/LiveTicker'
 
-
-type Props = {
-    children: React.ReactNode
-    hello: string
+type ContextProps = {
+    nav: {
+        isVerified: boolean
+    }
 }
 
-const Layout: React.FC<Props> = ({ children, hello }) => {
-    console.log({hello})
+export const MyContext = createContext<ContextProps>({
+    nav: {
+        isVerified: false,
+    },
+})
+
+const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
     const router = useRouter()
     const [addMargin, setAddMargin] = useState('')
@@ -31,26 +36,28 @@ const Layout: React.FC<Props> = ({ children, hello }) => {
             setAddPadding('py-2')
         }
 
-        if(router.asPath.includes('adminDashboard')) {
+        if (router.asPath.includes('adminDashboard')) {
             setHideFooter(true)
-        }else{
+        } else {
             setHideFooter(false)
         }
     }, [router])
+
     return (
         <>
             <div className={visibility}>
                 <LiveTicker />
-                
             </div>
             <div
                 className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}
             >
-                <Nav session={session} />
-                <main className={`${addMargin} overflow-x-hidden`}>
-                    {children}
-                </main>
-                <Footer hideFooter={hideFooter}/>
+                <MyContext.Provider value={{ nav: { isVerified: false } }}>
+                    <Nav session={session} />
+                    <main className={`${addMargin} overflow-x-hidden`}>
+                        {children}
+                    </main>
+                    <Footer hideFooter={hideFooter} />
+                </MyContext.Provider>
             </div>
         </>
     )
