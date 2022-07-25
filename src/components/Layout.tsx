@@ -1,11 +1,10 @@
-import React, { useEffect, useState, createContext } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import Footer from './Footer'
 import Nav from './nav'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import LiveTicker from '../widgets/LiveTicker'
 import { NavContext } from './Context'
-
 
 const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
@@ -34,7 +33,13 @@ const Layout: React.FC<{}> = ({ children }) => {
         }
     }, [router])
 
-    
+    const navContext = useMemo(() => {
+        return {
+            isVerified,
+            setIsVerified,
+        }
+    }, [isVerified, setIsVerified])
+
     return (
         <>
             <div className={visibility}>
@@ -43,14 +48,13 @@ const Layout: React.FC<{}> = ({ children }) => {
             <div
                 className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}
             >
-                <NavContext.Provider value={{isVerified,setIsVerified}}>
+                <NavContext.Provider value={navContext}>
+                    <Nav session={session} />
 
-                <Nav session={session} />
-
-                <main className={`${addMargin} overflow-x-hidden`}>
-                    {children}
-                </main>
-                <Footer hideFooter={hideFooter} />
+                    <main className={`${addMargin} overflow-x-hidden`}>
+                        {children}
+                    </main>
+                    <Footer hideFooter={hideFooter} />
                 </NavContext.Provider>
             </div>
         </>
