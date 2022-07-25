@@ -5,15 +5,18 @@ import React, { useEffect, useState, useContext} from 'react'
 import { nextAuthSession } from '../lib/types'
 import { IUser } from '../models/User'
 import { useRouter } from 'next/router'
+import {NavContext} from './Layout'
 
 function nav({ session }: { session: nextAuthSession | null }) {
 
+    const verifiedUser = useContext(NavContext)
     // const { theme, setTheme, systemTheme } = useTheme()
     // const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
     const [isVerified, setIsVerified] = useState(false)
 
 
+    console.log(verifiedUser)
 
     const router = useRouter()
     // useEffect(() => {

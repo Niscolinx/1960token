@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import LiveTicker from '../widgets/LiveTicker'
 
 
+export const NavContext = createContext<unknown>(null)
 
 const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
@@ -34,9 +35,7 @@ const Layout: React.FC<{}> = ({ children }) => {
         }
     }, [router])
 
-    const NavContext = createContext(
-        {isVerified}
-    )
+    
 
     
     return (

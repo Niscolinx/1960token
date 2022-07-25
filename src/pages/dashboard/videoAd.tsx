@@ -88,7 +88,7 @@ function videoAd() {
 
     return (
         <>
-            <div className='grid grid-rows-[.1fr,1fr] overflow-hidden h-[86vh] relative'>
+            <div className='grid grid-rows-[.1fr,1fr] overflow-hidden min-h-[86vh] relative'>
                 <div
                     className='flex py-2 px-10 rounded-lg place-self-center mb-2 items-center font-bold text-2xl w-full justify-between'
                     //style={neuToUse}
@@ -139,6 +139,17 @@ function videoAd() {
                             </button>
                         </div>
                     </div>
+                </div>
+                <div className='grid mt-10 justify-center py-4 px-6 text-[#1a1a2d] gap-3'>
+                    <h3 className='text-lg font-bold text-center'>
+                        EARN BY WATCHING VIDEOS
+                    </h3>
+                    <p className='bg-white text-center p-4 text-sm rounded font-semibold'>
+                        You earn when you VIDEOS on the platform. And you are
+                        been rewarded on each video you watch on the platform.
+                        (Watch the videos for 2 minutes for your earnings to
+                        reflect before you can close)
+                    </p>
                 </div>
             </div>
         </>
