@@ -9,7 +9,7 @@ import { NavContext } from './Context'
 
 function nav({ session }: { session: nextAuthSession | null }) {
 
-    const {isVerified} = useContext(NavContext)
+    const {isVerified, setIsVerified} = useContext(NavContext)
     // const { theme, setTheme, systemTheme } = useTheme()
     // const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
@@ -32,10 +32,10 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
 
             if (foundUser.user.isVerified) {
-                setVerified(true)
+                setIsVerified(true)
             }
             else{
-                setVerified(false)
+                setIsVerified(false)
             }
             
         } else {
@@ -55,6 +55,8 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     let isSession = null
 
+    console.log({isVerified})
+
     if (session) {
         
         const foundUser = session.foundUser as {
@@ -66,16 +68,18 @@ function nav({ session }: { session: nextAuthSession | null }) {
                 <p>{foundUser.user.username}</p>
                 <p
                     className={`text-xs ${
-                        isVerified || verified? 'bg-green-400' : 'bg-red-400'
+                        isVerified? 'bg-green-400' : 'bg-red-400'
                     }  text-black px-2 rounded-lg w-max`}
                 >
-                    {isVerified || verified ? 'Verified' : 'Not Verified'}
+                    {isVerified ? 'Verified' : 'Not Verified'}
                 </p>
             </div>
         )
     } else {
         isSession = null
     }
+
+
 
     return (
         <nav className='flex justify-between items-center px-4'>
