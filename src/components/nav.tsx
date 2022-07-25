@@ -1,24 +1,24 @@
 import Link from 'next/link'
 import React, { useEffect, useState, useContext} from 'react'
-import { useTheme } from 'next-themes'
-import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
+// import { useTheme } from 'next-themes'
+// import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { nextAuthSession } from '../lib/types'
 import { IUser } from '../models/User'
 import { useRouter } from 'next/router'
 import { MyContext } from './Layout'
 
 function nav({ session }: { session: nextAuthSession | null }) {
-    const { theme, setTheme, systemTheme } = useTheme()
-    const [mounted, setMounted] = useState(false)
+    // const { theme, setTheme, systemTheme } = useTheme()
+    // const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
-    const [isVeried, setIsVerified] = useState(false)
+    const [isVerified, setIsVerified] = useState(false)
     const context = useContext(MyContext)
 
 
     const router = useRouter()
-    useEffect(() => {
-        setMounted(true)
-    }, [])
+    // useEffect(() => {
+    //     setMounted(true)
+    // }, [])
 
     useEffect(() => {
         if (session) {
@@ -41,21 +41,21 @@ function nav({ session }: { session: nextAuthSession | null }) {
     let isSession = null
 
     if (session) {
-        if(session.foundUser) {
-            console.log(session)
-        }
         const foundUser = session.foundUser as {
             user: IUser
+        }
+        if(foundUser) {
+            foundUser.user.isVerified ? setIsVerified(true) : setIsVerified(false)
         }
         isSession = (
             <div className='block text-sm font-semibold'>
                 <p>{foundUser.user.username}</p>
                 <p
                     className={`text-xs ${
-                        isVeried ? 'bg-green-400' : 'bg-red-400'
+                        isVerified ? 'bg-green-400' : 'bg-red-400'
                     }  text-black px-2 rounded-lg w-max`}
                 >
-                    {isVeried ? 'Verified' : 'Not Verified'}
+                    {isVerified ? 'Verified' : 'Not Verified'}
                 </p>
             </div>
         )
