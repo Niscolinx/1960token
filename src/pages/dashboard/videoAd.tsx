@@ -140,11 +140,11 @@ function videoAd() {
                         </div>
                     </div>
                 </div>
-                <div className='grid mt-10 justify-center py-4 px-6 text-[#1a1a2d] gap-3'>
+                <div className='grid mt-10 justify-center py-4 px-6 text-[#1a1a2d] gap-3 bg-white'>
                     <h3 className='text-lg font-bold text-center'>
                         EARN BY WATCHING VIDEOS
                     </h3>
-                    <p className='bg-white text-center p-4 text-sm rounded font-semibold'>
+                    <p className=' text-center p-4 text-sm rounded font-semibold'>
                         You earn when you VIDEOS on the platform. And you are
                         been rewarded on each video you watch on the platform.
                         (Watch the videos for 2 minutes for your earnings to
