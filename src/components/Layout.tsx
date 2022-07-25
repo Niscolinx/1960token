@@ -43,6 +43,9 @@ const Layout: React.FC<{}> = ({ children }) => {
         }
     }, [router])
 
+   
+
+
     return (
         <>
             <div className={visibility}>

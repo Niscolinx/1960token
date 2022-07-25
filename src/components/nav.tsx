@@ -22,6 +22,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     // }, [])
 
     useEffect(() => {
+        console.log({context})
         if(context.nav.isVerified){
             setIsVerified(true)
         }else{

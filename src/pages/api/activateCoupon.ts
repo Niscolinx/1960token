@@ -31,6 +31,8 @@ export default async function activateCoupon(
 
         const getUser = await User.findOne({email: user.email})
 
+        console.log({getUser})
+
         getUser.isVerified = true
 
         await getUser.save()

@@ -79,57 +79,59 @@ const Home = () => {
         setDisplayButton(display ? 'Transfer' : 'Close')
     }
 
+    
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setLoading(true)
-
+        
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
         } else {
             toPortolio = fetchedUser.referralBonus
         }
-
+        
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
         dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
-            .then((data) => {
-                console.log({ data })
-
-                setLoading(false)
-                if (selectedOption === 'Mine/Video Income') {
-                    setTotalMined(0)
-                }
-            })
-            .catch(() => setLoading(false))
+        .then((data) => {
+            console.log({ data })
+            
+            setLoading(false)
+            if (selectedOption === 'Mine/Video Income') {
+                setTotalMined(0)
+            }
+        })
+        .catch(() => setLoading(false))
     }
-
+    
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
         setSelectedOption(value)
     }
-
+    
     useEffect(() => {
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
-
+    
     const handleActivate = (e: React.FormEvent) => {
         e.preventDefault()
         setActivateLoading(true)
-
-        const getUser = localStorage.get('userSession')
-
+        
+        const getUser = localStorage.getItem('userSession')
+        
         if(!getUser) {
             return
         }
         const user = JSON.parse(getUser)
-
+        
         return axios
-            .post('/api/activateCoupon', {coupon, user})
-            .then(({ data }) => {
-                setActivateLoading(false)
-                console.log({ data })
-                
+        .post('/api/activateCoupon', {coupon, user})
+        .then(({ data }) => {
+            setActivateLoading(false)
+            console.log({ data })
+            context.nav.isVerified = true
+            
             })
             .catch((err) => {
                 console.log({ err })
