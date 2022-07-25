@@ -127,9 +127,9 @@ const Home = () => {
         return axios
             .post('/api/activateCoupon', {coupon, user})
             .then(({ data }) => {
+                setActivateLoading(false)
                 console.log({ data })
                 
-                setActivateLoading(false)
             })
             .catch((err) => {
                 console.log({ err })

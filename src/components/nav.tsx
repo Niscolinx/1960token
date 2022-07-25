@@ -11,6 +11,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     const { theme, setTheme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
+    const [isVeried, setIsVerified] = useState(false)
     const context = useContext(MyContext)
 
 
@@ -46,8 +47,12 @@ function nav({ session }: { session: nextAuthSession | null }) {
         isSession = (
             <div className='block text-sm font-semibold'>
                 <p>{foundUser.user.username}</p>
-                <p className='text-xs bg-red-400 text-black px-2 rounded-lg w-max'>
-                    Not verified
+                <p
+                    className={`text-xs ${
+                        isVeried ? 'bg-green-400' : 'bg-red-400'
+                    }  text-black px-2 rounded-lg w-max`}
+                >
+                    {isVeried ? 'Verified' : 'Not Verified'}
                 </p>
             </div>
         )
