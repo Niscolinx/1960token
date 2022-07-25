@@ -1,3 +1,8 @@
 import {createContext} from 'react';
 
-export const NavContext = createContext<unknown>(null);
+type ContextType = {
+    isVerified: boolean,
+    setIsVerified: (isVerified: boolean) => void
+}
+
+export const NavContext = createContext<ContextType>(null as any);

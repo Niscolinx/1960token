@@ -9,14 +9,12 @@ import { NavContext } from './Context'
 
 function nav({ session }: { session: nextAuthSession | null }) {
 
-    const verifiedUser = useContext(NavContext)
+    const {isVerified} = useContext(NavContext)
     // const { theme, setTheme, systemTheme } = useTheme()
     // const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
-    const [isVerified, setIsVerified] = useState(false)
+    const [verified, setVerified] = useState(false)
 
-
-    console.log(verifiedUser)
 
     const router = useRouter()
     // useEffect(() => {
@@ -34,10 +32,10 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
 
             if (foundUser.user.isVerified) {
-                setIsVerified(true)
+                setVerified(true)
             }
             else{
-                setIsVerified(false)
+                setVerified(false)
             }
             
         } else {
@@ -68,10 +66,10 @@ function nav({ session }: { session: nextAuthSession | null }) {
                 <p>{foundUser.user.username}</p>
                 <p
                     className={`text-xs ${
-                        isVerified ? 'bg-green-400' : 'bg-red-400'
+                        isVerified || verified? 'bg-green-400' : 'bg-red-400'
                     }  text-black px-2 rounded-lg w-max`}
                 >
-                    {isVerified ? 'Verified' : 'Not Verified'}
+                    {isVerified || verified ? 'Verified' : 'Not Verified'}
                 </p>
             </div>
         )
