@@ -15,6 +15,7 @@ function nav({ session }: { session: nextAuthSession | null }) {
     const context = useContext(MyContext)
 
 
+
     const router = useRouter()
     // useEffect(() => {
     //     setMounted(true)
@@ -31,6 +32,17 @@ function nav({ session }: { session: nextAuthSession | null }) {
     useEffect(() => {
         if (session) {
             setIsAuth(true)
+            const foundUser = session.foundUser as {
+                user: IUser
+            }
+
+            if (foundUser.user.isVerified) {
+                setIsVerified(true)
+            }
+            else{
+                setIsVerified(false)
+            }
+            
         } else {
             setIsAuth(false)
         }
@@ -49,12 +61,11 @@ function nav({ session }: { session: nextAuthSession | null }) {
     let isSession = null
 
     if (session) {
+        
         const foundUser = session.foundUser as {
             user: IUser
         }
-        if(foundUser) {
-            foundUser.user.isVerified ? setIsVerified(true) : setIsVerified(false)
-        }
+   
         isSession = (
             <div className='block text-sm font-semibold'>
                 <p>{foundUser.user.username}</p>
