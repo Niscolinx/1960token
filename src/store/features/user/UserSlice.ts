@@ -13,6 +13,7 @@ const initialState: IUser = {
     isMining: false,
     miningStartedAt: '',
     role: '',
+    isVerified: false,
     upliner: '',
     referrals: [],
     videoMined: 0,
