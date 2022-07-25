@@ -80,7 +80,8 @@ function videoAd() {
             ':' +
             ('0' + Math.floor(playedSeconds % 60)).slice(-2)
         setPlayedTime(played)
-        if (session && Math.floor(playedSeconds) >= 120 && !isTimeUp) {
+        if (session && Math.floor(playedSeconds) >= 10 && !isTimeUp) {
+            console.log("add token to user's video mined")
             dispatch(initVideoEnded(session))
             setIsTimeUp(true)
         }

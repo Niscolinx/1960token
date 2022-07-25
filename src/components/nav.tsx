@@ -13,7 +13,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
     // const { theme, setTheme, systemTheme } = useTheme()
     // const [mounted, setMounted] = useState(false)
     const [isAuth, setIsAuth] = useState(false)
-    const [verified, setVerified] = useState(false)
 
 
     const router = useRouter()
