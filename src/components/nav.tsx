@@ -28,19 +28,22 @@ function nav({ session }: { session: nextAuthSession | null }) {
         }
     }, [session])
 
-    const renderTheme = () => {
-        if (!mounted) return null
+    // const renderTheme = () => {
+    //     if (!mounted) return null
 
-        const currentTheme = theme === 'system' ? systemTheme : theme
+    //     const currentTheme = theme === 'system' ? systemTheme : theme
 
-        if (currentTheme === 'dark')
-            return <BsFillMoonFill onClick={() => setTheme('light')} />
-        else return <BsFillSunFill onClick={() => setTheme('dark')} />
-    }
+    //     if (currentTheme === 'dark')
+    //         return <BsFillMoonFill onClick={() => setTheme('light')} />
+    //     else return <BsFillSunFill onClick={() => setTheme('dark')} />
+    // }
 
     let isSession = null
 
     if (session) {
+        if(session.foundUser) {
+            console.log(session)
+        }
         const foundUser = session.foundUser as {
             user: IUser
         }
