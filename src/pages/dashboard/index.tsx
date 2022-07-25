@@ -16,12 +16,10 @@ import { TbArrowsSort } from 'react-icons/tb'
 import { clearMineTokens } from '../../store/features/mine/MinerSlice'
 import { clearVideoTokens } from '../../store/features/video/VideoSlice'
 import axios from 'axios'
-import { MyContext } from '../../components/Layout'
 
 const Home = () => {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
-    const context = useContext(MyContext)
 
     type TOption = 'Mine/Video Income' | 'Referral Income'
 
@@ -126,9 +124,7 @@ const Home = () => {
         .post('/api/activateCoupon', {coupon, user})
         .then(({ data }) => {
             setActivateLoading(false)
-            console.log({ data })
-            context.nav.isVerified = true
-            
+            console.log({ data })            
             })
             .catch((err) => {
                 console.log({ err })
