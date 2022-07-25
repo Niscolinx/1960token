@@ -5,7 +5,7 @@ import React, { useEffect, useState, useContext} from 'react'
 import { nextAuthSession } from '../lib/types'
 import { IUser } from '../models/User'
 import { useRouter } from 'next/router'
-import {NavContext} from './Layout'
+import { NavContext } from './Context'
 
 function nav({ session }: { session: nextAuthSession | null }) {
 

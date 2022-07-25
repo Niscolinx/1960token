@@ -145,10 +145,10 @@ function videoAd() {
                         EARN BY WATCHING VIDEOS
                     </h3>
                     <p className=' text-center p-4 text-sm rounded font-semibold'>
-                        You earn when you VIDEOS on the platform. And you are
-                        been rewarded on each video you watch on the platform.
-                        (Watch the videos for 2 minutes for your earnings to
-                        reflect before you can close)
+                        You earn when you watch VIDEOS on the platform. And you
+                        are been rewarded on each video you watch on the
+                        platform. (Watch the videos for 2 minutes for your
+                        earnings to reflect before you can close)
                     </p>
                 </div>
             </div>

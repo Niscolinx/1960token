@@ -4,9 +4,8 @@ import Nav from './nav'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import LiveTicker from '../widgets/LiveTicker'
+import { NavContext } from './Context'
 
-
-export const NavContext = createContext<unknown>(null)
 
 const Layout: React.FC<{}> = ({ children }) => {
     const { data: session } = useSession()
@@ -46,7 +45,7 @@ const Layout: React.FC<{}> = ({ children }) => {
             <div
                 className={`${addPadding} bg-[#1a1a2d] text-[#ccccd0] mx-auto relative light:(bg-[#ccccd0] text-[#1a1a2d])`}
             >
-                <NavContext.Provider value={{isVerified}}>
+                <NavContext.Provider value={{isVerified,setIsVerified}}>
 
                 <Nav session={session} />
 
