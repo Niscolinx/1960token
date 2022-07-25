@@ -1,12 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import dbConnect from '../../lib/dbConnect'
 import GeneratedCode from '../../models/generatedCode'
+import User from '../../models/User'
 
 export default async function activateCoupon(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const { coupon } = req.body
+    const { coupon, user } = req.body
 
     console.log(req.body)
 
@@ -27,6 +28,12 @@ export default async function activateCoupon(
 
         code.isUsed = true
         await code.save()
+
+        const getUser = await User.findOne({email: user.email})
+
+        getUser.isVerified = true
+
+        await getUser.save()
 
         return res.status(200).json('Successfully activated')
 

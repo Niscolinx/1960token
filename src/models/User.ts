@@ -15,6 +15,7 @@ export interface IUser {
     portfolio: number
     upliner: string
     status: string
+    isVeried: boolean
     password: string
     referrals: any[]
     referralLink: string
@@ -79,6 +80,11 @@ const userSchema = new Schema<IUser>(
             type: String,
             required: true,
             default: 'Active',
+        },
+        isVeried: {
+            type: Boolean,
+            required: true,
+            default: false,
         },
         referralLink: {
             type: String,

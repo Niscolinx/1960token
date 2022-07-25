@@ -117,10 +117,18 @@ const Home = () => {
         e.preventDefault()
         setActivateLoading(true)
 
+        const getUser = localStorage.get('userSession')
+
+        if(!getUser) {
+            return
+        }
+        const user = JSON.parse(getUser)
+
         return axios
-            .post('/api/activateCoupon', {coupon})
+            .post('/api/activateCoupon', {coupon, user})
             .then(({ data }) => {
                 console.log({ data })
+                
                 setActivateLoading(false)
             })
             .catch((err) => {
@@ -151,7 +159,7 @@ const Home = () => {
                         placeholder='Coupon code'
                         value={coupon}
                         onChange={(e) => setCoupon(e.target.value)}
-                        className='  rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
+                        className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                     />
                     <button
                         className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'
