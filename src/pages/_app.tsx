@@ -8,23 +8,31 @@ import Layout from '../components/Layout'
 import { ThemeProvider } from 'next-themes'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import LogRocket from 'logrocket';
+import LogRocket from 'logrocket'
 import { store, persistedStore } from '../store/app/store'
-LogRocket.init('u0nffn/1960token');
-
+LogRocket.init('u0nffn/1960token')
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-   
+
+    type ContextProps = {
+        nav: {
+            isVerified: boolean
+        }
+    }
+
+    const navContext = createContext<ContextProps>({
+        nav: {
+            isVerified: false,
+        },
+    })
+
     return (
         <>
             <SessionProvider session={session}>
                 <Provider store={store}>
                     <PersistGate loading={null} persistor={persistedStore}>
-                        <ThemeProvider
-                            attribute='class'
-                            defaultTheme='dark'
-                        >
-                            <Layout>
+                        <ThemeProvider attribute='class' defaultTheme='dark'>
+                            <Layout navContext>
                                 <Component {...pageProps} />
                             </Layout>
                         </ThemeProvider>

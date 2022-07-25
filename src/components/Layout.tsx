@@ -6,7 +6,13 @@ import { useRouter } from 'next/router'
 import LiveTicker from '../widgets/LiveTicker'
 
 
-const Layout: React.FC<{}> = ({ children }) => {
+type Props = {
+    children: React.ReactNode
+    hello: string
+}
+
+const Layout: React.FC<Props> = ({ children, hello }) => {
+    console.log({hello})
     const { data: session } = useSession()
     const router = useRouter()
     const [addMargin, setAddMargin] = useState('')
