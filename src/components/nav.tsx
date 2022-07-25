@@ -30,7 +30,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
                 user: IUser
             }
 
-            console.log({session})
 
             if (foundUser.user.isVerified) {
                 setIsVerified(true)

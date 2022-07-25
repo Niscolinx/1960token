@@ -42,7 +42,7 @@ const Home = () => {
 
  useEffect(() => {
         if (session) {
-            return dispatch(getUser(session)).then((data) => {
+            dispatch(getUser(session)).then((data) => {
                 localStorage.setItem(
                     'userSession',
                     JSON.stringify(data.payload)
