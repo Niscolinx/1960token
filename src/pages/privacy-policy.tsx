@@ -3,9 +3,10 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function PrivacyPolicy() {
     return (
-        <div className='grid justify-center mt-10 gap-5 pb-10 px-4'>
+        <div className='grid justify-center mt-10 gap-5 pb-10 px-4 md:mx-20'>
             <AnimationOnScroll
                 animateOnce={true}
+                initiallyVisible={true}
                 animateIn='animate__slideInDown'
             >
                 <h1 className='text-center px-2 py-5 text-3xl font-semibold mb-5 uppercase '>
