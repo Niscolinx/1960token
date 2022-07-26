@@ -3,7 +3,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function PrivacyPolicy() {
     return (
-        <div className='grid justify-center mt-10 gap-5 pb-10 px-4 md:mx-20'>
+        <div className='grid justify-center mt-2 gap-5 pb-10 px-4 md:mx-20'>
             <AnimationOnScroll
                 animateOnce={true}
                 initiallyVisible={true}
