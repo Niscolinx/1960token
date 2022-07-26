@@ -131,11 +131,11 @@ function FAQ() {
                         animateIn='animate__slideInDown'
                     >
                         <h4 className='font-semibold text-xl capitalize'>
-                            1. Can I change the time zone on your website?
+                            1. What is the minimum deposit or withdrawal amount?
                         </h4>
                         <p>
-                            No, it can't be changed. However, your local time is
-                            shown when you hover over the time on our website:{' '}
+                            You can deposit or withdraw a minimum of USD 20
+                            using USDT e-wallet.
                         </p>
                     </AnimationOnScroll>
                 </div>
@@ -145,9 +145,16 @@ function FAQ() {
                         animateIn='animate__slideInDown'
                     >
                         <h4 className='font-semibold text-xl capitalize'>
-                            2. Can I change my email address?
+                            2. How long does it take for my deposits and
+                            withdrawals to be processed?
                         </h4>
-                        <p>No, Message us via our contact form, to know more</p>
+                        <p>
+                            We process deposits instantly and withdrawals within
+                            1 business day. However, it may take longer for your
+                            funds to reach your account due to the different
+                            processing times by banks and payment service
+                            providers.
+                        </p>
                     </AnimationOnScroll>
                 </div>
                 <div className='grid'>
