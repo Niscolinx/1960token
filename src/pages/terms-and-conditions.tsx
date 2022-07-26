@@ -113,13 +113,18 @@ function TermsAndConditions() {
                             of law provisions.{' '}
                         </li>
                     </AnimationOnScroll>
-                    <AnimationOnScroll
-                        animateOnce={true}
-                        animateIn='animate__slideInDown'
-                    >
-                        <li>Please read our Privacy Policy</li>
-                    </AnimationOnScroll>
                 </ol>
+                <AnimationOnScroll
+                    animateOnce={true}
+                    animateIn='animate__slideInDown'
+                >
+                    <h3 className='font-semibold text-2xl'>Social Handles</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Telegram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </AnimationOnScroll>
             </div>
         </div>
     )
