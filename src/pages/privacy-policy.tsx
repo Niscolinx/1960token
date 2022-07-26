@@ -92,156 +92,41 @@ function PrivacyPolicy() {
                     </li>
                 </ul>
             </div>
-            <div className='grid'>
-                <h3>Core Values</h3>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__slideInLeft'
-                >
-                    <ol className='list-decimal list-inside'>
-                        <li>Integrity and Trust</li>
-                        <li>Honesty and Fairness</li>
-                        <li>Transparency</li>
-                        <li>Commitments and Responsibility</li>
-                        <li>Reliability </li>
-                        <li>Flexibility</li>
-                        <li>Constant Innovation</li>
-                        <li>Strong Corporate Governance</li>
-                    </ol>
-                </AnimationOnScroll>
-            </div>
 
             <div className='grid'>
                 <AnimationOnScroll
                     animateOnce={true}
                     animateIn='animate__slideInDown'
                 >
-                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase uppercase'>
-                        Confidentiality{' '}
+                    <h2 className='text-center font-semibold text-2xl grad p-2'>
+                        Notification of Changes
                     </h2>
                 </AnimationOnScroll>
                 <AnimationOnScroll
                     animateOnce={true}
                     animateIn='animate__zoomInLeft'
                 >
+                    <>
+                    
                     <p className='text-justify'>
-                        1960Token maintains appropriate controls and monitors
-                        the transfer of confidential and sensitive client
-                        information within and outside the Company on a
-                        need-to-know basis. 1960Token does not deliberately
-                        disclose client information unless this is upon request
-                        of the client, or as required to do so by law.
+                        Any changes in the Company's privacy policy or security
+                        statement will be posted on this website. For any
+                        material changes that directly affect the economic use
+                        of the client's personal information, the Company will
+                        request the client's prior authorisation in writing
+                        before effecting such changes on the client's account.
                     </p>
-                </AnimationOnScroll>
-            </div>
-            <div className='grid'>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__slideInDown'
-                >
-                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
-                        WHY US{' '}
-                    </h2>
-                </AnimationOnScroll>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__zoomInLeft'
-                >
-                    <div className='grid'>
-                        <p className='text-justify'>
-                            1960Token has grown to become one of the largest
-                            Mining and Affiliate Platform in the world by giving
-                            her clients what they really want. These are:
-                        </p>
-                        <ul className='list-disc list-inside p-5 grid gap-5'>
-                            <li className='text-justify'>
-                                <span className='font-semibold'>
-                                    FAST PAYMENT -
-                                </span>{' '}
-                                You can make your withdrawal anytime you want as
-                                an Affiliate and as for Miners you withdraw only
-                                once in a month. You will receive your money on
-                                your crypto wallet within 24/hrs.{' '}
-                            </li>
-                            <li className='text-justify'>
-                                <span className='font-semibold'>
-                                    SUPERIOR TECHNOLOGY -{' '}
-                                </span>{' '}
-                                1960Token has partnered with the world best
-                                mining technology companies to bring you the
-                                ultimate Mining and Affiliate experience
-                            </li>
-                        </ul>
-                    </div>
-                </AnimationOnScroll>
-            </div>
-            <div className='grid'>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__slideInDown'
-                >
-                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
-                        SUPERIOR MINING PLATFORM{' '}
-                    </h2>
-                </AnimationOnScroll>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__zoomInRight'
-                >
                     <p className='text-justify'>
-                        1960Token has revolutionized Miners and Affiliate by
-                        giving them direct access to a superior platform and
-                        popular Mining and Affiliate platform.
+                       The client also has the right to request that the Company inform the client about the personal data that the Company processes about the client and to provide its correction where necessary. 
                     </p>
-                </AnimationOnScroll>
-            </div>
-            <div className='grid'>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__slideInDown'
-                >
-                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
-                        TRUST AND TRANSPARENCY{' '}
-                    </h2>
-                </AnimationOnScroll>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__zoomInLeft'
-                >
-                    <p className='text-justify'>
-                        Trust and Transparency form the basis of 1960Token core
-                        values. So here there is no requotes, no manipulation
-                        and also no restrictions. All client earnings are held
-                        on a segregated trust accounts with security.
-                    </p>
-                </AnimationOnScroll>
-            </div>
-            <div className='grid mt-10'>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__slideInDown'
-                >
-                    <h3 className='text-center font-semibold text-2xl grad p-2 uppercase'>
-                        Who We Are{' '}
-                    </h3>
-                </AnimationOnScroll>
-                <AnimationOnScroll
-                    animateOnce={true}
-                    animateIn='animate__zoomInRight'
-                >
-                    <p className='text-justify'>
-                        1960Token is one of the most superior Mining and
-                        Affiliate platform, offering Mining and Affiliate
-                        solutions for active day Miner and Affiliate as well as
-                        client that are new to the Platform. 1960Token offers
-                        its clients the best Mining and Affiliate platforms,
-                        with superior connectivity. 1960Token is revolutionizing
-                        online Mining and Affiliate.
-                    </p>
+                    </>
                 </AnimationOnScroll>
             </div>
         </div>
     )
 }
+              
+    
+
 
 export default PrivacyPolicy
