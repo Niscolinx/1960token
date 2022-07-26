@@ -3,9 +3,10 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function TermsAndConditions() {
     return (
-        <div className='grid justify-center mt-10 gap-5 pb-10 px-4 md:mx-20'>
+        <div className='grid justify-center mt-2 gap-5 pb-10 px-4 md:mx-20'>
             <AnimationOnScroll
                 animateOnce={true}
+                initiallyVisible={true}
                 animateIn='animate__slideInDown'
             >
                 <h1 className='text-center px-2 py-5 text-3xl font-semibold mb-5 uppercase '>
@@ -15,13 +16,13 @@ function TermsAndConditions() {
                     </span>
                 </h1>
             </AnimationOnScroll>
-            <div className='grid'>
-                <ol className='list-decimal list-inside'>
+            <div className='grid gap-4'>
+                <ol className='list-decimal list-inside grid gap-4'>
                     <AnimationOnScroll
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             By accessing this Website, accessible from
                             https://www.1960token.com/, you are agreeing to be
                             bound by these Website Terms and Conditions of Use
@@ -37,7 +38,7 @@ function TermsAndConditions() {
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             1960Token has not reviewed all of the sites linked
                             to its Website and is not responsible for the
                             contents of any such linked site. The presence of
@@ -50,7 +51,7 @@ function TermsAndConditions() {
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             1960Token may revise these Terms of Use for its
                             Website at any time without prior notice. By using
                             this Website, you are agreeing to be bound by the
@@ -62,7 +63,7 @@ function TermsAndConditions() {
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             All the materials on 1960Token Website are provided
                             "as is". 1960Token makes no warranties, may it be
                             expressed or implied, therefore negates all other
@@ -77,7 +78,7 @@ function TermsAndConditions() {
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             1960Token or its suppliers will not be hold
                             accountable for any damages that will arise with the
                             use or inability to use the materials on 1960Token
@@ -94,7 +95,7 @@ function TermsAndConditions() {
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             The materials appearing on 1960Token Website may
                             include technical, typographical, or photographic
                             errors. 1960Token will not promise that any of the
@@ -109,23 +110,28 @@ function TermsAndConditions() {
                         animateOnce={true}
                         animateIn='animate__slideInDown'
                     >
-                        <li>
+                        <li className='text-justify'>
                             Any claim related to 1960Token Website shall be
                             governed by the laws without regards to its conflict
                             of law provisions.{' '}
                         </li>
                     </AnimationOnScroll>
                 </ol>
+
                 <AnimationOnScroll
                     animateOnce={true}
                     animateIn='animate__slideInDown'
                 >
-                    <h3 className='font-semibold text-2xl'>Social Handles</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Telegram</li>
-                        <li>Youtube</li>
-                    </ul>
+                    <div className='grid justify-center justify-items-center'>
+                        <h3 className='font-semibold text-2xl'>
+                            Social Handles
+                        </h3>
+                        <ul className='flex list-disc justify-evenly min-w-90'>
+                            <li className='text-justify'>Facebook</li>
+                            <li className='text-justify'>Telegram</li>
+                            <li className='text-justify'>Youtube</li>
+                        </ul>
+                    </div>
                 </AnimationOnScroll>
             </div>
         </div>
