@@ -3,15 +3,17 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 function TermsAndConditions() {
     return (
-        <div className='grid justify-center mt-10 gap-5 pb-10 px-4'>
+        <div className='grid justify-center mt-10 gap-5 pb-10 px-4 md:mx-20'>
             <AnimationOnScroll
                 animateOnce={true}
                 animateIn='animate__slideInDown'
             >
                 <h1 className='text-center px-2 py-5 text-3xl font-semibold mb-5 uppercase '>
                     Terms and Conditions
+                    <span className=' text-sm block capitalize'>
+                        1960Token Terms and Conditions of Use
+                    </span>
                 </h1>
-                <p className='text-sm'>1960Token Terms and Conditions of Use</p>
             </AnimationOnScroll>
             <div className='grid'>
                 <ol className='list-decimal list-inside'>
