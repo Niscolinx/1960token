@@ -13,7 +13,7 @@ function FAQ() {
                     Question and Answers
                 </h1>
             </AnimationOnScroll>
-            <div className='grid'>
+            <div className='grid gap-4'>
                 <AnimationOnScroll
                     animateOnce={true}
                     animateIn='animate__slideInDown'
@@ -36,101 +36,187 @@ function FAQ() {
                         </p>
                     </AnimationOnScroll>
                 </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            2. Can I change my email address?
+                        </h4>
+                        <p>No, Message us via our contact form, to know more</p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            3. Can I open more than one account?
+                        </h4>
+                        <p>
+                            You can open one account (in the fiat currency of
+                            your choice) with your email address or via your
+                            Apple, or Google logins. You can also add
+                            cryptocurrencies to your profile.
+                        </p>
+                    </AnimationOnScroll>
+                </div>
             </div>
-
-            <div className='grid'>
+            <div className='grid gap-4'>
                 <AnimationOnScroll
                     animateOnce={true}
                     animateIn='animate__slideInDown'
                 >
                     <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
-                        Cookies{' '}
+                        Account
                     </h2>
                 </AnimationOnScroll>
-                <p className='text-justify'>
-                    Cookies are small text files stored on computer drives and
-                    are widely used in order to make websites work and to
-                    improve the user experience. All recent versions of browsers
-                    give the client a level of control over cookies. The client
-                    can delete all cookies that are already on the client's
-                    computer, and the browser can be set to prevent them from
-                    being placed. However, if the client chooses not to receive
-                    the Company's cookies, the full usability of the Company's
-                    website may be adversely affected.
-                </p>
-                <p className='text-justify'>
-                    The client should note that the Company's website generates
-                    log files that record the IP addresses of accesses to the
-                    client's account, login attempts, and device information
-                    such as the manufacturer, model, operating system, and
-                    browser. This information is gathered for the sole purpose
-                    of providing assistance with investigating a client's
-                    account in the unlikely event that the account is accessed
-                    by unauthorised users. Information supplied by some cookies
-                    also helps the Company understand how visitors use the
-                    website, so that the Company can improve how it presents its
-                    content.
-                </p>
-                <p className='text-justify'>
-                    The Company's cookies are not deemed dangerous and cannot
-                    access any other information on the client's computer.
-                </p>
-                <p className='text-justify'>
-                    To provide the client with a better experience, some of the
-                    services offered by Binary.com may require permission to
-                    access the client's cloud storage services, such as Google
-                    Drive. In such instances
-                </p>
-                <ul className='list-decimal list-inside mt-5 grid gap-4'>
-                    <li>
-                        The Company does not store any data related to the
-                        client's cloud storage service on any of the Company's
-                        servers. All files are downloaded on the client's local
-                        machines.{' '}
-                    </li>
-                    <li>
-                        The Company does not share any data related to the
-                        client's cloud storage service with anyone
-                    </li>
-                    <li>
-                        The Company only accesses the client's cloud storage
-                        when the client's action initiates it. Clients can
-                        disconnect their storage service at any time
-                    </li>
-                </ul>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            1. How can I change my personal details?
+                        </h4>
+                        <p>
+                            You can do so at the Personal Profile page. If that
+                            doesn't work, please message us using the contact us
+                            page, you may need you to send us some documents for
+                            verification.
+                        </p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            2. How can I check my login details?
+                        </h4>
+                        <p>Kindly refer to your account’s Profile </p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            3. forgot my password. What should I do?
+                        </h4>
+                        <p>
+                            You can reset both your 1960token.com login password
+                            and your App password by clicking on the Re-set
+                            Password. Then follow the instruction.
+                        </p>
+                    </AnimationOnScroll>
+                </div>
             </div>
-
-            <div className='grid'>
+            <div className='grid gap-4'>
                 <AnimationOnScroll
                     animateOnce={true}
                     animateIn='animate__slideInDown'
                 >
-                    <h2 className='text-center font-semibold text-2xl grad p-2'>
-                        Notification of Changes
+                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
+                        Deposit and Withdrawal
                     </h2>
                 </AnimationOnScroll>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            1. Can I change the time zone on your website?
+                        </h4>
+                        <p>
+                            No, it can't be changed. However, your local time is
+                            shown when you hover over the time on our website:{' '}
+                        </p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            2. Can I change my email address?
+                        </h4>
+                        <p>No, Message us via our contact form, to know more</p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            3. Can I open more than one account?
+                        </h4>
+                        <p>
+                            You can open one account (in the fiat currency of
+                            your choice) with your email address or via your
+                            Apple, or Google logins. You can also add
+                            cryptocurrencies to your profile.
+                        </p>
+                    </AnimationOnScroll>
+                </div>
+            </div>
+            <div className='grid gap-4'>
                 <AnimationOnScroll
                     animateOnce={true}
-                    animateIn='animate__zoomInLeft'
+                    animateIn='animate__slideInDown'
                 >
-                    <>
-                        <p className='text-justify'>
-                            Any changes in the Company's privacy policy or
-                            security statement will be posted on this website.
-                            For any material changes that directly affect the
-                            economic use of the client's personal information,
-                            the Company will request the client's prior
-                            authorisation in writing before effecting such
-                            changes on the client's account.
-                        </p>
-                        <p className='text-justify'>
-                            The client also has the right to request that the
-                            Company inform the client about the personal data
-                            that the Company processes about the client and to
-                            provide its correction where necessary.
-                        </p>
-                    </>
+                    <h2 className='text-center font-semibold text-2xl grad p-2 uppercase'>
+                        General
+                    </h2>
                 </AnimationOnScroll>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            1. Can I change the time zone on your website?
+                        </h4>
+                        <p>
+                            No, it can't be changed. However, your local time is
+                            shown when you hover over the time on our website:{' '}
+                        </p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            2. Can I change my email address?
+                        </h4>
+                        <p>No, Message us via our contact form, to know more</p>
+                    </AnimationOnScroll>
+                </div>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            3. Can I open more than one account?
+                        </h4>
+                        <p>
+                            You can open one account (in the fiat currency of
+                            your choice) with your email address or via your
+                            Apple, or Google logins. You can also add
+                            cryptocurrencies to your profile.
+                        </p>
+                    </AnimationOnScroll>
+                </div>
             </div>
         </div>
     )
