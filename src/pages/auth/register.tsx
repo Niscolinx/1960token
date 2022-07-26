@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 
@@ -147,7 +148,7 @@ const Register = () => {
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 grid m-2'
                 onSubmit={handleSubmit}
             >
-                <div className='grid text-gray-700 mb-10 gap-4'>
+                <div className='grid text-gray-700 mb-10 gap-2'>
                     <h3 className='text-2xl font-bold capitalize'>
                         Welcome to 1960Token!
                     </h3>
@@ -287,6 +288,10 @@ const Register = () => {
                         value={referral}
                         onChange={changeHandler}
                     />
+                </div>
+                <div className="grid">
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <label htmlFor="checkbox">I agree to the <Link href="terms-and-conditions">terms and conditions</Link></label>
                 </div>
 
                 <button
