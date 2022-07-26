@@ -10,7 +10,7 @@ function FAQ() {
                 animateIn='animate__slideInDown'
             >
                 <h1 className='text-center px-2 py-5 text-3xl font-semibold mb-5 uppercase '>
-                    FAQ
+                    Question and Answers
                 </h1>
             </AnimationOnScroll>
             <div className='grid'>
@@ -22,14 +22,20 @@ function FAQ() {
                         General
                     </h2>
                 </AnimationOnScroll>
-                <p className='text-justify'>
-                    The Company recognises the importance of protecting the
-                    client's personal and financial information. All the
-                    information that the Company obtains about the client
-                    assists the Company in servicing the client and the client's
-                    account. The Company knows that the client may be concerned
-                    about what the Company does with this information
-                </p>
+                <div className='grid'>
+                    <AnimationOnScroll
+                        animateOnce={true}
+                        animateIn='animate__slideInDown'
+                    >
+                        <h4 className='font-semibold text-xl capitalize'>
+                            1. Can I change the time zone on your website?
+                        </h4>
+                        <p>
+                            No, it can't be changed. However, your local time is
+                            shown when you hover over the time on our website:{' '}
+                        </p>
+                    </AnimationOnScroll>
+                </div>
             </div>
 
             <div className='grid'>
