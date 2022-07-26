@@ -75,7 +75,7 @@ function PrivacyPolicy() {
                     access the client's cloud storage services, such as Google
                     Drive. In such instances
                 </p>
-                <ul className='list-decimal list-inside'>
+                <ul className='list-decimal list-inside mt-5 grid gap-4'>
                     <li>
                         The Company does not store any data related to the
                         client's cloud storage service on any of the Company's
