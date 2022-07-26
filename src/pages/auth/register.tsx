@@ -289,9 +289,9 @@ const Register = () => {
                         onChange={changeHandler}
                     />
                 </div>
-                <div className="grid">
-                    <input type="checkbox" name="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">I agree to the <Link href="terms-and-conditions">terms and conditions</Link></label>
+                <div className="flex gap-3 justify-center mb-3">
+                    <input type="checkbox" name="checkbox" id="checkbox" className='text-white' required/>
+                    <label htmlFor="checkbox" className='text-gray-700'>I agree to the <Link href="/terms-and-conditions">terms and conditions</Link></label>
                 </div>
 
                 <button
