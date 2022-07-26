@@ -41,12 +41,56 @@ function PrivacyPolicy() {
                     </h2>
                 </AnimationOnScroll>
                 <p className='text-justify'>
-                    1960Token Mission is to create the best Mining and Affiliate
-                    experience for all her clients alike Miners to focus more on
-                    their Mining. 1960Token is dedicated to offering her client
-                    superior service. And 1960Token has been created with miners
-                    in mind.
+                    Cookies are small text files stored on computer drives and
+                    are widely used in order to make websites work and to
+                    improve the user experience. All recent versions of browsers
+                    give the client a level of control over cookies. The client
+                    can delete all cookies that are already on the client's
+                    computer, and the browser can be set to prevent them from
+                    being placed. However, if the client chooses not to receive
+                    the Company's cookies, the full usability of the Company's
+                    website may be adversely affected.
                 </p>
+                <p className='text-justify'>
+                    The client should note that the Company's website generates
+                    log files that record the IP addresses of accesses to the
+                    client's account, login attempts, and device information
+                    such as the manufacturer, model, operating system, and
+                    browser. This information is gathered for the sole purpose
+                    of providing assistance with investigating a client's
+                    account in the unlikely event that the account is accessed
+                    by unauthorised users. Information supplied by some cookies
+                    also helps the Company understand how visitors use the
+                    website, so that the Company can improve how it presents its
+                    content.
+                </p>
+                <p className='text-justify'>
+                    The Company's cookies are not deemed dangerous and cannot
+                    access any other information on the client's computer.
+                </p>
+                <p className='text-justify'>
+                    To provide the client with a better experience, some of the
+                    services offered by Binary.com may require permission to
+                    access the client's cloud storage services, such as Google
+                    Drive. In such instances
+                </p>
+                <ul className='list-decimal list-inside'>
+                    <li>
+                        The Company does not store any data related to the
+                        client's cloud storage service on any of the Company's
+                        servers. All files are downloaded on the client's local
+                        machines.{' '}
+                    </li>
+                    <li>
+                        The Company does not share any data related to the
+                        client's cloud storage service with anyone
+                    </li>
+                    <li>
+                        The Company only accesses the client's cloud storage
+                        when the client's action initiates it. Clients can
+                        disconnect their storage service at any time
+                    </li>
+                </ul>
             </div>
             <div className='grid'>
                 <h3>Core Values</h3>
