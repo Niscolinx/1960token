@@ -142,11 +142,20 @@ const Register = () => {
 
     return (
         <div className='w-full md:w-1/3 mx-auto'>
+            
             <form
                 id='register'
                 className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 grid m-2'
                 onSubmit={handleSubmit}
             >
+                <div className="grid">
+                    <h3>
+                        Welcome to 1960Token!
+                    </h3>
+                    <p>
+                        Make sure you use a strong password and keep it away from others
+                    </p>
+                </div>
                 <div className='mb-4'>
                     <p
                         className={`${messageDisplay} ${message?.style} text-sm text-center mb-5`}
