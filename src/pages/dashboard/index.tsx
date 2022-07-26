@@ -126,6 +126,7 @@ const Home = () => {
         .then(({ data }) => {
             setActivateLoading(false)
             setIsVerified(true)
+            
             console.log({ data })            
             })
             .catch((err) => {
