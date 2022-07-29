@@ -172,7 +172,7 @@ const Home = () => {
                         Account
                     </h3>
                     <div className='grid mt-4 grid-cols-tc gap-3'>
-                        <Link href='/'>
+                        <Link href='/dashboard/vendors'>
                             <div className='grid justify-center place-items-center'>
                                 <ImProfile className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
