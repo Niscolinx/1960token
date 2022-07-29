@@ -1,4 +1,5 @@
 import React from 'react'
+import {BsFillSunFill} from 'react-icons/bs'
 
 
 const VENDORS = [
@@ -25,14 +26,14 @@ function vendors() {
           <div className='grid overflow-scroll max-h-[70vh]'>
               <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
                   <caption className='font-semibold text-lg py-5'>
-                      Transaction History
+                    Vendors
                   </caption>
                   <colgroup>
-                      <col className='w-40 min-w-30' span={5} />
+                      <col className='w-40 min-w-30' />
                   </colgroup>
                   <thead>
                       <tr className='mb-10'>
-                          <th rowSpan={4}>No</th>
+                          <th>No</th>
                           <th>Name</th>
                           <th>Contact</th>
                       </tr>
@@ -42,7 +43,7 @@ function vendors() {
                           return (
                               <tr key={i} className='mx-4 py-2'>
                                   <td>{i + 1}</td>
-                                  <td>{value.name}</td>
+                                  <td> <BsFillSunFill/> {value.name}</td>
                                   <td>{value.contact}</td>
                                  
                               </tr>
