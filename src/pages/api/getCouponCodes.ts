@@ -6,16 +6,13 @@ export default async function storeGeneratedCode(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const { code } = req.body
-
     try {
         await dbConnect()
 
         const generatedCodes = await GeneratedCode.find()
 
-        //return res.status(200).json(generatedCode)
+        return res.status(200).json(generatedCodes)
     } catch (err) {
-        console.log({ err })
         res.status(400).json('error')
     }
 }

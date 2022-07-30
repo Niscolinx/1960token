@@ -24,6 +24,7 @@ const VENDORS = [
 function index() {
     const [generatedCode, setGeneratedCode] = useState('')
     const [loading, setLoading] = useState(false)
+    const [coupons, setCoupons] = useState([])
 
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
@@ -55,6 +56,16 @@ function index() {
                 setLoading(false)
             })
     }
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data } = await axios.get('/api/getCouponCodes')
+            setCoupons(data.code)
+        }
+        fetchData()
+    }, [])
+
+    console.log({coupons})
 
     return (
         <div className='h-[100vh] py-5 px-8'>
@@ -109,15 +120,12 @@ function index() {
                                     <td>{i + 1}</td>
                                     <td>
                                         <div className='div flex items-center text-xl place-content-center'>
-                                          
                                             <p className='capitalize'>
                                                 {value.name}
                                             </p>
                                         </div>
                                     </td>
-                                    <td>
-                                        hello
-                                    </td>
+                                    <td>hello</td>
                                 </tr>
                             )
                         })}
@@ -146,4 +154,3 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         },
     }
 }
-
