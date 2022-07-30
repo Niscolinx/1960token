@@ -65,7 +65,8 @@ const Index = () => {
         console.log(e.currentTarget)
 
        // e.currentTarget.style.transition = 'all 0.5s ease-in-out'
-        e.currentTarget.style.transform = `translateX('-13rem')`
+       e.currentTarget.style.width = '25rem'
+       e.currentTarget.style.transform = 'translateX(-13rem)'
         // e.currentTarget.style.animation = 'moveInLeft'
       //  e.currentTarget.classList.add('animateMoveOutLeft')
 
@@ -204,7 +205,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className='flex bg-red-500 place-content-center transition-all delay-75 ease-out'
+                            className='flex bg-[#1a1a2d] place-content-center transition-all delay-75 ease-out'
                             onClick={handleTransition}
                         >
                             <div
