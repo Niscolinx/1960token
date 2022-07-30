@@ -32,6 +32,8 @@ const Index = () => {
     const [stepsNeu, setStepsNeu] = useState<{}>()
     const [checking, setChecking] = useState<boolean>(false)
     const [coupon, setCoupon] = useState('')
+    const [couponError, setCouponError] = useState<boolean>(false)
+    const [couponMessage, setCouponMessage] = useState<string>('')
     const [isChecked, setIsChecked] = useState(true)
 
     useEffect(() => {
@@ -249,6 +251,8 @@ const Index = () => {
                                 >
                                     <AiOutlineDeleteRow className='self-center text-xl font-bold' />
                                 </div>
+                                <div className="flex">
+
                                 <input
                                     type='text'
                                     placeholder='Enter Coupon Code'
@@ -256,7 +260,9 @@ const Index = () => {
                                     maxLength={6}
                                     onChange={(e) => setCoupon(e.target.value)}
                                     className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
-                                />
+                                    />
+                                    <span className={`${couponError ? 'bg-red-500' : 'bg-green-400'}`}>{couponMessage}</span>
+                                    </div>
                                 <button
                                     className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 w-max'
                                     type='submit'
