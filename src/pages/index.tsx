@@ -5,6 +5,7 @@ import dbConnect from '../lib/dbConnect'
 import { GiTeamDowngrade } from 'react-icons/gi'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
+import {AiFillCodepenCircle} from 'react-icons/ai'
 import Logo from '../../public/logo.svg'
 import Image from 'next/image'
 import {
@@ -160,7 +161,6 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        
 
                         <Link href='/Faq'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -181,6 +181,17 @@ const Index = () => {
                                     style={neuToUse}
                                 >
                                     Customer Service
+                                </button>
+                            </div>
+                        </Link>
+                        <Link href='/customerService'>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
+                                <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                                <button
+                                    className='text-md p-1'
+                                    style={neuToUse}
+                                >
+                                    Code Check
                                 </button>
                             </div>
                         </Link>
