@@ -124,7 +124,7 @@ function index({ couponCodes }: Props) {
                                             >
                                                 {value.isUsed
                                                     ? 'Used'
-                                                    : 'Active'}
+                                                    : 'Valid'}
                                             </span>
                                         </td>
                                         <td>
@@ -150,7 +150,6 @@ function index({ couponCodes }: Props) {
                                                     .toLocaleString('en-GB', {
                                                         dateStyle: 'medium',
                                                         timeStyle: 'medium',
-                                                        //24 hour time
                                                         hour12: true,
                                                     })
                                                     .toString()}
