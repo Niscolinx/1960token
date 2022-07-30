@@ -63,9 +63,10 @@ const Index = () => {
         }
     }, [theme])
 
-    const handleTransition = (e: any) => {
-        e.target.style.transition = 'all 0.5s ease-in-out'
-        e.target.style.transform = 'translateX(-10rem)'
+    const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
+        // e.currentTarget.style.background = 'red'
+        // e.target.style.transition = 'all 0.5s ease-in-out'
+        e.currentTarget.style.transform = 'translateX(-10rem)'
     }
 
     return (
@@ -195,11 +196,8 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <div
-                            className='grid justify-center place-items-center cursor-pointer'
-                            onClick={handleTransition}
-                        >
-                            <>
+                        <div className='grid' onClick={handleTransition}>
+                            <div className='grid justify-center place-items-center cursor-pointer'>
                                 <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-md p-1'
@@ -207,7 +205,7 @@ const Index = () => {
                                 >
                                     Code Check
                                 </button>
-                            </>
+                            </div>
                         </div>
                     </div>
                 </div>
