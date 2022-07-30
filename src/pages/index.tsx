@@ -34,6 +34,7 @@ const Index = () => {
     const [stepsNeu, setStepsNeu] = useState<{}>()
     const [loading, setLoading] = useState<boolean>(false)
     const [coupon, setCoupon] = useState('')
+    const [isChecked, setIsChecked] = useState(false)
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -204,7 +205,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className='flex bg-[#1a1a2d]'
+                            className='flex bg-[#1a1a2d] place-content-center'
                             onClick={handleTransition}
                         >
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -217,7 +218,7 @@ const Index = () => {
                                 </button>
                             </div>
                             <form
-                                className='flex justify-center align-middle gap-2'
+                                className='flex justify-center align-middle gap-2 place-self-center'
                                 onSubmit={handleCheckCode}
                             >
                                 <input
@@ -228,7 +229,7 @@ const Index = () => {
                                     className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                                 />
                                 <button
-                                    className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'
+                                    className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 w-max'
                                     type='submit'
                                 >
                                     {loading
