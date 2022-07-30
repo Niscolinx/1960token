@@ -19,6 +19,7 @@ function index({ couponCodes }: Props) {
     const [generatedCode, setGeneratedCode] = useState('')
     const [loading, setLoading] = useState(false)
     const [coupons, setCoupons] = useState<Coupon[] | null>([])
+    const [copied, setCopied] = useState(false)
 
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
@@ -91,8 +92,9 @@ function index({ couponCodes }: Props) {
                         Coupon Codes
                     </caption>
                     <colgroup>
+                        <col className='min-w-15' />
                         <col className='min-w-20' />
-                        <col className='min-w-20' />
+                        <col className='min-w-30' />
                         <col className='min-w-40' />
                     </colgroup>
                     <thead>
@@ -110,16 +112,29 @@ function index({ couponCodes }: Props) {
                                     <tr key={i} className='mx-4 py-2'>
                                         <td>{i + 1}</td>
                                         <td>{value.isUsed.toString()}</td>
-                                        <td>{value.code}</td>
                                         <td>
-                                            {new Date(value.createdAt)
-                                                .toLocaleString('en-GB', {
-                                                    dateStyle: 'medium',
-                                                    timeStyle: 'medium',
-                                                    //24 hour time
-                                                    hour12: true,
-                                                })
-                                                .toString()}
+                                            <div className='grid'>
+                                                {value.code}
+                                                <CopyToClipboard
+                                                    text={value.code}
+                                                >
+                                                    <button className='bg-green-500 rounded-lg py-1 px-3  justify-self-center place-self-end'>
+                                                        Copy Code
+                                                    </button>
+                                                </CopyToClipboard>{' '}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className='flex px-2'>
+                                                {new Date(value.createdAt)
+                                                    .toLocaleString('en-GB', {
+                                                        dateStyle: 'medium',
+                                                        timeStyle: 'medium',
+                                                        //24 hour time
+                                                        hour12: true,
+                                                    })
+                                                    .toString()}
+                                            </div>
                                         </td>
                                     </tr>
                                 )
