@@ -1,7 +1,6 @@
 import React from 'react'
 import { BsFillSunFill } from 'react-icons/bs'
 import { RiWhatsappFill } from 'react-icons/ri'
-import Link from 'next/link'
 
 const VENDORS = [
     { name: 'vendor1', contact: '+234234234231' },
@@ -26,11 +25,13 @@ function vendors() {
         <div className='min-h-[80vh]'>
             <div className='grid overflow-scroll max-h-[70vh]'>
                 <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
-                    <caption className='font-semibold text-lg py-5'>
+                    <caption className='font-bold text-lg py-5 uppercase'>
                         Vendors
                     </caption>
                     <colgroup>
-                        <col className='min-w-15' />
+                        <col className='min-w-20' />
+                        <col className='min-w-40' />
+                        <col className='min-w-20' />
                     </colgroup>
                     <thead>
                         <tr className='mb-10'>
@@ -45,20 +46,20 @@ function vendors() {
                                 <tr key={i} className='mx-4 py-2'>
                                     <td>{i + 1}</td>
                                     <td>
-                                        <div className='div flex items-center text-2xl'>
+                                        <div className='div flex items-center text-xl place-content-center'>
                                             <BsFillSunFill className='text-orange-300 flex self-center' />{' '}
-                                            <p className=' capitalize'>
+                                            <p className='capitalize'>
                                                 {value.name}
                                             </p>
                                         </div>
                                     </td>
                                     <td>
-                                        <Link
+                                        <a
                                             href={`https://wa.me/${value.contact}`}
                                             target='_blank'
                                         >
                                             <RiWhatsappFill className='text-[#25D366] text-2xl' />
-                                        </Link>
+                                        </a>
                                     </td>
                                 </tr>
                             )
