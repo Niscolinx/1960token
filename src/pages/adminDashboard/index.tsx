@@ -124,7 +124,7 @@ function index({ couponCodes }: Props) {
                                             >
                                                 {value.isUsed
                                                     ? 'Used'
-                                                    : 'Unused'}
+                                                    : 'Active'}
                                             </span>
                                         </td>
                                         <td>
