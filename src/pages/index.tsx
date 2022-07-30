@@ -64,7 +64,7 @@ const Index = () => {
     const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
         console.log(e.currentTarget)
 
-       e.currentTarget.style.transition = 'all 0.5s ease-in-out'
+       e.currentTarget.style.animation = 'animateMoveOutLeft'
        e.currentTarget.style.width = '25rem'
        e.currentTarget.style.transform = 'translateX(-13rem)'
         // e.currentTarget.style.animation = 'moveInLeft'
@@ -222,7 +222,7 @@ const Index = () => {
                                 </button>
                             </div>
                             <form
-                                className={`flex justify-center align-middle gap-2 transition-all delay-75 ease-in-out place-self-center ${
+                                className={`flex justify-center align-middle gap-2  place-self-center ${
                                     isChecked ? 'visible' : 'hidden'
                                 }`}
                                 onSubmit={handleCheckCode}
