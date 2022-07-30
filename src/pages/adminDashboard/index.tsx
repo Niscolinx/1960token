@@ -144,8 +144,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         }
     }
 
-    const res = await fetch(`${serverUrl}/api/getCouponCodes`)
-    const coupons = await res.json()
+    const res = await axios(`${serverUrl}/api/getCouponCodes`)
+    const coupons = await res.data
 
     return {
         props: {
