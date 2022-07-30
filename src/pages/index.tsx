@@ -24,6 +24,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import axios from 'axios'
 
 const Index = () => {
     const { theme } = useTheme()
@@ -62,15 +63,28 @@ const Index = () => {
         }
     }, [theme])
 
-    const showCouponCheck = (e: React.MouseEvent<HTMLInputElement>) => {
-        setIsChecked(!isChecked)
-
-        e.currentTarget.classList.toggle('animateMoveOutLeft')
-            
-    }
-
+   
     const handleCheckCode = (e: React.FormEvent) => {
         e.preventDefault()
+        setLoading(true)
+        const getUser = localStorage.getItem('userSession')
+        
+        if(!getUser) {
+            return
+        }
+        const user = JSON.parse(getUser)
+        
+        return axios
+        .post('/api/activateCoupon', {coupon, user})
+        .then(({ data }) => {
+            setLoading(false)
+            
+            console.log({ data })            
+            })
+            .catch((err) => {
+                console.log({ err })
+                setLoading(false)
+            })
     }
 
     console.log({ isChecked })
@@ -237,7 +251,7 @@ const Index = () => {
                                 </div>
                                 <input
                                     type='text'
-                                    placeholder='Coupon code'
+                                    placeholder='Enter Coupon Code'
                                     value={coupon}
                                     maxLength={6}
                                     onChange={(e) => setCoupon(e.target.value)}
