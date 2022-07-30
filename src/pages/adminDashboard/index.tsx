@@ -22,7 +22,11 @@ function index({ couponCodes }: Props) {
     const [copied, setCopied] = useState(false)
 
       useEffect(() => {
-          setCoupons(couponCodes)
+        const fetchData = async () => {
+            const res = await axios(`/api/getCouponCodes`)
+            setCoupons(res.data)
+        }
+        fetchData()
       }, [])
 
     //generate random numbers mixed with letters of length 6
@@ -178,13 +182,13 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         }
     }
 
-    const res = await axios(`${serverUrl}/api/getCouponCodes`)
-    const coupons = await res.data
+    // const res = await axios(`${serverUrl}/api/getCouponCodes`)
+    // const coupons = await res.data
 
     return {
         props: {
             isAuthenticated: true,
-            couponCodes: coupons,
+           // couponCodes: coupons,
         },
     }
 }
