@@ -156,9 +156,11 @@ function earn() {
                             animateIn='animate__slideInLeft'
                         >
                             <div className='grid bg-[#1a1a2d] dark:bg-gray-300 rounded p-2 '>
-                                <div className='grid text-white justify-center justify-items-center'>
+                                <div
+                                    className='grid text-white justify-center justify-items-center'
+                                    onClick={handleMineStart}
+                                >
                                     <GiTrade
-                                        onClick={handleMineStart}
                                         // className='text-white text-4xl'
                                         className={` cursor-pointer text-white dark:text-[#1a1a2d] text-4xl ${
                                             !isDim && miningStart
