@@ -10,7 +10,11 @@ type Coupon = {
     code: string
 }
 
-function index() {
+type Props = {
+    couponCodes: Coupon[]
+}
+
+function index({couponCodes}: Props) {
     const [generatedCode, setGeneratedCode] = useState('')
     const [loading, setLoading] = useState(false)
     const [coupons, setCoupons] = useState<Coupon[] | null>([])
@@ -47,11 +51,7 @@ function index() {
     }
 
     useEffect(() => {
-        const fetchData = async () => {
-            const { data } = await axios.get('/api/getCouponCodes')
-            setCoupons(data)
-        }
-        fetchData()
+        setCoupons(couponCodes)
     }, [])
 
     console.log({ coupons })
@@ -91,8 +91,8 @@ function index() {
                     </caption>
                     <colgroup>
                         <col className='min-w-20' />
-                        <col className='min-w-40' />
                         <col className='min-w-20' />
+                        <col className='min-w-40' />
                     </colgroup>
                     <thead>
                         <tr className='mb-10'>
@@ -110,7 +110,13 @@ function index() {
                                         <td>{i + 1}</td>
                                         <td>{value.isUsed.toString()}</td>
                                         <td>{value.code}</td>
-                                        <td>{value.createdAt}</td>
+                                        <td>{new Date(value.createdAt).toLocaleString('en-GB', {
+                                            dateStyle: 'medium',
+                                            timeStyle: 'medium',
+                                            //24 hour time
+                                            hour12: true
+                                           
+                                        }).toString()}</td>
                                     </tr>
                                 )
                             })}
@@ -133,9 +139,12 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
             },
         }
     }
+
+    const { data } = await axios.get('/api/getCouponCodes')
     return {
         props: {
             isAuthenticated: true,
+            couponCodes: data,
         },
     }
 }

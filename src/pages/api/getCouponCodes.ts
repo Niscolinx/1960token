@@ -9,7 +9,7 @@ export default async function storeGeneratedCode(
     try {
         await dbConnect()
 
-        const generatedCodes = await GeneratedCode.find()
+        const generatedCodes = await GeneratedCode.find().sort({createdAt: -1})
 
         return res.status(200).json(generatedCodes)
     } catch (err) {
