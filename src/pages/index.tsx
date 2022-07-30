@@ -64,7 +64,7 @@ const Index = () => {
     const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
         console.log(e.currentTarget)
 
-       // e.currentTarget.style.transition = 'all 0.5s ease-in-out'
+       e.currentTarget.style.transition = 'all 0.5s ease-in-out'
        e.currentTarget.style.width = '25rem'
        e.currentTarget.style.transform = 'translateX(-13rem)'
         // e.currentTarget.style.animation = 'moveInLeft'
@@ -231,6 +231,7 @@ const Index = () => {
                                     type='text'
                                     placeholder='Coupon code'
                                     value={coupon}
+                                    maxLength={6}
                                     onChange={(e) => setCoupon(e.target.value)}
                                     className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                                 />
