@@ -1,6 +1,5 @@
 import React, {
-    FormEvent,
-    HtmlHTMLAttributes,
+  
     useEffect,
     useState,
 } from 'react'
@@ -33,6 +32,8 @@ const Index = () => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [stepsNeu, setStepsNeu] = useState<{}>()
+    const [loading, setLoading] = useState<boolean>(false)
+    const [coupon, setCoupon] = useState('')
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -69,6 +70,10 @@ const Index = () => {
         e.currentTarget.style.transition = 'all 0.5s ease-in-out'
         e.currentTarget.style.transform = 'translateX(-13rem)'
         //e.currentTarget.style.width = '100rem'
+    }
+
+    const handleCheckCode = (e: React.FormEvent) => {
+        e.preventDefault()
     }
 
     return (
@@ -199,7 +204,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className='grid bg-[#1a1a2d] bg-red-300'
+                            className='grid bg-[#1a1a2d]'
                             onClick={handleTransition}
                         >
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -211,6 +216,26 @@ const Index = () => {
                                     Code Check
                                 </button>
                             </div>
+                            <form
+                                className='flex justify-center align-middle gap-2'
+                                onSubmit={handleCheckCode}
+                            >
+                                <input
+                                    type='text'
+                                    placeholder='Coupon code'
+                                    value={coupon}
+                                    onChange={(e) => setCoupon(e.target.value)}
+                                    className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
+                                />
+                                <button
+                                    className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1'
+                                    type='submit'
+                                >
+                                    {loading
+                                        ? 'Loading...'
+                                        : 'Activate'}
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
