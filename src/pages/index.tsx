@@ -1,8 +1,4 @@
-import React, {
-  
-    useEffect,
-    useState,
-} from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
@@ -68,11 +64,12 @@ const Index = () => {
     const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
         console.log(e.currentTarget)
 
-        e.currentTarget.style.transition = 'all 0.5s ease-in-out'
-        e.currentTarget.style.animation = 'moveInLeft'
-        
+       // e.currentTarget.style.transition = 'all 0.5s ease-in-out'
+        e.currentTarget.style.width = '-13rem'
+        // e.currentTarget.style.animation = 'moveInLeft'
+      //  e.currentTarget.classList.add('animateMoveOutLeft')
+
         setIsChecked(true)
-        //e.currentTarget.style.width = '100rem'
     }
 
     const handleCheckCode = (e: React.FormEvent) => {
@@ -207,10 +204,14 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className='flex bg-[#1a1a2d] place-content-center'
+                            className='flex bg-red-500 place-content-center transition-all delay-75 ease-out'
                             onClick={handleTransition}
                         >
-                            <div className='grid justify-center place-items-center cursor-pointer'>
+                            <div
+                                className={`grid justify-center place-items-center cursor-pointer transition-all delay-75 ease-out ${
+                                    isChecked ? 'hidden' : 'visible'
+                                }`}
+                            >
                                 <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-md p-1'
@@ -220,7 +221,9 @@ const Index = () => {
                                 </button>
                             </div>
                             <form
-                                className={`flex justify-center align-middle gap-2 transition-all delay-75 ease-in-out place-self-center ${isChecked ? 'visible' : 'hidden'}`}
+                                className={`flex justify-center align-middle gap-2 transition-all delay-75 ease-in-out place-self-center ${
+                                    isChecked ? 'visible' : 'hidden'
+                                }`}
                                 onSubmit={handleCheckCode}
                             >
                                 <input
@@ -234,9 +237,7 @@ const Index = () => {
                                     className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 w-max'
                                     type='submit'
                                 >
-                                    {loading
-                                        ? 'Loading...'
-                                        : 'Check Code'}
+                                    {loading ? 'Loading...' : 'Check Code'}
                                 </button>
                             </form>
                         </div>
