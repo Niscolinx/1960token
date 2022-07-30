@@ -84,7 +84,8 @@ const Index = () => {
             console.log({ data })            
             })
             .catch((err) => {
-                console.log({ err })
+                setCouponMessage('Invalid')
+                setCouponError(true)
                 setChecking(false)
             })
     }
