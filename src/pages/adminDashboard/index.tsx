@@ -2,6 +2,7 @@ import axios from 'axios'
 import { GetServerSidePropsContext } from 'next'
 import React, { useState, useEffect } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
+import { serverUrl } from '../../config'
 
 type Coupon = {
     _id: string
@@ -14,7 +15,7 @@ type Props = {
     couponCodes: Coupon[]
 }
 
-function index({couponCodes}: Props) {
+function index({ couponCodes }: Props) {
     const [generatedCode, setGeneratedCode] = useState('')
     const [loading, setLoading] = useState(false)
     const [coupons, setCoupons] = useState<Coupon[] | null>([])
@@ -110,13 +111,16 @@ function index({couponCodes}: Props) {
                                         <td>{i + 1}</td>
                                         <td>{value.isUsed.toString()}</td>
                                         <td>{value.code}</td>
-                                        <td>{new Date(value.createdAt).toLocaleString('en-GB', {
-                                            dateStyle: 'medium',
-                                            timeStyle: 'medium',
-                                            //24 hour time
-                                            hour12: true
-                                           
-                                        }).toString()}</td>
+                                        <td>
+                                            {new Date(value.createdAt)
+                                                .toLocaleString('en-GB', {
+                                                    dateStyle: 'medium',
+                                                    timeStyle: 'medium',
+                                                    //24 hour time
+                                                    hour12: true,
+                                                })
+                                                .toString()}
+                                        </td>
                                     </tr>
                                 )
                             })}
@@ -140,20 +144,13 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         }
     }
 
-    const coupons = await fetch(`/api/getCouponCodes`, {
-        method: 'GET'
-            })
-            .then((res) => res.json())
-            .then((data) => {
-                return data
-            })
+    const res = await fetch(`${serverUrl}/api/getCouponCodes`)
+    const coupons = await res.json()
 
-    
-    
     return {
         props: {
             isAuthenticated: true,
-          couponCodes: coupons,
+            couponCodes: coupons,
         },
     }
 }
