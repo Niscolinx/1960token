@@ -34,7 +34,7 @@ const Index = () => {
     const [coupon, setCoupon] = useState('')
     const [couponError, setCouponError] = useState<boolean>(false)
     const [couponMessage, setCouponMessage] = useState<string>('')
-    const [isChecked, setIsChecked] = useState(true)
+    const [isChecked, setIsChecked] = useState(false)
 
     useEffect(() => {
         if (theme === 'dark') {
