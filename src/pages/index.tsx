@@ -65,23 +65,24 @@ const Index = () => {
         }
     }, [theme])
 
-   
     const handleCheckCode = (e: React.FormEvent) => {
         e.preventDefault()
         setChecking(true)
+        setCouponMessage('')
         const getUser = localStorage.getItem('userSession')
-        
-        if(!getUser) {
+
+        if (!getUser) {
             return
         }
         const user = JSON.parse(getUser)
-        
+
         return axios
-        .post('/api/activateCoupon', {coupon, user, toCheck: true})
-        .then(({ data }) => {
-            setChecking(false)
-            
-            console.log({ data })            
+            .post('/api/activateCoupon', { coupon, user, toCheck: true })
+            .then(({ data }) => {
+                setChecking(false)
+                setCouponError(false)
+                setCouponMessage('Valid')
+                console.log({ data })
             })
             .catch((err) => {
                 setCouponMessage('Invalid')
@@ -252,18 +253,28 @@ const Index = () => {
                                 >
                                     <AiOutlineDeleteRow className='self-center text-xl font-bold' />
                                 </div>
-                                <div className="flex">
-
-                                <input
-                                    type='text'
-                                    placeholder='Enter Coupon Code'
-                                    value={coupon}
-                                    maxLength={6}
-                                    onChange={(e) => setCoupon(e.target.value)}
-                                    className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
+                                <div className='flex relative items-center'>
+                                    <input
+                                        type='text'
+                                        placeholder='Enter Coupon Code'
+                                        value={coupon}
+                                        maxLength={6}
+                                        onChange={(e) => {
+                                            setCouponMessage('')
+                                            setCoupon(e.target.value)
+                                        }}
+                                        className='rounded-lg shadow appearance-none border rounded py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#d1d1db]'
                                     />
-                                    <span className={`${couponError ? 'bg-red-500' : 'bg-green-400'}`}>{couponMessage}</span>
-                                    </div>
+                                    <span
+                                        className={`absolute right-0 px-2 flex items-center text-white ${
+                                            couponError
+                                                ? 'bg-red-500'
+                                                : 'bg-green-700'
+                                        }`}
+                                    >
+                                        {couponMessage}
+                                    </span>
+                                </div>
                                 <button
                                     className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 w-max'
                                     type='submit'
