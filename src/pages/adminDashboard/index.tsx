@@ -3,12 +3,11 @@ import { GetServerSidePropsContext } from 'next'
 import React, { useState, useEffect } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
-
 type Coupon = {
-    _id: string,
-    isUsed: boolean,
-    createdAt: string,
-    code: string,
+    _id: string
+    isUsed: boolean
+    createdAt: string
+    code: string
 }
 
 function index() {
@@ -51,16 +50,15 @@ function index() {
         const fetchData = async () => {
             const { data } = await axios.get('/api/getCouponCodes')
             setCoupons(data)
-            
         }
         fetchData()
     }, [])
 
-    console.log({coupons})
+    console.log({ coupons })
 
     return (
-        <div className='h-[100vh] py-5 px-8'>
-            <h1 className='text-lg font-bold'>Welcome Admin</h1>
+        <div className='h-[100vh] py-5 px-2'>
+            <h1 className='text-lg font-bold mb-5'>Welcome Admin</h1>
             <div className='grid mt-5'>
                 <div className='grid gap-2'>
                     {generatedCode.length > 0 ? (
@@ -86,10 +84,10 @@ function index() {
                     </button>
                 </div>
             </div>
-            <div className='grid overflow-scroll max-h-[70vh]'>
-                <table className='border border-gray-700 transaction-table mx-5 md:mx-auto'>
+            <div className='grid overflow-scroll max-h-[70vh] mt-10'>
+                <table className='border border-gray-700 transaction-table md:mx-auto'>
                     <caption className='font-bold text-lg py-5 uppercase'>
-                        Vendors
+                        Coupon Codes
                     </caption>
                     <colgroup>
                         <col className='min-w-20' />
@@ -99,27 +97,23 @@ function index() {
                     <thead>
                         <tr className='mb-10'>
                             <th>No</th>
-                            <th>Coupon</th>
                             <th>Status</th>
+                            <th>Coupon</th>
                             <th>Date</th>
                         </tr>
                     </thead>
                     <tbody className='text-center'>
-                        {coupons && coupons.map((value, i) => {
-                            return (
-                                <tr key={i} className='mx-4 py-2'>
-                                    <td>{i + 1}</td>
-                                    <td>
-                                        <div className='div flex items-center text-xl place-content-center'>
-                                            <p className='capitalize'>
-                                                {}
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td>hello</td>
-                                </tr>
-                            )
-                        })}
+                        {coupons &&
+                            coupons.map((value, i) => {
+                                return (
+                                    <tr key={i} className='mx-4 py-2'>
+                                        <td>{i + 1}</td>
+                                        <td>{value.isUsed.toString()}</td>
+                                        <td>{value.code}</td>
+                                        <td>{value.createdAt}</td>
+                                    </tr>
+                                )
+                            })}
                     </tbody>
                 </table>
             </div>
