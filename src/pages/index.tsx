@@ -203,14 +203,14 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className={`flex bg-[#1a1a2d] place-content-center transition-all delay-75 ease-out ${
+                            className={`flex bg-[#1a1a2d] place-content-center transition-transform delay-75 ease-in ${
                                 isChecked
                                     ? 'animateMoveOutLeft'
                                     : 'animateMoveOutRight'
                             }`}
                         >
                             <div
-                                className={`grid justify-center place-items-center cursor-pointer transition-all delay-75 ease-out ${
+                                className={`grid justify-center place-items-center cursor-pointer ${
                                     isChecked ? 'hidden' : 'visible'
                                 }`}
                                 onClick={() => setIsChecked(true)}
@@ -220,7 +220,7 @@ const Index = () => {
                                     className='text-md p-1'
                                     style={neuToUse}
                                 >
-                                    Code Check
+                                    Check Code
                                 </button>
                             </div>
                             <form
