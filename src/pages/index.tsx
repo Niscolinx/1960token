@@ -32,7 +32,7 @@ const Index = () => {
     const [stepsNeu, setStepsNeu] = useState<{}>()
     const [checking, setChecking] = useState<boolean>(false)
     const [coupon, setCoupon] = useState('')
-    const [isChecked, setIsChecked] = useState(false)
+    const [isChecked, setIsChecked] = useState(true)
 
     useEffect(() => {
         if (theme === 'dark') {
