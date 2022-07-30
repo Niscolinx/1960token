@@ -62,12 +62,11 @@ const Index = () => {
         }
     }, [theme])
 
-    const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
+    const showCouponCheck = (e: React.MouseEvent<HTMLInputElement>) => {
         setIsChecked(!isChecked)
 
-        isChecked
-            ? e.currentTarget.classList.add('animateMoveOutLeft')
-            : e.currentTarget.classList.remove('animateMoveOutLeft')
+        e.currentTarget.classList.toggle('animateMoveOutLeft')
+            
     }
 
     const handleCheckCode = (e: React.FormEvent) => {
@@ -204,13 +203,17 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className='flex bg-[#1a1a2d] place-content-center transition-all delay-75 ease-out'
-                            onClick={handleTransition}
+                            className={`flex bg-[#1a1a2d] place-content-center transition-all delay-75 ease-out ${
+                                isChecked
+                                    ? 'animateMoveOutLeft'
+                                    : 'animateMoveOutRight'
+                            }`}
                         >
                             <div
                                 className={`grid justify-center place-items-center cursor-pointer transition-all delay-75 ease-out ${
                                     isChecked ? 'hidden' : 'visible'
                                 }`}
+                                onClick={() => setIsChecked(true)}
                             >
                                 <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
@@ -228,7 +231,7 @@ const Index = () => {
                             >
                                 <div
                                     className='flex'
-                                    onClick={handleTransition}
+                                    onClick={() => setIsChecked(false)}
                                 >
                                     <AiOutlineDeleteRow className='self-center text-xl font-bold' />
                                 </div>

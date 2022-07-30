@@ -133,10 +133,10 @@ a {
         opacity: 1;
         transform: translateX(0);
     }
-    20% {
-        opacity: 0.5;
-        transform: translateY(-2rem);
-    }
+    // 80% {
+    //     opacity: 0.5;
+    //     transform: scale(1.1);
+    // }
     100% {
         opacity: 1;
         transform: translateX(-13rem);
@@ -159,12 +159,14 @@ a {
 }
 
 .animateMoveOutLeft {
-    animation: MoveOutLeft 0.5s ease-in-out;
+    animation: MoveOutLeft 0.5s ease;
     width: 25rem;
     transform: translateX(-13rem);
 }
 .animateMoveOutRight {
-    animation: MoveOutRight 0.5s ease-in-out;
+    //animation: MoveOutRight 0.5s ease-in-out;
+    width: 100%;
+    transform: translateX(0);
 }
 
 .animateTop {

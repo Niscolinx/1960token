@@ -54,7 +54,6 @@ function nav({ session }: { session: nextAuthSession | null }) {
 
     let isSession = null
 
-    console.log({isVerified})
 
     if (session) {
         
