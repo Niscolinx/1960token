@@ -3,23 +3,6 @@ import { GetServerSidePropsContext } from 'next'
 import React, { useState, useEffect } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
-const VENDORS = [
-    { name: 'vendor1', contact: '+234234234231' },
-    { name: 'vendor2', contact: '+234234234232' },
-    { name: 'vendor3', contact: '+234234234233' },
-    { name: 'vendor4', contact: '+234234234234' },
-    { name: 'vendor5', contact: '+234234234235' },
-    { name: 'vendor6', contact: '+234234234236' },
-    { name: 'vendor7', contact: '+234234234237' },
-    { name: 'vendor8', contact: '+234234234238' },
-    { name: 'vendor9', contact: '+234234234239' },
-    { name: 'vendor10', contact: '+234234234230' },
-    { name: 'vendor11', contact: '+234234234211' },
-    { name: 'vendor12', contact: '+234234234212' },
-    { name: 'vendor13', contact: '+234234234213' },
-    { name: 'vendor14', contact: '+234234234214' },
-    { name: 'vendor15', contact: '+234234234215' },
-]
 
 function index() {
     const [generatedCode, setGeneratedCode] = useState('')
@@ -60,7 +43,8 @@ function index() {
     useEffect(() => {
         const fetchData = async () => {
             const { data } = await axios.get('/api/getCouponCodes')
-            setCoupons(data.code)
+            setCoupons(data)
+            
         }
         fetchData()
     }, [])
