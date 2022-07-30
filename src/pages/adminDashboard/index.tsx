@@ -55,7 +55,8 @@ function index({ couponCodes }: Props) {
             })
     }
 
-    const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
+    const handleCopy = (e: React.MouseEvent<HTMLInputElement>) => {
+       
        console.log(e.currentTarget.innerText)
     }
   
@@ -120,9 +121,8 @@ function index({ couponCodes }: Props) {
                                                 {value.code}
                                                 <CopyToClipboard
                                                     text={value.code}
-                                                    onCopy={() => handleCopy}
                                                 >
-                                                    <button className='bg-orange-300 rounded-lg py-1 px-2 text-black justify-self-center place-self-end'>
+                                                    <button className='bg-orange-300 rounded-lg py-1 px-2 text-black justify-self-center place-self-end' onClick={handleCopy}>
                                                         Copy
                                                     </button>
                                                 </CopyToClipboard>{' '}
