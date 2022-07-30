@@ -22,18 +22,6 @@ const VENDORS = [
 ]
 
 function vendors() {
-   
-
-       
-       
-
-
-        
-        
-    
-    }
-
-
     return (
         <div className='min-h-[80vh]'>
             <div className='grid overflow-scroll max-h-[70vh]'>
