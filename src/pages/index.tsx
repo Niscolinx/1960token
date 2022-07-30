@@ -69,7 +69,9 @@ const Index = () => {
         console.log(e.currentTarget)
 
         e.currentTarget.style.transition = 'all 0.5s ease-in-out'
-        e.currentTarget.style.transform = 'translateX(-13rem)'
+        e.currentTarget.style.animation = 'moveInLeft'
+        
+        setIsChecked(true)
         //e.currentTarget.style.width = '100rem'
     }
 
@@ -218,7 +220,7 @@ const Index = () => {
                                 </button>
                             </div>
                             <form
-                                className={`flex justify-center align-middle gap-2 place-self-center ${isChecked ? 'visible' : 'hidden'}`}
+                                className={`flex justify-center align-middle gap-2 transition-all delay-75 ease-in-out place-self-center ${isChecked ? 'visible' : 'hidden'}`}
                                 onSubmit={handleCheckCode}
                             >
                                 <input
