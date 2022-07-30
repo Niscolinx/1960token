@@ -21,6 +21,10 @@ function index({ couponCodes }: Props) {
     const [coupons, setCoupons] = useState<Coupon[] | null>([])
     const [copied, setCopied] = useState(false)
 
+      useEffect(() => {
+          setCoupons(couponCodes)
+      }, [])
+
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
         const possible =
@@ -38,7 +42,6 @@ function index({ couponCodes }: Props) {
         setLoading(true)
         const random = randomString()
 
-        //send api to the server with the generated code using axios
         axios
             .post('/api/storeGeneratedCode', {
                 code: random,
@@ -52,11 +55,11 @@ function index({ couponCodes }: Props) {
             })
     }
 
-    useEffect(() => {
-        setCoupons(couponCodes)
-    }, [])
+    const handleCopy = (e: React.MouseEvent<HTMLElement>) => {
+       console.log(e.currentTarget.innerText)
+    }
+  
 
-    console.log({ coupons })
 
     return (
         <div className='h-[100vh] py-5 px-2'>
@@ -117,6 +120,7 @@ function index({ couponCodes }: Props) {
                                                 {value.code}
                                                 <CopyToClipboard
                                                     text={value.code}
+                                                    onCopy={() => handleCopy}
                                                 >
                                                     <button className='bg-orange-300 rounded-lg py-1 px-2 text-black justify-self-center place-self-end'>
                                                         Copy
