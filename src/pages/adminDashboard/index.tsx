@@ -4,10 +4,17 @@ import React, { useState, useEffect } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
 
+type Coupon = {
+    _id: string,
+    isUsed: boolean,
+    createdAt: string,
+    code: string,
+}
+
 function index() {
     const [generatedCode, setGeneratedCode] = useState('')
     const [loading, setLoading] = useState(false)
-    const [coupons, setCoupons] = useState([])
+    const [coupons, setCoupons] = useState<Coupon[]>([])
 
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
@@ -98,14 +105,14 @@ function index() {
                         </tr>
                     </thead>
                     <tbody className='text-center'>
-                        {VENDORS.map((value, i) => {
+                        {coupons.map((value, i) => {
                             return (
                                 <tr key={i} className='mx-4 py-2'>
                                     <td>{i + 1}</td>
                                     <td>
                                         <div className='div flex items-center text-xl place-content-center'>
                                             <p className='capitalize'>
-                                                {value.name}
+                                                {}
                                             </p>
                                         </div>
                                     </td>
