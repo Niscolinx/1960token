@@ -261,7 +261,7 @@ const Index = () => {
                                     className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 w-max'
                                     type='submit'
                                 >
-                                    {loading ? 'Loading...' : 'Check Code'}
+                                    {loading ? 'Checking...' : 'Check Code'}
                                 </button>
                             </form>
                         </div>
