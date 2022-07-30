@@ -113,13 +113,13 @@ function index({ couponCodes }: Props) {
                                         <td>{i + 1}</td>
                                         <td>{value.isUsed.toString()}</td>
                                         <td>
-                                            <div className='grid'>
+                                            <div className='grid gap-2'>
                                                 {value.code}
                                                 <CopyToClipboard
                                                     text={value.code}
                                                 >
-                                                    <button className='bg-green-500 rounded-lg py-1 px-3  justify-self-center place-self-end'>
-                                                        Copy Code
+                                                    <button className='bg-orange-300 rounded-lg py-1 px-2 text-black justify-self-center place-self-end'>
+                                                        Copy
                                                     </button>
                                                 </CopyToClipboard>{' '}
                                             </div>
