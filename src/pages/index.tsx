@@ -63,19 +63,18 @@ const Index = () => {
     }, [theme])
 
     const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
-        console.log(e.currentTarget)
+        setIsChecked(!isChecked)
 
-       //e.currentTarget.style.animation = 'all 0.5s ease-in-out'
-       e.currentTarget.style.width = '25rem'
-       e.currentTarget.style.transform = 'translateX(-13rem)'
-       e.currentTarget.classList.add('animateMoveOutLeft')
-
-        setIsChecked(true)
+        isChecked
+            ? e.currentTarget.classList.add('animateMoveOutLeft')
+            : e.currentTarget.classList.remove('animateMoveOutLeft')
     }
 
     const handleCheckCode = (e: React.FormEvent) => {
         e.preventDefault()
     }
+
+    console.log({ isChecked })
 
     return (
         <>
@@ -227,7 +226,12 @@ const Index = () => {
                                 }`}
                                 onSubmit={handleCheckCode}
                             >
-                                <AiOutlineDeleteRow className='self-center font-xl font-bold'/>
+                                <div
+                                    className='flex'
+                                    onClick={handleTransition}
+                                >
+                                    <AiOutlineDeleteRow className='self-center text-xl font-bold' />
+                                </div>
                                 <input
                                     type='text'
                                     placeholder='Coupon code'

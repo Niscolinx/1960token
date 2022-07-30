@@ -160,6 +160,8 @@ a {
 
 .animateMoveOutLeft {
     animation: MoveOutLeft 0.5s ease-in-out;
+    width: 25rem;
+    transform: translateX(-13rem);
 }
 .animateMoveOutRight {
     animation: MoveOutRight 0.5s ease-in-out;
