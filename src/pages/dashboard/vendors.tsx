@@ -67,6 +67,14 @@ function vendors() {
                     </tbody>
                 </table>
             </div>
+            <div className='grid mt-10 justify-center py-4 px-6 text-[#1a1a2d] gap-2 bg-white'>
+                <h3 className='text-lg font-bold text-center uppercase'>
+                    Verified Vendors
+                </h3>
+                <p className=' text-center p-4 text-sm rounded font-semibold'>
+                    This is a list of our Verified and vetted vendors. Please don't hesitate to report anyone else that contacts you as a vendor.
+                </p>
+            </div>
         </div>
     )
 }
