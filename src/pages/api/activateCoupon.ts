@@ -7,9 +7,8 @@ export default async function activateCoupon(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const { coupon, user, isCheck } = req.body
+    const { coupon, user, toCheck } = req.body
 
-    console.log(req.body)
 
     try {
         await dbConnect()
@@ -26,7 +25,7 @@ export default async function activateCoupon(
             return res.status(401).json('Code already used')
         }
 
-        if (!isCheck) {
+        if (!toCheck) {
             code.isUsed = true
 
             await code.save()

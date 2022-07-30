@@ -21,7 +21,7 @@ import { NavContext } from '../../components/Context'
 const Home = () => {
     const { data: session } = useSession()
     const dispatch = useAppDispatch()
-    const {setIsVerified} = useContext(NavContext)
+    const { setIsVerified } = useContext(NavContext)
     type TOption = 'Mine/Video Income' | 'Referral Income'
 
     const fetchedUser = useAppSelector(selectUser)
@@ -39,7 +39,7 @@ const Home = () => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
 
- useEffect(() => {
+    useEffect(() => {
         if (session) {
             dispatch(getUser(session)).then((data) => {
                 localStorage.setItem(
@@ -49,7 +49,6 @@ const Home = () => {
             })
         }
     }, [session])
-
 
     useEffect(() => {
         if (theme === 'dark') {
@@ -75,59 +74,58 @@ const Home = () => {
         setDisplayButton(display ? 'Transfer' : 'Close')
     }
 
-    
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setLoading(true)
-        
+
         let toPortolio = 0
         if (selectedOption === 'Mine/Video Income') {
             toPortolio = totalMined
         } else {
             toPortolio = fetchedUser.referralBonus
         }
-        
+
         dispatch(clearMineTokens)
         dispatch(clearVideoTokens)
         dispatch(updatePortolio({ userSession: session!, data: toPortolio }))
-        .then((data) => {
-            console.log({ data })
-            
-            setLoading(false)
-            if (selectedOption === 'Mine/Video Income') {
-                setTotalMined(0)
-            }
-        })
-        .catch(() => setLoading(false))
+            .then((data) => {
+                console.log({ data })
+
+                setLoading(false)
+                if (selectedOption === 'Mine/Video Income') {
+                    setTotalMined(0)
+                }
+            })
+            .catch(() => setLoading(false))
     }
-    
+
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value as TOption
         setSelectedOption(value)
     }
-    
+
     useEffect(() => {
         setTotalMined(fetchedUser.tokensMined + fetchedUser.videoMined)
     }, [fetchedUser])
-    
+
     const handleActivate = (e: React.FormEvent) => {
         e.preventDefault()
         setActivateLoading(true)
-        
+
         const getUser = localStorage.getItem('userSession')
-        
-        if(!getUser) {
+
+        if (!getUser) {
             return
         }
         const user = JSON.parse(getUser)
-        
+
         return axios
-        .post('/api/activateCoupon', {coupon, user, isCheck:false})
-        .then(({ data }) => {
-            setActivateLoading(false)
-            setIsVerified(true)
-            
-            console.log({ data })            
+            .post('/api/activateCoupon', { coupon, user, toCheck: false })
+            .then(({ data }) => {
+                setActivateLoading(false)
+                setIsVerified(true)
+
+                console.log({ data })
             })
             .catch((err) => {
                 console.log({ err })
