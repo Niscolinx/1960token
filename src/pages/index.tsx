@@ -64,6 +64,8 @@ const Index = () => {
     }, [theme])
 
     const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
+        console.log(e.currentTarget)
+
         // e.currentTarget.style.background = 'red'
         // e.target.style.transition = 'all 0.5s ease-in-out'
         e.currentTarget.style.transform = 'translateX(-10rem)'
@@ -196,14 +198,19 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <div
-                            className='grid justify-center place-items-center cursor-pointer'
-                            onClick={handleTransition}
-                        >
-                            <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
-                            <button className='text-md p-1' style={neuToUse}>
-                                Code Check
-                            </button>
+                        <div className='grid bg-[#1a1a2d]'>
+                            <div
+                                className='grid justify-center place-items-center cursor-pointer'
+                                onClick={handleTransition}
+                            >
+                                <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                                <button
+                                    className='text-md p-1'
+                                    style={neuToUse}
+                                >
+                                    Code Check
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
