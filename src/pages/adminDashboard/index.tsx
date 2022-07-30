@@ -14,7 +14,7 @@ type Coupon = {
 function index() {
     const [generatedCode, setGeneratedCode] = useState('')
     const [loading, setLoading] = useState(false)
-    const [coupons, setCoupons] = useState<Coupon[]>([])
+    const [coupons, setCoupons] = useState<Coupon[] | null>([])
 
     //generate random numbers mixed with letters of length 6
     const randomString = () => {
@@ -105,7 +105,7 @@ function index() {
                         </tr>
                     </thead>
                     <tbody className='text-center'>
-                        {coupons.map((value, i) => {
+                        {coupons && coupons.map((value, i) => {
                             return (
                                 <tr key={i} className='mx-4 py-2'>
                                     <td>{i + 1}</td>
