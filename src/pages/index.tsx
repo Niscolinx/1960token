@@ -204,7 +204,7 @@ const Index = () => {
                             </div>
                         </Link>
                         <div
-                            className='grid bg-[#1a1a2d]'
+                            className='flex bg-[#1a1a2d]'
                             onClick={handleTransition}
                         >
                             <div className='grid justify-center place-items-center cursor-pointer'>
@@ -233,7 +233,7 @@ const Index = () => {
                                 >
                                     {loading
                                         ? 'Loading...'
-                                        : 'Activate'}
+                                        : 'Check Code'}
                                 </button>
                             </form>
                         </div>
