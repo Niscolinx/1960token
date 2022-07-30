@@ -69,9 +69,9 @@ function index({ couponCodes }: Props) {
                                 <p className='bg-orange-500 hover:bg-orange-700 rounded-lg py-1 px-3'>
                                     {generatedCode}
                                 </p>
-                                <CopyToClipboard text={generatedCode}>
+                                <CopyToClipboard text={generatedCode} onCopy={() => setCopied(true)} >
                                     <button className='bg-green-500 rounded-lg py-1 px-3  justify-self-center place-self-end'>
-                                        Copy Code
+                                       {copied ? 'Copied' : 'Copy Code'}
                                     </button>
                                 </CopyToClipboard>{' '}
                             </div>
