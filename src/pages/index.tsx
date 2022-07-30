@@ -5,7 +5,8 @@ import dbConnect from '../lib/dbConnect'
 import { GiTeamDowngrade } from 'react-icons/gi'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
-import { AiFillCodepenCircle } from 'react-icons/ai'
+import { AiFillCodepenCircle, AiOutlineDeleteRow } from 'react-icons/ai'
+
 import Logo from '../../public/logo.svg'
 import Image from 'next/image'
 import {
@@ -226,6 +227,7 @@ const Index = () => {
                                 }`}
                                 onSubmit={handleCheckCode}
                             >
+                                <AiOutlineDeleteRow className='self-center font-xl font-bold'/>
                                 <input
                                     type='text'
                                     placeholder='Coupon code'
