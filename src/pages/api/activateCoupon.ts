@@ -26,13 +26,17 @@ export default async function activateCoupon(
         }
 
         if (!toCheck) {
+            const getUser = await User.findOne({ email: user.email })
+
+            getUser.isVerified = true
+
+            if(getUser.isVerified) {
+                return res.status(401).json('User already verified')
+            }
             code.isUsed = true
 
             await code.save()
 
-            const getUser = await User.findOne({ email: user.email })
-
-            getUser.isVerified = true
 
             await getUser.save()
 
