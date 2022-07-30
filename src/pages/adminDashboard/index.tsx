@@ -55,8 +55,8 @@ function index({ couponCodes }: Props) {
             })
     }
 
-    const handleCopy = (e: React.MouseEventHandler<HTMLButtonElement>) => {
-       console.log(e)
+    const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+       e.currentTarget.innerText = 'Copied!'
     }
   
 
@@ -114,14 +114,31 @@ function index({ couponCodes }: Props) {
                                 return (
                                     <tr key={i} className='mx-4 py-2'>
                                         <td>{i + 1}</td>
-                                        <td>{value.isUsed.toString()}</td>
+                                        <td>
+                                            <span
+                                                className={`${
+                                                    value.isUsed
+                                                        ? 'bg-red-500'
+                                                        : 'bg-green-500'
+                                                } rounded-lg py-1 px-2 text-black justify-self-center place-self-end`}
+                                            >
+                                                {value.isUsed
+                                                    ? 'Used'
+                                                    : 'Unused'}
+                                            </span>
+                                        </td>
                                         <td>
                                             <div className='grid gap-2'>
                                                 {value.code}
                                                 <CopyToClipboard
                                                     text={value.code}
                                                 >
-                                                    <button className='bg-orange-300 rounded-lg py-1 px-2 text-black justify-self-center place-self-end' onClick={() => handleCopy}>
+                                                    <button
+                                                        className='bg-orange-300 rounded-lg py-1 px-2 text-black justify-self-center place-self-end'
+                                                        onClick={(e) =>
+                                                            handleCopy(e)
+                                                        }
+                                                    >
                                                         Copy
                                                     </button>
                                                 </CopyToClipboard>{' '}
