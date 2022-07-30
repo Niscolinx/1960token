@@ -65,7 +65,7 @@ const Index = () => {
         console.log(e.currentTarget)
 
        // e.currentTarget.style.transition = 'all 0.5s ease-in-out'
-        e.currentTarget.style.width = '-13rem'
+        e.currentTarget.style.transform = `translateX('-13rem')`
         // e.currentTarget.style.animation = 'moveInLeft'
       //  e.currentTarget.classList.add('animateMoveOutLeft')
 
