@@ -140,11 +140,20 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         }
     }
 
-    const { data } = await axios.get('/api/getCouponCodes')
+    const coupons = await fetch(`/api/getCouponCodes`, {
+        method: 'GET'
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                return data
+            })
+
+    
+    
     return {
         props: {
             isAuthenticated: true,
-            couponCodes: data,
+          couponCodes: coupons,
         },
     }
 }
