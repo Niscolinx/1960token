@@ -57,6 +57,12 @@ const Index = () => {
             })
         }
     }, [theme])
+
+    const handleTransition = (e) => {
+        e.target.style.transition = 'all 0.5s ease-in-out'
+        e.target.style.transform = 'translateX(-10rem)'
+    }
+
     return (
         <>
             <div className='flex items-center text-[#cb8f10] font-bold relative mt-4'>
@@ -184,7 +190,7 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/'>
+                        <div onClick={handleTransition}>
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
@@ -194,7 +200,7 @@ const Index = () => {
                                     Code Check
                                 </button>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 </div>
 
