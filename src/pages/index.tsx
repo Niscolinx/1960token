@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, {
+    FormEvent,
+    HtmlHTMLAttributes,
+    useEffect,
+    useState,
+} from 'react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import dbConnect from '../lib/dbConnect'
 import { GiTeamDowngrade } from 'react-icons/gi'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { FaQuestionCircle } from 'react-icons/fa'
-import {AiFillCodepenCircle} from 'react-icons/ai'
+import { AiFillCodepenCircle } from 'react-icons/ai'
 import Logo from '../../public/logo.svg'
 import Image from 'next/image'
 import {
@@ -58,7 +63,7 @@ const Index = () => {
         }
     }, [theme])
 
-    const handleTransition = (e) => {
+    const handleTransition = (e: any) => {
         e.target.style.transition = 'all 0.5s ease-in-out'
         e.target.style.transform = 'translateX(-10rem)'
     }
@@ -190,8 +195,11 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <div onClick={handleTransition}>
-                            <div className='grid justify-center place-items-center cursor-pointer'>
+                        <div
+                            className='grid justify-center place-items-center cursor-pointer'
+                            onClick={handleTransition}
+                        >
+                            <>
                                 <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
                                     className='text-md p-1'
@@ -199,7 +207,7 @@ const Index = () => {
                                 >
                                     Code Check
                                 </button>
-                            </div>
+                            </>
                         </div>
                     </div>
                 </div>
