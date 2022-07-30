@@ -30,7 +30,7 @@ const Index = () => {
     const { theme } = useTheme()
     const [neuToUse, setNeuToUse] = useState<{}>()
     const [stepsNeu, setStepsNeu] = useState<{}>()
-    const [loading, setLoading] = useState<boolean>(false)
+    const [checking, setChecking] = useState<boolean>(false)
     const [coupon, setCoupon] = useState('')
     const [isChecked, setIsChecked] = useState(false)
 
@@ -66,7 +66,7 @@ const Index = () => {
    
     const handleCheckCode = (e: React.FormEvent) => {
         e.preventDefault()
-        setLoading(true)
+        setChecking(true)
         const getUser = localStorage.getItem('userSession')
         
         if(!getUser) {
@@ -77,13 +77,13 @@ const Index = () => {
         return axios
         .post('/api/activateCoupon', {coupon, user, toCheck: true})
         .then(({ data }) => {
-            setLoading(false)
+            setChecking(false)
             
             console.log({ data })            
             })
             .catch((err) => {
                 console.log({ err })
-                setLoading(false)
+                setChecking(false)
             })
     }
 
@@ -261,7 +261,7 @@ const Index = () => {
                                     className='bg-orange-300 text-[#1a1a2d] rounded px-2 py-1 w-max'
                                     type='submit'
                                 >
-                                    {loading ? 'Checking...' : 'Check Code'}
+                                    {checking ? 'Checking...' : 'Check Code'}
                                 </button>
                             </form>
                         </div>
