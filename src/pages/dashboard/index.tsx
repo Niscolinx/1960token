@@ -122,7 +122,7 @@ const Home = () => {
         const user = JSON.parse(getUser)
         
         return axios
-        .post('/api/activateCoupon', {coupon, user})
+        .post('/api/activateCoupon', {coupon, user, isCheck:false})
         .then(({ data }) => {
             setActivateLoading(false)
             setIsVerified(true)

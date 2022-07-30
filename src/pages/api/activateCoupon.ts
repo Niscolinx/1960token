@@ -7,7 +7,7 @@ export default async function activateCoupon(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const { coupon, user } = req.body
+    const { coupon, user, isCheck } = req.body
 
     console.log(req.body)
 
