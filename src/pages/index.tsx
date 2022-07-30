@@ -196,16 +196,14 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <div className='grid' onClick={handleTransition}>
-                            <div className='grid justify-center place-items-center cursor-pointer'>
-                                <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
-                                <button
-                                    className='text-md p-1'
-                                    style={neuToUse}
-                                >
-                                    Code Check
-                                </button>
-                            </div>
+                        <div
+                            className='grid justify-center place-items-center cursor-pointer'
+                            onClick={handleTransition}
+                        >
+                            <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
+                            <button className='text-md p-1' style={neuToUse}>
+                                Code Check
+                            </button>
                         </div>
                     </div>
                 </div>
