@@ -218,7 +218,7 @@ const Index = () => {
                                 </button>
                             </div>
                             <form
-                                className='flex justify-center align-middle gap-2 place-self-center'
+                                className={`flex justify-center align-middle gap-2 place-self-center ${isChecked ? 'visible' : 'hidden'}`}
                                 onSubmit={handleCheckCode}
                             >
                                 <input
