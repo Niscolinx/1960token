@@ -133,12 +133,12 @@ a {
         opacity: 1;
         transform: translateX(0);
     }
-    0% {
+    60% {
         opacity: 0.5;
         transform: translateX(-8rem);
     }
     100% {
-        opacity: 0;
+        opacity: 1;
         transform: translateX(-13rem);
     }
 }
@@ -148,7 +148,7 @@ a {
         opacity: 1;
         transform: translateX(0);
     }
-    0% {
+    60% {
         opacity: 0.5;
         transform: translateX(8rem);
     }

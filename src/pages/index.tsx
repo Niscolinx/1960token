@@ -64,11 +64,10 @@ const Index = () => {
     const handleTransition = (e: React.MouseEvent<HTMLInputElement>) => {
         console.log(e.currentTarget)
 
-       e.currentTarget.style.animation = 'animateMoveOutLeft'
+       //e.currentTarget.style.animation = 'all 0.5s ease-in-out'
        e.currentTarget.style.width = '25rem'
        e.currentTarget.style.transform = 'translateX(-13rem)'
-        // e.currentTarget.style.animation = 'moveInLeft'
-      //  e.currentTarget.classList.add('animateMoveOutLeft')
+       e.currentTarget.classList.add('animateMoveOutLeft')
 
         setIsChecked(true)
     }
