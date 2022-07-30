@@ -75,7 +75,7 @@ const Index = () => {
         const user = JSON.parse(getUser)
         
         return axios
-        .post('/api/activateCoupon', {coupon, user})
+        .post('/api/activateCoupon', {coupon, user, toCheck: true})
         .then(({ data }) => {
             setLoading(false)
             
