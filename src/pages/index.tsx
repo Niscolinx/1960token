@@ -184,7 +184,7 @@ const Index = () => {
                                 </button>
                             </div>
                         </Link>
-                        <Link href='/customerService'>
+                        <Link href='/'>
                             <div className='grid justify-center place-items-center cursor-pointer'>
                                 <AiFillCodepenCircle className='text-blue-400 text-3xl light:text-[#1a1a2d]' />
                                 <button
